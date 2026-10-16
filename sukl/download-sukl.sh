@@ -1,3 +1,4 @@
+mkdir -p data
 cd data
 
 wcurl https://opendata.sukl.cz/soubory/SOD20260925/DLP20260925.zip
