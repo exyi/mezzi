@@ -5,6 +5,7 @@ import asyncio
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import sys
 
@@ -46,11 +47,20 @@ def parser() -> argparse.ArgumentParser:
     commands.add_parser("schema", help="Print the evolving output JSON schema; no data needed")
     for command in ("prepare", "extract"):
         sub = commands.add_parser(command, help="Prepare context offline" if command == "prepare" else "Run the LLM")
-        sub.add_argument("code", help="SUKL code, e.g. 0000009 (leading zeros optional)")
+        sub.add_argument("code", nargs="?" if command == "extract" else None,
+                         help="SUKL code, e.g. 0000009 (leading zeros optional)")
         sub.add_argument("--allow-partial", action="store_true", help="Allow a missing PIL or SPC; print a warning")
         sub.add_argument("--context-chars", type=positive, default=160_000)
-        sub.add_argument("--output", type=Path, help="Output file; extract defaults to outputs/CODE.json")
+        if command == "prepare":
+            sub.add_argument("--output", type=Path, help="Prepared prompt file")
         if command == "extract":
+            sub.add_argument("--ids-file", type=Path, help="SUKL codes separated by whitespace, commas or semicolons; # comments allowed")
+            sub.add_argument("--parallelism", "--parallel", type=positive, default=1,
+                             help="Maximum concurrent drug extractions (default: 1)")
+            destination = sub.add_mutually_exclusive_group()
+            destination.add_argument("--output", type=Path, help="Output file for a single code")
+            destination.add_argument("--output-dir", type=Path, default=Path("outputs"),
+                                     help="Per-drug output directory (default: outputs)")
             sub.add_argument("--model", default=os.environ.get("MODEL", DEFAULT_MODEL))
             sub.add_argument("--base-url", default=os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL))
             sub.add_argument("--api", choices=("responses", "chat"), default="responses",
@@ -69,6 +79,64 @@ def parser() -> argparse.ArgumentParser:
             sub.add_argument("--trace", action="store_true",
                              help="Log tools and sizes live; save messages, per-request usage and errors to .trace.json")
     return p
+
+
+def read_codes(path: Path, catalog: Catalog) -> list[str]:
+    codes = []
+    for number, line in enumerate(path.read_text(encoding="utf-8-sig").splitlines(), 1):
+        for value in re.split(r"[\s,;]+", line.split("#", 1)[0].strip()):
+            if not value:
+                continue
+            try:
+                codes.append(catalog.code(value))
+            except ValueError as exc:
+                raise ValueError(f"{path}:{number}: {exc}") from exc
+    if not codes:
+        raise ValueError(f"No SUKL codes in {path}")
+    return list(dict.fromkeys(codes))
+
+
+async def extract_many(corpus: Corpus, codes: list[str], settings: Settings, args: argparse.Namespace) -> None:
+    # A fixed number of workers keeps large input lists from creating thousands of tasks.
+    # PDF/cache operations stay on this thread; only model calls overlap.
+    pending = iter(codes)
+    counts = {"written": 0, "reused": 0, "failed": 0}
+
+    async def worker() -> None:
+        for code in pending:
+            output = args.output or args.output_dir / f"{code}.json"
+            try:
+                if output.exists() and not args.force:
+                    if not args.resume:
+                        raise ValueError(f"Output exists: {output}. Use --force to replace it.")
+                    try:
+                        DrugExtraction.model_validate_json(output.read_text(encoding="utf-8"))
+                    except ValueError as exc:
+                        raise ValueError(f"Existing output uses a different schema: {output}. Use --force to replace it.") from exc
+                    counts["reused"] += 1
+                    print(f"[{code}] Reusing {output}", flush=True)
+                    continue
+                print(f"[{code}] Preparing: {corpus.catalog.products[code]['NAZEV']}", file=sys.stderr, flush=True)
+                prompt, deps = prepare(corpus, code, settings, args.allow_partial)
+                if deps.missing:
+                    print(f"[{code}] Warning: missing primary documents: {deps.missing}", file=sys.stderr)
+                trace = output.with_suffix(".trace.json") if args.trace else None
+                result = await extract(prompt, deps, settings, trace=trace)
+                atomic_json(output, result)
+                counts["written"] += 1
+                print(f"[{code}] Wrote {output}; {len(result['side_effects'])} side effects, "
+                      f"{len(result['combinations'])} combinations", flush=True)
+            except Exception as exc:
+                if args.ids_file is None:
+                    raise
+                counts["failed"] += 1
+                print(f"[{code}] Failed: {type(exc).__name__}: {exc}", file=sys.stderr, flush=True)
+
+    await asyncio.gather(*(worker() for _ in range(min(args.parallelism, len(codes)))))
+    if args.ids_file is not None:
+        print(f"Batch complete: {counts['written']} written, {counts['reused']} reused, {counts['failed']} failed.")
+    if counts["failed"]:
+        raise SystemExit(1)
 
 
 def run(args: argparse.Namespace) -> None:
@@ -107,9 +175,13 @@ def run(args: argparse.Namespace) -> None:
             if failed:
                 raise SystemExit(1)
         else:
-            code = catalog.code(args.code)
             settings = Settings(context_chars=args.context_chars, ctcae_csv=args.ctcae_csv)
             if args.command == "extract":
+                if (args.code is None) == (args.ids_file is None):
+                    raise ValueError("Provide either a SUKL code or --ids-file PATH, exclusively.")
+                if args.ids_file is not None and args.output is not None:
+                    raise ValueError("--output is for a single code. Use --output-dir with --ids-file.")
+                codes = read_codes(args.ids_file, catalog) if args.ids_file else [catalog.code(args.code)]
                 model_settings = json.loads(args.model_settings)
                 if not isinstance(model_settings, dict):
                     raise ValueError("--model-settings must be a JSON object")
@@ -122,6 +194,9 @@ def run(args: argparse.Namespace) -> None:
                 )
                 if not settings.model.strip():
                     raise ValueError("--model / MODEL must not be empty")
+                asyncio.run(extract_many(corpus, codes, settings, args))
+                return
+            code = catalog.code(args.code)
             print(f"Preparing {code}: {catalog.products[code]['NAZEV']}", file=sys.stderr)
             prompt, deps = prepare(corpus, code, settings, args.allow_partial)
             if deps.missing:
@@ -134,22 +209,6 @@ def run(args: argparse.Namespace) -> None:
                 else:
                     print(prompt)
                 return
-            output = args.output or Path("outputs") / f"{code}.json"
-            if output.exists() and not args.force:
-                if args.resume:
-                    previous = json.loads(output.read_text(encoding="utf-8"))
-                    try:
-                        DrugExtraction.model_validate(previous)
-                    except ValueError as exc:
-                        raise ValueError(f"Existing output uses a different schema: {output}. Use --force to replace it.") from exc
-                    print(f"Reusing {output}")
-                    return
-                raise ValueError(f"Output exists: {output}. Use --force to replace it.")
-            trace = output.with_suffix(".trace.json") if args.trace else None
-            result = asyncio.run(extract(prompt, deps, settings, trace=trace))
-            atomic_json(output, result)
-            print(f"Wrote {output}; {len(result['side_effects'])} side effects, "
-                  f"{len(result['combinations'])} combinations")
     finally:
         corpus.close()
 

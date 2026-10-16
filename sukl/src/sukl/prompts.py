@@ -11,11 +11,18 @@ and deduplicate the same reaction across PIL and SPC. With vision enabled, use
 page_image for unclear table layout instead of guessing column alignment.
 
 Return ONLY the supplied JSON structure: side_effects and combinations.
-Each side effect has exactly ctcae, frequency, label and action.
-Each combination has either drug or drug_class, plus effect and side_effects.
+Each side effect has exactly ctcae, frequency, label, action and action_condition.
+Each combination has either drug or drug_class, plus effect, effect_type and side_effects.
 effect describes the source-supported interaction in Czech, including increased
 toxicity, reduced efficacy, dose/population conditions and any recommendations.
 Use an empty side_effects list for an interaction without a named adverse reaction.
+effect_type is contraindicated (explicit prohibition of combined use), synergy
+(additive or enhanced therapeutic effect), antagonism (opposed or reduced therapeutic
+effect), increased_toxicity (increased adverse effects), increased_exposure (increased
+drug concentrations/exposure), decreased_exposure (decreased concentrations/exposure),
+or null when unclear. Do not treat a mere caution as contraindicated. If several
+apply, prefer contraindicated, then increased_toxicity, otherwise the effect most
+directly stated in the source. Preserve the full interaction in effect.
 Do not add citations, verbatim quotes, explanations or extra fields.
 
 All available CTCAE terms are supplied below. Map directly to an exact English
@@ -35,6 +42,15 @@ Action is continue, discontinue_treatment, contact_doctor, hospitalize_NOW, or n
 Only use a non-null action when the target PIL/SPC explicitly supports it. Silence
 does not mean continue. Preserve conditional symptoms/severity in label. Emergency
 help must be explicitly urgent in the source. Never derive actions from CTCAE grades.
+action_condition is {"patient_guide": "..."} when an action depends on a condition,
+or null when unconditional or action is null. Write patient_guide in plain Czech,
+addressing the patient directly, e.g. "Pokud je vám výrazně nevolno" or, only when
+supported by the source, "Pokud jste zároveň těhotná". Reformulate clinical wording
+into understandable patient-facing text without changing its meaning. Preserve
+all relevant severity, timing, dose, pregnancy-stage and other qualifiers. Do not
+invent or evaluate patient facts. This is text guidance, not a FHIR condition.
+Keep separate entries if the same reaction requires different actions under
+different conditions. Write label and effect in patient-friendly Czech too.
 
 find_drugs searches all CSV metadata, including English/INN substance names and ATC.
 Tools are optional; return the JSON immediately when the supplied text and term

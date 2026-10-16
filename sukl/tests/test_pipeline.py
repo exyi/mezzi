@@ -1,7 +1,7 @@
 """Offline integration tests; no credentials or paid models are used."""
 
 import asyncio
-from contextlib import redirect_stderr
+from contextlib import redirect_stderr, redirect_stdout
 from copy import deepcopy
 import csv
 import io
@@ -23,7 +23,7 @@ from pydantic_ai.models.function import FunctionModel
 
 from sukl.corpus import Catalog, Corpus
 from sukl.extraction import Settings, atomic_json, extract, prepare, validate_coverage
-from sukl.schema import DrugExtraction, Frequency, SideEffect
+from sukl.schema import ActionCondition, DrugExtraction, EffectType, Frequency, SideEffect
 
 
 def pdf(pages: list[list[str]]) -> bytes:
@@ -98,8 +98,9 @@ class PipelineTests(unittest.TestCase):
     def claim(self) -> dict:
         effect = {"ctcae": "Nausea", "frequency": "common",
                   "label": "Nauzea; kontaktujte lékaře při závažných příznacích",
-                  "action": "contact_doctor"}
-        return {"side_effects": [effect], "combinations": [{"drug": "X", "effect": "Zvyšuje riziko nauzey.", "side_effects": [effect]}]}
+                  "action": "contact_doctor", "action_condition": {"patient_guide": "Pokud je vám výrazně nevolno"}}
+        return {"side_effects": [effect], "combinations": [{"drug": "X", "effect": "Zvyšuje riziko nauzey.",
+                                                           "effect_type": "increased_toxicity", "side_effects": [effect]}]}
 
     def test_pdf_loading_encoding_and_exact_identity(self):
         self.assertEqual(self.catalog.metadata("9")["product"]["NAZEV"], "LÉČIVO")
@@ -173,7 +174,7 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(calls, 3)
         self.assertEqual(result, good)
         self.assertEqual(set(result), {"side_effects", "combinations"})
-        self.assertEqual(set(result["side_effects"][0]), {"ctcae", "frequency", "label", "action"})
+        self.assertEqual(set(result["side_effects"][0]), {"ctcae", "frequency", "label", "action", "action_condition"})
         path = self.root / "result.json"
         atomic_json(path, result)
         self.assertEqual(json.loads(path.read_text()), good)
@@ -408,6 +409,120 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(json.loads(output.read_text()), good)
         self.assertIn("messages", json.loads(output.with_suffix(".trace.json").read_text()))
 
+    def batch_args(self, output_dir: Path) -> list[str]:
+        # Five drugs sharing documents exercise cache reuse as well as concurrency.
+        codes = [str(n).zfill(7) for n in range(9, 14)]
+        dlp = self.root / "data" / "DLP20260925"
+        write_csv(dlp / "dlp_lecivepripravky.csv", ["KOD_SUKL", "NAZEV", "SILA", "ATC_WHO"],
+                  [[code, f"Drug {code}", "10MG", "A01"] for code in codes])
+        write_csv(dlp / "dlp_nazvydokumentu.csv", ["KOD_SUKL", "PIL", "SPC"],
+                  [[code, "PI1.pdf", "SPC1.pdf"] for code in codes])
+        ids = self.root / "ids.txt"
+        ids.write_text("\ufeff# drug list\n9,0000009 # duplicate after normalization\n10;11\n12\t13\n", encoding="utf-8")
+        return ["--data", str(self.root / "data"), "--ctcae", str(self.ctcae),
+                "--ctcae-csv", str(self.ctcae_csv), "--cache", str(self.root / "cli.sqlite"),
+                "extract", "--ids-file", str(ids), "--output-dir", str(output_dir), "--trace"]
+
+    def test_batch_bounds_concurrency_deduplicates_and_isolates_traces(self):
+        from sukl.cli import parser, run
+
+        for parallelism in (1, 2):
+            with self.subTest(parallelism=parallelism):
+                output_dir = self.root / f"batch-{parallelism}"
+                args = self.batch_args(output_dir) + ["--parallelism", str(parallelism)]
+                active = peak = 0
+                completed = []
+
+                async def offline_extract(prompt, deps, settings, *, trace):
+                    async def model(messages, info):
+                        nonlocal active, peak
+                        active += 1
+                        peak = max(peak, active)
+                        # Yield while both runs have active message capture contexts.
+                        await asyncio.sleep(0.01)
+                        active -= 1
+                        good = self.claim()
+                        good["combinations"][0]["drug"] = deps.code
+                        return ModelResponse(parts=[TextPart(json.dumps(good))])
+
+                    result = await extract(prompt, deps, settings, model=FunctionModel(model), trace=trace)
+                    completed.append(deps.code)
+                    return result
+
+                with redirect_stderr(io.StringIO()), redirect_stdout(io.StringIO()), patch("sukl.cli.extract", offline_extract):
+                    run(parser().parse_args(args))
+                    # Resume should avoid all preparation, model calls and trace rewrites.
+                    with patch("sukl.cli.prepare", side_effect=AssertionError("Resumed outputs must not be prepared")):
+                        run(parser().parse_args([*args, "--resume"]))
+                self.assertEqual(peak, parallelism)
+                self.assertEqual(len(completed), 5)
+                self.assertEqual(len(set(completed)), 5)
+                for code in completed:
+                    result = json.loads((output_dir / f"{code}.json").read_text())
+                    self.assertEqual(result["combinations"][0]["drug"], code)
+                    debug = json.loads((output_dir / f"{code}.trace.json").read_text())
+                    self.assertEqual(debug["code"], code)
+                    self.assertEqual(debug["usage"]["requests"], 1)
+                    self.assertEqual(len(debug["requests"]), 1)
+                    history = json.dumps(debug["messages"])
+                    self.assertIn(f"TARGET SUKL CODE: {code}", history)
+                    for other in set(completed) - {code}:
+                        self.assertNotIn(f"TARGET SUKL CODE: {other}", history)
+
+    def test_batch_continues_after_failure_and_resume_retries_only_failed_drug(self):
+        from sukl.cli import parser, run
+
+        output_dir = self.root / "batch-failure"
+        args = self.batch_args(output_dir) + ["--parallel", "3"]
+        calls = []
+        failing = "0000010"
+
+        async def offline_extract(prompt, deps, settings, *, trace):
+            calls.append(deps.code)
+
+            async def model(messages, info):
+                await asyncio.sleep(0)
+                if deps.code == failing:
+                    raise RuntimeError("mock gateway failure")
+                return ModelResponse(parts=[TextPart(json.dumps(self.claim()))])
+
+            return await extract(prompt, deps, settings, model=FunctionModel(model), trace=trace)
+
+        console, output = io.StringIO(), io.StringIO()
+        with redirect_stderr(console), redirect_stdout(output), patch("sukl.cli.extract", offline_extract):
+            with self.assertRaises(SystemExit) as failure:
+                run(parser().parse_args(args))
+            self.assertEqual(failure.exception.code, 1)
+            self.assertEqual(len(calls), 5)
+            self.assertFalse((output_dir / f"{failing}.json").exists())
+            debug = json.loads((output_dir / f"{failing}.trace.json").read_text())
+            self.assertEqual(debug["status"], "failed")
+            self.assertEqual(debug["error"]["message"], "mock gateway failure")
+            self.assertIn("4 written, 0 reused, 1 failed", output.getvalue())
+            self.assertIn(f"[{failing}] Failed:", console.getvalue())
+            failing = None
+            run(parser().parse_args([*args, "--resume"]))
+        self.assertEqual(calls[5:], ["0000010"])
+        self.assertTrue((output_dir / "0000010.json").exists())
+        self.assertIn("1 written, 4 reused, 0 failed", output.getvalue())
+
+    def test_id_file_and_batch_options_fail_before_model_calls(self):
+        from sukl.cli import parser, read_codes, run
+
+        ids = self.root / "bad-ids.txt"
+        for content, message in (("# none\n", "No SUKL codes"), ("9\nunknown\n", ":2:"),
+                                 ("9\n9999999", "Unknown SUKL code")):
+            ids.write_text(content)
+            with self.assertRaisesRegex(ValueError, message):
+                read_codes(ids, self.catalog)
+        base = ["--data", str(self.root / "data"), "--ctcae", str(self.ctcae),
+                "--ctcae-csv", str(self.ctcae_csv), "--cache", str(self.root / "cli.sqlite"), "extract"]
+        with patch("sukl.cli.extract") as model_call:
+            for tail in ([], ["9", "--ids-file", str(ids)], ["--ids-file", str(ids), "--output", "single.json"]):
+                with self.assertRaises(ValueError):
+                    run(parser().parse_args([*base, *tail]))
+            model_call.assert_not_called()
+
     def test_gateway_enforces_native_json_schema_on_both_apis(self):
         good = self.claim()
         for api in ("responses", "chat"):
@@ -455,11 +570,15 @@ class PipelineTests(unittest.TestCase):
                     self.assertEqual(set(schema["properties"]), {"side_effects", "combinations"})
                     self.assertFalse(schema["additionalProperties"])
                     effect = schema["$defs"]["SideEffect"]
-                    self.assertEqual(set(effect["properties"]), {"ctcae", "frequency", "label", "action"})
+                    self.assertEqual(set(effect["properties"]), {"ctcae", "frequency", "label", "action", "action_condition"})
                     self.assertEqual(set(effect["required"]), set(effect["properties"]))
                     self.assertFalse(effect["additionalProperties"])
+                    condition = schema["$defs"]["ActionCondition"]
+                    self.assertEqual(condition["required"], ["patient_guide"])
+                    self.assertFalse(condition["additionalProperties"])
                     for name in ("DrugCombination", "DrugClassCombination"):
                         self.assertIn("effect", schema["$defs"][name]["required"])
+                        self.assertIn("effect_type", schema["$defs"][name]["required"])
 
                     if api == "responses":
                         if first:
@@ -540,6 +659,19 @@ class PipelineTests(unittest.TestCase):
 
 
 class SchemaTests(unittest.TestCase):
+    def test_effect_categories_and_patient_action_condition(self):
+        category = TypeAdapter(EffectType | None)
+        for value in ("contraindicated", "synergy", "antagonism", "increased_toxicity",
+                      "increased_exposure", "decreased_exposure", None):
+            self.assertEqual(category.validate_python(value), value)
+        with self.assertRaises(ValidationError):
+            category.validate_python("invented_mechanism")
+        condition = {"patient_guide": "Pokud jste zároveň těhotná"}
+        self.assertEqual(ActionCondition.model_validate(condition).model_dump(), condition)
+        for invalid in ({"patient_guide": ""}, {"patient_guide": "Pokud...", "fhir": {}}, {"age": 65}):
+            with self.assertRaises(ValidationError):
+                ActionCondition.model_validate(invalid)
+
     def test_frequency_is_one_small_value(self):
         frequency = TypeAdapter(Frequency)
         for value in (20, "common", "not_known", None):
@@ -549,18 +681,18 @@ class SchemaTests(unittest.TestCase):
                 frequency.validate_python(value)
 
     def test_combination_has_one_target_and_no_extra_fields(self):
-        valid = {"side_effects": [], "combinations": [{"drug": "X", "effect": "Zvyšuje toxicitu.", "side_effects": []}]}
+        valid = {"side_effects": [], "combinations": [{"drug": "X", "effect": "Zvyšuje toxicitu.", "effect_type": "increased_toxicity", "side_effects": []}]}
         self.assertEqual(DrugExtraction.model_validate(valid).model_dump(), valid)
-        valid["combinations"] = [{"drug_class": "Y", "effect": "Snižuje účinnost.", "side_effects": []}]
+        valid["combinations"] = [{"drug_class": "Y", "effect": "Snižuje účinnost.", "effect_type": None, "side_effects": []}]
         self.assertEqual(DrugExtraction.model_validate(valid).model_dump(), valid)
         for target in ({"drug": "X", "drug_class": "Y"}, {}):
             with self.assertRaises(ValidationError):
-                DrugExtraction.model_validate({"side_effects": [], "combinations": [{**target, "effect": "Popis interakce.", "side_effects": []}]})
+                DrugExtraction.model_validate({"side_effects": [], "combinations": [{**target, "effect": "Popis interakce.", "effect_type": None, "side_effects": []}]})
         with self.assertRaises(ValidationError):
             DrugExtraction.model_validate({"side_effects": [], "combinations": [{"drug": "X", "side_effects": []}]})
 
     def test_side_effect_needs_no_verbatim_quote(self):
-        effect = {"ctcae": None, "frequency": None, "label": "Toxicita perorálních hypoglykemik", "action": None}
+        effect = {"ctcae": None, "frequency": None, "label": "Toxicita perorálních hypoglykemik", "action": None, "action_condition": None}
         self.assertEqual(SideEffect.model_validate(effect).model_dump(), effect)
         with self.assertRaises(ValidationError):
             SideEffect.model_validate({**effect, "evidence": []})

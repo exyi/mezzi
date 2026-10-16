@@ -243,7 +243,7 @@ def build_agent(model: Model, vision: bool = False) -> Agent[Dependencies, DrugE
         request_limit = ctx.usage_limits.request_limit
         if warnings and not ctx.deps.validation_feedback and (request_limit is None or ctx.usage.requests < request_limit):
             ctx.deps.validation_feedback = warnings
-            print(f"Warning: soft validation found {len(warnings)} unknown CTCAE term(s); requesting one correction pass.",
+            print(f"[{ctx.deps.code}] Warning: soft validation found {len(warnings)} unknown CTCAE term(s); requesting one correction pass.",
                   file=sys.stderr, flush=True)
             raise ModelRetry("Soft validation warnings:\n" + "\n".join(warnings)
                              + "\nReview these mappings using the supplied CTCAE list and source text. "
@@ -300,6 +300,7 @@ async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
     usage = RunUsage()
     request_start = RunUsage()
     tool_calls = []
+    trace_prefix = f"[trace {deps.code}]"
     error = None
     agent = build_agent(model, settings.vision)
     with capture_run_messages() as messages:
@@ -311,12 +312,12 @@ async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
                         continue
                     if Agent.is_model_request_node(node):
                         request_start = deepcopy(usage)
-                        print(f"[trace] Request {usage.requests + 1}/{settings.request_limit}; "
+                        print(f"{trace_prefix} Request {usage.requests + 1}/{settings.request_limit}; "
                               f"tools executed={deps.tool_calls}",
                               file=sys.stderr, flush=True)
                     elif Agent.is_call_tools_node(node):
                         request_usage = node.model_response.usage
-                        print(f"[trace] Tokens: input={request_usage.input_tokens:,} "
+                        print(f"{trace_prefix} Tokens: input={request_usage.input_tokens:,} "
                               f"output={request_usage.output_tokens:,}; cumulative={usage.total_tokens:,}",
                               file=sys.stderr, flush=True)
                         # Stream tool events only; model requests retain the usual non-streaming API.
@@ -329,7 +330,7 @@ async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
                                             "tool": part.tool_name, "arguments": part.args,
                                             "input_chars": len(arguments), "status": "started"}
                                     tool_calls.append(call)
-                                    print(f"[trace] Tool {len(tool_calls)}: {part.tool_name}({arguments}) "
+                                    print(f"{trace_prefix} Tool {len(tool_calls)}: {part.tool_name}({arguments}) "
                                           f"input={len(arguments):,} chars", file=sys.stderr, flush=True)
                                 elif isinstance(event, FunctionToolResultEvent):
                                     call = next(c for c in reversed(tool_calls)
@@ -343,7 +344,7 @@ async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
                                                and part.content.get("tool_budget_exhausted") is True)
                                     call.update(status="retry" if retry else "blocked" if blocked else "ok", output_chars=len(text),
                                                 output_binary_bytes=binary_bytes)
-                                    print(f"[trace] {call['tool']}: {call['status']}; "
+                                    print(f"{trace_prefix} {call['tool']}: {call['status']}; "
                                           f"output={len(text):,} chars, binary={binary_bytes:,} bytes",
                                           file=sys.stderr, flush=True)
                 result = run.result
@@ -366,7 +367,7 @@ async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
                         requests.append({"request": request_start.requests + 1, "response_saved": False,
                                          "usage": TypeAdapter(RunUsage).dump_python(last_usage, mode="json")})
                     atomic_json(trace, {
-                        "model": settings.model, "status": "failed" if error else "completed", "error": error,
+                        "code": deps.code, "model": settings.model, "status": "failed" if error else "completed", "error": error,
                         "limits": {"requests": settings.request_limit, "tool_calls": settings.tool_limit,
                                    "total_tokens": settings.total_tokens},
                         "usage": TypeAdapter(RunUsage).dump_python(usage, mode="json"),
@@ -376,12 +377,12 @@ async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
                         "requests": requests, "tool_calls": tool_calls,
                         "messages": ModelMessagesTypeAdapter.dump_python(messages, mode="json"),
                     })
-                    print(f"[trace] {'Failed' if error else 'Completed'}; "
+                    print(f"{trace_prefix} {'Failed' if error else 'Completed'}; "
                           f"tokens: input={usage.input_tokens:,} output={usage.output_tokens:,}; saved {trace}",
                           file=sys.stderr, flush=True)
     if deps.unread():
-        print("Warning: budget exhausted before all primary text was read; result uses supplied evidence only. "
+        print(f"[{deps.code}] Warning: budget exhausted before all primary text was read; result uses supplied evidence only. "
               "Increase --request-limit or --context-chars for full coverage.", file=sys.stderr)
     for warning in deps.validation_warnings:
-        print(f"Warning: {warning}", file=sys.stderr)
+        print(f"[{deps.code}] Warning: {warning}", file=sys.stderr)
     return result.output.model_dump(mode="json")

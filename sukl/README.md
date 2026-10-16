@@ -1,8 +1,9 @@
 # SUKL document extraction
 
-Process one SUKL code at a time using CSV metadata, composition, PIL, SPC and CTCAE
-v6. PDFs are read directly from extracted folders. Pydantic AI provides document
-search tools and native, strict JSON-schema output.
+Extract drug data using CSV metadata, composition, PIL, SPC and CTCAE v6. Each drug
+has its own model conversation; batches can process several drugs concurrently.
+PDFs are read directly from extracted folders. Pydantic AI provides document search
+tools and native, strict JSON-schema output.
 
 ## Run
 
@@ -13,6 +14,32 @@ uv sync
 export API_KEY='your-key'
 uv run sukl extract 0000009 --model gpt-6-luna-dz-eu
 ```
+
+For a batch, put SUKL IDs in a UTF-8 text file and set the number of concurrent drugs:
+
+```text
+# ids.txt: one per line, or separated by whitespace, commas or semicolons
+0000009
+0000010
+```
+
+```bash
+uv run sukl extract --ids-file ids.txt --parallelism 8 \
+  --model gpt-6-luna-dz-eu --output-dir outputs --resume --trace
+```
+
+--parallel is an alias for --parallelism; the default is 1. IDs are normalized to
+seven digits and deduplicated in input order. Blank lines and # comments are allowed.
+Malformed or unknown codes stop the batch before model calls. Provide either a
+single positional code or --ids-file. --output selects a single-code output file;
+--output-dir selects the directory for per-code files (default: outputs).
+
+Workers overlap model calls while sharing the local PDF cache. Limits, validation,
+messages and traces remain separate for each drug; trace lines include its SUKL code.
+Successful results are saved immediately. A failed drug does not stop the other
+workers; a batch with failures exits with status 1 after printing a summary.
+Rerun with --resume to skip valid saved results and retry failed drugs. Resumed
+results skip document preparation and model calls. --force regenerates all results.
 
 The default model is gpt-6-luna; override it with --model or MODEL. The default
 Responses API endpoint is https://apim-rakathon-q7146n.azure-api.net/openai/v1/.
@@ -34,16 +61,22 @@ not an extraction from a specific drug:
 ```json
 {
   "side_effects": [
-    {"ctcae": "Nausea", "frequency": "common", "label": "Nauzea", "action": null}
+    {
+      "ctcae": "Nausea",
+      "frequency": "common",
+      "label": "Nevolnost",
+      "action": "contact_doctor",
+      "action_condition": {"patient_guide": "Pokud je vám výrazně nevolno"}
+    }
   ],
   "combinations": [
-    {"drug": "Example drug", "effect": "Zvyšuje riziko toxicity.", "side_effects": []},
-    {"drug_class": "Example class", "effect": "Snižuje účinnost léčby.", "side_effects": []}
+    {"drug": "Example drug", "effect": "Současné užívání zvyšuje riziko nežádoucích účinků.", "effect_type": "increased_toxicity", "side_effects": []},
+    {"drug_class": "Example class", "effect": "Současné užívání snižuje účinnost léčby.", "effect_type": "antagonism", "side_effects": []}
   ]
 }
 ```
 
-Each side effect has exactly four fields:
+Each side effect has five fields:
 
 - ctcae: English CTCAE v6 term or null.
 - frequency: one in N for an explicit point rate (5% becomes 20); otherwise a
@@ -51,12 +84,32 @@ Each side effect has exactly four fields:
 - label: Czech description, including any dose, population or severity conditions.
 - action: continue, discontinue_treatment, contact_doctor, hospitalize_NOW, or null
   when the source gives no recommendation.
+- action_condition: {"patient_guide": "..."} for a source-supported condition on
+  the action; null when unconditional or action is null. Text addresses the patient
+  in plain Czech, preserving timing, severity, dose and other qualifiers. For example,
+  {"patient_guide": "Pokud jste zároveň těhotná"}, only when supported by the source.
+  Different conditions requiring different actions stay in separate entries.
+  There are no automatically evaluated FHIR conditions yet.
 
 Each combination names either drug or drug_class, has a Czech effect description
-(including source-supported conditions and recommendations), and contains
-side_effects with those same four fields. This preserves interactions such as
+(including source-supported conditions and recommendations), an effect_type for
+grouping, and side_effects with those same five fields. This preserves interactions such as
 reduced efficacy even when no adverse reaction is named. No quotes, citations or
 run metadata are required.
+
+effect_type is one of:
+
+- contraindicated: the source explicitly prohibits combined use.
+- synergy: additive or enhanced therapeutic effect.
+- antagonism: opposed or reduced therapeutic effect.
+- increased_toxicity: increased risk or severity of adverse effects.
+- increased_exposure: increased drug concentrations or exposure.
+- decreased_exposure: decreased concentrations or exposure.
+- null: no clear supported category.
+
+When several apply, prefer contraindicated, then increased_toxicity, otherwise
+the most directly stated effect. The full effect description retains the details.
+All patient guidance, labels and effect descriptions use patient-friendly Czech.
 
 The schema lives in src/sukl/schema.py; instructions live in src/sukl/prompts.py.
 NativeOutput(DrugExtraction, strict=True) sends native Structured Outputs settings:
@@ -76,7 +129,7 @@ This checks vocabulary membership, not whether a mapping is medically correct.
 Normal JSON Schema validation still applies to every answer.
 
 Existing outputs are protected. Use --force to regenerate an old output (including
-files from the previous larger schema). --resume skips an existing result that
+files without effect_type and action_condition). --resume skips an existing result that
 matches the current schema; it does not compare sources or model settings.
 --trace prints tool names, arguments, input/output character counts and binary
 byte counts to stderr while running. It saves the full messages, a tool-call
@@ -161,6 +214,7 @@ uv run python -m unittest discover -s tests -v
 
 Tests use small real PDFs and mocked models/HTTP responses. They check native strict
 JSON Schema on both APIs, tool and reasoning replay, the small result shape,
-one-pass soft validation, separate traces, page coverage, caching and optional
-images. No external requests.
+one-pass soft validation, bounded batch concurrency, trace isolation, failure
+recovery, patient action conditions, page coverage, caching and optional images.
+No external requests.
 DSPy can be added later once there are labeled examples for prompt evaluation.
