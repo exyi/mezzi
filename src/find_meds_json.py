@@ -74,7 +74,7 @@ def extract_drugs(
     )
 
     out: list[DrugPrescription] = []
-    for res in tqdm(resources):
+    for res in resources:
         if res.get("resourceType") != "DocumentReference":
             continue
         is_rx = _is_prescription(res)
@@ -222,7 +222,7 @@ def main():
 
     items: list[DrugPrescription] = []
     failed = 0
-    for path in iter_input_files(args.inputs):
+    for path in tqdm(iter_input_files(args.inputs)):
         try:
             items += extract_drugs(
                 load_bundle(path), str(path), args.prescriptions_only
@@ -235,11 +235,13 @@ def main():
         items = dedupe(items)
     items.sort(key=lambda d: (d.patient_id or "", d.date or "", d.sukl))
 
+    if args.output is not None:
+        Path(args.output).parent.mkdir(exist_ok=True, parents=True)
+
     if args.output:
         with open(args.output, "w", encoding="utf-8", newline="") as f:
             WRITERS[args.format](items, f)
     else:
-        # sys.stdout.reconfigure(encoding="utf-8")
         WRITERS[args.format](items, sys.stdout)
 
 
