@@ -16,3 +16,9 @@ class DrugPrescription:
     pack: str  # e.g. "90/1bal."
     dosing: str  # remainder of the line, e.g. "1xd /rep. 2x"
     source_file: str | None = None
+    # activity analysis: filled in by find_meds_json by some heuristics
+    status: str | None = None  # MedicationRequest.status, if item came from one
+    supply_days: int | None = None  # estimated days of supply from pack + dosing
+    is_prn: bool = False  # True if "as needed" (dle potřeby / dp / při ...)
+    active_until: str | None = None  # ISO date the estimated supply runs out
+    active: bool | None = None  # True if likely still active at the reference date

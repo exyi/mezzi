@@ -1,0 +1,815 @@
+{
+  "side_effects": [
+    {
+      "ctcae": "Infections and infestations - Other, specify",
+      "frequency": "common",
+      "label": "Zánět nosohltanu (nazofaryngitida).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "rare",
+      "label": "Snížený počet krevních destiček.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "common",
+      "label": "Alergické reakce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "very_rare",
+      "label": "Závažná alergická reakce (anafylaxe).",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví náhlý sípot, bolest nebo sevření na hrudi, otok obličeje, rtů, úst, jazyka či hrdla, potíže s dýcháním nebo kolaps. Přestaňte tablety užívat."
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "rare",
+      "label": "Angioedém, tedy závažný alergický otok, například obličeje, jazyka nebo hrdla.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud otok způsobuje velké obtíže při dýchání. Přestaňte tablety užívat."
+      }
+    },
+    {
+      "ctcae": "Hyperglycemia",
+      "frequency": "common",
+      "label": "Zvýšená hladina cukru v krvi; pokud máte cukrovku, pečlivě sledujte její hodnoty.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypoglycemia",
+      "frequency": "uncommon",
+      "label": "Snížená hladina cukru v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Weight gain",
+      "frequency": "uncommon",
+      "label": "Nárůst tělesné hmotnosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anorexia",
+      "frequency": "uncommon",
+      "label": "Ztráta chuti k jídlu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": "uncommon",
+      "label": "Nespavost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Psychiatric disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Noční můry.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "common",
+      "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": "uncommon",
+      "label": "Závrať.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Paresthesia",
+      "frequency": "uncommon",
+      "label": "Pocit necitlivosti nebo mravenčení v prstech na rukou či nohou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nervous system disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Snížená citlivost na bolest nebo dotyk.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysgeusia",
+      "frequency": "uncommon",
+      "label": "Poruchy chuti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Amnesia",
+      "frequency": "uncommon",
+      "label": "Ztráta paměti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nervous system disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Periferní neuropatie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myasthenia gravis",
+      "frequency": "not_known",
+      "label": "Myasthenia gravis nebo její zhoršení, projevující se celkovou svalovou slabostí.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte slabost horních či dolních končetin, která se zhoršuje po období aktivity, potíže s polykáním nebo dušnost."
+      }
+    },
+    {
+      "ctcae": "Extraocular muscle paresis",
+      "frequency": "not_known",
+      "label": "Oční forma myastenie nebo její zhoršení, způsobující slabost očních svalů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte dvojité vidění nebo pokles očních víček."
+      }
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "uncommon",
+      "label": "Rozmazané vidění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Eye disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Poruchy zraku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tinnitus",
+      "frequency": "uncommon",
+      "label": "Zvonění v uších nebo v hlavě.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hearing impaired",
+      "frequency": "very_rare",
+      "label": "Ztráta sluchu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vasculitis",
+      "frequency": "rare",
+      "label": "Zánět cév (vaskulitida), někdy provázený fialovými kožními lézemi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pharyngolaryngeal pain",
+      "frequency": "common",
+      "label": "Bolest v krku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Epistaxis",
+      "frequency": "common",
+      "label": "Krvácení z nosu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "common",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Flatulence",
+      "frequency": "common",
+      "label": "Plynatost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspepsia",
+      "frequency": "common",
+      "label": "Trávicí obtíže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "common",
+      "label": "Nevolnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "common",
+      "label": "Průjem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "uncommon",
+      "label": "Zvracení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Abdominal pain",
+      "frequency": "uncommon",
+      "label": "Bolest horní nebo dolní části břicha.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Belching",
+      "frequency": "uncommon",
+      "label": "Říhání.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "uncommon",
+      "label": "Zánět slinivky břišní (pankreatitida), který může způsobit bolest břicha.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "uncommon",
+      "label": "Zánět jater (hepatitida).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Porucha odtoku žluči (cholestáza), která může způsobit zežloutnutí kůže a očního bělma.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatic failure",
+      "frequency": "very_rare",
+      "label": "Selhání jater.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "uncommon",
+      "label": "Kožní vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "uncommon",
+      "label": "Svědění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alopecia",
+      "frequency": "uncommon",
+      "label": "Vypadávání vlasů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erythema multiforme",
+      "frequency": "rare",
+      "label": "Erythema multiforme, závažná kožní reakce s vyrážkou.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vyrážka s puchýři nebo olupováním kůže, případně postižení úst, očí či genitálií nebo horečka. Přestaňte tablety užívat."
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "rare",
+      "label": "Stevensův-Johnsonův syndrom, závažná kožní reakce s puchýři a olupováním kůže.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví puchýře nebo olupování kůže, postižení úst, očí či genitálií nebo horečka. Přestaňte tablety užívat."
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "rare",
+      "label": "Toxická epidermální nekrolýza, závažná kožní reakce s rozsáhlým olupováním kůže.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví puchýře nebo olupování kůže, postižení úst, očí či genitálií nebo horečka. Přestaňte tablety užívat."
+      }
+    },
+    {
+      "ctcae": "Lichenoid dermatitis",
+      "frequency": "rare",
+      "label": "Lichenoidní léková reakce s vyrážkou na kůži nebo vřídky v ústech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myalgia",
+      "frequency": "common",
+      "label": "Bolest svalů.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arthralgia",
+      "frequency": "common",
+      "label": "Bolest kloubů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pain in extremity",
+      "frequency": "common",
+      "label": "Bolest končetin.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Muscle cramp",
+      "frequency": "common",
+      "label": "Svalové křeče.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Joint effusion",
+      "frequency": "common",
+      "label": "Otok kloubů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Back pain",
+      "frequency": "common",
+      "label": "Bolest zad.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Neck pain",
+      "frequency": "uncommon",
+      "label": "Bolest krku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "uncommon",
+      "label": "Svalová únava.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "rare",
+      "label": "Myopatie, tedy onemocnění svalů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví svalová bolest, křeče nebo slabost, zvláště spolu s malátností či horečkou."
+      }
+    },
+    {
+      "ctcae": "Myositis",
+      "frequency": "rare",
+      "label": "Zánět svalů (myositida).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví svalová bolest, křeče nebo slabost, zvláště spolu s malátností či horečkou."
+      }
+    },
+    {
+      "ctcae": "Rhabdomyolysis",
+      "frequency": "rare",
+      "label": "Rabdomyolýza, neobvyklý rozpad svalových buněk, který může poškodit ledviny a ohrozit život; může se projevit svalovou slabostí, citlivostí či bolestí, červenohnědou močí, malátností nebo vysokou horečkou.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud máte svalovou slabost, citlivost, bolest nebo přetržení svalů, červenohnědou moč, zvláště pokud se zároveň necítíte dobře nebo máte vysokou horečku. Přestaňte tablety užívat."
+      }
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "rare",
+      "label": "Přetržení svalu.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví svalová bolest, křeče nebo slabost."
+      }
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "rare",
+      "label": "Tendinopatie, tedy onemocnění šlach, někdy komplikované jejich přetržením.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Autoimmune disorder",
+      "frequency": "very_rare",
+      "label": "Lupus-like syndrom, onemocnění podobné lupusu, zahrnující vyrážku, kloubní a krevní změny.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myositis",
+      "frequency": "not_known",
+      "label": "Imunitně zprostředkovaná nekrotizující myopatie s přetrvávající slabostí svalů v blízkosti trupu a zvýšenou hladinou kreatinkinázy, která může přetrvávat i po vysazení léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví svalová slabost, která přetrvává."
+      }
+    },
+    {
+      "ctcae": "Gynecomastia",
+      "frequency": "very_rare",
+      "label": "Zvětšení prsů u mužů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Malaise",
+      "frequency": "uncommon",
+      "label": "Pocit nemoci nebo celková nevolnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Generalized muscle weakness",
+      "frequency": "uncommon",
+      "label": "Slabost (astenie).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se slabost týká svalů a přetrvává."
+      }
+    },
+    {
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "uncommon",
+      "label": "Bolest na hrudi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Peripheral edema",
+      "frequency": "uncommon",
+      "label": "Otoky, zejména kotníků.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "uncommon",
+      "label": "Únava.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "uncommon",
+      "label": "Horečka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "common",
+      "label": "Zvýšená hladina kreatinfosfokinázy v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "common",
+      "label": "Abnormální výsledky jaterních testů; klinicky významné zvýšení transamináz nad trojnásobek normálních hodnot se vyskytlo u 0,8 % pacientů a bylo závislé na dávce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Renal and urinary disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Přítomnost bílých krvinek v moči.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bruising",
+      "frequency": "rare",
+      "label": "Neočekávané krvácení nebo zvýšená tvorba modřin; mohou být známkou jaterních komplikací.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Depression",
+      "frequency": null,
+      "label": "Deprese; hlášená u některých statinů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erectile dysfunction",
+      "frequency": null,
+      "label": "Sexuální potíže; hlášené u některých statinů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
+      "frequency": null,
+      "label": "Výjimečně bylo při užívání statinů, zejména při dlouhodobé léčbě, hlášeno intersticiální plicní onemocnění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diabetes mellitus",
+      "frequency": null,
+      "label": "Cukrovka; riziko závisí na rizikových faktorech, například zvýšené hladině cukru či tuků v krvi, nadváze nebo vysokém krevním tlaku.",
+      "action": null,
+      "action_condition": null
+    }
+  ],
+  "combinations": [
+    {
+      "drug_class": "Léky, které silně blokují CYP3A4, včetně některých antibiotik, antimykotik, antivirotik proti HIV a hepatitidě C a cyklosporinu (např. telithromycin, klarithromycin, delavirdin, stiripentol, azolová antimykotika, inhibitory HIV proteázy).",
+      "effect": "Mohou výrazně zvýšit koncentraci atorvastatinu v krvi a riziko svalového poškození včetně myopatie a rabdomyolýzy. Pokud se kombinaci nelze vyhnout, lékař zváží nižší zahajovací i maximální dávku atorvastatinu a bude pacienta pečlivě klinicky sledovat; u některých režimů s inhibitory HIV proteázy platí zvláštní maximální dávky a sledování.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Myopatie (svalové poškození).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová bolest, křeče nebo slabost."
+          }
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Rabdomyolýza (závažný rozpad svalových buněk).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová slabost, bolest nebo citlivost svalů."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "Středně silné inhibitory CYP3A4, například erythromycin, diltiazem, verapamil a flukonazol; také amiodaron.",
+      "effect": "Mohou zvýšit koncentraci atorvastatinu a tím riziko svalových nežádoucích účinků; při erythromycinu se zvýšené riziko myopatie se statiny výslovně uvádí. Lékař může zvolit nižší maximální dávku atorvastatinu a po zahájení léčby nebo změně dávky inhibitoru pacienta klinicky sledovat.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Myopatie (svalové poškození).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová bolest, křeče nebo slabost."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "Léky blokující transportní bílkoviny, například cyklosporin a letermovir.",
+      "effect": "Mohou zvýšit systémovou expozici atorvastatinu a riziko svalových nežádoucích účinků. Pokud souběžné podávání nelze předejít, lékař zváží snížení dávky a bude klinicky sledovat účinnost; současné užívání atorvastatinu s letermovirem a cyklosporinem se nedoporučuje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Myopatie (svalové poškození).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová bolest, křeče nebo slabost."
+          }
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Rabdomyolýza (závažný rozpad svalových buněk).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová slabost, bolest nebo citlivost svalů."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "Induktory CYP3A4, například rifampicin, efavirenz a třezalka tečkovaná.",
+      "effect": "Mohou proměnlivě snížit koncentraci atorvastatinu a oslabit jeho účinek. Při souběžném podávání rifampicinu se doporučuje užít oba přípravky současně; pozdější podání atorvastatinu může jeho koncentraci výrazně snížit. Lékař bude sledovat účinnost léčby.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug_class": "Fibráty, zejména gemfibrozil.",
+      "effect": "Současné užívání s atorvastatinem může zvýšit riziko svalových účinků včetně rabdomyolýzy. Pokud se kombinaci nelze vyhnout, lékař zvolí nejnižší účinnou dávku atorvastatinu a bude pacienta náležitě sledovat.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Myopatie (svalové poškození).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová bolest, křeče nebo slabost."
+          }
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Rabdomyolýza (závažný rozpad svalových buněk).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová slabost, bolest nebo citlivost svalů."
+          }
+        }
+      ]
+    },
+    {
+      "drug": "ezetimib",
+      "effect": "Ezetimib užívaný spolu s atorvastatinem může zvýšit riziko svalových nežádoucích účinků včetně rabdomyolýzy. Doporučuje se náležité klinické sledování pacienta.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Myopatie (svalové poškození).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová bolest, křeče nebo slabost."
+          }
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Rabdomyolýza (závažný rozpad svalových buněk).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová slabost, bolest nebo citlivost svalů."
+          }
+        }
+      ]
+    },
+    {
+      "drug": "kyselina fusidová",
+      "effect": "Systémová kyselina fusidová podávaná současně s atorvastatinem nebo během 7 dnů po jejím vysazení zvyšuje riziko myopatie a rabdomyolýzy, včetně případů s úmrtím. Pokud je systémová léčba kyselinou fusidovou nezbytná, atorvastatin se po dobu této léčby přeruší; znovu jej lze zahájit 7 dní po poslední dávce kyseliny fusidové. Výjimečně lze dlouhodobou kombinaci zvážit pod pečlivým lékařským dohledem.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Myopatie (svalové poškození).",
+          "action": "discontinue_treatment",
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Rabdomyolýza (závažný rozpad svalových buněk).",
+          "action": "discontinue_treatment",
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "daptomycin",
+      "effect": "Současné podávání daptomycinu a atorvastatinu může zvýšit riziko myopatie nebo rabdomyolýzy. Lékař zváží dočasné vysazení atorvastatinu, pokud přínos kombinace nepřeváží riziko; nelze-li kombinaci vynechat, bude sledovat příznaky a měřit CK 2–3krát týdně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Myopatie (svalové poškození).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví známky nebo příznaky svalového poškození."
+          }
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Rabdomyolýza (závažný rozpad svalových buněk).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví známky nebo příznaky svalového poškození."
+          }
+        }
+      ]
+    },
+    {
+      "drug": "kolchicin",
+      "effect": "Při současném užívání kolchicinu a atorvastatinu byly hlášeny případy myopatie. Interakční studie nebyly provedeny; při předepisování této kombinace je nutná opatrnost.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Myopatie (svalové poškození).",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví svalová bolest, křeče nebo slabost."
+          }
+        }
+      ]
+    },
+    {
+      "drug": "glekaprevir/pibrentasvir",
+      "effect": "Současné užívání atorvastatinu s kombinací glekaprevir/pibrentasvir k léčbě hepatitidy C je kontraindikováno.",
+      "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "drug": "elbasvir/grazoprevir",
+      "effect": "Při současném užívání této kombinace k léčbě hepatitidy C nesmí dávka atorvastatinu překročit 20 mg denně.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "boceprevir",
+      "effect": "Při současném podávání s boceprevirem nesmí dávka atorvastatinu překročit 20 mg denně; lékař zvolí nižší zahajovací dávku a bude pacienta klinicky sledovat.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "telaprevir",
+      "effect": "Pokud je současné podávání nezbytné, dávka atorvastatinu nesmí překročit 10 mg denně; doporučuje se klinické sledování.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "grapefruitová šťáva",
+      "effect": "Velké množství grapefruitové šťávy může zvýšit koncentraci atorvastatinu; více než 1,2 litru denně po dobu 5 dnů zvýšilo jeho AUC 2,5krát. Pacient nemá pít více než jednu nebo dvě malé sklenice denně a velké množství se současně s atorvastatinem nedoporučuje.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "kolestipol",
+      "effect": "Kolestipol snižuje koncentraci atorvastatinu a jeho aktivních metabolitů; přesto byl účinek na snížení krevních tuků při společném užívání vyšší než při užívání každého přípravku samostatně.",
+      "effect_type": "synergy",
+      "side_effects": []
+    },
+    {
+      "drug_class": "Antacida obsahující hydroxid hořečnatý a hlinitý.",
+      "effect": "Mohou snížit plazmatickou koncentraci atorvastatinu; zvláštní klinické doporučení není uvedeno.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "digoxin",
+      "effect": "Opakované současné užívání digoxinu a atorvastatinu v dávce 10 mg mírně zvýšilo koncentraci digoxinu v ustáleném stavu. Pacienti užívající digoxin mají být klinicky sledováni.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug_class": "Perorální hormonální antikoncepce obsahující norethisteron a ethinylestradiol.",
+      "effect": "Atorvastatin při současném užívání zvýšil koncentrace norethisteronu a ethinylestradiolu; zvláštní klinické doporučení není uvedeno.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "warfarin",
+      "effect": "Při současném užívání atorvastatinu v dávce 80 mg denně a warfarinu se během prvních 4 dnů mírně zkrátil protrombinový čas, přibližně o 1,7 sekundy; změna se během 15 dnů léčby atorvastatinem upravila. Lékař má zkontrolovat protrombinový čas před zahájením atorvastatinu a na začátku léčby; při stabilních hodnotách pak pokračovat v obvyklém sledování a postup zopakovat při změně dávky nebo vysazení atorvastatinu.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    }
+  ]
+}

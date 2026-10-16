@@ -1,0 +1,112 @@
+{
+  "side_effects": [
+    {
+      "ctcae": "Nausea",
+      "frequency": "common",
+      "label": "Nevolnost (nauzea).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspepsia",
+      "frequency": "common",
+      "label": "Zažívací obtíže (dyspepsie).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "common",
+      "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "not_known",
+      "label": "Mírné zažívací obtíže, například zvracení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal pain",
+      "frequency": "not_known",
+      "label": "Mírné zažívací obtíže, například bolest trávicího ústrojí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Abdominal distension",
+      "frequency": "not_known",
+      "label": "Mírné zažívací obtíže, například napětí či roztažení břicha.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Flatulence",
+      "frequency": "not_known",
+      "label": "Mírné zažívací obtíže, například nadýmání.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "not_known",
+      "label": "Alergická reakce včetně anafylaxe; mohou se objevit kožní vyrážka nebo svědění, otok obličeje, rtů, jazyka či hrdla, pokles krevního tlaku, ztráta vědomí nebo obtížné dýchání.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vyrážka nebo svědění, otok obličeje, rtů, jazyka či hrdla, pokles krevního tlaku, ztráta vědomí nebo obtížné dýchání"
+      }
+    },
+    {
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Angioneurotický edém (otok při přecitlivělosti).",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví otok obličeje, rtů, jazyka či hrdla nebo jiné příznaky alergické reakce"
+      }
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "not_known",
+      "label": "Kopřivka.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví kopřivka nebo jiné příznaky alergické reakce"
+      }
+    },
+    {
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Kožní vyrážka při přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vyrážka nebo jiné příznaky alergické reakce"
+      }
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "not_known",
+      "label": "Svědění kůže při přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví svědění nebo jiné příznaky alergické reakce"
+      }
+    }
+  ],
+  "combinations": [
+    {
+      "drug_class": "Antihistaminika",
+      "effect": "Antihistaminika mohou teoreticky snižovat účinek Betasercu a Betaserc může také snižovat účinek antihistaminik.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "drug_class": "Inhibitory monoaminooxidázy (IMAO), včetně selektivních inhibitorů MAO-B",
+      "effect": "IMAO mohou inhibovat metabolismus betahistinu a zvýšit jeho expozici. Při současném užívání, včetně selektivních inhibitorů MAO-B, se doporučuje opatrnost.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    }
+  ]
+}

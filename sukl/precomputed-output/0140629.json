@@ -1,0 +1,154 @@
+{
+  "side_effects": [
+    {
+      "ctcae": "Headache",
+      "frequency": "very_common",
+      "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "very_common",
+      "label": "Zácpa; lékař bude kontrolovat váš zdravotní stav.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": "common",
+      "label": "Potíže se spaním (nespavost).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": null,
+      "frequency": "common",
+      "label": "Změny funkce jater, včetně zvýšených hladin jaterních transamináz zjištěných v krevních testech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "common",
+      "label": "Průjem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "uncommon",
+      "label": "Reakce přecitlivělosti, například alergická kožní reakce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "uncommon",
+      "label": "Anafylaxe, která může způsobit otok hrdla, obličeje, rtů nebo úst a potíže s dýcháním či polykáním.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví tyto příznaky alergické reakce."
+      }
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka – červené, vystouplé a svědivé pupeny.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": null,
+      "frequency": "uncommon",
+      "label": "Kožní vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Extrapyramidal disorder",
+      "frequency": "uncommon",
+      "label": "Abnormální mimovolní pohyby, například třes, svalová ztuhlost nebo svalové záškuby (extrapyramidové reakce).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Electrocardiogram QT corrected interval prolonged",
+      "frequency": "uncommon",
+      "label": "Změny srdečního rytmu nebo na EKG, včetně prodloužení QT intervalu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": null,
+      "frequency": "uncommon",
+      "label": "Serotoninový syndrom, který může být život ohrožující; může zahrnovat průjem, nevolnost, zvracení, vysokou teplotu či krevní tlak, nadměrné pocení, zrychlený srdeční tep, neklid, zmatenost, halucinace, třes, svalové záškuby nebo ztuhlost a poruchu koordinace.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví příznaky serotoninového syndromu."
+      }
+    }
+  ],
+  "combinations": [
+    {
+      "drug_class": "Léčivé přípravky prodlužující QT interval nebo s proarytmogenním účinkem",
+      "effect": "Současné užívání může vést ke změnám EKG včetně prodloužení QT intervalu, které mohou mít klinické důsledky. Opatrnost je nutná zejména při srdečním onemocnění, současné kardiotoxické chemoterapii nebo poruchách elektrolytů. Doporučuje se sledovat EKG a klinické změny.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Electrocardiogram QT corrected interval prolonged",
+          "frequency": "uncommon",
+          "label": "Změny srdečního rytmu nebo na EKG, včetně prodloužení QT intervalu.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Serotonergní léčivé přípravky, včetně SSRI a SNRI",
+      "effect": "Při současném užívání s granisetronem byly hlášeny případy serotoninového syndromu. Doporučuje se sledovat, zda se neobjeví příznaky tohoto syndromu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": null,
+          "frequency": "uncommon",
+          "label": "Serotoninový syndrom, který může být život ohrožující; může zahrnovat průjem, nevolnost, zvracení, vysokou teplotu či krevní tlak, nadměrné pocení, zrychlený srdeční tep, neklid, zmatenost, halucinace, třes, svalové záškuby nebo ztuhlost a poruchu koordinace.",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se u vás objeví příznaky serotoninového syndromu."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "Léčivé přípravky obsahující buprenorfin nebo jiné opioidy",
+      "effect": "Současné podávání může zvýšit riziko serotoninového syndromu, který může být život ohrožující. Doporučuje se sledovat, zda se neobjeví jeho příznaky.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": null,
+          "frequency": "uncommon",
+          "label": "Serotoninový syndrom, který může být život ohrožující; může zahrnovat průjem, nevolnost, zvracení, vysokou teplotu či krevní tlak, nadměrné pocení, zrychlený srdeční tep, neklid, zmatenost, halucinace, třes, svalové záškuby nebo ztuhlost a poruchu koordinace.",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se u vás objeví příznaky serotoninového syndromu."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "Jiní antagonisté receptorů 5-HT3, například dolasetron nebo ondansetron",
+      "effect": "U antagonistů 5-HT3 byla hlášena zkřížená přecitlivělost. Před užíváním dalšího přípravku z této skupiny se poraďte s lékařem.",
+      "effect_type": null,
+      "side_effects": [
+        {
+          "ctcae": "Allergic reaction",
+          "frequency": "uncommon",
+          "label": "Reakce přecitlivělosti, například alergická kožní reakce.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    }
+  ]
+}

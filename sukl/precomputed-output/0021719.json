@@ -1,0 +1,937 @@
+{
+  "side_effects": [
+    {
+      "ctcae": "Anemia",
+      "frequency": "rare",
+      "label": "Anémie (nízký počet červených krvinek).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "very_rare",
+      "label": "Závažná alergická reakce způsobující potíže s dýcháním nebo závrať (anafylaxe).",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví anafylaxe, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "rare",
+      "label": "Reakce z přecitlivělosti, která může zahrnovat otok obličeje, jazyka nebo hrdla, silnou bolest svalů, vyrážku se slabostí končetin nebo krku, kožní vyrážku či boláky v ústech, bolesti nebo zánět kloubů, zánět cév, neobvyklé modřiny, kopřivku, citlivost kůže na slunce, horečku, zarudnutí, dušnost, nepohodu nebo příznaky podobné lupénce.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý z těchto závažných příznaků, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Depression",
+      "frequency": "not_known",
+      "label": "Deprese.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": "very_rare",
+      "label": "Neklidný spánek nebo nespavost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Memory impairment",
+      "frequency": "very_rare",
+      "label": "Špatná paměť nebo poruchy paměti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "rare",
+      "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Paresthesia",
+      "frequency": "rare",
+      "label": "Pocit lechtání nebo mravenčení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": "rare",
+      "label": "Závrať.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Peripheral sensory neuropathy",
+      "frequency": "rare",
+      "label": "Necitlivost nebo slabost v pažích a nohou; periferní neuropatie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "rare",
+      "label": "Rozmazané vidění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vision decreased",
+      "frequency": "rare",
+      "label": "Postižení nebo zhoršení zraku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "rare",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Abdominal pain",
+      "frequency": "rare",
+      "label": "Bolest břicha.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Flatulence",
+      "frequency": "rare",
+      "label": "Plynatost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspepsia",
+      "frequency": "rare",
+      "label": "Zažívací potíže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "rare",
+      "label": "Průjem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "rare",
+      "label": "Pocit nevolnosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "rare",
+      "label": "Zvracení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "rare",
+      "label": "Zánět slinivky břišní, často s těžkými bolestmi břicha.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "rare",
+      "label": "Zánět jater, který se může projevit zežloutnutím kůže a bělma očí, svěděním, tmavou močí nebo světlou stolicí.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví tyto závažné příznaky, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Hepatic failure",
+      "frequency": "very_rare",
+      "label": "Selhání jater.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví selhání jater, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "rare",
+      "label": "Vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "rare",
+      "label": "Svědění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alopecia",
+      "frequency": "rare",
+      "label": "Vypadávání vlasů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Lichenoid dermatitis",
+      "frequency": "very_rare",
+      "label": "Lichenoidní lékový výsev, který se může projevit vyrážkou na kůži nebo boláky v ústech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rhabdomyolysis",
+      "frequency": "rare",
+      "label": "Rozpad svalů, který může vést k poškození ledvin a velmi vzácně k úmrtí.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví rozpad svalů nebo závažné svalové potíže, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "rare",
+      "label": "Myopatie včetně zánětu svalů; svalová bolest, citlivost nebo slabost, přetržení svalu či svalové křeče. Riziko je vyšší při vyšších dávkách, zejména při dávce 80 mg.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví tyto svalové potíže, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": 100.0,
+      "label": "Myopatie byla zaznamenána u přibližně 1 % pacientů užívajících 80 mg denně v klinickém hodnocení pacientů po infarktu myokardu.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví svalová bolest, citlivost, slabost nebo křeče, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": 5000.0,
+      "label": "Myopatie byla zaznamenána u přibližně 0,02 % pacientů užívajících 20 mg denně v klinickém hodnocení pacientů po infarktu myokardu.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví svalová bolest, citlivost, slabost nebo křeče, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Generalized muscle weakness",
+      "frequency": "not_known",
+      "label": "Přetrvávající svalová slabost.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte přetrvávající svalovou slabost, obraťte se na svého lékaře nebo lékárníka."
+      }
+    },
+    {
+      "ctcae": "Myositis",
+      "frequency": "very_rare",
+      "label": "Imunitně zprostředkovaná nekrotizující myopatie, která se může objevit během léčby statinem nebo po jejím ukončení a projevuje se přetrvávající slabostí svalů v blízkosti trupu a zvýšením kreatinkinázy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud u vás přetrvává svalová slabost, obraťte se na svého lékaře."
+      }
+    },
+    {
+      "ctcae": "Muscle cramp",
+      "frequency": "rare",
+      "label": "Svalové křeče.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví svalové křeče, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "very_rare",
+      "label": "Přetržení svalu.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví přetržení svalu, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "not_known",
+      "label": "Problémy se šlachami, někdy komplikované přetržením šlachy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gynecomastia",
+      "frequency": "very_rare",
+      "label": "Zvětšení prsů u mužů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erectile dysfunction",
+      "frequency": "not_known",
+      "label": "Erektilní dysfunkce nebo potíže s pohlavním životem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myasthenia gravis",
+      "frequency": "not_known",
+      "label": "Myasthenia gravis, která způsobuje celkovou svalovou slabost, někdy včetně svalů používaných při dýchání.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví zhoršující se slabost končetin po aktivitě, dvojité vidění, pokles očních víček, potíže s polykáním nebo dušnost, poraďte se se svým lékařem."
+      }
+    },
+    {
+      "ctcae": "Myasthenia gravis",
+      "frequency": "not_known",
+      "label": "Oční forma myastenie, která způsobuje slabost očních svalů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví zhoršující se slabost končetin po aktivitě, dvojité vidění, pokles očních víček, potíže s polykáním nebo dušnost, poraďte se se svým lékařem."
+      }
+    },
+    {
+      "ctcae": "Pneumonitis",
+      "frequency": "not_known",
+      "label": "Zánět plic, který může vést k dýchacím problémům, přetrvávajícímu kašli nebo dušnosti či horečce; při dlouhodobé léčbě byly hlášeny případy intersticiální plicní nemoci.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "rare",
+      "label": "Slabost (astenie).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "rare",
+      "label": "Zvýšení sérových transamináz, včetně alaninaminotransferázy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Aspartate aminotransferase increased",
+      "frequency": "rare",
+      "label": "Zvýšení sérových transamináz, včetně aspartátaminotransferázy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "GGT increased",
+      "frequency": "rare",
+      "label": "Zvýšení sérové gama-glutamyltranspeptidázy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alkaline phosphatase increased",
+      "frequency": "rare",
+      "label": "Zvýšení alkalické fosfatázy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "rare",
+      "label": "Zvýšení hodnot kreatinkinázy v séru.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diabetes mellitus",
+      "frequency": null,
+      "label": "Cukrovka; pravděpodobnější je u osob se zvýšenou hladinou cukru nebo tuků v krvi, nadváhou nebo vysokým krevním tlakem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Psychiatric disorders - Other, specify",
+      "frequency": null,
+      "label": "Poruchy spánku včetně nočních můr.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Memory impairment",
+      "frequency": null,
+      "label": "Ztráta paměti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": null,
+      "frequency": null,
+      "label": "Sexuální dysfunkce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arthralgia",
+      "frequency": "rare",
+      "label": "Bolesti kloubů jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Arthritis",
+      "frequency": "rare",
+      "label": "Zánět kloubů jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Vasculitis",
+      "frequency": "rare",
+      "label": "Zánět cév jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "rare",
+      "label": "Snížený počet krevních destiček jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Eosinophilia",
+      "frequency": "rare",
+      "label": "Zvýšený počet eozinofilů jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "rare",
+      "label": "Zvýšení hodnot sedimentace erytrocytů jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "rare",
+      "label": "Kopřivka jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Photosensitivity",
+      "frequency": "rare",
+      "label": "Citlivost kůže na slunce jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "rare",
+      "label": "Horečka jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Flushing",
+      "frequency": "rare",
+      "label": "Návaly horka jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": "rare",
+      "label": "Dušnost jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Malaise",
+      "frequency": "rare",
+      "label": "Pocit nepohody jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Dermatitis psoriasiform",
+      "frequency": "rare",
+      "label": "Obraz onemocnění připomínající lupénku jako součást vzácně hlášeného syndromu přecitlivělosti, včetně vyrážky a problémů s klouby.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Myositis",
+      "frequency": "rare",
+      "label": "Dermatomyozitida jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "rare",
+      "label": "Polymyalgia rheumatica jako součást vzácně hlášeného syndromu přecitlivělosti.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví některý ze závažných projevů přecitlivělosti, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "rare",
+      "label": "Angioedém včetně otoku obličeje, jazyka nebo hrdla, který může způsobit potíže s dýcháním.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví otok obličeje, jazyka nebo hrdla nebo potíže s dýcháním, přestaňte přípravek užívat a ihned kontaktujte lékaře nebo jeďte na pohotovost."
+      }
+    }
+  ],
+  "combinations": [
+    {
+      "drug_class": "Silné inhibitory CYP3A4: itrakonazol, ketokonazol, posakonazol, erythromycin, klarithromycin, telithromycin, inhibitory HIV proteázy (např. nelfinavir) a nefazodon",
+      "effect": "Současné užívání je kontraindikováno, protože zvyšuje koncentrace simvastatinu a riziko myopatie a rhabdomyolýzy. Pokud je léčba itrakonazolem, ketokonazolem, posakonazolem, erythromycinem, klarithromycinem nebo telithromycinem nezbytná, léčba simvastatinem se má po dobu jejich užívání přerušit.",
+      "effect_type": "contraindicated",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Zvýšené riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "gemfibrozil",
+      "effect": "Současné podávání je kontraindikováno kvůli zvýšenému riziku myopatie a rhabdomyolýzy; gemfibrozil zvyšuje expozici kyselině simvastatinové přibližně 1,9násobně.",
+      "effect_type": "contraindicated",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Zvýšené riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "cyklosporin",
+      "effect": "Současné podávání je kontraindikováno, protože zvyšuje riziko myopatie a rhabdomyolýzy a může zvýšit expozici inhibitorům HMG-CoA reduktázy.",
+      "effect_type": "contraindicated",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Zvýšené riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "danazol",
+      "effect": "Současné podávání je kontraindikováno kvůli zvýšenému riziku myopatie a rhabdomyolýzy.",
+      "effect_type": "contraindicated",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Zvýšené riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "palbociklib",
+      "effect": "Současné podávání se nedoporučuje kvůli riziku myopatie a rhabdomyolýzy.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "ribociklib",
+      "effect": "Současnému podávání je třeba se vyvarovat kvůli riziku myopatie a rhabdomyolýzy.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Ostatní fibráty kromě fenofibrátu",
+      "effect": "Současné užívání zvyšuje riziko myopatie a rhabdomyolýzy; dávka simvastatinu nesmí překročit 10 mg denně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Zvýšené riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "fenofibrát",
+      "effect": "Při současném užívání je nutná opatrnost, protože každá z obou látek může samostatně vyvolat myopatii. Dostupné údaje nenaznačují, že by riziko při kombinaci přesahovalo souhrn rizik jednotlivých přípravků.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "amiodaron",
+      "effect": "Zvyšuje se riziko myopatie a rhabdomyolýzy; dávka simvastatinu při současném užívání nesmí překročit 20 mg denně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Zvýšené riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "amlodipin",
+      "effect": "Zvyšuje expozici kyselině simvastatinové přibližně 1,6násobně a zvyšuje riziko myopatie; dávka simvastatinu nesmí překročit 20 mg denně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "verapamil",
+      "effect": "Zvyšuje expozici kyselině simvastatinové přibližně 2,3násobně a riziko myopatie a rhabdomyolýzy; dávka simvastatinu nesmí překročit 20 mg denně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Zvýšené riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "diltiazem",
+      "effect": "Zvyšuje expozici kyselině simvastatinové přibližně 2,7násobně a riziko myopatie a rhabdomyolýzy; dávka simvastatinu nesmí překročit 20 mg denně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Zvýšené riziko rhabdomyolýzy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Přípravky obsahující elbasvir nebo grazoprevir",
+      "effect": "Mohou zvýšit plazmatickou koncentraci simvastatinu a riziko myopatie; u pacientů užívajících tyto přípravky nesmí dávka simvastatinu překročit 20 mg denně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "tikagrelor",
+      "effect": "Zvyšuje Cmax a AUC simvastatinu o 81 %, respektive 56 %, a kyseliny simvastatinové o 64 %, respektive 52 %; u jednotlivých pacientů může dojít ke zvýšení 2–3násobně. Současné užívání dávek simvastatinu vyšších než 40 mg denně se nedoporučuje, protože může vyvolat nežádoucí účinky simvastatinu; je třeba zvážit možný přínos.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "flukonazol",
+      "effect": "Při současném užívání byly hlášeny vzácné případy rhabdomyolýzy; kombinace vyžaduje opatrnost.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": "rare",
+          "label": "Rhabdomyolýza.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Další středně silné inhibitory CYP3A4",
+      "effect": "Mohou zvýšit riziko myopatie, zejména při vyšších dávkách simvastatinu; může být nutná úprava dávky. U některých inhibitorů, například diltiazemu, je maximální dávka simvastatinu 20 mg denně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Inhibitory transportního proteinu OATP1B1",
+      "effect": "Mohou zvýšit plazmatickou koncentraci kyseliny simvastatinové a riziko myopatie.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Inhibitory transportéru BCRP",
+      "effect": "Mohou zvýšit plazmatickou koncentraci simvastatinu a riziko myopatie; u přípravků obsahujících elbasvir nebo grazoprevir nesmí dávka simvastatinu překročit 20 mg denně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "niacin (kyselina nikotinová)",
+      "effect": "Při současném užívání lipid-modifikujících dávek niacinu (nejméně 1 g denně) byly vzácně pozorovány myopatie a rhabdomyolýza. Zvláštní opatrnost je nutná u čínských pacientů, zejména při dávce simvastatinu 40 mg nebo vyšší; dávka 80 mg se u čínských pacientů v této kombinaci nedoporučuje. Pacienty je třeba pečlivě sledovat, zejména v prvních měsících léčby a při zvyšování dávky.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": "rare",
+          "label": "Myopatie při současném užívání lipid-modifikujících dávek niacinu (nejméně 1 g denně); zvláštní opatrnost je nutná u čínských pacientů, zejména při dávce simvastatinu 40 mg nebo vyšší.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": "rare",
+          "label": "Rhabdomyolýza při současném užívání lipid-modifikujících dávek niacinu (nejméně 1 g denně); zvláštní opatrnost je nutná u čínských pacientů, zejména při dávce simvastatinu 40 mg nebo vyšší.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "kyselina fusidová",
+      "effect": "Simvastatin se nesmí podávat současně s kyselinou fusidovou kvůli riziku myopatie a rhabdomyolýzy, včetně smrtelných případů. Pokud je systémová léčba kyselinou fusidovou nezbytná, léčba simvastatinem se má po dobu jejího užívání přerušit. Lékařskou pomoc je třeba vyhledat okamžitě při svalové slabosti, bolesti nebo zvýšené citlivosti. Simvastatin lze znovu nasadit sedm dní po poslední dávce kyseliny fusidové; výjimečné dlouhodobé souběžné užívání se má zvažovat individuálně pod přísným lékařským dohledem.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Riziko svalové slabosti, bolesti nebo zvýšené citlivosti.",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se při současném užívání objeví svalová slabost, bolest nebo zvýšená citlivost, vyhledejte okamžitě lékařskou pomoc."
+          }
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Riziko rhabdomyolýzy, včetně smrtelných případů.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "grepová šťáva",
+      "effect": "Grepová šťáva inhibuje CYP3A4. Více než litr denně zvýšil expozici kyselině simvastatinové 7násobně; 240 ml ráno při podání simvastatinu večer ji zvýšilo 1,9násobně. Během léčby simvastatinem se konzumaci grepové šťávy vyhněte.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "kolchicin",
+      "effect": "U pacientů s nedostatečnou funkcí ledvin byly při současném podávání hlášeny myopatie a rhabdomyolýza; doporučuje se pečlivé klinické sledování.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "frequency": null,
+          "label": "Myopatie; popsané případy se týkaly pacientů s nedostatečnou funkcí ledvin.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Rhabdomyolysis",
+          "frequency": null,
+          "label": "Rhabdomyolýza; popsané případy se týkaly pacientů s nedostatečnou funkcí ledvin.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "rifampicin",
+      "effect": "Při dlouhodobé léčbě rifampicinem může dojít ke ztrátě účinnosti simvastatinu. Rifampicin snížil AUC kyseliny simvastatinové o 93 %.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug_class": "Kumarinová antikoagulancia, například warfarin, fenprokumon nebo acenokumarol",
+      "effect": "Simvastatin v dávce 20–40 mg denně mírně zesílil účinek kumarinových antikoagulancií a zvýšil INR. Protrombinový čas se má stanovit před zahájením léčby simvastatinem a v její časné fázi dostatečně často; při stabilních hodnotách lze dále postupovat v obvyklých intervalech. Při změně dávky simvastatinu nebo jeho vysazení se postup opakuje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "INR increased",
+          "frequency": "very_rare",
+          "label": "Zvýšení INR; byly popsány velmi vzácné případy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Sekvestranty žlučových kyselin",
+      "effect": "Simvastatin lze se sekvestranty žlučových kyselin užívat v kombinaci, ale užijte jej alespoň 2 hodiny před nimi nebo nejméně 4 hodiny po jejich užití.",
+      "effect_type": null,
+      "side_effects": []
+    }
+  ]
+}

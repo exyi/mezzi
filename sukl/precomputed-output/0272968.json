@@ -1,0 +1,188 @@
+{
+  "side_effects": [
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "rare",
+      "label": "Závažné alergické reakce (reakce přecitlivělosti), někdy včetně anafylaxe; mohou se projevit kopřivkou, svěděním, zarudnutím, otokem obličeje, úst nebo hrdla či potížemi s dýcháním.",
+      "action": "hospitalize_NOW",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "very_rare",
+      "label": "Rozsáhlá vyrážka s puchýři a olupováním kůže na většině povrchu těla (toxická epidermální nekrolýza).",
+      "action": "hospitalize_NOW",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "uncommon",
+      "label": "Bolest na hrudi, s poklesem úseku ST na EKG nebo bez něj.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myocardial infarction",
+      "frequency": "not_known",
+      "label": "Ischemie srdečního svalu; může se projevit náhlou bolestí nebo svíráním na hrudi.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví náhlá bolest nebo svírání na hrudi"
+      }
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "very_common",
+      "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "common",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Flushing",
+      "frequency": "common",
+      "label": "Pocit tepla nebo zrudnutí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Seizure",
+      "frequency": "uncommon",
+      "label": "Záchvaty (křeče).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Extrapyramidal disorder",
+      "frequency": "uncommon",
+      "label": "Poruchy hybnosti, včetně mimovolních pohybů a křečí; byly popsány také dystonické reakce, okulogyrické krize a dyskineze. Obvykle nezanechávají trvalé následky.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Nepravidelný srdeční rytmus (arytmie).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Sinus bradycardia",
+      "frequency": "uncommon",
+      "label": "Zpomalená srdeční činnost (bradykardie).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Electrocardiogram QT corrected interval prolonged",
+      "frequency": "rare",
+      "label": "Prodloužení QTc intervalu, včetně poruch srdečního rytmu typu torsade de pointes.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypotension",
+      "frequency": "uncommon",
+      "label": "Nízký krevní tlak, který může způsobit pocit na omdlení nebo závratě.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hiccups",
+      "frequency": "uncommon",
+      "label": "Škytavka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "uncommon",
+      "label": "Bez příznaků zvýšené hodnoty jaterních enzymů; častěji pozorováno při chemoterapii s cisplatinou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "rare",
+      "label": "Přechodné poruchy vidění, například rozmazané vidění; hlášeny zejména po nitrožilním podání.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vision decreased",
+      "frequency": "very_rare",
+      "label": "Přechodná slepota, hlášená zejména během nitrožilního podání; ve většině hlášených případů odezněla během 20 minut.",
+      "action": null,
+      "action_condition": null
+    }
+  ],
+  "combinations": [
+    {
+      "drug": "apomorfin",
+      "effect": "Ondansetron se nesmí podávat současně s apomorfinem. Byly hlášeny případy závažného poklesu krevního tlaku a ztráty vědomí.",
+      "effect_type": "contraindicated",
+      "side_effects": [
+        {
+          "ctcae": "Hypotension",
+          "frequency": null,
+          "label": "Závažný pokles krevního tlaku.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Syncope",
+          "frequency": null,
+          "label": "Ztráta vědomí.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Léčiva prodlužující QT interval, včetně některých protinádorových léčiv (například antracyklinů a trastuzumabu), antibiotik (například erythromycinu), ketokonazolu, antiarytmik (například amiodaronu) a betablokátorů (například atenololu nebo timololu)",
+      "effect": "Současné užívání s ondansetronem může dále prodloužit QT interval a zvýšit riziko poruch srdečního rytmu. Zvláštní opatrnost je potřebná u pacientů, u nichž může dojít k prodloužení QTc nebo k poruše elektrolytů.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Cardiac disorders - Other, specify",
+          "frequency": null,
+          "label": "Poruchy srdečního rytmu (arytmie).",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Jiná serotonergní léčiva, včetně SSRI a SNRI",
+      "effect": "Při současném užívání ondansetronu s jinými serotonergními léčivy byly hlášeny případy serotoninového syndromu. Pokud je tato kombinace klinicky nezbytná, lékař bude pacienta odpovídajícím způsobem sledovat.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Nervous system disorders - Other, specify",
+          "frequency": null,
+          "label": "Serotoninový syndrom, který může zahrnovat poruchu vědomí, nestabilitu autonomních funkcí a nervosvalové poruchy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "Silné induktory CYP3A4, například fenytoin, karbamazepin a rifampicin",
+      "effect": "Tyto léky mohou zvýšit odbourávání ondansetronu a snížit jeho koncentraci v krvi po užití ústy.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "tramadol",
+      "effect": "Údaje z malé studie naznačují, že ondansetron může snížit analgetický účinek tramadolu.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    }
+  ]
+}

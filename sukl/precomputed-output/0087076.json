@@ -1,0 +1,97 @@
+{
+  "side_effects": [
+    {
+      "ctcae": "Gastroesophageal reflux disease",
+      "frequency": "uncommon",
+      "label": "Pálení žáhy",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "uncommon",
+      "label": "Nevolnost",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "rare",
+      "label": "Průjem",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysgeusia",
+      "frequency": null,
+      "label": "Porucha chuti, pozorovaná v několika případech na začátku léčby",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": null,
+      "frequency": "very_rare",
+      "label": "Kožní vyrážka",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví typické příznaky přecitlivělosti"
+      }
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "very_rare",
+      "label": "Zvýšená teplota, případně nečekaná hyperpyrexie",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví typické příznaky přecitlivělosti"
+      }
+    }
+  ],
+  "combinations": [
+    {
+      "drug_class": "léky tlumící kašel (antitusika)",
+      "effect": "Současné užívání se nedoporučuje a nemá racionální opodstatnění; může způsobit hromadění sekretu v průduškách a zvýšit riziko superinfekce nebo bronchospasmu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Bronchospasm",
+          "frequency": null,
+          "label": "Zvýšené riziko bronchospasmu při hromadění sekretu v průduškách",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Infections and infestations - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko superinfekce při hromadění sekretu v průduškách",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug": "salbutamol",
+      "effect": "Při kombinaci s erdosteinem byl prokázán vzájemně posílený účinek.",
+      "effect_type": "synergy",
+      "side_effects": []
+    },
+    {
+      "drug": "budesonid",
+      "effect": "Při kombinaci s erdosteinem byl prokázán vzájemně posílený účinek.",
+      "effect_type": "synergy",
+      "side_effects": []
+    },
+    {
+      "drug": "amoxicilin",
+      "effect": "Erdostein zvyšuje koncentraci amoxicilinu v hlenu dýchacích cest; tohoto účinku a posílení léčebného působení lze využít terapeuticky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug": "klarithromycin",
+      "effect": "Erdostein zvyšuje koncentraci klarithromycinu v hlenu dýchacích cest; tohoto účinku lze využít terapeuticky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    }
+  ]
+}

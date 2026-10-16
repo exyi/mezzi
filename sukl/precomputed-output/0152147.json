@@ -1,0 +1,287 @@
+{
+  "side_effects": [
+    {
+      "ctcae": "Nausea",
+      "frequency": "very_common",
+      "label": "Nevolnost, nejčastěji na začátku léčby; ve většině případů potíže samy odezní. Užívání s jídlem nebo bezprostředně po jídle je může zmírnit.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud zažívací potíže neustoupí, přestaňte přípravek užívat a informujte svého lékaře."
+      }
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "very_common",
+      "label": "Zvracení, nejčastěji na začátku léčby; ve většině případů potíže samy odezní. Užívání s jídlem nebo bezprostředně po jídle je může zmírnit.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud zažívací potíže neustoupí, přestaňte přípravek užívat a informujte svého lékaře."
+      }
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "very_common",
+      "label": "Průjem, nejčastěji na začátku léčby; ve většině případů potíže samy odezní. Užívání s jídlem nebo bezprostředně po jídle je může zmírnit.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud zažívací potíže neustoupí, přestaňte přípravek užívat a informujte svého lékaře."
+      }
+    },
+    {
+      "ctcae": "Abdominal pain",
+      "frequency": "very_common",
+      "label": "Bolest břicha, nejčastěji na začátku léčby; ve většině případů potíže samy odezní. Užívání s jídlem nebo bezprostředně po jídle je může zmírnit.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud zažívací potíže neustoupí, přestaňte přípravek užívat a informujte svého lékaře."
+      }
+    },
+    {
+      "ctcae": "Anorexia",
+      "frequency": "very_common",
+      "label": "Ztráta chuti k jídlu, nejčastěji na začátku léčby; ve většině případů potíže samy odezní. Užívání s jídlem nebo bezprostředně po jídle může potíže zmírnit.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud zažívací potíže neustoupí, přestaňte přípravek užívat a informujte svého lékaře."
+      }
+    },
+    {
+      "ctcae": "Dysgeusia",
+      "frequency": "common",
+      "label": "Změny chuti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": null,
+      "frequency": "common",
+      "label": "Snížená nebo nízká hladina vitaminu B12 v krvi; může se projevit extrémní únavou, bolestivým a červeným jazykem, mravenčením nebo bledou či žlutou kůží.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Acidosis",
+      "frequency": "very_rare",
+      "label": "Laktátová acidóza, velmi vzácná, ale závažná komplikace, zvláště při nesprávné funkci ledvin. Příznaky mohou zahrnovat zvracení, bolest břicha, svalové křeče, celkovou nevolnost se závažnou únavou, problémy s dýcháním, sníženou tělesnou teplotu a snížený tep; může vést ke komatu.",
+      "action": "hospitalize_NOW",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví příznaky laktátové acidózy, okamžitě přestaňte přípravek užívat a kontaktujte lékaře nebo nejbližší nemocniční pohotovost; tento stav vyžaduje naléhavé ošetření v nemocnici."
+      }
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "very_rare",
+      "label": "Ojediněle se mohou objevit abnormality jaterních testů.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví příznaky uvedené u zánětu jater, přestaňte přípravek užívat a informujte svého lékaře."
+      }
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "very_rare",
+      "label": "Hepatitida (zánět jater), která se po vysazení metforminu upraví; může způsobit únavu, ztrátu chuti k jídlu, úbytek hmotnosti a někdy zežloutnutí kůže nebo očního bělma.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví tyto příznaky, přestaňte přípravek užívat a informujte svého lékaře."
+      }
+    },
+    {
+      "ctcae": null,
+      "frequency": "very_rare",
+      "label": "Kožní zarudnutí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "very_rare",
+      "label": "Svědění kůže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "very_rare",
+      "label": "Kopřivka.",
+      "action": null,
+      "action_condition": null
+    }
+  ],
+  "combinations": [
+    {
+      "drug_class": "alkohol",
+      "effect": "Intoxikace alkoholem je spojena se zvýšeným rizikem laktátové acidózy, zvláště při hladovění, podvýživě nebo poruše funkce jater. Během užívání přípravku se vyhněte nadměrné konzumaci alkoholu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Acidosis",
+          "frequency": null,
+          "label": "Zvýšené riziko laktátové acidózy.",
+          "action": "hospitalize_NOW",
+          "action_condition": {
+            "patient_guide": "Pokud se u vás objeví příznaky laktátové acidózy, okamžitě přestaňte přípravek užívat a kontaktujte lékaře nebo nejbližší nemocniční pohotovost; tento stav vyžaduje naléhavé ošetření v nemocnici."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "jódové kontrastní látky",
+      "effect": "Intravaskulární podání jódové kontrastní látky může způsobit nefropatii vyvolanou kontrastní látkou, následné hromadění metforminu a zvýšené riziko laktátové acidózy. Metformin vysaďte před vyšetřením nebo v době jeho provedení a znovu jej začněte užívat nejdříve 48 hodin po vyšetření, až bude znovu zhodnocena a potvrzena stabilní funkce ledvin.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Acidosis",
+          "frequency": null,
+          "label": "Zvýšené riziko laktátové acidózy v souvislosti s hromaděním metforminu.",
+          "action": "hospitalize_NOW",
+          "action_condition": {
+            "patient_guide": "Pokud se u vás objeví příznaky laktátové acidózy, okamžitě přestaňte přípravek užívat a kontaktujte lékaře nebo nejbližší nemocniční pohotovost; tento stav vyžaduje naléhavé ošetření v nemocnici."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "nesteroidní protizánětlivé léky (NSAID), včetně selektivních inhibitorů COX-2",
+      "effect": "Tyto přípravky mohou nepříznivě ovlivnit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení nebo užívání současně s metforminem je nutné pečlivě sledovat funkci ledvin; při zahájení léčby postupujte opatrně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Acidosis",
+          "frequency": null,
+          "label": "Zvýšené riziko laktátové acidózy při zhoršení funkce ledvin.",
+          "action": "hospitalize_NOW",
+          "action_condition": {
+            "patient_guide": "Pokud se u vás objeví příznaky laktátové acidózy, okamžitě přestaňte přípravek užívat a kontaktujte lékaře nebo nejbližší nemocniční pohotovost; tento stav vyžaduje naléhavé ošetření v nemocnici."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "ACE inhibitory",
+      "effect": "Tyto přípravky mohou nepříznivě ovlivnit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení nebo užívání současně s metforminem je nutné pečlivě sledovat funkci ledvin; při zahájení léčby postupujte opatrně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Acidosis",
+          "frequency": null,
+          "label": "Zvýšené riziko laktátové acidózy při zhoršení funkce ledvin.",
+          "action": "hospitalize_NOW",
+          "action_condition": {
+            "patient_guide": "Pokud se u vás objeví příznaky laktátové acidózy, okamžitě přestaňte přípravek užívat a kontaktujte lékaře nebo nejbližší nemocniční pohotovost; tento stav vyžaduje naléhavé ošetření v nemocnici."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "antagonisté receptoru pro angiotenzin II",
+      "effect": "Tyto přípravky mohou nepříznivě ovlivnit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení nebo užívání současně s metforminem je nutné pečlivě sledovat funkci ledvin; při zahájení léčby postupujte opatrně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Acidosis",
+          "frequency": null,
+          "label": "Zvýšené riziko laktátové acidózy při zhoršení funkce ledvin.",
+          "action": "hospitalize_NOW",
+          "action_condition": {
+            "patient_guide": "Pokud se u vás objeví příznaky laktátové acidózy, okamžitě přestaňte přípravek užívat a kontaktujte lékaře nebo nejbližší nemocniční pohotovost; tento stav vyžaduje naléhavé ošetření v nemocnici."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "diuretika, zvláště kličková",
+      "effect": "Tyto přípravky mohou nepříznivě ovlivnit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení nebo užívání současně s metforminem je nutné pečlivě sledovat funkci ledvin; při zahájení léčby postupujte opatrně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Acidosis",
+          "frequency": null,
+          "label": "Zvýšené riziko laktátové acidózy při zhoršení funkce ledvin.",
+          "action": "hospitalize_NOW",
+          "action_condition": {
+            "patient_guide": "Pokud se u vás objeví příznaky laktátové acidózy, okamžitě přestaňte přípravek užívat a kontaktujte lékaře nebo nejbližší nemocniční pohotovost; tento stav vyžaduje naléhavé ošetření v nemocnici."
+          }
+        }
+      ]
+    },
+    {
+      "drug_class": "léky s vnitřní hyperglykemickou aktivitou, například glukokortikoidy",
+      "effect": "Tyto léky mohou zvýšit hladinu glukózy v krvi. Může být nutné častěji sledovat glykémii, zejména na začátku léčby, a podle potřeby upravit dávku metforminu během souběžné léčby i po vysazení druhého přípravku.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "drug_class": "léky s vnitřní hyperglykemickou aktivitou, například sympatomimetika",
+      "effect": "Tyto léky mohou zvýšit hladinu glukózy v krvi. Může být nutné častěji sledovat glykémii, zejména na začátku léčby, a podle potřeby upravit dávku metforminu během souběžné léčby i po vysazení druhého přípravku.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "drug_class": "inhibitory OCT1, například verapamil",
+      "effect": "Mohou snížit účinnost metforminu. Při souběžném užívání se doporučuje opatrnost; zejména při poruše funkce ledvin může být vhodné zvážit úpravu dávky.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "drug_class": "induktory OCT1, například rifampicin",
+      "effect": "Mohou zvýšit vstřebávání metforminu v trávicím traktu a jeho účinnost. Při souběžném užívání se doporučuje opatrnost; zejména při poruše funkce ledvin může být vhodné zvážit úpravu dávky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug_class": "inhibitory OCT2, například cimetidin, dolutegravir, ranolazin, trimethoprim, vandetanib a isavukonazol",
+      "effect": "Mohou snížit vylučování metforminu ledvinami, a tím zvýšit jeho koncentraci v plazmě. Doporučuje se opatrnost, zejména při poruše funkce ledvin; lze zvážit úpravu dávky metforminu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug_class": "inhibitory OCT1 i OCT2, například krizotinib a olaparib",
+      "effect": "Mohou ovlivnit účinnost metforminu i jeho vylučování ledvinami. Doporučuje se opatrnost, zejména při poruše funkce ledvin, protože se může zvýšit koncentrace metforminu v plazmě; lze zvážit úpravu dávky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "drug_class": "další antidiabetika, která mohou vyvolat hypoglykémii, například deriváty sulfonylurey",
+      "effect": "Metformin sám hypoglykémii nezpůsobuje, ale při kombinaci s těmito antidiabetiky existuje riziko hypoglykémie. Při příznacích obvykle pomůže sníst nebo vypít něco s obsahem cukru.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hypoglycemia",
+          "frequency": null,
+          "label": "Hypoglykémie; může se projevit slabostí, závratěmi, zvýšeným pocením, rychlým srdečním tepem, poruchami vidění nebo potížemi se soustředěním.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "inzulín",
+      "effect": "Metformin sám hypoglykémii nezpůsobuje, ale při kombinaci s inzulínem existuje riziko hypoglykémie. Při příznacích obvykle pomůže sníst nebo vypít něco s obsahem cukru.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hypoglycemia",
+          "frequency": null,
+          "label": "Hypoglykémie; může se projevit slabostí, závratěmi, zvýšeným pocením, rychlým srdečním tepem, poruchami vidění nebo potížemi se soustředěním.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "drug_class": "meglitinidy",
+      "effect": "Metformin sám hypoglykémii nezpůsobuje, ale při kombinaci s meglitinidy existuje riziko hypoglykémie. Při příznacích obvykle pomůže sníst nebo vypít něco s obsahem cukru.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hypoglycemia",
+          "frequency": null,
+          "label": "Hypoglykémie; může se projevit slabostí, závratěmi, zvýšeným pocením, rychlým srdečním tepem, poruchami vidění nebo potížemi se soustředěním.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    }
+  ]
+}
