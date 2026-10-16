@@ -90,7 +90,8 @@ def read_codes(path: Path, catalog: Catalog) -> list[str]:
             try:
                 codes.append(catalog.code(value))
             except ValueError as exc:
-                raise ValueError(f"{path}:{number}: {exc}") from exc
+                print(f"Warning: {path}:{number}: {exc}")
+                # raise ValueError(f"{path}:{number}: {exc}") from exc
     if not codes:
         raise ValueError(f"No SUKL codes in {path}")
     return list(dict.fromkeys(codes))
