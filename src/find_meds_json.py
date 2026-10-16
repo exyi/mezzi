@@ -18,7 +18,7 @@ import sys
 from dataclasses import asdict, fields
 from pathlib import Path
 from collections.abc import Iterable, Iterator
-import tqdm
+from tqdm import tqdm
 
 from .prescription import DrugPrescription
 
@@ -74,7 +74,7 @@ def extract_drugs(
     )
 
     out: list[DrugPrescription] = []
-    for res in resources:
+    for res in tqdm(resources):
         if res.get("resourceType") != "DocumentReference":
             continue
         is_rx = _is_prescription(res)
