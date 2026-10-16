@@ -53,8 +53,8 @@ data/
     dlp_slozeni.csv
     dlp_latky.csv
     ...
-  PIL20260925.zip           # may instead be an extracted PIL20260925/ directory
-  SPC20260925.zip           # may instead be an extracted SPC20260925/ directory
+  PIL20260925/              # extracted PDFs, directly inside this folder
+  SPC20260925/              # extracted PDFs, directly inside this folder
 ctcae-v6.pdf
 ```
 
@@ -67,8 +67,9 @@ and formulation. With multiple snapshots, select one explicitly. Global options 
 uv run sukl --snapshot 20260925 --data data --ctcae ctcae-v6.pdf extract 0000009
 ```
 
-ZIPs are read one PDF at a time, without unpacking the whole corpus. `pdftotext -layout`
-preserves table spacing and page boundaries. The SQLite cache at
+Extract the downloaded archives before running the pipeline (`download-sukl.sh`
+already does this). The loader reads PDFs directly from these folders.
+`pdftotext -layout` preserves table spacing and page boundaries. The SQLite cache at
 `.cache/sukl/corpus.sqlite` stores page text and overlapping FTS5 chunks; changed or
 removed sources invalidate cached text. PDFs without a text layer fail explicitly.
 Legacy `.doc` and other non-PDF files are counted as unsupported. Missing PIL/SPC
@@ -162,7 +163,7 @@ larger budgets; errors leave a previous successful artifact intact.
 uv run python -m unittest discover -s tests -v
 ```
 
-Tests use small real PDFs, CSVs and ZIPs, plus Pydantic AI `FunctionModel` responses.
+Tests use small real PDFs and CSVs, plus Pydantic AI `FunctionModel` responses.
 They cover extraction/cache invalidation, exact product identity, citations, CTCAE,
 frequency semantics, tool retrieval, validation repair and artifact writing, without
 external requests. A live Azure run still requires `API_KEY` and an available model

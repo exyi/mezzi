@@ -1,8 +1,7 @@
-"""Offline catalog, ZIP-aware PDF loading, and an incremental SQLite FTS5 text cache."""
+"""Read extracted SUKL files and cache searchable PDF text in SQLite."""
 
 from __future__ import annotations
 
-from contextlib import contextmanager
 import csv
 from dataclasses import dataclass
 import hashlib
@@ -11,9 +10,7 @@ import re
 import sqlite3
 import subprocess
 import tempfile
-from typing import Iterator
 import unicodedata
-import zipfile
 
 
 KINDS = ("PIL", "SPC", "CTCAE")
@@ -40,36 +37,18 @@ class Document:
     id: str
     kind: str
     path: Path
-    member: str | None = None
-    member_crc: int | None = None
 
     @property
     def signature(self) -> str:
         stat = self.path.stat()
-        value = (str(self.path.resolve()), stat.st_size, stat.st_mtime_ns,
-                 self.member, self.member_crc, EXTRACTOR_VERSION)
+        value = (str(self.path.resolve()), stat.st_size, stat.st_mtime_ns, EXTRACTOR_VERSION)
         return hashlib.sha256(repr(value).encode()).hexdigest()
 
-    @contextmanager
-    def local_pdf(self) -> Iterator[Path]:
-        if self.member is None:
-            yield self.path
-        else:
-            # Do not extract arbitrary ZIP paths or unpack gigabytes of unrelated PDFs.
-            with tempfile.TemporaryDirectory(prefix="sukl-pdf-") as directory:
-                target = Path(directory) / "document.pdf"
-                with zipfile.ZipFile(self.path) as archive, archive.open(self.member) as src:
-                    with target.open("wb") as dst:
-                        import shutil
-                        shutil.copyfileobj(src, dst)
-                yield target
-
     def text_pages(self) -> list[str]:
-        with self.local_pdf() as path:
-            result = subprocess.run(
-                ["pdftotext", "-layout", "-enc", "UTF-8", str(path), "-"],
-                check=True, capture_output=True, timeout=120,
-            )
+        result = subprocess.run(
+            ["pdftotext", "-layout", "-enc", "UTF-8", str(self.path), "-"],
+            check=True, capture_output=True, timeout=120,
+        )
         pages = result.stdout.decode("utf-8").split("\f")
         if pages and not pages[-1].strip():
             pages.pop()  # pdftotext terminates the final page with a form feed.
@@ -78,11 +57,11 @@ class Document:
         return pages
 
     def render(self, page: int) -> bytes:
-        with self.local_pdf() as path, tempfile.TemporaryDirectory(prefix="sukl-page-") as directory:
+        with tempfile.TemporaryDirectory(prefix="sukl-page-") as directory:
             prefix = Path(directory) / "page"
             subprocess.run(
                 ["pdftoppm", "-f", str(page), "-l", str(page), "-singlefile", "-scale-to",
-                 "1600", "-png", str(path), str(prefix)],
+                 "1600", "-png", str(self.path), str(prefix)],
                 check=True, capture_output=True, timeout=120,
             )
             return prefix.with_suffix(".png").read_bytes()
@@ -120,29 +99,16 @@ class Catalog:
         self.unsupported: list[str] = []
         for kind in ("PIL", "SPC"):
             folder = data_dir / f"{kind}{snapshot}"
-            archive_path = folder.with_suffix(".zip")
-            if folder.is_dir():
-                for path in sorted(folder.rglob("*")):
-                    if path.is_file() and path.suffix.lower() == ".pdf":
-                        doc = Document(f"{kind}:{path.name}", kind, path)
-                        if doc.id in self.documents:
-                            raise ValueError(f"Ambiguous duplicate document {doc.id}")
-                        self.documents[doc.id] = doc
-                    elif path.is_file():
-                        self.unsupported.append(str(path))
-            elif archive_path.is_file():
-                with zipfile.ZipFile(archive_path) as archive:
-                    for info in archive.infolist():
-                        if info.is_dir():
-                            continue
-                        if Path(info.filename).suffix.lower() != ".pdf":
-                            self.unsupported.append(info.filename)
-                            continue
-                        doc = Document(f"{kind}:{Path(info.filename).name}", kind,
-                                       archive_path, info.filename, info.CRC)
-                        if doc.id in self.documents:
-                            raise ValueError(f"Ambiguous duplicate document {doc.id}")
-                        self.documents[doc.id] = doc
+            if not folder.is_dir():
+                raise ValueError(f"Missing extracted document folder: {folder}")
+            for path in sorted(folder.iterdir()):
+                if not path.is_file():
+                    continue
+                if path.suffix.lower() == ".pdf":
+                    doc = Document(f"{kind}:{path.name}", kind, path)
+                    self.documents[doc.id] = doc
+                else:
+                    self.unsupported.append(str(path))
         if not ctcae.is_file():
             raise ValueError(f"Missing CTCAE reference: {ctcae}")
         doc = Document("CTCAE:ctcae-v6.pdf", "CTCAE", ctcae.resolve())

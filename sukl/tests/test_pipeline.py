@@ -10,7 +10,6 @@ import shutil
 import tempfile
 import unittest
 from unittest.mock import patch
-import zipfile
 
 from pydantic import ValidationError
 import httpx2
@@ -73,11 +72,13 @@ class PipelineTests(unittest.TestCase):
                   [["12", "LÁTKA", "ACETYLSALICYLIC ACID", "ACIDUM ACETYLSALICYLICUM"]])
         write_csv(dlp / "dlp_slozeni.csv", ["KOD_SUKL", "KOD_LATKY", "S", "AMNT", "UN"],
                   [["0000009", "12", "L", "10", "MG"]])
-        with zipfile.ZipFile(data / "PIL20260925.zip", "w") as z:
-            z.writestr("nested/PI1.pdf", pdf([["Nausea occurs commonly.", "Contact your doctor if severe."], ["Do not combine with drug X."]]))
-            z.writestr("legacy.doc", "not a pdf")
-        with zipfile.ZipFile(data / "SPC20260925.zip", "w") as z:
-            z.writestr("SPC1.pdf", pdf([["Nausea occurs commonly.", "Drug X increases nausea."]]))
+        pil = data / "PIL20260925"
+        spc = data / "SPC20260925"
+        pil.mkdir()
+        spc.mkdir()
+        (pil / "PI1.pdf").write_bytes(pdf([["Nausea occurs commonly.", "Contact your doctor if severe."], ["Do not combine with drug X."]]))
+        (pil / "legacy.doc").write_text("not a pdf")
+        (spc / "SPC1.pdf").write_bytes(pdf([["Nausea occurs commonly.", "Drug X increases nausea."]]))
         self.ctcae = self.root / "ctcae.pdf"
         self.ctcae.write_bytes(pdf([["Nausea", "Grade 1        Grade 2        Grade 3", "Definition: A feeling of sickness."]]))
         self.catalog = Catalog(data, self.ctcae)
@@ -102,7 +103,7 @@ class PipelineTests(unittest.TestCase):
         for row in self.corpus.pages("CTCAE:ctcae-v6.pdf"):
             self.deps.expose(row["document_id"], row["page"], 0, len(row["text"]))
 
-    def test_real_pdf_archives_encoding_and_exact_identity(self):
+    def test_pdf_loading_encoding_and_exact_identity(self):
         self.assertEqual(self.catalog.metadata("9")["product"]["NAZEV"], "LÉČIVO")
         self.assertEqual(self.catalog.code("9"), "0000009")
         self.assertIn("Nausea occurs commonly.", self.prompt)
