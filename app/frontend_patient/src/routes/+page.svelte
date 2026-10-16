@@ -3,26 +3,34 @@
   import { onMount } from 'svelte';
 
   type Question = {
-    id?: string | number;
+    id: string | number;
     question: string;
-    options: string[];
+    type: 'binary' | 'number';
   };
 
   const API_URL = 'http://127.0.0.1:8000/api/questions';
+  const ANSWERS_URL = 'http://127.0.0.1:8000/api/answers';
 
   let questions = $state<Question[]>([]);
   let answers = $state<Record<number, string>>({});
   let currentIndex = $state(0);
+
   let loading = $state(true);
+  let saving = $state(false);
   let error = $state('');
+  let saveError = $state('');
+  let saved = $state(false);
+  let submissionId = $state('');
 
   let currentQuestion = $derived(questions[currentIndex]);
   let totalQuestions = $derived(questions.length);
+
   let progress = $derived(
     totalQuestions > 0
       ? ((currentIndex + 1) / totalQuestions) * 100
       : 0
   );
+
   let finished = $derived(
     totalQuestions > 0 && currentIndex >= totalQuestions
   );
@@ -49,8 +57,20 @@
       }
 
       questions = data.results;
+
+      // Validate the question types returned by the API.
+      for (const question of questions) {
+        if (!['binary', 'number'].includes(question.type)) {
+          throw new Error(
+            `Unsupported question type for question ${question.id}.`
+          );
+        }
+      }
+
       currentIndex = 0;
       answers = {};
+      saved = false;
+      submissionId = '';
     } catch (err) {
       error =
         err instanceof Error
@@ -61,12 +81,16 @@
     }
   }
 
-  function selectAnswer(option: string) {
-    answers[currentIndex] = option;
+  function selectAnswer(value: string) {
+    answers[currentIndex] = value;
+    saveError = '';
   }
 
   function nextQuestion() {
-    if (currentIndex < totalQuestions) {
+    if (
+      currentIndex < totalQuestions - 1 &&
+      answers[currentIndex] !== undefined
+    ) {
       currentIndex += 1;
     }
   }
@@ -74,16 +98,73 @@
   function previousQuestion() {
     if (currentIndex > 0) {
       currentIndex -= 1;
+      saveError = '';
+    }
+  }
+
+  async function finishQuiz() {
+    if (
+      saving ||
+      saved ||
+      answers[currentIndex] === undefined
+    ) {
+      return;
+    }
+
+    saving = true;
+    saveError = '';
+
+    const payload = {
+      answers: questions.map((question, index) => ({
+        question_id: question.id,
+        question: question.question,
+        answer: answers[index] ?? null
+      }))
+    };
+
+    try {
+      const response = await fetch(ANSWERS_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        let message = `Server returned ${response.status}`;
+
+        try {
+          const data = await response.json();
+          message = data.detail ?? message;
+        } catch {
+          // Use the HTTP status message if the response isn't JSON.
+        }
+
+        throw new Error(message);
+      }
+
+      const data = await response.json();
+
+      submissionId = data.submission_id ?? '';
+      saved = true;
+      currentIndex = totalQuestions;
+    } catch (err) {
+      saveError =
+        err instanceof Error
+          ? err.message
+          : 'Could not save your answers. Please try again.';
+    } finally {
+      saving = false;
     }
   }
 
   function restartQuiz() {
     answers = {};
     currentIndex = 0;
-  }
-
-  function retryLoading() {
-    loadQuestions();
+    saved = false;
+    saveError = '';
+    submissionId = '';
   }
 </script>
 
@@ -118,9 +199,10 @@
         <h2>Unable to load questions</h2>
         <p>{error}</p>
         <p class="hint">
-          Check that your FastAPI server is running on port 8000.
+          Check that FastAPI is running on port 8000 and that your
+          question types are valid.
         </p>
-        <button class="primary-button" onclick={retryLoading}>
+        <button class="primary-button" onclick={loadQuestions}>
           Try again
         </button>
       </div>
@@ -128,14 +210,28 @@
     {:else if totalQuestions === 0}
       <div class="message">
         <h2>No questions found</h2>
-        <p>Add questions to your backend/questions/questions.json file.</p>
+        <p>Add questions to backend/questions/questions.json.</p>
       </div>
 
     {:else if finished}
       <div class="results">
         <div class="success-icon">✓</div>
+
         <p class="eyebrow">QUESTIONNAIRE COMPLETE</p>
         <h2>Thank you!</h2>
+
+        {#if saved}
+          <p class="save-success" role="status">
+            Your answers have been saved successfully.
+          </p>
+
+          {#if submissionId}
+            <p class="submission-id">
+              Submission ID: {submissionId}
+            </p>
+          {/if}
+        {/if}
+
         <p class="results-description">
           You have completed all {totalQuestions} questions.
         </p>
@@ -162,7 +258,10 @@
           {/each}
         </div>
 
-        <button class="primary-button full-width" onclick={restartQuiz}>
+        <button
+          class="primary-button full-width"
+          onclick={restartQuiz}
+        >
           Start again
         </button>
       </div>
@@ -170,7 +269,9 @@
     {:else}
       <div class="quiz">
         <div class="progress-info">
-          <span>Question {currentIndex + 1} of {totalQuestions}</span>
+          <span>
+            Question {currentIndex + 1} of {totalQuestions}
+          </span>
           <span>{Math.round(progress)}% complete</span>
         </div>
 
@@ -182,62 +283,104 @@
           aria-valuemax={100}
           aria-valuenow={Math.round(progress)}
         >
-          <div class="progress-fill" style={`width: ${progress}%`}></div>
+          <div
+            class="progress-fill"
+            style={`width: ${progress}%`}
+          ></div>
         </div>
 
         <p class="eyebrow">YOUR QUESTION</p>
-        <h2 class="question-title">{currentQuestion.question}</h2>
-        <p class="instruction">Choose one answer below.</p>
 
-        <div class="options">
-          {#each currentQuestion.options as option, i}
-            <button
-              class="option"
-              class:selected={answers[currentIndex] === option}
-              aria-pressed={answers[currentIndex] === option}
-              onclick={() => selectAnswer(option)}
-            >
-              <span class="option-letter">
-                {String.fromCharCode(65 + i)}
-              </span>
-              <span class="option-text">{option}</span>
-              <span class="option-check">
-                {#if answers[currentIndex] === option}
-                  ✓
-                {/if}
-              </span>
-            </button>
-          {/each}
-        </div>
+        <h2 class="question-title">
+          {currentQuestion.question}
+        </h2>
+
+        {#if currentQuestion.type === 'binary'}
+          <p class="instruction">Choose Yes or No.</p>
+
+          <div class="options binary-options">
+            {#each ['Yes', 'No'] as option}
+              <button
+                class="option"
+                class:selected={answers[currentIndex] === option}
+                aria-pressed={answers[currentIndex] === option}
+                onclick={() => selectAnswer(option)}
+              >
+                <span class="option-text">{option}</span>
+                <span class="option-check">
+                  {answers[currentIndex] === option ? '✓' : ''}
+                </span>
+              </button>
+            {/each}
+          </div>
+
+        {:else if currentQuestion.type === 'number'}
+          <p class="instruction">
+            Choose a rating from 1 (lowest) to 5 (highest).
+          </p>
+
+          <div class="options number-options">
+            {#each [1, 2, 3, 4, 5] as number}
+              <button
+                class="option number-option"
+                class:selected={answers[currentIndex] === String(number)}
+                aria-pressed={answers[currentIndex] === String(number)}
+                aria-label={`Rate ${number} out of 5`}
+                onclick={() => selectAnswer(String(number))}
+              >
+                <span class="number-value">{number}</span>
+              </button>
+            {/each}
+          </div>
+        {/if}
 
         <div class="navigation">
           <button
             class="secondary-button"
             onclick={previousQuestion}
-            disabled={currentIndex === 0}
+            disabled={currentIndex === 0 || saving}
           >
             ← Back
           </button>
 
-          <button
-            class="primary-button"
-            onclick={nextQuestion}
-            disabled={!answers[currentIndex]}
-          >
-            {currentIndex === totalQuestions - 1
-              ? 'Finish'
-              : 'Next question'} →
-          </button>
+          {#if currentIndex === totalQuestions - 1}
+            <button
+              class="primary-button"
+              onclick={finishQuiz}
+              disabled={answers[currentIndex] === undefined || saving || saved}
+            >
+              {saving ? 'Saving...' : 'Finish →'}
+            </button>
+          {:else}
+            <button
+              class="primary-button"
+              onclick={nextQuestion}
+              disabled={answers[currentIndex] === undefined || saving}
+            >
+              Next question →
+            </button>
+          {/if}
         </div>
 
+        {#if saveError}
+          <p class="save-error" role="alert">
+            Could not save answers: {saveError}
+          </p>
+          <p class="retry-note">
+            Your answers are still here. Try Finish again.
+          </p>
+        {/if}
+
         <p class="footer-note">
-          Your progress is kept while this page is open.
+          Your answers will be submitted when you finish.
         </p>
       </div>
     {/if}
   </section>
 
-  <p class="page-footer">Questionnaire App · Powered by FastAPI</p>
+  <p class="page-footer">
+    Questionnaire App · Powered by FastAPI
+  </p>
 </main>
 
 <style>
@@ -272,7 +415,7 @@
 
   .card {
     width: 100%;
-    max-width: 680px;
+    max-width: 720px;
     padding: 36px;
     background: white;
     border: 1px solid #e6eaf2;
@@ -365,16 +508,18 @@
 
   .options {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 11px;
   }
 
   .option {
     width: 100%;
+    min-width: 0;
     min-height: 62px;
     padding: 12px 15px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
     text-align: left;
     color: #28334b;
     background: white;
@@ -394,37 +539,29 @@
     background: #f3f4ff;
   }
 
-  .option-letter {
-    width: 34px;
-    height: 34px;
-    flex-shrink: 0;
-    display: grid;
-    place-items: center;
-    border: 1px solid #e0e5ef;
-    border-radius: 9px;
-    color: #737d94;
-    background: #f8f9fc;
-    font-size: 13px;
-    font-weight: 700;
-  }
-
-  .selected .option-letter {
-    color: white;
-    background: #626ce5;
-    border-color: #626ce5;
-  }
-
   .option-text {
     flex: 1;
-    overflow-wrap: anywhere;
     font-size: 15px;
+    overflow-wrap: anywhere;
   }
 
   .option-check {
-    width: 20px;
     color: #5965d9;
     font-weight: 800;
-    text-align: center;
+  }
+
+  .number-options {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .number-option {
+    justify-content: center;
+    padding: 12px 8px;
+  }
+
+  .number-value {
+    font-size: 20px;
+    font-weight: 750;
   }
 
   .navigation {
@@ -487,7 +624,7 @@
 
   .message,
   .results {
-    padding: 46px 0 12px;
+    padding: 36px 0 12px;
     text-align: center;
   }
 
@@ -603,6 +740,33 @@
     color: #505fd2;
     font-size: 14px;
     font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  .save-success {
+    padding: 12px;
+    border-radius: 10px;
+    color: #16794a;
+    background: #e5f8ed;
+    font-size: 14px;
+  }
+
+  .submission-id {
+    color: #798297;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+  }
+
+  .save-error {
+    color: #b42318;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .retry-note {
+    color: #798297;
+    font-size: 12px;
   }
 
   .full-width {
@@ -629,6 +793,19 @@
 
     .header {
       padding-bottom: 20px;
+    }
+
+    .options {
+      gap: 8px;
+    }
+
+    .option {
+      padding: 10px 8px;
+      gap: 7px;
+    }
+
+    .option-text {
+      font-size: 13px;
     }
 
     .navigation {
