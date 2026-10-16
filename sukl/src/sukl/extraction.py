@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import sys
 from typing import Literal
+from urllib.parse import urlparse
 
 from openai import AsyncOpenAI
 from pydantic import TypeAdapter
@@ -16,6 +17,7 @@ from pydantic_ai.messages import FunctionToolCallEvent, FunctionToolResultEvent,
 from pydantic_ai.models import Model
 from pydantic_ai.models.openai import OpenAIChatModel, OpenAIResponsesModel
 from pydantic_ai.providers.openai import OpenAIProvider
+from pydantic_ai.providers.openrouter import OpenRouterProvider
 from pydantic_ai.usage import RunUsage
 
 from .corpus import Corpus
@@ -279,17 +281,32 @@ async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
                   model: Model | None = None, trace: Path | None = None) -> dict:
     # Inject a FunctionModel in tests; no real client/credentials are then constructed.
     client = None
+    hostname = urlparse(settings.base_url).hostname or ""
+    openrouter = hostname == "openrouter.ai" or hostname.endswith(".openrouter.ai")
     if model is None:
         key = os.environ.get("API_KEY")
         if not key:
-            raise ValueError("Set API_KEY before calling the Azure gateway")
+            raise ValueError("Set API_KEY before calling the model provider")
         client = AsyncOpenAI(
             api_key=key, base_url=settings.base_url,
-            default_headers={"api-key": os.environ["API_KEY"]}, timeout=180.0, max_retries=3,
+            default_headers={} if openrouter else {"api-key": key}, timeout=180.0, max_retries=3,
         )
         model_class = OpenAIResponsesModel if settings.api == "responses" else OpenAIChatModel
-        model = model_class(settings.model, provider=OpenAIProvider(openai_client=client))
+        provider_class = OpenRouterProvider if openrouter else OpenAIProvider
+        model = model_class(settings.model, provider=provider_class(openai_client=client))
     model_settings = {"max_tokens": settings.max_output_tokens, **settings.model_settings}
+    if openrouter:
+        # Keep other settings without mutating the configuration shared by batch workers.
+        body = deepcopy(model_settings.get("extra_body") or {})
+        body["provider"] = {**(body.get("provider") or {}),
+                            "only": ["openai/flex"], "allow_fallbacks": False}
+        body["reasoning"] = {**(body.get("reasoning") or {}), "enabled": True}
+        # The SDK replaces nested body objects, so preserve native reasoning options too.
+        for option in ("effort", "summary"):
+            value = model_settings.get(f"openai_reasoning_{option}")
+            if value is not None:
+                body["reasoning"].setdefault(option, value)
+        model_settings["extra_body"] = body
     if settings.api == "responses":
         # Replay history locally, including encrypted reasoning, without server-side storage.
         model_settings.setdefault("openai_store", False)

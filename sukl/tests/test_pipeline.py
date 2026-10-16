@@ -530,18 +530,46 @@ class PipelineTests(unittest.TestCase):
 
     def test_gateway_enforces_native_json_schema_on_both_apis(self):
         good = self.claim()
-        for api in ("responses", "chat"):
-            with self.subTest(api=api):
+        cases = [(api, router, custom) for api in ("responses", "chat")
+                 for router, custom in ((False, False), (True, False), (True, True))]
+        for api, openrouter, custom_body in cases:
+            with self.subTest(api=api, openrouter=openrouter, custom_body=custom_body):
                 requests = []
-                effort = "low" if api == "responses" else "none"
+                effort = "low" if api == "responses" or openrouter else "none"
                 settings = Settings(model="gpt-6-luna-dz-eu", api=api, request_limit=2,
                                     model_settings={"openai_reasoning_effort": effort})
+                if openrouter:
+                    settings.base_url = "https://openrouter.ai/api/v1/"
+                    settings.model = "openai/gpt-6-luna"
+                if custom_body:
+                    settings.model_settings["openai_reasoning_summary"] = "auto"
+                    settings.model_settings["extra_body"] = {
+                        "provider": {"require_parameters": True, "only": ["openai"], "allow_fallbacks": True},
+                        "reasoning": {"exclude": False, "enabled": False}, "user": "offline-test-user",
+                    }
+                original_settings = deepcopy(settings.model_settings)
 
                 def handle(request):
                     requests.append(request)
                     body = json.loads(request.content)
                     first = len(requests) == 1
-                    self.assertEqual(request.headers["api-key"], "offline-test-key")
+                    self.assertEqual(request.headers["Authorization"], "Bearer offline-test-key")
+                    if openrouter:
+                        self.assertNotIn("api-key", request.headers)
+                        provider = {"only": ["openai/flex"], "allow_fallbacks": False}
+                        if custom_body:
+                            provider["require_parameters"] = True
+                        self.assertEqual(body["provider"], provider)
+                        self.assertTrue(body["reasoning"]["enabled"])
+                        self.assertEqual(body["reasoning"]["effort"], effort)
+                        if custom_body:
+                            self.assertEqual(body["reasoning"]["summary"], "auto")
+                            self.assertFalse(body["reasoning"]["exclude"])
+                            self.assertEqual(body["user"], "offline-test-user")
+                    else:
+                        self.assertEqual(request.headers["api-key"], "offline-test-key")
+                        self.assertNotIn("provider", body)
+                        self.assertNotIn("enabled", body.get("reasoning", {}))
                     self.assertEqual(body["model"], settings.model)
                     self.assertNotIn("temperature", body)
                     if api == "responses":
@@ -559,8 +587,9 @@ class PipelineTests(unittest.TestCase):
                                                 for item in body["input"]))
                     else:
                         self.assertEqual(str(request.url), settings.base_url + "chat/completions")
-                        self.assertEqual(body["max_completion_tokens"], 24_000)
-                        self.assertEqual(body["reasoning_effort"], "none")
+                        token_key = "max_tokens" if openrouter else "max_completion_tokens"
+                        self.assertEqual(body[token_key], 24_000)
+                        self.assertEqual(body["reasoning_effort"], effort)
                         self.assertEqual(body["response_format"]["type"], "json_schema")
                         self.assertNotIn("final_result", [t["function"]["name"] for t in body.get("tools", [])])
                         format = body["response_format"]["json_schema"]
@@ -625,11 +654,12 @@ class PipelineTests(unittest.TestCase):
                     instance._platform = "Linux"  # Avoid background platform probing in constrained runners.
                     return instance
 
-                trace = self.root / f"wire-{api}.trace.json"
+                trace = self.root / f"wire-{api}-{openrouter}-{custom_body}.trace.json"
                 with patch.dict(os.environ, {"API_KEY": "offline-test-key"}), patch("sukl.extraction.AsyncOpenAI", client):
                     result = asyncio.run(extract(self.prompt, self.deps, settings, trace=trace))
                 self.assertEqual(len(requests), 2)
                 self.assertEqual(result, good)
+                self.assertEqual(settings.model_settings, original_settings)
                 self.assertNotIn("offline-test-key", trace.read_text())
                 debug = json.loads(trace.read_text())
                 self.assertEqual(debug["usage"]["input_tokens"], 200)
