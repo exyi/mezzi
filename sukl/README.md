@@ -30,7 +30,8 @@ uv run sukl extract --ids-file ids.txt --parallelism 8 \
 
 --parallel is an alias for --parallelism; the default is 1. IDs are normalized to
 seven digits and deduplicated in input order. Blank lines and # comments are allowed.
-Malformed or unknown codes stop the batch before model calls. Provide either a
+Malformed or unknown codes are skipped with a warning; a list without any valid
+codes stops before model calls. Provide either a
 single positional code or --ids-file. --output selects a single-code output file;
 --output-dir selects the directory for per-code files (default: outputs).
 
@@ -81,6 +82,8 @@ Each side effect has five fields:
 - ctcae: English CTCAE v6 term or null.
 - frequency: one in N for an explicit point rate (5% becomes 20); otherwise a
   category (very_common, common, uncommon, rare, very_rare, not_known), or null.
+  Rates must match the entry's severity and population. A grade-specific rate
+  cannot become an overall incidence; use the source's overall category instead.
 - label: Czech description, including any dose, population or severity conditions.
 - action: continue, discontinue_treatment, contact_doctor, hospitalize_NOW, or null
   when the source gives no recommendation.
@@ -90,6 +93,12 @@ Each side effect has five fields:
   {"patient_guide": "Pokud jste zároveň těhotná"}, only when supported by the source.
   Different conditions requiring different actions stay in separate entries.
   There are no automatically evaluated FHIR conditions yet.
+
+Actions use reaction-specific patient advice, rather than generic side-effect
+reporting boilerplate or clinician-only treatment plans. Conditions describe only
+when the action applies, without commands to stop treatment or contact a doctor.
+Simultaneous instructions for the same reaction/condition use one entry with the
+most urgent supported action; other required steps remain briefly in label.
 
 Each combination names either drug or drug_class, has a Czech effect description
 (including source-supported conditions and recommendations), an effect_type for
@@ -127,6 +136,12 @@ soft validation retry. Remaining warnings appear on stderr and in --trace, outsi
 the drug JSON. With an exhausted request budget, warnings are reported immediately.
 This checks vocabulary membership, not whether a mapping is medically correct.
 Normal JSON Schema validation still applies to every answer.
+
+The [ad hoc output review](docs/output-review.md) documents source-checked examples
+behind the prompt's mapping, frequency, action and interaction rules. The prompt
+includes a final consistency check using existing evidence, without an additional
+model request. Prompt changes require a fresh output directory or --force to take
+effect; --resume reuses saved results that match the schema.
 
 Existing outputs are protected. Use --force to regenerate an old output (including
 files without effect_type and action_condition). --resume skips an existing result that
