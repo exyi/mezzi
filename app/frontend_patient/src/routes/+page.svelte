@@ -2,17 +2,37 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
+  type Grade = {
+    level: number;
+    description: string | null;
+  };
+
   type Question = {
     id: string | number;
-    question: string;
-    type: 'binary' | 'number';
+    llt_code: number;
+    soc: string;
+    term: string;
+    grades: Grade[];
+    definition: string | null;
+    navigational_note: string | null;
+    change: string | null;
+  };
+
+  type SubmittedAnswer = {
+    question_id: string | number;
+    llt_code: number;
+    soc: string;
+    term: string;
+    definition: string | null;
+    answer: number;
+    grade_description: string | null;
   };
 
   const API_URL = 'http://127.0.0.1:8000/api/questions';
   const ANSWERS_URL = 'http://127.0.0.1:8000/api/answers';
 
   let questions = $state<Question[]>([]);
-  let answers = $state<Record<number, string>>({});
+  let answers = $state<Record<number, number>>({});
   let currentIndex = $state(0);
 
   let loading = $state(true);
@@ -35,6 +55,10 @@
     totalQuestions > 0 && currentIndex >= totalQuestions
   );
 
+  let answeredCount = $derived(
+    Object.keys(answers).length
+  );
+
   onMount(() => {
     loadQuestions();
   });
@@ -51,26 +75,42 @@
       }
 
       const data = await response.json();
+    console.log('Full API response:', data);
 
       if (!Array.isArray(data.results)) {
-        throw new Error('The server returned an invalid question list.');
+        throw new Error(
+          'The server returned an invalid record list.'
+        );
       }
 
-      questions = data.results;
-
-      // Validate the question types returned by the API.
-      for (const question of questions) {
-        if (!['binary', 'number'].includes(question.type)) {
+      for (const question of data.results) {
+        if (
+          question.id === undefined ||
+          typeof question.term !== 'string' ||
+          typeof question.soc !== 'string' ||
+          typeof question.llt_code !== 'number' ||
+          !Array.isArray(question.grades) ||
+          !question.grades.every(
+            (grade: Grade) =>
+              typeof grade.level === 'number' &&
+              (
+                typeof grade.description === 'string' ||
+                grade.description === null
+              )
+          )
+        ) {
           throw new Error(
-            `Unsupported question type for question ${question.id}.`
+            'A record has an invalid format. Check the JSON data.'
           );
         }
       }
 
+      questions = data.results;
       currentIndex = 0;
       answers = {};
       saved = false;
       submissionId = '';
+      saveError = '';
     } catch (err) {
       error =
         err instanceof Error
@@ -81,8 +121,8 @@
     }
   }
 
-  function selectAnswer(value: string) {
-    answers[currentIndex] = value;
+  function selectAnswer(level: number) {
+    answers[currentIndex] = level;
     saveError = '';
   }
 
@@ -92,6 +132,7 @@
       answers[currentIndex] !== undefined
     ) {
       currentIndex += 1;
+      saveError = '';
     }
   }
 
@@ -114,12 +155,25 @@
     saving = true;
     saveError = '';
 
-    const payload = {
-      answers: questions.map((question, index) => ({
-        question_id: question.id,
-        question: question.question,
-        answer: answers[index] ?? null
-      }))
+    const payload: { answers: SubmittedAnswer[] } = {
+      answers: questions.map((question, index) => {
+        const selectedLevel = answers[index];
+
+        const selectedGrade = question.grades.find(
+          (grade) => grade.level === selectedLevel
+        );
+
+        return {
+          question_id: question.id,
+          llt_code: question.llt_code,
+          soc: question.soc,
+          term: question.term,
+          definition: question.definition ?? null,
+          answer: selectedLevel,
+          grade_description:
+            selectedGrade?.description ?? null
+        };
+      })
     };
 
     try {
@@ -138,7 +192,7 @@
           const data = await response.json();
           message = data.detail ?? message;
         } catch {
-          // Use the HTTP status message if the response isn't JSON.
+          // Keep the HTTP status message.
         }
 
         throw new Error(message);
@@ -166,51 +220,80 @@
     saveError = '';
     submissionId = '';
   }
+
+  function getGradeDescription(
+    question: Question,
+    level: number
+  ) {
+    return (
+      question.grades.find(
+        (grade) => grade.level === level
+      )?.description ?? 'No description available'
+    );
+  }
 </script>
 
 <svelte:head>
-  <title>Questionnaire</title>
+  <title>Medical Terminology Questionnaire</title>
   <meta
     name="description"
-    content="Complete the questionnaire and review your answers."
+    content="Review medical terminology records and select a grade for each term."
   />
 </svelte:head>
 
 <main class="page">
   <section class="card">
     <header class="header">
-      <div class="logo">Q</div>
+      <div class="logo">M</div>
+
       <div>
-        <h1>Questionnaire</h1>
-        <p class="subtitle">Your answers, one step at a time.</p>
+        <h1>Medical Questionnaire</h1>
+        <p class="subtitle">
+          Review each term and select the appropriate grade.
+        </p>
       </div>
     </header>
 
     {#if loading}
-      <div class="message">
+      <div class="message" aria-live="polite">
         <div class="spinner"></div>
-        <h2>Loading questions...</h2>
+        <h2>Loading records...</h2>
         <p>Please wait while we connect to the server.</p>
       </div>
 
     {:else if error}
       <div class="message">
         <div class="message-icon">!</div>
-        <h2>Unable to load questions</h2>
+        <h2>Unable to load records</h2>
         <p>{error}</p>
         <p class="hint">
-          Check that FastAPI is running on port 8000 and that your
-          question types are valid.
+          Check that FastAPI is running on port 8000 and that
+          your JSON records have the expected structure.
         </p>
-        <button class="primary-button" onclick={loadQuestions}>
+
+        <button
+          class="primary-button"
+          onclick={loadQuestions}
+        >
           Try again
         </button>
       </div>
 
     {:else if totalQuestions === 0}
       <div class="message">
-        <h2>No questions found</h2>
-        <p>Add questions to backend/questions/questions.json.</p>
+        <div class="message-icon">i</div>
+        <h2>No records found</h2>
+        <p>
+          Add medical terminology records to your backend
+          JSON files and ensure their IDs are enabled.
+        </p>
+
+        <button
+          class="secondary-button"
+          onclick={loadQuestions}
+        >
+          Reload records
+        </button>
       </div>
 
     {:else if finished}
@@ -233,27 +316,66 @@
         {/if}
 
         <p class="results-description">
-          You have completed all {totalQuestions} questions.
+          You have completed all {totalQuestions} records.
         </p>
 
         <div class="summary">
           <div class="summary-number">
-            {Object.keys(answers).length}
+            {answeredCount}
           </div>
+
           <div>
-            <strong>Questions answered</strong>
-            <p>Review your answers below.</p>
+            <strong>Records answered</strong>
+            <p>Review your selected grades below.</p>
           </div>
         </div>
 
         <div class="answer-list">
-          {#each questions as question, i}
+          {#each questions as question, i (question.id)}
             <article class="answer-item">
-              <p class="answer-number">QUESTION {i + 1}</p>
-              <h3>{question.question}</h3>
-              <p class="answer-value">
-                {answers[i] ?? 'Not answered'}
+              <p class="answer-number">
+                RECORD {i + 1}
               </p>
+
+              <h3>{question.term}</h3>
+
+              <p class="answer-soc">
+                {question.soc}
+              </p>
+
+              <p class="term-code">
+                LLT code: {question.llt_code}
+              </p>
+
+              {#if question.definition}
+                <p class="answer-description">
+                  {question.definition}
+                </p>
+              {/if}
+
+              {#if answers[i] !== undefined}
+                <div class="selected-grade">
+                  <span class="grade-number">
+                    {answers[i]}
+                  </span>
+
+                  <div>
+                    <strong>
+                      Grade {answers[i]}
+                    </strong>
+                    <p>
+                      {getGradeDescription(
+                        question,
+                        answers[i]
+                      )}
+                    </p>
+                  </div>
+                </div>
+              {:else}
+                <p class="unanswered">
+                  Not answered
+                </p>
+              {/if}
             </article>
           {/each}
         </div>
@@ -270,8 +392,9 @@
       <div class="quiz">
         <div class="progress-info">
           <span>
-            Question {currentIndex + 1} of {totalQuestions}
+            Record {currentIndex + 1} of {totalQuestions}
           </span>
+
           <span>{Math.round(progress)}% complete</span>
         </div>
 
@@ -289,50 +412,88 @@
           ></div>
         </div>
 
-        <p class="eyebrow">YOUR QUESTION</p>
+        <p class="eyebrow">MEDICAL TERMINOLOGY</p>
+
+        <div class="term-meta">
+          <span class="soc-badge">
+            {currentQuestion.soc}
+          </span>
+
+          <span class="term-code">
+            LLT code: {currentQuestion.llt_code}
+          </span>
+        </div>
 
         <h2 class="question-title">
-          {currentQuestion.question}
+          {currentQuestion.term}
         </h2>
 
-        {#if currentQuestion.type === 'binary'}
-          <p class="instruction">Choose Yes or No.</p>
-
-          <div class="options binary-options">
-            {#each ['Yes', 'No'] as option}
-              <button
-                class="option"
-                class:selected={answers[currentIndex] === option}
-                aria-pressed={answers[currentIndex] === option}
-                onclick={() => selectAnswer(option)}
-              >
-                <span class="option-text">{option}</span>
-                <span class="option-check">
-                  {answers[currentIndex] === option ? '✓' : ''}
-                </span>
-              </button>
-            {/each}
-          </div>
-
-        {:else if currentQuestion.type === 'number'}
-          <p class="instruction">
-            Choose a rating from 1 (lowest) to 5 (highest).
-          </p>
-
-          <div class="options number-options">
-            {#each [1, 2, 3, 4, 5] as number}
-              <button
-                class="option number-option"
-                class:selected={answers[currentIndex] === String(number)}
-                aria-pressed={answers[currentIndex] === String(number)}
-                aria-label={`Rate ${number} out of 5`}
-                onclick={() => selectAnswer(String(number))}
-              >
-                <span class="number-value">{number}</span>
-              </button>
-            {/each}
+        {#if currentQuestion.definition}
+          <div class="definition-card">
+            <p class="section-label">DEFINITION</p>
+            <p class="definition">
+              {currentQuestion.definition}
+            </p>
           </div>
         {/if}
+
+        {#if currentQuestion.navigational_note}
+          <div class="note">
+            <strong>Navigational note:</strong>
+            {currentQuestion.navigational_note}
+          </div>
+        {/if}
+
+        {#if currentQuestion.change}
+          <p class="change-label">
+            Record change: {currentQuestion.change}
+          </p>
+        {/if}
+
+        <div class="grade-heading">
+          <div>
+            <h3>Select a grade</h3>
+            <p class="instruction">
+              Choose the grade that best matches this term.
+            </p>
+          </div>
+        </div>
+
+        <div class="options grade-options">
+          {#each currentQuestion.grades as grade (grade.level)}
+            <button
+              class="option grade-option"
+              class:selected={
+                answers[currentIndex] === grade.level
+              }
+              aria-pressed={
+                answers[currentIndex] === grade.level
+              }
+              onclick={() => selectAnswer(grade.level)}
+            >
+              <span class="grade-number">
+                {grade.level}
+              </span>
+
+              <span class="grade-content">
+                <span class="grade-title">
+                  Grade {grade.level}
+                </span>
+
+                <span class="grade-description">
+                  {grade.description ??
+                    'No description available'}
+                </span>
+              </span>
+
+              <span class="option-check">
+                {answers[currentIndex] === grade.level
+                  ? '✓'
+                  : ''}
+              </span>
+            </button>
+          {/each}
+        </div>
 
         <div class="navigation">
           <button
@@ -347,7 +508,11 @@
             <button
               class="primary-button"
               onclick={finishQuiz}
-              disabled={answers[currentIndex] === undefined || saving || saved}
+              disabled={
+                answers[currentIndex] === undefined ||
+                saving ||
+                saved
+              }
             >
               {saving ? 'Saving...' : 'Finish →'}
             </button>
@@ -355,9 +520,12 @@
             <button
               class="primary-button"
               onclick={nextQuestion}
-              disabled={answers[currentIndex] === undefined || saving}
+              disabled={
+                answers[currentIndex] === undefined ||
+                saving
+              }
             >
-              Next question →
+              Next record →
             </button>
           {/if}
         </div>
@@ -366,6 +534,7 @@
           <p class="save-error" role="alert">
             Could not save answers: {saveError}
           </p>
+
           <p class="retry-note">
             Your answers are still here. Try Finish again.
           </p>
@@ -379,7 +548,7 @@
   </section>
 
   <p class="page-footer">
-    Questionnaire App · Powered by FastAPI
+    Medical Questionnaire · Powered by FastAPI
   </p>
 </main>
 
@@ -409,13 +578,17 @@
     align-items: center;
     justify-content: center;
     background:
-      radial-gradient(ellipse at top left, #e2eaff 0, transparent 45%),
+      radial-gradient(
+        ellipse at top left,
+        #e2eaff 0,
+        transparent 45%
+      ),
       #f3f6fc;
   }
 
   .card {
     width: 100%;
-    max-width: 720px;
+    max-width: 760px;
     padding: 36px;
     background: white;
     border: 1px solid #e6eaf2;
@@ -454,6 +627,7 @@
     margin: 5px 0 0;
     color: #778198;
     font-size: 14px;
+    line-height: 1.6;
   }
 
   .quiz {
@@ -480,53 +654,137 @@
   .progress-fill {
     height: 100%;
     border-radius: inherit;
-    background: linear-gradient(90deg, #5965e8, #8291ff);
+    background: linear-gradient(
+      90deg,
+      #5965e8,
+      #8291ff
+    );
     transition: width 200ms ease;
   }
 
   .eyebrow {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     color: #5965d9;
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 1.5px;
   }
 
+  .term-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+  }
+
+  .soc-badge {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #eef0ff;
+    color: #4e5ad4;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .term-code {
+    color: #798297;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
   .question-title {
     margin: 0;
-    font-size: clamp(23px, 4vw, 30px);
+    font-size: clamp(25px, 4vw, 34px);
     line-height: 1.3;
     letter-spacing: -0.8px;
     overflow-wrap: anywhere;
   }
 
-  .instruction {
-    margin: 10px 0 22px;
-    color: #7b8498;
+  .definition-card {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid #e5e8f3;
+    border-radius: 13px;
+    background: #fafbff;
+  }
+
+  .section-label {
+    margin: 0 0 8px;
+    color: #737d94;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+  }
+
+  .definition {
+    margin: 0;
+    color: #515d74;
     font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+
+  .note {
+    margin: 14px 0;
+    padding: 12px 14px;
+    border-left: 3px solid #8291ff;
+    border-radius: 5px;
+    background: #f5f6ff;
+    color: #46516a;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .change-label {
+    margin: 12px 0;
+    color: #798297;
+    font-size: 12px;
+  }
+
+  .grade-heading {
+    margin-top: 28px;
+  }
+
+  .grade-heading h3 {
+    margin: 0;
+    font-size: 17px;
+  }
+
+  .instruction {
+    margin: 7px 0 17px;
+    color: #7b8498;
+    font-size: 13px;
+    line-height: 1.6;
   }
 
   .options {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 11px;
+  }
+
+  .grade-options {
+    grid-template-columns: 1fr;
   }
 
   .option {
     width: 100%;
     min-width: 0;
-    min-height: 62px;
-    padding: 12px 15px;
+    min-height: 76px;
+    padding: 14px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 13px;
     text-align: left;
     color: #28334b;
     background: white;
     border: 1px solid #dfe4ef;
     border-radius: 12px;
     cursor: pointer;
-    transition: border-color 150ms, background 150ms;
+    transition:
+      border-color 150ms,
+      background 150ms;
   }
 
   .option:hover {
@@ -539,29 +797,50 @@
     background: #f3f4ff;
   }
 
-  .option-text {
+  .grade-number {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #f0f2f8;
+    color: #28334b;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .option.selected .grade-number {
+    background: #5965dc;
+    color: white;
+  }
+
+  .grade-content {
     flex: 1;
-    font-size: 15px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .grade-title {
+    font-size: 14px;
+    font-weight: 750;
+  }
+
+  .grade-description {
+    color: #798297;
+    font-size: 13px;
+    line-height: 1.6;
     overflow-wrap: anywhere;
   }
 
   .option-check {
+    width: 20px;
+    flex-shrink: 0;
     color: #5965d9;
     font-weight: 800;
-  }
-
-  .number-options {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .number-option {
-    justify-content: center;
-    padding: 12px 8px;
-  }
-
-  .number-value {
-    font-size: 20px;
-    font-weight: 750;
+    text-align: center;
   }
 
   .navigation {
@@ -581,7 +860,9 @@
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    transition: background 150ms, transform 150ms;
+    transition:
+      background 150ms,
+      transform 150ms;
   }
 
   .primary-button {
@@ -619,6 +900,7 @@
     margin: 18px 0 0;
     color: #9299aa;
     font-size: 12px;
+    line-height: 1.6;
     text-align: center;
   }
 
@@ -717,7 +999,7 @@
   }
 
   .answer-item {
-    padding: 17px 0;
+    padding: 19px 0;
     border-bottom: 1px solid #edf0f6;
   }
 
@@ -731,16 +1013,47 @@
 
   .answer-item h3 {
     margin: 0;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5;
+    overflow-wrap: anywhere;
   }
 
-  .answer-value {
-    margin: 9px 0 0;
-    color: #505fd2;
-    font-size: 14px;
-    font-weight: 600;
+  .answer-soc {
+    margin: 5px 0;
+    color: #798297;
+    font-size: 12px;
+  }
+
+  .selected-grade {
+    margin-top: 14px;
+    padding: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 10px;
+    background: #f5f6ff;
+  }
+
+  .selected-grade .grade-number {
+    background: #5965dc;
+    color: white;
+  }
+
+  .selected-grade strong {
+    font-size: 13px;
+  }
+
+  .selected-grade p {
+    margin: 5px 0 0;
+    color: #515d74;
+    font-size: 13px;
+    line-height: 1.6;
     overflow-wrap: anywhere;
+  }
+
+  .unanswered {
+    color: #b42318;
+    font-size: 13px;
   }
 
   .save-success {
@@ -795,17 +1108,8 @@
       padding-bottom: 20px;
     }
 
-    .options {
-      gap: 8px;
-    }
-
-    .option {
-      padding: 10px 8px;
-      gap: 7px;
-    }
-
-    .option-text {
-      font-size: 13px;
+    .header h1 {
+      font-size: 19px;
     }
 
     .navigation {
@@ -815,6 +1119,15 @@
     .primary-button,
     .secondary-button {
       padding: 0 13px;
+    }
+
+    .grade-option {
+      padding: 12px 10px;
+      gap: 10px;
+    }
+
+    .grade-description {
+      font-size: 12px;
     }
   }
 
