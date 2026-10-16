@@ -1,19 +1,25 @@
 from __future__ import annotations
 
+from copy import deepcopy
 from dataclasses import dataclass, field
 import json
 import os
 from pathlib import Path
+import sys
 from typing import Literal
 
 from openai import AsyncOpenAI
 from pydantic import TypeAdapter
-from pydantic_ai import Agent, BinaryContent, ModelRetry, NativeOutput, RunContext, UsageLimits
+from pydantic_ai import Agent, BinaryContent, ModelRetry, NativeOutput, RunContext, UsageLimits, capture_run_messages
+from pydantic_ai.capabilities import Hooks
+from pydantic_ai.messages import FunctionToolCallEvent, FunctionToolResultEvent, ModelMessagesTypeAdapter, ModelResponse, RetryPromptPart
 from pydantic_ai.models import Model
 from pydantic_ai.models.openai import OpenAIChatModel, OpenAIResponsesModel
 from pydantic_ai.providers.openai import OpenAIProvider
+from pydantic_ai.usage import RunUsage
 
 from .corpus import Corpus
+from .ctcae import load_terms, validation_warnings
 from .prompts import INSTRUCTIONS
 from .schema import DrugExtraction
 
@@ -27,8 +33,9 @@ class Settings:
     base_url: str = DEFAULT_BASE_URL
     api: Literal["responses", "chat"] = "responses"
     context_chars: int = 160_000
-    request_limit: int = 25
-    tool_limit: int = 70
+    ctcae_csv: Path = Path("CTCAEv6.csv")
+    request_limit: int = 20
+    tool_limit: int | None = None
     total_tokens: int = 400_000
     max_output_tokens: int = 24_000
     vision: bool = False
@@ -44,6 +51,11 @@ class Dependencies:
     # Track exactly which page ranges were supplied, including partial long pages.
     exposed: dict[tuple[str, int], list[tuple[int, int]]] = field(default_factory=dict)
     image_count: int = 0
+    tool_limit: int | None = None
+    tool_calls: int = 0
+    ctcae_terms: set[str] = field(default_factory=set)
+    validation_feedback: list[str] = field(default_factory=list)
+    validation_warnings: list[str] = field(default_factory=list)
 
     def expose(self, document_id: str, page: int, start: int, end: int) -> None:
         self.exposed.setdefault((document_id, page), []).append((start, end))
@@ -70,6 +82,7 @@ def prepare(corpus: Corpus, code: str, settings: Settings, allow_partial: bool =
     if not docs:
         raise ValueError("At least one target PIL/SPC PDF is required")
     deps = Dependencies(corpus, code, {d.id for d in docs}, missing)
+    deps.ctcae_terms = load_terms(settings.ctcae_csv)
     corpus.ensure("CTCAE:ctcae-v6.pdf")
     all_pages = {doc.id: corpus.pages(doc.id) for doc in docs}
     manifest = [{"document_id": doc.id, "pages": len(all_pages[doc.id])} for doc in docs]
@@ -91,6 +104,8 @@ def prepare(corpus: Corpus, code: str, settings: Settings, allow_partial: bool =
                 deps.expose(doc.id, page["page"], 0, take)
                 budget -= take
     parts.append("UNREAD RANGES (fetch these before final output):\n" + json.dumps(deps.unread()))
+    parts.append(f"CTCAE V6 TERMS ({len(deps.ctcae_terms)} exact English terms; use these as ctcae values):\n"
+                 + "\n".join(sorted(deps.ctcae_terms)))
     return "\n\n".join(parts), deps
 
 
@@ -102,8 +117,46 @@ def validate_coverage(deps: Dependencies) -> None:
 
 
 def build_agent(model: Model, vision: bool = False) -> Agent[Dependencies, DrugExtraction]:
+    hooks = Hooks()
+
+    def tools_available(ctx: RunContext[Dependencies]) -> bool:
+        request_limit = ctx.usage_limits.request_limit
+        return (not ctx.deps.validation_feedback
+                and (request_limit is None or ctx.usage.requests < request_limit - 1)
+                and (ctx.deps.tool_limit is None or ctx.deps.tool_calls < ctx.deps.tool_limit))
+
+    @hooks.on.prepare_tools
+    async def prepare_tools(ctx, tool_defs):
+        return tool_defs if tools_available(ctx) else []
+
+    @hooks.on.tool_execute
+    async def limit_tools(ctx, *, call, tool_def, args, handler):
+        # Reserve a slot before awaiting: parallel batches can never exceed the cap.
+        if ctx.deps.tool_limit is not None and ctx.deps.tool_calls >= ctx.deps.tool_limit:
+            return {"tool_budget_exhausted": True,
+                    "message": "No further tools are possible. Return the final JSON from available evidence now."}
+        ctx.deps.tool_calls += 1
+        return await handler(args)
+
     agent = Agent(model, deps_type=Dependencies, output_type=NativeOutput(DrugExtraction, strict=True),
-                  instructions=INSTRUCTIONS, retries=2, name="sukl_extractor")
+                  instructions=INSTRUCTIONS, retries=2, name="sukl_extractor", capabilities=[hooks])
+
+    @agent.instructions
+    async def budget(ctx: RunContext[Dependencies]) -> str:
+        if ctx.deps.validation_feedback:
+            return ("No further tools are possible. Review the soft validation warnings and return the "
+                    "complete final JSON now. This is the only correction pass; remaining warnings are "
+                    "allowed. This overrides instructions to fetch more pages or search CTCAE.")
+        if not tools_available(ctx):
+            return ("No further tools are possible. You MUST return the final JSON now using only "
+                    "evidence already supplied. Use null for unverified CTCAE terms; do not invent "
+                    "missing information. This overrides instructions to fetch more pages or search CTCAE.")
+        remaining = ctx.usage_limits.request_limit - ctx.usage.requests
+        tool_budget = ("" if ctx.deps.tool_limit is None else
+                       f" At most {ctx.deps.tool_limit - ctx.deps.tool_calls} tool executions remain.")
+        return (f"You have {remaining} model requests left, including this one. The last request is "
+                "reserved for final JSON with tools disabled. Read unread primary pages before optional searches."
+                + tool_budget)
 
     @agent.tool
     async def find_drugs(ctx: RunContext[Dependencies], query: str) -> dict:
@@ -180,10 +233,24 @@ def build_agent(model: Model, vision: bool = False) -> Agent[Dependencies, DrugE
 
     @agent.output_validator
     async def complete(ctx: RunContext[Dependencies], output: DrugExtraction) -> DrugExtraction:
-        try:
-            validate_coverage(ctx.deps)
-        except ValueError as exc:
-            raise ModelRetry(str(exc)) from exc
+        if tools_available(ctx):
+            try:
+                validate_coverage(ctx.deps)
+            except ValueError as exc:
+                raise ModelRetry(str(exc)) from exc
+        warnings = validation_warnings(output, ctx.deps.ctcae_terms)
+        ctx.deps.validation_warnings = warnings
+        request_limit = ctx.usage_limits.request_limit
+        if warnings and not ctx.deps.validation_feedback and (request_limit is None or ctx.usage.requests < request_limit):
+            ctx.deps.validation_feedback = warnings
+            print(f"Warning: soft validation found {len(warnings)} unknown CTCAE term(s); requesting one correction pass.",
+                  file=sys.stderr, flush=True)
+            raise ModelRetry("Soft validation warnings:\n" + "\n".join(warnings)
+                             + "\nReview these mappings using the supplied CTCAE list and source text. "
+                             "Prefer an exact listed term or null if no suitable mapping exists. "
+                             "Return the complete JSON again, not a patch. This is the only correction pass; "
+                             "the second answer may keep warnings if you judge the values appropriate. "
+                             "Do not call tools.")
         return output
 
     return agent
@@ -226,21 +293,95 @@ async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
     if settings.api == "responses":
         # Replay history locally, including encrypted reasoning, without server-side storage.
         model_settings.setdefault("openai_store", False)
-    try:
-        result = await build_agent(model, settings.vision).run(
-            prompt, deps=deps,
-            model_settings=model_settings,
-            usage_limits=UsageLimits(request_limit=settings.request_limit,
-                                     tool_calls_limit=settings.tool_limit,
-                                     total_tokens_limit=settings.total_tokens),
-        )
-    finally:
-        if client is not None:
-            await client.close()
-    if trace is not None:
-        atomic_json(trace, {
-            "model": settings.model,
-            "usage": TypeAdapter(type(result.usage)).dump_python(result.usage, mode="json"),
-            "messages": json.loads(result.all_messages_json()),
-        })
+    # Tool exhaustion is handled by the hooks so the model can still produce final JSON.
+    limits = UsageLimits(request_limit=settings.request_limit, total_tokens_limit=settings.total_tokens)
+    deps.tool_limit, deps.tool_calls = settings.tool_limit, 0
+    deps.validation_feedback, deps.validation_warnings = [], []
+    usage = RunUsage()
+    request_start = RunUsage()
+    tool_calls = []
+    error = None
+    agent = build_agent(model, settings.vision)
+    with capture_run_messages() as messages:
+        try:
+            async with agent.iter(prompt, deps=deps, model_settings=model_settings,
+                                  usage_limits=limits, usage=usage) as run:
+                async for node in run:
+                    if trace is None:
+                        continue
+                    if Agent.is_model_request_node(node):
+                        request_start = deepcopy(usage)
+                        print(f"[trace] Request {usage.requests + 1}/{settings.request_limit}; "
+                              f"tools executed={deps.tool_calls}",
+                              file=sys.stderr, flush=True)
+                    elif Agent.is_call_tools_node(node):
+                        request_usage = node.model_response.usage
+                        print(f"[trace] Tokens: input={request_usage.input_tokens:,} "
+                              f"output={request_usage.output_tokens:,}; cumulative={usage.total_tokens:,}",
+                              file=sys.stderr, flush=True)
+                        # Stream tool events only; model requests retain the usual non-streaming API.
+                        async with node.stream(run.ctx) as events:
+                            async for event in events:
+                                if isinstance(event, FunctionToolCallEvent):
+                                    part = event.part
+                                    arguments = part.args_as_json_str()
+                                    call = {"request": usage.requests, "tool_call_id": part.tool_call_id,
+                                            "tool": part.tool_name, "arguments": part.args,
+                                            "input_chars": len(arguments), "status": "started"}
+                                    tool_calls.append(call)
+                                    print(f"[trace] Tool {len(tool_calls)}: {part.tool_name}({arguments}) "
+                                          f"input={len(arguments):,} chars", file=sys.stderr, flush=True)
+                                elif isinstance(event, FunctionToolResultEvent):
+                                    call = next(c for c in reversed(tool_calls)
+                                                if c["tool_call_id"] == event.tool_call_id)
+                                    part = event.part
+                                    retry = isinstance(part, RetryPromptPart)
+                                    text = part.model_response() if retry else part.model_response_str()
+                                    binary_bytes = 0 if retry else sum(
+                                        len(f.data) for f in part.files if isinstance(f, BinaryContent))
+                                    blocked = (not retry and isinstance(part.content, dict)
+                                               and part.content.get("tool_budget_exhausted") is True)
+                                    call.update(status="retry" if retry else "blocked" if blocked else "ok", output_chars=len(text),
+                                                output_binary_bytes=binary_bytes)
+                                    print(f"[trace] {call['tool']}: {call['status']}; "
+                                          f"output={len(text):,} chars, binary={binary_bytes:,} bytes",
+                                          file=sys.stderr, flush=True)
+                result = run.result
+                assert result is not None
+        except BaseException as exc:
+            error = {"type": type(exc).__name__, "message": str(exc)}
+            raise
+        finally:
+            try:
+                if client is not None:
+                    await client.close()
+            finally:
+                if trace is not None:
+                    requests = [{"request": i, "usage": TypeAdapter(type(m.usage)).dump_python(m.usage, mode="json")}
+                                for i, m in enumerate((m for m in messages if isinstance(m, ModelResponse)), 1)]
+                    # Token-limit errors can be raised after usage is recorded but before
+                    # Pydantic AI appends the response to message history.
+                    last_usage = usage - request_start
+                    if last_usage.total_tokens and len(requests) == request_start.requests:
+                        requests.append({"request": request_start.requests + 1, "response_saved": False,
+                                         "usage": TypeAdapter(RunUsage).dump_python(last_usage, mode="json")})
+                    atomic_json(trace, {
+                        "model": settings.model, "status": "failed" if error else "completed", "error": error,
+                        "limits": {"requests": settings.request_limit, "tool_calls": settings.tool_limit,
+                                   "total_tokens": settings.total_tokens},
+                        "usage": TypeAdapter(RunUsage).dump_python(usage, mode="json"),
+                        "tool_executions": deps.tool_calls, "unread_primary": deps.unread(),
+                        "validation_feedback": deps.validation_feedback,
+                        "validation_warnings": deps.validation_warnings,
+                        "requests": requests, "tool_calls": tool_calls,
+                        "messages": ModelMessagesTypeAdapter.dump_python(messages, mode="json"),
+                    })
+                    print(f"[trace] {'Failed' if error else 'Completed'}; "
+                          f"tokens: input={usage.input_tokens:,} output={usage.output_tokens:,}; saved {trace}",
+                          file=sys.stderr, flush=True)
+    if deps.unread():
+        print("Warning: budget exhausted before all primary text was read; result uses supplied evidence only. "
+              "Increase --request-limit or --context-chars for full coverage.", file=sys.stderr)
+    for warning in deps.validation_warnings:
+        print(f"Warning: {warning}", file=sys.stderr)
     return result.output.model_dump(mode="json")

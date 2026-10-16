@@ -24,11 +24,13 @@ class SideEffect(Record):
 
 class DrugCombination(Record):
     drug: str
+    effect: str = Field(description="Czech description of the source-supported interaction, including conditions and recommendations.")
     side_effects: list[SideEffect]
 
 
 class DrugClassCombination(Record):
     drug_class: str
+    effect: str = Field(description="Czech description of the source-supported interaction, including conditions and recommendations.")
     side_effects: list[SideEffect]
 
 

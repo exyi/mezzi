@@ -8,6 +8,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from pydantic_ai.exceptions import UsageLimitExceeded
+
 from .corpus import Catalog, Corpus, KINDS
 from .extraction import (
     DEFAULT_BASE_URL, DEFAULT_MODEL, Settings, atomic_json, extract, prepare,
@@ -27,6 +29,8 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument("--data", type=Path, default=Path("data"))
     p.add_argument("--snapshot", help="YYYYMMDD; auto-selected only with one extracted DLP snapshot")
     p.add_argument("--ctcae", type=Path, default=Path("ctcae-v6.pdf"))
+    p.add_argument("--ctcae-csv", type=Path, default=Path("CTCAEv6.csv"),
+                   help="CTCAE vocabulary for the prompt and soft validation")
     p.add_argument("--cache", type=Path, default=Path(".cache/sukl/corpus.sqlite"))
     commands = p.add_subparsers(dest="command", required=True)
     commands.add_parser("status", help="Report catalog and index coverage; no LLM calls")
@@ -53,14 +57,17 @@ def parser() -> argparse.ArgumentParser:
                              help="API endpoint (default: responses); GPT-6 Luna tools on chat require reasoning effort none")
             sub.add_argument("--vision", action="store_true", help="Expose a bounded page-image tool")
             sub.add_argument("--model-settings", default="{}", help='JSON provider settings, e.g. {"openai_reasoning_effort":"low"}')
-            sub.add_argument("--request-limit", type=positive, default=25)
-            sub.add_argument("--tool-limit", type=positive, default=70)
+            sub.add_argument("--request-limit", type=positive, default=20,
+                             help="Maximum model requests per drug (default: 20); last request produces final JSON")
+            sub.add_argument("--tool-limit", type=positive,
+                             help="Optional total tool-execution cap, including retries; exhaustion forces final JSON")
             sub.add_argument("--total-tokens", type=positive, default=400_000)
             sub.add_argument("--max-output-tokens", type=positive, default=24_000)
             overwrite = sub.add_mutually_exclusive_group()
             overwrite.add_argument("--resume", action="store_true", help="Skip an existing output if it matches the current schema")
             overwrite.add_argument("--force", action="store_true", help="Replace a previous output after a successful run")
-            sub.add_argument("--trace", action="store_true", help="Save prompts, tool calls and usage to a separate .trace.json file")
+            sub.add_argument("--trace", action="store_true",
+                             help="Log tools and sizes live; save messages, per-request usage and errors to .trace.json")
     return p
 
 
@@ -101,13 +108,14 @@ def run(args: argparse.Namespace) -> None:
                 raise SystemExit(1)
         else:
             code = catalog.code(args.code)
-            settings = Settings(context_chars=args.context_chars)
+            settings = Settings(context_chars=args.context_chars, ctcae_csv=args.ctcae_csv)
             if args.command == "extract":
                 model_settings = json.loads(args.model_settings)
                 if not isinstance(model_settings, dict):
                     raise ValueError("--model-settings must be a JSON object")
                 settings = Settings(
                     model=args.model, base_url=args.base_url, api=args.api, context_chars=args.context_chars,
+                    ctcae_csv=args.ctcae_csv,
                     request_limit=args.request_limit, tool_limit=args.tool_limit,
                     total_tokens=args.total_tokens, max_output_tokens=args.max_output_tokens,
                     vision=args.vision, model_settings=model_settings,
@@ -150,5 +158,5 @@ def main() -> None:
     p = parser()
     try:
         run(p.parse_args())
-    except (ValueError, OSError, subprocess.SubprocessError) as exc:
+    except (ValueError, OSError, subprocess.SubprocessError, UsageLimitExceeded) as exc:
         p.exit(1, f"Error: {exc}\n")
