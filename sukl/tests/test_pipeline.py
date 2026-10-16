@@ -506,15 +506,20 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue((output_dir / "0000010.json").exists())
         self.assertIn("1 written, 4 reused, 0 failed", output.getvalue())
 
-    def test_id_file_and_batch_options_fail_before_model_calls(self):
+    def test_id_file_skips_invalid_codes_and_rejects_empty_input_or_conflicting_options(self):
         from sukl.cli import parser, read_codes, run
 
         ids = self.root / "bad-ids.txt"
-        for content, message in (("# none\n", "No SUKL codes"), ("9\nunknown\n", ":2:"),
-                                 ("9\n9999999", "Unknown SUKL code")):
+        for content in ("# none\n", "unknown\n9999999\n"):
             ids.write_text(content)
-            with self.assertRaisesRegex(ValueError, message):
+            with redirect_stdout(io.StringIO()), self.assertRaisesRegex(ValueError, "No SUKL codes"):
                 read_codes(ids, self.catalog)
+        ids.write_text("9\nunknown\n0000009\n9999999\n")
+        warnings = io.StringIO()
+        with redirect_stdout(warnings):
+            self.assertEqual(read_codes(ids, self.catalog), ["0000009"])
+        self.assertIn(f"{ids}:2:", warnings.getvalue())
+        self.assertIn("Unknown SUKL code 9999999", warnings.getvalue())
         base = ["--data", str(self.root / "data"), "--ctcae", str(self.ctcae),
                 "--ctcae-csv", str(self.ctcae_csv), "--cache", str(self.root / "cli.sqlite"), "extract"]
         with patch("sukl.cli.extract") as model_call:
