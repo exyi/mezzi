@@ -10,7 +10,7 @@ import sys
 
 from .corpus import Catalog, Corpus, KINDS
 from .extraction import (
-    DEFAULT_BASE_URL, DEFAULT_MODEL, Settings, atomic_json, extract, fingerprint, prepare,
+    DEFAULT_BASE_URL, DEFAULT_MODEL, Settings, atomic_json, extract, prepare,
 )
 from .schema import DrugExtraction
 
@@ -43,12 +43,14 @@ def parser() -> argparse.ArgumentParser:
     for command in ("prepare", "extract"):
         sub = commands.add_parser(command, help="Prepare context offline" if command == "prepare" else "Run the LLM")
         sub.add_argument("code", help="SUKL code, e.g. 0000009 (leading zeros optional)")
-        sub.add_argument("--allow-partial", action="store_true", help="Allow a missing PIL or SPC; flag it in output")
+        sub.add_argument("--allow-partial", action="store_true", help="Allow a missing PIL or SPC; print a warning")
         sub.add_argument("--context-chars", type=positive, default=160_000)
         sub.add_argument("--output", type=Path, help="Output file; extract defaults to outputs/CODE.json")
         if command == "extract":
             sub.add_argument("--model", default=os.environ.get("MODEL", DEFAULT_MODEL))
             sub.add_argument("--base-url", default=os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL))
+            sub.add_argument("--api", choices=("responses", "chat"), default="responses",
+                             help="API endpoint (default: responses); GPT-6 Luna tools on chat require reasoning effort none")
             sub.add_argument("--vision", action="store_true", help="Expose a bounded page-image tool")
             sub.add_argument("--model-settings", default="{}", help='JSON provider settings, e.g. {"openai_reasoning_effort":"low"}')
             sub.add_argument("--request-limit", type=positive, default=25)
@@ -56,9 +58,9 @@ def parser() -> argparse.ArgumentParser:
             sub.add_argument("--total-tokens", type=positive, default=400_000)
             sub.add_argument("--max-output-tokens", type=positive, default=24_000)
             overwrite = sub.add_mutually_exclusive_group()
-            overwrite.add_argument("--resume", action="store_true", help="Reuse validated output only if input fingerprint matches")
+            overwrite.add_argument("--resume", action="store_true", help="Skip an existing output if it matches the current schema")
             overwrite.add_argument("--force", action="store_true", help="Replace a previous output after a successful run")
-            sub.add_argument("--trace", action="store_true", help="Include prompts/tool calls in output (may include page images)")
+            sub.add_argument("--trace", action="store_true", help="Save prompts, tool calls and usage to a separate .trace.json file")
     return p
 
 
@@ -105,7 +107,7 @@ def run(args: argparse.Namespace) -> None:
                 if not isinstance(model_settings, dict):
                     raise ValueError("--model-settings must be a JSON object")
                 settings = Settings(
-                    model=args.model, base_url=args.base_url, context_chars=args.context_chars,
+                    model=args.model, base_url=args.base_url, api=args.api, context_chars=args.context_chars,
                     request_limit=args.request_limit, tool_limit=args.tool_limit,
                     total_tokens=args.total_tokens, max_output_tokens=args.max_output_tokens,
                     vision=args.vision, model_settings=model_settings,
@@ -114,6 +116,8 @@ def run(args: argparse.Namespace) -> None:
                     raise ValueError("--model / MODEL must not be empty")
             print(f"Preparing {code}: {catalog.products[code]['NAZEV']}", file=sys.stderr)
             prompt, deps = prepare(corpus, code, settings, args.allow_partial)
+            if deps.missing:
+                print(f"Warning: missing primary documents: {deps.missing}", file=sys.stderr)
             if args.command == "prepare":
                 if args.output:
                     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -126,15 +130,18 @@ def run(args: argparse.Namespace) -> None:
             if output.exists() and not args.force:
                 if args.resume:
                     previous = json.loads(output.read_text(encoding="utf-8"))
-                    if previous.get("fingerprint") == fingerprint(deps, settings):
-                        DrugExtraction.model_validate(previous["extraction"])
-                        print(f"Reusing {output}")
-                        return
-                raise ValueError(f"Output exists or resume inputs changed: {output}. Use --force to replace it.")
-            artifact = asyncio.run(extract(prompt, deps, settings, trace=args.trace))
-            atomic_json(output, artifact)
-            print(f"Wrote {output}; {len(artifact['extraction']['side_effects'])} side effects, "
-                  f"{len(artifact['extraction']['combinations'])} combinations")
+                    try:
+                        DrugExtraction.model_validate(previous)
+                    except ValueError as exc:
+                        raise ValueError(f"Existing output uses a different schema: {output}. Use --force to replace it.") from exc
+                    print(f"Reusing {output}")
+                    return
+                raise ValueError(f"Output exists: {output}. Use --force to replace it.")
+            trace = output.with_suffix(".trace.json") if args.trace else None
+            result = asyncio.run(extract(prompt, deps, settings, trace=trace))
+            atomic_json(output, result)
+            print(f"Wrote {output}; {len(result['side_effects'])} side effects, "
+                  f"{len(result['combinations'])} combinations")
     finally:
         corpus.close()
 

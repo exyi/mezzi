@@ -17,10 +17,6 @@ KINDS = ("PIL", "SPC", "CTCAE")
 EXTRACTOR_VERSION = "pdftotext-layout-v1"
 
 
-def normalize_quote(text: str) -> str:
-    return " ".join(text.split())
-
-
 def fold(text: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFKD", text.casefold())
                    if not unicodedata.combining(c))
@@ -80,11 +76,6 @@ class Catalog:
             raise ValueError("snapshot must be YYYYMMDD")
         self.snapshot = snapshot
         root = data_dir / f"DLP{snapshot}"
-        self.csv_hashes = {
-            name: hashlib.sha256((root / name).read_bytes()).hexdigest()
-            for name in ("dlp_lecivepripravky.csv", "dlp_nazvydokumentu.csv",
-                         "dlp_latky.csv", "dlp_slozeni.csv")
-        }
         products = read_csv(root / "dlp_lecivepripravky.csv")
         self.products = {r["KOD_SUKL"]: r for r in products}
         self.links = {r["KOD_SUKL"]: r for r in read_csv(root / "dlp_nazvydokumentu.csv")}
@@ -270,5 +261,3 @@ class Corpus:
                 "unsupported_files": len(self.catalog.unsupported),
                 "note": "Global text search covers indexed PDFs only. Use find_drugs and read_pages for others."}
 
-    def provenance(self) -> list[dict]:
-        return [dict(r) for r in self.db.execute("SELECT * FROM documents ORDER BY id")]
