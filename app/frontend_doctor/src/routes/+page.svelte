@@ -116,7 +116,29 @@
 
     if (Number.isNaN(date.getTime())) return value;
 
-    return new Intl.DateTimeFormat(undefined, {
+    const secondsAgo = Math.round((date.getTime() - Date.now()) / 1000);
+    const formatter = new Intl.RelativeTimeFormat('cs', { numeric: 'auto' });
+    const units: [Intl.RelativeTimeFormatUnit, number][] = [
+      ['year', 60 * 60 * 24 * 365],
+      ['month', 60 * 60 * 24 * 30],
+      ['week', 60 * 60 * 24 * 7],
+      ['day', 60 * 60 * 24],
+      ['hour', 60 * 60],
+      ['minute', 60],
+      ['second', 1]
+    ];
+    const [unit, secondsPerUnit] =
+      units.find(([, seconds]) => Math.abs(secondsAgo) >= seconds) ?? units.at(-1)!;
+
+    return formatter.format(Math.round(secondsAgo / secondsPerUnit), unit);
+  }
+
+  function exactDate(value: string) {
+    const date = new Date(value);
+
+    if (Number.isNaN(date.getTime())) return value;
+
+    return new Intl.DateTimeFormat('cs', {
       dateStyle: 'medium',
       timeStyle: 'short'
     }).format(date);
@@ -234,7 +256,9 @@
 
               <div class="submission-main">
                 <strong>Výsledky dotazníku</strong>
-                <span>{formatDate(submission.submitted_at)}</span>
+                <span title={exactDate(submission.submitted_at)}>
+                  {formatDate(submission.submitted_at)}
+                </span>
                 <span class="submission-id">
                   ID: {submission.submission_id}
                 </span>
