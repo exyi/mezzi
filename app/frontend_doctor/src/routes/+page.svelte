@@ -1,4 +1,3 @@
-
 <script lang="ts">
   import { onMount } from 'svelte';
 
@@ -25,6 +24,7 @@
   let error = $state('');
   let search = $state('');
   let expanded = $state<string | null>(null);
+  let showLowerGrades = $state(false);
 
   let filteredSubmissions = $derived.by(() => {
     const query = search.trim().toLowerCase();
@@ -49,6 +49,21 @@
       return submissionText.includes(query);
     });
   });
+
+  let lowerGradeCount = $derived(
+    submissions.reduce(
+      (total, submission) =>
+        total +
+        submission.answers.filter((answer) => answer.answer < 2).length,
+      0
+    )
+  );
+
+  function visibleAnswers(answers: SavedAnswer[]) {
+    return answers
+      .filter((answer) => showLowerGrades || answer.answer >= 2)
+      .sort((a, b) => b.answer - a.answer);
+  }
 
   let totalAnswers = $derived(
     submissions.reduce(
@@ -119,7 +134,6 @@
   }
 </script>
 
-
 <main class="page">
   <header class="topbar">
     <div class="brand">
@@ -137,15 +151,28 @@
     </button>
   </header>
 
-
   <section class="records">
     <div class="records-heading">
       <div>
         <h2>Questionnaire Submissions</h2>
       </div>
-      <span class="count">{filteredSubmissions.length} shown</span>
-    </div>
 
+      <div class="heading-actions">
+        <span class="count">{filteredSubmissions.length} shown</span>
+
+        {#if lowerGradeCount > 0}
+          <button
+            class="lower-grades-button"
+            aria-pressed={showLowerGrades}
+            onclick={() => (showLowerGrades = !showLowerGrades)}
+          >
+            {showLowerGrades
+              ? 'Hide lower grades'
+              : `Show lower grades (${lowerGradeCount})`}
+          </button>
+        {/if}
+      </div>
+    </div>
 
     {#if loading}
       <div class="state-message">
@@ -204,7 +231,7 @@
 
             {#if expanded === submission.submission_id}
               <div class="submission-details">
-                {#each submission.answers as answer, index (`${submission.submission_id}-${answer.question_id}-${index}`)}
+                {#each visibleAnswers(submission.answers) as answer, index (`${submission.submission_id}-${answer.question_id}-${index}`)}
                   <section class="answer-card">
                     <div class="answer-top">
                       <span class="record-number">
@@ -430,6 +457,29 @@
     color: #596579;
     font-size: 12px;
     white-space: nowrap;
+  }
+
+  .heading-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .lower-grades-button {
+    padding: 8px 11px;
+    border: 1px solid #d9dfeb;
+    border-radius: 8px;
+    background: white;
+    color: #344054;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .lower-grades-button:hover {
+    background: #f0f3fa;
   }
 
   .search {

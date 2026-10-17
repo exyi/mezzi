@@ -75,7 +75,6 @@
       }
 
       const data = await response.json();
-    console.log('Full API response:', data);
 
       if (!Array.isArray(data.results)) {
         throw new Error(
@@ -234,7 +233,7 @@
 </script>
 
 <svelte:head>
-  <title>Medical Terminology Questionnaire</title>
+  <title>Questionnaire</title>
   <meta
     name="description"
     content="Review medical terminology records and select a grade for each term."
@@ -412,7 +411,6 @@
           ></div>
         </div>
 
-        <p class="eyebrow">MEDICAL TERMINOLOGY</p>
 
         <div class="term-meta">
           <span class="soc-badge">
