@@ -1,41 +1,135 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A02",
+    "atc:A02B",
+    "atc:A02BC",
+    "atc:A02BC02",
+    "substance:14061"
+  ],
   "side_effects": [
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "rare",
-      "label": "Závažná alergická reakce, například otok jazyka nebo hrdla, kopřivka, dýchací obtíže, alergický otok obličeje nebo silná závrať s velmi rychlým srdečním tepem a silným pocením.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některý z těchto příznaků, přestaňte přípravek užívat a ihned informujte lékaře nebo kontaktujte pohotovost."
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "not_known",
-      "label": "Závažné kožní reakce: puchýře a rychlé zhoršení celkového zdravotního stavu; bolestivé kožní léze nebo vyrážka, zejména na místech vystavených slunci; Stevensův-Johnsonův syndrom, toxická epidermální nekrolýza, DRESS nebo erythema multiforme. Mohou být doprovázeny horečkou, příznaky podobnými chřipce, bolestmi kloubů či zvětšenými mízními uzlinami.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce, přestaňte pantoprazol užívat a ihned vyhledejte lékařskou pomoc."
-      }
-    },
-    {
-      "ctcae": "Hepatic failure",
-      "frequency": "not_known",
-      "label": "Závažné poškození jaterních buněk, žloutenka nebo selhání jater.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tubulointerstitial nephritis",
-      "frequency": "not_known",
-      "label": "Těžký zánět ledvin, někdy se zvětšením ledvin, bolestivým močením a bolestí v bedrech; může vést k selhání ledvin.",
-      "action": null,
-      "action_condition": null
-    },
     {
       "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
       "frequency": "common",
       "label": "Nezhoubné polypy žaludku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Agranulocytosis",
+      "frequency": "rare",
+      "label": "Agranulocytóza.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "very_rare",
+      "label": "Snížení počtu krevních destiček.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "White blood cell decreased",
+      "frequency": "very_rare",
+      "label": "Snížení počtu bílých krvinek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Současné abnormální snížení počtu červených a bílých krvinek a krevních destiček.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "rare",
+      "label": "Přecitlivělost včetně alergické reakce.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Hyperlipidemia",
+      "frequency": "rare",
+      "label": "Zvýšené hladiny tuků v krvi, včetně triglyceridů a cholesterolu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Weight change",
+      "frequency": "rare",
+      "label": "Změny tělesné hmotnosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyponatremia",
+      "frequency": "not_known",
+      "label": "Snížená hladina sodíku v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypomagnesemia",
+      "frequency": "rare",
+      "label": "Snížená hladina hořčíku v krvi; při dlouhodobé léčbě, obvykle nejméně 3 měsíce, může být závažná a může být spojena se sníženou hladinou vápníku nebo draslíku.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při únavě, mimovolních svalových stazích, dezorientaci, křečích, závrati nebo zrychleném tepu.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Hypocalcemia",
+      "frequency": "not_known",
+      "label": "Snížená hladina vápníku v krvi; může souviset se sníženou hladinou hořčíku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypokalemia",
+      "frequency": "not_known",
+      "label": "Snížená hladina draslíku v krvi; může souviset se sníženou hladinou hořčíku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": "uncommon",
+      "label": "Poruchy spánku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Depression",
+      "frequency": "uncommon",
+      "label": "Deprese nebo zhoršení již přítomných příznaků.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Disorientation",
+      "frequency": "rare",
+      "label": "Dezorientace nebo zhoršení již přítomných příznaků.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hallucinations",
+      "frequency": "not_known",
+      "label": "Halucinace, zejména u pacientů, kteří je měli již dříve.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Confusion",
+      "frequency": "not_known",
+      "label": "Zmatenost, zejména u pacientů, kteří ji měli již dříve.",
       "action": null,
       "action_condition": null
     },
@@ -54,13 +148,32 @@
       "action_condition": null
     },
     {
+      "ctcae": "Dysgeusia",
+      "frequency": "rare",
+      "label": "Zkreslení nebo úplná ztráta chuti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "rare",
+      "label": "Poruchy vidění, například rozmazané vidění; při těchto potížích neřiďte ani neobsluhujte stroje.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Abdominal distension",
+      "frequency": "uncommon",
+      "label": "Nadýmání.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Diarrhea",
       "frequency": "uncommon",
-      "label": "Průjem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte silný nebo neustupující průjem, ihned informujte lékaře."
-      }
+      "label": "Průjem; pantoprazol je spojen s mírně zvýšeným rizikem střevních infekcí způsobených bakteriemi Salmonella, Campylobacter a C. difficile.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Nausea",
@@ -73,13 +186,6 @@
       "ctcae": "Vomiting",
       "frequency": "uncommon",
       "label": "Zvracení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Abdominal distension",
-      "frequency": "uncommon",
-      "label": "Nadýmání a plynatost.",
       "action": null,
       "action_condition": null
     },
@@ -112,12 +218,41 @@
       "action_condition": null
     },
     {
+      "ctcae": "Microscopic colitis",
+      "frequency": "not_known",
+      "label": "Mikroskopická kolitida, která může způsobovat přetrvávající vodnatý průjem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "uncommon",
+      "label": "Zvýšení jaterních enzymů (aminotransferáz, γ-GT).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood bilirubin increased",
+      "frequency": "rare",
+      "label": "Zvýšená hladina bilirubinu v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatic failure",
+      "frequency": "not_known",
+      "label": "Poškození jaterních buněk, žloutenka nebo selhání jater.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Kožní vyrážka, exantém nebo jiné kožní erupce.",
+      "label": "Kožní vyrážka, exantém nebo erupce.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vyrážka, zejména na místech vystavených slunci, sdělte to co nejdříve lékaři; léčbu může být nutné ukončit."
+        "patient_guide": "Zejména pokud se vyrážka objeví na místech vystavených slunci nebo ji provází bolest kloubů; léčbu může být nutné ukončit.",
+        "min_severity": 2
       }
     },
     {
@@ -128,44 +263,89 @@
       "action_condition": null
     },
     {
-      "ctcae": "Fracture",
-      "frequency": "uncommon",
-      "label": "Zlomeniny krčku stehenní kosti, zápěstí nebo páteře (obratlů).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "uncommon",
-      "label": "Pocit slabosti, vyčerpání nebo celkově špatného zdraví.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Malaise",
-      "frequency": "uncommon",
-      "label": "Pocit celkově špatného zdraví.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "uncommon",
-      "label": "Poruchy spánku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blurred vision",
-      "frequency": "rare",
-      "label": "Poruchy vidění, například rozmazané vidění.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Urticaria",
       "frequency": "rare",
       "label": "Kopřivka.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Angioedema",
+      "frequency": "rare",
+      "label": "Angioedém, tedy alergický otok obličeje, jazyka nebo hrdla.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "not_known",
+      "label": "Závažné kožní reakce včetně Stevensova-Johnsonova syndromu; mohou se objevit bolestivé léze, puchýře nebo olupování kůže a vředy na sliznicích.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "not_known",
+      "label": "Závažné kožní reakce včetně toxické epidermální nekrolýzy; mohou se objevit bolestivé léze, puchýře nebo olupování kůže a vředy na sliznicích.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Eosinophilia",
+      "frequency": "not_known",
+      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS), někdy s horečkou a zvětšenými mízními uzlinami.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Erythema multiforme",
+      "frequency": "not_known",
+      "label": "Erythema multiforme.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví kožní reakce odpovídající závažným kožním stavům popsaným v příbalové informaci.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Photosensitivity",
+      "frequency": "not_known",
+      "label": "Fotosenzitivita.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vyrážka zejména na místech vystavených slunci nebo ji provází bolest kloubů; léčbu může být nutné ukončit.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Subakutní kožní lupus erythematodes (SCLE); kožní léze, zejména na místech vystavených slunci, mohou být provázeny bolestí kloubů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se kožní léze, zejména na místech vystavených slunci, objeví spolu s bolestí kloubů.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Fracture",
+      "frequency": "uncommon",
+      "label": "Zlomeniny proximálního konce stehenní kosti, distálního předloktí nebo obratlů; riziko může být mírně zvýšené zejména při vysokých dávkách a léčbě delší než 1 rok, u starších osob a osob s rizikovými faktory.",
       "action": null,
       "action_condition": null
     },
@@ -184,9 +364,23 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Muscle cramp",
+      "frequency": "not_known",
+      "label": "Svalové křeče v důsledku poruchy rovnováhy elektrolytů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gynecomastia",
       "frequency": "rare",
-      "label": "Změny tělesné hmotnosti.",
+      "label": "Zvětšení prsů u mužů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "uncommon",
+      "label": "Pocit slabosti, vyčerpání nebo celkově špatného zdraví.",
       "action": null,
       "action_condition": null
     },
@@ -200,70 +394,14 @@
     {
       "ctcae": "Peripheral edema",
       "frequency": "rare",
-      "label": "Otok končetin (periferní edém).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Depression",
-      "frequency": "rare",
-      "label": "Deprese nebo zhoršení již existujících příznaků deprese.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gynecomastia",
-      "frequency": "rare",
-      "label": "Zvětšení prsů u mužů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysgeusia",
-      "frequency": "rare",
-      "label": "Zkreslená chuť nebo úplná ztráta chuti.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Agranulocytóza.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperlipidemia",
-      "frequency": "rare",
-      "label": "Zvýšená hladina tuků v krvi, včetně triglyceridů a cholesterolu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Confusion",
-      "frequency": "very_rare",
-      "label": "Dezorientace.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hallucinations",
-      "frequency": "not_known",
-      "label": "Halucinace, zejména u pacientů, u kterých se tyto příznaky vyskytly již dříve.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Confusion",
-      "frequency": "not_known",
-      "label": "Zmatenost, zejména u pacientů, u kterých se tyto příznaky vyskytly již dříve.",
+      "label": "Otok končetin.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "not_known",
-      "label": "Pocit brnění, píchání, mravenčení, pálení nebo necitlivosti.",
+      "label": "Brnění, píchání, mravenčení, pálení nebo necitlivost.",
       "action": null,
       "action_condition": null
     },
@@ -275,30 +413,35 @@
       "action_condition": null
     },
     {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "not_known",
-      "label": "Vyrážka, případně provázená bolestí kloubů.",
+      "ctcae": "Weight change",
+      "frequency": "rare",
+      "label": "Změny tělesné hmotnosti.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Alanine aminotransferase increased",
+      "ctcae": "Investigations - Other, specify",
       "frequency": "uncommon",
-      "label": "Zvýšená hladina jaterních enzymů.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se při kontrolách zvýší vaše jaterní enzymy, léčba má být ukončena."
-      }
+      "label": "Zvýšená hladina jaterních enzymů zjištěná v krevních testech.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Blood bilirubin increased",
       "frequency": "rare",
-      "label": "Zvýšená hladina bilirubinu.",
+      "label": "Zvýšená hladina bilirubinu zjištěná v krevních testech.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Hyperlipidemia",
+      "frequency": "rare",
+      "label": "Zvýšená hladina tuků v krvi zjištěná v krevních testech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Febrile neutropenia",
       "frequency": "rare",
       "label": "Prudké snížení počtu bílých krvinek spojené s vysokou horečkou.",
       "action": null,
@@ -319,203 +462,471 @@
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "ctcae": "Pancytopenia",
       "frequency": "very_rare",
       "label": "Současné abnormální snížení počtu červených a bílých krvinek a krevních destiček.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hyponatremia",
-      "frequency": "not_known",
-      "label": "Snížení hladiny sodíku v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypomagnesemia",
-      "frequency": "not_known",
-      "label": "Snížení hladiny hořčíku v krvi; může se projevit únavou, mimovolními svalovými kontrakcemi, dezorientací, křečemi, závratí nebo zvýšenou tepovou frekvencí a může vést ke snížení hladiny vápníku nebo draslíku.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví únava, mimovolní svalové kontrakce, dezorientace, křeče, závrať nebo zvýšená tepová frekvence, ihned to sdělte lékaři."
-      }
-    },
-    {
-      "ctcae": "Hypocalcemia",
-      "frequency": "not_known",
-      "label": "Snížení hladiny vápníku v krvi; může souviset se sníženou hladinou hořčíku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypokalemia",
-      "frequency": "not_known",
-      "label": "Snížení hladiny draslíku v krvi; může souviset se sníženou hladinou hořčíku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Colitis",
-      "frequency": "not_known",
-      "label": "Mikroskopická kolitida.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatic failure",
-      "frequency": "not_known",
-      "label": "Poškození jaterních buněk, žloutenka nebo selhání jater.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "not_known",
-      "label": "Erythema multiforme.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce, přestaňte pantoprazol užívat a ihned vyhledejte lékařskou pomoc."
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce, přestaňte pantoprazol užívat a ihned vyhledejte lékařskou pomoc."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza (Lyellův syndrom).",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce, přestaňte pantoprazol užívat a ihned vyhledejte lékařskou pomoc."
-      }
-    },
-    {
-      "ctcae": "Eosinophilia",
-      "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS).",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce, přestaňte pantoprazol užívat a ihned vyhledejte lékařskou pomoc."
-      }
-    },
-    {
-      "ctcae": "Photosensitivity",
-      "frequency": "not_known",
-      "label": "Fotosenzitivita.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka zejména na místech vystavených slunci, sdělte to co nejdříve lékaři."
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Subakutní kožní lupus erythematodes.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kožní léze, zejména na místech vystavených slunci, doprovázené bolestí kloubů, neprodleně vyhledejte lékařskou pomoc."
-      }
-    },
-    {
-      "ctcae": "Muscle cramp",
-      "frequency": "not_known",
-      "label": "Svalový spasmus v důsledku poruchy elektrolytové rovnováhy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Tubulointerstitial nephritis",
       "frequency": "not_known",
-      "label": "Tubulointersticiální nefritida s možností progrese do renálního selhání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": null,
-      "label": "Mírně zvýšené riziko gastrointestinálních infekcí způsobených bakteriemi Salmonella, Campylobacter a C. difficile.",
+      "label": "Tubulointersticiální nefritida, která může přejít do selhání ledvin.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Perorální léčivé přípravky závislé na pH žaludku při vstřebávání (např. azolová antimykotika)",
-      "effect": "Pantoprazol výrazně a dlouhodobě snižuje sekreci žaludeční kyseliny a může tím snížit vstřebávání a biologickou dostupnost těchto léčivých přípravků a narušit jejich účinek. Jako příklady jsou uvedeny ketokonazol, itrakonazol, posakonazol a erlotinib.",
+      "class_id": null,
+      "drug": "ketokonazol",
+      "effect": "Snížená žaludeční kyselost při užívání pantoprazolu může snížit vstřebávání a účinek perorálních léků závislých na kyselém pH žaludku, například ketokonazolu, itrakonazolu, posakonazolu a erlotinibu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory HIV proteázy s absorpcí závislou na pH žaludku",
-      "effect": "Souběžné podávání, například s atazanavirem, se vzhledem k významnému snížení biologické dostupnosti inhibitoru nedoporučuje. Pokud je kombinace posouzena jako nezbytná, je doporučeno pečlivé klinické sledování (např. virové zátěže); denní dávka pantoprazolu nemá překročit 20 mg a může být nutné upravit dávku inhibitoru HIV proteázy.",
+      "class_id": null,
+      "drug": "itrakonazol",
+      "effect": "Snížená žaludeční kyselost při užívání pantoprazolu může snížit vstřebávání a účinek perorálních léků závislých na kyselém pH žaludku, například ketokonazolu, itrakonazolu, posakonazolu a erlotinibu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Kumarinová antikoagulancia",
-      "effect": "Při souběžném podávání warfarinu nebo fenprokumonu byly hlášeny případy zvýšení INR a protrombinového času, přestože farmakokinetika těchto léčiv nebyla ovlivněna. Zvýšení může vést k abnormálnímu krvácení, i smrtelnému; pacienti mají být sledováni kvůli možnému zvýšení INR a protrombinového času.",
+      "class_id": null,
+      "drug": "posakonazol",
+      "effect": "Snížená žaludeční kyselost při užívání pantoprazolu může snížit vstřebávání a účinek perorálních léků závislých na kyselém pH žaludku, například ketokonazolu, itrakonazolu, posakonazolu a erlotinibu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "erlotinib",
+      "effect": "Snížená žaludeční kyselost při užívání pantoprazolu může snížit vstřebávání a účinek perorálních léků závislých na kyselém pH žaludku, například ketokonazolu, itrakonazolu, posakonazolu a erlotinibu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "atazanavir",
+      "effect": "Pantoprazol významně snižuje biologickou dostupnost atazanaviru, jehož vstřebávání závisí na pH žaludku; souběžné užívání se nedoporučuje. Pokud je kombinace s inhibitorem HIV proteázy nezbytná, doporučuje se pečlivé klinické sledování, denní dávka pantoprazolu nesmí překročit 20 mg a může být nutné upravit dávku inhibitoru HIV proteázy.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "warfarin",
+      "effect": "Souběžné užívání může u některých pacientů zvýšit INR a protrombinový čas, přestože studie neprokázaly vliv na farmakokinetiku warfarinu; byly hlášeny případy abnormálního krvácení, včetně úmrtí. Lékař má sledovat INR a protrombinový čas.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Zvýšení INR a protrombinového času.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Abnormální krvácení, které může být i smrtelné.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Methotrexát",
-      "effect": "Při souběžném užívání vysokých dávek methotrexátu (např. 300 mg) a inhibitorů protonové pumpy bylo u některých pacientů hlášeno zvýšení hladiny methotrexátu. Při vysokých dávkách, například při léčbě nádorového onemocnění nebo psoriázy, se má zvážit dočasné vysazení pantoprazolu; lékař může léčbu pantoprazolem dočasně přerušit.",
+      "class_id": null,
+      "drug": "fenprokumon",
+      "effect": "Souběžné užívání může u některých pacientů zvýšit INR a protrombinový čas, přestože studie neprokázaly vliv na farmakokinetiku fenprokumonu; byly hlášeny případy abnormálního krvácení, včetně úmrtí. Lékař má sledovat INR a protrombinový čas.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "methotrexát",
+      "effect": "Při souběžném užívání vysokých dávek methotrexátu (například 300 mg), zejména při léčbě nádorového onemocnění nebo psoriázy, může stoupnout jeho hladina v krvi. Lékař má zvážit dočasné přerušení pantoprazolu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory CYP2C19, například fluvoxamin",
-      "effect": "Inhibitory CYP2C19 mohou zvýšit systémovou expozici pantoprazolu. U pacientů dlouhodobě léčených vysokými dávkami pantoprazolu nebo u pacientů s poruchou funkce jater lze zvážit snížení dávky pantoprazolu; u fluvoxaminu může lékař dávku snížit.",
+      "class_id": null,
+      "drug": "fluvoxamin",
+      "effect": "Fluvoxamin může zvýšit systémovou expozici pantoprazolu; lékař může zvážit snížení dávky pantoprazolu při dlouhodobém užívání vysokých dávek nebo při poruše funkce jater.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Induktory CYP2C19 a CYP3A4, například rifampicin a třezalka tečkovaná",
-      "effect": "Tyto induktory mohou snižovat plazmatické koncentrace inhibitorů protonové pumpy metabolizovaných prostřednictvím těchto enzymatických systémů.",
+      "class_id": null,
+      "drug": "rifampicin",
+      "effect": "Rifampicin může snižovat plazmatickou koncentraci pantoprazolu, protože indukuje enzymy CYP2C19 a CYP3A4, které se podílejí na jeho metabolismu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky nebo potraviny obsahující sorbitol nebo fruktózu",
-      "effect": "Je nutné vzít v úvahu aditivní účinek souběžně užívaných přípravků s obsahem sorbitolu nebo fruktózy a příjmu těchto látek potravou. Sorbitol v perorálních léčivých přípravcích může ovlivnit biologickou dostupnost jiných souběžně užívaných perorálních léčivých přípravků.",
-      "effect_type": null,
+      "class_id": null,
+      "drug": "třezalka tečkovaná",
+      "effect": "Třezalka tečkovaná může snižovat plazmatickou koncentraci pantoprazolu, protože indukuje enzymy CYP2C19 a CYP3A4, které se podílejí na jeho metabolismu.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Digoxin a další léčivé přípravky, které mohou způsobit hypomagnezemii, například diuretika",
-      "effect": "U pacientů očekávaně léčených dlouhodobě inhibitorem protonové pumpy nebo užívajících jej společně s digoxinem či jinými látkami, které mohou způsobit hypomagnezemii, je vhodné vyšetřit hladinu hořčíku před zahájením léčby a opakovaně během ní.",
-      "effect_type": null,
-      "side_effects": [
-        {
-          "ctcae": "Hypomagnesemia",
-          "frequency": null,
-          "label": "Hypomagnezemie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:A02BC",
+      "drug_class": "Inhibitory protonové pumpy",
+      "effect": "Přípravek se nemá užívat současně s jinými inhibitory protonové pumpy.",
+      "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A02BA",
+      "drug_class": "Antagonisté H2-receptorů",
+      "effect": "Přípravek se nemá užívat současně s antagonisty H2-receptorů.",
+      "effect_type": "contraindicated",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Nolpaza snižuje tvorbu žaludeční kyseliny a používá se k léčbě refluxu a k prevenci žaludečních a dvanáctníkových vředů při dlouhodobém užívání NSAID.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0162079",
+      "H": "",
+      "NAZEV": "NOLPAZA",
+      "SILA": "20MG",
+      "FORMA": "TBL ENT",
+      "BALENI": "98",
+      "CESTA": "POR",
+      "DOPLNEK": "20MG TBL ENT 98",
+      "OBAL": "BLI",
+      "DRZ": "KRK",
+      "ZEMDRZ": "SLO",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "09",
+      "ATC_WHO": "A02BC02",
+      "RC": "09/422/07-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "40",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "49",
+      "ZDROJ_WHO": "NO26",
+      "LL": "14061",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "60",
+      "EXP_T": "M",
+      "NAZEV_REG": "NOLPAZA",
+      "MRP_CISLO": "CZ/H/0828/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "14061",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "22,55",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14061",
+          "ZDROJ": "C17",
+          "NAZEV_INN": "PANTOPRAZOLUM NATRICUM SESQUIHYDRICUM",
+          "NAZEV_EN": "PANTOPRAZOLE SODIUM SESQUIHYDRATE",
+          "NAZEV": "SESKVIHYDRÁT SODNÉ SOLI PANTOPRAZOLU"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "11248",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "20",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "11248",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "PANTOPRAZOLUM",
+          "NAZEV_EN": "PANTOPRAZOLE",
+          "NAZEV": "PANTOPRAZOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "875",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "875",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MANNITOLUM",
+          "NAZEV_EN": "MANNITOL",
+          "NAZEV": "MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "17840",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17840",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "CROSPOVIDONUM TYPUS A",
+          "NAZEV_EN": "CROSPOVIDONE TYPE A",
+          "NAZEV": "KROSPOVIDON TYP A",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "17841",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17841",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "CROSPOVIDONUM TYPUS B",
+          "NAZEV_EN": "CROSPOVIDONE TYPE B",
+          "NAZEV": "KROSPOVIDON TYP B",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "1319",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1319",
+          "ZDROJ": "C19M",
+          "NAZEV_INN": "NATRII CARBONAS",
+          "NAZEV_EN": "SODIUM CARBONATE",
+          "NAZEV": "UHLIČITAN SODNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "1352",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1352",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SORBITOLUM",
+          "NAZEV_EN": "SORBITOL",
+          "NAZEV": "SORBITOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "3732",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3732",
+          "ZDROJ": "C19",
+          "NAZEV_INN": "CALCII STEARAS",
+          "NAZEV_EN": "CALCIUM STEARATE",
+          "NAZEV": "KALCIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "SQ": "10",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "748",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "4078",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "2710",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "4256",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "1216",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1216",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "PROPYLENGLYCOLUM",
+          "NAZEV_EN": "PROPYLENE GLYCOL",
+          "NAZEV": "PROPYLENGLYKOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "877",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "877",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "ACIDUM METHACRYLICUM ET ETHYLIS ACRYLAS POLYMERISATUM 1:1 DISPERSIO 30%",
+          "NAZEV_EN": "METHACRYLIC ACID - ETHYL ACRYLATE COPOLYMER (1:1) DISPERSION 30 PER CENT",
+          "NAZEV": "KOPOLYMER KYSELINY METHAKRYLOVÉ A ETHYL-AKRYLÁTU 1:1 DISPERZE 30%"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "1871",
+        "SQ": "17",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0162079",
+        "KOD_LATKY": "3765",
+        "SQ": "18",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0162079",
+      "PIL": "PI219317.pdf",
+      "DAT_ROZ_PIL": "25.02.2025",
+      "SPC": "SPC219318.pdf",
+      "DAT_ROZ_SPC": "25.02.2025",
+      "OBAL_TEXT": "OBAL219316.pdf",
+      "DAT_ROZ_OBAL": "25.02.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A02BC02",
+        "NT": "N",
+        "NAZEV": "PANTOPRAZOL",
+        "NAZEV_EN": "PANTOPRAZOLE"
+      },
+      "formy": {
+        "FORMA": "TBL ENT",
+        "NAZEV": "Enterosolventní tableta",
+        "NAZEV_EN": "Gastro-resistant tablet",
+        "NAZEV_LAT": "Tabuletta enterosolvens",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10225000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

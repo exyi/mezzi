@@ -1,48 +1,73 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C09",
+    "atc:C09A",
+    "atc:C09AA",
+    "atc:C09AA04",
+    "substance:13049"
+  ],
   "side_effects": [
     {
       "ctcae": "Eosinophilia",
       "frequency": "uncommon",
-      "label": "Zvýšený počet eozinofilů v krvi.",
+      "label": "Zvýšený počet eozinofilů (typ bílých krvinek).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Agranulocytóza nebo pancytopenie; snížení počtu bílých krvinek, včetně leukopenie či neutropenie; snížení hemoglobinu a hematokritu; trombocytopenie. Hemolytická anémie byla hlášena u pacientů s vrozeným nedostatkem G-6PDH.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte horečku, bolest v krku nebo vřídky v ústech."
-      }
+      "label": "Agranulocytóza nebo pancytopenie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hemoglobin decreased",
+      "frequency": "very_rare",
+      "label": "Snížená hladina hemoglobinu a hematokritu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "White blood cell decreased",
+      "frequency": "very_rare",
+      "label": "Snížený počet bílých krvinek (leukopenie nebo neutropenie).",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Hemolytic anemia",
       "frequency": "very_rare",
       "label": "Hemolytická anémie u pacientů s vrozeným nedostatkem G-6PDH.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte horečku, bolest v krku nebo vřídky v ústech."
-      }
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "very_rare",
+      "label": "Snížený počet krevních destiček.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Blood antidiuretic hormone abnormal",
       "frequency": "rare",
-      "label": "Syndrom nepřiměřené sekrece antidiuretického hormonu (SIADH); může se projevit tmavou močí, nevolností či zvracením, svalovými křečemi, zmateností nebo epileptickými záchvaty.",
+      "label": "Syndrom nepřiměřené sekrece antidiuretického hormonu (SIADH).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypoglycemia",
       "frequency": "uncommon",
-      "label": "Nízká hladina cukru v krvi u pacientů s diabetem.",
+      "label": "Nízká hladina cukru v krvi, zejména u pacientů s diabetem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperkalemia",
       "frequency": "uncommon",
-      "label": "Zvýšená hladina draslíku v krvi, která byla po přerušení léčby vratná.",
+      "label": "Zvýšená hladina draslíku v krvi; po přerušení léčby může být vratná.",
       "action": null,
       "action_condition": null
     },
@@ -56,7 +81,7 @@
     {
       "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Poruchy nálady nebo změny nálady.",
+      "label": "Poruchy nálady.",
       "action": null,
       "action_condition": null
     },
@@ -75,13 +100,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Headache",
-      "frequency": "common",
-      "label": "Bolest hlavy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Dizziness",
       "frequency": "common",
       "label": "Závrať.",
@@ -89,16 +107,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vertigo",
+      "ctcae": "Headache",
       "frequency": "common",
-      "label": "Pocit točení se (vertigo).",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "common",
-      "label": "Mravenčení nebo parestézie.",
+      "label": "Mravenčení (parestézie).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vertigo",
+      "frequency": "common",
+      "label": "Pocit točení se (vertigo).",
       "action": null,
       "action_condition": null
     },
@@ -140,14 +165,21 @@
     {
       "ctcae": "Palpitations",
       "frequency": "uncommon",
-      "label": "Bušení srdce (palpitace).",
+      "label": "Bušení srdce.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Sinus tachycardia",
+      "ctcae": "Tachycardia",
       "frequency": "uncommon",
-      "label": "Zrychlení srdečního tepu (tachykardie).",
+      "label": "Zrychlený srdeční tep.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Angina pectoris",
+      "frequency": "very_rare",
+      "label": "Angina pectoris (bolest na hrudi).",
       "action": null,
       "action_condition": null
     },
@@ -159,49 +191,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "very_rare",
-      "label": "Angina pectoris (bolest na hrudi).",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Myocardial infarction",
       "frequency": "very_rare",
       "label": "Infarkt myokardu, pravděpodobně následkem nadměrného poklesu krevního tlaku u vysoce rizikových pacientů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stroke",
-      "frequency": "very_rare",
-      "label": "Cévní mozková příhoda, pravděpodobně následkem nadměrného poklesu krevního tlaku u vysoce rizikových pacientů.",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Hypotension",
       "frequency": "common",
-      "label": "Nízký krevní tlak a účinky s ním související.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": "common",
-      "label": "Silná závrať následkem nízkého krevního tlaku.",
-      "action": "discontinue_treatment",
+      "label": "Nízký krevní tlak a související projevy. Příbalová informace uvádí silnou závrať nebo mdlobu následkem nízkého tlaku jako závažné příznaky.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou závrať nebo mdlíte následkem nízkého krevního tlaku."
-      }
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "uncommon",
-      "label": "Mdloba následkem nízkého krevního tlaku.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte silnou závrať nebo mdlíte následkem nízkého krevního tlaku."
+        "patient_guide": "Silná závrať nebo mdloba následkem nízkého krevního tlaku.",
+        "min_severity": 2
       }
     },
     {
@@ -221,27 +227,26 @@
     {
       "ctcae": "Stroke",
       "frequency": "very_rare",
-      "label": "Slabost horních nebo dolních končetin nebo potíže s řečí, které mohou být známkou cévní mozkové příhody.",
-      "action": "discontinue_treatment",
+      "label": "Cévní mozková příhoda, pravděpodobně následkem nadměrného poklesu krevního tlaku u vysoce rizikových pacientů.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví slabost horních nebo dolních končetin nebo potíže s řečí."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Raynaud's phenomenon",
       "frequency": "not_known",
-      "label": "Změna barvy, znecitlivění a bolest prstů rukou nebo nohou (Raynaudův fenomén).",
+      "label": "Raynaudův fenomén: změna barvy, znecitlivění a bolest prstů rukou nebo nohou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cough",
       "frequency": "common",
-      "label": "Kašel, obvykle suchý a přetrvávající.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte suchý, přetrvávající kašel."
-      }
+      "label": "Suchý, přetrvávající kašel.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Dyspnea",
@@ -253,23 +258,59 @@
     {
       "ctcae": "Bronchospasm",
       "frequency": "uncommon",
-      "label": "Zúžení dýchacích cest (bronchospasmus), které může způsobit náhlou dýchavičnost nebo obtíže při dýchání.",
-      "action": "discontinue_treatment",
+      "label": "Náhlá dýchavičnost, bolest na hrudi, dušnost nebo obtíže při dýchání způsobené zúžením dýchacích cest (bronchospasmus).",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás náhle objeví dýchavičnost, bolest na hrudi nebo obtíže při dýchání."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Pneumonia",
+      "ctcae": "Pneumonitis",
       "frequency": "very_rare",
-      "label": "Eozinofilní pneumonie, vzácný druh zápalu plic.",
+      "label": "Eozinofilní pneumonie (vzácný druh zápalu plic).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Rhinitis allergic",
       "frequency": "very_rare",
-      "label": "Rýma, ucpaný nos nebo vodnatý výtok z nosu.",
+      "label": "Rýma (ucpaný nos nebo vodnatý výtok z nosu).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Abdominal pain",
+      "frequency": "common",
+      "label": "Bolest břicha.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "common",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "common",
+      "label": "Průjem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysgeusia",
+      "frequency": "common",
+      "label": "Změna chuti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspepsia",
+      "frequency": "common",
+      "label": "Dyspepsie a jiné trávicí obtíže.",
       "action": null,
       "action_condition": null
     },
@@ -288,41 +329,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Abdominal pain",
-      "frequency": "common",
-      "label": "Bolest břicha.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysgeusia",
-      "frequency": "common",
-      "label": "Porucha chuti.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspepsia",
-      "frequency": "common",
-      "label": "Porucha trávení (dyspepsie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "common",
-      "label": "Průjem.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Constipation",
-      "frequency": "common",
-      "label": "Zácpa.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Dry mouth",
       "frequency": "uncommon",
       "label": "Sucho v ústech.",
@@ -332,51 +338,72 @@
     {
       "ctcae": "Pancreatitis",
       "frequency": "very_rare",
-      "label": "Zánět slinivky břišní, který může vyvolat silnou bolest břicha a zad spojenou se silnou nevolností.",
+      "label": "Zánět slinivky břišní, který může způsobit silnou bolest břicha a zad spojenou se silnou nevolností.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "very_rare",
+      "label": "Hepatitida (cytolytická nebo cholestatická); může se projevit zežloutnutím kůže nebo očí.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou bolest břicha a zad spojenou se silnou nevolností."
+        "patient_guide": "Zežloutnutí kůže nebo očí nebo výrazné zvýšení jaterních enzymů.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Pruritus",
       "frequency": "common",
-      "label": "Svědění; někdy může být silné.",
+      "label": "Svědění.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "common",
-      "label": "Kožní vyrážka; někdy může být závažná.",
+      "label": "Kožní vyrážka.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urticaria",
       "frequency": "uncommon",
-      "label": "Kopřivka nebo silná kožní vyrážka.",
+      "label": "Kopřivka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "uncommon",
+      "label": "Angioedém: otok obličeje, končetin, rtů, sliznic, jazyka, hlasivkové štěrbiny nebo hrtanu. Může se objevit kdykoli během léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Otok obličeje, rtů, úst, jazyka nebo krku, zejména s obtížemi při dýchání.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Photosensitivity",
+      "frequency": "uncommon",
+      "label": "Zvýšená citlivost kůže na slunce.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dermatosis bullous",
       "frequency": "uncommon",
-      "label": "Puchýřky na kůži (pemfigoid).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Photosensitivity",
-      "frequency": "uncommon",
-      "label": "Zvýšená citlivost kůže na slunce (fotosenzitivní reakce).",
+      "label": "Puchýřnaté kožní onemocnění (pemfigoid).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperhidrosis",
       "frequency": "uncommon",
-      "label": "Zvýšené pocení.",
+      "label": "Nadměrné pocení.",
       "action": null,
       "action_condition": null
     },
@@ -390,20 +417,19 @@
     {
       "ctcae": "Erythema multiforme",
       "frequency": "very_rare",
-      "label": "Erythema multiforme: kožní vyrážka, která často začíná červenými svědivými skvrnami na obličeji, pažích nebo nohách.",
-      "action": "discontinue_treatment",
+      "label": "Erythema multiforme: vyrážka, která často začíná červenými svědivými skvrnami na obličeji, pažích nebo nohách.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka, která začíná červenými svědivými skvrnami na obličeji, pažích nebo nohách."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Edema face",
-      "frequency": "uncommon",
-      "label": "Angioedém: otok obličeje, rtů, úst, jazyka nebo hrdla, někdy s obtížemi při dýchání.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud vám oteče obličej, rty, ústa, jazyk nebo hrdlo nebo máte obtíže při dýchání."
-      }
+      "ctcae": "Muscle cramp",
+      "frequency": "common",
+      "label": "Svalové křeče.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
@@ -420,23 +446,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Muscle cramp",
-      "frequency": "common",
-      "label": "Svalové křeče.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "common",
-      "label": "Pocit slabosti (astenie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Ledvinové obtíže nebo snížená funkce ledvin (renální insuficience).",
+      "label": "Ledvinové obtíže (renální insuficience).",
       "action": null,
       "action_condition": null
     },
@@ -457,32 +469,14 @@
     {
       "ctcae": "Erectile dysfunction",
       "frequency": "uncommon",
-      "label": "Porucha erekce (impotence).",
+      "label": "Porucha erekce.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatitis",
-      "frequency": "very_rare",
-      "label": "Zánět jater (hepatitida), cytolytický nebo cholestatický; může se projevit žloutenkou.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud vám zežloutne kůže nebo oční bělmo."
-      }
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": "rare",
-      "label": "Zvýšené hladiny jaterních enzymů.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví žloutenka nebo výrazné zvýšení jaterních enzymů."
-      }
-    },
-    {
-      "ctcae": "Blood bilirubin increased",
-      "frequency": "rare",
-      "label": "Zvýšená hladina sérového bilirubinu.",
+      "ctcae": "Fatigue",
+      "frequency": "common",
+      "label": "Slabost (astenie).",
       "action": null,
       "action_condition": null
     },
@@ -511,10 +505,8 @@
       "ctcae": "Fever",
       "frequency": "uncommon",
       "label": "Horečka.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte horečku, bolest v krku nebo vřídky v ústech."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Fall",
@@ -524,7 +516,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Urea increased",
       "frequency": "uncommon",
       "label": "Zvýšená hladina močoviny v krvi.",
       "action": null,
@@ -538,387 +530,422 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Snížený počet červených krvinek.",
+      "ctcae": "Blood bilirubin increased",
+      "frequency": "rare",
+      "label": "Zvýšená hladina bilirubinu v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "rare",
+      "label": "Zvýšené hladiny jaterních enzymů.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "sacubitril/valsartan",
-      "effect": "Souběžné užívání s přípravkem Prenessa je kontraindikováno kvůli zvýšenému riziku angioedému. Léčbu perindoprilem lze zahájit nejdříve 36 hodin po poslední dávce sakubitrilu/valsartanu; sakubitril/valsartan lze zahájit nejdříve 36 hodin po poslední dávce perindoprilu.",
+      "class_id": "atc:C09XA02",
+      "drug_class": "Aliskiren",
+      "effect": "Současné užívání je zakázáno u pacientů s diabetem nebo poruchou funkce ledvin (GFR < 60 ml/min/1,73 m²). U ostatních pacientů se kombinace nedoporučuje; zvyšuje riziko vysoké hladiny draslíku, zhoršení funkce ledvin a kardiovaskulárních komplikací. Při nezbytné duální blokádě je nutný odborný dohled a pečlivé sledování krevního tlaku, ledvin a elektrolytů.",
       "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Edema face",
-          "frequency": null,
-          "label": "Zvýšené riziko angioedému.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "aliskiren",
-      "effect": "U pacientů s diabetem nebo poruchou funkce ledvin (GFR < 60 ml/min/1,73 m²) je souběžné užívání kontraindikováno; zvyšuje riziko hyperkalemie, zhoršení funkce ledvin a kardiovaskulární morbidity a mortality. U ostatních pacientů se kombinace nedoporučuje, protože zvyšuje riziko hyperkalemie a zhoršení funkce ledvin i kardiovaskulární morbidity a mortality.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hyperkalemie.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zvýšené riziko zhoršení funkce ledvin, včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko hypotenze.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Blokátory receptorů pro angiotenzin II (sartany)",
-      "effect": "Duální blokáda systému RAAS zvyšuje riziko hypotenze, hyperkalemie a zhoršení funkce ledvin včetně akutního selhání. Kombinace se nedoporučuje; u diabetické nefropatie se nesmějí inhibitory ACE a sartany užívat současně. Pokud je duální blokáda ve výjimečném individuálním případě nezbytná, má probíhat pod dohledem specialisty a za častého pečlivého sledování funkce ledvin, draslíku a krevního tlaku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko hypotenze.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hyperkalemie.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zvýšené riziko zhoršení funkce ledvin, včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky zvyšující hladinu draslíku: draslík šetřící diuretika, doplňky draslíku a náhražky soli s draslíkem",
-      "effect": "Současné užívání může významně zvýšit hladinu draslíku v krvi, zvláště při poruše funkce ledvin; kombinace se obecně nedoporučuje. Pokud je souběžné podávání nezbytné, je třeba opatrnost a pravidelné kontroly draslíku v krvi. Mezi příklady patří spironolakton, eplerenon, triamteren a amilorid.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hyperkalemie, která může vyvolat závažné, někdy smrtelné poruchy srdečního rytmu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky zvyšující hladinu draslíku: trimethoprim nebo kotrimoxazol (trimethoprim/sulfamethoxazol)",
-      "effect": "Současné užívání může zvýšit hladinu draslíku v krvi. Kombinace se nedoporučuje; je-li indikována, je třeba opatrnost a pravidelné kontroly draslíku v krvi.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hyperkalemie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky zvyšující hladinu draslíku: heparin",
-      "effect": "Při souběžném užívání se může objevit hyperkalemie; doporučuje se kontrolovat hladinu draslíku v krvi.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Možný vznik hyperkalemie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky zvyšující hladinu draslíku: cyklosporin nebo takrolimus",
-      "effect": "Souběžné užívání může způsobit hyperkalemii. Při užívání cyklosporinu se doporučuje kontrolovat hladinu draslíku v krvi; při souběžném podávání látek zvyšujících draslík je nutná opatrnost a pravidelné kontroly.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Možný vznik hyperkalemie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "lithium",
-      "effect": "Současné podávání může vyvolat vratné zvýšení koncentrace lithia v krvi a jeho toxicitu. Kombinace se nedoporučuje; pokud je nezbytná, je nutné pečlivě sledovat hladinu lithia v krvi.",
+      "class_id": "atc:C09C",
+      "drug_class": "Blokátory receptorů pro angiotensin II (sartany)",
+      "effect": "Současné užívání se obecně nedoporučuje, protože zvyšuje riziko nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin včetně akutního selhání. U pacientů s diabetickou nefropatií se tato kombinace nemá používat; výjimečné použití vyžaduje odborný dohled a pečlivé sledování krevního tlaku, ledvin a draslíku.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Antidiabetika (inzulin a perorální antidiabetika)",
-      "effect": "Současné podávání může zesílit účinek na snížení hladiny cukru v krvi a způsobit hypoglykemii; tento účinek je pravděpodobnější během prvních týdnů kombinované léčby a u pacientů s poruchou funkce ledvin. U diabetiků je třeba během prvního měsíce léčby pečlivě sledovat glykemii.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hypoglykemie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:C09DX04",
+      "drug_class": "Sakubitril/valsartan",
+      "effect": "Současné užívání s perindoprilem je zakázáno kvůli zvýšenému riziku angioedému. Perindopril lze zahájit nejdříve 36 hodin po poslední dávce sakubitrilu/valsartanu; opačně lze sakubitril/valsartan zahájit nejdříve 36 hodin po poslední dávce perindoprilu.",
+      "effect_type": "contraindicated",
+      "side_effects": []
     },
     {
-      "drug": "baklofen",
-      "effect": "Baklofen může zesílit antihypertenzní účinek perindoprilu. Sledujte krevní tlak a v případě potřeby upravte dávku antihypertenziva.",
+      "class_id": "atc:C03D",
+      "drug_class": "Kalium šetřící diuretika",
+      "effect": "Kombinace se obecně nedoporučuje, protože může významně zvýšit hladinu draslíku v krvi. Pokud je podávání vhodné, je nutná opatrnost a pravidelné sledování draslíku a funkce ledvin. U spironolaktonu nebo eplerenonu v dávce 12,5–50 mg denně společně s nízkou dávkou ACE inhibitoru je při srdečním selhání NYHA II–IV a ejekční frakci < 40 % riziko vysoké hladiny draslíku, která může být smrtelná; před zahájením a během léčby se doporučuje pečlivé sledování draslíku a kreatininu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A12B",
+      "drug_class": "Přípravky s draslíkem a náhražky soli obsahující draslík",
+      "effect": "Společné užívání s perindoprilem, zejména při poruše funkce ledvin, může významně zvýšit hladinu draslíku v krvi. Kombinace se obecně nedoporučuje; pokud je nezbytná, vyžaduje opatrnost a pravidelné kontroly draslíku a funkce ledvin.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:13049",
+      "drug": "Heparin",
+      "effect": "Při současném užívání s perindoprilem se může zvýšit hladina draslíku v krvi; doporučuje se její kontrola.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:13049",
+      "drug": "Trimethoprim",
+      "effect": "Při současném užívání s perindoprilem se může zvýšit hladina draslíku v krvi. Trimethoprim působí podobně jako kalium šetřící diuretikum; kombinace se nedoporučuje, a pokud je nutná, vyžaduje opatrnost a pravidelné kontroly draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01EE01",
+      "drug_class": "Kotrimoxazol (trimethoprim/sulfamethoxazol)",
+      "effect": "Současné užívání s perindoprilem může zvýšit hladinu draslíku v krvi; kombinace se nedoporučuje a při nezbytném podávání vyžaduje opatrnost a pravidelné kontroly draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky (NSAID), včetně kyseliny acetylsalicylové v dávce ≥ 3 g/den",
+      "effect": "Při současném užívání může být oslaben účinek perindoprilu na snížení krevního tlaku a může se zvýšit riziko zhoršení funkce ledvin včetně akutního selhání a zvýšení draslíku v krvi, zejména u starších pacientů a při již snížené funkci ledvin. Doporučuje se opatrnost, dostatečný příjem tekutin a zvážení sledování funkce ledvin po zahájení kombinace a dále pravidelně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N05AN01",
+      "drug_class": "Lithium",
+      "effect": "Při současném podávání s perindoprilem byly hlášeny vratné zvýšení hladiny lithia v krvi a jeho toxicita. Kombinace se nedoporučuje; je-li nezbytná, lékař pečlivě sleduje hladinu lithia.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A10",
+      "drug_class": "Antidiabetika (inzulin nebo perorální antidiabetika)",
+      "effect": "Perindopril může zesílit účinek na snížení hladiny cukru v krvi a zvýšit riziko hypoglykemie, zejména během prvních týdnů kombinované léčby a u pacientů s poruchou funkce ledvin. U diabetiků léčených inzulinem nebo perorálními antidiabetiky se doporučuje pečlivé sledování glykemie během prvního měsíce léčby ACE inhibitorem.",
       "effect_type": "synergy",
       "side_effects": []
     },
     {
-      "drug_class": "Draslík nešetřící diuretika",
-      "effect": "U pacientů se sníženým objemem tekutin nebo solí může po zahájení léčby perindoprilem dojít k nadměrnému poklesu krevního tlaku. Může pomoci vysazení diuretika před zahájením léčby, doplnění objemu či solí nebo zahájení nízkou dávkou perindoprilu s postupným zvyšováním; sledujte funkci ledvin, zejména během prvních týdnů. U pacientů léčených diuretiky pro srdeční selhání má být inhibitor ACE zahájen velmi nízkou dávkou, případně po snížení dávky diuretika.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Riziko nadměrného poklesu krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:M03BX01",
+      "drug_class": "Baklofen",
+      "effect": "Baklofen může zesílit účinek perindoprilu na snížení krevního tlaku; lékař může sledovat tlak a případně upravit dávku antihypertenziva.",
+      "effect_type": "synergy",
+      "side_effects": []
     },
     {
-      "drug_class": "Eplerenon nebo spironolakton",
-      "effect": "U pacientů se srdečním selháním NYHA II–IV, ejekční frakcí < 40 % a předchozí léčbou inhibitorem ACE a kličkovými diuretiky je při kombinaci s nízkou dávkou inhibitoru ACE a eplerenonem nebo spironolaktonem v dávce 12,5–50 mg denně zvýšené riziko potenciálně smrtelné hyperkalemie, zvláště při nedodržení předepsaného dávkování. Před zahájením ověřte hladinu draslíku a funkci ledvin; doporučuje se pečlivé sledování draslíku a kreatininu jednou týdně během prvního měsíce a poté jednou měsíčně.",
+      "class_id": "atc:C03",
+      "drug_class": "Diuretika",
+      "effect": "Diuretika mohou při zahájení léčby perindoprilem, zvláště při nedostatku tekutin nebo solí, zvýšit riziko nadměrného poklesu krevního tlaku. Lékař může zvážit vysazení diuretika 2–3 dny před zahájením perindoprilu; pokud vysazení není možné, zahajuje se perindopril nižší dávkou a sledují se ledviny a draslík. U srdečního selhání může být nutné snížit dávku diuretika; funkce ledvin se sleduje během prvních týdnů léčby.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko potenciálně smrtelné hyperkalemie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSAID), včetně kyseliny acetylsalicylové v dávce ≥ 3 g/den a inhibitorů COX-2",
-      "effect": "NSAID mohou oslabit antihypertenzní účinek perindoprilu a zvýšit riziko zhoršení funkce ledvin, včetně možného akutního selhání, a zvýšení hladiny draslíku v krvi, zejména u pacientů s již sníženou funkcí ledvin. Kombinaci podávejte opatrně, zvláště u starších pacientů; pacienti mají být dostatečně hydratováni a po zahájení souběžného podávání a poté pravidelně se má zvážit kontrola funkce ledvin.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zvýšené riziko zhoršení funkce ledvin, včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Možné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:C",
       "drug_class": "Jiná antihypertenziva a vazodilatancia, včetně nitrátů",
-      "effect": "Souběžné užívání může zvýšit hypotenzní účinek perindoprilu; nitroglycerin, jiné nitráty a vazodilatancia mohou vést k dalšímu poklesu krevního tlaku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zesílení poklesu krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "effect": "Současné užívání může zesílit účinek perindoprilu na snížení krevního tlaku; nitroglycerin, jiné nitráty a vazodilatancia mohou tlak dále snížit.",
+      "effect_type": "synergy",
+      "side_effects": []
     },
     {
-      "drug_class": "Tricyklická antidepresiva, antipsychotika a některá anestetika",
-      "effect": "Souběžné užívání s inhibitory ACE může vést k dalšímu snížení krevního tlaku.",
+      "class_id": "atc:A07XA04",
+      "drug_class": "Racekadotril",
+      "effect": "Současné užívání s perindoprilem může zvýšit riziko angioedému; při zahájení racekadotrilu u pacienta, který již užívá ACE inhibitor, je nutná opatrnost.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Další pokles krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:L04A",
+      "drug_class": "Inhibitory mTOR, například sirolimus, everolimus nebo temsirolimus",
+      "effect": "Současné užívání s perindoprilem může zvýšit riziko angioedému; při zahájení inhibitoru mTOR u pacienta, který již užívá ACE inhibitor, je nutná opatrnost.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A10BH02",
+      "drug": "Vildagliptin",
+      "effect": "Současné užívání s perindoprilem může zvýšit riziko angioedému. Příbalová informace upozorňuje na vildagliptin; souhrn údajů popisuje zvýšené riziko i u gliptinů obecně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L01XX11",
+      "drug": "Estramustin",
+      "effect": "Při současném užívání s perindoprilem se může zvýšit riziko nežádoucích účinků, například angioedému.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N06AA",
+      "drug_class": "Tricyklická antidepresiva",
+      "effect": "Současné užívání může s perindoprilem dále snížit krevní tlak.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N05A",
+      "drug_class": "Antipsychotika",
+      "effect": "Současné užívání může s perindoprilem dále snížit krevní tlak.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Anestetika",
+      "effect": "Současné užití některých anestetik s perindoprilem může dále snížit krevní tlak. Při velkém chirurgickém zákroku nebo anestezii látkami snižujícími tlak může lékař zvážit přerušení léčby perindoprilem jeden den před výkonem.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
       "drug_class": "Sympatomimetika",
-      "effect": "Sympatomimetika mohou snížit antihypertenzní účinek inhibitorů ACE.",
+      "effect": "Sympatomimetika mohou snížit účinek perindoprilu na krevní tlak.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "natrium-aurothiomalát (injekční zlato)",
-      "effect": "U pacientů léčených injekcemi zlata a současně inhibitorem ACE byly vzácně hlášeny nitritoidní reakce.",
+      "class_id": "atc:M01CB01",
+      "drug": "Natrium-aurothiomalát",
+      "effect": "U pacientů léčených injekčním natrium-aurothiomalátem a současně ACE inhibitorem byly vzácně hlášeny reakce s návalem zčervenání, nevolností, zvracením a nízkým krevním tlakem.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Flushing",
-          "frequency": "rare",
-          "label": "Zčervenání v obličeji; nitritoidní reakce může být také spojena s nevolností, zvracením a hypotenzí.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Nausea",
-          "frequency": "rare",
-          "label": "Nevolnost při nitritoidní reakci.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Vomiting",
-          "frequency": "rare",
-          "label": "Zvracení při nitritoidní reakci.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": "rare",
-          "label": "Hypotenze při nitritoidní reakci.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "estramustin",
-      "effect": "Při souběžném užívání může být zvýšené riziko nežádoucích účinků, jako je angioedém.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Edema face",
-          "frequency": null,
-          "label": "Zvýšené riziko angioedému.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "racekadotril",
-      "effect": "Souběžné užívání může zvýšit riziko angioedému; u pacientů, kteří již užívají inhibitor ACE, je při zahájení racekadotrilu nutná opatrnost.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Edema face",
-          "frequency": null,
-          "label": "Zvýšené riziko angioedému.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Inhibitory mTOR (např. sirolimus, everolimus, temsirolimus)",
-      "effect": "Souběžné užívání může zvýšit riziko angioedému; při zahájení inhibitoru mTOR u pacienta užívajícího inhibitor ACE je nutná opatrnost.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Edema face",
-          "frequency": null,
-          "label": "Zvýšené riziko angioedému.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Gliptiny (linagliptin, saxagliptin, sitagliptin, vildagliptin)",
-      "effect": "Souběžné užívání může zvýšit riziko angioedému, pravděpodobně v důsledku snížené aktivity DPP-IV. Při zahájení léčby gliptinem u pacienta užívajícího inhibitor ACE je nutná opatrnost.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Edema face",
-          "frequency": null,
-          "label": "Zvýšené riziko angioedému.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Mimotělní léčba s kontaktem krve se záporně nabitým povrchem, včetně dialýzy nebo hemofiltrace vysoce propustnými membránami a LDL aferézy pomocí dextran-sulfátu",
-      "effect": "Současné užívání inhibitoru ACE při těchto výkonech je kontraindikováno kvůli zvýšenému riziku závažných anafylaktoidních reakcí. Pokud je taková léčba nutná, zvažte jiné dialyzační membrány nebo jinou skupinu antihypertenziv; před LDL aferézou lze reakcím předejít dočasným vysazením inhibitoru ACE před každým výkonem.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Anaphylaxis",
-          "frequency": null,
-          "label": "Zvýšené riziko závažné, někdy život ohrožující anafylaktoidní reakce.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky k desenzibilizační léčbě, například jed blanokřídlých",
-      "effect": "U pacientů užívajících inhibitory ACE během desenzibilizační léčby byly hlášeny anafylaktoidní reakce. Dočasné vysazení inhibitoru ACE jim zabránilo, ale po náhodném opětovném vystavení se reakce znovu objevily.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Anaphylaxis",
-          "frequency": null,
-          "label": "Možné anafylaktoidní reakce během desenzibilizační léčby.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "alkohol",
-      "effect": "Pití alkoholu během léčby může vyvolat závrať nebo točení hlavy; poraďte se s lékařem, zda můžete během užívání přípravku alkohol pít.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Dizziness",
-          "frequency": null,
-          "label": "Závrať nebo točení hlavy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Thiazidová diuretika",
-      "effect": "Kombinace s thiazidovým diuretikem má aditivní účinek na snížení krevního tlaku a zároveň snižuje riziko hypokalemie, která by mohla vzniknout při léčbě diuretikem.",
-      "effect_type": "synergy",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se k léčbě vysokého krevního tlaku a ke snížení rizika srdečních příhod u některých pacientů se stabilní ischemickou chorobou srdeční.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0229909",
+      "H": "",
+      "NAZEV": "PRENESSA",
+      "SILA": "8MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "8MG TBL NOB 30",
+      "OBAL": "BLI",
+      "DRZ": "KRK",
+      "ZEMDRZ": "SLO",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "58",
+      "ATC_WHO": "C09AA04",
+      "RC": "58/405/08-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "4",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "60",
+      "ZDROJ_WHO": "NO26",
+      "LL": "13049",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "PRENESSA",
+      "MRP_CISLO": "HU/H/0113/003",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "13049",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "8",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13049",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "PERINDOPRILUM ERBUMINUM",
+          "NAZEV_EN": "PERINDOPRIL TERT-BUTYLAMINE",
+          "NAZEV": "PERINDOPRIL-ERBUMIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "9541",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "6,68",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9541",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "PERINDOPRILUM",
+          "NAZEV_EN": "PERINDOPRIL",
+          "NAZEV": "PERINDOPRIL"
+        }
+      },
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "2624",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "0",
+        "SQ": "5",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "3508",
+        "SQ": "6",
+        "S": "C",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3508",
+          "ZDROJ": "C22M",
+          "NAZEV_INN": "LACTOSUM",
+          "NAZEV_EN": "LACTOSE",
+          "NAZEV": "LAKTOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "3755",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "2178",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2178",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "NATRII HYDROGENOCARBONAS",
+          "NAZEV_EN": "SODIUM HYDROGEN CARBONATE",
+          "NAZEV": "HYDROGENUHLIČITAN SODNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "1300",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0229909",
+        "KOD_LATKY": "2378",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0229909",
+      "PIL": "PI195912.pdf",
+      "DAT_ROZ_PIL": "14.02.2023",
+      "SPC": "SPC179522.pdf",
+      "DAT_ROZ_SPC": "16.11.2021",
+      "OBAL_TEXT": "OBAL179520.pdf",
+      "DAT_ROZ_OBAL": "16.11.2021"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C09AA04",
+        "NT": "N",
+        "NAZEV": "PERINDOPRIL",
+        "NAZEV_EN": "PERINDOPRIL"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

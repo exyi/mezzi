@@ -1,93 +1,105 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A10",
+    "atc:A10B",
+    "atc:A10BA",
+    "atc:A10BA02",
+    "substance:2418"
+  ],
   "side_effects": [
+    {
+      "ctcae": "Acidosis",
+      "frequency": "very_rare",
+      "label": "Laktátová acidóza; velmi vzácná, zvláště při nesprávné funkci ledvin.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Zvracení, bolest břicha, svalové křeče, výrazná únava, potíže s dýcháním, nízká tělesná teplota nebo pomalý tep.",
+        "min_severity": 1
+      }
+    },
     {
       "ctcae": "Nausea",
       "frequency": "very_common",
-      "label": "Nevolnost, která se nejčastěji objevuje na začátku léčby.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud nevolnost neustoupí."
-      }
+      "label": "Nevolnost, nejčastěji na začátku léčby.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "very_common",
-      "label": "Zvracení, které se nejčastěji objevuje na začátku léčby.",
-      "action": "discontinue_treatment",
+      "label": "Zvracení, nejčastěji na začátku léčby.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud zvracení neustoupí."
+        "patient_guide": "Pokud potíže neustoupí, přestaňte Glucophage užívat.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "very_common",
-      "label": "Průjem, který se nejčastěji objevuje na začátku léčby.",
-      "action": "discontinue_treatment",
+      "label": "Průjem, nejčastěji na začátku léčby.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud průjem neustoupí."
+        "patient_guide": "Pokud potíže neustoupí, přestaňte Glucophage užívat.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "very_common",
-      "label": "Bolest břicha, která se nejčastěji objevuje na začátku léčby.",
-      "action": "discontinue_treatment",
+      "label": "Bolest břicha, nejčastěji na začátku léčby.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud bolest břicha neustoupí."
+        "patient_guide": "Pokud potíže neustoupí, přestaňte Glucophage užívat.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Anorexia",
       "frequency": "very_common",
-      "label": "Ztráta chuti k jídlu, která se nejčastěji objevuje na začátku léčby.",
-      "action": "discontinue_treatment",
+      "label": "Ztráta chuti k jídlu, nejčastěji na začátku léčby.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud ztráta chuti k jídlu neustoupí."
+        "patient_guide": "Pokud potíže neustoupí, přestaňte Glucophage užívat.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Dysgeusia",
       "frequency": "common",
-      "label": "Změny chuti.",
+      "label": "Změna chuti.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Investigations - Other, specify",
       "frequency": "common",
-      "label": "Snížená nebo nízká hladina vitaminu B12 v krvi; riziko se zvyšuje s vyšší dávkou metforminu, delší dobou léčby a/nebo při rizikových faktorech nedostatku vitaminu B12.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Acidosis",
-      "frequency": "very_rare",
-      "label": "Laktátová acidóza, velmi vzácná, ale závažná komplikace, zvláště při nesprávné funkci ledvin. Může se projevit zvracením, bolestí břicha, svalovými křečemi, celkovou nevolností se značnou únavou, dýchacími obtížemi, sníženou tělesnou teplotou a sníženým tepem; může vést ke kómatu.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky laktátové acidózy, okamžitě přestaňte Glucophage užívat a vyhledejte lékařskou pomoc nebo nejbližší nemocniční pohotovost."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Abnormality jaterních funkčních testů.",
+      "label": "Snížení hladiny vitaminu B12 v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "very_rare",
-      "label": "Hepatitida (zánět jater), která může způsobit únavu, ztrátu chuti k jídlu a úbytek tělesné hmotnosti, s případným zežloutnutím kůže nebo očního bělma.",
+      "label": "Hepatitida, která může způsobit únavu, ztrátu chuti k jídlu, úbytek hmotnosti a někdy zežloutnutí kůže nebo očního bělma.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto příznaky."
+        "patient_guide": "Únava, ztráta chuti k jídlu, úbytek hmotnosti nebo zežloutnutí kůže či očního bělma.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Investigations - Other, specify",
       "frequency": "very_rare",
-      "label": "Kožní reakce, jako je zarudnutí kůže.",
+      "label": "Odchylky ve výsledcích jaterních testů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erythema",
+      "frequency": "very_rare",
+      "label": "Zarudnutí kůže.",
       "action": null,
       "action_condition": null
     },
@@ -108,138 +120,312 @@
   ],
   "combinations": [
     {
-      "drug_class": "Alkohol",
-      "effect": "Současné užívání se nedoporučuje. Intoxikace alkoholem zvyšuje riziko laktátové acidózy, zvláště při hladovění, podvýživě nebo poruše funkce jater. Během užívání se vyhněte nadměrné konzumaci alkoholu.",
+      "class_id": "atc:V08A",
+      "drug_class": "Jódové kontrastní látky podané do cévy",
+      "effect": "Při podání jódové kontrastní látky do cévy může dojít k poškození ledvin a hromadění metforminu, což zvyšuje riziko laktátové acidózy. Lékař přeruší metformin před vyšetřením nebo v době jeho provedení a obnoví jej nejdříve za 48 hodin, až bude funkce ledvin znovu zhodnocena a stabilní.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy při intoxikaci alkoholem, zvláště při hladovění, podvýživě nebo poruše funkce jater.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Jódové kontrastní látky podávané do cévy",
-      "effect": "Podání může způsobit nefropatii vyvolanou kontrastní látkou, následné hromadění metforminu a zvýšené riziko laktátové acidózy. Metformin vysaďte před vyšetřením nebo v době jeho provedení. Znovu jej lze užívat nejdříve 48 hodin po vyšetření, pokud byla znovu zhodnocena funkce ledvin a je stabilní.",
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky včetně selektivních inhibitorů COX-2",
+      "effect": "Tyto léky mohou zhoršit funkci ledvin a zvýšit riziko laktátové acidózy při užívání metforminu. Při jejich zahájení nebo souběžném užívání je třeba pečlivě sledovat funkci ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy v důsledku hromadění metforminu při zhoršení funkce ledvin po podání kontrastní látky.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSAID), včetně selektivních inhibitorů COX-2",
-      "effect": "Tyto léky mohou nepříznivě ovlivnit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení léčby nebo při současném užívání s metforminem je nutné pečlivě sledovat funkci ledvin.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy, pokud je současně zhoršena funkce ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:C09A",
       "drug_class": "ACE inhibitory",
-      "effect": "Mohou nepříznivě ovlivnit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení léčby nebo při současném užívání s metforminem je nutné pečlivě sledovat funkci ledvin.",
+      "effect": "Tyto léky mohou zhoršit funkci ledvin a zvýšit riziko laktátové acidózy při užívání metforminu. Při jejich zahájení nebo souběžném užívání je třeba pečlivě sledovat funkci ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy, pokud je současně zhoršena funkce ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C09C",
       "drug_class": "Antagonisté receptoru pro angiotenzin II",
-      "effect": "Mohou nepříznivě ovlivnit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení léčby nebo při současném užívání s metforminem je nutné pečlivě sledovat funkci ledvin.",
+      "effect": "Tyto léky mohou zhoršit funkci ledvin a zvýšit riziko laktátové acidózy při užívání metforminu. Při jejich zahájení nebo souběžném užívání je třeba pečlivě sledovat funkci ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy, pokud je současně zhoršena funkce ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Diuretika, zvláště kličková",
-      "effect": "Mohou nepříznivě ovlivnit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení léčby nebo při současném užívání s metforminem je nutné pečlivě sledovat funkci ledvin.",
+      "class_id": "atc:C03",
+      "drug_class": "Diuretika",
+      "effect": "Diuretika, zvláště kličková, mohou zhoršit funkci ledvin a zvýšit riziko laktátové acidózy při užívání metforminu. Při jejich zahájení nebo souběžném užívání je třeba pečlivě sledovat funkci ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy, pokud je současně zhoršena funkce ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Glukokortikoidy se systémovým nebo lokálním účinkem",
-      "effect": "Tyto léky mohou mít vlastní hyperglykemický účinek. Může být nutné častěji kontrolovat hladinu glukózy v krvi a podle potřeby upravit dávku metforminu během léčby i po vysazení glukokortikoidu.",
+      "class_id": "atc:H02A",
+      "drug_class": "Glukokortikoidy",
+      "effect": "Glukokortikoidy mohou zvýšit hladinu glukózy v krvi a může být potřeba častěji sledovat glykemii a upravit dávku metforminu během souběžné léčby i po vysazení glukokortikoidu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Sympatomimetika, například salbutamol nebo terbutalin",
-      "effect": "Tyto léky mohou mít vlastní hyperglykemický účinek. Může být nutné častěji kontrolovat hladinu glukózy v krvi a podle potřeby upravit dávku metforminu během léčby i po vysazení sympatomimetika.",
+      "class_id": "atc:R03AC",
+      "drug_class": "Beta-2 agonisté",
+      "effect": "Beta-2 agonisté mohou zvýšit hladinu glukózy v krvi a může být potřeba častěji sledovat glykemii a upravit dávku metforminu během souběžné léčby i po vysazení beta-2 agonisty.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "Verapamil",
-      "effect": "Verapamil, inhibitor OCT1, může snížit účinnost metforminu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Rifampicin",
-      "effect": "Rifampicin, induktor OCT1, může zvýšit vstřebávání metforminu z trávicího traktu a jeho účinnost.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Inhibitory OCT2, například cimetidin, dolutegravir, ranolazin, trimethoprim, vandetanib a isavukonazol",
-      "effect": "Mohou snížit vylučování metforminu ledvinami a zvýšit jeho koncentraci v plazmě. Opatrnost se doporučuje zejména při poruše funkce ledvin; pokud je to potřebné, lze zvážit úpravu dávky metforminu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Inhibitory OCT1 i OCT2, například krizotinib a olaparib",
-      "effect": "Mohou ovlivnit účinnost metforminu i jeho vylučování ledvinami. Doporučuje se opatrnost, zejména při poruše funkce ledvin, protože koncentrace metforminu v plazmě se může zvýšit; pokud je to potřebné, lze zvážit úpravu dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Jiné léky k léčbě diabetu, zejména inzulín, deriváty sulfonylurey a meglitinidy",
-      "effect": "Při kombinaci s metforminem se zvyšuje riziko hypoglykemie. Doporučuje se opatrnost.",
+      "class_id": "atc:A10A",
+      "drug_class": "Inzulín",
+      "effect": "Při kombinaci metforminu s inzulínem nebo jinými antidiabetiky, například deriváty sulfonylurey či meglitinidy, se může zvýšit riziko hypoglykemie.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Hypoglycemia",
           "frequency": null,
-          "label": "Zvýšené riziko hypoglykemie při kombinaci s metforminem.",
+          "label": "Hypoglykemie při kombinaci metforminu s inzulínem nebo jinými antidiabetiky, například deriváty sulfonylurey či meglitinidy.",
           "action": null,
           "action_condition": null
         }
       ]
+    },
+    {
+      "class_id": "atc:A10BB",
+      "drug_class": "Deriváty sulfonylurey",
+      "effect": "Při kombinaci metforminu s inzulínem nebo jinými antidiabetiky, například deriváty sulfonylurey či meglitinidy, se může zvýšit riziko hypoglykemie.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hypoglycemia",
+          "frequency": null,
+          "label": "Hypoglykemie při kombinaci metforminu s inzulínem nebo jinými antidiabetiky, například deriváty sulfonylurey či meglitinidy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": null,
+      "drug_class": "Meglitinidy",
+      "effect": "Při kombinaci metforminu s inzulínem nebo jinými antidiabetiky, například deriváty sulfonylurey či meglitinidy, se může zvýšit riziko hypoglykemie.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hypoglycemia",
+          "frequency": null,
+          "label": "Hypoglykemie při kombinaci metforminu s inzulínem nebo jinými antidiabetiky, například deriváty sulfonylurey či meglitinidy.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": null,
+      "drug_class": "Alkohol",
+      "effect": "Nadměrná konzumace alkoholu zvyšuje riziko laktátové acidózy, zvláště při hladovění, podvýživě nebo poruše funkce jater.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Acidosis",
+          "frequency": null,
+          "label": "Laktátová acidóza při nadměrné konzumaci alkoholu, zvláště při hladovění, podvýživě nebo poruše funkce jater.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": null,
+      "drug_class": "Léky, které mohou změnit množství metforminu v krvi, zejména při snížené funkci ledvin",
+      "effect": "Verapamil, rifampicin, cimetidin, dolutegravir, ranolazin, trimethoprim, vandetanib, isavukonazol, krizotinib a olaparib mohou ovlivnit množství metforminu v krvi nebo jeho účinek a vylučování. U některých z nich může stoupnout koncentrace metforminu v plazmě; opatrnost je zvláště důležitá při poruše funkce ledvin. Lékař může zvážit úpravu dávky a sledovat glykemii a funkci ledvin.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Glucophage se používá k léčbě diabetu 2. typu, když samotná dieta a pohyb nestačí ke kontrole hladiny cukru v krvi.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0128625",
+      "H": "",
+      "NAZEV": "GLUCOPHAGE",
+      "SILA": "1000MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "120",
+      "CESTA": "POR",
+      "DOPLNEK": "1000MG TBL FLM 120",
+      "OBAL": "BLI",
+      "DRZ": "MSJ",
+      "ZEMDRZ": "F",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "18",
+      "ATC_WHO": "A10BA02",
+      "RC": "18/155/02-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "60",
+      "ZDROJ_WHO": "NO26",
+      "LL": "2418",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "48",
+      "EXP_T": "M",
+      "NAZEV_REG": "GLUCOPHAGE",
+      "MRP_CISLO": "FR/H/0181/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0128625",
+        "KOD_LATKY": "2418",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "1000",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2418",
+          "ZDROJ": "C19",
+          "NAZEV_INN": "METFORMINI HYDROCHLORIDUM",
+          "NAZEV_EN": "METFORMIN HYDROCHLORIDE",
+          "NAZEV": "METFORMIN-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0128625",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0128625",
+        "KOD_LATKY": "2417",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "780",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2417",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "METFORMINUM",
+          "NAZEV_EN": "METFORMIN",
+          "NAZEV": "METFORMIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0128625",
+        "KOD_LATKY": "18178",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18178",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 30",
+          "NAZEV_EN": "POVIDONE K 30",
+          "NAZEV": "POVIDON K 30",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0128625",
+        "KOD_LATKY": "2378",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0128625",
+        "SQ": "6",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0128625",
+        "KOD_LATKY": "16299",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16299",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CLARUM OPADRY YS-1-7472",
+          "NAZEV_EN": "OPADRY YS-1-7472 (CLEAR)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPADRY YS-1-7472 BEZBARVÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0128625",
+      "PIL": "PI230821.pdf",
+      "DAT_ROZ_PIL": "19.02.2026",
+      "SPC": "SPC222152.pdf",
+      "DAT_ROZ_SPC": "13.05.2025",
+      "OBAL_TEXT": "OBAL222150.pdf",
+      "DAT_ROZ_OBAL": "13.05.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A10BA02",
+        "NT": "N",
+        "NAZEV": "METFORMIN",
+        "NAZEV_EN": "METFORMIN"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

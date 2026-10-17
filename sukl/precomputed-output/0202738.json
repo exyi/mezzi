@@ -1,54 +1,17 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C07",
+    "atc:C07A",
+    "atc:C07AB",
+    "atc:C07AB05",
+    "substance:9568"
+  ],
   "side_effects": [
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": null,
-      "label": "Otok obličeje, rtů, úst, jazyka nebo hrdla, potíže s dýcháním nebo kožní vyrážka; při těchto příznacích přestaňte přípravek okamžitě užívat a vyhledejte lékaře.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví otok obličeje, rtů, úst, jazyka nebo hrdla, potíže s dýcháním nebo kožní vyrážka"
-      }
-    },
-    {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": null,
-      "label": "Bolest na hrudi; při tomto příznaku přestaňte přípravek okamžitě užívat a vyhledejte lékaře.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest na hrudi"
-      }
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": null,
-      "label": "Těžké závratě; při tomto příznaku přestaňte přípravek okamžitě užívat a vyhledejte lékaře.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví těžké závratě"
-      }
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": null,
-      "label": "Mdloby; při tomto příznaku přestaňte přípravek okamžitě užívat a vyhledejte lékaře.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud omdlíte"
-      }
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": null,
-      "label": "Neobvykle rychlý nebo nepravidelný srdeční tep; při tomto příznaku přestaňte přípravek okamžitě užívat a vyhledejte lékaře.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte neobvykle rychlý nebo nepravidelný srdeční tep"
-      }
-    },
     {
       "ctcae": "Fatigue",
       "frequency": "common",
-      "label": "Slabost.",
+      "label": "Slabost nebo únava; při závrati či únavě neřiďte a neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
@@ -62,33 +25,36 @@
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závratě.",
+      "label": "Závratě; při závrati či únavě neřiďte a neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "common",
-      "label": "Bolesti hlavy.",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Sinus bradycardia",
       "frequency": "common",
-      "label": "Pomalý nebo velmi pomalý srdeční tep (bradykardie), v některých případech závažná.",
-      "action": null,
-      "action_condition": null
+      "label": "Pomalý nebo velmi pomalý tep (bradykardie).",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
-      "ctcae": "Vascular disorders - Other, specify",
+      "ctcae": "Peripheral ischemia",
       "frequency": "common",
       "label": "Studené ruce a nohy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Stomach pain",
+      "ctcae": "Abdominal pain",
       "frequency": "common",
       "label": "Bolest žaludku.",
       "action": null,
@@ -139,21 +105,28 @@
     {
       "ctcae": "Hypotension",
       "frequency": "rare",
-      "label": "Pokles krevního tlaku.",
+      "label": "Nízký krevní tlak.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Atrioventricular block first degree",
       "frequency": "rare",
-      "label": "Zpomalení atrioventrikulárního vedení nebo zesílení stávajícího atrioventrikulárního bloku.",
+      "label": "Zpomalení AV vedení nebo zhoršení již přítomného AV bloku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Raynaud's syndrome",
+      "frequency": "rare",
+      "label": "Raynaudův syndrom: otupělé nebo studené prsty na rukou a nohou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Peripheral ischemia",
       "frequency": "rare",
-      "label": "Raynaudův syndrom: otupělé nebo studené prsty na rukou a nohou; může se zhoršit také přítomné přerušované kulhání.",
+      "label": "Zhoršení již přítomných křečí nebo bolesti v noze při chůzi, které po odpočinku ustupují.",
       "action": null,
       "action_condition": null
     },
@@ -165,9 +138,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Dermatitis psoriasiform",
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "rare",
-      "label": "Různé kožní reakce zahrnující výsev lupénky nebo její zhoršení.",
+      "label": "Kožní reakce včetně výsevu lupénky nebo jejího zhoršení.",
       "action": null,
       "action_condition": null
     },
@@ -181,7 +154,7 @@
     {
       "ctcae": "Autoimmune disorder",
       "frequency": "rare",
-      "label": "Výskyt antinukleárních protilátek, který je jen výjimečně doprovázen příznaky systémového lupus erythematodes; po vysazení léčby ustupuje.",
+      "label": "Výskyt antinukleárních protilátek, výjimečně doprovázený příznaky systémového lupusu; po přerušení léčby ustupuje.",
       "action": null,
       "action_condition": null
     },
@@ -223,14 +196,14 @@
     {
       "ctcae": "Paresthesia",
       "frequency": "very_rare",
-      "label": "Mravenčení rukou a nohou (distální parestézie).",
+      "label": "Mravenčení rukou a nohou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "very_rare",
-      "label": "Rozmazané vidění (porucha zraku).",
+      "label": "Rozmazané vidění.",
       "action": null,
       "action_condition": null
     },
@@ -263,387 +236,464 @@
       "action_condition": null
     },
     {
-      "ctcae": "Sick sinus syndrome",
+      "ctcae": "Sinus bradycardia",
       "frequency": "not_known",
-      "label": "Sinusová zástava u pacientů s predispozicí, například u starších pacientů nebo u pacientů s již existující bradykardií, dysfunkcí sinusového uzlu či atrioventrikulární blokádou.",
+      "label": "Velmi pomalý nebo někdy nepravidelný srdeční rytmus, zejména u osob starších 65 let nebo s jinými poruchami srdečního rytmu; může se projevit malátností, neobvyklou únavou a zadýcháváním.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Velmi pomalý nebo někdy nepravidelný srdeční rytmus; může se objevit zejména u osob starších 65 let nebo u osob s jinými problémy se srdečním rytmem a může být spojen s malátností, neobvyklou únavou a zadýcháváním.",
+      "label": "Sinusová zástava u osob s predispozicí, například u starších pacientů nebo při již přítomné bradykardii, dysfunkci sinusového uzlu či AV blokádě.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": null,
+      "label": "Otok obličeje, rtů, úst, jazyka nebo krku nebo obtíže při dýchání; příbalová informace doporučuje okamžitě přestat přípravek užívat a vyhledat lékaře.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": null,
+      "label": "Kožní vyrážka; příbalová informace doporučuje okamžitě přestat přípravek užívat a vyhledat lékaře.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Chest pain - cardiac",
+      "frequency": null,
+      "label": "Bolest na hrudi; příbalová informace doporučuje okamžitě přestat přípravek užívat a vyhledat lékaře.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": null,
+      "label": "Těžké závratě nebo mdloby; příbalová informace doporučuje okamžitě přestat přípravek užívat a vyhledat lékaře.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": null,
+      "label": "Neobvykle rychlý nebo nepravidelný srdeční tep; příbalová informace doporučuje okamžitě přestat přípravek užívat a vyhledat lékaře.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     }
   ],
   "combinations": [
     {
-      "drug": "bepridil",
-      "effect": "Kombinace může způsobit nadměrnou bradykardii, sinusovou zástavu, poruchy sinoatriálního a atrioventrikulárního vedení, zvýšit riziko komorových arytmií včetně torsades de pointes a srdečního selhání. Kombinaci lze použít pouze pod přísným lékařským dohledem a při monitorování EKG, zejména u starších pacientů nebo na začátku léčby.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Sinus bradycardia",
-          "frequency": null,
-          "label": "Nadměrná bradykardie.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Sick sinus syndrome",
-          "frequency": null,
-          "label": "Sinusová zástava.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Komorové arytmie včetně torsades de pointes.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Heart failure",
-          "frequency": null,
-          "label": "Srdeční selhání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "diltiazem",
-      "effect": "Kombinace může způsobit nadměrnou bradykardii, sinusovou zástavu, poruchy sinoatriálního a atrioventrikulárního vedení a srdeční selhání. Kombinaci lze použít pouze pod přísným lékařským dohledem a při monitorování EKG, zejména u starších pacientů nebo na začátku léčby.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Sinus bradycardia",
-          "frequency": null,
-          "label": "Nadměrná bradykardie.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Sick sinus syndrome",
-          "frequency": null,
-          "label": "Sinusová zástava.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Heart failure",
-          "frequency": null,
-          "label": "Srdeční selhání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "verapamil",
-      "effect": "Kombinace může způsobit nadměrnou bradykardii, sinusovou zástavu, poruchy sinoatriálního a atrioventrikulárního vedení a srdeční selhání. Kombinaci lze použít pouze pod přísným lékařským dohledem a při monitorování EKG, zejména u starších pacientů nebo na začátku léčby.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Sinus bradycardia",
-          "frequency": null,
-          "label": "Nadměrná bradykardie.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Sick sinus syndrome",
-          "frequency": null,
-          "label": "Sinusová zástava.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Heart failure",
-          "frequency": null,
-          "label": "Srdeční selhání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "fingolimod",
-      "effect": "Zvyšuje bradykardizující účinek betaxololu, který může mít fatální následky. Zvláště ohroženi jsou pacienti užívající beta-blokátory, které brání adrenergní kompenzaci. Po první dávce fingolimodu je nutné klinické sledování a nepřetržité EKG po dobu 24 hodin.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Sinus bradycardia",
-          "frequency": null,
-          "label": "Zvýšené zpomalení srdečního tepu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "baklofen",
-      "effect": "Zvyšuje riziko hypotenze, zejména ortostatické. Sledujte krevní tlak a v případě potřeby upravte dávku antihypertenziv.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze, zejména při vstávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "amiodaron",
-      "effect": "Může způsobit poruchy srdečního vedení a automaticity potlačením kompenzačních mechanismů sympatiku. Doporučuje se klinické sledování a monitorování EKG.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Poruchy srdečního vedení a automaticity.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antiarytmika třídy I kromě lidokainu, včetně propafenonu",
-      "effect": "Může dojít k poruchám srdečního vedení, automaticity a kontraktility v důsledku potlačení kompenzačních mechanismů sympatiku. Doporučuje se klinické sledování a monitorování EKG.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Poruchy srdečního vedení, automaticity a kontraktility.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Těkavá halogenovaná anestetika",
-      "effect": "Snižují kardiovaskulární kompenzační účinky. Beta-adrenergní blokádu lze během zákroku zvrátit beta-mimetiky, obecně však účinek beta-blokátorů nelze zastavit. Je třeba se vyhnout náhlému vysazení betaxololu a informovat anesteziologa o jeho užívání.",
+      "class_id": "atc:C08EA02",
+      "drug": "Bepridil",
+      "effect": "Betaxolol s bepridilem může výrazně zpomalit tep a narušit srdeční vedení, zvýšit riziko komorových arytmií včetně torsades de pointes a srdečního selhání. Kombinace se nedoporučuje; lze ji použít jen pod přísným lékařským dohledem a s monitorováním EKG, zejména u starších pacientů nebo na začátku léčby.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:C08DB01",
+      "drug": "Diltiazem",
+      "effect": "Betaxolol s diltiazemem může výrazně zpomalit tep, narušit srdeční vedení a zvýšit riziko srdečního selhání. Kombinace se nedoporučuje; lze ji použít jen pod přísným lékařským dohledem a s monitorováním EKG, zejména u starších pacientů nebo na začátku léčby.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C08DA01",
+      "drug": "Verapamil",
+      "effect": "Betaxolol s verapamilem může výrazně zpomalit tep, narušit srdeční vedení a zvýšit riziko srdečního selhání. Kombinace se nedoporučuje; lze ji použít jen pod přísným lékařským dohledem a s monitorováním EKG, zejména u starších pacientů nebo na začátku léčby.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L04AE01",
+      "drug": "Fingolimod",
+      "effect": "Fingolimod může s betaxololem zesílit zpomalení srdečního tepu, které může mít fatální následky. Zvlášť ohroženi jsou pacienti užívající betablokátory, které brání adrenergní kompenzaci. Po první dávce fingolimodu je nutné klinické sledování a nepřetržité EKG po dobu 24 hodin; kombinace se nedoporučuje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M03BX01",
+      "drug": "Baklofen",
+      "effect": "Baklofen s betaxololem zvyšuje riziko nízkého krevního tlaku, zejména při postavení; lékař má sledovat tlak a podle potřeby upravit dávku léků na tlak.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C01BD01",
+      "drug": "Amiodaron",
+      "effect": "Amiodaron s betaxololem může narušit srdeční vedení a automatickou činnost srdce potlačením kompenzačních mechanismů sympatiku; doporučuje se klinické sledování a EKG.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Antiarytmika třídy I kromě lidokainu",
+      "effect": "S betaxololem mohou narušit srdeční vedení, automatickou činnost a stažlivost srdce potlačením kompenzačních mechanismů sympatiku; doporučuje se klinické sledování a EKG.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Těkavá halogenovaná anestetika",
+      "effect": "Při celkové anestezii s betaxololem se snižují kardiovaskulární kompenzační účinky; anesteziolog musí být o léčbě informován. Léčbu betaxololem nelze obecně náhle vysadit; beta-adrenergní blokádu lze během zákroku odstranit podáním beta-mimetik.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02",
       "drug_class": "Centrálně působící antihypertenziva",
-      "effect": "Náhlé přerušení léčby centrálně působícími antihypertenzivy může vést k velkému zvýšení krevního tlaku. Náhlému vysazení těchto léků je třeba se vyhnout; doporučuje se klinické sledování.",
+      "effect": "Náhlé přerušení centrálně působících antihypertenziv při současném betaxololu může výrazně zvýšit krevní tlak. Je třeba se vyhnout jejich náhlému vysazení a klinicky pacienta sledovat.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypertension",
-          "frequency": null,
-          "label": "Velké zvýšení krevního tlaku při náhlém přerušení léčby centrálně působícími antihypertenzivy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:A10",
       "drug_class": "Inzulin, deriváty sulfonylurey, glinidy a gliptiny",
-      "effect": "Betaxolol může maskovat některé příznaky hypoglykémie, zejména bušení srdce a zrychlený tep. Pacient má být o této skutečnosti informován a hladina cukru v krvi má být sledována častěji, zejména na začátku léčby.",
+      "effect": "Betaxolol může při současném užívání maskovat některé příznaky nízké hladiny cukru v krvi, zejména bušení srdce a zrychlený tep. Pacient má být informován a zejména na začátku léčby se doporučuje častější kontrola hladiny cukru lékařem.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Příznaky hypoglykémie, zejména bušení srdce a zrychlený tep, mohou být maskovány.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "lidokain podaný intravenózně",
-      "effect": "Betaxolol zvyšuje plazmatické koncentrace lidokainu a může zvýšit riziko jeho srdečních a neurologických nežádoucích účinků kvůli snížení jaterní clearance. Doporučuje se klinické a EKG sledování, případně kontrola hladiny lidokainu v krvi během kombinované léčby i po ukončení léčby betaxololem; podle potřeby se upraví dávka lidokainu.",
+      "class_id": "atc:C01BB02",
+      "drug": "Lidokain",
+      "effect": "Při nitrožilním podání lidokainu může betaxolol zvýšit jeho hladinu v krvi a riziko srdečních a neurologických nežádoucích účinků. Doporučuje se klinické a EKG sledování, případně sledování hladiny lidokainu během kombinované léčby a po ukončení betaxololu; lékař může upravit dávku lidokainu.",
       "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Možné srdeční nežádoucí účinky lidokainu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Možné neurologické nežádoucí účinky lidokainu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky způsobující torsades de pointes",
-      "effect": "Zvyšuje se riziko komorových arytmií, zejména torsades de pointes. Doporučuje se klinické sledování a monitorování EKG.",
+      "class_id": "atc:C01BC03",
+      "drug": "Propafenon",
+      "effect": "Propafenon s betaxololem může narušit srdeční vedení, automatickou činnost a stažlivost srdce potlačením kompenzačních mechanismů sympatiku; doporučuje se klinické sledování a EKG.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Komorové arytmie, zejména torsades de pointes.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Urologické alfa-blokátory a antihypertenzní alfa-blokátory",
-      "effect": "Zvyšují hypotenzní účinek betaxololu a riziko ortostatické hypotenze.",
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léky způsobující torsades de pointes",
+      "effect": "S betaxololem se zvyšuje riziko komorových arytmií, především torsades de pointes; doporučuje se klinické sledování a EKG.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze, zejména při vstávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "amifostin",
-      "effect": "Zvyšuje riziko hypotenze, zejména ortostatické.",
+      "class_id": "atc:C02CA",
+      "drug_class": "Urologické a antihypertenzní alfa-blokátory",
+      "effect": "S betaxololem se zvyšuje účinek na snížení krevního tlaku a riziko poklesu tlaku při postavení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze, zejména při vstávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "imipraminová antidepresiva",
-      "effect": "Zvyšují riziko hypotenze, zejména ortostatické.",
+      "class_id": "atc:V03AF05",
+      "drug": "Amifostin",
+      "effect": "Amifostin s betaxololem zvyšuje riziko nízkého krevního tlaku, zejména při postavení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze, zejména při vstávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:N06AA02",
+      "drug_class": "Imipraminová antidepresiva",
+      "effect": "S betaxololem se zvyšuje riziko nízkého krevního tlaku, zejména při postavení.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N05A",
       "drug_class": "Neuroleptika",
-      "effect": "Jejich vazodilatační účinek zvyšuje riziko hypotenze, zejména ortostatické.",
+      "effect": "S betaxololem může vazodilatační účinek neuroleptik zvýšit riziko nízkého krevního tlaku, zejména při postavení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze, zejména při vstávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Nesteroidní protizánětlivé léky",
-      "effect": "Mohou snížit antihypertenzní účinek betaxololu inhibicí vazodilatačních prostaglandinů; pyrazolová nesteroidní protizánětlivá léčiva navíc způsobují retenci sodíku.",
+      "effect": "Nesteroidní protizánětlivé léky mohou snížit účinek betaxololu na krevní tlak tím, že omezí vazodilatační prostaglandiny; pyrazolové nesteroidní protizánětlivé léky mohou navíc zadržovat sodík.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "atc:C08CA",
       "drug_class": "Dihydropyridiny",
-      "effect": "Mohou způsobit hypotenzi a srdeční selhání u pacientů s latentním nebo nekontrolovaným srdečním selháním v důsledku aditivních negativně inotropních účinků. Betaxolol může také omezit reflexní sympatickou reakci při nadměrných hemodynamických změnách.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Heart failure",
-          "frequency": null,
-          "label": "Srdeční selhání u pacientů s latentním nebo nekontrolovaným srdečním selháním.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "dipyridamol podaný intravenózně",
-      "effect": "Zvyšuje antihypertenzní účinek betaxololu.",
+      "effect": "Dihydropyridiny s betaxololem mohou způsobit nízký krevní tlak a srdeční selhání u pacientů se skrytým nebo nekontrolovaným srdečním selháním v důsledku sčítání negativního vlivu na srdeční stažlivost. Betaxolol může také omezit reflexní sympatickou reakci při výrazných změnách krevního oběhu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Léky snižující srdeční frekvenci: antiarytmika třídy Ia, jiné beta-blokátory, některá antiarytmika třídy III, některé blokátory kalciových kanálů, srdeční glykosidy, pilokarpin a inhibitory cholinesterázy",
-      "effect": "Aditivní účinek může vést k nadměrné bradykardii.",
+      "class_id": "atc:B01AC07",
+      "drug": "Dipyridamol",
+      "effect": "Při nitrožilním podání dipyridamolu se může zvýšit účinek betaxololu na snížení krevního tlaku.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Sinus bradycardia",
-          "frequency": null,
-          "label": "Nadměrná bradykardie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
+      "drug_class": "Léky snižující srdeční frekvenci, včetně antiarytmik třídy Ia a III, jiných betablokátorů, některých blokátorů kalciových kanálů, srdečních glykosidů, pilokarpinu a inhibitorů cholinesterázy",
+      "effect": "S betaxololem se může nadměrně zpomalit srdeční tep v důsledku sčítání účinků. Zvlášť uvedená kombinace betaxololu s jinými betablokátory se tímto rizikem řídí také.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N07AX01",
+      "drug": "Pilokarpin",
+      "effect": "Pilokarpin s betaxololem může v důsledku sčítání bradykardických účinků nadměrně zpomalit srdeční tep.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C01DA",
       "drug_class": "Nitráty a jejich deriváty",
-      "effect": "Zvyšují riziko hypotenze, zejména ortostatické.",
+      "effect": "S betaxololem se zvyšuje riziko nízkého krevního tlaku, zejména při postavení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze, zejména při vstávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:G04BE",
       "drug_class": "Inhibitory fosfodiesterázy 5",
-      "effect": "Zvyšují riziko hypotenze, zejména ortostatické.",
+      "effect": "S betaxololem se zvyšuje riziko nízkého krevního tlaku, zejména při postavení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze, zejména při vstávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:N04BC",
       "drug_class": "Agonisté dopaminu",
-      "effect": "Zvyšují riziko hypotenze, zejména ortostatické.",
+      "effect": "S betaxololem se zvyšuje riziko nízkého krevního tlaku, zejména při postavení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze, zejména při vstávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Nitrooční léčba, včetně nitroočních beta-blokátorů",
-      "effect": "Betaxolol může mít aditivní účinek na nitrooční tlak; pacienta užívajícího současně nitrooční léčbu je třeba přísněji sledovat.",
-      "effect_type": "synergy",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se u dospělých k léčbě vysokého krevního tlaku a k prevenci stabilní námahové anginy pectoris.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0202738",
+      "H": "",
+      "NAZEV": "BETAXOLOL TEVA",
+      "SILA": "20MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "98",
+      "CESTA": "POR",
+      "DOPLNEK": "20MG TBL FLM 98",
+      "OBAL": "BLI",
+      "DRZ": "TPP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "58",
+      "ATC_WHO": "C07AB05",
+      "RC": "58/661/12-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "20",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "98",
+      "ZDROJ_WHO": "NO26",
+      "LL": "9568",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "BETAXOLOL TEVA",
+      "MRP_CISLO": "FR/H/0495/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0202738",
+        "KOD_LATKY": "9568",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "20",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9568",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "BETAXOLOLI HYDROCHLORIDUM",
+          "NAZEV_EN": "BETAXOLOL HYDROCHLORIDE",
+          "NAZEV": "BETAXOLOL-HYDROCHLORID",
+          "DOP": "P1"
+        }
+      },
+      {
+        "KOD_SUKL": "0202738",
+        "KOD_LATKY": "3755",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0202738",
+        "KOD_LATKY": "2624",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0202738",
+        "KOD_LATKY": "3059",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3059",
+          "ZDROJ": "MEM",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU"
+        }
+      },
+      {
+        "KOD_SUKL": "0202738",
+        "KOD_LATKY": "1300",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0202738",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0202738",
+        "SQ": "7",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0202738",
+        "KOD_LATKY": "17638",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17638",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ALBUM OPADRY 03B28796",
+          "NAZEV_EN": "OPADRY 03B28796 (WHITE)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPADRY 03B28796 BÍLÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0202738",
+        "SQ": "9",
+        "S": "T",
+        "AMNT": "98",
+        "UN": "DF",
+        "substance": {}
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0202738",
+      "PIL": "PI217786.pdf",
+      "DAT_ROZ_PIL": "16.01.2025",
+      "SPC": "SPC203410.pdf",
+      "DAT_ROZ_SPC": "05.10.2023",
+      "OBAL_TEXT": "OBAL159292.pdf",
+      "DAT_ROZ_OBAL": "14.07.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C07AB05",
+        "NT": "N",
+        "NAZEV": "BETAXOLOL",
+        "NAZEV_EN": "BETAXOLOL"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

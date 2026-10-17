@@ -1,9 +1,17 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N06",
+    "atc:N06A",
+    "atc:N06AX",
+    "atc:N06AX11",
+    "substance:10997"
+  ],
   "side_effects": [
     {
       "ctcae": "Weight gain",
       "frequency": "very_common",
-      "label": "Zvýšená chuť k jídlu a zvýšení tělesné hmotnosti u dospělých.",
+      "label": "Zvýšená chuť k jídlu a zvýšení tělesné hmotnosti; u pacientů do 18 let byl významný přírůstek hmotnosti pozorován častěji než u dospělých.",
       "action": null,
       "action_condition": null
     },
@@ -31,7 +39,7 @@
     {
       "ctcae": "Lethargy",
       "frequency": "common",
-      "label": "Letargie (spavost, netečnost).",
+      "label": "Letargie, spavost a netečnost.",
       "action": null,
       "action_condition": null
     },
@@ -78,7 +86,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Rash maculo-papular",
       "frequency": "common",
       "label": "Vyrážka.",
       "action": null,
@@ -106,16 +114,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hypotension",
+      "ctcae": "Orthostatic hypotension",
       "frequency": "common",
-      "label": "Závrať nebo mdloba při náhlé změně polohy z lehu do stoje (ortostatická hypotenze).",
+      "label": "Závrať nebo mdloba při náhlém vstávání z lehu; jde o pokles krevního tlaku při změně polohy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Peripheral edema",
       "frequency": "common",
-      "label": "Otoky, typicky kotníků nebo nohou, způsobené nahromaděním tekutin.",
+      "label": "Otoky, obvykle kotníků nebo nohou, způsobené nahromaděním tekutin.",
       "action": null,
       "action_condition": null
     },
@@ -127,9 +135,9 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Insomnia",
       "frequency": "common",
-      "label": "Živé nebo neobvyklé sny.",
+      "label": "Problémy se spaním; při léčbě antidepresivy se mohou rozvinout nebo zhoršit.",
       "action": null,
       "action_condition": null
     },
@@ -143,63 +151,21 @@
     {
       "ctcae": "Anxiety",
       "frequency": "common",
-      "label": "Pocit úzkosti; úzkost se může také rozvinout nebo zhoršit během léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "common",
-      "label": "Problémy se spaním; nespavost se může také rozvinout nebo zhoršit během léčby.",
+      "label": "Úzkost; při léčbě antidepresivy se může rozvinout nebo zhoršit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Memory impairment",
       "frequency": "common",
-      "label": "Problémy s pamětí, které ve většině případů odezněly po ukončení léčby.",
+      "label": "Problémy s pamětí; ve většině případů odezněly po ukončení léčby.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "uncommon",
-      "label": "Zvláštní pocity na kůži, například pálení, bodání, lechtání nebo brnění.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Nepříjemné pocity v nohou, které vás nutí k pohybu (syndrom neklidných nohou).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "uncommon",
-      "label": "Mdloba.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Oral dysesthesia",
-      "frequency": "uncommon",
-      "label": "Pocit necitlivosti v ústech.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "uncommon",
-      "label": "Nízký krevní tlak.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Noční můry.",
+      "label": "Pálení, bodání, lechtání nebo brnění kůže.",
       "action": null,
       "action_condition": null
     },
@@ -218,9 +184,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Akathisia",
+      "ctcae": "Syncope",
       "frequency": "uncommon",
-      "label": "Naléhavá potřeba pohybu nebo psychomotorický neklid, včetně akatizie a zvýšené pohybové aktivity.",
+      "label": "Mdloba.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypotension",
+      "frequency": "uncommon",
+      "label": "Nízký krevní tlak.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Restless legs syndrome",
+      "frequency": "uncommon",
+      "label": "Nepříjemné pocity v nohou, které nutí k pohybu.",
       "action": null,
       "action_condition": null
     },
@@ -230,18 +210,26 @@
       "label": "Pocit povznesené nálady nebo zvýšené aktivity (mánie).",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví pocit povznesené nálady nebo zvýšené aktivity."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Movements involuntary",
-      "frequency": "rare",
-      "label": "Svalové záškuby nebo stahy (myoklonus).",
+      "ctcae": "Akathisia",
+      "frequency": "uncommon",
+      "label": "Naléhavá potřeba pohybu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Myoclonus",
+      "frequency": "rare",
+      "label": "Svalové záškuby nebo stahy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Aggression",
       "frequency": "rare",
       "label": "Agresivita.",
       "action": null,
@@ -250,239 +238,170 @@
     {
       "ctcae": "Pancreatitis",
       "frequency": "rare",
-      "label": "Zánět slinivky břišní (pankreatitida).",
+      "label": "Zánět slinivky břišní.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": "rare",
+      "label": "Žluté zbarvení očního bělma nebo kůže (žloutenka), které může být známkou poruchy funkce jater.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Útlum kostní dřeně nebo jiné poruchy tvorby krvinek.",
+      "label": "Útlum kostní dřeně, který se může projevit granulocytopenií, agranulocytózou, aplastickou anémií nebo trombocytopenií; hlášena byla také eosinofilie. Příznaky infekce mohou zahrnovat nevysvětlitelnou vysokou horečku, bolest v krku nebo vřídky v ústech.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví známky infekce, jako je náhlá nevysvětlitelná vysoká horečka, bolest v krku nebo vřídky v ústech."
+        "patient_guide": "Pokud se objeví nevysvětlitelná vysoká horečka, bolest v krku nebo vřídky v ústech; lékař má vyšetřit krevní obraz.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Neutrophil count decreased",
+      "ctcae": "Seizure",
       "frequency": "not_known",
-      "label": "Snížení počtu granulocytů (granulocytopenie).",
+      "label": "Epileptický záchvat nebo častější záchvaty.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví známky infekce, jako je náhlá nevysvětlitelná vysoká horečka, bolest v krku nebo vřídky v ústech."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Serotonin syndrome",
       "frequency": "not_known",
-      "label": "Nedostatek bílých krvinek, včetně agranulocytózy.",
-      "action": "discontinue_treatment",
+      "label": "Serotoninový syndrom: může se projevit kombinací nevysvětlitelné horečky, pocení, zrychleného tepu, průjmu, svalových stahů, třesavky, zesílených reflexů, neklidu, změn nálady a případně bezvědomí. U samotného mirtazapinu byl hlášen velmi vzácně.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví známky infekce, jako je náhlá nevysvětlitelná vysoká horečka, bolest v krku nebo vřídky v ústech."
+        "patient_guide": "Pokud se objeví kombinace uvedených příznaků.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Aplastic anemia",
+      "ctcae": "Suicidal ideation",
       "frequency": "not_known",
-      "label": "Aplastická anémie.",
-      "action": "discontinue_treatment",
+      "label": "Sebevražedné myšlenky nebo chování; byly hlášeny během léčby i krátce po jejím přerušení.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví známky infekce, jako je náhlá nevysvětlitelná vysoká horečka, bolest v krku nebo vřídky v ústech."
+        "patient_guide": "Pokud se kdykoli objeví myšlenky na sebepoškození nebo sebevraždu, ihned vyhledejte lékaře nebo nejbližší nemocnici.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Anemia",
+      "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Nedostatek červených krvinek.",
-      "action": "discontinue_treatment",
+      "label": "Stevensův–Johnsonův syndrom: načervenalé skvrny na trupu ve tvaru terče nebo kruhu, často s puchýřem uprostřed, olupování kůže a vředy v ústech, krku, nose, na zevních pohlavních orgánech nebo očích; vyrážce může předcházet horečka nebo příznaky podobné chřipce.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví známky infekce, jako je náhlá nevysvětlitelná vysoká horečka, bolest v krku nebo vřídky v ústech."
+        "patient_guide": "Pokud se objeví uvedené známky závažné kožní reakce.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Thrombocytopenia",
+      "ctcae": "Toxic epidermal necrolysis",
       "frequency": "not_known",
-      "label": "Nedostatek krevních destiček (trombocytopenie).",
-      "action": "discontinue_treatment",
+      "label": "Toxická epidermální nekrolýza: načervenalé skvrny na trupu ve tvaru terče nebo kruhu, často s puchýřem uprostřed, olupování kůže a vředy v ústech, krku, nose, na zevních pohlavních orgánech nebo očích; vyrážce může předcházet horečka nebo příznaky podobné chřipce.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví známky infekce, jako je náhlá nevysvětlitelná vysoká horečka, bolest v krku nebo vřídky v ústech."
+        "patient_guide": "Pokud se objeví uvedené známky závažné kožní reakce.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Eosinophilia",
+      "ctcae": "Drug reaction with eosinophilia and systemic symptoms",
       "frequency": "not_known",
-      "label": "Zvýšený počet eozinofilů (eosinofilie).",
-      "action": "discontinue_treatment",
+      "label": "Léková reakce s eozinofilií a systémovými příznaky: rozsáhlá kožní vyrážka, zvýšená tělesná teplota a zvětšené lymfatické uzliny.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví známky infekce, jako je náhlá nevysvětlitelná vysoká horečka, bolest v krku nebo vřídky v ústech."
+        "patient_guide": "Pokud se objeví rozsáhlá vyrážka spolu se zvýšenou teplotou a zvětšenými uzlinami.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Dermatosis bullous",
+      "frequency": "not_known",
+      "label": "Závažná kožní reakce: bulózní dermatitida.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví známky závažné kožní reakce.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Erythema multiforme",
+      "frequency": "not_known",
+      "label": "Závažná kožní reakce: erythema multiforme.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví známky závažné kožní reakce.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Blood antidiuretic hormone abnormal",
-      "frequency": "not_known",
+      "frequency": "very_rare",
       "label": "Nepřiměřená sekrece antidiuretického hormonu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood prolactin abnormal",
-      "frequency": "not_known",
-      "label": "Zvýšená hladina prolaktinu (hyperprolaktinémie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Lactation disorder",
-      "frequency": "not_known",
-      "label": "Tvorba mléka v mléčné žláze (galaktorea).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gynecomastia",
-      "frequency": "not_known",
-      "label": "Zvětšení prsní žlázy u muže.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyponatremia",
       "frequency": "not_known",
-      "label": "Snížení hladiny sodíku v krvi.",
+      "label": "Snížená hladina sodíku v krvi; hyponatrémie byla velmi vzácně hlášena, zejména u rizikových pacientů, například starších osob nebo při současném užívání léků, které mohou způsobovat hyponatrémii.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Blood prolactin abnormal",
       "frequency": "not_known",
-      "label": "Náměsíčnost.",
+      "label": "Zvýšená hladina prolaktinu v krvi; může souviset s tvorbou mléka v prsu nebo zvětšením prsní žlázy u mužů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Suicidal ideation",
+      "ctcae": "Gynecomastia",
       "frequency": "not_known",
-      "label": "Sebevražedné myšlenky.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás kdykoli objeví myšlenky na sebepoškození nebo sebevraždu."
-      }
+      "label": "Zvětšení prsní žlázy u mužů, případně spolu s tvorbou mléka.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Suicide attempt",
+      "ctcae": "Lactation disorder",
       "frequency": "not_known",
-      "label": "Sebevražedné chování.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví sebevražedné chování nebo myšlenky na sebepoškození či sebevraždu."
-      }
+      "label": "Tvorba mléka v mléčné žláze.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Serotoninový syndrom: kombinace příznaků, například nevysvětlitelné horečky, pocení, zrychleného tepu, průjmu, svalových stahů, třesavky, zesílených reflexů, neklidu, změn nálady, bezvědomí nebo zvýšeného slinění.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kombinace těchto příznaků."
-      }
-    },
-    {
-      "ctcae": "Seizure",
+      "ctcae": "Priapism",
       "frequency": "not_known",
-      "label": "Epileptický záchvat (křeče).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví epileptický záchvat nebo se vaše záchvaty stanou častějšími."
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "not_known",
-      "label": "Stevens-Johnsonův syndrom: načervenalé skvrny na trupu připomínající terče nebo kruhy, často s puchýřem uprostřed, olupování kůže nebo vředy v ústech, hrdle, nose, na zevních pohlavních orgánech či očích; vyrážce může předcházet horečka nebo příznaky podobné chřipce.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza: načervenalé skvrny na trupu připomínající terče nebo kruhy, často s puchýřem uprostřed, olupování kůže nebo vředy v ústech, hrdle, nose, na zevních pohlavních orgánech či očích; vyrážce může předcházet horečka nebo příznaky podobné chřipce.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce."
-      }
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "not_known",
-      "label": "Závažná kožní reakce (erythema multiforme).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce."
-      }
+      "label": "Přetrvávající bolestivá erekce.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Dermatosis bullous",
       "frequency": "not_known",
-      "label": "Bulózní dermatitida.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS), která se může projevit rozsáhlou kožní vyrážkou, zvýšenou tělesnou teplotou a zvětšenými lymfatickými uzlinami.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Rozsáhlá kožní vyrážka, zvýšená tělesná teplota a zvětšené lymfatické uzliny (DRESS nebo syndrom přecitlivělosti na léčivý přípravek).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Žluté zabarvení očního bělma nebo kůže (žloutenka), které může být známkou poruchy funkce jater.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví žluté zabarvení očního bělma nebo kůže."
-      }
-    },
-    {
-      "ctcae": "Oral dysesthesia",
-      "frequency": "not_known",
-      "label": "Zvláštní pocity v ústech.",
+      "label": "Závažné kožní reakce: bulózní dermatitida.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Erythema multiforme",
       "frequency": "not_known",
-      "label": "Otok v ústech.",
+      "label": "Závažné kožní reakce: erythema multiforme.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Generalized edema",
+      "ctcae": "Somnambulism",
       "frequency": "not_known",
-      "label": "Otoky po celém těle (generalizované otoky).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Localized edema",
-      "frequency": "not_known",
-      "label": "Lokální otoky.",
+      "label": "Náměsíčnost.",
       "action": null,
       "action_condition": null
     },
@@ -494,30 +413,37 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Zvýšené slinění.",
+      "ctcae": "Urticaria",
+      "frequency": "common",
+      "label": "U dětí mladších 18 let byla v klinických studiích často pozorována kopřivka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": "rare",
-      "label": "Zvýšená aktivita transamináz v séru.",
+      "ctcae": "Hypertriglyceridemia",
+      "frequency": 34.4828,
+      "label": "U dětí mladších 18 let byla v klinických studiích pozorována zvýšená hladina triglyceridů v krvi (2,9 %).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Weight gain",
+      "frequency": 2.0492,
+      "label": "U dětí ve věku 7–18 let byl v klinických studiích významný přírůstek tělesné hmotnosti (nejméně 7 %) pozorován u 48,8 % pacientů; oproti 5,7 % při placebu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "not_known",
+      "label": "Zvýšená hladina kreatinkinázy v krvi; může se pojit s bolestí, ztuhlostí nebo slabostí svalů a tmavou či změněnou barvou moči.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rhabdomyolysis",
       "frequency": "not_known",
-      "label": "Rozpad svalů (rhabdomyolýza), který se může projevit bolestí svalů, ztuhlostí nebo slabostí a ztmavnutím či změnou barvy moči.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Přetrvávající bolestivá erekce.",
+      "label": "Rabdomyolýza; může se projevit bolestí, ztuhlostí nebo slabostí svalů a tmavou či změněnou barvou moči.",
       "action": null,
       "action_condition": null
     },
@@ -529,137 +455,431 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Generalized edema",
       "frequency": "not_known",
-      "label": "Zvýšená hladina kreatinkinázy v krvi.",
+      "label": "Otoky po celém těle.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Weight gain",
-      "frequency": 2.05,
-      "label": "Významné zvýšení tělesné hmotnosti alespoň o 7 % u dětí a dospívajících léčených dávkami 15–45 mg.",
+      "ctcae": "Localized edema",
+      "frequency": "not_known",
+      "label": "Místní otoky.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Urticaria",
-      "frequency": 8.47,
-      "label": "Kopřivka u dětí a dospívajících léčených dávkami 15–45 mg.",
+      "ctcae": "Oral dysesthesia",
+      "frequency": "not_known",
+      "label": "Zvláštní pocity v ústech.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hypertriglyceridemia",
-      "frequency": 34.48,
-      "label": "Zvýšená hladina triglyceridů v krvi u dětí a dospívajících léčených dávkami 15–45 mg.",
+      "ctcae": "Edema face",
+      "frequency": "not_known",
+      "label": "Otok v ústech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nightmares",
+      "frequency": "uncommon",
+      "label": "Noční můry.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Euphoria",
+      "frequency": "uncommon",
+      "label": "Pocit povznesené nálady.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Inhibitory monoaminooxidázy (MAO)",
-      "effect": "Mirtazapin se nesmí užívat současně s inhibitory MAO ani během dvou týdnů po ukončení jejich užívání. Po ukončení mirtazapinu musí před zahájením léčby inhibitorem MAO rovněž uplynout dva týdny.",
+      "class_id": "group:serotonergic",
+      "drug_class": "Serotonergní léky",
+      "effect": "Současné užívání mirtazapinu s dalšími serotonergními léky, například SSRI, venlafaxinem, tryptofanem, triptany, tramadolem, linezolidem, lithiem, methylenovou modří nebo třezalkou, může vyvolat nežádoucí účinky spojené se serotoninem včetně serotoninového syndromu. Je nutná opatrnost a pečlivé klinické sledování.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cns_depressant",
+      "drug_class": "Léky tlumící centrální nervový systém",
+      "effect": "Mirtazapin může zesílit tlumivý účinek alkoholu na centrální nervový systém a sedativní účinek benzodiazepinů a dalších sedativ, zejména antipsychotik, antihistaminik H1 a opioidů. Při společném užívání je nutná opatrnost; během léčby se doporučuje vyhnout alkoholu. Ospalost se může zvýšit také při kombinaci s olanzapinem, cetirizinem nebo morfinem.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léky prodlužující interval QT",
+      "effect": "Současné užívání mirtazapinu s léky prodlužujícími interval QT, například některými antipsychotiky nebo antibiotiky, může zvýšit riziko prodloužení QT intervalu a komorových arytmií včetně torsades de pointes.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Moklobemid",
+      "effect": "Mirtazapin se nesmí užívat současně s inhibitory MAO ani během dvou týdnů po ukončení léčby inhibitorem MAO. Po ukončení mirtazapinu musí před zahájením inhibitoru MAO uplynout dva týdny.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "Serotonergní léčivé přípravky (L-tryptofan, triptany, tramadol, linezolid, methylenová modř, SSRI, venlafaxin, lithium a přípravky s třezalkou tečkovanou)",
-      "effect": "Současné užívání s mirtazapinem může vést k nežádoucím účinkům spojeným se serotoninem včetně serotoninového syndromu. Je doporučena opatrnost a pečlivé klinické sledování; při výskytu příznaků má být mirtazapin přerušen a zahájena podpůrná symptomatická léčba.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": "very_rare",
-          "label": "Serotoninový syndrom: kombinace příznaků, například nevysvětlitelné horečky, pocení, zrychleného tepu, průjmu, svalových stahů, třesavky, zesílených reflexů, neklidu, změn nálady, bezvědomí nebo zvýšeného slinění.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud se u vás objeví kombinace těchto příznaků."
-          }
-        }
-      ]
+      "class_id": null,
+      "drug": "Tranylcypromin",
+      "effect": "Mirtazapin se nesmí užívat současně s inhibitory MAO ani během dvou týdnů po ukončení léčby inhibitorem MAO. Po ukončení mirtazapinu musí před zahájením inhibitoru MAO uplynout dva týdny.",
+      "effect_type": "contraindicated",
+      "side_effects": []
     },
     {
-      "drug_class": "Benzodiazepiny a jiná sedativa, zejména antipsychotika, H1 antihistaminika a opioidy",
-      "effect": "Mirtazapin může zesílit sedativní účinek těchto přípravků. Při jejich společném předepisování je nutná opatrnost.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zvýšená ospalost nebo útlum způsobené zesílením sedativního účinku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": null,
+      "drug": "Selegilin",
+      "effect": "Mirtazapin se nesmí užívat současně s inhibitory MAO ani během dvou týdnů po ukončení léčby inhibitorem MAO. Po ukončení mirtazapinu musí před zahájením inhibitoru MAO uplynout dva týdny.",
+      "effect_type": "contraindicated",
+      "side_effects": []
     },
     {
-      "drug": "alkohol",
-      "effect": "Mirtazapin může zesílit tlumivý účinek alkoholu na centrální nervový systém a při kombinaci se můžete cítit ospalý(á). Během léčby mirtazapinem se doporučuje alkohol nekonzumovat.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Ospalost způsobená zesíleným tlumivým účinkem alkoholu na centrální nervový systém.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": null,
+      "drug": "Nefazodon",
+      "effect": "Nefazodon může zvýšit koncentraci mirtazapinu v krvi; lékař může snížit dávku mirtazapinu a po ukončení nefazodonu ji znovu zvýšit.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
     },
     {
-      "drug": "warfarin",
-      "effect": "Mirtazapin může zvýšit účinek warfarinu v krvi. Při dávce mirtazapinu 30 mg jednou denně bylo pozorováno malé, ale statisticky významné zvýšení INR; při vyšších dávkách nelze vyloučit výraznější účinek. Při společné léčbě se doporučuje sledovat INR.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Zvýšení INR.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": null,
+      "drug": "Ketokonazol",
+      "effect": "Silný inhibitor CYP3A4 ketokonazol může zvýšit maximální koncentraci mirtazapinu přibližně o 40 % a jeho celkovou expozici (AUC) přibližně o 50 %. Při společném užívání silných inhibitorů CYP3A4 může být nutné snížit dávku mirtazapinu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky prodlužující interval QT, například některá antipsychotika nebo antibiotika",
-      "effect": "Při současném užívání s mirtazapinem může být zvýšené riziko prodloužení intervalu QT a/nebo komorových arytmií, například torsades de pointes.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení intervalu QT.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Komorové arytmie, například torsades de pointes.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": null,
+      "drug": "Cimetidin",
+      "effect": "Cimetidin může zvýšit průměrnou koncentraci mirtazapinu v plazmě o více než 50 %. Při společném užívání může být nutné dávku mirtazapinu snížit; po ukončení cimetidinu může být nutné ji znovu zvýšit.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
     },
     {
-      "drug_class": "Induktory CYP3A4 a další induktory jaterního metabolismu (karbamazepin, fenytoin, rifampicin)",
-      "effect": "Karbamazepin a fenytoin zvyšují clearance mirtazapinu přibližně dvojnásobně a snižují jeho průměrnou plazmatickou koncentraci přibližně o 60 %, respektive 45 %. Při přidání karbamazepinu nebo jiného induktoru jaterního metabolismu může být nutné zvýšit dávku mirtazapinu; po ukončení užívání induktoru může být nutné dávku mirtazapinu snížit.",
+      "class_id": null,
+      "drug": "Karbamazepin",
+      "effect": "Karbamazepin, induktor CYP3A4, přibližně zdvojnásobuje clearance mirtazapinu a snižuje jeho průměrnou koncentraci v plazmě asi o 60 %. Při jeho přidání může být nutné zvýšit dávku mirtazapinu; po ukončení karbamazepinu ji může být nutné snížit.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Silné inhibitory CYP3A4, inhibitory HIV proteázy, azolová antimykotika, erythromycin, cimetidin a nefazodon",
-      "effect": "Tyto přípravky mohou zvýšit koncentraci mirtazapinu v krvi. Cimetidin může zvýšit průměrnou plazmatickou koncentraci o více než 50 %. Při současném podávání je nutná opatrnost a může být třeba snížit dávku mirtazapinu; po ukončení užívání těchto přípravků může být nutné dávku mirtazapinu znovu zvýšit.",
-      "effect_type": "increased_exposure",
+      "class_id": null,
+      "drug": "Fenytoin",
+      "effect": "Fenytoin, induktor CYP3A4, zvyšuje clearance mirtazapinu a snižuje jeho průměrnou koncentraci v plazmě asi o 45 %. Při jeho přidání může být nutné zvýšit dávku mirtazapinu; po ukončení fenytoinu ji může být nutné snížit.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "ketokonazol",
-      "effect": "Současné podávání silného inhibitoru CYP3A4 ketokonazolu zvyšuje vrchol plazmatické hladiny mirtazapinu přibližně o 40 % a jeho AUC přibližně o 50 %. Při současném podávání silných inhibitorů CYP3A4 může být nutné snížit dávku mirtazapinu.",
-      "effect_type": "increased_exposure",
+      "class_id": null,
+      "drug": "Rifampicin",
+      "effect": "Rifampicin, induktor jaterního metabolismu, může snížit koncentraci mirtazapinu v krvi. Při jeho přidání může být nutné zvýšit dávku mirtazapinu; po ukončení rifampicinu ji může být nutné snížit.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Warfarin",
+      "effect": "Mirtazapin v dávce 30 mg jednou denně mírně, ale statisticky významně zvyšuje INR; při vyšších dávkách nelze vyloučit výraznější účinek. Při společném užívání warfarinu a mirtazapinu má lékař sledovat INR.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Paroxetin",
+      "effect": "Ve studii interakcí mirtazapin neovlivnil farmakokinetiku současně podávaného paroxetinu.",
+      "effect_type": null,
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Mirtazapin Sandoz se používá k léčbě deprese u dospělých.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0107639",
+      "H": "",
+      "NAZEV": "MIRTAZAPIN SANDOZ",
+      "SILA": "15MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "15MG TBL FLM 30",
+      "OBAL": "BLI",
+      "DRZ": "SNJ",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "30",
+      "ATC_WHO": "N06AX11",
+      "RC": "30/135/06-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "30",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "15",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10997",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "48",
+      "EXP_T": "M",
+      "NAZEV_REG": "MIRTAZAPIN SANDOZ",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "10997",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "15",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10997",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "MIRTAZAPINUM",
+          "NAZEV_EN": "MIRTAZAPINE",
+          "NAZEV": "MIRTAZAPIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "2970",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "4336",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4336",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROLOSUM",
+          "NAZEV_EN": "HYPROLOSE",
+          "NAZEV": "HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "1300",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "SQ": "7",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "748",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "2710",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "4688",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4688",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 8000",
+          "NAZEV_EN": "MACROGOL 8000",
+          "NAZEV": "MAKROGOL 8000"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "4256",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "4479",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4479",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FLAVI QUINOLINI LACCA ALUMINICA",
+          "NAZEV_EN": "QUINOLINE YELLOW ALUMINIUM LAKE",
+          "NAZEV": "HLINITÝ LAK CHINOLINOVÉ ŽLUTI"
+        }
+      },
+      {
+        "KOD_SUKL": "0107639",
+        "KOD_LATKY": "4787",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4787",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FLAVI ORANGEATI LACCA ALUMINICA",
+          "NAZEV_EN": "YELLOW ORANGE S ALUMINIUM LAKE",
+          "NAZEV": "HLINITÝ LAK ORANŽOVÉ ŽLUTI"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0107639",
+      "PIL": "PI215140.pdf",
+      "DAT_ROZ_PIL": "22.10.2024",
+      "SPC": "SPC215141.pdf",
+      "DAT_ROZ_SPC": "22.10.2024",
+      "OBAL_TEXT": "OBAL162255.pdf",
+      "DAT_ROZ_OBAL": "01.10.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N06AX11",
+        "NT": "N",
+        "NAZEV": "MIRTAZAPIN",
+        "NAZEV_EN": "MIRTAZAPINE"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

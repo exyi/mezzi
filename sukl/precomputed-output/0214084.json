@@ -1,140 +1,100 @@
 {
+  "classes": [
+    "atc:H",
+    "atc:H02",
+    "atc:H02A",
+    "atc:H02AB",
+    "atc:H02AB02",
+    "substance:451"
+  ],
   "side_effects": [
-    {
-      "ctcae": "Depression",
-      "frequency": 20.0,
-      "label": "Závažné problémy s duševním zdravím (asi 5 ze 100 pacientů): deprese včetně myšlenek na sebevraždu, mánie nebo kolísání nálad, úzkost, potíže se spánkem, myšlením či pamětí, zmatenost, halucinace, podivné či děsivé myšlenky, změny chování nebo pocit osamělosti; mohou být závažné a častější při vysokých dávkách.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některý z těchto závažných problémů s duševním zdravím."
-      }
-    },
-    {
-      "ctcae": "Adrenal insufficiency",
-      "frequency": "not_known",
-      "label": "Nedostatečnost kůry nadledvin, která se může projevit závažnou bolestí břicha, nevolností, zvracením, průjmem, hlubokou svalovou slabostí a únavou, extrémně nízkým krevním tlakem, úbytkem hmotnosti a horečkou.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto příznaky."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Protržení střeva, které se může projevit náhlou bolestí a citlivostí břicha, nevolností, zvracením, horečkou a krví ve stolici; zvláště pokud máte nebo jste měl(a) onemocnění střev.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto příznaky."
-      }
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "not_known",
-      "label": "Zhoršení stávajících srdečních potíží, které se může projevit dušností nebo otokem kotníků.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví dušnost nebo otok kotníků."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Feochromocytomová krize, která může být smrtelná; může se projevit bolestí hlavy, pocením, bušením srdce a zvýšeným krevním tlakem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některý z těchto příznaků."
-      }
-    },
     {
       "ctcae": "Infections and infestations - Other, specify",
       "frequency": "not_known",
-      "label": "Zvýšená náchylnost k infekcím nebo zhoršení (latentních) infekcí, včetně septikemie, tuberkulózy, očních, virových a plísňových infekcí, planých neštovic a spalniček; oportunní infekce a maskování příznaků infekce.",
+      "label": "Větší náchylnost k infekcím nebo zhoršení infekcí, včetně latentních, virových, plísňových a oportunních infekcí; mohou být maskovány jejich příznaky.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás během léčby objeví infekce jakéhokoli druhu, zejména kašel, horečka, dušnost nebo bolest na hrudi."
+        "patient_guide": "Pokud se během léčby objeví infekce jakéhokoli druhu.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Leukocytosis",
+      "ctcae": "White blood cell decreased",
       "frequency": "not_known",
-      "label": "Zvýšení počtu bílých krvinek (leukocytóza).",
+      "label": "Snížení počtu bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Lymphopenia",
+      "ctcae": "Leukocytosis",
       "frequency": "not_known",
-      "label": "Snížení počtu lymfocytů.",
+      "label": "Zvýšení počtu bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Eosinophilia",
       "frequency": "not_known",
-      "label": "Snížení počtu eozinofilů (eosinopenie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Zvýšení počtu červených krvinek (polycytemie).",
+      "label": "Zvýšení počtu eozinofilů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Abnormální srážlivost krve.",
+      "label": "Zvýšený počet červených krvinek nebo abnormální srážlivost krve.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "not_known",
-      "label": "Reakce z přecitlivělosti na přípravek.",
+      "label": "Přecitlivělost na lék, včetně vyrážky a otoku; v závažných případech potíže s dýcháním nebo závrať.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "not_known",
-      "label": "Závažná anafylaktická reakce.",
+      "label": "Závažná, potenciálně život ohrožující anafylaktická reakce.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Endocrine disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Porucha regulace hormonů, potlačení osy hypotalamus–hypofýza–nadledviny nebo hypofýzy a sekundární nedostatečnost nadledvin; účinky se mohou projevit zejména při stresu, například po úrazu nebo operaci.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při silné bolesti břicha, nevolnosti, zvracení, průjmu, výrazné svalové slabosti a únavě, velmi nízkém krevním tlaku, úbytku hmotnosti a horečce.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Cushingoid",
       "frequency": "not_known",
-      "label": "Potlačení hormonální osy hypotalamus–hypofýza–nadledviny a Cushingův syndrom, například měsícovitý obličej, zarudnutí obličeje a obezita v oblasti trupu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Adrenal insufficiency",
-      "frequency": "not_known",
-      "label": "Sekundární nedostatečnost nadledvin nebo hypofýzy, zejména při stresu, jako je úraz nebo operace; přechodná nedostatečnost nadledvin se může objevit při krátkodobé léčbě.",
+      "label": "Cushingoidní vzhled, například měsícovitý obličej, zarudnutí obličeje a ukládání tuku na trupu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Growth suppression",
       "frequency": "not_known",
-      "label": "Zpomalení růstu u kojenců, dětí a dospívajících; při léčbě dětí mohou kortikosteroidy způsobit předčasné uzavření růstových štěrbin, které může být nevratné.",
+      "label": "Zpomalení růstu u dětí a dospívajících; riziko závisí na dávce.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Irregular menstruation",
       "frequency": "not_known",
-      "label": "Nepravidelná menstruace nebo vymizení menstruace (amenorea).",
+      "label": "Nepravidelná menstruace nebo její vymizení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hirsutism",
       "frequency": "not_known",
-      "label": "Nadměrný růst tělesného ochlupení (hirsutismus).",
+      "label": "Nadměrné ochlupení, zejména u žen.",
       "action": null,
       "action_condition": null
     },
@@ -148,35 +108,28 @@
     {
       "ctcae": "Metabolism and nutrition disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Záporná bilance bílkovin a vápníku a zvýšená chuť k jídlu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Generalized edema",
-      "frequency": "not_known",
-      "label": "Zadržování sodíku a vody v těle (retence tekutin).",
+      "label": "Záporná bilance bílkovin a vápníku, zvýšená chuť k jídlu, zadržování sodíku a vody a hypokalemická alkalóza.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypokalemia",
       "frequency": "not_known",
-      "label": "Ztráty draslíku a nízká hladina draslíku v krvi, někdy spojená s poruchami srdečního rytmu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alkalosis",
-      "frequency": "not_known",
-      "label": "Hypokalemická alkalóza.",
+      "label": "Ztráty draslíku, které mohou způsobit poruchy srdečního rytmu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diabetes mellitus",
       "frequency": "not_known",
-      "label": "Projevení dosud skrytého diabetu a porucha tolerance cukrů vyžadující zvýšení dávek léků na cukrovku.",
+      "label": "Projevení dosud skrytého diabetu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperglycemia",
+      "frequency": "not_known",
+      "label": "Porucha tolerance cukrů, která může vyžadovat zvýšení dávky léků na diabetes.",
       "action": null,
       "action_condition": null
     },
@@ -190,91 +143,152 @@
     {
       "ctcae": "Hypertriglyceridemia",
       "frequency": "not_known",
-      "label": "Zvýšená hladina triacylglycerolů v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Psychická závislost a zhoršení schizofrenie nebo jiného duševního onemocnění.",
+      "label": "Zvýšená hladina triglyceridů v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Euphoria",
       "frequency": "not_known",
-      "label": "Euforie.",
-      "action": null,
-      "action_condition": null
+      "label": "Psychické změny, například povznesená nálada; obvykle se objeví během několika dnů až týdnů od zahájení léčby a častěji při vysokých dávkách.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se změny nálady nebo chování stanou závažnými.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Depression",
+      "frequency": 20.0,
+      "label": "Závažné psychické problémy se mohou vyskytnout asi u 5 ze 100 pacientů užívajících léky jako dexamethason; zahrnují depresi, také s myšlenkami na sebevraždu. Obvykle se objeví během několika dnů až týdnů od zahájení léčby a častěji při vysokých dávkách.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při depresi nebo myšlenkách na sebevraždu.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Mania",
+      "frequency": 20.0,
+      "label": "Závažné psychické problémy se mohou vyskytnout asi u 5 ze 100 pacientů užívajících léky jako dexamethason; zahrnují mánii nebo kolísání nálad. Obvykle se objeví během několika dnů až týdnů od zahájení léčby a častěji při vysokých dávkách.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se změny nálady stanou závažnými.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Anxiety",
+      "frequency": 20.0,
+      "label": "Úzkost jako součást závažných psychických problémů, které se mohou vyskytnout asi u 5 ze 100 pacientů užívajících léky jako dexamethason.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se psychické potíže stanou závažnými.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": 20.0,
+      "label": "Potíže se spánkem jako součást závažných psychických problémů, které se mohou vyskytnout asi u 5 ze 100 pacientů užívajících léky jako dexamethason.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se psychické potíže stanou závažnými.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Confusion",
+      "frequency": 20.0,
+      "label": "Potíže s myšlením nebo zmatenost jako součást závažných psychických problémů, které se mohou vyskytnout asi u 5 ze 100 pacientů užívajících léky jako dexamethason.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se psychické potíže stanou závažnými.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Amnesia",
+      "frequency": 20.0,
+      "label": "Ztráta paměti jako součást závažných psychických problémů, které se mohou vyskytnout asi u 5 ze 100 pacientů užívajících léky jako dexamethason.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se psychické potíže stanou závažnými.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Hallucinations",
+      "frequency": 20.0,
+      "label": "Vnímání, vidění nebo slyšení věcí, které neexistují, jako součást závažných psychických problémů, které se mohou vyskytnout asi u 5 ze 100 pacientů užívajících léky jako dexamethason.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se psychické potíže stanou závažnými.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Psychosis",
       "frequency": "not_known",
-      "label": "Psychotické reakce nebo manifestovaná psychóza.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "not_known",
-      "label": "Nespavost.",
-      "action": null,
-      "action_condition": null
+      "label": "Psychotické reakce; psychické změny se obvykle objeví během několika dnů až týdnů od zahájení léčby a častěji při vysokých dávkách.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se psychické potíže stanou závažnými.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Suicidal ideation",
-      "frequency": "not_known",
-      "label": "Sebevražedné tendence nebo myšlenky.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Depression",
-      "frequency": "not_known",
-      "label": "Deprese.",
-      "action": null,
-      "action_condition": null
+      "frequency": 20.0,
+      "label": "Myšlenky na sebevraždu jako součást závažných psychických problémů, které se mohou vyskytnout asi u 5 ze 100 pacientů užívajících léky jako dexamethason.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při myšlenkách na sebevraždu.",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Seizure",
       "frequency": "not_known",
-      "label": "Projevení dosud skryté epilepsie nebo zvýšení počtu záchvatů při známé epilepsii.",
+      "label": "Záchvaty nebo zhoršení epilepsie.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Edema cerebral",
+      "ctcae": "Dizziness",
       "frequency": "not_known",
-      "label": "Zvýšený nitrolební tlak s otokem papily zrakového nervu u dětí (pseudotumor cerebri), obvykle po vysazení léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vertigo",
-      "frequency": "not_known",
-      "label": "Závrať nebo vertigo.",
+      "label": "Závrať.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "not_known",
-      "label": "Bolest hlavy; po vysazení léčby se může objevit těžká neobvyklá bolest hlavy se zrakovými poruchami.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Glaucoma",
-      "frequency": "not_known",
-      "label": "Zvýšený nitrooční tlak nebo glaukom.",
+      "label": "Bolest hlavy; po vysazení se může objevit těžká neobvyklá bolest hlavy se zrakovými poruchami.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Papilledema",
       "frequency": "not_known",
-      "label": "Otok papily zrakového nervu.",
+      "label": "Zvýšený nitrolební tlak s otokem papily, zejména u dětí, obvykle po vysazení léčby.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "not_known",
+      "label": "Rozmazané vidění; může se objevit také zkreslené vidění, zpravidla jen na jednom oku.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při rozmazaném vidění nebo jiné poruše zraku.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Glaucoma",
+      "frequency": "not_known",
+      "label": "Zvýšený nitrooční tlak nebo glaukom; dlouhodobé užívání může poškodit zrakový nerv.",
       "action": null,
       "action_condition": null
     },
@@ -286,74 +300,50 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Retinopathy",
       "frequency": "not_known",
-      "label": "Ztenčení rohovky a skléry.",
+      "label": "Chorioretinopatie včetně centrální serózní chorioretinopatie, která může způsobit neostré nebo zkreslené vidění.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při rozmazaném vidění nebo jiné poruše zraku.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Eye disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Otok papily, atrofie rohovky nebo bělma, vystouplé oči, zhoršení příznaků vředu na rohovce nebo porucha zraku včetně ztráty zraku.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Eye infection",
       "frequency": "not_known",
-      "label": "Zvýšený výskyt virových, plísňových a bakteriálních očních infekcí nebo zhoršení stávajících očních infekcí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Corneal ulcer",
-      "frequency": "not_known",
-      "label": "Zhoršení příznaků spojených s vředem na rohovce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Chorioretinopatie, včetně centrální serózní chorioretinopatie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blurred vision",
-      "frequency": "not_known",
-      "label": "Rozmazané nebo zkreslené vidění či jiná porucha zraku; může se objevit také ztráta zraku.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozmazané vidění nebo jiná porucha zraku."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Vystouplé oční bulvy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myocardial infarction",
-      "frequency": "not_known",
-      "label": "Ruptura srdečního svalu po nedávno prodělaném infarktu myokardu.",
+      "label": "Zvýšený výskyt očních infekcí způsobených viry, plísněmi nebo bakteriemi a zhoršení již přítomných očních infekcí.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Heart failure",
       "frequency": "not_known",
-      "label": "Městnavé srdeční selhání u osob s predispozicí nebo zhoršení těžkého srdečního selhání.",
+      "label": "Městnavé srdeční selhání u osob se sklonem k němu nebo zhoršení závažného srdečního selhání.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při dušnosti nebo otoku kotníků.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Srdeční dekompenzace nebo poškození srdečního svalu po nedávném infarktu; při vysokých dávkách se může objevit zpomalení srdečního tepu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Sinus bradycardia",
       "frequency": "not_known",
-      "label": "Zpomalení srdečního tepu (bradykardie), které se může objevit při vysokých dávkách dexamethasonu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Srdeční dekompenzace.",
+      "label": "Zpomalení srdečního tepu při vysokých dávkách dexamethasonu; zdroj blíže neurčuje typ bradykardie.",
       "action": null,
       "action_condition": null
     },
@@ -367,14 +357,14 @@
     {
       "ctcae": "Vasculitis",
       "frequency": "not_known",
-      "label": "Zánět cév (vaskulitida).",
+      "label": "Zánět cév.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Venous thromboembolism",
       "frequency": "not_known",
-      "label": "Zvýšená srážlivost krve a riziko krevních sraženin, které mohou uzavřít cévu, například v noze nebo v plicích.",
+      "label": "Zvýšené riziko tvorby krevních sraženin a tromboembolických komplikací.",
       "action": null,
       "action_condition": null
     },
@@ -388,35 +378,28 @@
     {
       "ctcae": "Dyspepsia",
       "frequency": "not_known",
-      "label": "Zažívací potíže (dyspepsie).",
+      "label": "Zažívací potíže.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal distension",
       "frequency": "not_known",
-      "label": "Nafouklé nebo oteklé břicho.",
+      "label": "Nadmutí břicha.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gastric ulcer",
       "frequency": "not_known",
-      "label": "Žaludeční vředy, které mohou proděravět a krvácet.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "not_known",
-      "label": "Akutní zánět slinivky břišní, který se může projevit bolestí zad a břicha.",
+      "label": "Žaludeční vředy, které mohou proděravět nebo krvácet.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Esophagitis",
       "frequency": "not_known",
-      "label": "Zánět a vředy v jícnu.",
+      "label": "Zánět jícnu, včetně ulcerózního zánětu.",
       "action": null,
       "action_condition": null
     },
@@ -424,6 +407,13 @@
       "ctcae": "Esophageal infection",
       "frequency": "not_known",
       "label": "Kandidóza jícnu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "not_known",
+      "label": "Akutní zánět slinivky břišní.",
       "action": null,
       "action_condition": null
     },
@@ -449,63 +439,62 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hypertrichosis",
+      "ctcae": "Colonic perforation",
       "frequency": "not_known",
-      "label": "Nadměrné ochlupení (hypertrichóza).",
-      "action": null,
-      "action_condition": null
+      "label": "Protržení střeva; zejména při současném nebo dřívějším onemocnění střev mohou být varovnými příznaky náhlá bolest břicha, citlivost, nevolnost, zvracení, horečka a krev ve stolici.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při náhlé bolesti břicha, citlivosti, nevolnosti, zvracení, horečce nebo krvi ve stolici, zvláště pokud máte nebo jste měl(a) onemocnění střev.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Střevní perforace může nastat zejména při těžké ulcerózní kolitidě s rizikem perforace, divertikulitidě nebo bezprostředně po operaci střevního spojení; při vysokých dávkách mohou chybět známky podráždění pobřišnice.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při náhlé bolesti břicha, citlivosti, nevolnosti, zvracení, horečce nebo krvi ve stolici, zvláště pokud máte nebo jste měl(a) onemocnění střev.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Skin atrophy",
       "frequency": "not_known",
-      "label": "Ztenčená, jemná kůže (atrofie kůže).",
+      "label": "Ztenčení nebo křehkost kůže.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Telangiectasia",
       "frequency": "not_known",
-      "label": "Viditelně rozšířené drobné cévky (teleangiektázie).",
+      "label": "Viditelně rozšířené drobné cévky.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Strie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
+      "ctcae": "Erythema",
       "frequency": "not_known",
       "label": "Zarudnutí kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Acne",
       "frequency": "not_known",
       "label": "Steroidní akné.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Drobné krvácivé skvrny na kůži (petechie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Bruising",
       "frequency": "not_known",
-      "label": "Modřiny a snadná tvorba modřin.",
+      "label": "Snadná tvorba modřin, tečkovité krvácení nebo krvácení pod kůži.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Dermatitis allergic",
       "frequency": "not_known",
       "label": "Alergický zánět kůže.",
       "action": null,
@@ -521,7 +510,7 @@
     {
       "ctcae": "Edema face",
       "frequency": "not_known",
-      "label": "Angioneurotický otok.",
+      "label": "Otok obličeje nebo angioneurotický otok.",
       "action": null,
       "action_condition": null
     },
@@ -533,44 +522,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin hyperpigmentation",
-      "frequency": "not_known",
-      "label": "Poruchy pigmentace kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Zvýšená křehkost vlásečnic, které mohou snadno praskat, a krvácení pod kůži.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Zánět kůže kolem úst (periorální dermatitida).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperhidrosis",
-      "frequency": "not_known",
-      "label": "Nadměrné pocení.",
+      "label": "Strie, poruchy pigmentace, zvýšené pocení, periorální dermatitida, zvýšený růst vlasů a oslabené vlásečnice.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Osteoporosis",
       "frequency": "not_known",
-      "label": "Řídnutí kostí (osteoporóza) a zvýšené riziko zlomenin.",
+      "label": "Řídnutí kostí se zvýšeným rizikem zlomenin.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fracture",
       "frequency": "not_known",
-      "label": "Zlomeniny obratlů a dlouhých kostí.",
+      "label": "Zlomeniny obratlů nebo dlouhých kostí.",
       "action": null,
       "action_condition": null
     },
@@ -582,46 +550,29 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Tendonitis",
       "frequency": "not_known",
-      "label": "Zánět šlach.",
+      "label": "Zánět šlach; riziko zánětu a prasknutí se zvyšuje při současném užívání fluorochinolonů a při potížích s ledvinami.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud si všimnete bolestivých, ztuhlých nebo oteklých kloubů či šlach."
+        "patient_guide": "Při bolestivých, ztuhlých nebo oteklých kloubech či šlachách.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
       "frequency": "not_known",
-      "label": "Natržení nebo ruptura šlachy; riziko je velmi vzácně zvýšené a vyšší při potížích s ledvinami nebo současné léčbě určitými antibiotiky.",
-      "action": null,
-      "action_condition": null
+      "label": "Natržení nebo prasknutí šlachy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při bolestivých, ztuhlých nebo oteklých kloubech či šlachách.",
+        "min_severity": 2
+      }
     },
     {
-      "ctcae": null,
+      "ctcae": "Myopathy",
       "frequency": "not_known",
-      "label": "Ochabování svalů, svalová atrofie nebo ztráta svalové hmoty.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myositis",
-      "frequency": "not_known",
-      "label": "Myopatie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Generalized muscle weakness",
-      "frequency": "not_known",
-      "label": "Svalová slabost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Growth suppression",
-      "frequency": "not_known",
-      "label": "Předčasné uzavření růstových štěrbin kostí u dětí a dospívajících.",
+      "label": "Svalová slabost, proximální myopatie nebo úbytek svalové hmoty.",
       "action": null,
       "action_condition": null
     },
@@ -633,21 +584,14 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Oligospermia",
       "frequency": "not_known",
-      "label": "Změny v počtu a pohybu spermií.",
+      "label": "Změny počtu nebo pohyblivosti spermií.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Vaccination site lymphadenopathy",
-      "frequency": "not_known",
-      "label": "Snížená odpověď na očkování a kožní testy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
+      "ctcae": "Wound complication",
       "frequency": "not_known",
       "label": "Pomalé hojení ran.",
       "action": null,
@@ -663,414 +607,265 @@
     {
       "ctcae": "Adrenal insufficiency",
       "frequency": "not_known",
-      "label": "Abstinenční syndrom po příliš rychlém snížení dávky po dlouhodobé léčbě: může zahrnovat horečku, bolesti svalů a kloubů, rýmu, zánět spojivek, bolestivé svědivé kožní uzlíky a úbytek hmotnosti; při příliš rychlém vysazení může nastat také nízký krevní tlak nebo akutní nedostatečnost nadledvin.",
+      "label": "Nedostatečnost nadledvin při příliš rychlém snížení dávky nebo ukončení dlouhodobé léčby; může se projevit nízkým krevním tlakem, návratem léčeného onemocnění nebo příznaky z vysazení. Po dlouhodobé léčbě může přetrvávat měsíce až déle než rok.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud ukončíte léčbu příliš brzy a objeví se některý z těchto příznaků."
+        "patient_guide": "Pokud léčbu ukončíte příliš brzy a objeví se horečka, bolest svalů nebo kloubů, rýma, úbytek hmotnosti, bolestivé svědění kůže nebo zánět spojivek.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Hypotension",
       "frequency": "not_known",
-      "label": "Nízký krevní tlak, který se může objevit při příliš rychlém ukončení léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "not_known",
-      "label": "Horečka jako příznak abstinenčního syndromu při příliš rychlém ukončení léčby.",
+      "label": "Nízký krevní tlak, včetně případu příliš rychlého ukončení léčby.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
       "frequency": "not_known",
-      "label": "Bolest svalů jako příznak abstinenčního syndromu při příliš rychlém ukončení léčby.",
-      "action": null,
-      "action_condition": null
+      "label": "Bolest svalů jako součást příznaků z vysazení při příliš rychlém ukončení dlouhodobé léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud léčbu ukončíte příliš brzy a objeví se horečka, bolest svalů nebo kloubů, rýma, úbytek hmotnosti, bolestivé svědění kůže nebo zánět spojivek.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "not_known",
-      "label": "Bolest kloubů jako příznak abstinenčního syndromu při příliš rychlém ukončení léčby.",
-      "action": null,
-      "action_condition": null
+      "label": "Bolest kloubů jako součást příznaků z vysazení při příliš rychlém ukončení dlouhodobé léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud léčbu ukončíte příliš brzy a objeví se horečka, bolest svalů nebo kloubů, rýma, úbytek hmotnosti, bolestivé svědění kůže nebo zánět spojivek.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Rhinitis infective",
       "frequency": "not_known",
-      "label": "Rýma jako příznak abstinenčního syndromu při příliš rychlém ukončení léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Conjunctivitis",
-      "frequency": "not_known",
-      "label": "Zánět spojivek jako příznak abstinenčního syndromu při příliš rychlém ukončení léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "not_known",
-      "label": "Bolestivé svědění kůže jako příznak abstinenčního syndromu při příliš rychlém ukončení léčby.",
-      "action": null,
-      "action_condition": null
+      "label": "Rýma jako součást příznaků z vysazení při příliš rychlém ukončení dlouhodobé léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud léčbu ukončíte příliš brzy a objeví se horečka, bolest svalů nebo kloubů, rýma, úbytek hmotnosti, bolestivé svědění kůže nebo zánět spojivek.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Weight loss",
       "frequency": "not_known",
-      "label": "Úbytek hmotnosti jako příznak abstinenčního syndromu při příliš rychlém ukončení léčby.",
-      "action": null,
-      "action_condition": null
+      "label": "Úbytek hmotnosti jako součást příznaků z vysazení při příliš rychlém ukončení dlouhodobé léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud léčbu ukončíte příliš brzy a objeví se horečka, bolest svalů nebo kloubů, rýma, úbytek hmotnosti, bolestivé svědění kůže nebo zánět spojivek.",
+        "min_severity": 2
+      }
     },
     {
-      "ctcae": "Syncope",
+      "ctcae": "Pruritus",
       "frequency": "not_known",
-      "label": "Mdloba (synkopa).",
-      "action": null,
-      "action_condition": null
+      "label": "Bolestivé svědění kůže nebo kožní uzlíky jako součást příznaků z vysazení při příliš rychlém ukončení dlouhodobé léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud léčbu ukončíte příliš brzy a objeví se horečka, bolest svalů nebo kloubů, rýma, úbytek hmotnosti, bolestivé svědění kůže nebo zánět spojivek.",
+        "min_severity": 2
+      }
     },
     {
-      "ctcae": "Somnolence",
+      "ctcae": "Conjunctivitis",
       "frequency": "not_known",
-      "label": "Ospalost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "not_known",
-      "label": "Únava.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Confusion",
-      "frequency": "not_known",
-      "label": "Zmatenost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hallucinations",
-      "frequency": "not_known",
-      "label": "Halucinace.",
-      "action": null,
-      "action_condition": null
+      "label": "Zánět spojivek jako součást příznaků z vysazení při příliš rychlém ukončení dlouhodobé léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud léčbu ukončíte příliš brzy a objeví se horečka, bolest svalů nebo kloubů, rýma, úbytek hmotnosti, bolestivé svědění kůže nebo zánět spojivek.",
+        "min_severity": 2
+      }
     }
   ],
   "combinations": [
     {
+      "class_id": "atc:M01A",
       "drug_class": "Nesteroidní protizánětlivé léky (NSAID)",
-      "effect": "NSAID mohou zvyšovat výskyt a závažnost žaludečních vředů; pacienty užívající NSAID je třeba sledovat. Při současném podávání kyseliny acetylsalicylové a kortikosteroidů je při hypoprotrombinemii nutná opatrnost. Kortikosteroidy zvyšují renální clearance salicylátů; po vysazení steroidu může vzrůst jejich sérová koncentrace a může dojít k intoxikaci salicylátem, proto může být po vysazení steroidu nutné snížit dávku salicylátu.",
+      "effect": "Současné užívání dexamethasonu s NSAID může zvýšit výskyt nebo závažnost žaludečních vředů; při souběžné léčbě je třeba sledování. Kyselina acetylsalicylová vyžaduje opatrnost při hypoprotrombinemii. Kortikosteroidy zvyšují vylučování salicylátů ledvinami; po vysazení dexamethasonu může koncentrace salicylátů stoupnout a hrozí jejich otrava, proto může lékař jejich dávku snížit.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Zvýšené riziko výskytu nebo závažnosti žaludečních vředů při současném užívání NSAID.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antidiabetika (inzulin, sulfonylmočovina, metformin)",
-      "effect": "Kortikosteroidy snižují účinek antidiabetik. Na začátku léčby mají diabetici častěji podstupovat kontroly krve a moči.",
-      "effect_type": "antagonism",
-      "side_effects": [
-        {
-          "ctcae": "Hyperglycemia",
-          "frequency": null,
-          "label": "Může se objevit hyperglykemie.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Diabetes mellitus",
-          "frequency": null,
-          "label": "Příležitostně se může objevit diabetická ketoacidóza.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky snižující hladinu draslíku (acetazolamid, kličková a thiazidová diuretika, kaliuretika, injekční amfotericin B, glukomineralokortikosteroidy, tetrakosaktid a projímadla)",
-      "effect": "Hypokalemický účinek těchto léčiv se při kombinaci zvýší. Před zahájením léčby kortikosteroidy je třeba upravit hypokalemii a pacienty klinicky sledovat, kontrolovat elektrolyty a provádět elektrokardiografické sledování; hypokalemie podporuje srdeční arytmie, zejména torsade de pointes, a zvyšuje toxicitu srdečních glykosidů.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hypokalemie.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Zvýšené riziko srdečních arytmií, zejména torsade de pointes.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Srdeční glykosidy",
-      "effect": "Hypokalemie vyvolaná souběžnou léčbou zvyšuje toxicitu srdečních glykosidů; pacienty je třeba sledovat a kontrolovat elektrolyty a EKG.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Hypokalemie zvyšuje riziko srdečních arytmií a toxicitu srdečních glykosidů.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Karbenoxolon",
-      "effect": "Karbenoxolon zvyšuje riziko hypokalemie při současném užívání dexamethasonu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hypokalemie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Chlorochin, hydroxychlorochin a meflochin",
-      "effect": "Při současném užívání se zvyšuje riziko myopatie a kardiomyopatie.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myositis",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko kardiomyopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "ACE inhibitory",
-      "effect": "Současné podávání ACE inhibitorů zvyšuje riziko onemocnění krve.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko onemocnění krve; konkrétní reakce není upřesněna.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antihypertenziva",
-      "effect": "Kortikosteroidy mohou ovlivnit účinek antihypertenziv na snížení krevního tlaku; během léčby dexamethasonem může být nutné upravit jejich dávku.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Thalidomid",
-      "effect": "Při současném podávání s thalidomidem je nutná velká opatrnost; byly hlášeny případy toxické epidermální nekrolýzy.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Toxic epidermal necrolysis",
-          "frequency": null,
-          "label": "Byly hlášeny případy toxické epidermální nekrolýzy při současném podávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Živé vakcíny",
-      "effect": "Očkování živými vakcínami během léčby vysokými terapeutickými dávkami dexamethasonu je kontraindikováno kvůli možnosti virové infekce; očkování se má odložit nejméně o 3 měsíce po ukončení léčby kortikosteroidy. Jiné imunizace při vysokých terapeutických dávkách mohou být nebezpečné kvůli neurologickým komplikacím a snížené nebo chybějící tvorbě protilátek a ochrannému účinku. Pacienti léčení lokálně nebo krátce (méně než 2 týdny) nízkými dávkami mohou být imunizováni.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Možnost virové infekce při očkování živou vakcínou během léčby vysokými terapeutickými dávkami.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Inhibitory cholinesteráz (např. neostigmin)",
-      "effect": "Současné užívání inhibitorů cholinesteráz a kortikosteroidů může u pacientů s myasthenia gravis způsobit závažnou svalovou slabost. Pokud je to možné, léčba inhibitory cholinesterázy má být přerušena nejméně 24 hodin před zahájením léčby kortikosteroidy.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Generalized muscle weakness",
-          "frequency": null,
-          "label": "U pacientů s myasthenia gravis se může objevit závažná svalová slabost.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Fluorochinolony",
-      "effect": "Současná léčba fluorochinolony a glukokortikoidy zvyšuje riziko zánětu a ruptury šlach.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zvýšené riziko zánětu šlach.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zvýšené riziko ruptury šlach.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Inhibitory CYP3A, včetně přípravků obsahujících kobicistat, azolových antimykotik, inhibitorů HIV proteázy a makrolidových antibiotik",
-      "effect": "Očekává se zvýšení rizika systémových nežádoucích účinků kortikosteroidů. Kombinaci je třeba se vyvarovat, pokud přínos nepřeváží zvýšené riziko; pokud se použije, pacienty je třeba sledovat z hlediska systémových nežádoucích účinků kortikosteroidů. Inhibitory CYP3A4, jako ketokonazol, itrakonazol, ritonavir a erythromycin, mohou zvýšit plazmatickou koncentraci a snížit clearance dexamethasonu; v případě potřeby se má dávka dexamethasonu snížit. Ketokonazol navíc potlačuje tvorbu adrenálních kortikosteroidů a po vysazení kortikosteroidů může způsobit nedostatečnost nadledvin.",
-      "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Endocrine disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko systémových nežádoucích účinků kortikosteroidů; ketokonazol může po vysazení kortikosteroidů přispět k nedostatečnosti nadledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Induktory CYP3A4 (efedrin, barbituráty, rifabutin, rifampicin, fenytoin a karbamazepin)",
-      "effect": "Induktory CYP3A4 mohou snížit plazmatickou koncentraci dexamethasonu; může být nutné zvýšit jeho dávku.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Aminoglutetimid",
-      "effect": "Aminoglutetimid může urychlit pokles hladiny dexamethasonu a snížit jeho účinnost; v případě potřeby se má upravit dávkování dexamethasonu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Kolestyramin",
-      "effect": "Pryskyřice žlučových kyselin, například kolestyramin, mohou snížit vstřebávání dexamethasonu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Lokálně působící gastrointestinální léčivé přípravky, antacida a aktivní uhlí",
-      "effect": "Při současném podávání byla popsána snížená absorpce glukokortikoidů; podávání je třeba časově oddělit nejméně o dvě hodiny.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Estrogeny včetně perorální antikoncepce",
-      "effect": "Estrogeny mohou inhibovat metabolismus některých kortikosteroidů, a tím zvýšit jejich účinek.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léčivé látky metabolizované CYP3A4",
-      "effect": "Dexamethason je středně silný induktor CYP3A4 a může zvýšit clearance těchto látek a snížit jejich plazmatické koncentrace.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Isoniazid",
-      "effect": "Při souběžném podávání s prednisolonem bylo pozorováno snížení plazmatických koncentrací isoniazidu; pacienty užívající isoniazid je třeba pečlivě sledovat.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Cyklosporin",
-      "effect": "Současné podávání cyklosporinu a kortikosteroidů může zvýšit účinek obou léčiv a zvyšuje riziko mozkových záchvatů.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Seizure",
-          "frequency": null,
-          "label": "Zvýšené riziko mozkových záchvatů.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Prazikvantel",
-      "effect": "Snížené plazmatické koncentrace prazikvantelu při současném podávání mohou vést k selhání léčby v důsledku zvýšeného jaterního metabolismu dexamethasonu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Perorální antikoagulancia kumarinového typu",
-      "effect": "Současná léčba kortikosteroidy může účinek perorálních antikoagulancií buď zesílit, nebo oslabit. Při vysokých dávkách nebo léčbě delší než 10 dní je přítomno riziko krvácení specifické pro kortikosteroidy, včetně krvácení ze sliznice trávicího traktu a z křehkých cév. Pacienty je třeba pečlivě sledovat; kontroly se doporučují 8. den a poté každé dva týdny během léčby i po jejím ukončení.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení, zejména při vysokých dávkách nebo léčbě trvající déle než 10 dní.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Atropin a další anticholinergika",
-      "effect": "Současné podávání s dexamethasonem může zvýšit nitrooční tlak.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Glaucoma",
-          "frequency": null,
-          "label": "Zvýšení nitroočního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Nedepolarizující myorelaxancia",
-      "effect": "Myorelaxační účinek nedepolarizujících myorelaxancií může při současném podávání trvat déle.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "Somatotropin",
-      "effect": "Dexamethason může snížit účinek růstového hormonu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Protirelin",
-      "effect": "Při podávání protirelinu může být snížena elevace TSH.",
-      "effect_type": "antagonism",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Dexamethason tlumí zánět a imunitní systém a používá se k léčbě různých závažných onemocnění, včetně některých nádorových onemocnění a zvracení při chemoterapii.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0214084",
+      "H": "",
+      "NAZEV": "DEXAMETHASONE KRKA",
+      "SILA": "4MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "20",
+      "CESTA": "POR",
+      "DOPLNEK": "4MG TBL NOB 20",
+      "OBAL": "BLI",
+      "DRZ": "KRK",
+      "ZEMDRZ": "SLO",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "56",
+      "ATC_WHO": "H02AB02",
+      "RC": "56/349/16-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "1,5",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "53,3333",
+      "ZDROJ_WHO": "NO26",
+      "LL": "451",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "DEXAMETHASONE KRKA",
+      "MRP_CISLO": "HU/H/0399/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0214084",
+        "KOD_LATKY": "451",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "4",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "451",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "DEXAMETHASONUM",
+          "NAZEV_EN": "DEXAMETHASONE",
+          "NAZEV": "DEXAMETHASON",
+          "DOP": "S9"
+        }
+      },
+      {
+        "KOD_SUKL": "0214084",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0214084",
+        "KOD_LATKY": "4989",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4989",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "PREGELATINISED MAIZE STARCH",
+          "NAZEV": "PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0214084",
+        "KOD_LATKY": "1300",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0214084",
+        "KOD_LATKY": "2378",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0214084",
+      "PIL": "PI186778.pdf",
+      "DAT_ROZ_PIL": "17.05.2022",
+      "SPC": "SPC186779.pdf",
+      "DAT_ROZ_SPC": "17.05.2022",
+      "OBAL_TEXT": "OBAL178272.pdf",
+      "DAT_ROZ_OBAL": "19.10.2021",
+      "NR": "NR21161914.pdf",
+      "DAT_NPM_NR": "17.08.2016"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "H02AB02",
+        "NT": "N",
+        "NAZEV": "DEXAMETHASON",
+        "NAZEV_EN": "DEXAMETHASONE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

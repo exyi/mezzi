@@ -1,16 +1,24 @@
 {
+  "classes": [
+    "atc:B",
+    "atc:B01",
+    "atc:B01A",
+    "atc:B01AC",
+    "atc:B01AC06",
+    "substance:12"
+  ],
   "side_effects": [
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "common",
-      "label": "Zvýšený sklon ke krvácení.",
-      "action": null,
-      "action_condition": null
-    },
     {
       "ctcae": "Dyspepsia",
       "frequency": "common",
       "label": "Poruchy trávení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "common",
+      "label": "Zvýšený sklon ke krvácení.",
       "action": null,
       "action_condition": null
     },
@@ -22,7 +30,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Rhinitis",
       "frequency": "uncommon",
       "label": "Rýma.",
       "action": null,
@@ -36,43 +44,35 @@
       "action_condition": null
     },
     {
-      "ctcae": "Thrombocytopenia",
+      "ctcae": "Gastrointestinal hemorrhage",
       "frequency": "rare",
-      "label": "Snížený počet krevních destiček (trombocytopenie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Neutrophil count increased",
-      "frequency": "rare",
-      "label": "Granulocytóza.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aplastic anemia",
-      "frequency": "rare",
-      "label": "Aplastická anémie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Upper gastrointestinal hemorrhage",
-      "frequency": "rare",
-      "label": "Závažné krvácení ze žaludku nebo střev.",
+      "label": "Závažné krvácení ze žaludku nebo střev; v SPC jsou uvedena také evidentní nebo skrytá krvácení do trávicího traktu, která mohou vést k chudokrevnosti z nedostatku železa, častěji při vyšších dávkách.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud zaznamenáte neobvyklé krvácení, například krev ve zvratcích nebo černou stolici."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Intracranial hemorrhage",
       "frequency": "rare",
       "label": "Krvácení do mozku.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte neobvyklé krvácení."
-      }
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "rare",
+      "label": "Trombocytopenie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Granulocytóza nebo aplastická anemie.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Nausea",
@@ -91,12 +91,12 @@
     {
       "ctcae": "Bronchospasm",
       "frequency": "rare",
-      "label": "Křeče v dolní části dýchacího traktu (bronchospasmus).",
+      "label": "Křeče v dolní části dýchacího traktu (bronchospazmus).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Bronchospasm",
+      "ctcae": "Asthma",
       "frequency": "rare",
       "label": "Astmatický záchvat.",
       "action": null,
@@ -105,60 +105,65 @@
     {
       "ctcae": "Vasculitis",
       "frequency": "rare",
-      "label": "Zánět cév.",
+      "label": "Zánět cév; SPC uvádí hemoragickou vaskulitidu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Purpura",
       "frequency": "rare",
-      "label": "Podlitiny s purpurovými skvrnami (kožní krvácení).",
+      "label": "Podlitiny s purpurovými skvrnami (kožní krvácení); SPC uvádí purpuru.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Erythema multiforme",
-      "frequency": "rare",
-      "label": "Závažné kožní reakce, například erythema multiforme; při zarudnutí kůže s puchýři nebo olupováním může být doprovázena horečkou a bolestí kloubů.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kožní vyrážka, slizniční léze nebo jiné známky přecitlivělosti."
-      }
-    },
-    {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "rare",
-      "label": "Stevensův-Johnsonův syndrom, závažná kožní reakce, která může být život ohrožující.",
+      "label": "Závažná kožní reakce: Stevensův-Johnsonův syndrom.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví kožní vyrážka, slizniční léze nebo jiné známky přecitlivělosti."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "rare",
-      "label": "Lyellův syndrom (toxická epidermální nekrolýza), závažná kožní reakce, která může být život ohrožující.",
+      "label": "Závažná kožní reakce: Lyellův syndrom (toxická epidermální nekrolýza).",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví kožní vyrážka, slizniční léze nebo jiné známky přecitlivělosti."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Anaphylaxis",
+      "ctcae": "Erythema multiforme",
       "frequency": "rare",
-      "label": "Anafylaktické reakce včetně šoku.",
+      "label": "Závažná kožní reakce: erythema multiforme.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví náhlé sípání, otok rtů, obličeje nebo těla, vyrážka, mdloby nebo potíže s polykáním."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "rare",
-      "label": "Reakce přecitlivělosti, včetně angioedému nebo alergického otoku, například rtů, obličeje nebo těla.",
+      "label": "Reakce přecitlivělosti, například otok rtů, obličeje nebo těla.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví náhlé sípání, otok rtů, obličeje nebo těla, vyrážka, mdloby nebo potíže s polykáním."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "rare",
+      "label": "Anafylaktická reakce, včetně šoku.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
@@ -192,82 +197,34 @@
     {
       "ctcae": "Dizziness",
       "frequency": "not_known",
-      "label": "Závrať (vertigo).",
+      "label": "Závrať nebo vertigo.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gastric ulcer",
       "frequency": "not_known",
-      "label": "Vředy v žaludku.",
+      "label": "Vředy žaludku nebo dvanáctníku a jejich proděravění.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví krvácení ze zažívacího traktu nebo vřed."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Duodenal ulcer",
+      "ctcae": "Small intestine ulcer",
       "frequency": "not_known",
-      "label": "Vředy v tenkém střevě (dvanáctníku).",
+      "label": "Vředy tenkého střeva a jejich proděravění.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví krvácení ze zažívacího traktu nebo vřed."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Gastric perforation",
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Perforace žaludku.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví krvácení ze zažívacího traktu nebo vřed."
-      }
-    },
-    {
-      "ctcae": "Duodenal perforation",
-      "frequency": "not_known",
-      "label": "Perforace dvanáctníku.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví krvácení ze zažívacího traktu nebo vřed."
-      }
-    },
-    {
-      "ctcae": "Epistaxis",
-      "frequency": "not_known",
-      "label": "Krvácení z nosu; krvácení, například z nosu nebo dásní, může přetrvávat 4–8 dnů po vysazení a zvyšovat riziko krvácení při operaci.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Oral hemorrhage",
-      "frequency": "not_known",
-      "label": "Krvácení z dásní; krvácení, například z nosu nebo dásní, může přetrvávat 4–8 dnů po vysazení a zvyšovat riziko krvácení při operaci.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Melena",
-      "frequency": "not_known",
-      "label": "Zjevné nebo skryté krvácení ze zažívacího traktu, které může vést k anémii z nedostatku železa; častější je při vyšších dávkách. Zahrnuje také černou stolici.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte neobvyklé krvácení, například černou stolici."
-      }
-    },
-    {
-      "ctcae": "Hematemesis",
-      "frequency": "not_known",
-      "label": "Zjevné krvácení ze zažívacího traktu, například krev ve zvratcích.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zaznamenáte neobvyklé krvácení, například krev ve zvratcích."
-      }
-    },
-    {
-      "ctcae": "Hepatic failure",
-      "frequency": "not_known",
-      "label": "Porucha funkce jater (jaterní insuficience).",
+      "label": "Prodloužená krvácivost; krvácení z nosu nebo dásní může přetrvávat 4–8 dní po vysazení a zvýšit riziko krvácení při operaci.",
       "action": null,
       "action_condition": null
     },
@@ -279,216 +236,401 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hyperuricemia",
+      "ctcae": "Hepatic failure",
       "frequency": "not_known",
-      "label": "Vysoká hladina kyseliny močové v krvi (hyperurikémie).",
+      "label": "Nedostatečná funkce jater.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Erythema nodosum.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kožní vyrážka, slizniční léze nebo jiné známky přecitlivělosti."
-      }
+      "ctcae": "Hyperuricemia",
+      "frequency": "not_known",
+      "label": "Vysoká hladina kyseliny močové v krvi.",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "Methotrexát",
-      "effect": "Při dávkách vyšších než 15 mg týdně kyselina acetylsalicylová snižuje renální clearance methotrexátu, zvyšuje jeho hematologickou toxicitu a současné podávání je kontraindikováno.",
+      "class_id": null,
+      "drug": "Methotrexate",
+      "effect": "Při dávce methotrexátu vyšší než 15 mg týdně je současné užívání kontraindikováno: kyselina acetylsalicylová snižuje vylučování methotrexátu ledvinami a zvyšuje jeho krevní a krvetvornou toxicitu. Při dávce nižší než 15 mg týdně se může toxicita pro krvetvorbu také zvýšit; lékař může sledovat krevní obraz a funkci ledvin, zejména na začátku léčby, u starších lidí nebo při mírné poruše ledvin.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "Methotrexát",
-      "effect": "Při dávkách nižších než 15 mg týdně může kyselina acetylsalicylová snížením renální clearance zvýšit hematologickou toxicitu methotrexátu. Během prvních týdnů je třeba kontrolovat krevní obraz; častější kontroly jsou potřebné také při mírné poruše funkce ledvin a u starších pacientů.",
+      "class_id": null,
+      "drug_class": "Léky ovlivňující srážení krve, včetně antikoagulancií, trombolytik, protidestičkových látek a protizánětlivých léků",
+      "effect": "Současné užívání může zvýšit riziko krvácení. SPC tuto kombinaci nedoporučuje, pokud není nezbytně indikována; pokud se jí nelze vyhnout, lékař sleduje známky krvácení. Patří sem například warfarin, heparin, klopidogrel a dipyridamol.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Urikosurika, například probenecid",
-      "effect": "Salicyláty působí opačně než probenecid; této kombinaci je třeba se vyhnout.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Antikoagulancia, například kumarin, heparin a warfarin",
-      "effect": "Zvyšuje se riziko krvácení v důsledku inhibice funkce krevních destiček, poškození sliznice dvanáctníku a vytěsnění perorálních antikoagulancií z vazebných míst na plazmatických bílkovinách. Krvácivost je třeba sledovat; současné podávání se nedoporučuje, pokud není striktně indikováno, a při nevyhnutelné kombinaci je nutné pečlivé sledování známek krvácení.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení, včetně krvácení ze zažívacího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antiagregační látky, například klopidogrel a dipyridamol",
-      "effect": "Zvyšuje se riziko krvácení ze zažívacího traktu. Současné podávání se nedoporučuje, pokud není striktně indikováno; při nevyhnutelné kombinaci je třeba sledovat známky krvácení.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení ze zažívacího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Selektivní inhibitory zpětného vychytávání serotoninu (SSRI), například sertralin nebo paroxetin",
-      "effect": "Zvyšuje se riziko krvácení ze zažívacího traktu; současné podávání se nedoporučuje, pokud není striktně indikováno. Při nevyhnutelné kombinaci je třeba sledovat známky krvácení. SSRI mohou také zvýšit riziko vzniku ulcerací.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení ze zažívacího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Deriváty sulfonylurey, například glibenklamid",
-      "effect": "Salicyláty mohou zvýšit hypoglykemický účinek derivátů sulfonylurey. Riziko hypoglykemického účinku derivátů sulfonylurey a inzulinu se může zvýšit při podávání přípravku Stacyl v dávkách vyšších než doporučených.",
-      "effect_type": "synergy",
-      "side_effects": []
-    },
-    {
-      "drug": "Digoxin",
-      "effect": "Kyselina acetylsalicylová snižuje renální vylučování digoxinu a zvyšuje jeho plazmatické koncentrace. Doporučuje se sledování plazmatických koncentrací na začátku léčby kyselinou acetylsalicylovou a při jejím ukončení; může být nutná úprava dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Lithium",
-      "effect": "Kyselina acetylsalicylová snižuje renální vylučování lithia a zvyšuje jeho plazmatické koncentrace. Doporučuje se sledování plazmatických koncentrací na začátku léčby kyselinou acetylsalicylovou a při jejím ukončení; může být nutná úprava dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Diuretika",
-      "effect": "Kyselina acetylsalicylová může snížit antihypertenzní účinek diuretik a zvýšit riziko akutního selhání ledvin snížením glomerulární filtrace v důsledku nižší syntézy prostaglandinů. Doporučuje se zajistit dostatečnou hydrataci a na začátku léčby sledovat funkci ledvin.",
+      "class_id": "atc:N06AB",
+      "drug_class": "Selektivní inhibitory zpětného vychytávání serotoninu (SSRI)",
+      "effect": "Současné užívání s kyselinou acetylsalicylovou může zvýšit riziko krvácení do trávicího traktu. SPC kombinaci nedoporučuje, pokud není nezbytně indikována; při nevyhnutelné kombinaci lékař sleduje známky krvácení. Příklady jsou sertralin a paroxetin.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory ACE",
-      "effect": "Současné podávání kyseliny acetylsalicylové s inhibitory ACE zvyšuje riziko akutní renální insuficience; zároveň se může snížit antihypertenzní účinek. Doporučuje se dostatečná hydratace a sledování funkce ledvin při zahájení léčby.",
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky (NSAID)",
+      "effect": "Současné užívání může zvýšit riziko vředů a krvácení do trávicího traktu. U ibuprofenu SPC dále uvádí, že současné podání může oslabit účinek nízké dávky kyseliny acetylsalicylové na shlukování krevních destiček; důkazy jsou omezené a při občasném podání ibuprofenu se klinicky významný účinek nepovažuje za pravděpodobný.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Jiná antihypertenziva",
-      "effect": "Nesteroidní antiflogistika včetně kyseliny acetylsalicylové mohou snížit antihypertenzní účinek jiných antihypertenziv.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Acetazolamid",
-      "effect": "Současné podávání může vést k závažné acidóze a zvýšené toxicitě na centrální nervový systém.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:M01A",
       "drug_class": "Systémové kortikosteroidy",
-      "effect": "Současné podávání může zvýšit riziko vzniku gastrointestinálních ulcerací a krvácení. Kortikosteroidy mohou také zvýšit riziko vzniku ulcerací.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Zvýšené riziko gastrointestinálních ulcerací a krvácení.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko gastrointestinálních ulcerací a krvácení.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Jiná nesteroidní antiflogistika (NSAID)",
-      "effect": "Synergické účinky zvyšují riziko ulcerací a krvácení ze zažívacího traktu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Zvýšené riziko ulcerací a krvácení ze zažívacího traktu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko ulcerací a krvácení ze zažívacího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Ibuprofen",
-      "effect": "Experimentální údaje naznačují, že současné podávání může inhibovat účinek nízké dávky kyseliny acetylsalicylové na agregaci krevních destiček. Kvůli omezením těchto údajů a nejistotě při jejich převodu do klinické situace nelze učinit jasné závěry pro pravidelné užívání ibuprofenu; při občasném podání se klinicky významný účinek nepovažuje za pravděpodobný.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Metamizol",
-      "effect": "Při současném podávání může být účinek kyseliny acetylsalicylové na agregaci krevních destiček snížen. U pacientů užívajících nízké kardioprotektivní dávky kyseliny acetylsalicylové je nutné podávat tuto kombinaci s opatrností.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Cyklosporin",
-      "effect": "Současné podávání s nesteroidními antiflogistiky, včetně kyseliny acetylsalicylové, může zvýšit nefrotoxický účinek cyklosporinu. Při současném podávání je třeba sledovat funkci ledvin.",
+      "effect": "Současné užívání s kyselinou acetylsalicylovou může zvýšit riziko vředů a krvácení do trávicího traktu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Takrolimus",
-      "effect": "Současné podávání s nesteroidními antiflogistiky, včetně kyseliny acetylsalicylové, může zvýšit nefrotoxický účinek takrolimu. Při současném podávání je třeba sledovat funkci ledvin.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "Valproát",
-      "effect": "Kyselina acetylsalicylová může snížit vazbu valproátu na sérový albumin, a tím zvýšit koncentraci volného valproátu v plazmě v ustáleném stavu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Fenytoin",
-      "effect": "Salicylát oslabuje vazbu fenytoinu na plazmatický albumin. To může snížit celkovou plazmatickou hladinu fenytoinu, ale zvýšit jeho volnou frakci; nevázaná koncentrace, a tím terapeutický účinek, se podle zdroje nezdá být významně změněna.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": null,
       "drug": "Alkohol",
-      "effect": "Současné užívání alkoholu a kyseliny acetylsalicylové zvyšuje riziko krvácení ze zažívacího traktu a prodlužuje krvácivost.",
+      "effect": "Současné užívání zvyšuje riziko krvácení do trávicího traktu a může prodloužit krvácivost.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení ze zažívacího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Digoxin",
+      "effect": "Kyselina acetylsalicylová snižuje vylučování digoxinu ledvinami a zvyšuje jeho hladinu v krvi. Lékař může sledovat hladinu na začátku léčby a při jejím ukončení a případně upravit dávku.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Lithium",
+      "effect": "Kyselina acetylsalicylová snižuje vylučování lithia ledvinami a zvyšuje jeho hladinu v krvi. Lékař může sledovat hladinu na začátku léčby a při jejím ukončení a případně upravit dávku.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A10BB",
+      "drug_class": "Deriváty sulfonylurey",
+      "effect": "Salicyláty mohou zesílit účinek derivátů sulfonylurey na snížení hladiny cukru v krvi. SPC upozorňuje, že riziko hypoglykemie se může zvýšit při dávkách Stacylu vyšších než doporučených.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C03",
+      "drug_class": "Diuretika",
+      "effect": "Nesteroidní protizánětlivé léky mohou snížit účinek diuretik na krevní tlak. Při současném užívání s kyselinou acetylsalicylovou se může také zhoršit filtrace v ledvinách a vzniknout akutní selhání ledvin; lékař může doporučit dostatečný příjem tekutin a sledovat funkci ledvin na začátku léčby.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C09A",
+      "drug_class": "Inhibitory ACE",
+      "effect": "Současné užívání kyseliny acetylsalicylové a inhibitorů ACE zvyšuje riziko akutního selhání ledvin; NSAID mohou také snížit jejich účinek na krevní tlak.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Acetazolamide",
+      "effect": "Současné užívání může vést k závažné acidóze a zvýšené toxicitě pro centrální nervový systém.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Probenecid",
+      "effect": "Salicyláty působí proti účinku probenecidu; kombinaci je třeba se vyhnout.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Metamizole",
+      "effect": "Současné podávání může snížit účinek kyseliny acetylsalicylové na shlukování krevních destiček. Opatrnost je potřebná u pacientů užívajících nízkou kardioprotektivní dávku kyseliny acetylsalicylové.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Ciclosporin",
+      "effect": "Současné užívání kyseliny acetylsalicylové může zvýšit nefrotoxický účinek cyklosporinu. SPC doporučuje, aby lékař sledoval funkci ledvin.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Tacrolimus",
+      "effect": "Současné užívání kyseliny acetylsalicylové může zvýšit nefrotoxický účinek takrolimu. SPC doporučuje, aby lékař sledoval funkci ledvin.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Valproate",
+      "effect": "Kyselina acetylsalicylová může snížit vazbu valproátu na albumin a zvýšit hladinu volného valproátu v krvi.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Phenytoin",
+      "effect": "Salicylát oslabuje vazbu fenytoinu na albumin. Celková hladina fenytoinu v krvi může klesnout, zatímco podíl volného fenytoinu se může zvýšit; volná hladina a léčebný účinek se podle SPC významně nemění.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Stacyl 100 mg pomáhá předcházet krevním sraženinám, a tím dalším srdečním infarktům, cévním mozkovým příhodám a některým srdečním komplikacím.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0188850",
+      "H": "",
+      "NAZEV": "STACYL",
+      "SILA": "100MG",
+      "FORMA": "TBL ENT",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "100MG TBL ENT 100",
+      "OBAL": "BLI",
+      "DRZ": "STD",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "16",
+      "ATC_WHO": "B01AC06",
+      "RC": "16/612/12-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "1",
+      "DDDUN_WHO": "UD",
+      "DDDP_WHO": "100",
+      "ZDROJ_WHO": "NO26",
+      "LL": "12",
+      "VYDEJ": "F",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "STACYL",
+      "MRP_CISLO": "DE/H/5821/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "12",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "100",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "12",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "ACIDUM ACETYLSALICYLICUM",
+          "NAZEV_EN": "ACETYLSALICYLIC ACID",
+          "NAZEV": "KYSELINA ACETYLSALICYLOVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "9792",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9792",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM GRANULATUM",
+          "NAZEV_EN": "GRANULATED MICROCRYSTALLINE CELLULOSE",
+          "NAZEV": "GRANULOVANÁ MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "2970",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "1300",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "2658",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2658",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "ACIDUM STEARICUM",
+          "NAZEV_EN": "STEARIC ACID",
+          "NAZEV": "KYSELINA STEAROVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "SQ": "6",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "16114",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16114",
+          "ZDROJ": "C17",
+          "NAZEV_INN": "ACIDUM METHACRYLICUM ET ETHYLIS ACRYLAS POLYMERISATUM 1:1",
+          "NAZEV_EN": "METHACRYLIC ACID - ETHYL ACRYLATE COPOLYMER (1:1)",
+          "NAZEV": "KOPOLYMER KYSELINY METHAKRYLOVÉ A ETHYL-AKRYLÁTU 1:1"
+        }
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "1166",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1166",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "POLYSORBATUM 80",
+          "NAZEV_EN": "POLYSORBATE 80",
+          "NAZEV": "POLYSORBÁT 80"
+        }
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "1335",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "9832",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9832",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "TRIETHYLIS CITRAS",
+          "NAZEV_EN": "TRIETHYL CITRATE",
+          "NAZEV": "TRIETHYL-CITRÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0188850",
+        "KOD_LATKY": "1871",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0188850",
+      "PIL": "PI236762.pdf",
+      "DAT_ROZ_PIL": "20.06.2024",
+      "SPC": "SPC236763.pdf",
+      "DAT_ROZ_SPC": "20.06.2024",
+      "OBAL_TEXT": "OBAL236761.pdf",
+      "DAT_ROZ_OBAL": "15.08.2018"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "B01AC06",
+        "NT": "N",
+        "NAZEV": "KYSELINA ACETYLSALICYLOVÁ",
+        "NAZEV_EN": "ACETYLSALICYLIC ACID"
+      },
+      "formy": {
+        "FORMA": "TBL ENT",
+        "NAZEV": "Enterosolventní tableta",
+        "NAZEV_EN": "Gastro-resistant tablet",
+        "NAZEV_LAT": "Tabuletta enterosolvens",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10225000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "F",
+        "NAZEV": "volně prodejné léčivé přípravky"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

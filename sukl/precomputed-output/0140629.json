@@ -1,30 +1,38 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A04",
+    "atc:A04A",
+    "atc:A04AA",
+    "atc:A04AA02",
+    "substance:12975"
+  ],
   "side_effects": [
     {
       "ctcae": "Headache",
       "frequency": "very_common",
-      "label": "Bolest hlavy.",
+      "label": "Bolest hlavy; u pacientů po jednotlivé intravenózní dávce až 38,5 mg byl hlášen jen mírný průběh.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Constipation",
       "frequency": "very_common",
-      "label": "Zácpa; lékař bude kontrolovat váš zdravotní stav.",
+      "label": "Zácpa; může být přechodná. Lékař bude kontrolovat váš zdravotní stav.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Insomnia",
       "frequency": "common",
-      "label": "Potíže se spaním (nespavost).",
+      "label": "Nespavost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "common",
-      "label": "Změny funkce jater, včetně zvýšených hladin jaterních transamináz zjištěných v krevních testech.",
+      "label": "Zvýšené hladiny jaterních transamináz, prokazatelné v krevních testech; u pacientů dostávajících srovnávací léčbu se vyskytovaly s podobnou frekvencí.",
       "action": null,
       "action_condition": null
     },
@@ -36,119 +44,339 @@
       "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
+      "ctcae": "Hypersensitivity",
       "frequency": "uncommon",
-      "label": "Reakce přecitlivělosti, například alergická kožní reakce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "uncommon",
-      "label": "Anafylaxe, která může způsobit otok hrdla, obličeje, rtů nebo úst a potíže s dýcháním či polykáním.",
-      "action": "contact_doctor",
+      "label": "Reakce přecitlivělosti, například anafylaxe nebo kopřivka.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto příznaky alergické reakce."
+        "patient_guide": "Otok hrdla, obličeje, rtů nebo úst, případně potíže s dýcháním či polykáním.",
+        "min_severity": 1
       }
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "uncommon",
-      "label": "Kopřivka – červené, vystouplé a svědivé pupeny.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Kožní vyrážka.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Extrapyramidal disorder",
       "frequency": "uncommon",
-      "label": "Abnormální mimovolní pohyby, například třes, svalová ztuhlost nebo svalové záškuby (extrapyramidové reakce).",
+      "label": "Extrapyramidové reakce; v příbalové informaci jsou popsány jako abnormální mimovolní pohyby, například třes, svalová ztuhlost a záškuby.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Serotonin syndrome",
+      "frequency": "uncommon",
+      "label": "Serotoninový syndrom; může se objevit při užívání samotného granisetronu, pravděpodobnější je při kombinaci s některými dalšími léky. Může zahrnovat změny duševního stavu, autonomní nestabilitu, nervosvalové nebo zažívací příznaky.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Průjem, nevolnost či zvracení, vysoká teplota a krevní tlak, nadměrné pocení, zrychlený tep, neklid, zmatenost, halucinace, třes, svalové záškuby či ztuhlost nebo ztráta koordinace.",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "uncommon",
-      "label": "Změny srdečního rytmu nebo na EKG, včetně prodloužení QT intervalu.",
+      "label": "Prodloužení QT intervalu na EKG; byly hlášeny také jiné změny EKG.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Serotoninový syndrom, který může být život ohrožující; může zahrnovat průjem, nevolnost, zvracení, vysokou teplotu či krevní tlak, nadměrné pocení, zrychlený srdeční tep, neklid, zmatenost, halucinace, třes, svalové záškuby nebo ztuhlost a poruchu koordinace.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky serotoninového syndromu."
-      }
+      "label": "Kožní vyrážka; příbalová informace uvádí také alergickou kožní reakci nebo kopřivku s červenými, vystouplými a svědivými pupínky.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka, případně s červenými, vystouplými a svědivými pupínky.",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Léčivé přípravky prodlužující QT interval nebo s proarytmogenním účinkem",
-      "effect": "Současné užívání může vést ke změnám EKG včetně prodloužení QT intervalu, které mohou mít klinické důsledky. Opatrnost je nutná zejména při srdečním onemocnění, současné kardiotoxické chemoterapii nebo poruchách elektrolytů. Doporučuje se sledovat EKG a klinické změny.",
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léky prodlužující QT interval nebo s proarytmickým účinkem",
+      "effect": "Současné užívání s granisetronem může zvýšit riziko klinicky významných změn EKG včetně prodloužení QT intervalu. U pacientů užívajících tyto léky se doporučuje sledování EKG a klinických příznaků.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": "uncommon",
-          "label": "Změny srdečního rytmu nebo na EKG, včetně prodloužení QT intervalu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Serotonergní léčivé přípravky, včetně SSRI a SNRI",
-      "effect": "Při současném užívání s granisetronem byly hlášeny případy serotoninového syndromu. Doporučuje se sledovat, zda se neobjeví příznaky tohoto syndromu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": "uncommon",
-          "label": "Serotoninový syndrom, který může být život ohrožující; může zahrnovat průjem, nevolnost, zvracení, vysokou teplotu či krevní tlak, nadměrné pocení, zrychlený srdeční tep, neklid, zmatenost, halucinace, třes, svalové záškuby nebo ztuhlost a poruchu koordinace.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud se u vás objeví příznaky serotoninového syndromu."
-          }
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčivé přípravky obsahující buprenorfin nebo jiné opioidy",
-      "effect": "Současné podávání může zvýšit riziko serotoninového syndromu, který může být život ohrožující. Doporučuje se sledovat, zda se neobjeví jeho příznaky.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": "uncommon",
-          "label": "Serotoninový syndrom, který může být život ohrožující; může zahrnovat průjem, nevolnost, zvracení, vysokou teplotu či krevní tlak, nadměrné pocení, zrychlený srdeční tep, neklid, zmatenost, halucinace, třes, svalové záškuby nebo ztuhlost a poruchu koordinace.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud se u vás objeví příznaky serotoninového syndromu."
-          }
-        }
-      ]
-    },
-    {
-      "drug_class": "Jiní antagonisté receptorů 5-HT3, například dolasetron nebo ondansetron",
-      "effect": "U antagonistů 5-HT3 byla hlášena zkřížená přecitlivělost. Před užíváním dalšího přípravku z této skupiny se poraďte s lékařem.",
+      "class_id": "substance:12975",
+      "drug": "GRANISETRON-HYDROCHLORID",
+      "effect": "Příbalová informace doporučuje poradit se s lékařem před současným užíváním jiného antagonisty receptoru 5-HT3, například dolasetronu nebo ondansetronu. SPC uvádí zkříženou senzitivitu mezi antagonisty 5-HT3; konkrétní míra rizika pro tuto kombinaci není uvedena.",
       "effect_type": null,
-      "side_effects": [
-        {
-          "ctcae": "Allergic reaction",
-          "frequency": "uncommon",
-          "label": "Reakce přecitlivělosti, například alergická kožní reakce.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:12975",
+      "drug": "GRANISETRON-HYDROCHLORID",
+      "effect": "Při současném užívání granisetronu se serotonergními léky, včetně SSRI a SNRI, byly hlášeny případy serotoninového syndromu; SPC doporučuje opatrnost a sledování příznaků.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:12975",
+      "drug": "GRANISETRON-HYDROCHLORID",
+      "effect": "Současné užívání granisetronu s léčivými přípravky nebo opioidy obsahujícími buprenorfin může zvýšit riziko serotoninového syndromu, potenciálně život ohrožujícího stavu; SPC doporučuje opatrnost a sledování příznaků.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:12975",
+      "drug": "GRANISETRON-HYDROCHLORID",
+      "effect": "Fenobarbital může ovlivňovat způsob, jakým granisetron účinkuje; příbalová informace doporučuje tuto kombinaci oznámit lékaři nebo lékárníkovi. Směr a velikost účinku nejsou uvedeny.",
+      "effect_type": null,
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:12975",
+      "drug": "GRANISETRON-HYDROCHLORID",
+      "effect": "Ketokonazol může ovlivnit účinek granisetronu; příbalová informace doporučuje tuto kombinaci oznámit lékaři nebo lékárníkovi. In vitro inhibice metabolismu granisetronu není podle SPC považována za klinicky významnou.",
+      "effect_type": null,
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:12975",
+      "drug": "GRANISETRON-HYDROCHLORID",
+      "effect": "Erythromycin může ovlivňovat způsob, jakým granisetron účinkuje; příbalová informace doporučuje tuto kombinaci oznámit lékaři nebo lékárníkovi. Směr a velikost účinku nejsou uvedeny.",
+      "effect_type": null,
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Granegis pomáhá předcházet nevolnosti a zvracení nebo je léčit u dospělých při chemoterapii či radioterapii.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0140629",
+      "H": "",
+      "NAZEV": "GRANEGIS",
+      "SILA": "1MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "10",
+      "CESTA": "POR",
+      "DOPLNEK": "1MG TBL FLM 10",
+      "OBAL": "BLI",
+      "DRZ": "EGB",
+      "ZEMDRZ": "H",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "20",
+      "ATC_WHO": "A04AA02",
+      "RC": "20/190/09-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "12975",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "GRANEGIS",
+      "MRP_CISLO": "HU/H/0822/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0140629",
+        "KOD_LATKY": "12975",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "1,12",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "12975",
+          "ZDROJ": "C17",
+          "NAZEV_INN": "GRANISETRONI HYDROCHLORIDUM",
+          "NAZEV_EN": "GRANISETRON HYDROCHLORIDE",
+          "NAZEV": "GRANISETRON-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0140629",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0140629",
+        "KOD_LATKY": "10831",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "1",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10831",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "GRANISETRONUM",
+          "NAZEV_EN": "GRANISETRON",
+          "NAZEV": "GRANISETRON"
+        }
+      },
+      {
+        "KOD_SUKL": "0140629",
+        "KOD_LATKY": "3508",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3508",
+          "ZDROJ": "C22M",
+          "NAZEV_INN": "LACTOSUM",
+          "NAZEV_EN": "LACTOSE",
+          "NAZEV": "LAKTOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0140629",
+        "KOD_LATKY": "3755",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0140629",
+        "KOD_LATKY": "14679",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0140629",
+        "KOD_LATKY": "14324",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14324",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910/5",
+          "NAZEV_EN": "HYPROMELLOSE 2910/5",
+          "NAZEV": "HYPROMELOSA 2910/5"
+        }
+      },
+      {
+        "KOD_SUKL": "0140629",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0140629",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0140629",
+        "KOD_LATKY": "17633",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17633",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ALBUM OPADRY II 85F18378",
+          "NAZEV_EN": "OPADRY II 85F18378 (WHITE)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPADRY II 85F18378 BÍLÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0140629",
+      "PIL": "PI235075.pdf",
+      "DAT_ROZ_PIL": "02.07.2026",
+      "SPC": "SPC235076.pdf",
+      "DAT_ROZ_SPC": "02.07.2026",
+      "OBAL_TEXT": "OBAL235074.pdf",
+      "DAT_ROZ_OBAL": "02.07.2026"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A04AA02",
+        "NT": "N",
+        "NAZEV": "GRANISETRON",
+        "NAZEV_EN": "GRANISETRON"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

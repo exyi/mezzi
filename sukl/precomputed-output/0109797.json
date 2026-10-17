@@ -1,16 +1,74 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N02",
+    "atc:N02A",
+    "atc:N02AJ",
+    "atc:N02AJ06",
+    "group:cns_depressant",
+    "substance:1064",
+    "substance:5382"
+  ],
   "side_effects": [
     {
-      "ctcae": "Fatigue",
-      "frequency": "common",
-      "label": "Únava.",
+      "ctcae": "Thrombocytopenia",
+      "frequency": "very_rare",
+      "label": "Snížení počtu krevních destiček.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Syncope",
+      "ctcae": "White blood cell decreased",
+      "frequency": "very_rare",
+      "label": "Snížení počtu bílých krvinek; při náhlé vysoké horečce, bolesti v krku a vředech v ústech může jít o závažný stav.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Náhlá vysoká horečka, bolest v krku a vředy v ústech.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Anemia",
+      "frequency": "very_rare",
+      "label": "Snížení počtu červených krvinek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Agranulocytóza a pancytopenie; ojediněle byly hlášeny případy pancytopenie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "very_rare",
+      "label": "Závažná alergická reakce s otokem hrtanu, dušností, návaly potu, nevolností a poklesem krevního tlaku až k šoku.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Otok hrtanu, dušnost, návaly potu, nevolnost nebo pokles krevního tlaku.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Acidosis",
+      "frequency": null,
+      "label": "Metabolická acidóza s vysokou aniontovou mezerou, zejména při závažném onemocnění, poruše funkce ledvin, sepsi, podvýživě, nízkých zásobách glutathionu nebo při současném užívání flukloxacilinu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Confusion",
+      "frequency": null,
+      "label": "Zmatenost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
       "frequency": "common",
-      "label": "Mdloby (při vysokých dávkách).",
+      "label": "Únava.",
       "action": null,
       "action_condition": null
     },
@@ -29,16 +87,72 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hypotension",
-      "frequency": "common",
-      "label": "Pokles krevního tlaku.",
+      "ctcae": "Insomnia",
+      "frequency": "uncommon",
+      "label": "Poruchy spánku.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Constipation",
+      "ctcae": "Respiratory failure",
+      "frequency": "very_rare",
+      "label": "Útlum dechových funkcí, při vyšších dávkách nebo u pacientů se zvýšeným nitrolebním tlakem či poraněním hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Euphoria",
+      "frequency": "very_rare",
+      "label": "Euforie nebo dysforie při vysokých dávkách.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "very_rare",
+      "label": "Zhoršení ostrosti vidění a zrakově pohybové koordinace při vyšších dávkách nebo u zvláště citlivých pacientů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Syncope",
       "frequency": "common",
-      "label": "Zácpa.",
+      "label": "Pokles krevního tlaku; mdloba se může objevit při vysokých dávkách.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Miosis",
+      "frequency": "rare",
+      "label": "Zúžení zornic při vysokých dávkách.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tinnitus",
+      "frequency": "rare",
+      "label": "Ušní šelest nebo zvonění v uchu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": "rare",
+      "label": "Dušnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bronchospasm",
+      "frequency": "very_rare",
+      "label": "Zúžení průdušek (analgetické astma).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pulmonary edema",
+      "frequency": "very_rare",
+      "label": "Otok plic při vysokých dávkách, zejména u osob s poruchou funkce plic.",
       "action": null,
       "action_condition": null
     },
@@ -57,50 +171,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Insomnia",
-      "frequency": "uncommon",
-      "label": "Poruchy spánku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "uncommon",
-      "label": "Svědění.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky reakce z přecitlivělosti."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Zarudnutí kůže.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky reakce z přecitlivělosti."
-      }
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "uncommon",
-      "label": "Kopřivka.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky reakce z přecitlivělosti."
-      }
-    },
-    {
-      "ctcae": "Tinnitus",
-      "frequency": "rare",
-      "label": "Ušní šelest nebo zvonění v uchu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "rare",
-      "label": "Dušnost.",
+      "ctcae": "Constipation",
+      "frequency": "common",
+      "label": "Zácpa.",
       "action": null,
       "action_condition": null
     },
@@ -112,398 +185,531 @@
       "action_condition": null
     },
     {
+      "ctcae": "Hepatitis",
+      "frequency": null,
+      "label": "Cytolytický zánět jater, který může vést k akutnímu selhání jater.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysfunction of Oddi's sphincter",
+      "frequency": null,
+      "label": "Porucha funkce Oddiho svěrače.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "uncommon",
+      "label": "Svědění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erythema",
+      "frequency": "uncommon",
+      "label": "Zarudnutí kůže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Rash maculo-papular",
       "frequency": "rare",
       "label": "Alergická vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "very_rare",
+      "label": "Závažné kožní reakce včetně toxické epidermální nekrolýzy; mohou se projevit postupující vyrážkou, často s puchýři nebo postižením sliznic.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky reakce z přecitlivělosti."
-      }
-    },
-    {
-      "ctcae": "Blurred vision",
-      "frequency": "rare",
-      "label": "Poruchy vidění a zúžení zornic při vysokých dávkách.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_rare",
-      "label": "Snížení počtu krevních destiček, včetně alergické trombocytopenie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "very_rare",
-      "label": "Snížení počtu bílých krvinek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anemia",
-      "frequency": "very_rare",
-      "label": "Snížení počtu červených krvinek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Bronchospasm",
-      "frequency": "very_rare",
-      "label": "Zúžení průdušek (analgetické astma).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Útlum dechových funkcí při vyšších dávkách nebo u pacientů se zvýšeným nitrolebním tlakem či poraněním hlavy.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud máte pomalé nebo mělké dýchání."
-      }
-    },
-    {
-      "ctcae": "Euphoria",
-      "frequency": "very_rare",
-      "label": "Pocit velkého štěstí při vysokých dávkách.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Pocit velkého smutku (dysforie) při vysokých dávkách.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Ataxia",
-      "frequency": "very_rare",
-      "label": "Zhoršení zrakově-pohybové koordinace při vyšších dávkách nebo u zvláště citlivých pacientů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vision decreased",
-      "frequency": "very_rare",
-      "label": "Zhoršení ostrosti vidění při vyšších dávkách nebo u zvláště citlivých pacientů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pulmonary edema",
-      "frequency": "very_rare",
-      "label": "Otok plic při vysokých dávkách, zejména u osob s poruchou funkce plic.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "very_rare",
-      "label": "Závažná alergická reakce, včetně otoku hrtanu, dušnosti, návalů potu, nevolnosti a poklesu krevního tlaku až do šoku.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná alergická reakce."
+        "patient_guide": "Postupující vyrážka, často s puchýři nebo postižením sliznic.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "very_rare",
-      "label": "Závažné kožní reakce včetně Stevensova-Johnsonova syndromu.",
-      "action": "hospitalize_NOW",
+      "label": "Závažné kožní reakce včetně Stevensova-Johnsonova syndromu; mohou se projevit postupující vyrážkou, často s puchýři nebo postižením sliznic.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce, například postupující vyrážka, často s puchýři nebo postižením sliznic."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "very_rare",
-      "label": "Závažné kožní reakce včetně toxické epidermální nekrolýzy.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce, například postupující vyrážka, často s puchýři nebo postižením sliznic."
+        "patient_guide": "Postupující vyrážka, často s puchýři nebo postižením sliznic.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Pustular drug eruption",
       "frequency": "very_rare",
       "label": "Akutní generalizovaná exantematózní pustulóza.",
-      "action": "hospitalize_NOW",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce, například postupující vyrážka, často s puchýři nebo postižením sliznic."
+        "patient_guide": "Pustulózní kožní vyrážka.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Fixní lékový exantém.",
-      "action": "hospitalize_NOW",
+      "label": "Fixní lékový exantém; hlášeny byly také závažné kožní reakce se zarudnutím, puchýři a olupováním kůže.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce, například postupující vyrážka, často s puchýři nebo postižením sliznic."
-      }
-    },
-    {
-      "ctcae": "Acidosis",
-      "frequency": "not_known",
-      "label": "Metabolická acidóza s vysokou aniontovou mezerou, hlášená u pacientů s rizikovými faktory, například při závažném onemocnění ledvin, sepsi, podvýživě nebo nedostatku glutathionu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Confusion",
-      "frequency": "not_known",
-      "label": "Stav zmatenosti.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zmatenost spolu s dalšími příznaky toxicity kodeinu, například ospalostí, pomalým nebo mělkým dýcháním, malými zorničkami, nevolností, zvracením, zácpou nebo nechutenstvím."
-      }
-    },
-    {
-      "ctcae": "Seizure",
-      "frequency": "not_known",
-      "label": "Záchvaty.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "not_known",
-      "label": "Cytolytický zánět jater, který může vést až k akutnímu selhání jater.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Somnolence",
-      "frequency": "not_known",
-      "label": "Sedace a ospalost.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví ospalost spolu s dalšími příznaky toxicity kodeinu, například zmateností, pomalým nebo mělkým dýcháním, malými zorničkami, nevolností, zvracením, zácpou nebo nechutenstvím."
+        "patient_guide": "Zarudnutí, puchýře nebo olupování kůže.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Urinary retention",
-      "frequency": "not_known",
-      "label": "Zadržování moči.",
+      "frequency": null,
+      "label": "Obtíže při močení (retence moči).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Dysfunkce Oddiho svěrače.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Sleep apnea",
+      "frequency": null,
+      "label": "Poruchy dýchání ve spánku včetně spánkové apnoe; příznaky mohou zahrnovat přestávky v dýchání, noční probouzení kvůli dušnosti, potíže s udržením spánku nebo nadměrnou denní ospalost.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Přestávky v dýchání během spánku, noční probouzení kvůli dušnosti, potíže s udržením spánku nebo nadměrná ospalost během dne.",
+        "min_severity": 2
+      }
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Závislost na léku, která se může objevit i při terapeutických dávkách; riziko se může zvyšovat s dávkou a délkou léčby.",
+      "ctcae": "Hypoxia",
+      "frequency": null,
+      "label": "Nízká hladina kyslíku v krvi související se spánkem.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Přestávky v dýchání během spánku, noční probouzení kvůli dušnosti, potíže s udržením spánku nebo nadměrná ospalost během dne.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": null,
+      "label": "Bolest hlavy po dlouhodobém užívání vysokých dávek, které neodpovídá doporučení lékaře.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Bolest hlavy při dlouhodobém užívání vysokých dávek, které neodpovídá doporučení lékaře.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": null,
+      "label": "Zánět slinivky břišní; může se projevit silnou bolestí v horní části břicha vystřelující do zad, nevolností, zvracením nebo horečkou.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Silná bolest v horní části břicha, která může vystřelovat do zad, nevolnost, zvracení nebo horečka.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Confusion",
+      "frequency": null,
+      "label": "Zmatenost při známkách toxicity kodeinu u lidí, kteří kodein rychle přeměňují na morfin.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pomalé nebo mělké dýchání, zmatenost, ospalost, malé zorničky, nevolnost nebo zvracení, zácpa či nechutenství.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Somnolence",
+      "frequency": null,
+      "label": "Ospalost při známkách toxicity kodeinu u lidí, kteří kodein rychle přeměňují na morfin.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pomalé nebo mělké dýchání, zmatenost, ospalost, malé zorničky, nevolnost nebo zvracení, zácpa či nechutenství.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Sleep apnea",
+      "frequency": null,
+      "label": "Závislost na přípravku při opakovaném nebo dlouhodobém užívání; může vzniknout i při terapeutických dávkách.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Inhibitory monoaminooxidázy (IMAO)",
-      "effect": "Přípravek Ultracod se nesmí užívat současně s IMAO ani do 14 dnů po jejich vysazení. Kombinace může zesílit účinky na centrální nervovou soustavu a další nežádoucí účinky nepředvídatelné závažnosti, včetně rizika hypertenzní krize.",
+      "class_id": "atc:N06A",
+      "drug_class": "Léky tlumící centrální nervový systém, včetně sedativ, léků na spaní, některých léků proti bolesti, antihistaminik, antipsychotik, antidepresiv, léků na úzkost, vysoký krevní tlak nebo kašel",
+      "effect": "Kodein může zesílit tlumivý účinek na nervový systém a útlum dýchání. Současné užívání se sedativy, zejména benzodiazepiny a podobnými léky, může vést k hluboké sedaci, útlumu dýchání, kómatu nebo úmrtí; použije se jen tehdy, není-li možná jiná léčba, a lékař omezí dávku i dobu léčby a pacienta pečlivě sleduje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cns_depressant",
+      "drug_class": "Alkohol",
+      "effect": "Alkohol zesiluje tlumivý účinek kodeinu na nervový systém a může způsobit sedaci, útlum dýchání, kóma nebo úmrtí. Současné užívání opioidů s alkoholem se nedoporučuje. Alkohol také zvyšuje riziko poškození jater paracetamolem, zvláště u chronických konzumentů po přibližně 12 hodinách abstinence.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:5382",
+      "drug": "HEMIHYDRÁT KODEIN-FOSFÁTU",
+      "effect": "Přípravek se nesmí užívat současně s inhibitory MAO ani do 14 dnů od jejich vysazení; může dojít k zesílení účinků na centrální nervový systém a dalších nepředvídatelně závažných nežádoucích účinků.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "Sedativa, benzodiazepiny a jim podobné látky",
-      "effect": "Současné užívání zvyšuje aditivním tlumivým účinkem na centrální nervovou soustavu riziko sedace, útlumu dýchání, kómatu a úmrtí. Kombinace je určena pouze pro případy, kdy není možná jiná léčba; lékař má omezit dávku a dobu současného užívání a pacienta pečlivě sledovat.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zvýšená ospalost a sedace.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Útlum dýchání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Jiné léky tlumící centrální nervovou soustavu, včetně hypnotik, dalších analgetik, antihistaminik, neuroleptik, antidepresiv, anxiolytik, antihypertenziv a antitusik",
-      "effect": "Současné užívání s kodeinem může zesílit sedativní účinek nebo útlum dechových funkcí. Přípravek Ultracod může zvyšovat účinky léků na spaní, uklidnění, úzkost, alergii, depresi, vysoký krevní tlak, kašel i dalších léků proti bolesti.",
+      "class_id": "atc:N02BF",
+      "drug_class": "Gabapentinoidy (gabapentin nebo pregabalin)",
+      "effect": "Současné užívání s kodeinem může vést k útlumu dýchání, nízkému krevnímu tlaku, hluboké sedaci, kómatu nebo úmrtí.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Gabapentinoidy (gabapentin a pregabalin)",
-      "effect": "Současné užívání s přípravkem Ultracod může vést k útlumu dýchání, nízkému krevnímu tlaku, hluboké sedaci, kómatu nebo úmrtí.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Pokles krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Hluboká sedace.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Alkohol",
-      "effect": "Současné užívání opioidů, včetně kodeinu, a alkoholu může vést k sedaci, útlumu dýchání, kómatu a úmrtí; současné užívání se nedoporučuje a během léčby se alkohol nemá pít. Alkohol, zejména dlouhodobá konzumace nebo krátkodobá abstinence u chronických konzumentů, zároveň zvyšuje riziko poškození jater paracetamolem.",
+      "class_id": "substance:1064",
+      "drug": "PARACETAMOL",
+      "effect": "Při dlouhodobém užívání vyšších dávek přípravku (více než 4 tablety denně) může paracetamol zvýšit krvácivost při současném užívání warfarinu nebo jiných antagonistů vitaminu K; lékař má častěji kontrolovat srážlivost krve. Při současném dlouhodobém podávání vyšších dávek paracetamolu je kontrola protrombinového času nutná zejména při léčbě perorálními antikoagulancii.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Potenciálně hepatotoxické léky a léky indukující jaterní enzymy, včetně některých hypnotik a antiepileptik, barbiturátů, IMAO, tricyklických antidepresiv, třezalky tečkované a rifampicinu",
-      "effect": "Tyto léky mohou zvýšit toxicitu paracetamolu a způsobit poruchu jater; indukce metabolismu zvyšuje tvorbu hepatotoxického oxidativního metabolitu. Riziko poškození jater dále zvyšuje alkohol.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "Flukloxacilin",
-      "effect": "Současné užívání s paracetamolem bylo spojeno se závažnou metabolickou acidózou s vysokou aniontovou mezerou v důsledku pyroglutamové acidózy, zejména u pacientů s rizikovými faktory; je třeba zvýšené opatrnosti.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Metabolická acidóza s vysokou aniontovou mezerou v důsledku pyroglutamové acidózy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Chloramfenikol",
-      "effect": "Paracetamol může významně zpomalit vylučování chloramfenikolu a zvýšit riziko jeho hromadění a intoxikace.",
+      "class_id": "substance:1064",
+      "drug": "PARACETAMOL",
+      "effect": "Paracetamol může zvýšit toxicitu chloramfenikolu tím, že zpomalí jeho vylučování.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Warfarin",
-      "effect": "Paracetamol může zvýšit riziko krvácení. Při dlouhodobém užívání vyšších dávek přípravku Ultracod, zejména více než 4 tablety denně, je vhodné častěji kontrolovat srážlivost krve; při léčbě antagonisty vitaminu K je třeba sledovat koagulaci a krvácivé komplikace.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Ostatní antagonisté vitaminu K",
-      "effect": "Paracetamol může zvýšit riziko krvácení. Při dlouhodobém užívání vyšších dávek přípravku Ultracod, zejména více než 4 tablety denně, je vhodné častěji kontrolovat srážlivost krve; při léčbě antagonisty vitaminu K je třeba sledovat koagulaci a krvácivé komplikace.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "Zidovudin",
-      "effect": "Současné užívání s paracetamolem zvyšuje sklon k neutropenii a hepatotoxicitě; kombinace se má použít pouze po pečlivém zvážení přínosu a rizika.",
+      "class_id": "substance:1064",
+      "drug": "PARACETAMOL",
+      "effect": "Při současném užívání se zidovudinem může vzrůst sklon k neutropenii a poškození jater; současná léčba se má použít jen po pečlivém zvážení přínosu a rizika.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Neutrophil count decreased",
           "frequency": null,
-          "label": "Zvýšené riziko neutropenie.",
+          "label": "Při současném užívání se zidovudinem může vzrůst sklon k neutropenii.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Hepatitis",
           "frequency": null,
-          "label": "Zvýšené riziko poškození jater.",
+          "label": "Při současném užívání se zidovudinem může vzrůst riziko poškození jater.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Lamotrigin",
-      "effect": "Současné podávání paracetamolu může zvýšit jaterní clearance lamotriginu a snížit jeho účinnost.",
+      "class_id": "substance:1064",
+      "drug": "PARACETAMOL",
+      "effect": "Paracetamol může při současném podávání snížit účinnost lamotriginu zvýšením jeho jaterního vylučování.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky, zejména kyselina acetylsalicylová",
-      "effect": "Dlouhodobé současné užívání paracetamolu a NSAID ve vyšších dávkách zvyšuje riziko analgetické nefropatie a dalších nežádoucích účinků na ledviny.",
+      "class_id": "substance:1064",
+      "drug": "PARACETAMOL",
+      "effect": "Současné užívání s flukloxacilinem bylo zejména u pacientů s rizikovými faktory spojeno se závažnou metabolickou acidózou s vysokou aniontovou mezerou; doporučuje se zvýšená opatrnost.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Kolestyramin",
-      "effect": "Může snižovat střevní absorpci paracetamolu a potenciálně snižovat jeho účinnost. Pokud je to možné, dodržte mezi podáním kolestyraminu a paracetamolu odstup delší než 2 hodiny.",
+      "class_id": "substance:1064",
+      "drug": "PARACETAMOL",
+      "effect": "Při dlouhodobém užívání vyšších dávek současně s nesteroidními protizánětlivými léčivy, zejména kyselinou acetylsalicylovou, roste riziko analgetické nefropatie a dalších nežádoucích účinků na ledviny.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1064",
+      "drug": "PARACETAMOL",
+      "effect": "Léky indukující jaterní enzymy mohou zvýšit toxicitu paracetamolu a riziko poškození jater. Jsou jmenovány některé léky na spaní a proti epilepsii, barbituráty, inhibitory MAO, tricyklická antidepresiva, třezalka tečkovaná a rifampicin; riziko zvyšují také jiné potenciálně hepatotoxické léky a zneužívání alkoholu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A03AB",
+      "drug_class": "Látky zpomalující vyprazdňování žaludku, například propanthelinium",
+      "effect": "Mohou zpomalit vstřebávání paracetamolu a oddálit nástup účinku přípravku.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Propanthelinium",
-      "effect": "Zpomalení vyprazdňování žaludku může zpomalit vstřebávání paracetamolu a opozdit nástup účinku přípravku Ultracod.",
-      "effect_type": null,
+      "class_id": "substance:1064",
+      "drug": "PARACETAMOL",
+      "effect": "Metoklopramid nebo domperidon mohou urychlit vstřebávání paracetamolu a tím nástup jeho účinku.",
+      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léky s anticholinergním účinkem, včetně tricyklických antidepresiv, antihistaminik, antipsychotik, myorelaxancií a antiparkinsonik",
-      "effect": "Současné užívání kodeinu s anticholinergiky nebo léky s anticholinergní aktivitou může zesílit anticholinergní nežádoucí účinky.",
-      "effect_type": "increased_toxicity",
+      "class_id": "atc:C10AC",
+      "drug_class": "Pryskyřice vázající žlučové kyseliny, například kolestyramin",
+      "effect": "Mohou snížit vstřebávání paracetamolu a jeho účinnost. Je-li to možné, doporučuje se odstup mezi užitím pryskyřice a paracetamolu delší než 2 hodiny.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léky nebo prostředky zpomalující vyprazdňování žaludku",
-      "effect": "Mohou zpomalit vstřebávání paracetamolu a opozdit nástup účinku přípravku Ultracod.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léky urychlující vyprazdňování žaludku, včetně metoklopramidu a domperidonu",
-      "effect": "Metoklopramid nebo domperidon mohou urychlit rychlost vstřebávání paracetamolu a tím nástup účinku přípravku Ultracod.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:G03A",
       "drug_class": "Perorální hormonální antikoncepce",
-      "effect": "Perorální antikoncepce může zvýšit clearance paracetamolu a snížit jeho účinek.",
+      "effect": "Perorální antikoncepce může zvýšit vylučování paracetamolu; příbalová informace uvádí, že jeho účinek se může snížit.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Antiperistaltické léky proti průjmu",
-      "effect": "Současné užívání s kodeinem může zvýšit riziko těžké zácpy a útlumu centrální nervové soustavy.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Constipation",
-          "frequency": null,
-          "label": "Zvýšené riziko těžké zácpy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Látky usnadňující odkašlávání, například ambroxol",
-      "effect": "Současné užívání s kodeinem není vhodné, protože kodein může blokovat kašlací reflex a bránit odkašlávání.",
+      "class_id": "atc:R05CB",
+      "drug_class": "Léky usnadňující odkašlávání",
+      "effect": "Kodein tlumí kašlací reflex, proto se nemá užívat současně s léky usnadňujícími odkašlávání, například ambroxolem.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Částeční agonisté nebo antagonisté morfinu, včetně buprenorfinu a naltrexonu",
-      "effect": "Současné užívání může urychlit nebo zpomalit účinky kodeinu; směr a míra změny závisí na přípravku.",
-      "effect_type": null,
+      "class_id": "atc:A07D",
+      "drug_class": "Antiperistaltické léky proti průjmu",
+      "effect": "Současné užívání s kodeinem může zvýšit riziko těžké zácpy a útlumu centrálního nervového systému.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Jiné přípravky obsahující paracetamol a kodein",
-      "effect": "Přípravek Ultracod neužívejte současně s dalšími léčivými přípravky obsahujícími paracetamol a kodein.",
+      "class_id": "substance:5382",
+      "drug": "HEMIHYDRÁT KODEIN-FOSFÁTU",
+      "effect": "Buprenorfin jako částečný agonista nebo naltrexon jako antagonista morfinu může urychlit nebo zpomalit účinky kodeinu.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A03",
+      "drug_class": "Anticholinergika nebo léky s anticholinergním účinkem",
+      "effect": "Současné užívání s kodeinem může zesílit anticholinergní nežádoucí účinky. Mezi uvedené příklady patří tricyklická antidepresiva, antihistaminika, antipsychotika, léky uvolňující svaly a léky na Parkinsonovu chorobu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Ultracod zmírňuje středně silnou až silnou bolest u dospělých a krátkodobě také u dospívajících od 12 let.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0109797",
+      "H": "",
+      "NAZEV": "ULTRACOD",
+      "SILA": "500MG/30MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "10",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG/30MG TBL NOB 10",
+      "OBAL": "BLI",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "07",
+      "ATC_WHO": "N02AJ06",
+      "RC": "07/444/07-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "3",
+      "DDDUN_WHO": "UD",
+      "DDDP_WHO": "3,3333",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1064,5382",
+      "VYDEJ": "R",
+      "ZAV": "8",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "ULTRACOD",
+      "MRP_CISLO": "CZ/H/0196/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OE",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0109797",
+        "KOD_LATKY": "1064",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1064",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "PARACETAMOLUM",
+          "NAZEV_EN": "PARACETAMOL",
+          "NAZEV": "PARACETAMOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0109797",
+        "KOD_LATKY": "5382",
+        "SQ": "2",
+        "S": "L",
+        "AMNT": "30",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5382",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CODEINI PHOSPHAS HEMIHYDRICUS",
+          "NAZEV_EN": "CODEINE PHOSPHATE HEMIHYDRATE",
+          "NAZEV": "HEMIHYDRÁT KODEIN-FOSFÁTU",
+          "ZAV": "2"
+        }
+      },
+      {
+        "KOD_SUKL": "0109797",
+        "KOD_LATKY": "3755",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0109797",
+        "KOD_LATKY": "4989",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4989",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "PREGELATINISED MAIZE STARCH",
+          "NAZEV": "PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0109797",
+        "KOD_LATKY": "5624",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0109797",
+        "KOD_LATKY": "18178",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18178",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 30",
+          "NAZEV_EN": "POVIDONE K 30",
+          "NAZEV": "POVIDON K 30",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0109797",
+        "KOD_LATKY": "16393",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16393",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ACIDUM STEARICUM 50%",
+          "NAZEV_EN": "STEARIC ACID 50%",
+          "NAZEV": "KYSELINA STEAROVÁ 50%"
+        }
+      },
+      {
+        "KOD_SUKL": "0109797",
+        "KOD_LATKY": "1300",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0109797",
+      "PIL": "PI235590.pdf",
+      "DAT_ROZ_PIL": "21.07.2026",
+      "SPC": "SPC235580.pdf",
+      "DAT_ROZ_SPC": "21.07.2026",
+      "OBAL_TEXT": "OBAL188746.pdf",
+      "DAT_ROZ_OBAL": "12.07.2022"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N02AJ06",
+        "NT": "N",
+        "NAZEV": "KODEIN A PARACETAMOL",
+        "NAZEV_EN": "CODEINE AND PARACETAMOL"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

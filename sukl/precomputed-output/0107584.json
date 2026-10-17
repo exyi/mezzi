@@ -1,111 +1,433 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A07",
+    "atc:A07F",
+    "atc:A07FA",
+    "atc:A07FA03",
+    "substance:15029"
+  ],
   "side_effects": [
-    {
-      "ctcae": "Flatulence",
-      "frequency": "common",
-      "label": "Plynatost, zvláště na začátku léčby",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás plynatost vyskytne"
-      }
-    },
     {
       "ctcae": "Headache",
       "frequency": "very_rare",
-      "label": "Bolest hlavy",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás bolest hlavy vyskytne"
-      }
+      "label": "Bolest hlavy (méně než 1 z 10 000 osob).",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Flatulence",
+      "frequency": "common",
+      "label": "Plynatost, zvláště na začátku léčby (až 1 z 10 osob).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Změna konzistence stolice nebo četnosti vyprazdňování",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás změna konzistence stolice nebo četnosti vyprazdňování vyskytne"
-      }
+      "label": "Změna konzistence stolice nebo četnosti vyprazdňování (méně než 1 z 10 000 osob).",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "very_rare",
-      "label": "Bolest břicha",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás bolest břicha vyskytne"
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Škroukání v břiše (borborygmus)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás škroukání v břiše vyskytne"
-      }
+      "label": "Bolest břicha (méně než 1 z 10 000 osob).",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Bloating",
       "frequency": "very_rare",
-      "label": "Nadýmání",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás nadýmání vyskytne"
-      }
+      "label": "Nadýmání (méně než 1 z 10 000 osob).",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "very_rare",
-      "label": "Nevolnost",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás nevolnost vyskytne"
-      }
+      "label": "Nevolnost (méně než 1 z 10 000 osob).",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "very_rare",
-      "label": "Zvracení",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás zvracení vyskytne"
-      }
+      "label": "Zvracení (méně než 1 z 10 000 osob).",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Rash maculo-papular",
       "frequency": "very_rare",
-      "label": "Kožní vyrážka různého druhu",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás kožní vyrážka vyskytne"
-      }
+      "label": "Kožní vyrážka různého druhu (méně než 1 z 10 000 osob).",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Erythema multiforme",
       "frequency": "very_rare",
-      "label": "Zčervenání kůže",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás zčervenání kůže vyskytne"
-      }
+      "label": "Zčervenání kůže (méně než 1 z 10 000 osob).",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Exfoliative dermatitis",
       "frequency": "very_rare",
-      "label": "Odlupování kůže",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás začne odlupovat kůže"
-      }
+      "label": "Odlupování kůže (méně než 1 z 10 000 osob).",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Antibiotika a sulfonamidy",
-      "effect": "Současné užívání antibiotik nebo sulfonamidů může snížit účinnost přípravku MUTAFLOR.",
-      "effect_type": "antagonism",
+      "class_id": "atc:J01",
+      "drug_class": "Antibiotika",
+      "effect": "Současné užívání antibiotik může snížit účinnost přípravku MUTAFLOR.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01E",
+      "drug_class": "Sulfonamidy",
+      "effect": "Současné užívání sulfonamidů může snížit účinnost přípravku MUTAFLOR.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "MUTAFLOR se používá k udržovací léčbě ulcerózní kolitidy a při poruchách střevní flóry.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0107584",
+      "H": "",
+      "NAZEV": "MUTAFLOR",
+      "SILA": "2,5-25X10^9CFU",
+      "FORMA": "CPS ETD",
+      "BALENI": "20",
+      "CESTA": "POR",
+      "DOPLNEK": "2,5-25X10^9CFU CPS ETD 20",
+      "OBAL": "BLI",
+      "DRZ": "ARP",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "49",
+      "ATC_WHO": "A07FA03",
+      "RC": "49/442/00-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0",
+      "DDDUN_WHO": "",
+      "DDDP_WHO": "0",
+      "ZDROJ_WHO": "NO26",
+      "LL": "15029",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "12",
+      "EXP_T": "M",
+      "NAZEV_REG": "MUTAFLOR",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "BI"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "15029",
+        "SQ": "1",
+        "S": "L",
+        "AMNT_OD": "14",
+        "AMNT": "70",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "15029",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ESCHERICHIA COLI",
+          "NAZEV_EN": "ESCHERICHIA COLI",
+          "NAZEV": "ESCHERICHIA COLI"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "15029",
+        "SQ": "3",
+        "S": "O",
+        "AMNT_OD": "2,5X10^9",
+        "AMNT": "25X10^9",
+        "UN": "CFU",
+        "substance": {
+          "KOD_LATKY": "15029",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ESCHERICHIA COLI",
+          "NAZEV_EN": "ESCHERICHIA COLI",
+          "NAZEV": "ESCHERICHIA COLI"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "3453",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3453",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "MALTODEXTRINUM",
+          "NAZEV_EN": "MALTODEXTRIN",
+          "NAZEV": "MALTODEXTRIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "13030",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13030",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "GLYCEROLUM",
+          "NAZEV_EN": "GLYCEROL",
+          "NAZEV": "GLYCEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "1871",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "SQ": "7",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "2855",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "2043",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2043",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "AQUA PURIFICATA",
+          "NAZEV_EN": "WATER, PURIFIED",
+          "NAZEV": "ČIŠTĚNÁ VODA"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "3453",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3453",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "MALTODEXTRINUM",
+          "NAZEV_EN": "MALTODEXTRIN",
+          "NAZEV": "MALTODEXTRIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "SQ": "11",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "4290",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4290",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM RUBRUM",
+          "NAZEV_EN": "IRON OXIDE RED",
+          "NAZEV": "ČERVENÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "2404",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2404",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 4000",
+          "NAZEV_EN": "MACROGOL 4000",
+          "NAZEV": "MAKROGOL 4000"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "9832",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9832",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "TRIETHYLIS CITRAS",
+          "NAZEV_EN": "TRIETHYL CITRATE",
+          "NAZEV": "TRIETHYL-CITRÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "4099",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4099",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "ACIDUM METHACRYLICUM ET METHYLIS METHACRYLAS POLYMERISATUM 1:1",
+          "NAZEV_EN": "METHACRYLIC ACID - METHYL METHACRYLATE COPOLYMER (1:1)",
+          "NAZEV": "KOPOLYMER KYSELINY METHAKRYLOVÉ A METHYL-METHAKRYLÁTU 1:1"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "2710",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0107584",
+        "KOD_LATKY": "13019",
+        "SQ": "17",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13019",
+          "ZDROJ": "HH3",
+          "NAZEV_INN": "CERA POLITORIA",
+          "NAZEV_EN": "POLISH WAX",
+          "NAZEV": "VOSKOVÉ LEŠTIDLO"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0107584",
+      "PIL": "PI141118.pdf",
+      "DAT_ROZ_PIL": "25.04.2019",
+      "SPC": "SPC141119.pdf",
+      "DAT_ROZ_SPC": "25.04.2019",
+      "OBAL_TEXT": "OBAL137057.pdf",
+      "DAT_ROZ_OBAL": "06.02.2019"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A07FA03",
+        "NT": "N",
+        "NAZEV": "ESCHERICHIA COLI",
+        "NAZEV_EN": "ESCHERICHIA COLI"
+      },
+      "formy": {
+        "FORMA": "CPS ETD",
+        "NAZEV": "Enterosolventní tvrdá tobolka",
+        "NAZEV_EN": "Gastro-resistant capsule, hard",
+        "NAZEV_LAT": "Capsula enterosolvens dura",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10212000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

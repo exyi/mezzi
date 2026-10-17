@@ -1,4 +1,13 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A04",
+    "atc:A04A",
+    "atc:A04AA",
+    "atc:A04AA01",
+    "group:qt_prolonging",
+    "substance:10417"
+  ],
   "side_effects": [
     {
       "ctcae": "Headache",
@@ -22,30 +31,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Chest pain - cardiac",
+      "ctcae": "Hiccups",
       "frequency": "uncommon",
-      "label": "Bolest na hrudi, s depresí úseku ST na EKG nebo bez ní.",
+      "label": "Škytavka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Sinus bradycardia",
+      "ctcae": "Investigations - Other, specify",
       "frequency": "uncommon",
-      "label": "Snížená srdeční frekvence (bradykardie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Nepravidelná srdeční frekvence (arytmie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "uncommon",
-      "label": "Snížený krevní tlak.",
+      "label": "Zvýšené hodnoty jaterních testů; tyto případy byly často pozorovány při chemoterapii cisplatinou.",
       "action": null,
       "action_condition": null
     },
@@ -59,58 +54,73 @@
     {
       "ctcae": "Movements involuntary",
       "frequency": "uncommon",
-      "label": "Vůlí neovladatelné pohyby nebo křeče, například dystonické reakce, okulogyrické krize nebo dyskineze; nebyly spojeny s průkaznými klinickými následky.",
+      "label": "Vůlí neovladatelné pohyby nebo křeče.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Chest pain - cardiac",
       "frequency": "uncommon",
-      "label": "Zvýšené hodnoty jaterních testů; tyto případy byly často pozorovány u pacientů léčených při chemoterapii cisplatinou. Zvýšení může být bez příznaků.",
+      "label": "Bolest na hrudi, s depresí úseku ST na EKG nebo bez ní.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hiccups",
+      "ctcae": "Hypotension",
       "frequency": "uncommon",
-      "label": "Škytavka.",
+      "label": "Snížený krevní tlak.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Sinus bradycardia",
+      "frequency": "uncommon",
+      "label": "Snížená srdeční frekvence (bradykardie); není upřesněno, zda jde o sinusovou bradykardii.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Nepravidelná srdeční frekvence (arytmie).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "rare",
-      "label": "Prodloužení intervalu QT na EKG, včetně poruchy srdečního rytmu zvané torsade de pointes.",
+      "label": "Prodloužení QTc intervalu, včetně torsade de pointes.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "rare",
-      "label": "Závratě; objevují se při rychlém nitrožilním podání ondansetronu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blurred vision",
-      "frequency": "rare",
-      "label": "Přechodné poruchy vidění, například rozmazané vidění; byly hlášeny převážně při nitrožilním podání.",
+      "label": "Závratě; při rychlém intravenózním podání ondansetronu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "rare",
-      "label": "Závažná alergická reakce, například kopřivka, otok (někdy obličeje nebo úst), který může způsobit obtíže s dýcháním, nebo mdloba. Přestaňte přípravek užívat a neprodleně kontaktujte lékaře.",
-      "action": "contact_doctor",
+      "label": "Závažná alergická reakce, například kopřivka, otok někdy obličeje nebo úst s možnými obtížemi s dýcháním nebo mdloba. Při prvních známkách kožní reakce nebo jiné přecitlivělosti přípravek vysaďte a vyhledejte lékaře.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některý z těchto příznaků."
+        "patient_guide": null,
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "rare",
+      "label": "Přechodné poruchy vidění, například rozmazané vidění; hlášeny převážně při intravenózním podání.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vision decreased",
       "frequency": "very_rare",
-      "label": "Oslabení zraku nebo dočasná ztráta zraku, která obvykle odezní do 20 minut; většina případů byla hlášena při chemoterapii obsahující cisplatinu a při nitrožilním podání ondansetronu.",
+      "label": "Oslabení zraku nebo dočasná ztráta zraku, která obvykle vymizí do 20 minut; většina případů byla hlášena při intravenózním podání, často při chemoterapii obsahující cisplatinu.",
       "action": null,
       "action_condition": null
     },
@@ -122,74 +132,305 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Myocardial infarction",
       "frequency": "not_known",
-      "label": "Ischemie srdečního svalu. Příznaky mohou zahrnovat náhlou bolest na hrudi nebo svírání na hrudi.",
+      "label": "Ischemie srdečního svalu; může se projevit náhlou bolestí nebo svíráním na hrudi.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
+      "class_id": "substance:10417",
       "drug": "Apomorfin",
-      "effect": "Současné podávání ondansetronu s apomorfinem je kontraindikováno. Byly hlášeny případy těžkého poklesu krevního tlaku a ztráty vědomí při současném podávání ondansetronu a apomorfin-hydrochloridu.",
+      "effect": "Současné užívání ondansetronu s apomorfinem je zakázáno: byly hlášeny těžký pokles krevního tlaku a ztráta vědomí.",
       "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Těžký pokles krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Syncope",
-          "frequency": null,
-          "label": "Ztráta vědomí.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky prodlužující QT interval, včetně kardiotoxických léků (například antracyklinů, jako jsou doxorubicin a daunorubicin, a trastuzumabu), antibiotik (například erythromycinu), antimykotik (například ketokonazolu), antiarytmik (například amiodaronu) a beta-blokátorů (například atenololu nebo timololu)",
-      "effect": "Současné užívání může vést k dalšímu prodloužení QT intervalu a může zvýšit riziko arytmií. Opatrnosti je zapotřebí zejména u pacientů, u nichž může dojít k prodloužení QTc intervalu, včetně pacientů s poruchami elektrolytů, městnavým srdečním selháním nebo bradyarytmiemi.",
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léky prodlužující QT interval",
+      "effect": "Současné užívání může dále prodloužit QT interval a zvýšit riziko poruch srdečního rytmu. Riziko může být vyšší také při současném užívání kardiotoxických léků, jako jsou antracykliny nebo trastuzumab, některá antibiotika či antimykotika, antiarytmika a beta-blokátory.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Jiné serotonergní léky, včetně SSRI a SNRI",
-      "effect": "Po současném podávání ondansetronu s jinými serotonergními léky, včetně SSRI a SNRI, byly hlášeny případy serotoninového syndromu. Pokud je současná léčba klinicky nezbytná, doporučuje se pacienta odpovídajícím způsobem sledovat.",
+      "class_id": "group:serotonergic",
+      "drug_class": "Serotonergní léky",
+      "effect": "Při současném užívání ondansetronu s jinými serotonergními léky, včetně SSRI nebo SNRI, byl hlášen serotoninový syndrom. Pokud je tato kombinace nutná, lékař bude pacienta odpovídajícím způsobem sledovat.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Serotoninový syndrom, včetně změny duševního stavu, autonomní nestability a nervosvalových abnormalit.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Induktory enzymu CYP3A4, například fenytoin, karbamazepin a rifampicin",
-      "effect": "U pacientů léčených fenytoinem, karbamazepinem nebo rifampicinem byla zvýšena perorální clearance ondansetronu a snížena jeho koncentrace v krvi.",
+      "class_id": "substance:10417",
+      "drug": "Fenytoin",
+      "effect": "Fenytoin zvyšuje aktivitu CYP3A4; u pacientů užívajících fenytoin byla zvýšena clearance ondansetronu podaného ústy a snížena jeho koncentrace v krvi.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:10417",
+      "drug": "Karbamazepin",
+      "effect": "Karbamazepin zvyšuje aktivitu CYP3A4; u pacientů užívajících karbamazepin byla zvýšena clearance ondansetronu podaného ústy a snížena jeho koncentrace v krvi.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:10417",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin zvyšuje aktivitu CYP3A4; u pacientů užívajících rifampicin byla zvýšena clearance ondansetronu podaného ústy a snížena jeho koncentrace v krvi.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:10417",
       "drug": "Tramadol",
-      "effect": "Údaje z menších studií ukazují, že ondansetron může snižovat analgetický účinek tramadolu.",
+      "effect": "Ondansetron může snížit analgetický účinek tramadolu.",
       "effect_type": "antagonism",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se u dospělých k léčbě nevolnosti a zvracení při chemoterapii a radioterapii a k prevenci pooperační nevolnosti a zvracení.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0185206",
+      "H": "",
+      "NAZEV": "NOVETRON",
+      "SILA": "8MG",
+      "FORMA": "POR TBL DIS",
+      "BALENI": "10",
+      "CESTA": "POR",
+      "DOPLNEK": "8MG POR TBL DIS 10",
+      "OBAL": "STR",
+      "DRZ": "PHG",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "20",
+      "ATC_WHO": "A04AA01",
+      "RC": "20/470/07-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "16",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10417",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "0",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "NOVETRON",
+      "MRP_CISLO": "CZ/H/0362/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0185206",
+        "KOD_LATKY": "10417",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "8",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10417",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ONDANSETRONUM",
+          "NAZEV_EN": "ONDANSETRON",
+          "NAZEV": "ONDANSETRON"
+        }
+      },
+      {
+        "KOD_SUKL": "0185206",
+        "KOD_LATKY": "7372",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "7372",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ASPARTAMUM",
+          "NAZEV_EN": "ASPARTAME",
+          "NAZEV": "ASPARTAM"
+        }
+      },
+      {
+        "KOD_SUKL": "0185206",
+        "KOD_LATKY": "10623",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10623",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AROMA MENTHAE PIPERITAE",
+          "NAZEV_EN": "PEPPERMINT FLAVOUR",
+          "NAZEV": "AROMA MÁTY PEPRNÉ"
+        }
+      },
+      {
+        "KOD_SUKL": "0185206",
+        "KOD_LATKY": "2378",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0185206",
+        "KOD_LATKY": "2624",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0185206",
+        "KOD_LATKY": "4873",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4873",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "HYPROLOSUM SUBSTITUTUM HUMILE",
+          "NAZEV_EN": "HYPROLOSE, LOW-SUBSTITUTED",
+          "NAZEV": "ČÁSTEČNĚ SUBSTITUOVANÁ HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0185206",
+        "KOD_LATKY": "4987",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4987",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CROSPOVIDONUM",
+          "NAZEV_EN": "CROSPOVIDONE",
+          "NAZEV": "KROSPOVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0185206",
+        "KOD_LATKY": "4394",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4394",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CALCII SILICAS",
+          "NAZEV_EN": "CALCIUM SILICATE",
+          "NAZEV": "KŘEMIČITAN VÁPENATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0185206",
+        "KOD_LATKY": "1300",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0185206",
+        "SQ": "10",
+        "S": "T",
+        "AMNT": "10",
+        "UN": "DF",
+        "substance": {}
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0185206",
+      "PIL": "PI183813.pdf",
+      "DAT_ROZ_PIL": "03.03.2022",
+      "SPC": "SPC183814.pdf",
+      "DAT_ROZ_SPC": "03.03.2022",
+      "OBAL_TEXT": "OBAL152761.pdf",
+      "DAT_ROZ_OBAL": "28.01.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A04AA01",
+        "NT": "N",
+        "NAZEV": "ONDANSETRON",
+        "NAZEV_EN": "ONDANSETRON"
+      },
+      "formy": {
+        "FORMA": "POR TBL DIS",
+        "NAZEV": "Tableta dispergovatelná v ústech",
+        "NAZEV_EN": "Orodispersible tablet",
+        "NAZEV_LAT": "Tabuletta pro orodispersione",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10223000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "STR",
+        "NAZEV": "Strip",
+        "NAZEV_EN": "Strip",
+        "KOD_EDQM": "30065000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

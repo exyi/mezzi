@@ -1,12 +1,13 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C09",
+    "atc:C09C",
+    "atc:C09CA",
+    "atc:C09CA07",
+    "substance:13774"
+  ],
   "side_effects": [
-    {
-      "ctcae": "Hypotension",
-      "frequency": "common",
-      "label": "Nízký krevní tlak u pacientů užívajících Tezeo ke snížení výskytu srdečně-cévních příhod.",
-      "action": null,
-      "action_condition": null
-    },
     {
       "ctcae": "Urinary tract infection",
       "frequency": "uncommon",
@@ -17,14 +18,14 @@
     {
       "ctcae": "Upper respiratory infection",
       "frequency": "uncommon",
-      "label": "Infekce horních cest dýchacích, včetně bolesti v krku, zánětu vedlejších nosních dutin a běžného nachlazení.",
+      "label": "Infekce horních cest dýchacích, například zánět hltanu nebo dutin.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anemia",
       "frequency": "uncommon",
-      "label": "Nedostatek červených krvinek (anémie).",
+      "label": "Chudokrevnost.",
       "action": null,
       "action_condition": null
     },
@@ -38,14 +39,14 @@
     {
       "ctcae": "Insomnia",
       "frequency": "uncommon",
-      "label": "Potíže při usínání.",
+      "label": "Potíže s usínáním.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depression",
       "frequency": "uncommon",
-      "label": "Pocity smutku (deprese).",
+      "label": "Pocity smutku nebo deprese.",
       "action": null,
       "action_condition": null
     },
@@ -71,9 +72,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Sinus bradycardia",
+      "ctcae": "Bradycardia",
       "frequency": "uncommon",
-      "label": "Zpomalení srdeční činnosti (bradykardie).",
+      "label": "Zpomalení srdeční činnosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypotension",
+      "frequency": "common",
+      "label": "Nízký krevní tlak u pacientů užívajících přípravek ke snížení výskytu srdečně-cévních příhod; u pacientů léčených pro vysoký krevní tlak je méně častý.",
       "action": null,
       "action_condition": null
     },
@@ -87,14 +95,14 @@
     {
       "ctcae": "Hypotension",
       "frequency": "uncommon",
-      "label": "Pokles krevního tlaku při vstávání (ortostatická hypotenze).",
+      "label": "Pokles krevního tlaku při postavení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspnea",
       "frequency": "uncommon",
-      "label": "Zkrácený dech (dušnost).",
+      "label": "Zkrácený dech.",
       "action": null,
       "action_condition": null
     },
@@ -109,19 +117,15 @@
       "ctcae": "Abdominal pain",
       "frequency": "uncommon",
       "label": "Bolesti břicha.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku Tezeo objeví bolest břicha."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "uncommon",
       "label": "Průjem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku Tezeo objeví průjem."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Dyspepsia",
@@ -141,10 +145,8 @@
       "ctcae": "Vomiting",
       "frequency": "uncommon",
       "label": "Zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku Tezeo objeví zvracení."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Pruritus",
@@ -163,14 +165,14 @@
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Poléková vyrážka.",
+      "label": "Kožní vyrážka; typ vyrážky není blíže určen.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Back pain",
       "frequency": "uncommon",
-      "label": "Bolesti zad.",
+      "label": "Bolesti zad, například ischias.",
       "action": null,
       "action_condition": null
     },
@@ -189,7 +191,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Acute kidney injury",
+      "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "uncommon",
       "label": "Zhoršení funkce ledvin, včetně náhlého selhání ledvin.",
       "action": null,
@@ -205,65 +207,66 @@
     {
       "ctcae": "Fatigue",
       "frequency": "uncommon",
-      "label": "Pocity slabosti (astenie).",
+      "label": "Slabost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Creatinine increased",
       "frequency": "uncommon",
-      "label": "Zvýšená hladina kreatininu v krvi; zvýšení hladiny bylo hlášeno také při předávkování.",
+      "label": "Zvýšená hladina kreatininu v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Sepsis",
       "frequency": "rare",
-      "label": "Sepse, závažná infekce se zánětlivou reakcí celého těla, která může vést k úmrtí.",
-      "action": "discontinue_treatment",
+      "label": "Sepse, závažná infekce s celkovou zánětlivou reakcí; ve studii u pacientů po cévní mozkové příhodě byla hlášena u 0,70 % při telmisartanu oproti 0,49 % při placebu, příčinná souvislost není jistá.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky sepse."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Eosinophilia",
       "frequency": "rare",
-      "label": "Zvýšení určitého druhu bílých krvinek (eozinofilie).",
+      "label": "Zvýšený počet určitého druhu bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "rare",
-      "label": "Pokles počtu krevních destiček (trombocytopenie).",
+      "label": "Snížený počet krevních destiček.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "rare",
-      "label": "Závažná alergická reakce (anafylaktická reakce).",
+      "label": "Závažná alergická reakce.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "rare",
-      "label": "Alergické reakce, například vyrážka, svědění, potíže s dechem, sípání, otok obličeje nebo nízký krevní tlak.",
+      "label": "Alergická reakce, například vyrážka, svědění, potíže s dechem, sípání, otok obličeje nebo nízký krevní tlak.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypoglycemia",
       "frequency": "rare",
-      "label": "Nízká hladina krevního cukru u pacientů s cukrovkou.",
+      "label": "Nízká hladina cukru v krvi u pacientů s diabetem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anxiety",
       "frequency": "rare",
-      "label": "Pocity úzkosti.",
+      "label": "Úzkost.",
       "action": null,
       "action_condition": null
     },
@@ -275,16 +278,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Eye disorders - Other, specify",
+      "ctcae": "Blurred vision",
       "frequency": "rare",
       "label": "Poruchy zraku.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Tachycardia",
       "frequency": "rare",
-      "label": "Zrychlená srdeční činnost (tachykardie); byla hlášena také při předávkování.",
+      "label": "Zrychlená srdeční činnost.",
       "action": null,
       "action_condition": null
     },
@@ -298,7 +301,7 @@
     {
       "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "rare",
-      "label": "Pocit nepohody v břiše.",
+      "label": "Nepříjemný pocit v břiše.",
       "action": null,
       "action_condition": null
     },
@@ -312,17 +315,18 @@
     {
       "ctcae": "Hepatobiliary disorders - Other, specify",
       "frequency": "rare",
-      "label": "Abnormální funkce jater nebo porucha funkce jater; tyto účinky se s větší pravděpodobností vyskytují u japonských pacientů.",
+      "label": "Abnormální funkce jater nebo porucha jater; většina případů po uvedení přípravku na trh se týkala japonských pacientů a u nich se tento účinek vyskytuje častěji.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
+      "ctcae": "Angioedema",
       "frequency": "rare",
-      "label": "Náhlý otok kůže a sliznic (angioedém), včetně případů s úmrtím.",
-      "action": "discontinue_treatment",
+      "label": "Náhlý otok kůže a sliznic, někdy se smrtelnými následky.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rychlý otok kůže nebo sliznic."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
@@ -333,7 +337,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Erythema",
       "frequency": "rare",
       "label": "Zarudnutí kůže.",
       "action": null,
@@ -349,7 +353,7 @@
     {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "rare",
-      "label": "Závažná poléková vyrážka, včetně toxoalergického exantému.",
+      "label": "Poléková vyrážka, včetně závažné polékové vyrážky.",
       "action": null,
       "action_condition": null
     },
@@ -368,7 +372,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Pain",
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
       "frequency": "rare",
       "label": "Bolesti šlach, s příznaky podobnými zánětu šlach.",
       "action": null,
@@ -382,9 +386,9 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Hemoglobin decreased",
       "frequency": "rare",
-      "label": "Pokles hemoglobinu (krevní bílkoviny).",
+      "label": "Pokles hemoglobinu.",
       "action": null,
       "action_condition": null
     },
@@ -396,14 +400,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "rare",
-      "label": "Zvýšená hladina jaterních enzymů v krvi.",
+      "label": "Zvýšená hladina jaterních enzymů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Blood lactate dehydrogenase increased",
       "frequency": "rare",
       "label": "Zvýšená hladina kreatinfosfokinázy v krvi.",
       "action": null,
@@ -419,298 +423,309 @@
     {
       "ctcae": "Pulmonary fibrosis",
       "frequency": "very_rare",
-      "label": "Progresivní zjizvení plicní tkáně (intersticiální plicní nemoc); není známo, zda ji způsobil telmisartan.",
+      "label": "Po uvedení přípravku na trh byly hlášeny případy postupného zjizvení plicní tkáně v časové souvislosti s užíváním telmisartanu; příčinná souvislost nebyla stanovena.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Angioedema",
       "frequency": "not_known",
-      "label": "Otok střeva (intestinální angioedém), který se může projevovat bolestí břicha, pocitem na zvracení, zvracením a průjmem.",
+      "label": "Otok střeva hlášený po užití podobných přípravků; po telmisartanu byly hlášeny případy po užití blokátorů receptoru angiotenzinu II. Může se projevit bolestí břicha, nevolností, zvracením a průjmem.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku Tezeo objeví bolest břicha, pocit na zvracení, zvracení nebo průjem."
+        "patient_guide": "Pokud se po užití přípravku objeví bolest břicha, nevolnost, zvracení nebo průjem.",
+        "min_severity": 2
       }
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "not_known",
-      "label": "Pocit na zvracení, uváděný jako příznak otoku střeva (intestinálního angioedému).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku Tezeo objeví pocit na zvracení."
-      }
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "not_known",
-      "label": "Nízký krevní tlak, hlášený také při předávkování.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": "not_known",
-      "label": "Závrať, hlášená také při předávkování.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Sinus bradycardia",
-      "frequency": "not_known",
-      "label": "Zpomalení srdeční činnosti, hlášené také při předávkování.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Acute kidney injury",
-      "frequency": "not_known",
-      "label": "Náhlé selhání ledvin, hlášené také při předávkování.",
-      "action": null,
-      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "aliskiren",
-      "effect": "Současné užívání s přípravkem Tezeo je kontraindikováno u pacientů s cukrovkou nebo poruchou funkce ledvin (GFR < 60 ml/min/1,73 m²). Duální blokáda systému renin-angiotenzin-aldosteron se obecně nedoporučuje, protože zvyšuje riziko nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin včetně akutního selhání ledvin. Pokud je taková léčba naprosto nezbytná, smí probíhat pouze pod dohledem specialisty a při častém pečlivém sledování funkce ledvin, elektrolytů a krevního tlaku.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Vysoká hladina draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zhoršení funkce ledvin, včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Inhibitory ACE",
-      "effect": "Současné užívání s blokátory receptoru angiotenzinu II se obecně nedoporučuje, protože zvyšuje riziko nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin včetně akutního selhání. Inhibitory ACE a blokátory receptoru angiotenzinu II nesmějí být užívány současně u pacientů s diabetickou nefropatií. Pokud se duální blokáda považuje za naprosto nezbytnou, má probíhat jen pod dohledem specialisty a při častém pečlivém sledování funkce ledvin, elektrolytů a krevního tlaku.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Vysoká hladina draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zhoršení funkce ledvin, včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Jiné blokátory receptoru angiotenzinu II",
-      "effect": "Současné užívání s přípravkem Tezeo jako duální blokáda systému renin-angiotenzin-aldosteron se obecně nedoporučuje, protože zvyšuje riziko nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin včetně akutního selhání ledvin. Pokud je taková kombinace naprosto nezbytná, má probíhat pouze pod dohledem specialisty a při častém pečlivém sledování funkce ledvin, elektrolytů a krevního tlaku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Vysoká hladina draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zhoršení funkce ledvin, včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Draslík šetřící diuretika, přípravky obsahující draslík a náhražky soli s draslíkem",
-      "effect": "Kombinace může významně zvýšit hladinu draslíku v krvi, protože telmisartan snižuje ztráty draslíku vyvolané diuretiky. Současné podávání se obecně nedoporučuje; je-li indikováno kvůli prokázané nízké hladině draslíku, podávejte léky opatrně a často kontrolujte hladinu draslíku v séru. Riziko hyperkalemie je při této kombinaci zvláště vysoké.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Významné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky, které mohou zvyšovat hladinu draslíku (NSA, heparin, imunosupresiva a trimethoprim)",
-      "effect": "Při užívání spolu s přípravkem Tezeo se může zvýšit riziko vysoké hladiny draslíku v krvi. Mezi uvedené přípravky patří nesteroidní protizánětlivé léky (včetně selektivních inhibitorů COX-2), heparin, imunosupresiva cyklosporin a takrolimus a trimethoprim. U rizikových pacientů je třeba pečlivě sledovat hladinu draslíku v séru.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Vysoká hladina draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "lithium",
-      "effect": "Při současném užívání s telmisartanem bylo hlášeno reverzibilní zvýšení koncentrace lithia v séru a jeho toxicita. Je-li kombinace nezbytná, doporučuje se pečlivě sledovat hladinu lithia v séru.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
+      "class_id": "substance:13774",
       "drug": "digoxin",
-      "effect": "Telmisartan zvýšil medián vrcholové plazmatické koncentrace digoxinu o 49 % a minimální koncentrace v rovnovážném stavu o 20 %. Při zahájení léčby telmisartanem, při změnách jeho dávky a při ukončení léčby je třeba sledovat hladinu digoxinu, aby zůstala v terapeutickém rozmezí.",
+      "effect": "Při současném užívání může telmisartan zvýšit nejvyšší hladinu digoxinu v krvi přibližně o 49 % a nejnižší hladinu přibližně o 20 %. Lékař má sledovat jeho hladinu při zahájení, změně dávky i ukončení léčby telmisartanem.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSA)",
-      "effect": "NSA, včetně kyseliny acetylsalicylové v protizánětlivých dávkách, inhibitorů COX-2 a neselektivních NSA, mohou oslabit účinek telmisartanu na snížení krevního tlaku. U některých pacientů se sníženou funkcí ledvin, například při dehydrataci nebo u starších pacientů s poruchou funkce ledvin, může kombinace dále zhoršit funkci ledvin včetně akutního selhání, které bývá obvykle vratné. Kombinaci podávejte velmi opatrně, zajistěte dostatečný příjem tekutin a zvažte kontrolu funkce ledvin po zahájení i pravidelně během léčby. Může se také zvýšit riziko hyperkalemie.",
+      "class_id": "atc:N05AN01",
+      "drug": "Lithium",
+      "effect": "Při současném užívání může telmisartan zvýšit hladinu lithia v krvi a způsobit jeho toxicitu. Pokud je kombinace nezbytná, lékař má pečlivě sledovat hladinu lithia.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zhoršení funkce ledvin včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Vysoká hladina draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Thiazidová a kličková diuretika",
-      "effect": "Předchozí léčba vysokými dávkami diuretik, například furosemidem nebo hydrochlorothiazidem, může po zahájení léčby telmisartanem vést k úbytku tekutin v těle a riziku nízkého krevního tlaku.",
+      "class_id": "atc:C03D",
+      "drug_class": "Draslík šetřící diuretika nebo přípravky obsahující draslík",
+      "effect": "Telmisartan může v kombinaci s těmito přípravky výrazně zvýšit hladinu draslíku v krvi. Pokud je souběh nutný kvůli prokázané nízké hladině draslíku, má být opatrný a lékař má často kontrolovat hladinu draslíku.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Jiná antihypertenziva",
-      "effect": "Současné podávání jiných léků snižujících krevní tlak může zvýraznit účinek telmisartanu na snížení krevního tlaku. Při zahájení léčby ke snížení srdečně-cévního rizika může být v některých případech nutné upravit dávku jiných léků na snížení krevního tlaku.",
+      "class_id": "atc:C09AA",
+      "drug_class": "Inhibitory ACE",
+      "effect": "Současné užívání telmisartanu s inhibitorem ACE se obecně nedoporučuje, protože zvyšuje riziko nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin včetně akutního selhání. U pacientů s diabetickou nefropatií se tato kombinace nesmí užívat; pokud je duální blokáda RAAS výjimečně nezbytná, patří pouze pod dohled specialisty a pečlivé sledování.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C09CA",
+      "drug_class": "Blokátory receptoru angiotenzinu II",
+      "effect": "Současné užívání telmisartanu s jiným blokátorem receptoru angiotenzinu II se obecně nedoporučuje kvůli zvýšenému riziku nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin včetně akutního selhání. Duální blokáda RAAS, pokud je výjimečně nezbytná, patří pod dohled specialisty a pečlivé sledování.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C09XA02",
+      "drug": "Aliskiren",
+      "effect": "Současné užívání s telmisartanem je zakázáno u pacientů s diabetem nebo poruchou funkce ledvin (GFR < 60 ml/min/1,73 m²). U ostatních se duální blokáda RAAS obecně nedoporučuje kvůli riziku nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin; pokud je výjimečně nezbytná, vyžaduje dohled specialisty a pečlivé sledování.",
+      "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky (NSA), včetně selektivních inhibitorů COX-2",
+      "effect": "NSA mohou oslabit účinek telmisartanu na snížení krevního tlaku a zvýšit riziko dalšího zhoršení funkce ledvin včetně akutního selhání, zejména u starších nebo dehydratovaných pacientů a při poruše ledvin. Lékař má zvážit sledování funkce ledvin po zahájení a pravidelně během léčby; pacient má být dostatečně hydratován. Riziko vysoké hladiny draslíku se může také zvýšit.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C03",
+      "drug_class": "Diuretika",
+      "effect": "Předchozí léčba vysokými dávkami diuretik, například furosemidem nebo hydrochlorothiazidem, může po zahájení telmisartanu vést ke snížení objemu tekutin a zvýšit riziko nízkého krevního tlaku. Diuretika šetřící draslík mají navíc samostatné riziko zvýšení hladiny draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C09",
+      "drug_class": "Jiné léky na vysoký krevní tlak nebo léky, které mohou snižovat krevní tlak",
+      "effect": "Mohou zesílit účinek telmisartanu na snížení krevního tlaku. Baklofen a amifostin mohou tento účinek také zesílit; dávku jiných léků upravuje lékař.",
       "effect_type": "synergy",
       "side_effects": []
     },
     {
-      "drug_class": "Léky snižující krevní tlak, včetně baklofenu a amifostinu",
-      "effect": "Baklofen a amifostin mohou na základě svých farmakologických vlastností zesílit účinek telmisartanu na snížení krevního tlaku. Při potřebě upravit dávku jiných léků se poraďte s lékařem.",
-      "effect_type": "synergy",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Další pokles krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:V03AZ01",
+      "drug": "ethanol",
+      "effect": "Alkohol může při užívání telmisartanu dále snižovat krevní tlak; může se objevit závrať při vstávání.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
     },
     {
-      "drug_class": "Alkohol, barbituráty, narkotika a antidepresiva",
-      "effect": "Tyto látky mohou zesílit pokles krevního tlaku při užívání telmisartanu; zejména může být zesílena ortostatická hypotenze a při vstávání se může objevit závrať.",
-      "effect_type": "synergy",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Další pokles krevního tlaku, zejména při vstávání (ortostatická hypotenze).",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Dizziness",
-          "frequency": null,
-          "label": "Závrať při vstávání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:N05C",
+      "drug_class": "Barbituráty",
+      "effect": "Mohou zesílit pokles krevního tlaku při současném užívání telmisartanu; může se objevit závrať při vstávání.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
     },
     {
-      "drug_class": "Kortikosteroidy podávané systémově",
-      "effect": "Systémově podávané kortikosteroidy mohou snižovat účinek telmisartanu na snížení krevního tlaku.",
+      "class_id": "atc:N02A",
+      "drug_class": "Narkotika",
+      "effect": "Mohou zesílit pokles krevního tlaku při současném užívání telmisartanu; může se objevit závrať při vstávání.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N06A",
+      "drug_class": "Antidepresiva",
+      "effect": "Mohou zesílit pokles krevního tlaku při současném užívání telmisartanu; může se objevit závrať při vstávání.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:H02",
+      "drug_class": "Kortikosteroidy při systémovém podání",
+      "effect": "Mohou snížit účinek telmisartanu na snížení krevního tlaku.",
       "effect_type": "antagonism",
       "side_effects": []
-    },
-    {
-      "drug": "ramipril",
-      "effect": "Ve studii zvýšilo současné podávání telmisartanu a ramiprilu AUC 0–24 a Cmax ramiprilu a ramiprilátu 2,5násobně; klinický význam tohoto zjištění není znám. Kombinace nepřinesla další prospěch oproti samotnému ramiprilu nebo telmisartanu a nedoporučuje se. Ve studii byla spojena s vyšší kardiovaskulární i celkovou úmrtností a s významně častějším výskytem vysoké hladiny draslíku, selhání ledvin, nízkého krevního tlaku a mdlob.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Vysoká hladina draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Syncope",
-          "frequency": null,
-          "label": "Mdloby.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
     }
-  ]
+  ],
+  "usage": "Tezeo snižuje vysoký krevní tlak a u některých dospělých pomáhá snižovat riziko srdečně-cévních příhod.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0152957",
+      "H": "",
+      "NAZEV": "TEZEO",
+      "SILA": "40MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "90",
+      "CESTA": "POR",
+      "DOPLNEK": "40MG TBL NOB 90",
+      "OBAL": "BLI",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "58",
+      "ATC_WHO": "C09CA07",
+      "RC": "58/311/10-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "40",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "90",
+      "ZDROJ_WHO": "NO26",
+      "LL": "13774",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "TEZEO",
+      "MRP_CISLO": "CZ/H/0207/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OC",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0152957",
+        "KOD_LATKY": "13774",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "40",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13774",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "TELMISARTANUM",
+          "NAZEV_EN": "TELMISARTAN",
+          "NAZEV": "TELMISARTAN"
+        }
+      },
+      {
+        "KOD_SUKL": "0152957",
+        "KOD_LATKY": "887",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "887",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "MEGLUMINUM",
+          "NAZEV_EN": "MEGLUMINE",
+          "NAZEV": "MEGLUMIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0152957",
+        "KOD_LATKY": "1352",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1352",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SORBITOLUM",
+          "NAZEV_EN": "SORBITOL",
+          "NAZEV": "SORBITOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0152957",
+        "KOD_LATKY": "2458",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2458",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII HYDROXIDUM",
+          "NAZEV_EN": "SODIUM HYDROXIDE",
+          "NAZEV": "HYDROXID SODNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0152957",
+        "KOD_LATKY": "4078",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0152957",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0152957",
+      "PIL": "PI234830.pdf",
+      "DAT_ROZ_PIL": "23.06.2026",
+      "SPC": "SPC234831.pdf",
+      "DAT_ROZ_SPC": "23.06.2026",
+      "OBAL_TEXT": "OBAL169255.pdf",
+      "DAT_ROZ_OBAL": "09.03.2021"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C09CA07",
+        "NT": "N",
+        "NAZEV": "TELMISARTAN",
+        "NAZEV_EN": "TELMISARTAN"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

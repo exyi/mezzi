@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:G",
+    "atc:G04",
+    "atc:G04B",
+    "atc:G04BD",
+    "atc:G04BD09",
+    "substance:1499"
+  ],
   "side_effects": [
     {
       "ctcae": "Dry mouth",
@@ -36,16 +44,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Blurred vision",
+      "ctcae": "Eye disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Porucha akomodační schopnosti oka, zejména u dalekozrakých pacientů, jejichž zrak není dostatečně korigován brýlemi.",
+      "label": "Porucha zaostřování, zvláště u dalekozrakých, kteří nemají zrak dostatečně korigovaný brýlemi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Tachycardia",
       "frequency": "uncommon",
-      "label": "Zrychlení srdeční činnosti (tachykardie).",
+      "label": "Zrychlený tep.",
       "action": null,
       "action_condition": null
     },
@@ -66,28 +74,35 @@
     {
       "ctcae": "Flatulence",
       "frequency": "uncommon",
-      "label": "Nadýmání (flatulence).",
+      "label": "Nadýmání.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "uncommon",
       "label": "Kožní vyrážka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Poruchy močení, například zbytková moč po vyprázdnění močového měchýře.",
+      "label": "Porucha močení, například zbytková moč v močovém měchýři po vymočení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Generalized muscle weakness",
       "frequency": "uncommon",
-      "label": "Slabost nebo bolest na hrudi.",
+      "label": "Slabost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "uncommon",
+      "label": "Bolest na hrudi.",
       "action": null,
       "action_condition": null
     },
@@ -99,30 +114,30 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Tachyarrhythmia",
       "frequency": "rare",
       "label": "Rychlá a nepravidelná srdeční činnost (tachyarytmie).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Angioedema",
       "frequency": "rare",
-      "label": "Otok obličeje, jazyka a průdušek (angioedém).",
+      "label": "Otok obličeje, jazyka nebo průdušek (angioedém).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urinary retention",
       "frequency": "rare",
-      "label": "Zadržení moči (retence moči).",
+      "label": "Zadržení moče (retence moče).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "rare",
-      "label": "Mírné až středně závažné zvýšení hladin jaterních enzymů (transamináz) v krvi.",
+      "label": "Mírné až střední zvýšení jaterních enzymů v krvi.",
       "action": null,
       "action_condition": null
     },
@@ -143,233 +158,391 @@
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Závažná kožní reakce s krvácením a tvorbou puchýřů (Stevensův-Johnsonův syndrom).",
+      "label": "Závažné kožní reakce s krvácením a tvorbou puchýřů (Stevensův-Johnsonův syndrom). Okamžitě vyhledejte lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud si všimnete této závažné kožní reakce, okamžitě vyhledejte lékaře."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "not_known",
-      "label": "Závažná kožní reakce s krvácením a tvorbou puchýřů (toxická epidermální nekrolýza).",
+      "label": "Závažné kožní reakce s krvácením a tvorbou puchýřů (toxická epidermální nekrolýza). Okamžitě vyhledejte lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud si všimnete této závažné kožní reakce, okamžitě vyhledejte lékaře."
+        "patient_guide": null,
+        "min_severity": 1
       }
-    },
-    {
-      "ctcae": "Blurred vision",
-      "frequency": null,
-      "label": "Při předávkování se mohou objevit poruchy vidění.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Při předávkování se může objevit zrychlení srdeční činnosti (tachykardie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Flushing",
-      "frequency": null,
-      "label": "Při předávkování se může objevit zčervenání kůže.",
-      "action": null,
-      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "amantadin",
-      "effect": "Při současném užívání se může zesílit anticholinergní účinek amantadinu, například sucho v ústech, trávicí obtíže nebo zácpa.",
+      "class_id": "substance:1499",
+      "drug": "TROSPIUM-CHLORID",
+      "effect": "Trospium může zesílit anticholinergní účinky amantadinu, například sucho v ústech, trávicí potíže a zácpu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Dry mouth",
-          "frequency": null,
-          "label": "Zesílení sucha v ústech.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zesílení trávicích obtíží.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Constipation",
-          "frequency": null,
-          "label": "Zesílení zácpy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "tricyklická antidepresiva",
-      "effect": "Při současném užívání se může zesílit anticholinergní účinek tricyklických antidepresiv, například sucho v ústech, trávicí obtíže nebo zácpa.",
+      "class_id": null,
+      "drug_class": "Tricyklická antidepresiva",
+      "effect": "Trospium může zesílit anticholinergní účinky tricyklických antidepresiv, například sucho v ústech, trávicí potíže a zácpu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Dry mouth",
-          "frequency": null,
-          "label": "Zesílení sucha v ústech.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zesílení trávicích obtíží.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Constipation",
-          "frequency": null,
-          "label": "Zesílení zácpy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "chinidin",
-      "effect": "Při současném užívání se může zesílit anticholinergní účinek chinidinu, například sucho v ústech, trávicí obtíže nebo zácpa.",
+      "class_id": "atc:C01BA01",
+      "drug": "CHINIDIN",
+      "effect": "Trospium může zesílit anticholinergní účinky chinidinu, například sucho v ústech, trávicí potíže a zácpu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Dry mouth",
-          "frequency": null,
-          "label": "Zesílení sucha v ústech.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zesílení trávicích obtíží.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Constipation",
-          "frequency": null,
-          "label": "Zesílení zácpy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "disopyramid",
-      "effect": "Při současném užívání se může zesílit anticholinergní účinek disopyramidu, například sucho v ústech, trávicí obtíže nebo zácpa.",
+      "class_id": "atc:C01BA03",
+      "drug": "DISOPYRAMID",
+      "effect": "Trospium může zesílit anticholinergní účinky disopyramidu, například sucho v ústech, trávicí potíže a zácpu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Dry mouth",
-          "frequency": null,
-          "label": "Zesílení sucha v ústech.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zesílení trávicích obtíží.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Constipation",
-          "frequency": null,
-          "label": "Zesílení zácpy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "antihistaminika",
-      "effect": "Při současném užívání se může zesílit anticholinergní účinek antihistaminik, například sucho v ústech, trávicí obtíže nebo zácpa.",
+      "class_id": null,
+      "drug_class": "Antihistaminika",
+      "effect": "Trospium může zesílit anticholinergní účinky antihistaminik, například sucho v ústech, trávicí potíže a zácpu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Dry mouth",
-          "frequency": null,
-          "label": "Zesílení sucha v ústech.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zesílení trávicích obtíží.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Constipation",
-          "frequency": null,
-          "label": "Zesílení zácpy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "betasympatomimetika",
-      "effect": "Při současném užívání se může zesílit účinek betasympatomimetik zrychlující srdeční činnost, například léků užívaných při astmatu.",
+      "class_id": null,
+      "drug_class": "Betasympatomimetika",
+      "effect": "Trospium může zesílit účinek betasympatomimetik na zrychlení srdeční činnosti.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Nadměrné zrychlení srdeční činnosti.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "prokinetika",
-      "effect": "Přípravek může snížit účinek prokinetik, například metoklopramidu a cisapridu.",
+      "class_id": "atc:A03FA01",
+      "drug": "METOKLOPRAMID",
+      "effect": "Trospium může snížit účinek metoklopramidu, který podporuje pohyb trávicího traktu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "guar",
-      "effect": "Při současném užívání nelze vyloučit snížení vstřebávání trospium chloridu; současné podávání se nedoporučuje.",
+      "class_id": "atc:A03FA02",
+      "drug": "CISAPRIDE",
+      "effect": "Trospium může snížit účinek cisapridu, který podporuje pohyb trávicího traktu.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Jiná současně užívaná léčiva",
+      "effect": "Trospium ovlivňuje pohyb trávicího traktu a vylučování trávicích šťáv; nelze proto vyloučit změnu vstřebávání současně užívaných léčiv. Konkrétní léčiva ani směr změny nejsou uvedeny.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Guar, cholestyramin nebo cholestipol",
+      "effect": "Současné užívání guar, cholestyraminu nebo cholestipolu může snížit vstřebávání trospia. Současné podávání se nedoporučuje.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "cholestyramin",
-      "effect": "Při současném užívání nelze vyloučit snížení vstřebávání trospium chloridu; současné podávání se nedoporučuje.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "cholestipol",
-      "effect": "Při současném užívání nelze vyloučit snížení vstřebávání trospium chloridu; současné podávání se nedoporučuje.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "současně užívané léčivé přípravky",
-      "effect": "Trospium chlorid ovlivňuje pohyblivost trávicího traktu a vylučování trávicích šťáv, a proto nelze vyloučit změnu vstřebávání jiných současně užívaných léčivých přípravků.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "alkohol",
-      "effect": "Během užívání přípravku Spasmed 30 mg nepijte alkohol; zdroj neuvádí konkrétní mechanismus ani účinek této kombinace.",
-      "effect_type": null,
+      "class_id": null,
+      "drug_class": "Alkohol",
+      "effect": "Během užívání přípravku se nemá pít alkohol.",
+      "effect_type": "contraindicated",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se k léčbě častého nebo naléhavého močení a urgentního úniku moči při hyperaktivním močovém měchýři.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0124902",
+      "H": "",
+      "NAZEV": "SPASMED",
+      "SILA": "30MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "30MG TBL FLM 30",
+      "OBAL": "BLI",
+      "DRZ": "PMP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "73",
+      "ATC_WHO": "G04BD09",
+      "RC": "73/666/09-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "40",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "22,5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1499",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "0",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "60",
+      "EXP_T": "M",
+      "NAZEV_REG": "SPASMED",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "1499",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "30",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1499",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "TROSPII CHLORIDUM",
+          "NAZEV_EN": "TROSPIUM CHLORIDE",
+          "NAZEV": "TROSPIUM-CHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "3755",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "2970",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "14679",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "2658",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2658",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "ACIDUM STEARICUM",
+          "NAZEV_EN": "STEARIC ACID",
+          "NAZEV": "KYSELINA STEAROVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "1300",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "4078",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "748",
+        "SQ": "10",
+        "S": "X",
+        "AMNT_OD": "PL",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "2710",
+        "SQ": "11",
+        "S": "X",
+        "AMNT_OD": "PL",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "3755",
+        "SQ": "12",
+        "S": "X",
+        "AMNT_OD": "PL",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0124902",
+        "KOD_LATKY": "2658",
+        "SQ": "13",
+        "S": "X",
+        "AMNT_OD": "PL",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2658",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "ACIDUM STEARICUM",
+          "NAZEV_EN": "STEARIC ACID",
+          "NAZEV": "KYSELINA STEAROVÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0124902",
+      "PIL": "PI138588.pdf",
+      "DAT_ROZ_PIL": "06.03.2019",
+      "SPC": "SPC138589.pdf",
+      "DAT_ROZ_SPC": "06.03.2019",
+      "OBAL_TEXT": "OBAL138587.pdf",
+      "DAT_ROZ_OBAL": "06.03.2019"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "G04BD09",
+        "NT": "N",
+        "NAZEV": "TROSPIUM",
+        "NAZEV_EN": "TROSPIUM"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

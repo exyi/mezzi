@@ -1,860 +1,1057 @@
 {
+  "classes": [
+    "atc:L",
+    "atc:L02",
+    "atc:L02B",
+    "atc:L02BG",
+    "atc:L02BG04",
+    "substance:13754"
+  ],
   "side_effects": [
     {
       "ctcae": "Hot flashes",
       "frequency": "very_common",
-      "label": "Návaly horka",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jsou pro vás závažné."
-      }
+      "label": "Návaly horka.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Cholesterol high",
       "frequency": "very_common",
-      "label": "Zvýšená hladina cholesterolu (hypercholesterolemie)",
+      "label": "Zvýšená hladina cholesterolu.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás zvýšení hladiny cholesterolu závažné."
-      }
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "very_common",
-      "label": "Únava (včetně slabosti a celkového pocitu nevolnosti)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás únava závažná."
-      }
-    },
-    {
-      "ctcae": "Hyperhidrosis",
-      "frequency": "very_common",
-      "label": "Zvýšené pocení",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás zvýšené pocení závažné."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "very_common",
-      "label": "Bolest kostí a kloubů (artralgie)",
+      "label": "Bolest kloubů.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás bolest závažná."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "very_common",
+      "label": "Únava, včetně slabosti a celkové nevolnosti.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Hyperhidrosis",
+      "frequency": "very_common",
+      "label": "Zvýšené pocení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "common",
+      "label": "Nevolnost.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Anorexia",
       "frequency": "common",
-      "label": "Snížená chuť k jídlu",
+      "label": "Snížená chuť k jídlu.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás snížená chuť k jídlu závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Anorexia",
       "frequency": "common",
-      "label": "Zvýšená chuť k jídlu",
+      "label": "Zvýšená chuť k jídlu.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás zvýšená chuť k jídlu závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Depression",
       "frequency": "common",
-      "label": "Deprese",
+      "label": "Deprese.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás deprese závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Headache",
       "frequency": "common",
-      "label": "Bolest hlavy",
+      "label": "Bolest hlavy.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás bolest hlavy závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závratě",
+      "label": "Závratě; pokud se objeví také únava, ospalost nebo celková nevolnost, neřiďte a neobsluhujte stroje, dokud se nebudete cítit normálně.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jsou pro vás závratě závažné."
-      }
-    },
-    {
-      "ctcae": "Palpitations",
-      "frequency": "common",
-      "label": "Bušení srdce (palpitace)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás bušení srdce závažné."
-      }
-    },
-    {
-      "ctcae": "Hypertension",
-      "frequency": "common",
-      "label": "Zvýšený krevní tlak (hypertenze)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás zvýšení krevního tlaku závažné."
-      }
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "common",
-      "label": "Nevolnost",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás nevolnost závažná."
-      }
-    },
-    {
-      "ctcae": "Vomiting",
-      "frequency": "common",
-      "label": "Zvracení",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás zvracení závažné."
-      }
-    },
-    {
-      "ctcae": "Dyspepsia",
-      "frequency": "common",
-      "label": "Špatné trávení (dyspepsie)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jsou pro vás potíže se špatným trávením závažné."
-      }
-    },
-    {
-      "ctcae": "Constipation",
-      "frequency": "common",
-      "label": "Zácpa",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás zácpa závažná."
-      }
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "common",
-      "label": "Průjem",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás průjem závažný."
-      }
-    },
-    {
-      "ctcae": "Abdominal pain",
-      "frequency": "common",
-      "label": "Bolest břicha",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás bolest břicha závažná."
-      }
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "common",
-      "label": "Kožní vyrážka, včetně erytematózní, makulopapulární, psoriaformní a vezikulární vyrážky",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás vyrážka závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Alopecia",
       "frequency": "common",
-      "label": "Vypadávání vlasů",
+      "label": "Vypadávání vlasů.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás vypadávání vlasů závažné."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Dermatitis",
+      "frequency": "common",
+      "label": "Kožní vyrážka, včetně erytematózní, makulopapulární, psoriaformní nebo puchýřnaté vyrážky.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Dry skin",
       "frequency": "common",
-      "label": "Suchá kůže",
+      "label": "Suchá kůže.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás suchá kůže závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Myalgia",
       "frequency": "common",
-      "label": "Bolest svalů",
+      "label": "Bolest svalů.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás bolest svalů závažná."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Bone pain",
+      "frequency": "common",
+      "label": "Bolest kostí; hlášena pouze při léčbě metastáz.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Osteoporosis",
       "frequency": "common",
-      "label": "Řídnutí nebo slábnutí kostí (osteoporóza)",
+      "label": "Řídnutí nebo slábnutí kostí (osteoporóza), někdy vedoucí ke zlomeninám.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás tento nežádoucí účinek závažný."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Fracture",
       "frequency": "common",
-      "label": "Zlomeniny kostí; někdy mohou být následkem osteoporózy",
+      "label": "Zlomeniny kostí.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás tento nežádoucí účinek závažný."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Arthritis",
       "frequency": "common",
-      "label": "Ztuhnutí kloubů (artritida)",
+      "label": "Ztuhnutí kloubů (artritida).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás ztuhnutí kloubů závažné."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Peripheral edema",
       "frequency": "common",
-      "label": "Otoky paží, rukou, nohou a kotníků (periferní otok)",
+      "label": "Otoky paží, rukou, nohou nebo kotníků.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jsou pro vás otoky závažné."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Non-cardiac chest pain",
+      "ctcae": "Generalized edema",
       "frequency": "common",
-      "label": "Bolest na hrudi",
+      "label": "Celkový otok.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás bolest na hrudi závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Weight gain",
+      "ctcae": "Hypertension",
       "frequency": "common",
-      "label": "Zvýšení tělesné hmotnosti",
+      "label": "Zvýšený krevní tlak.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás zvýšení tělesné hmotnosti závažné."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Abdominal pain",
+      "frequency": "common",
+      "label": "Bolest žaludku nebo břicha.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Dyspepsia",
+      "frequency": "common",
+      "label": "Špatné trávení.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "common",
+      "label": "Zácpa.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "common",
+      "label": "Průjem.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "common",
+      "label": "Zvracení.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Vaginal hemorrhage",
       "frequency": "common",
-      "label": "Krvácení z pochvy",
+      "label": "Krvácení z pochvy.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás krvácení z pochvy závažné."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Vaginal discharge",
-      "frequency": "uncommon",
-      "label": "Výtok z pochvy",
+      "ctcae": "Palpitations",
+      "frequency": "common",
+      "label": "Bušení srdce.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás výtok závažný."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Vaginal dryness",
-      "frequency": "uncommon",
-      "label": "Suchost pochvy",
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "common",
+      "label": "Bolest na hrudi.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás suchost pochvy závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Breast pain",
-      "frequency": "uncommon",
-      "label": "Bolest prsů",
+      "ctcae": "Weight gain",
+      "frequency": "common",
+      "label": "Zvýšení tělesné hmotnosti.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás bolest prsů závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Anxiety",
       "frequency": "uncommon",
-      "label": "Úzkost, včetně nervozity",
+      "label": "Úzkost, včetně nervozity.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás úzkost závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Irritability",
       "frequency": "uncommon",
-      "label": "Podrážděnost",
+      "label": "Podrážděnost.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás podrážděnost závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Somnolence",
       "frequency": "uncommon",
-      "label": "Ospalost",
+      "label": "Ospalost nebo spavost; pokud se objeví únava, závratě nebo celková nevolnost, neřiďte a neobsluhujte stroje, dokud se nebudete cítit normálně.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás ospalost závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Insomnia",
       "frequency": "uncommon",
-      "label": "Nespavost",
+      "label": "Nespavost.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás nespavost závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Memory impairment",
       "frequency": "uncommon",
-      "label": "Poruchy paměti",
+      "label": "Poruchy paměti.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jsou pro vás poruchy paměti závažné."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Dysesthesia",
       "frequency": "uncommon",
-      "label": "Změny citlivosti, zejména citlivosti na dotyk; včetně parestezie a snížené citlivosti",
+      "label": "Změny citlivosti, včetně brnění, snížené citlivosti nebo poruch citlivosti na dotyk.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jsou pro vás změny citlivosti závažné."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Dysgeusia",
       "frequency": "uncommon",
-      "label": "Poruchy vnímání chuti",
+      "label": "Poruchy vnímání chuti.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jsou pro vás poruchy vnímání chuti závažné."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Carpal tunnel syndrome",
       "frequency": "uncommon",
-      "label": "Bolest nebo pocit pálení na rukou či zápěstí (syndrom karpálního tunelu)",
+      "label": "Bolest nebo pálení v rukou či zápěstí (syndrom karpálního tunelu).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás bolest nebo pálení závažné."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Blurred vision",
+      "ctcae": "Cerebrovascular accident",
       "frequency": "uncommon",
-      "label": "Rozmazané vidění",
+      "label": "Cévní mozková příhoda; varovnými příznaky mohou být slabost, ochrnutí nebo ztráta citlivosti části těla, zejména rukou či nohou, porucha koordinace, nevolnost nebo potíže s mluvením či dýcháním.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás rozmazané vidění závažné."
-      }
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Podráždění oka",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás podráždění oka závažné."
+        "patient_guide": "Při slabosti, ochrnutí nebo ztrátě citlivosti části těla, zejména rukou či nohou, poruše koordinace, nevolnosti nebo potížích s mluvením či dýcháním.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Cataract",
       "frequency": "uncommon",
-      "label": "Šedý zákal (katarakta)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "uncommon",
-      "label": "Svědění",
+      "label": "Šedý zákal.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás svědění závažné."
-      }
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "uncommon",
-      "label": "Kopřivka",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás kopřivka závažná."
-      }
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "uncommon",
-      "label": "Horečka",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás horečka závažná."
-      }
-    },
-    {
-      "ctcae": "Dry mouth",
-      "frequency": "uncommon",
-      "label": "Sucho v ústech",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás sucho v ústech závažné."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Suchost sliznic",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás suchost sliznic závažná."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Žízeň",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás žízeň závažná."
-      }
-    },
-    {
-      "ctcae": "Urinary tract infection",
-      "frequency": "uncommon",
-      "label": "Infekce močových cest",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás infekce močových cest závažná."
-      }
-    },
-    {
-      "ctcae": "Urinary frequency",
-      "frequency": "uncommon",
-      "label": "Časté močení",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás časté močení závažné."
-      }
-    },
-    {
-      "ctcae": "Cough",
-      "frequency": "uncommon",
-      "label": "Kašel",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás kašel závažný."
-      }
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": "uncommon",
-      "label": "Zvýšené hladiny jaterních enzymů",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood bilirubin increased",
-      "frequency": "uncommon",
-      "label": "Vysoké hladiny bilirubinu v krvi",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood bilirubin increased",
-      "frequency": "uncommon",
-      "label": "Zežloutnutí kůže a očí",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "uncommon",
-      "label": "Zánět šlachy (tendinitida)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest nebo otok šlachy, místo nezatěžujte a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Urinary frequency",
-      "frequency": "uncommon",
-      "label": "Polakisurie (časté močení)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Generalized edema",
-      "frequency": "uncommon",
-      "label": "Celkový otok",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "uncommon",
-      "label": "Pyrexie (horečka)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Weight loss",
-      "frequency": "uncommon",
-      "label": "Snížení tělesné hmotnosti",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "uncommon",
-      "label": "Nádorová bolest, hlášená pouze při léčbě metastáz",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "uncommon",
-      "label": "Leukopenie (snížení počtu bílých krvinek)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stroke",
-      "frequency": "uncommon",
-      "label": "Mozková příhoda; může se projevit slabostí, ochrnutím nebo ztrátou citlivosti části těla, ztrátou koordinace, nevolností, potížemi s mluvením nebo dýcháním",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví některý z uvedených příznaků, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "uncommon",
-      "label": "Náhlá svíravá bolest na hrudi, příznak srdeční poruchy",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví náhlá svíravá bolest na hrudi, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Phlebitis",
-      "frequency": "uncommon",
-      "label": "Otok a zarudnutí podél žíly, která je velmi citlivá a případně bolestivá na dotek (tromboflebitida)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví tyto příznaky, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "uncommon",
-      "label": "Vysoká horečka, zimnice nebo vředy v ústech způsobené infekcí při nedostatku bílých krvinek",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví některý z těchto příznaků, ihned informujte lékaře."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "uncommon",
-      "label": "Závažné přetrvávající rozmazané vidění",
+      "label": "Rozmazané vidění.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví závažné přetrvávající rozmazané vidění, ihned informujte lékaře."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Eye disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Podráždění oka.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Tachycardia",
+      "frequency": "uncommon",
+      "label": "Rychlý srdeční tep nebo tachykardie.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Angina pectoris",
+      "frequency": "uncommon",
+      "label": "Ischemické srdeční příhody, včetně nově vzniklé nebo zhoršující se anginy pectoris a infarktu myokardu.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Superficial thrombophlebitis",
+      "frequency": "uncommon",
+      "label": "Zánět žil s krevní sraženinou, povrchový i hluboký; otok a zarudnutí podél žíly, citlivé případně bolestivé na dotek.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Otok a zarudnutí podél žíly, která je citlivá nebo bolestivá na dotek.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Dyspnea",
       "frequency": "uncommon",
-      "label": "Dušnost",
+      "label": "Dušnost.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví spolu s bolestí na hrudi, mdlobou, zrychleným tepem, modravým zbarvením kůže nebo náhlou bolestí ruky, nohy či chodidla, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "uncommon",
-      "label": "Potíže s dýcháním, které mohou být příznakem krevní sraženiny",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví spolu s bolestí na hrudi, mdlobou, zrychleným tepem, modravým zbarvením kůže nebo náhlou bolestí ruky, nohy či chodidla, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Non-cardiac chest pain",
-      "frequency": "uncommon",
-      "label": "Bolest na hrudi, která může být příznakem krevní sraženiny",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví spolu s potížemi s dýcháním, mdlobou, zrychleným tepem, modravým zbarvením kůže nebo náhlou bolestí ruky, nohy či chodidla, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "uncommon",
-      "label": "Mdloba, která může být příznakem krevní sraženiny",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví spolu s potížemi s dýcháním, bolestí na hrudi, zrychleným tepem, modravým zbarvením kůže nebo náhlou bolestí ruky, nohy či chodidla, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Zrychlený srdeční tep, který může být příznakem krevní sraženiny",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví spolu s potížemi s dýcháním, bolestí na hrudi, mdlobou, modravým zbarvením kůže nebo náhlou bolestí ruky, nohy či chodidla, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Cyanosis",
-      "frequency": "uncommon",
-      "label": "Modravé zabarvení kůže, které může být příznakem krevní sraženiny",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví spolu s potížemi s dýcháním, bolestí na hrudi, mdlobou, zrychleným tepem nebo náhlou bolestí ruky, nohy či chodidla, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Pain in extremity",
-      "frequency": "uncommon",
-      "label": "Náhlá bolest ruky, nohy nebo chodidla, která může být příznakem krevní sraženiny",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví spolu s potížemi s dýcháním, bolestí na hrudi, mdlobou, zrychleným tepem nebo modravým zbarvením kůže, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": "not_known",
-      "label": "Otok, zejména v obličeji a na krku, jako známka alergické reakce",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok, zejména v obličeji nebo na krku, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "not_known",
-      "label": "Hepatitida (zánět jater), která se může projevit žlutou barvou kůže a očí, nevolností, ztrátou chuti k jídlu a tmavě zbarvenou močí",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví tyto příznaky, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Závažné kožní onemocnění, které se může projevit vyrážkou, zarudnutím kůže, puchýři na rtech, očích nebo v ústech, olupováním kůže či horečkou",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví některý z těchto příznaků, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Anafylaktická reakce",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "not_known",
-      "label": "Erythema multiforme",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Lupavý prst, při kterém prst nebo palec zůstává ohnutý",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás tento nežádoucí účinek závažný."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Prasknutí šlachy",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud dojde k prasknutí šlachy, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Venous thromboembolism",
-      "frequency": "rare",
-      "label": "Plicní embolie (krevní sraženina v plicích)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví potíže s dýcháním, bolest na hrudi, mdloba, zrychlený tep, modravé zbarvení kůže nebo náhlá bolest ruky, nohy či chodidla, ihned informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Arterial thromboembolism",
-      "frequency": "rare",
-      "label": "Arteriální trombóza",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stroke",
-      "frequency": "rare",
-      "label": "Mozkový infarkt",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myocardial infarction",
-      "frequency": "uncommon",
-      "label": "Infarkt myokardu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "uncommon",
-      "label": "Ischemické srdeční příhody, včetně nově vzniklé nebo zhoršující se anginy pectoris a anginy pectoris vyžadující operaci",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stroke",
-      "frequency": "uncommon",
-      "label": "Cerebrovaskulární příhoda",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Transient ischemic attacks",
-      "frequency": "uncommon",
-      "label": "Tranzitorní ischemická ataka",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "uncommon",
-      "label": "Dušnost",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je pro vás dušnost závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Cough",
       "frequency": "uncommon",
-      "label": "Kašel",
+      "label": "Kašel.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás kašel závažný."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Mucositis oral",
+      "ctcae": "Dry mouth",
       "frequency": "uncommon",
-      "label": "Stomatitida",
+      "label": "Sucho v ústech.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Stomatitis",
+      "frequency": "uncommon",
+      "label": "Zánět ústní sliznice.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "uncommon",
+      "label": "Zvýšené hladiny jaterních enzymů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Blood bilirubin increased",
+      "frequency": "uncommon",
+      "label": "Zvýšená hladina bilirubinu v krvi.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": "uncommon",
+      "label": "Žloutenka; žluté zbarvení kůže a očí.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Žluté zbarvení kůže a očí, nevolnost, ztráta chuti k jídlu nebo tmavá moč.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "not_known",
+      "label": "Hepatitida (zánět jater); žluté zbarvení kůže a očí, nevolnost, ztráta chuti k jídlu nebo tmavá moč mohou být jejími známkami.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Žluté zbarvení kůže a očí, nevolnost, ztráta chuti k jídlu nebo tmavá moč.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "uncommon",
+      "label": "Svědění.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Vaginal discharge",
+      "frequency": "uncommon",
+      "label": "Výtok z pochvy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Vaginal dryness",
+      "frequency": "uncommon",
+      "label": "Suchost pochvy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Breast pain",
+      "frequency": "uncommon",
+      "label": "Bolest prsů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "uncommon",
+      "label": "Horečka.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Dry mouth",
+      "frequency": "uncommon",
+      "label": "Suchost sliznic.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Urinary tract infection",
+      "frequency": "uncommon",
+      "label": "Infekce močových cest.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Urinary frequency",
+      "frequency": "uncommon",
+      "label": "Časté močení.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Tendinitis",
+      "frequency": "uncommon",
+      "label": "Zánět šlachy. Při bolesti nebo otoku šlachu nezatěžujte; lékař může postiženou šlachu znehybnit.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Bolest nebo otok šlachy.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Rupture tendon",
+      "frequency": "rare",
+      "label": "Prasknutí šlachy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Pulmonary embolism",
+      "frequency": "rare",
+      "label": "Plicní embolie; krevní sraženina může způsobit potíže s dýcháním, bolest na hrudi, mdloby, zrychlený tep, namodralou kůži nebo náhlou bolest rukou, nohou či chodidel.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Potíže s dýcháním, bolest na hrudi, mdloby, zrychlený tep, namodralá kůže nebo náhlá bolest rukou, nohou či chodidel.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Arterial thromboembolism",
+      "frequency": "rare",
+      "label": "Trombóza tepny.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Cerebral infarction",
+      "frequency": "rare",
+      "label": "Mozkový infarkt.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Angioedema",
+      "frequency": "not_known",
+      "label": "Otok, zejména obličeje a krku (angioedém), známka alergické reakce.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Otok, zejména na obličeji a krku.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "not_known",
+      "label": "Anafylaktická reakce.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "not_known",
+      "label": "Toxická epidermální nekrolýza; vyrážka, zarudnutí kůže, puchýře na rtech, očích nebo v ústech, olupování kůže a horečka mohou být známkami závažného kožního onemocnění.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Vyrážka, zarudnutí kůže, puchýře na rtech, očích nebo v ústech, olupování kůže nebo horečka.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Erythema multiforme",
+      "frequency": "not_known",
+      "label": "Erythema multiforme; vyrážka, zarudnutí kůže, puchýře na rtech, očích nebo v ústech, olupování kůže a horečka mohou být známkami závažného kožního onemocnění.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Vyrážka, zarudnutí kůže, puchýře na rtech, očích nebo v ústech, olupování kůže nebo horečka.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Trigger finger",
+      "frequency": "not_known",
+      "label": "Lupavý prst: prst nebo palec zůstává ohnutý.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Leukopenia",
+      "frequency": "uncommon",
+      "label": "Snížený počet bílých krvinek; vysoká horečka, zimnice nebo vředy v ústech mohou být známkami infekce při jejich nedostatku.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Vysoká horečka, zimnice nebo vředy v ústech.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "uncommon",
+      "label": "Náhlá svíravá bolest na hrudi může být známkou srdeční poruchy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Náhlá svíravá bolest na hrudi.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Vision decreased",
+      "frequency": "uncommon",
+      "label": "Závažné přetrvávající rozmazané vidění nebo zhoršení zraku.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Závažné přetrvávající rozmazané vidění.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Tumor pain",
+      "frequency": "uncommon",
+      "label": "Nádorová bolest; hlášena pouze při léčbě metastáz.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Bone pain",
-      "frequency": "common",
-      "label": "Bolest kostí",
+      "ctcae": "Myocardial infarction",
+      "frequency": 100.0,
+      "label": "Infarkt myokardu při adjuvantní léčbě letrozolem: 1,0 % během léčby (medián 5 let), 1,7 % kdykoli po randomizaci (medián sledování 8 let).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás bolest závažná."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Peripheral edema",
-      "frequency": "common",
-      "label": "Periferní otok",
+      "ctcae": "Heart failure",
+      "frequency": 90.9091,
+      "label": "Srdeční selhání při adjuvantní léčbě; 1,1 % při mediánu léčby 60 měsíců plus 30 dní.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud je pro vás otok závažný."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Venous thromboembolism",
+      "frequency": 47.619,
+      "label": "Tromboembolické příhody při adjuvantní léčbě letrozolem: 2,1 % během léčby a 3,2 % kdykoli po randomizaci (medián sledování 8 let).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Osteoporosis",
+      "frequency": 19.6078,
+      "label": "Osteoporóza při adjuvantní léčbě letrozolem: 5,1 % během léčby; 5,1 % kdykoli po randomizaci (medián sledování 8 let).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Fracture",
+      "frequency": 9.8039,
+      "label": "Zlomeniny kostí při adjuvantní léčbě letrozolem: 10,2 % během léčby a 14,7 % kdykoli po randomizaci (medián sledování 8 let).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Osteoporosis",
+      "frequency": 8.1967,
+      "label": "Osteoporóza při prodloužené adjuvantní léčbě letrozolem: 12,2 %; medián léčby 5 let.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Fracture",
+      "frequency": 9.6154,
+      "label": "Zlomeniny kostí při prodloužené adjuvantní léčbě letrozolem: 10,4 %; medián léčby 5 let.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
       }
     }
   ],
   "combinations": [
     {
+      "class_id": "atc:L02BA01",
       "drug": "tamoxifen",
-      "effect": "Souběžné podávání letrozolu s tamoxifenem má být vyloučeno: tamoxifen podstatně snižuje koncentraci letrozolu v plazmě a může snížit jeho farmakologický účinek.",
+      "effect": "Současné užívání se nedoporučuje a má být vyloučeno: tamoxifen významně snižuje hladinu letrozolu v krvi a může oslabit jeho účinek.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "jiná antiestrogenová léčiva",
-      "effect": "Souběžné podávání s letrozolem má být vyloučeno, protože tato léčiva mohou snižovat farmakologický účinek letrozolu.",
+      "class_id": null,
+      "drug_class": "Jiná antiestrogenová léčiva",
+      "effect": "Současné užívání s letrozolem se má vyloučit, protože může snížit jeho farmakologický účinek.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "léčivé přípravky obsahující estrogeny",
-      "effect": "Souběžné podávání s letrozolem má být vyloučeno, protože estrogeny mohou snižovat farmakologický účinek letrozolu.",
+      "class_id": "atc:G03C",
+      "drug_class": "Léčivé přípravky obsahující estrogeny",
+      "effect": "Současné užívání s letrozolem se má vyloučit, protože může snížit jeho farmakologický účinek.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "cimetidin",
-      "effect": "Cimetidin, slabý nespecifický inhibitor enzymů CYP450, neovlivňuje koncentrace letrozolu v plazmě.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "silné inhibitory CYP450",
-      "effect": "Účinek silných inhibitorů CYP450 na koncentrace letrozolu není znám.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "léčivé přípravky eliminované převážně prostřednictvím CYP2A6 nebo CYP2C19 s úzkým terapeutickým indexem",
-      "effect": "Letrozol in vitro inhibuje CYP2A6 a středně silně CYP2C19; klinický význam není znám. Při současném podávání léčiv, jejichž eliminace závisí především na těchto izoenzymech a která mají úzký terapeutický index, je nutná zvláštní opatrnost.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "fenytoin",
-      "effect": "Fenytoin je příkladem léčiva s úzkým terapeutickým indexem, jehož eliminace závisí především na CYP2A6 nebo CYP2C19; letrozol tyto izoenzymy in vitro inhibuje. Klinický význam není znám, při současném podávání je nutná zvláštní opatrnost.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "klopidogrel",
-      "effect": "Klopidogrel je příkladem léčiva s úzkým terapeutickým indexem, jehož eliminace závisí především na CYP2A6 nebo CYP2C19; letrozol tyto izoenzymy in vitro inhibuje. Klinický význam není znám, při současném podávání je nutná zvláštní opatrnost.",
+      "class_id": null,
+      "drug_class": "Léčiva, jejichž vylučování závisí především na CYP2A6 nebo CYP2C19 a mají úzké terapeutické rozmezí",
+      "effect": "Letrozol in vitro inhibuje CYP2A6 a středně silně CYP2C19; klinický význam není znám. Při současném užívání těchto léčiv, například fenytoinu nebo klopidogrelu, je nutná zvláštní opatrnost.",
       "effect_type": null,
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Letrozol se používá k hormonální léčbě rakoviny prsu u žen po menopauze.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0138854",
+      "H": "",
+      "NAZEV": "TROZEL",
+      "SILA": "2,5MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "2,5MG TBL FLM 30",
+      "OBAL": "BLI",
+      "DRZ": "GMP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "44",
+      "ATC_WHO": "L02BG04",
+      "RC": "44/646/09-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "2,5",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "30",
+      "ZDROJ_WHO": "NO26",
+      "LL": "13754",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "1C",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "TROZEL",
+      "MRP_CISLO": "NL/H/1452/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0138854",
+        "KOD_LATKY": "13754",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "2,5",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13754",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "LETROZOLUM",
+          "NAZEV_EN": "LETROZOLE",
+          "NAZEV": "LETROZOL",
+          "DOP": "S4",
+          "NARVLA": "1C"
+        }
+      },
+      {
+        "KOD_SUKL": "0138854",
+        "KOD_LATKY": "17625",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17625",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM SILICIFICATUM 90",
+          "NAZEV_EN": "SILICIFIED MICROCRYSTALLINE CELLULOSE 90",
+          "NAZEV": "SILICIFIKOVANÁ MIKROKRYSTALICKÁ CELULOSA 90"
+        }
+      },
+      {
+        "KOD_SUKL": "0138854",
+        "KOD_LATKY": "14679",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0138854",
+        "KOD_LATKY": "2378",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0138854",
+        "KOD_LATKY": "18157",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18157",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FLAVUM OPADRY II 85F38026",
+          "NAZEV_EN": "OPADRY II 85F38026 (YELLOW)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPADRY II 85F38026 ŽLUTÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0138854",
+        "SQ": "6",
+        "S": "T",
+        "AMNT": "30",
+        "UN": "DF",
+        "substance": {}
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0138854",
+      "PIL": "PI155037.pdf",
+      "DAT_ROZ_PIL": "26.03.2020",
+      "SPC": "SPC155038.pdf",
+      "DAT_ROZ_SPC": "26.03.2020",
+      "OBAL_TEXT": "OBAL150737.pdf",
+      "DAT_ROZ_OBAL": "04.12.2019"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "L02BG04",
+        "NT": "N",
+        "NAZEV": "LETROZOL",
+        "NAZEV_EN": "LETROZOLE"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

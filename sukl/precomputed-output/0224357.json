@@ -1,39 +1,88 @@
 {
+  "classes": [
+    "atc:M",
+    "atc:M04",
+    "atc:M04A",
+    "atc:M04AA",
+    "atc:M04AA01",
+    "substance:1750"
+  ],
   "side_effects": [
     {
-      "ctcae": null,
+      "ctcae": "Rash maculo-papular",
       "frequency": "common",
       "label": "Kožní vyrážka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thyroid stimulating hormone increased",
-      "frequency": "common",
-      "label": "Zvýšení hladiny tyreotropního hormonu (TSH) v krvi.",
-      "action": null,
-      "action_condition": null
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "uncommon",
-      "label": "Alergická reakce, která se může projevit vyrážkou, olupováním kůže, boláky na rtech nebo v ústech, otokem obličeje, rukou, rtů, jazyka nebo hrdla či obtížemi při polykání nebo dýchání.",
+      "label": "Alergická reakce; může se projevit vyrážkou, olupováním kůže, boláky v ústech, otokem obličeje, rukou, rtů, jazyka nebo hrdla, obtížemi při polykání či dýchání; velmi vzácně náhlou dušností, bušením srdce, tlakem na hrudi nebo kolapsem.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některý z uvedených příznaků alergické reakce, přestaňte Milurit užívat a ihned se obraťte na lékaře."
+        "patient_guide": null,
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": "Flu like symptoms",
+      "frequency": "rare",
+      "label": "Horečka a zimnice, bolest hlavy a svalů a celkový pocit nemoci.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "rare",
+      "label": "Závažná kožní reakce, například Stevensův-Johnsonův syndrom nebo toxická epidermální nekrolýza; mohou se objevit vředy v ústech, hrdle, nose nebo na genitáliích, zánět spojivek, rozsáhlé puchýře a olupování kůže. Riziko je nejvyšší v prvních týdnech léčby.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vyrážka nebo uvedené příznaky, přestaňte přípravek užívat a ihned se obraťte na lékaře.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Immune system disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Závažná reakce z přecitlivělosti postihující více orgánů: horečka, vyrážka, bolesti kloubů a změny krevního obrazu a jaterních testů.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Aseptic meningitis",
+      "frequency": "not_known",
+      "label": "Aseptická meningitida; může způsobit ztuhlost šíje, bolest hlavy, nevolnost, horečku nebo zastřené vědomí.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při těchto příznacích vyhledejte lékařskou pomoc ihned.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Thyroid stimulating hormone increased",
+      "frequency": "common",
+      "label": "Zvýšená hladina TSH v krvi.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "uncommon",
-      "label": "Pocit na zvracení.",
+      "label": "Nevolnost; užívání po jídle může tyto zažívací obtíže omezit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "uncommon",
-      "label": "Zvracení.",
+      "label": "Zvracení; užívání po jídle může tyto zažívací obtíže omezit.",
       "action": null,
       "action_condition": null
     },
@@ -45,50 +94,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "uncommon",
       "label": "Abnormální výsledky jaterních testů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Flu like symptoms",
-      "frequency": "rare",
-      "label": "Horečka a zimnice, bolesti hlavy a svalů a celkový pocit nemoci (příznaky podobné chřipce).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "rare",
-      "label": "Stevensův-Johnsonův syndrom, který se může projevit změnami kůže a sliznic, vředy v ústech, hrdle, nose nebo na genitáliích, zánětem spojivek, rozsáhlými puchýři nebo olupováním kůže. Riziko je nejvyšší během prvních týdnů léčby.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka nebo uvedené příznaky, přestaňte Milurit užívat a ihned kontaktujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "rare",
-      "label": "Toxická epidermální nekrolýza, která se může projevit změnami kůže a sliznic, vředy v ústech, hrdle, nose nebo na genitáliích, zánětem spojivek, rozsáhlými puchýři nebo olupováním kůže. Riziko je nejvyšší během prvních týdnů léčby.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka nebo uvedené příznaky, přestaňte Milurit užívat a ihned kontaktujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Immune system disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Závažná reakce z přecitlivělosti postihující více orgánů, která může zahrnovat horečku, vyrážku, bolesti kloubů a odchylky v krevním obraze a jaterních testech.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka nebo uvedené příznaky, přestaňte Milurit užívat a ihned kontaktujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "rare",
-      "label": "Zánět jater, včetně případů s nekrózou jater nebo granulomatózním zánětem.",
       "action": null,
       "action_condition": null
     },
@@ -100,168 +108,127 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Lymph node pain",
       "frequency": "rare",
-      "label": "Bolestivý otok mízních uzlin v oblasti třísel, podpaží nebo krku.",
+      "label": "Bolestivý otok uzlin v tříslech, podpaží nebo na krku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": "rare",
+      "label": "Žloutenka: zežloutnutí kůže nebo očního bělma.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "rare",
+      "label": "Zánět jater, včetně případů s nekrózou jater nebo granulomatózním zánětem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Renal calculi",
       "frequency": "rare",
-      "label": "Kameny v močových cestách, které se mohou projevit krví v moči a bolestí břicha, boku nebo třísla.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aseptic meningitis",
-      "frequency": "not_known",
-      "label": "Aseptická meningitida se ztuhlostí šíje, bolestí hlavy, pocitem na zvracení, horečkou nebo zastřeným vědomím.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto příznaky, okamžitě vyhledejte lékařskou pomoc."
-      }
-    },
-    {
-      "ctcae": "Abdominal pain",
-      "frequency": "not_known",
-      "label": "Bolest břicha.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Lichenoid dermatitis",
-      "frequency": "not_known",
-      "label": "Lichenoidní kožní vyrážka, která může být svědivá a červenofialová, případně se mohou objevit bělavé síťovité kresby na sliznicích.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Nežit (furunkulóza), tedy malé měkké červené vřídky na kůži.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Agranulocytóza, zejména u lidí s poruchou funkce ledvin nebo jater.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte nevysvětlitelné modřiny nebo krvácení, bolest v krku, horečku nebo jiné známky infekce, co nejdříve informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Aplastic anemia",
-      "frequency": "very_rare",
-      "label": "Aplastická anémie, zejména u lidí s poruchou funkce ledvin nebo jater.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte nevysvětlitelné modřiny nebo krvácení, bolest v krku, horečku nebo jiné známky infekce, co nejdříve informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_rare",
-      "label": "Snížení počtu krevních destiček (trombocytopenie), zejména u lidí s poruchou funkce ledvin nebo jater.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte nevysvětlitelné modřiny nebo krvácení, bolest v krku, horečku nebo jiné známky infekce, co nejdříve informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "very_rare",
-      "label": "Snížení počtu bílých krvinek (leukopenie), zejména u lidí s poruchou funkce ledvin nebo jater.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte nevysvětlitelné modřiny nebo krvácení, bolest v krku, horečku nebo jiné známky infekce, co nejdříve informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Leukocytosis",
-      "frequency": "very_rare",
-      "label": "Zvýšení počtu bílých krvinek (leukocytóza).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eosinophilia",
-      "frequency": "very_rare",
-      "label": "Zvýšení počtu eozinofilů (eozinofilie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Granulocytóza nebo čistá aplazie červené krevní řady.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
-      "frequency": "very_rare",
-      "label": "Angioimunoblastický T-lymfom; po vysazení alopurinolu se může upravit.",
+      "label": "Kameny v močových cestách; mohou se projevit krví v moči a bolestí břicha, boku nebo třísla.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "very_rare",
-      "label": "Závažná alergická reakce, která může způsobit otok obličeje nebo hrdla a může ohrozit život; může se objevit také náhlá dušnost, bušení srdce, tíseň na hrudi nebo kolaps.",
+      "label": "Závažná alergická reakce, někdy život ohrožující; může způsobit otok obličeje nebo hrdla.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky alergické reakce, přestaňte Milurit užívat a ihned kontaktujte lékaře."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Diabetes mellitus",
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Cukrovka; může se projevit žízní, únavou a hubnutím.",
+      "label": "Změny krve, například bledost, zánět v ústech, snadnější tvorba modřin, krvácení nebo bolest v krku či jiné známky infekce; častěji při potížích s játry nebo ledvinami.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte nevysvětlitelné modřiny, krvácení, horečku nebo bolest v krku, vyhledejte lékařskou pomoc ihned.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Lymphadenopathy",
+      "frequency": "very_rare",
+      "label": "Postižení mízních uzlin; velmi vzácně byl popsán angioimunoblastický T-lymfom při vyšetření zvětšených uzlin, který po vysazení alopurinolu zřejmě ustupoval.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "very_rare",
+      "label": "Horečka, někdy spolu s celkovou reakcí z přecitlivělosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hematuria",
+      "frequency": "very_rare",
+      "label": "Krev v moči.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Azotemia",
+      "frequency": "very_rare",
+      "label": "Zvýšené dusíkaté látky v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hematemesis",
+      "frequency": "very_rare",
+      "label": "Zvracení krve.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperlipidemia",
       "frequency": "very_rare",
-      "label": "Vysoké hladiny tuků v krvi (hyperlipidémie).",
+      "label": "Vysoká hladina tuků v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Depression",
+      "ctcae": "Malaise",
       "frequency": "very_rare",
-      "label": "Deprese.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Depressed level of consciousness",
-      "frequency": "very_rare",
-      "label": "Kóma.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Ochrnutí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Ataxia",
-      "frequency": "very_rare",
-      "label": "Ataxie nebo vratký postoj.",
+      "label": "Celkový pocit nevolnosti nebo slabosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Peripheral sensory neuropathy",
       "frequency": "very_rare",
-      "label": "Periferní neuropatie, abnormální čití, necitlivost nebo mravenčení v rukou či nohou.",
+      "label": "Poruchy čití, slabost nebo necitlivost rukou či nohou a mravenčení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Ataxia",
+      "frequency": "very_rare",
+      "label": "Vratký postoj nebo porucha koordinace.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Paralysis",
+      "frequency": "very_rare",
+      "label": "Neschopnost pohybovat svaly.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Syncope",
+      "frequency": "very_rare",
+      "label": "Ztráta vědomí.",
       "action": null,
       "action_condition": null
     },
@@ -273,16 +240,79 @@
       "action_condition": null
     },
     {
-      "ctcae": "Somnolence",
+      "ctcae": "Dizziness",
       "frequency": "very_rare",
-      "label": "Ospalost.",
+      "label": "Závratě.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Dizziness",
+      "ctcae": "Somnolence",
       "frequency": "very_rare",
-      "label": "Závratě.",
+      "label": "Ospalost; pokud se objeví, neřiďte a neobsluhujte stroje.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vision decreased",
+      "frequency": "very_rare",
+      "label": "Poruchy nebo zhoršení zraku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Angina pectoris",
+      "frequency": "very_rare",
+      "label": "Bolest na hrudi (angina pectoris).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypertension",
+      "frequency": "very_rare",
+      "label": "Vysoký krevní tlak.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bradycardia",
+      "frequency": "very_rare",
+      "label": "Pomalý puls.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Infertility",
+      "frequency": "very_rare",
+      "label": "Neplodnost u mužů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erectile dysfunction",
+      "frequency": "very_rare",
+      "label": "Neschopnost dosáhnout nebo udržet erekci.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gynecomastia",
+      "frequency": "very_rare",
+      "label": "Zvětšení prsů u mužů i žen.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Steatorrhea",
+      "frequency": "very_rare",
+      "label": "Tuk ve stolici.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Změna obvyklého vyprazdňování.",
       "action": null,
       "action_condition": null
     },
@@ -296,14 +326,7 @@
     {
       "ctcae": "Cataract",
       "frequency": "very_rare",
-      "label": "Šedý zákal oční čočky (katarakta).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vision decreased",
-      "frequency": "very_rare",
-      "label": "Zhoršení zraku.",
+      "label": "Šedý zákal oční čočky.",
       "action": null,
       "action_condition": null
     },
@@ -311,83 +334,6 @@
       "ctcae": "Eye disorders - Other, specify",
       "frequency": "very_rare",
       "label": "Onemocnění makuly (žluté skvrny sítnice).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vertigo",
-      "frequency": "very_rare",
-      "label": "Vertigo.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "very_rare",
-      "label": "Angina pectoris (bolest na hrudi srdečního původu).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Sinus bradycardia",
-      "frequency": "very_rare",
-      "label": "Pomalý srdeční tep (bradykardie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypertension",
-      "frequency": "very_rare",
-      "label": "Vysoký krevní tlak.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hematemesis",
-      "frequency": "very_rare",
-      "label": "Zvracení krve.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Tuk ve stolici (steatorea).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Mucositis oral",
-      "frequency": "very_rare",
-      "label": "Zánět sliznice úst (stomatitida).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Změna obvyklého vyprazdňování.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Žloutenka, tedy zežloutnutí kůže a očního bělma.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Léková vyrážka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Angioedém (otok), který se může objevit s dalšími známkami celkové reakce z přecitlivělosti i bez nich.",
       "action": null,
       "action_condition": null
     },
@@ -406,9 +352,37 @@
       "action_condition": null
     },
     {
-      "ctcae": "Lichenoid dermatitis",
-      "frequency": "not_known",
-      "label": "Lichenoidní léková reakce na kůži.",
+      "ctcae": "Seizure",
+      "frequency": "very_rare",
+      "label": "Epileptické záchvaty.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Depression",
+      "frequency": "very_rare",
+      "label": "Deprese.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Edema",
+      "frequency": "very_rare",
+      "label": "Zadržování tekutin v těle, zejména otoky kotníků.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diabetes mellitus",
+      "frequency": "very_rare",
+      "label": "Cukrovka; může se projevit žízní, únavou a hubnutím.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Folliculitis",
+      "frequency": "very_rare",
+      "label": "Furunkulóza: malé měkké červené vřídky na kůži.",
       "action": null,
       "action_condition": null
     },
@@ -420,269 +394,428 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hematuria",
-      "frequency": "very_rare",
-      "label": "Krev v moči (hematurie).",
+      "ctcae": "Abdominal pain",
+      "frequency": "not_known",
+      "label": "Bolest břicha.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Azotemie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Neplodnost u mužů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Erectile dysfunction",
-      "frequency": "very_rare",
-      "label": "Porucha erekce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gynecomastia",
-      "frequency": "very_rare",
-      "label": "Zvětšení prsů u mužů i žen.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Peripheral edema",
-      "frequency": "very_rare",
-      "label": "Zadržování tekutin v těle vedoucí k otokům, zejména kotníků.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Malaise",
-      "frequency": "very_rare",
-      "label": "Celkový pocit nevolnosti nebo slabosti (malátnost, astenie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "very_rare",
-      "label": "Zvýšená teplota nebo horečka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Selhání ledvin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Seizure",
-      "frequency": "very_rare",
-      "label": "Epileptické záchvaty.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Zhoršená funkce ledvin, včetně případů souvisejících s reakcí z přecitlivělosti.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Zánět cév a tkáňová reakce, které se mohou projevit různými způsoby, včetně akutní cholangitidy nebo xantinových kamenů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Zánět pankreatu nebo plic v rámci celkové reakce z přecitlivělosti.",
+      "ctcae": "Lichenoid dermatitis",
+      "frequency": "not_known",
+      "label": "Svědivá červenofialová vyrážka na kůži nebo bělavé síťovité kresby na sliznicích.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "6-merkaptopurin",
-      "effect": "Současnému užívání je třeba se vyhnout. Alopurinol inhibuje odbourávání 6-merkaptopurinu, prodlužuje jeho účinek a může zvýšit jeho sérovou koncentraci až na toxické hodnoty s život ohrožující pancytopenií a útlumem kostní dřeně. Pokud je kombinace klinicky nezbytná, dávka 6-merkaptopurinu se má snížit na 25 % obvyklé dávky a je nutné časté sledování krevního obrazu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Pancytopenie a útlum kostní dřeně mohou být život ohrožující.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud máte nevysvětlitelné modřiny nebo krvácení, bolest v krku nebo horečku, okamžitě vyhledejte lékařskou pomoc."
-          }
-        }
-      ]
-    },
-    {
+      "class_id": "substance:1750",
       "drug": "azathioprin",
-      "effect": "Současnému užívání je třeba se vyhnout. Alopurinol inhibuje odbourávání 6-merkaptopurinu vznikajícího z azathioprinu, prodlužuje jeho účinek a může zvýšit jeho sérovou koncentraci až na toxické hodnoty s život ohrožující pancytopenií a útlumem kostní dřeně. Pokud je kombinace klinicky nezbytná, dávka azathioprinu se má snížit na 25 % obvyklé dávky a je nutné časté sledování krevního obrazu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Pancytopenie a útlum kostní dřeně mohou být život ohrožující.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud máte nevysvětlitelné modřiny nebo krvácení, bolest v krku nebo horečku, okamžitě vyhledejte lékařskou pomoc."
-          }
-        }
-      ]
+      "effect": "Současnému užívání se vyhněte: alopurinol prodlužuje účinek azathioprinu a může zvýšit jeho hladinu na toxické hodnoty a způsobit život ohrožující útlum kostní dřeně. Je-li kombinace nezbytná, lékař sníží dávku azathioprinu na 25 % obvyklé dávky a bude často kontrolovat krevní obraz.",
+      "effect_type": "contraindicated",
+      "side_effects": []
     },
     {
+      "class_id": "substance:1750",
+      "drug": "merkaptopurin",
+      "effect": "Současnému užívání se vyhněte: alopurinol prodlužuje účinek merkaptopurinu a může zvýšit jeho hladinu na toxické hodnoty a způsobit život ohrožující útlum kostní dřeně. Je-li kombinace nezbytná, lékař sníží dávku merkaptopurinu na 25 % obvyklé dávky a bude často kontrolovat krevní obraz.",
+      "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1750",
       "drug": "vidarabin",
-      "effect": "Při současném podání s alopurinolem se prodlužuje plazmatický poločas vidarabinu. Je nutné zvlášť pečlivé sledování, zda nedochází ke zvýšení toxických účinků.",
+      "effect": "Alopurinol může prodloužit dobu působení vidarabinu; při současném užívání je třeba zvlášť pečlivě sledovat možné toxické účinky.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Salicyláty ve vysokých dávkách a urikosurika",
-      "effect": "Látky s urikosurickým účinkem, například probenecid, sulfinpyrazon nebo vysoké dávky salicylátů, mohou urychlit vylučování oxipurinolu ledvinami a snížit tak terapeutickou účinnost alopurinolu. Klinický význam je třeba posoudit individuálně.",
+      "class_id": "substance:1750",
+      "drug": "probenecid",
+      "effect": "Probenecid může urychlit vylučování oxipurinolu a tím snížit léčebný účinek alopurinolu; klinický význam se posuzuje individuálně.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:1750",
+      "drug": "kyselina acetylsalicylová",
+      "effect": "Vysoké dávky salicylátů mohou urychlit vylučování oxipurinolu a tím snížit léčebný účinek alopurinolu; klinický význam se posuzuje individuálně.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1750",
       "drug": "chlorpropamid",
-      "effect": "Při současném užívání, zejména při poruše funkce ledvin, může kvůli soutěži o vylučování v ledvinových tubulech přetrvávat hypoglykemický účinek déle. Lékař může dávku chlorpropamidu snížit, zejména při zhoršené funkci ledvin.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Prodloužený hypoglykemický účinek chlorpropamidu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Kumarinová antikoagulancia",
-      "effect": "Vzácně byl hlášen zvýšený účinek warfarinu a jiných kumarinových antikoagulancií při současném podávání s alopurinolem. U všech pacientů užívajících antikoagulancia je nutné pečlivě a častěji sledovat srážlivost krve; podle potřeby může lékař dávku antikoagulancia snížit.",
+      "effect": "Při poruše funkce ledvin může alopurinol při současném užívání s chlorpropamidem prodloužit jeho účinek na snížení hladiny cukru v krvi; lékař může dávku chlorpropamidu snížit.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "substance:1750",
+      "drug": "warfarin",
+      "effect": "Alopurinol může zvýšit účinek warfarinu a dalších kumarinových léků na srážlivost krve. Lékař bude častěji kontrolovat srážlivost a případně upraví dávku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1750",
       "drug": "fenytoin",
-      "effect": "Alopurinol může v játrech inhibovat oxidaci fenytoinu; klinický význam této interakce nebyl prokázán.",
+      "effect": "Alopurinol může zpomalit odbourávání fenytoinu v játrech; klinický význam této interakce není prokázán.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:1750",
       "drug": "theofylin",
-      "effect": "Alopurinol může inhibovat metabolismus theofylinu. Hladiny theofylinu je třeba sledovat při zahájení léčby alopurinolem nebo při zvýšení jeho dávky.",
+      "effect": "Alopurinol může zpomalit odbourávání theofylinu. Lékař má kontrolovat jeho hladinu v krvi při zahájení léčby alopurinolem a při zvýšení jeho dávky.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Ampicilin a amoxicilin",
-      "effect": "Při současném užívání s alopurinolem byla hlášena vyšší četnost kožních vyrážek než při užívání samotných antibiotik. Pokud je dostupná alternativa, doporučuje se u pacientů léčených alopurinolem zvolit jiné antibiotikum.",
+      "class_id": "substance:1750",
+      "drug": "ampicilin",
+      "effect": "Při současném užívání s alopurinolem byly častěji hlášeny kožní vyrážky než bez této kombinace. Pokud je dostupná, doporučuje se místo ampicilinu jiná léčba.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Rash maculo-papular",
           "frequency": null,
-          "label": "Zvýšené riziko kožní vyrážky při kombinaci s ampicilinem nebo amoxicilinem.",
+          "label": "Kožní vyrážka při současném užívání ampicilinu a alopurinolu.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Cytostatika",
-      "effect": "Při kombinaci s alopurinolem se mohou krevní dyskrazie objevit častěji než při podávání cytostatik samotných; u pacientů s nádorovým onemocněním jiným než leukemie byl také hlášen častější útlum kostní dřeně po cyklofosfamidu a dalších cytotoxických přípravcích. Je nutné pravidelně vyšetřovat krevní obraz. V kontrolované studii nebylo prokázáno zvýšení toxických účinků cyklofosfamidu, doxorubicinu, bleomycinu, prokarbazinu nebo mechlorethaminu.",
+      "class_id": "substance:1750",
+      "drug": "amoxicilin",
+      "effect": "Při současném užívání s alopurinolem byly častěji hlášeny kožní vyrážky než bez této kombinace. Pokud je dostupná, doporučuje se místo amoxicilinu jiná léčba.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
+          "ctcae": "Rash maculo-papular",
           "frequency": null,
-          "label": "Krevní dyskrazie a útlum kostní dřeně se mohou při kombinaci objevit častěji.",
+          "label": "Kožní vyrážka při současném užívání amoxicilinu a alopurinolu.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
+      "class_id": "substance:1750",
+      "drug": "cyklofosfamid",
+      "effect": "Při kombinaci s alopurinolem se mohou krevní poruchy vyskytovat častěji než při samostatném podávání. U pacientů s nádorovým onemocněním byl hlášen zvýšený výskyt útlumu kostní dřeně, ale v kontrolované studii nebylo prokázáno zvýšení toxických účinků. Lékař má pravidelně kontrolovat krevní obraz.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1750",
+      "drug": "doxorubicin",
+      "effect": "Při kombinaci s alopurinolem se mohou krevní poruchy vyskytovat častěji než při samostatném podávání. U pacientů s nádorovým onemocněním byl hlášen zvýšený výskyt útlumu kostní dřeně, ale v kontrolované studii nebylo prokázáno zvýšení toxických účinků. Lékař má pravidelně kontrolovat krevní obraz.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1750",
+      "drug": "bleomycin",
+      "effect": "Při kombinaci s alopurinolem se mohou krevní poruchy vyskytovat častěji než při samostatném podávání. U pacientů s nádorovým onemocněním byl hlášen zvýšený výskyt útlumu kostní dřeně, ale v kontrolované studii nebylo prokázáno zvýšení toxických účinků. Lékař má pravidelně kontrolovat krevní obraz.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1750",
+      "drug": "prokarbazin",
+      "effect": "Při kombinaci s alopurinolem se mohou krevní poruchy vyskytovat častěji než při samostatném podávání. U pacientů s nádorovým onemocněním byl hlášen zvýšený výskyt útlumu kostní dřeně, ale v kontrolované studii nebylo prokázáno zvýšení toxických účinků. Lékař má pravidelně kontrolovat krevní obraz.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1750",
+      "drug": "mechlorethamin",
+      "effect": "Při kombinaci s alopurinolem se mohou krevní poruchy vyskytovat častěji než při samostatném podávání. U pacientů s nádorovým onemocněním byl hlášen zvýšený výskyt útlumu kostní dřeně, ale v kontrolované studii nebylo prokázáno zvýšení toxických účinků. Lékař má pravidelně kontrolovat krevní obraz.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1750",
       "drug": "hydroxid hlinitý",
-      "effect": "Hydroxid hlinitý může oslabit účinek alopurinolu. Oba přípravky se mají užívat s odstupem nejméně 3 hodin.",
-      "effect_type": "antagonism",
+      "effect": "Hydroxid hlinitý může oslabit účinek alopurinolu. Tyto léky se mají užívat s odstupem nejméně 3 hodin.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:1750",
       "drug": "cyklosporin",
-      "effect": "Při současné léčbě se může zvýšit plazmatická koncentrace cyklosporinu; je třeba zvážit možnost jeho zvýšené toxicity.",
+      "effect": "Při současném užívání s alopurinolem se může zvýšit hladina cyklosporinu v krvi a riziko jeho nežádoucích účinků.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:1750",
       "drug": "didanosin",
-      "effect": "Při současném podávání alopurinolu v dávce 300 mg denně byly hodnoty Cmax a AUC didanosinu přibližně dvojnásobné. Současné užívání se obecně nedoporučuje; pokud je nevyhnutelné, může být nutné snížit dávku didanosinu a pacienta pečlivě sledovat.",
+      "effect": "Při současném užívání 300 mg alopurinolu denně byly při studii hladiny didanosinu v krvi přibližně dvojnásobné. Současné užívání se obecně nedoporučuje; je-li nevyhnutelné, lékař může snížit dávku didanosinu a bude pacienta pečlivě sledovat.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory ACE",
-      "effect": "Současné užívání je spojeno se zvýšeným rizikem leukopenie, zejména při poruše funkce ledvin; bylo také hlášeno zvýšené riziko přecitlivělosti. Je třeba postupovat opatrně. U kaptoprilu může být zvýšené riziko kožních reakcí, zejména při chronickém selhání ledvin.",
+      "class_id": "atc:C09A",
+      "drug_class": "inhibitory ACE",
+      "effect": "Současné užívání může zvýšit riziko leukopenie, zvláště při poruše funkce ledvin, a riziko přecitlivělosti; při kaptoprilu může být vyšší také riziko kožní reakce, zvláště při chronickém selhání ledvin. Je třeba opatrnosti.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "White blood cell decreased",
           "frequency": null,
-          "label": "Zvýšené riziko leukopenie, zejména při poruše funkce ledvin.",
+          "label": "Při současném užívání s inhibitorem ACE může být zvýšené riziko leukopenie, zejména při poruše funkce ledvin.",
           "action": null,
           "action_condition": null
         },
         {
-          "ctcae": "Immune system disorders - Other, specify",
+          "ctcae": "Allergic reaction",
           "frequency": null,
-          "label": "Zvýšené riziko reakce z přecitlivělosti.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Při kombinaci s kaptoprilem může být vyšší riziko kožních reakcí, zvláště při chronickém selhání ledvin.",
+          "label": "Při současném užívání s inhibitorem ACE může být zvýšené riziko přecitlivělosti; u kaptoprilu také kožních reakcí, zvláště při chronickém selhání ledvin.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Diuretika, zejména thiazidová",
-      "effect": "Při současném podávání, zejména při poruše funkce ledvin, bylo hlášeno zvýšené riziko reakcí z přecitlivělosti včetně závažných kožních reakcí. U pacientů s chronickou poruchou funkce ledvin léčených diuretiky, zvláště thiazidy, je nutné pečlivě sledovat možné příznaky a při jejich prvním výskytu léčbu alopurinolem ihned a trvale ukončit. U pacientů léčených pro vysoký krevní tlak nebo srdeční nedostatečnost může být současně snížená funkce ledvin, proto je třeba alopurinol podávat opatrně.",
+      "class_id": "atc:C03A",
+      "drug_class": "thiazidová diuretika",
+      "effect": "Při současném užívání, zejména při poruše funkce ledvin, může být vyšší riziko reakce z přecitlivělosti včetně závažné kožní reakce. Je třeba pečlivě sledovat možné příznaky a při prvním výskytu léčbu alopurinolem ihned a trvale ukončit.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Immune system disorders - Other, specify",
+          "ctcae": "Allergic reaction",
           "frequency": null,
-          "label": "Zvýšené riziko reakce z přecitlivělosti, včetně Stevensova-Johnsonova syndromu a toxické epidermální nekrolýzy, zejména při poruše funkce ledvin.",
-          "action": "discontinue_treatment",
-          "action_condition": {
-            "patient_guide": "Pokud se objeví první příznaky reakce z přecitlivělosti nebo závažné kožní reakce, ihned a trvale přestaňte alopurinol užívat."
-          }
+          "label": "Při současném užívání thiazidového diuretika může být zvýšené riziko přecitlivělosti, zvláště při poruše funkce ledvin.",
+          "action": null,
+          "action_condition": null
         }
       ]
     },
     {
+      "class_id": "substance:1750",
       "drug": "furosemid",
-      "effect": "Při současném podávání s alopurinolem byla hlášena zvýšená koncentrace urátu v séru a oxipurinolu v plazmě.",
+      "effect": "Při současném užívání byla hlášena zvýšená koncentrace urátu v séru a oxipurinolu v krvi. Při užívání diuretik, zejména při poruše funkce ledvin, bylo také hlášeno zvýšené riziko přecitlivělosti.",
       "effect_type": "increased_exposure",
-      "side_effects": []
+      "side_effects": [
+        {
+          "ctcae": "Allergic reaction",
+          "frequency": null,
+          "label": "Při současném užívání diuretika může být zvýšené riziko přecitlivělosti, zvláště při poruše funkce ledvin.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:C03",
+      "drug_class": "diuretika",
+      "effect": "Při současném užívání s alopurinolem, zvláště při poruše funkce ledvin, bylo hlášeno zvýšené riziko přecitlivělosti; pro furosemid byla navíc hlášena zvýšená koncentrace urátu v séru a oxipurinolu v krvi. U pacientů s poruchou funkce ledvin je třeba zvláštní opatrnosti.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Allergic reaction",
+          "frequency": null,
+          "label": "Při současném užívání diuretika může být zvýšené riziko přecitlivělosti, zvláště při poruše funkce ledvin.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
     }
-  ]
+  ],
+  "usage": "Milurit snižuje hladinu kyseliny močové v krvi a moči a používá se k prevenci dny a dalších potíží spojených s jejím hromaděním.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0224357",
+      "H": "",
+      "NAZEV": "MILURIT",
+      "SILA": "200MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "200MG TBL NOB 30",
+      "OBAL": "TBC",
+      "DRZ": "EGB",
+      "ZEMDRZ": "H",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "29",
+      "ATC_WHO": "M04AA01",
+      "RC": "29/338/17-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0,4",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "15",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1750",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "MILURIT",
+      "MRP_CISLO": "SK/H/0371/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OE",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0224357",
+        "KOD_LATKY": "1750",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "200",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1750",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ALLOPURINOLUM",
+          "NAZEV_EN": "ALLOPURINOL",
+          "NAZEV": "ALOPURINOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0224357",
+        "KOD_LATKY": "3755",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0224357",
+        "KOD_LATKY": "14679",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0224357",
+        "KOD_LATKY": "2855",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0224357",
+        "KOD_LATKY": "1300",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0224357",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0224357",
+      "PIL": "PI220506.pdf",
+      "DAT_ROZ_PIL": "25.03.2025",
+      "SPC": "SPC220507.pdf",
+      "DAT_ROZ_SPC": "25.03.2025",
+      "OBAL_TEXT": "OBAL191029.pdf",
+      "DAT_ROZ_OBAL": "08.09.2022",
+      "NR": "NR18823617.pdf",
+      "DAT_NPM_NR": "26.09.2018"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "M04AA01",
+        "NT": "N",
+        "NAZEV": "ALOPURINOL",
+        "NAZEV_EN": "ALLOPURINOL"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

@@ -1,5 +1,98 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N02",
+    "atc:N02A",
+    "atc:N02AJ",
+    "atc:N02AJ14",
+    "substance:16261",
+    "substance:2719"
+  ],
   "side_effects": [
+    {
+      "ctcae": "Nausea",
+      "frequency": "very_common",
+      "label": "Nevolnost; u tramadolu velmi častá, u dexketoprofenu častá.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": "very_common",
+      "label": "Závrať; u tramadolu velmi častá, u dexketoprofenu méně častá. Může ovlivnit řízení; při závrati neřiďte ani neobsluhujte stroje, dokud příznak nevymizí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "common",
+      "label": "Zvracení; časté při léčbě přípravkem Skudexa i u jednotlivých léčivých látek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Abdominal pain",
+      "frequency": "common",
+      "label": "Bolest břicha; v příbalové informaci častá.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "common",
+      "label": "Průjem; v příbalové informaci častý.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspepsia",
+      "frequency": "common",
+      "label": "Trávicí potíže; v příbalové informaci časté.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "common",
+      "label": "Bolest hlavy; u tramadolu častá, u dexketoprofenu méně častá.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Somnolence",
+      "frequency": "common",
+      "label": "Ospalost; u tramadolu častá, u dexketoprofenu méně častá. Může ovlivnit řízení; při ospalosti neřiďte ani neobsluhujte stroje, dokud příznak nevymizí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "common",
+      "label": "Únava; častá u tramadolu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "common",
+      "label": "Zácpa; častá u tramadolu, méně častá u dexketoprofenu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dry mouth",
+      "frequency": "common",
+      "label": "Sucho v ústech; časté u tramadolu, méně časté u dexketoprofenu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperhidrosis",
+      "frequency": "common",
+      "label": "Zvýšené pocení; časté u tramadolu.",
+      "action": null,
+      "action_condition": null
+    },
     {
       "ctcae": "Thrombocytosis",
       "frequency": "uncommon",
@@ -8,55 +101,46 @@
       "action_condition": null
     },
     {
-      "ctcae": "Neutrophil count decreased",
-      "frequency": "very_rare",
-      "label": "Snížený počet neutrofilů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_rare",
-      "label": "Snížený počet krevních destiček.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Allergic reaction",
       "frequency": "very_rare",
-      "label": "Přecitlivělost, například dušnost, bronchospasmus, sípání nebo angioedém.",
-      "action": "discontinue_treatment",
+      "label": "Přecitlivělost, například dušnost, bronchospasmus, sípání nebo otok obličeje či krku.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví první známky alergické reakce."
+        "patient_guide": "Zvláště pokud se objeví otok obličeje, jazyka nebo hrdla, potíže s polykáním, kopřivka spolu s dýchacími potížemi nebo bolest na hrudi.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "very_rare",
       "label": "Anafylaktická reakce, včetně anafylaktického šoku.",
-      "action": "hospitalize_NOW",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví otok obličeje, jazyka nebo hrdla, potíže s polykáním nebo kopřivka spojená s dýchacími potížemi."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Laryngeal edema",
       "frequency": "uncommon",
       "label": "Otok hrtanu.",
-      "action": null,
-      "action_condition": null
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Anorexia",
       "frequency": "rare",
-      "label": "Porucha chuti k jídlu nebo nechutenství.",
+      "label": "Porucha chuti k jídlu nebo snížená chuť k jídlu; u tramadolu vzácná, u dexketoprofenu vzácná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypoglycemia",
       "frequency": "not_known",
-      "label": "Snížení hladiny cukru v krvi.",
+      "label": "Snížení hladiny cukru v krvi; frekvenci nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
@@ -70,177 +154,70 @@
     {
       "ctcae": "Anxiety",
       "frequency": "uncommon",
-      "label": "Úzkost.",
+      "label": "Úzkost; u dexketoprofenu méně častá, u tramadolu vzácná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cognitive disturbance",
       "frequency": "rare",
-      "label": "Porucha poznávacích funkcí.",
+      "label": "Kognitivní porucha; u tramadolu vzácná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Confusion",
       "frequency": "rare",
-      "label": "Stav zmatenosti.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Závislost na přípravku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hallucinations",
-      "frequency": "rare",
-      "label": "Halucinace.",
+      "label": "Stav zmatenosti; u tramadolu vzácný.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Insomnia",
       "frequency": "uncommon",
-      "label": "Nespavost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Změny nálady.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Noční můry.",
+      "label": "Nespavost; u dexketoprofenu méně častá.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Psychosis",
       "frequency": "uncommon",
-      "label": "Psychotické poruchy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "rare",
-      "label": "Poruchy spánku.",
+      "label": "Psychotická porucha.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Amnesia",
       "frequency": "uncommon",
-      "label": "Ztráta paměti.",
+      "label": "Amnézie.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Dizziness",
-      "frequency": "common",
-      "label": "Závrať.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Seizure",
+      "ctcae": "Epilepsy",
       "frequency": "rare",
-      "label": "Epileptické záchvaty; vyskytly se zejména při vysokých dávkách tramadolu nebo při současném užívání léků vyvolávajících záchvaty.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Headache",
-      "frequency": "uncommon",
-      "label": "Bolest hlavy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Movements involuntary",
-      "frequency": "rare",
-      "label": "Mimovolní svalové stahy.",
+      "label": "Epileptické záchvaty; zejména po vysokých dávkách tramadolu nebo při současném užívání léků, které mohou záchvaty vyvolat.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "rare",
-      "label": "Brnění nebo jiné neobvyklé pocity.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Peripheral sensory neuropathy",
-      "frequency": "rare",
-      "label": "Senzitivní poškození.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Serotoninový syndrom: změny duševního stavu, například neklid s potřebou pohybu, halucinace nebo kóma; horečka, zrychlený tep, výkyvy krevního tlaku, mimovolní svalové záškuby, svalová ztuhlost, porucha koordinace nebo nevolnost, zvracení či průjem.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky serotoninového syndromu."
-      }
-    },
-    {
-      "ctcae": "Somnolence",
-      "frequency": "common",
-      "label": "Ospalost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysarthria",
-      "frequency": "not_known",
-      "label": "Poruchy řeči.",
+      "label": "Brnění nebo necitlivost; u dexketoprofenu a tramadolu vzácné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Syncope",
       "frequency": "rare",
-      "label": "Přechodná ztráta vědomí (mdloba).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tremor",
-      "frequency": "rare",
-      "label": "Třes.",
+      "label": "Přechodná ztráta vědomí.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "very_rare",
-      "label": "Rozmazané vidění.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Rozšíření zornic.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Stažení zornic.",
+      "label": "Rozmazané vidění; u dexketoprofenu velmi vzácné, u tramadolu vzácné. Může ovlivnit řízení; při rozmazaném vidění neřiďte ani neobsluhujte stroje, dokud příznak nevymizí.",
       "action": null,
       "action_condition": null
     },
@@ -252,169 +229,78 @@
       "action_condition": null
     },
     {
-      "ctcae": "Tinnitus",
-      "frequency": "very_rare",
-      "label": "Zvonění v uších (ušní šelest).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vertigo",
-      "frequency": "uncommon",
-      "label": "Pocit otáčení nebo točení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Sinus bradycardia",
-      "frequency": "rare",
-      "label": "Zpomalený tep srdce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Palpitations",
       "frequency": "uncommon",
-      "label": "Bušení srdce.",
+      "label": "Bušení srdce; u dexketoprofenu a tramadolu méně časté.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Chest pain - cardiac",
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Zpomalený tep srdce (bradykardie); u tramadolu vzácná.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Kounisův syndrom",
       "frequency": "not_known",
-      "label": "Bolest na hrudi, která může být známkou Kounisova syndromu.",
-      "action": "discontinue_treatment",
+      "label": "Bolest na hrudi, která může být známkou Kounisova syndromu, potenciálně závažné alergické reakce; frekvenci nelze určit.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví bolest na hrudi nebo jiné známky alergické reakce."
+        "patient_guide": "Pokud se objeví bolest na hrudi, případně spolu s dýchacími potížemi nebo otokem obličeje či krku.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Sinus tachycardia",
+      "ctcae": "Tachycardia",
       "frequency": "uncommon",
-      "label": "Zrychlený tep.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "uncommon",
-      "label": "Nízký krevní tlak.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Flushing",
-      "frequency": "uncommon",
-      "label": "Zčervenání.",
+      "label": "Zrychlený tep; u dexketoprofenu velmi vzácný a u tramadolu méně častý.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypertension",
       "frequency": "uncommon",
-      "label": "Vysoký nebo velmi vysoký krevní tlak, včetně hypertenzní krize.",
+      "label": "Vysoký krevní tlak; včetně hypertenzní krize.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypotension",
       "frequency": "uncommon",
-      "label": "Nízký krevní tlak při postavení (ortostatická hypotenze).",
+      "label": "Nízký krevní tlak; u dexketoprofenu velmi vzácný.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Zpomalené dýchání.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud máte pomalé nebo mělké dýchání."
-      }
-    },
-    {
       "ctcae": "Bronchospasm",
       "frequency": "very_rare",
-      "label": "Zúžení průdušek (bronchospasmus).",
+      "label": "Zúžení dýchacích cest, včetně zhoršení astmatu; souvislost s tramadolem nebyla stanovena.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspnea",
       "frequency": "very_rare",
-      "label": "Dušnost.",
+      "label": "Dušnost; u dexketoprofenu velmi vzácná a u tramadolu vzácná.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Respiratory depression",
       "frequency": "uncommon",
-      "label": "Útlum dýchání.",
-      "action": "hospitalize_NOW",
+      "label": "Útlum dýchání; u tramadolu méně častý.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud máte pomalé nebo mělké dýchání."
+        "patient_guide": "Zejména pokud je dýchání pomalé nebo mělké nebo se objeví zmatenost, ospalost, zúžené zornice, nevolnost či zvracení, zácpa nebo snížená chuť k jídlu.",
+        "min_severity": 1
       }
-    },
-    {
-      "ctcae": "Hiccups",
-      "frequency": "not_known",
-      "label": "Škytavka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Nepříjemné pocity v břiše.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Abdominal distension",
       "frequency": "uncommon",
-      "label": "Nadýmání nebo zvětšení objemu břicha.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Abdominal pain",
-      "frequency": "common",
-      "label": "Bolest břicha.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Constipation",
-      "frequency": "uncommon",
-      "label": "Zácpa.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "common",
-      "label": "Průjem.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dry mouth",
-      "frequency": "uncommon",
-      "label": "Sucho v ústech.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspepsia",
-      "frequency": "uncommon",
-      "label": "Trávicí potíže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Flatulence",
-      "frequency": "uncommon",
-      "label": "Nadýmání.",
+      "label": "Nadýmání nebo pocit tlaku v břiše.",
       "action": null,
       "action_condition": null
     },
@@ -422,20 +308,6 @@
       "ctcae": "Gastritis",
       "frequency": "uncommon",
       "label": "Zánět žaludku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Podráždění zažívacího traktu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "very_common",
-      "label": "Pocit na zvracení nebo nevolnost.",
       "action": null,
       "action_condition": null
     },
@@ -449,817 +321,720 @@
     {
       "ctcae": "Gastric ulcer",
       "frequency": "rare",
-      "label": "Žaludeční vřed, případně s krvácením nebo proděravěním.",
+      "label": "Žaludeční vřed; u dexketoprofenu vzácný.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Duodenal ulcer",
       "frequency": "rare",
-      "label": "Dvanácterníkový vřed, případně s krvácením nebo proděravěním.",
+      "label": "Dvanácterníkový vřed; u dexketoprofenu vzácný.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Belching",
+      "ctcae": "Gastric hemorrhage",
+      "frequency": "rare",
+      "label": "Krvácení ze žaludečního nebo dvanácterníkového vředu; u dexketoprofenu vzácné. Může se projevit zvracením krve nebo černou stolicí.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Zejména pokud zvracíte krev nebo máte černou stolici.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Gastric perforation",
+      "frequency": "rare",
+      "label": "Proděravění žaludečního vředu; u dexketoprofenu vzácné.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "uncommon",
-      "label": "Říhání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vomiting",
-      "frequency": "common",
-      "label": "Zvracení.",
+      "label": "Zvýšené jaterní enzymy; u přípravku Skudexa méně časté, u dexketoprofenu vzácné a u tramadolu velmi vzácné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "rare",
-      "label": "Zánět jater (hepatitida).",
+      "label": "Zánět jater; u dexketoprofenu vzácný.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatic failure",
+      "ctcae": "Hepatobiliary disorders - Other, specify",
       "frequency": "rare",
-      "label": "Poškození jater.",
+      "label": "Poškození jater; u dexketoprofenu vzácné.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Aspartate aminotransferase increased",
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Zvýšené jaterní enzymy nebo abnormální funkční jaterní testy.",
+      "label": "Kožní vyrážka; u dexketoprofenu i tramadolu méně častá. Při prvních známkách vyrážky nebo poškození v ústech či na sliznicích ukončete užívání.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud jsou jaterní testy významně zvýšené."
+        "patient_guide": "Při prvních známkách kožní vyrážky, poškození v ústech nebo na sliznicích či jakékoli známce alergie.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Akné.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "very_rare",
+      "label": "Stevensův-Johnsonův syndrom; může způsobit otevřené boláky na kůži, v ústech, očích nebo v oblasti pohlavních orgánů.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při prvních známkách vyrážky nebo poškození v ústech či na sliznicích ukončete užívání.",
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": "Edema face",
-      "frequency": "uncommon",
-      "label": "Otok obličeje.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "very_rare",
+      "label": "Toxická epidermální nekrolýza (Lyellův syndrom); může způsobit otevřené boláky na kůži, v ústech, očích nebo v oblasti pohlavních orgánů.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při prvních známkách vyrážky nebo poškození v ústech či na sliznicích ukončete užívání.",
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": "Hyperhidrosis",
+      "ctcae": "Urticaria",
       "frequency": "uncommon",
-      "label": "Zvýšené pocení.",
-      "action": null,
-      "action_condition": null
+      "label": "Kopřivka; u přípravku Skudexa méně častá, u dexketoprofenu vzácná a u tramadolu méně častá.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se kopřivka objeví spolu s dýchacími potížemi.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Photosensitivity",
       "frequency": "very_rare",
-      "label": "Citlivost kůže na světlo.",
+      "label": "Citlivost na světlo; u dexketoprofenu velmi vzácná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pruritus",
       "frequency": "very_rare",
-      "label": "Svědění.",
+      "label": "Svědění; u dexketoprofenu velmi vzácné a u tramadolu méně časté.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "uncommon",
-      "label": "Kožní vyrážka.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kožní vyrážka, poškození v ústech nebo na sliznicích či jiné známky alergie."
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "very_rare",
-      "label": "Stevensův–Johnsonův syndrom s otevřenými boláky na kůži, v ústech, očích nebo v oblasti pohlavních orgánů.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kožní vyrážka, poškození v ústech nebo na sliznicích či jiné známky alergie."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "very_rare",
-      "label": "Toxická epidermální nekrolýza (Lyellův syndrom).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kožní vyrážka, poškození v ústech nebo na sliznicích či jiné známky alergie."
-      }
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "uncommon",
-      "label": "Kopřivka.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kopřivka nebo jiné známky alergie."
-      }
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "not_known",
-      "label": "Fixní lékový exantém: obvykle se znovu objevuje na stejných místech a může tvořit kruhové nebo oválné zarudlé či oteklé skvrny, puchýře a svědění; tmavší zbarvení kůže může přetrvávat i po zhojení.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kožní vyrážka, poškození v ústech nebo na sliznicích či jiné známky alergie."
-      }
-    },
-    {
       "ctcae": "Back pain",
       "frequency": "rare",
-      "label": "Bolest zad.",
+      "label": "Bolest zad; u dexketoprofenu vzácná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Generalized muscle weakness",
       "frequency": "rare",
-      "label": "Svalová slabost.",
+      "label": "Svalová slabost; u tramadolu vzácná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysuria",
       "frequency": "rare",
-      "label": "Obtížné nebo bolestivé močení.",
+      "label": "Obtížné nebo bolestivé močení; u tramadolu vzácné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hematuria",
       "frequency": "uncommon",
-      "label": "Krev v moči.",
+      "label": "Krev v moči; u přípravku Skudexa méně častá.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "rare",
-      "label": "Porucha močení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tubulointerstitial nephritis",
-      "frequency": "very_rare",
-      "label": "Zánět ledvin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nephrotic syndrome",
-      "frequency": "very_rare",
-      "label": "Nefrotický syndrom.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urinary frequency",
-      "frequency": "rare",
-      "label": "Časté močení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Acute kidney injury",
-      "frequency": "rare",
-      "label": "Akutní selhání ledvin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urinary retention",
-      "frequency": "rare",
-      "label": "Zadržování moči.",
+      "label": "Akutní selhání ledvin nebo jiné problémy s ledvinami; akutní selhání ledvin je u dexketoprofenu vzácné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Irregular menstruation",
       "frequency": "rare",
-      "label": "Poruchy menstruace.",
+      "label": "Menstruační poruchy; u dexketoprofenu vzácné.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Prostatic obstruction",
-      "frequency": "rare",
-      "label": "Obtíže s prostatou.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "common",
-      "label": "Únava.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Edema face",
+      "frequency": "uncommon",
+      "label": "Otok obličeje; u přípravku Skudexa méně častý, u dexketoprofenu velmi vzácný.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví spolu s otokem jazyka nebo hrdla, potížemi s polykáním nebo dýchacími potížemi.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Chills",
       "frequency": "uncommon",
-      "label": "Zimnice.",
+      "label": "Zimnice; u přípravku Skudexa i u dexketoprofenu méně častá.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Malaise",
       "frequency": "uncommon",
-      "label": "Celkový pocit nepohody.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
-      "frequency": "uncommon",
-      "label": "Neobvyklé pocity.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Peripheral edema",
-      "frequency": "rare",
-      "label": "Otoky, zejména kotníků a nohou nebo zadržování tekutin.",
+      "label": "Pocit nepohody nebo malátnost; u přípravku Skudexa méně časté a u dexketoprofenu méně časté.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pain",
       "frequency": "uncommon",
-      "label": "Bolest.",
+      "label": "Bolest; nespecifikovaná, u přípravku Skudexa méně častá.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Tinnitus",
+      "frequency": "very_rare",
+      "label": "Zvonění v uších; u dexketoprofenu velmi vzácné a při vysazení tramadolu velmi vzácné.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "rare",
-      "label": "Příznaky z vysazení, včetně rozrušení, úzkosti, nervozity, nespavosti, hyperaktivity, třesu a zažívacích obtíží; vzácně panické ataky, závažná úzkost, halucinace, brnění, tinnitus a jiné neobvyklé příznaky z oblasti nervového systému.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypertension",
-      "frequency": "uncommon",
-      "label": "Zvýšený krevní tlak.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alkaline phosphatase increased",
-      "frequency": "uncommon",
-      "label": "Zvýšená alkalická fosfatáza v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood lactate dehydrogenase increased",
-      "frequency": "uncommon",
-      "label": "Zvýšená laktátdehydrogenáza v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Upper gastrointestinal hemorrhage",
-      "frequency": "rare",
-      "label": "Krvácení do žaludku nebo střev, které se může projevit zvracením krve nebo černou stolicí.",
+      "label": "Příznaky z vysazení tramadolu: rozrušení, úzkost, nervozita, nespavost, zvýšená aktivita, třes a žaludeční či střevní potíže; vzácně také panické ataky, halucinace, brnění, zvonění v uších a neobvyklé příznaky nervového systému. Některé psychické nežádoucí účinky se mohou lišit intenzitou a charakterem podle osobnosti pacienta a délky léčby.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se na začátku léčby objeví krvácení nebo jiné zažívací potíže, zejména pokud jste starší nebo jste podobné potíže měl(a) po dlouhodobém užívání protizánětlivých léků."
+        "patient_guide": "Pokud se některý z těchto příznaků objeví po náhlém vysazení přípravku.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Colitis",
-      "frequency": null,
-      "label": "Zhoršení kolitidy nebo Crohnovy choroby.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Serotoninový syndrom",
+      "frequency": "not_known",
+      "label": "Serotoninový syndrom; může se projevit změnami duševního stavu, neklidem, halucinacemi nebo kómatem, horečkou, zrychleným tepem, výkyvy krevního tlaku, svalovými záškuby či ztuhlostí, poruchou koordinace, nevolností, zvracením nebo průjmem. Frekvenci nelze určit.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví kterýkoli z uvedených příznaků závažného syndromu.",
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": "Mucositis oral",
+      "ctcae": "Adrenal insufficiency",
       "frequency": null,
-      "label": "Ulcerózní zánět sliznice úst.",
-      "action": null,
-      "action_condition": null
+      "label": "Nedostatečnost nadledvin; může se projevit mimořádnou únavou, sníženou chutí k jídlu, silnou bolestí břicha, nevolností, zvracením nebo nízkým krevním tlakem.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví mimořádná únava, snížená chuť k jídlu, silná bolest břicha, nevolnost, zvracení nebo nízký krevní tlak.",
+        "min_severity": 2
+      }
     },
     {
-      "ctcae": "Aseptic meningitis",
+      "ctcae": "Sleep apnea",
       "frequency": null,
-      "label": "Aseptická meningitida, zejména u pacientů se systémovým lupusem nebo smíšeným onemocněním pojivové tkáně.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Purpura",
-      "frequency": null,
-      "label": "Purpura.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aplastic anemia",
-      "frequency": null,
-      "label": "Aplastická anémie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hemolytic anemia",
-      "frequency": null,
-      "label": "Hemolytická anémie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": null,
-      "label": "Agranulocytóza nebo hypoplazie kostní dřeně.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Heart failure",
-      "frequency": null,
-      "label": "Srdeční selhání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myocardial infarction",
-      "frequency": null,
-      "label": "Srdeční příhoda (infarkt myokardu); při užívání NSA může být riziko mírně zvýšené, zejména při vysokých dávkách a dlouhodobé léčbě.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stroke",
-      "frequency": null,
-      "label": "Cévní mozková příhoda; při užívání NSA může být riziko mírně zvýšené, zejména při vysokých dávkách a dlouhodobé léčbě.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Zhoršení astmatu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Zadržování tekutin a otoky.",
-      "action": null,
-      "action_condition": null
+      "label": "Poruchy dýchání ve spánku, včetně spánkové apnoe a nízké hladiny kyslíku v krvi; mohou se projevit přerušovaným dýcháním, nočním probouzením kvůli dušnosti nebo nadměrnou denní ospalostí.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud si vy nebo jiná osoba všimnete přerušovaného dýchání ve spánku, nočního probouzení kvůli dušnosti nebo nadměrné ospalosti během dne.",
+        "min_severity": 2
+      }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Inhibitory monoaminooxidázy (IMAO)",
-      "effect": "Přípravek Skudexa se nesmí kombinovat s IMAO ani užívat, pokud jste je užíval(a) v posledních 14 dnech před zahájením léčby. Při kombinaci tramadolu s IMAO byly popsány život ohrožující účinky na centrální nervový systém, dýchání a krevní oběh.",
-      "effect_type": "contraindicated",
+      "class_id": "atc:M01A",
+      "drug_class": "Jiná nesteroidní protizánětlivá léčiva (NSA), včetně inhibitorů COX-2",
+      "effect": "Současné užívání s dexketoprofenem se nedoporučuje; kombinace několika NSA může zvýšit riziko žaludečních a střevních vředů a krvácení. U vysokých dávek salicylátů jde o dávky nejméně 3 g denně.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Jiná NSA včetně selektivních inhibitorů COX-2 a vysokých dávek salicylátů (≥ 3 g/den)",
-      "effect": "Současné užívání více NSA, včetně vysokých dávek salicylátů, může synergicky zvýšit riziko gastrointestinálních vředů a krvácení. Dexketoprofen se nemá podávat společně s jinými NSA.",
+      "class_id": "atc:B01AA",
+      "drug_class": "Antikoagulancia, například kumarinové deriváty",
+      "effect": "Dexketoprofen může zvýšit účinek antikoagulancií a riziko krvácení; příčinou je jeho vysoká vazba na bílkoviny, vliv na krevní destičky a poškození žaludeční a dvanácterníkové sliznice. Tramadol může při souběžném užívání kumarinů, například warfarinu, zvýšit INR a způsobit závažné krvácení nebo modřiny. Pokud se kombinaci s dexketoprofenem nelze vyhnout, lékař sleduje stav pacienta a laboratorní hodnoty.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Zvýšené riziko gastrointestinálních ulcerací.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do zažívacího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Antikoagulancia, včetně warfarinu a jiných kumarinů",
-      "effect": "NSA mohou zvyšovat účinek antikoagulancií. Při kombinaci s warfarinem byly u některých pacientů hlášeny zvýšené hodnoty INR, závažné krvácení a ekchymózy. Pokud se kombinaci nelze vyhnout, pečlivě sledujte klinický stav a laboratorní hodnoty; pacienty užívající kumariny pečlivě sledujte.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení, včetně závažného krvácení.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Může se zvýšit INR.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Bruising",
-          "frequency": null,
-          "label": "Mohou se objevit ekchymózy (modřiny).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:B01AB",
       "drug_class": "Hepariny",
-      "effect": "Současné užívání zvyšuje riziko krvácení v důsledku inhibice funkce krevních destiček a poškození sliznice žaludku a dvanácterníku. Pokud se kombinaci nelze vyhnout, pečlivě sledujte klinický stav a laboratorní hodnoty.",
+      "effect": "Dexketoprofen může zvýšit riziko krvácení vlivem na krevní destičky a poškození žaludeční a dvanácterníkové sliznice. Pokud se kombinaci nelze vyhnout, lékař sleduje stav pacienta a laboratorní hodnoty.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Kortikosteroidy",
-      "effect": "Současné užívání zvyšuje riziko gastrointestinálních vředů nebo krvácení.",
+      "class_id": "atc:H02A",
+      "drug_class": "Kortikosteroidy užívané ústy",
+      "effect": "Současné užívání dexketoprofenu zvyšuje riziko žaludečních a střevních vředů nebo krvácení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Zvýšené riziko gastrointestinálních ulcerací.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do zažívacího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "substance:0",
       "drug": "Lithium",
-      "effect": "NSA mohou snížit vylučování lithia ledvinami a zvýšit jeho hladinu v krvi až na toxické hodnoty. Hladinu lithia je nutné sledovat při zahájení, úpravě i ukončení léčby dexketoprofenem.",
+      "effect": "Dexketoprofen může zvýšit hladinu lithia v krvi až na toxické hodnoty tím, že sníží jeho vylučování ledvinami. Lékař sleduje hladinu lithia při zahájení, změně i ukončení léčby dexketoprofenem.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:0",
       "drug": "Methotrexát",
-      "effect": "NSA mohou snížit renální clearance methotrexátu a zvýšit jeho hematologickou toxicitu. Při dávkách 15 mg týdně nebo vyšších je interakce uvedena mezi nevhodnými kombinacemi. Při dávkách nižších než 15 mg týdně kontrolujte krevní obraz týdně během prvních týdnů; zvýšený dohled je potřebný také u starších osob a při mírně snížené funkci ledvin.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšená hematologická toxicita.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Hydantoiny, včetně fenytoinu",
-      "effect": "Dexketoprofen může zvýšit toxické účinky hydantoinů a fenytoinu.",
+      "effect": "Dexketoprofen může snížit vylučování methotrexátu ledvinami a zvýšit jeho krevní toxicitu. U dávek 15 mg týdně nebo vyšších se tato kombinace nedoporučuje; při dávkách pod 15 mg týdně lékař v prvních týdnech sleduje krevní obraz, se zvýšeným dohledem u starších osob a při mírné poruše ledvin.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "substance:0",
+      "drug": "Fenytoin",
+      "effect": "Dexketoprofen může zvýšit toxické účinky fenytoinu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01E",
       "drug_class": "Sulfonamidy",
       "effect": "Dexketoprofen může zvýšit toxické účinky sulfonamidů.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Diuretika, ACE inhibitory, antagonisté angiotenzinu II a aminoglykosidová antibiotika",
-      "effect": "Dexketoprofen může snížit účinek diuretik a antihypertenziv. U pacientů s oslabenou funkcí ledvin, zejména při dehydrataci nebo ve vyšším věku, může současné podávání ACE inhibitorů, antagonistů angiotenzinu II nebo aminoglykosidů dále zhoršit funkci ledvin; účinek je obvykle reverzibilní. Při kombinaci s diuretiky zajistěte dostatečný příjem tekutin a kontrolujte funkci ledvin před léčbou a pravidelně během ní. Kalium šetřící diuretika mohou vyvolat hyperkalemii, proto sledujte draslík v krvi.",
+      "class_id": "atc:C03",
+      "drug_class": "Diuretika",
+      "effect": "Dexketoprofen může snížit účinek diuretik a zhoršit funkci ledvin, zejména při dehydrataci nebo u starších osob s poruchou funkce ledvin. S kalium šetřícími diuretiky může zvýšit hladinu draslíku. Lékař zajistí dostatečný příjem tekutin a sleduje funkci ledvin a hladinu draslíku.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Možné další zhoršení funkce ledvin.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Při současném užívání kalium šetřících diuretik se může zvýšit hladina draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C09A",
+      "drug_class": "ACE inhibitory",
+      "effect": "Dexketoprofen může snížit jejich účinek na krevní tlak a u pacientů s oslabenou funkcí ledvin, například při dehydrataci nebo ve vyšším věku, dále zhoršit funkci ledvin. Při kombinaci s diuretiky lékař sleduje funkci ledvin.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C09C",
+      "drug_class": "Antagonisté receptorů angiotenzinu II",
+      "effect": "Dexketoprofen může snížit jejich účinek na krevní tlak a u pacientů s oslabenou funkcí ledvin, například při dehydrataci nebo ve vyšším věku, dále zhoršit funkci ledvin. Při kombinaci s diuretiky lékař sleduje funkci ledvin.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01G",
+      "drug_class": "Aminoglykosidová antibiotika",
+      "effect": "Dexketoprofen může zhoršit funkci ledvin, zejména při dehydrataci nebo u starších osob s poruchou funkce ledvin. Lékař sleduje funkci ledvin.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:hyperkalemia_risk",
+      "drug_class": "Kalium šetřící diuretika",
+      "effect": "Současné užívání dexketoprofenu může zvýšit hladinu draslíku v krvi; lékař ji sleduje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C09",
+      "drug_class": "Antihypertenziva",
+      "effect": "Dexketoprofen může snížit účinek některých antihypertenziv. U inhibitorů ACE a antagonistů receptorů angiotenzinu II může současně zhoršit funkci ledvin u pacientů s oslabenou funkcí ledvin.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:0",
       "drug": "Pentoxifylin",
-      "effect": "Současné užívání zvyšuje riziko krvácení. Je nutné častěji sledovat klinický stav a kontrolovat krvácivost.",
+      "effect": "Dexketoprofen zvyšuje riziko krvácení. Lékař častěji sleduje klinický stav a známky krvácení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "substance:0",
       "drug": "Zidovudin",
-      "effect": "Při současném užívání NSA hrozí zvýšená toxicita v červené krevní řadě působením na retikulocyty a závažná anémie, která se může objevit týden po zahájení léčby NSA. Během prvního až druhého týdne kontrolujte krevní obraz a počet retikulocytů.",
+      "effect": "Dexketoprofen může zvýšit toxicitu pro červenou krevní řadu a způsobit závažnou anémii. Lékař kontroluje krevní obraz a počet retikulocytů během prvního až druhého týdne souběžné léčby.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Anemia",
-          "frequency": null,
-          "label": "Riziko závažné anémie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Deriváty sulfonylmočoviny, například chlorpropamid a glibenklamid",
-      "effect": "NSA mohou vytěsněním z vazebných míst na plazmatických bílkovinách zvýšit hypoglykemický účinek derivátů sulfonylmočoviny.",
-      "effect_type": "synergy",
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Zesílení účinku na snížení hladiny cukru v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:A10BB",
+      "drug_class": "Deriváty sulfonylmočoviny",
+      "effect": "Dexketoprofen může zvýšit účinek sulfonylmočovin na snížení hladiny cukru v krvi.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
     },
     {
+      "class_id": "atc:C07A",
       "drug_class": "Betablokátory",
-      "effect": "NSA mohou v důsledku inhibice syntézy prostaglandinů snížit antihypertenzní účinek betablokátorů.",
+      "effect": "Dexketoprofen může snížit jejich účinek na krevní tlak.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "atc:L04AD",
       "drug_class": "Cyklosporin a takrolimus",
-      "effect": "NSA mohou zvyšovat nefrotoxicitu prostřednictvím účinků na prostaglandiny v ledvinách. Během kombinované léčby je nutné sledovat funkci ledvin.",
+      "effect": "Dexketoprofen může zvýšit jejich škodlivý účinek na ledviny; lékař sleduje funkci ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zvýšené riziko poškození ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:B01AD",
       "drug_class": "Trombolytika a fibrinolytika",
-      "effect": "Současné užívání zvyšuje riziko krvácení.",
+      "effect": "Dexketoprofen zvyšuje riziko krvácení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Antiagregancia a SSRI",
-      "effect": "Současné užívání zvyšuje riziko gastrointestinálního krvácení.",
+      "class_id": "atc:B01AC",
+      "drug_class": "Léky snižující shlukování krevních destiček",
+      "effect": "Dexketoprofen společně s těmito léky zvyšuje riziko krvácení do žaludku a střev.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do zažívacího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:N06AB",
+      "drug_class": "Selektivní inhibitory zpětného vychytávání serotoninu (SSRI)",
+      "effect": "Dexketoprofen společně s SSRI zvyšuje riziko krvácení do žaludku a střev. Tramadol může při kombinaci s některými antidepresivy vyvolat serotoninový syndrom a zvýšit riziko záchvatů.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:0",
       "drug": "Probenecid",
-      "effect": "Probenecid může zvýšit koncentraci dexketoprofenu v plazmě inhibicí renální tubulární sekrece a konjugace s kyselinou glukuronovou; může být nutná úprava dávky dexketoprofenu.",
+      "effect": "Probenecid může zvýšit koncentraci dexketoprofenu v krvi snížením jeho vylučování ledvinami; může být nutná úprava dávky lékařem.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Kardioglykosidy, například digoxin",
-      "effect": "NSA mohou zvýšit koncentrace kardioglykosidů v plazmě.",
+      "class_id": "atc:C01A",
+      "drug_class": "Srdeční glykosidy",
+      "effect": "Dexketoprofen může zvýšit jejich koncentraci v krvi.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:0",
       "drug": "Mifepriston",
-      "effect": "Vzhledem k teoretickému riziku změny účinnosti mifepristonu nemají být NSA užívána 8–12 dnů po jeho podání. Omezené důkazy naznačují, že podání NSA ve stejný den jako prostaglandin nemění účinek mifepristonu nebo prostaglandinu na zrání hrdla či kontraktilitu dělohy a nesnižuje účinnost lékařského ukončení těhotenství.",
-      "effect_type": "antagonism",
+      "effect": "Dexketoprofen se nemá užívat 8–12 dní po podání mifepristonu z důvodu možného ovlivnění jeho účinku. Omezené údaje naznačují, že NSA podané ve stejný den jako prostaglandin neovlivňují účinek mifepristonu nebo prostaglandinu na zrání hrdla či stahy dělohy ani účinnost medikamentózního ukončení těhotenství.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:J01M",
       "drug_class": "Chinolonová antibiotika",
-      "effect": "Údaje ze studií na zvířatech naznačují, že vysoké dávky chinolonů v kombinaci s NSA mohou zvýšit riziko křečí.",
+      "effect": "Vysoké dávky chinolonů spolu s dexketoprofenem mohou podle údajů ze zvířat zvýšit riziko záchvatů.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Seizure",
-          "frequency": null,
-          "label": "Zvýšené riziko křečí.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "substance:0",
       "drug": "Tenofovir",
-      "effect": "Současné užívání s NSA může zvýšit kreatinin a dusík močoviny v plazmě. Sledujte funkci ledvin kvůli možnému synergickému vlivu na ledviny.",
+      "effect": "Současné užívání s dexketoprofenem může zvýšit kreatinin a dusík močoviny v krvi; lékař sleduje funkci ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Creatinine increased",
-          "frequency": null,
-          "label": "Zvýšení kreatininu a dusíku močoviny v plazmě.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "substance:0",
       "drug": "Deferasirox",
-      "effect": "Současné užívání s NSA může zvýšit riziko gastrointestinální toxicity; při kombinaci je nutné pečlivé klinické sledování.",
+      "effect": "Současné užívání s dexketoprofenem může zvýšit riziko žaludeční a střevní toxicity; lékař pacienta pečlivě sleduje.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko gastrointestinální toxicity.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "substance:0",
       "drug": "Pemetrexed",
-      "effect": "NSA mohou snížit eliminaci pemetrexedu. Při podávání vyšších dávek NSA je nutná opatrnost. Při lehké až středně těžké poruše funkce ledvin (clearance kreatininu 45–79 ml/min) se vyhněte současnému užívání NSA dva dny před podáním pemetrexedu a dva dny po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Kumariny, například warfarin",
-      "effect": "Při současné léčbě tramadolem postupujte opatrně, protože u některých pacientů bylo hlášeno zvýšení INR spojené se závažným krvácením a ekchymózami.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Zvýšení INR.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Závažné krvácení.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Bruising",
-          "frequency": null,
-          "label": "Ekchymózy (modřiny).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Smíšení agonisté/antagonisté opioidních receptorů, například buprenorfin, nalbufin a pentazocin",
-      "effect": "Kombinace s tramadolem není vhodná, protože může teoreticky snížit analgetický účinek čistých opioidních agonistů, včetně tramadolu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léky snižující práh pro vznik křečí, včetně SSRI, SNRI, tricyklických antidepresiv, antipsychotik, bupropionu, mirtazapinu a tetrahydrokanabinolu",
-      "effect": "Tramadol může vyvolat křeče a zvýšit možnost jejich vzniku při současném užívání těchto léků. Lékař má posoudit, zda je přípravek Skudexa vhodný.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Seizure",
-          "frequency": null,
-          "label": "Zvýšené riziko křečí.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Serotonergní léčivé přípravky, včetně SSRI, SNRI, IMAO, tricyklických antidepresiv a mirtazapinu",
-      "effect": "Současné terapeutické užívání tramadolu se serotonergními přípravky může vyvolat potenciálně život ohrožující serotoninový syndrom. Pokud je souběžná léčba klinicky opodstatněná, pečlivě sledujte pacienta, zejména při zahájení léčby a zvyšování dávky; při podezření zvažte snížení dávky nebo ukončení léčby.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Riziko serotoninového syndromu, potenciálně život ohrožujícího stavu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Sedativa, včetně benzodiazepinů, příbuzných látek, gabapentinu a pregabalinu",
-      "effect": "Současné užívání s opioidy může v důsledku aditivního tlumivého působení na centrální nervový systém vést k ospalosti, útlumu dýchání, hypotenzi, hluboké sedaci, kómatu nebo úmrtí. Kombinaci předepisujte pouze tehdy, pokud nejsou jiné možnosti léčby; použijte nejnižší účinné dávky po co nejkratší dobu a pacienta pečlivě sledujte.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zvýšená ospalost nebo sedace.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Útlum dýchání.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Kóma.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Jiné centrálně tlumivé přípravky a alkohol",
-      "effect": "Současné podávání tramadolu s jinými centrálně tlumivými přípravky nebo alkoholem může zesílit účinky na centrální nervový systém; může se zvýšit ospalost, pocit na omdlení a riziko útlumu dýchání.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zvýšená ospalost.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Útlum dýchání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Karbamazepin",
-      "effect": "Současné nebo předchozí podávání karbamazepinu může snížit analgetický účinek tramadolu a zkrátit dobu jeho působení.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Ondansetron",
-      "effect": "V omezeném počtu studií zvýšilo podání ondansetronu před operací nebo po ní potřebu tramadolu u pacientů s pooperační bolestí.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Inhibitory CYP3A4, například ketokonazol a erythromycin",
-      "effect": "Mohou inhibovat metabolismus tramadolu (N-demetylaci) a pravděpodobně také metabolismus jeho aktivního O-demetylovaného metabolitu; klinický význam této interakce nebyl studován.",
+      "effect": "Dexketoprofen může snížit vylučování pemetrexedu. Opatrnost je nutná při vyšších dávkách NSA. U pacientů s lehkou až středně těžkou poruchou funkce ledvin se mají NSA vynechat dva dny před podáním pemetrexedu a dva dny po něm.",
       "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N06AF",
+      "drug_class": "Inhibitory monoaminooxidázy (IMAO)",
+      "effect": "Tramadol se nesmí kombinovat s IMAO ani během 14 dní po jejich užívání; může dojít k život ohrožujícímu ovlivnění centrálního nervového systému, dýchání a krevního oběhu.",
+      "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02AE",
+      "drug_class": "Buprenorfin",
+      "effect": "Kombinace s tramadolem není vhodná, protože může snížit jeho analgetický účinek.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02AF",
+      "drug_class": "Nalbufin",
+      "effect": "Kombinace s tramadolem není vhodná, protože může snížit jeho analgetický účinek.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02AD",
+      "drug_class": "Pentazocin",
+      "effect": "Kombinace s tramadolem není vhodná, protože může snížit jeho analgetický účinek.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cns_depressant",
+      "drug_class": "Sedativa, například benzodiazepiny nebo jim podobné látky",
+      "effect": "Současné užívání s přípravkem Skudexa může způsobit ospalost, útlum dýchání, nízký krevní tlak, hlubokou sedaci, kóma nebo úmrtí. Kombinace je určena pouze tehdy, když není jiná možnost léčby; lékař omezí dávku i dobu užívání a pacienta pečlivě sleduje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02BF",
+      "drug_class": "Gabapentin nebo pregabalin",
+      "effect": "Současné užívání s přípravkem Skudexa může zvýšit riziko ospalosti a potíží s dýcháním.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:serotonergic",
+      "drug_class": "Serotonergní léčiva, například SSRI, SNRI, tricyklická antidepresiva a mirtazapin",
+      "effect": "Současné užívání s tramadolem může vyvolat potenciálně život ohrožující serotoninový syndrom; tramadol může také zvýšit riziko záchvatů při současném užívání léků snižujících práh pro vznik křečí.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:0",
+      "drug": "Karbamazepin",
+      "effect": "Současné nebo předchozí užívání může snížit analgetický účinek tramadolu a zkrátit jeho dobu účinku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:0",
+      "drug": "Ondansetron",
+      "effect": "Předoperační nebo pooperační podání ondansetronu může zvýšit potřebu tramadolu u pacientů s pooperační bolestí.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp3a4_inhibitor",
+      "drug_class": "Léky inhibující CYP3A4, například ketokonazol a erythromycin",
+      "effect": "Mohou omezit metabolismus tramadolu a pravděpodobně i jeho aktivního metabolitu; klinický význam této možné interakce nebyl zkoumán.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:0",
+      "drug": "Cimetidin",
+      "effect": "Při současném nebo předchozím podání nejsou podle farmakokinetických studií pravděpodobné klinicky významné interakce s tramadolem.",
+      "effect_type": null,
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M01A",
+      "drug_class": "NSAID a další protizánětlivé léky",
+      "effect": "Příbalová informace uvádí, že kombinace se Skudexou se nedoporučuje; zahrnuje kyselinu acetylsalicylovou, kortikosteroidy a jiné protizánětlivé léky. U dexketoprofenu je výslovně uvedeno, že nesmí být podáván s jinými NSA včetně inhibitorů COX-2.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Skudexa krátkodobě tlumí středně silnou až silnou akutní bolest u dospělých.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0221575",
+      "H": "",
+      "NAZEV": "SKUDEXA",
+      "SILA": "75MG/25MG",
+      "FORMA": "POR GRA SOL SCC",
+      "BALENI": "15",
+      "CESTA": "POR",
+      "DOPLNEK": "75MG/25MG POR GRA SOL SCC 15",
+      "OBAL": "SCC",
+      "DRZ": "MNI",
+      "ZEMDRZ": "L",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "65",
+      "ATC_WHO": "N02AJ14",
+      "RC": "65/102/17-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "UD",
+      "DDDP_WHO": "7,5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "2719,16261",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "SKUDEXA",
+      "MRP_CISLO": "ES/H/0317/003",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OK",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0221575",
+        "KOD_LATKY": "2719",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "75",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2719",
+          "ZDROJ": "C19",
+          "NAZEV_INN": "TRAMADOLI HYDROCHLORIDUM",
+          "NAZEV_EN": "TRAMADOL HYDROCHLORIDE",
+          "NAZEV": "TRAMADOL-HYDROCHLORID",
+          "DOP": "S7"
+        }
+      },
+      {
+        "KOD_SUKL": "0221575",
+        "KOD_LATKY": "16261",
+        "SQ": "2",
+        "S": "L",
+        "AMNT": "36,9",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16261",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "DEXKETOPROFENUM TROMETAMOLUM",
+          "NAZEV_EN": "DEXKETOPROFEN TROMETAMOL",
+          "NAZEV": "DEXKETOPROFEN-TROMETAMOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0221575",
+        "KOD_LATKY": "0",
+        "SQ": "3",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0221575",
+        "KOD_LATKY": "13735",
+        "SQ": "4",
+        "S": "O",
+        "AMNT": "25",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13735",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "DEXKETOPROFENUM",
+          "NAZEV_EN": "DEXKETOPROFEN",
+          "NAZEV": "DEXKETOPROFEN"
+        }
+      },
+      {
+        "KOD_SUKL": "0221575",
+        "KOD_LATKY": "1383",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1383",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SACCHAROSUM",
+          "NAZEV_EN": "SUCROSE",
+          "NAZEV": "SACHAROSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0221575",
+        "KOD_LATKY": "10624",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10624",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AROMA CITRI",
+          "NAZEV_EN": "LEMON FLAVOUR",
+          "NAZEV": "CITRONOVÉ AROMA"
+        }
+      },
+      {
+        "KOD_SUKL": "0221575",
+        "KOD_LATKY": "3804",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3804",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "ACESULFAMUM KALICUM",
+          "NAZEV_EN": "ACESULFAME POTASSIUM",
+          "NAZEV": "DRASELNÁ SŮL ACESULFAMU"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0221575",
+      "PIL": "PI230723.pdf",
+      "DAT_ROZ_PIL": "17.02.2026",
+      "SPC": "SPC230724.pdf",
+      "DAT_ROZ_SPC": "17.02.2026",
+      "OBAL_TEXT": "OBAL227431.pdf",
+      "DAT_ROZ_OBAL": "21.10.2025",
+      "NR": "NR6463717.pdf",
+      "DAT_NPM_NR": "25.04.2018"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N02AJ14",
+        "NT": "N",
+        "NAZEV": "TRAMADOL A DEXKETOPROFEN",
+        "NAZEV_EN": "TRAMADOL AND DEXKETOPROFEN"
+      },
+      "formy": {
+        "FORMA": "POR GRA SOL SCC",
+        "NAZEV": "Granule pro perorální roztok v sáčku",
+        "NAZEV_EN": "Granules for oral solution in sachet",
+        "NAZEV_LAT": "Granula pro solutione perorali in sacullo",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "50029170"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "SCC",
+        "NAZEV": "Sáček",
+        "NAZEV_EN": "Sachet",
+        "KOD_EDQM": "30054000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

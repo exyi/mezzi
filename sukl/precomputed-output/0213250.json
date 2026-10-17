@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A07",
+    "atc:A07E",
+    "atc:A07EC",
+    "atc:A07EC02",
+    "substance:9268"
+  ],
   "side_effects": [
     {
       "ctcae": "Diarrhea",
@@ -18,19 +26,15 @@
       "ctcae": "Abdominal pain",
       "frequency": "common",
       "label": "Bolest břicha",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví křeče nebo akutní bolest břicha"
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "common",
       "label": "Bolest hlavy",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví silná bolest hlavy"
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vomiting",
@@ -43,10 +47,22 @@
       "ctcae": "Rash maculo-papular",
       "frequency": "common",
       "label": "Kožní vyrážka, včetně kopřivky nebo ekzému",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka"
-      }
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": null,
+      "label": "Reakce z přecitlivělosti",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": null,
+      "label": "Horečka",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Dizziness",
@@ -58,14 +74,14 @@
     {
       "ctcae": "Myocarditis",
       "frequency": "rare",
-      "label": "Zánět srdečního svalu (myokarditida)",
+      "label": "Zánět srdečního svalu",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pericarditis",
       "frequency": "rare",
-      "label": "Zánět osrdečníku (perikarditida)",
+      "label": "Zánět osrdečníku",
       "action": null,
       "action_condition": null
     },
@@ -93,53 +109,65 @@
     {
       "ctcae": "Photosensitivity",
       "frequency": "rare",
-      "label": "Zvýšená citlivost kůže na sluneční záření a ultrafialové světlo; závažnější reakce byly hlášeny u pacientů s již existujícím kožním onemocněním, například atopickou dermatitidou nebo atopickým ekzémem",
+      "label": "Zvýšená citlivost kůže na sluneční a ultrafialové záření; závažnější reakce byly hlášeny při již existujícím kožním onemocnění, například atopické dermatitidě nebo ekzému",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Eosinophilia",
+      "frequency": "very_rare",
+      "label": "Zvýšený počet eozinofilů jako součást alergické reakce",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anemia",
       "frequency": "very_rare",
-      "label": "Anémie (chudokrevnost)",
+      "label": "Chudokrevnost",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato reakce nebo je na ni podezření"
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Aplastic anemia",
       "frequency": "very_rare",
-      "label": "Aplastická anémie (chudokrevnost z útlumu kostní dřeně)",
+      "label": "Aplastická anemie",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato reakce nebo je na ni podezření"
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Agranulocytóza",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato reakce nebo je na ni podezření"
-      }
-    },
-    {
-      "ctcae": "Neutrophil count decreased",
-      "frequency": "very_rare",
-      "label": "Neutropenie",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato reakce nebo je na ni podezření"
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "very_rare",
-      "label": "Leukopenie, včetně granulocytopenie",
+      "label": "Pokles počtu bílých krvinek, včetně granulocytopenie a neutropenie",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato reakce nebo je na ni podezření"
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "very_rare",
+      "label": "Snížený počet krevních destiček",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Agranulocytóza",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě",
+        "min_severity": 1
       }
     },
     {
@@ -148,31 +176,44 @@
       "label": "Pancytopenie",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato reakce nebo je na ni podezření"
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_rare",
-      "label": "Trombocytopenie",
-      "action": "discontinue_treatment",
+      "ctcae": "Drug reaction with eosinophilia and systemic symptoms",
+      "frequency": null,
+      "label": "Poléková reakce s eozinofilií a systémovými příznaky (DRESS)",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato reakce nebo je na ni podezření"
+        "patient_guide": "Při rozsáhlé vyrážce, puchýřcích nebo olupování kůže, vředech na sliznicích, horečce či zvětšených lymfatických uzlinách; často jí předcházejí příznaky podobné chřipce",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Eosinophilia",
+      "ctcae": "Stevens-Johnson syndrome",
       "frequency": "very_rare",
-      "label": "Eozinofilie jako součást alergické reakce",
-      "action": "discontinue_treatment",
+      "label": "Stevensův–Johnsonův syndrom (SJS)",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato reakce nebo je na ni podezření"
+        "patient_guide": "Při rozsáhlé vyrážce, puchýřcích nebo olupování kůže, vředech na sliznicích, horečce či zvětšených lymfatických uzlinách; často jí předcházejí příznaky podobné chřipce",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Allergic reaction",
+      "ctcae": "Toxic epidermal necrolysis",
       "frequency": "very_rare",
-      "label": "Reakce z přecitlivělosti, včetně alergického exantému",
+      "label": "Toxická epidermální nekrolýza (TEN)",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Při rozsáhlé vyrážce, puchýřcích nebo olupování kůže, vředech na sliznicích, horečce či zvětšených lymfatických uzlinách; často jí předcházejí příznaky podobné chřipce",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Colitis",
+      "frequency": "very_rare",
+      "label": "Pankolitida (zánět celého tlustého střeva)",
       "action": null,
       "action_condition": null
     },
@@ -184,207 +225,104 @@
       "action_condition": null
     },
     {
-      "ctcae": "Pulmonary fibrosis",
+      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Alergické plicní reakce a plicní fibróza, včetně dušnosti, kašle, bronchospasmu, alergické alveolitidy, plicní eozinofilie, intersticiálního plicního onemocnění, plicní infiltrace a pneumonitidy",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Colitis",
-      "frequency": "very_rare",
-      "label": "Pankolitida (zánět celého tlustého střeva)",
+      "label": "Alergické plicní reakce, včetně dušnosti, kašle, alergického zánětu plicních sklípků, plicní eozinofilie, intersticiálního onemocnění plic, plicních infiltrátů a pneumonitidy",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "very_rare",
-      "label": "Zvýšení aminotransferáz",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alkaline phosphatase increased",
-      "frequency": "very_rare",
-      "label": "Zvýšení ukazatelů cholestázy, například alkalické fosfatázy",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "GGT increased",
-      "frequency": "very_rare",
-      "label": "Zvýšení ukazatelů cholestázy, například gama-glutamyltransferázy",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood bilirubin increased",
-      "frequency": "very_rare",
-      "label": "Zvýšení bilirubinu",
+      "label": "Zvýšení jaterních enzymů a ukazatelů cholestázy",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "very_rare",
-      "label": "Hepatitida, včetně cholestatické hepatitidy",
+      "label": "Zánět jater, včetně cholestatického zánětu jater",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatic failure",
       "frequency": "very_rare",
-      "label": "Cirhóza a selhání jater",
+      "label": "Cirhóza nebo selhání jater",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alopecia",
       "frequency": "very_rare",
-      "label": "Reverzibilní vypadávání vlasů",
+      "label": "Přechodná, vratná ztráta vlasů",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
       "frequency": "very_rare",
-      "label": "Bolesti svalů",
+      "label": "Bolest svalů",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "very_rare",
-      "label": "Bolesti kloubů",
+      "label": "Bolest kloubů",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Autoimmune disorder",
       "frequency": "very_rare",
-      "label": "Reakce podobná systémovému lupus erythematodes, včetně motýlovitého zarudnutí kůže v obličeji",
+      "label": "Onemocnění podobné systémovému lupus erythematodes",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Tubulointerstitial nephritis",
+      "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Zhoršení funkce ledvin, včetně akutní a chronické intersticiální nefritidy",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se vám během léčby zhorší funkce ledvin"
-      }
+      "label": "Zhoršení funkce ledvin, včetně akutního nebo chronického zánětu ledvin a selhání ledvin",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Nephrotic syndrome",
       "frequency": "very_rare",
       "label": "Nefrotický syndrom",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se vám během léčby zhorší funkce ledvin"
-      }
-    },
-    {
-      "ctcae": "Acute kidney injury",
-      "frequency": "very_rare",
-      "label": "Selhání ledvin",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se vám během léčby zhorší funkce ledvin"
-      }
-    },
-    {
-      "ctcae": "Oligospermia",
-      "frequency": "very_rare",
-      "label": "Přechodně snížená tvorba spermií (vratná oligospermie)",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Stevens-Johnson syndrome",
+      "ctcae": "Oligospermia",
       "frequency": "very_rare",
-      "label": "Stevensův-Johnsonův syndrom, včetně závažné vyrážky, puchýřů a postižení sliznic",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud máte rozsáhlou vyrážku, puchýře nebo olupování kůže či vřídky v ústech, hrdle, nose, na pohlavních orgánech nebo očích, zejména pokud tomu předcházela horečka nebo příznaky podobné chřipce"
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "very_rare",
-      "label": "Toxická epidermální nekrolýza, včetně závažné vyrážky, puchýřů a postižení sliznic",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud máte rozsáhlou vyrážku, puchýře nebo olupování kůže či vřídky v ústech, hrdle, nose, na pohlavních orgánech nebo očích, zejména pokud tomu předcházela horečka nebo příznaky podobné chřipce"
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Poléková reakce s eozinofilií a systémovými příznaky (DRESS)",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud máte rozsáhlou vyrážku, puchýře nebo olupování kůže či vřídky v ústech, hrdle, nose, na pohlavních orgánech nebo očích, zejména pokud tomu předcházela horečka nebo příznaky podobné chřipce"
-      }
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "very_rare",
-      "label": "Horečka",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví horečka"
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Idiopatická intrakraniální hypertenze (zvýšený tlak uvnitř lebky)",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud máte silnou nebo opakující se bolest hlavy, poruchy vidění nebo zvonění či hučení v uších"
-      }
+      "label": "Přechodné snížení tvorby spermií",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Renal calculi",
       "frequency": "not_known",
-      "label": "Ledvinové kameny a související bolest ledvin",
+      "label": "Ledvinové kameny a související bolest ledvin; při kamenech se může objevit bolest v boku a krev v moči",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urine discoloration",
       "frequency": "not_known",
-      "label": "Červenohnědé zabarvení moči po kontaktu s bělicím prostředkem obsahujícím chlornan sodný; jde o neškodnou chemickou reakci",
+      "label": "Červenohnědé zabarvení moči; při kontaktu s chlornanem sodným v čisticím prostředku na toaletu je neškodné",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Krvácení",
-      "action": "discontinue_treatment",
+      "ctcae": "Nervous system disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Idiopatická nitrolební hypertenze; může se projevit silnou nebo opakující se bolestí hlavy, poruchami vidění nebo zvoněním či hučením v uších",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví krvácení"
-      }
-    },
-    {
-      "ctcae": "Bruising",
-      "frequency": null,
-      "label": "Vznik modřin",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví modřiny"
-      }
-    },
-    {
-      "ctcae": "Sore throat",
-      "frequency": null,
-      "label": "Bolest v krku",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest v krku"
+        "patient_guide": "Při silné nebo opakující se bolesti hlavy, poruchách vidění nebo zvonění či hučení v uších",
+        "min_severity": 2
       }
     },
     {
@@ -393,123 +331,190 @@
       "label": "Bolest na hrudi doprovázená dušností",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest na hrudi doprovázená dušností"
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Dyspnea",
+      "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": null,
-      "label": "Dušnost doprovázející bolest na hrudi",
+      "label": "Zhoršení funkce ledvin; při této reakci se má léčba ihned ukončit",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest na hrudi doprovázená dušností"
+        "patient_guide": null,
+        "min_severity": 1
       }
-    },
-    {
-      "ctcae": "Anemia",
-      "frequency": null,
-      "label": "U novorozenců matek léčených přípravkem byly hlášeny poruchy složení krve, včetně anémie",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": null,
-      "label": "U novorozenců matek léčených přípravkem byly hlášeny poruchy složení krve, včetně leukopenie",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": null,
-      "label": "U novorozenců matek léčených přípravkem byly hlášeny poruchy složení krve, včetně trombocytopenie",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": null,
-      "label": "U novorozenců matek léčených přípravkem byly hlášeny poruchy složení krve, včetně pancytopenie",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": null,
-      "label": "U kojených novorozenců nelze vyloučit alergickou reakci, například průjem",
-      "action": null,
-      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "NSAID (nesteroidní antirevmatika)",
-      "effect": "Současné podávání mesalazinu a jiných známých nefrotoxických látek, jako jsou NSAID, může zvýšit riziko nežádoucích účinků na ledviny. Při současném podávání jiných známých nefrotoxických látek je třeba zvýšit četnost sledování funkce ledvin.",
+      "class_id": "group:nephrotoxic",
+      "drug_class": "Léky poškozující ledviny, například nesteroidní protizánětlivé léky a azathioprin",
+      "effect": "Současné podávání s mesalazinem může zvýšit riziko nežádoucích účinků na ledviny; při současném užívání jiných známých látek poškozujících ledviny se doporučuje častější sledování funkce ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko nežádoucích účinků na ledviny",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "azathioprin",
-      "effect": "Současné podávání mesalazinu s azathioprinem může zvýšit riziko nežádoucích účinků na ledviny. Může také zvýšit riziko myelosuprese; doporučuje se pravidelně sledovat počet bílých krvinek a podle výsledků upravit dávkovací schéma thiopurinu. Při současném podávání známých nefrotoxických látek je třeba zvýšit četnost sledování funkce ledvin.",
+      "class_id": null,
+      "drug_class": "Azathioprin, 6-merkaptopurin nebo thioguanin užívaný současně",
+      "effect": "Současné podávání mesalazinu s azathioprinem, 6-merkaptopurinem nebo thioguaninem může zvýšit riziko útlumu kostní dřeně. Doporučuje se pravidelně sledovat počet bílých krvinek a podle výsledků upravit dávkování thiopurinů.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko nežádoucích účinků na ledviny",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko myelosuprese",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "6-merkaptopurin",
-      "effect": "Současné podávání mesalazinu s 6-merkaptopurinem může zvýšit riziko myelosuprese. Doporučuje se pravidelně sledovat počet bílých krvinek a podle výsledků upravit dávkovací schéma thiopurinu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko myelosuprese",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "thioguanin",
-      "effect": "Současné podávání mesalazinu s thioguaninem může zvýšit riziko myelosuprese. Doporučuje se pravidelně sledovat počet bílých krvinek a podle výsledků upravit dávkovací schéma thiopurinu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko myelosuprese",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "warfarin",
-      "effect": "Existují omezené údaje naznačující, že mesalazin může snižovat antikoagulační účinek warfarinu.",
+      "class_id": null,
+      "drug": "Warfarin",
+      "effect": "Omezené údaje naznačují, že mesalazin může snížit antikoagulační účinek warfarinu.",
       "effect_type": "antagonism",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se k léčbě akutní fáze mírné až středně závažné ulcerózní kolitidy u dospělých.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0213250",
+      "H": "",
+      "NAZEV": "PENTASA SACHET",
+      "SILA": "4G",
+      "FORMA": "GRA PRO SCC",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "4G GRA PRO SCC 30",
+      "OBAL": "SCC",
+      "DRZ": "FRL",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "29",
+      "ATC_WHO": "A07EC02",
+      "RC": "29/109/16-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "1,5",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "80",
+      "ZDROJ_WHO": "NO26",
+      "LL": "9268",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "PENTASA SACHET",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0213250",
+        "KOD_LATKY": "9268",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "4000",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9268",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "MESALAZINUM",
+          "NAZEV_EN": "MESALAZINE",
+          "NAZEV": "MESALAZIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0213250",
+        "KOD_LATKY": "1168",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0213250",
+        "KOD_LATKY": "4065",
+        "SQ": "3",
+        "S": "X",
+        "AMNT_OD": "PL",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4065",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ETHYLCELLULOSUM",
+          "NAZEV_EN": "ETHYLCELLULOSE",
+          "NAZEV": "ETHYLCELULOSA"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0213250",
+      "PIL": "PI218704.pdf",
+      "DAT_ROZ_PIL": "04.02.2025",
+      "SPC": "SPC236186.pdf",
+      "DAT_ROZ_SPC": "04.02.2025",
+      "OBAL_TEXT": "OBAL186298.pdf",
+      "DAT_ROZ_OBAL": "03.05.2022",
+      "NR": "NR18724914.pdf",
+      "DAT_NPM_NR": "09.03.2016"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A07EC02",
+        "NT": "N",
+        "NAZEV": "MESALAZIN",
+        "NAZEV_EN": "MESALAZINE"
+      },
+      "formy": {
+        "FORMA": "GRA PRO SCC",
+        "NAZEV": "Granule s prodlouženým uvolňováním v sáčku",
+        "NAZEV_EN": "Prolonged-release granules in sachet",
+        "NAZEV_LAT": "Granula cum liberatione prolongata in sacullo",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "50056200"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "SCC",
+        "NAZEV": "Sáček",
+        "NAZEV_EN": "Sachet",
+        "KOD_EDQM": "30054000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

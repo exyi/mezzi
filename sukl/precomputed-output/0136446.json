@@ -1,148 +1,231 @@
 {
+  "classes": [
+    "atc:L",
+    "atc:L01",
+    "atc:L01B",
+    "atc:L01BB",
+    "atc:L01BB02",
+    "substance:1790"
+  ],
   "side_effects": [
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_common",
-      "label": "Útlum kostní dřeně.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví útlum kostní dřeně."
-      }
-    },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "very_common",
-      "label": "Snížení počtu bílých krvinek.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížení počtu bílých krvinek."
-      }
+      "label": "Snížený počet bílých krvinek, zjištěný při krevním testu.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "very_common",
-      "label": "Snížení počtu krevních destiček.",
+      "label": "Snížený počet krevních destiček, zjištěný při krevním testu.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížení počtu krevních destiček."
+        "patient_guide": "Neočekávané modřiny nebo krvácení.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Anemia",
       "frequency": "common",
-      "label": "Snížení počtu červených krvinek (anemie), které může způsobit únavu, slabost nebo dušnost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví anemie."
-      }
+      "label": "Snížený počet červených krvinek; může způsobit únavu, slabost nebo dušnost.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "uncommon",
-      "label": "Bakteriální a virové infekce, včetně infekcí souvisejících s neutropenií; infekce mohou být závažnější.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud máte horečku nebo známky infekce, například bolest v krku, bolest v ústech nebo potíže s močením."
-      }
+      "ctcae": "Nausea",
+      "frequency": "common",
+      "label": "Pocit na zvracení.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
-      "frequency": "rare",
-      "label": "Novotvary včetně lymfoproliferativních poruch, kožních nádorů (melanomů i jiných kožních nádorů), sarkomů a karcinomu děložního hrdla in situ.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některý z těchto nádorů."
-      }
+      "ctcae": "Vomiting",
+      "frequency": "common",
+      "label": "Zvracení.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Leukemia secondary to oncology chemotherapy",
-      "frequency": "very_rare",
-      "label": "Sekundární leukemie (jiný typ leukemie než léčená).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jiný typ leukemie než ten, který se léčí."
-      }
-    },
-    {
-      "ctcae": "Myelodysplastic syndrome",
-      "frequency": "very_rare",
-      "label": "Myelodysplazie.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví myelodysplazie."
-      }
-    },
-    {
-      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
-      "frequency": "not_known",
-      "label": "Hepatosplenický T-buněčný lymfom u pacientů se zánětlivým střevním onemocněním, při léčbě v kombinaci s anti-TNF látkami nebo bez nich; jde o vzácný agresivní typ nádoru, který bývá obvykle smrtelný.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví hepatosplenický T-buněčný lymfom."
-      }
-    },
-    {
-      "ctcae": "Arthralgia",
-      "frequency": "uncommon",
-      "label": "Bolest kloubů, včetně bolesti kloubů při hypersenzitivní reakci.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest kloubů."
-      }
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "uncommon",
-      "label": "Kožní vyrážka, včetně vyrážky při hypersenzitivní reakci.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka."
-      }
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "uncommon",
-      "label": "Horečka jako projev hypersenzitivní reakce.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud máte horečku nebo jiné známky infekce."
-      }
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": "rare",
-      "label": "Otok obličeje při hypersenzitivní reakci.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví otok obličeje nebo jiná známka alergické reakce."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Kožní uzlíky (erythema nodosum) jako možný projev alergické reakce.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní uzlíky nebo jiné známky alergické reakce."
-      }
+      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "frequency": "common",
+      "label": "Poškození jater nebo porucha odtoku žluči; poškození jater lze zjistit krevními testy.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Anorexia",
       "frequency": "common",
       "label": "Nechutenství.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "common",
+      "label": "Zánět slinivky břišní u pacientů se zánětlivým onemocněním střev, při použití mimo schválenou indikaci.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví nechutenství."
+        "patient_guide": "Náhlá nevolnost a bolest břicha, i když nemáte horečku.",
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": "Arthralgia",
+      "frequency": "uncommon",
+      "label": "Bolest kloubů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "uncommon",
+      "label": "Kožní vyrážka; zdroj neuvádí její typ.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se vyrážka objeví společně s vysokou teplotou, bolestí kloubů nebo otokem obličeje.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "uncommon",
+      "label": "Horečka.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví spolu s vyrážkou, bolestí kloubů nebo otokem obličeje.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Bacterial infection",
+      "frequency": "uncommon",
+      "label": "Bakteriální infekce; při léčbě mohou být infekce závažnější.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Příznaky infekce, například bolest v krku, bolest v ústech nebo potíže s močením.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Viral infection",
+      "frequency": "uncommon",
+      "label": "Virová infekce; při léčbě mohou být infekce závažnější.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Příznaky infekce, například bolest v krku, bolest v ústech nebo potíže s močením.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Hair loss",
+      "frequency": "rare",
+      "label": "Vypadávání vlasů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Oral ulceration",
+      "frequency": "rare",
+      "label": "Vřídky v ústech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatic necrosis",
+      "frequency": "rare",
+      "label": "Trvalé poškození jater (jaterní nekróza).",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Zežloutnutí kůže nebo očního bělma.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "rare",
+      "label": "Otok obličeje jako projev alergické reakce.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví společně s vyrážkou, vysokou teplotou nebo bolestí kloubů.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
+      "frequency": "rare",
+      "label": "Nádory včetně lymfoproliferativních poruch, nádorů kůže, sarkomů a karcinomu děložního hrdla in situ; riziko souvisí s imunosupresivní léčbou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "rare",
+      "label": "Zánět slinivky břišní při léčbě schválených indikací; u pacientů se zánětlivým onemocněním střev je uváděna četnost častá při použití mimo schválenou indikaci.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Náhlá nevolnost a bolest břicha, i když nemáte horečku.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Oligospermia",
+      "frequency": "rare",
+      "label": "Přechodně snížený počet spermií.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Leukemia secondary to oncology chemotherapy",
+      "frequency": "very_rare",
+      "label": "Jiný typ leukemie než léčená.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Intestinal ulcer",
+      "frequency": "very_rare",
+      "label": "Vředy ve střevech; mohou se projevit bolestí břicha a krvácením.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
+      "frequency": "not_known",
+      "label": "Hepatosplenický T-buněčný lymfom u pacientů se zánětlivým onemocněním střev; toto použití je mimo schválenou indikaci. SPC jej uvádí při kombinaci s anti-TNF léčivy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Photosensitivity",
+      "frequency": "not_known",
+      "label": "Zvýšená citlivost na slunce a UV záření, která může způsobit kožní reakce.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Hypoglycemia",
       "frequency": "not_known",
-      "label": "Snížení hladiny cukru v krvi; hlášeno u dětí, zejména u dětí mladších šesti let nebo s nízkou tělesnou hmotností či nízkým BMI.",
+      "label": "Snížená hladina cukru v krvi, hlášená hlavně u dětí; většina případů byla u dětí mladších šesti let nebo s nízkým BMI.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u dítěte objeví příznaky nízké hladiny cukru, například pocení větší než obvykle, nevolnost, závrať nebo zmatenost."
+        "patient_guide": "U dítěte, zejména mladšího šesti let nebo s nízkým BMI, zvýšené pocení, nevolnost, závrať nebo zmatenost.",
+        "min_severity": 2
       }
+    },
+    {
+      "ctcae": "Mucositis oral",
+      "frequency": "not_known",
+      "label": "Pálení nebo brnění v ústech či na rtech (zánět sliznice).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cheilitis",
+      "frequency": "not_known",
+      "label": "Popraskané nebo oteklé rty.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Metabolism and nutrition disorders - Other, specify",
@@ -150,271 +233,344 @@
       "label": "Nedostatek vitaminu B3 (pelagra), spojený s pigmentovanou kožní vyrážkou, průjmem nebo zhoršením paměti, rozumových či jiných myšlenkových schopností.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví průjem, pigmentovaná kožní vyrážka nebo zhoršení paměti či myšlení."
-      }
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "common",
-      "label": "Pocit na zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví pocit na zvracení."
-      }
-    },
-    {
-      "ctcae": "Vomiting",
-      "frequency": "common",
-      "label": "Zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zvracení."
-      }
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "common",
-      "label": "Zánět slinivky břišní u pacientů se zánětlivým střevním onemocněním; tato indikace není schválená.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se náhle necítíte dobře, i když nemáte zvýšenou teplotu, a máte bolest břicha a nevolnost."
-      }
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "rare",
-      "label": "Zánět slinivky břišní při použití ve schválených indikacích.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se náhle necítíte dobře, i když nemáte zvýšenou teplotu, a máte bolest břicha a nevolnost."
-      }
-    },
-    {
-      "ctcae": "Mucositis oral",
-      "frequency": "rare",
-      "label": "Vřídky v ústech.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vřídky v ústech."
-      }
-    },
-    {
-      "ctcae": "Small intestine ulcer",
-      "frequency": "very_rare",
-      "label": "Vředy ve střevech, které se mohou projevovat bolestí břicha a krvácením.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest břicha nebo krvácení."
-      }
-    },
-    {
-      "ctcae": "Mucositis oral",
-      "frequency": "not_known",
-      "label": "Zánět sliznice úst, který může způsobovat pálení nebo brnění v ústech či na rtech.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví pálení, brnění nebo zánět v ústech či na rtech."
-      }
-    },
-    {
-      "ctcae": "Cheilitis",
-      "frequency": "not_known",
-      "label": "Popraskané nebo oteklé rty (cheilitida).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví popraskané nebo oteklé rty."
-      }
-    },
-    {
-      "ctcae": "Biliary obstruction",
-      "frequency": "common",
-      "label": "Žlučová stáze.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví žlučová stáze."
-      }
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "common",
-      "label": "Poškození jater nebo hepatotoxicita, zjistitelné také při krevních testech.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví poškození jater."
-      }
-    },
-    {
-      "ctcae": "Hepatic necrosis",
-      "frequency": "uncommon",
-      "label": "Trvalé poškození jater (nekróza jater).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví trvalé poškození jater."
-      }
-    },
-    {
-      "ctcae": "Alopecia",
-      "frequency": "rare",
-      "label": "Vypadávání vlasů.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vypadávání vlasů."
-      }
-    },
-    {
-      "ctcae": "Photosensitivity",
-      "frequency": "not_known",
-      "label": "Zvýšená citlivost na sluneční a UV záření způsobující kožní reakce.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní reakce po slunečním nebo UV záření."
-      }
-    },
-    {
-      "ctcae": "Oligospermia",
-      "frequency": "rare",
-      "label": "Dočasně snížený počet spermií.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví dočasně snížený počet spermií."
-      }
-    },
-    {
-      "ctcae": "Mucositis oral",
-      "frequency": "not_known",
-      "label": "Zánět sliznice.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zánět sliznice."
+        "patient_guide": "Průjem, pigmentovaná kožní vyrážka nebo zhoršení paměti, rozumových či jiných myšlenkových schopností.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Investigations - Other, specify",
       "frequency": "not_known",
-      "label": "Snížení koagulačních faktorů.",
+      "label": "Snížení koagulačních faktorů zjištěné při vyšetření.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fungal infection",
+      "frequency": null,
+      "label": "Plísňové infekce mohou být při léčbě závažnější.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížení koagulačních faktorů."
+        "patient_guide": "Příznaky infekce, například bolest v krku, bolest v ústech nebo potíže s močením.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Diarrhea",
+      "ctcae": "Hepatic necrosis",
       "frequency": null,
-      "label": "Průjem jako časný příznak předávkování.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud jste užil(a) více přípravku Puri-Nethol, než jste měl(a), a máte průjem."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Zežloutnutí kůže nebo očního bělma (žloutenka), které může být známkou poškození jater.",
+      "label": "Fatální poškození jater bylo hlášeno; četnost pro tento výsledek není uvedena.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud vám zežloutne kůže nebo oční bělmo."
+        "patient_guide": "Zežloutnutí kůže nebo očního bělma.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Pruritus",
+      "ctcae": "Alopecia",
       "frequency": null,
-      "label": "V těhotenství se může objevit silné, nadměrné svědění bez vyrážky, případně společně s nevolností a nechutenstvím; může jít o těhotenskou cholestázu.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jste těhotná a objeví se u vás silné svědění bez vyrážky, případně nevolnost nebo nechutenství."
-      }
+      "label": "U pacientů se zděděnou variantou genu NUDT15 je zvýšené riziko časné ztráty vlasů po obvyklých dávkách.",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "Vakcína proti žluté zimnici",
-      "effect": "Současné podávání je kontraindikováno kvůli riziku smrtelného onemocnění u pacientů s oslabenou imunitou.",
+      "class_id": null,
+      "drug": "Alopurinol",
+      "effect": "Alopurinol zpomaluje odbourávání merkaptopurinu. Při souběžném užívání se obvykle podává jen 25 % obvyklé dávky merkaptopurinu; lékař dávku upraví a sleduje krevní obraz.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Oxipurinol",
+      "effect": "Oxipurinol zpomaluje odbourávání merkaptopurinu. Při souběžném užívání se obvykle podává jen 25 % obvyklé dávky merkaptopurinu; lékař dávku upraví a sleduje krevní obraz.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Tiopurinol",
+      "effect": "Tiopurinol zpomaluje odbourávání merkaptopurinu. Při souběžném užívání se obvykle podává jen 25 % obvyklé dávky merkaptopurinu; lékař dávku upraví a sleduje krevní obraz.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Febuxostat",
+      "effect": "Febuxostat zpomaluje odbourávání merkaptopurinu; souběžnému užívání je třeba předejít, protože nejsou dostatečné údaje pro odpovídající snížení dávky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Ribavirin",
+      "effect": "Souběžné užívání s merkaptopurinem se nedoporučuje: ribavirin může snížit jeho účinnost a zvýšit jeho toxicitu včetně útlumu kostní dřeně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A07EC",
+      "drug_class": "Deriváty aminosalicylátů, například olsalazin, mesalazin nebo sulfasalazin",
+      "effect": "Tyto léky mohou tlumit enzym TPMT a zesílit útlum kostní dřeně vyvolaný merkaptopurinem. Lékař může zvážit nižší dávku a pečlivě sleduje krevní obraz.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Perorální antikoagulancia",
+      "effect": "Merkaptopurin může snížit antikoagulační účinek warfarinu; při souběžném podávání perorálních antikoagulancií se doporučuje častější sledování INR.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Fenytoin",
+      "effect": "Cytotoxická léčba může snížit vstřebávání fenytoinu ve střevě. Doporučuje se sledovat jeho hladinu v krvi a podle potřeby upravit dávku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N03A",
+      "drug_class": "Antiepileptika",
+      "effect": "Merkaptopurin může změnit hladiny antiepileptik. Doporučuje se sledovat jejich hladiny v krvi a podle potřeby upravit dávku; fenytoin je uveden samostatně.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:myelosuppressive",
+      "drug_class": "Léčiva tlumící kostní dřeň",
+      "effect": "Při kombinaci s merkaptopurinem může být nutné snížit jeho dávku podle výsledků sledování krevního obrazu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Živé vakcíny",
+      "effect": "Vakcína proti žluté zimnici je při léčbě merkaptopurinem kontraindikována kvůli riziku smrtelného onemocnění. Jiné vakcíny obsahující živé mikroorganismy se u oslabené imunity nedoporučují; u pacientů v remisi se podání odkládá, dokud se nepředpokládá obnovená schopnost reagovat na vakcínu.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "Vakcíny obsahující živé mikroorganismy",
-      "effect": "Podávání živých vakcín se u osob s oslabeným imunitním systémem nedoporučuje, protože očkování může vyvolat infekci. Výjimku může připustit lékař, pokud vyhodnotí, že je pro pacienta bezpečná.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Mléko a mléčné výrobky",
-      "effect": "Mléko a mléčné výrobky obsahují xantinoxidázu a mohou snižovat plazmatické koncentrace merkaptopurinu; merkaptopurin se nemá užívat současně s nimi. Tabletu užijte nejméně 1 hodinu před jejich požitím nebo 2 hodiny po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Jídlo",
-      "effect": "Podání s jídlem může mírně snížit systémovou expozici merkaptopurinu. Lze jej užívat s jídlem nebo nalačno, způsob podávání však udržujte každý den stejný.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Alopurinol, oxipurinol nebo tiopurinol",
-      "effect": "Tyto inhibitory xantinoxidázy snižují metabolismus merkaptopurinu. Při jejich souběžném podávání se má podávat pouze 25 % obvyklé dávky merkaptopurinu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Febuxostat",
-      "effect": "Febuxostat snižuje metabolismus merkaptopurinu; souběžnému podávání je nutné předejít, protože nejsou k dispozici dostatečné údaje pro stanovení vhodného snížení dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Deriváty aminosalicylátů (olsalazin, mesalazin, sulfasalazin)",
-      "effect": "Tyto přípravky mohou inhibovat enzym TPMT. U pacientů, zejména při nízké nebo chybějící aktivitě TPMT, může dojít k zesílení útlumu kostní dřeně; může být nutné zvážit nižší dávku merkaptopurinu a pečlivě sledovat krevní obraz.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
+      "class_id": null,
       "drug": "Methotrexát",
-      "effect": "Methotrexát zvýšil expozici merkaptopurinu (AUC) přibližně o 31 % při perorální dávce 20 mg/m² a o 69 % a 93 % při intravenózních dávkách 2 a 5 g/m². Při současném podávání vysokých dávek methotrexátu může být nutná úprava dávky merkaptopurinu.",
+      "effect": "Methotrexát zvýšil expozici merkaptopurinu: při dávce 20 mg/m² ústy asi o 31 % a při dávkách 2 nebo 5 g/m² do žíly o 69 %, respektive 93 %. Při souběžném podávání vysokých dávek methotrexátu může být nutná úprava dávky merkaptopurinu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug": "Infliximab",
-      "effect": "U pacientů užívajících azathioprin, proléčivo merkaptopurinu, bylo v prvních týdnech po infuzi infliximabu pozorováno přechodné zvýšení hladin aktivního metabolitu 6-TGN a snížení průměrného počtu leukocytů; hodnoty se po 3 měsících vrátily k předchozím hodnotám.",
+      "effect": "U pacientů užívajících azathioprin, který je předstupněm merkaptopurinu, byly po infuzi infliximabu v prvních týdnech pozorovány přechodně vyšší hladiny aktivního metabolitu 6-TGN a nižší průměrný počet leukocytů; po třech měsících se hodnoty vrátily k původním. Přímé údaje pro merkaptopurin jsou omezené.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Ribavirin",
-      "effect": "Souběžné podávání se nedoporučuje. Ribavirin může snížit účinnost merkaptopurinu a zvýšit jeho toxicitu; při kombinaci s proléčivem merkaptopurinu byla hlášena závažná myelosuprese.",
+      "class_id": "atc:L01",
+      "drug_class": "Další cytotoxické léky",
+      "effect": "Merkaptopurin se používá v kombinovaných léčebných cyklech. Souběžné cytotoxické léky mohou zvýšit útlum kostní dřeně; lékař upravuje dávky podle léčebného protokolu a krevního obrazu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Perorální antikoagulancia (zejména warfarin)",
-      "effect": "Při souběžném podávání s merkaptopurinem byl zaznamenán útlum antikoagulačního účinku warfarinu. Doporučuje se častěji sledovat INR.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Antiepileptika (zejména fenytoin)",
-      "effect": "Cytotoxické látky mohou snížit střevní absorpci fenytoinu; mohou se změnit také hladiny jiných antiepileptik. Pečlivě sledujte jejich sérové hladiny a podle potřeby upravte dávku.",
+      "class_id": null,
+      "drug_class": "Mléko a mléčné výrobky",
+      "effect": "Mléko a mléčné výrobky mohou snížit hladinu merkaptopurinu, protože obsahují xantinoxidázu. Tableta se nemá užívat s mlékem ani mléčnými výrobky; užívá se alespoň hodinu před jídlem nebo nejméně dvě hodiny po jejich požití.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Další myelosupresivní látky nebo cytotoxické přípravky",
-      "effect": "Při kombinaci se může zesílit útlum kostní dřeně a může být nutné snížit dávku merkaptopurinu podle výsledků hematologického sledování.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Další imunosupresiva",
-      "effect": "Současné užívání více imunosupresiv včetně thiopurinů zvyšuje riziko lymfoproliferativních poruch, včetně poruch souvisejících s virem Epsteinové-Barrové; tyto poruchy mohou být v některých případech smrtelné.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "6-thioguanin",
-      "effect": "Mezi merkaptopurinem a 6-thioguaninem obvykle existuje zkřížená rezistence, která může snížit účinnost léčby.",
-      "effect_type": "antagonism",
+      "class_id": null,
+      "drug_class": "Jídlo",
+      "effect": "Jídlo může mírně snížit expozici merkaptopurinu. Lze jej užívat s jídlem nebo nalačno, ale způsob podávání má být každý den stejný; denní dávka se podává večer.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Puri-Nethol se užívá k léčbě akutní leukemie u dospělých, dospívajících a dětí.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0136446",
+      "H": "",
+      "NAZEV": "PURI-NETHOL",
+      "SILA": "50MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "25",
+      "CESTA": "POR",
+      "DOPLNEK": "50MG TBL NOB 25",
+      "OBAL": "TBC",
+      "DRZ": "",
+      "ZEMDRZ": "",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "F",
+      "V_PLATDO": "",
+      "NEOMEZ": "",
+      "UVADENIDO": "",
+      "IS_": "44",
+      "ATC_WHO": "L01BB02",
+      "RC": "",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "",
+      "DDDAMNT_WHO": "0",
+      "DDDUN_WHO": "",
+      "DDDP_WHO": "0",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1790",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "",
+      "EXP": "60",
+      "EXP_T": "M",
+      "NAZEV_REG": "PURI-NETHOL",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "",
+      "OCHRANNY_PRVEK": "",
+      "OMEZENI_PRESKRIPCE_SMP": "S",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0136446",
+        "KOD_LATKY": "1790",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "50",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1790",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "MERCAPTOPURINUM",
+          "NAZEV_EN": "MERCAPTOPURINE",
+          "NAZEV": "MERKAPTOPURIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0136446",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0136446",
+        "KOD_LATKY": "1363",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1363",
+          "ZDROJ": "HH4",
+          "NAZEV_INN": "AMYLUM",
+          "NAZEV_EN": "STARCH",
+          "NAZEV": "ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0136446",
+        "KOD_LATKY": "18520",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18520",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AMYLUM HYDROLYSATUM",
+          "NAZEV_EN": "HYDROLYSED STARCH",
+          "NAZEV": "HYDROLYZOVANÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0136446",
+        "KOD_LATKY": "2658",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2658",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "ACIDUM STEARICUM",
+          "NAZEV_EN": "STEARIC ACID",
+          "NAZEV": "KYSELINA STEAROVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0136446",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0136446",
+      "PIL": "PI235950.pdf",
+      "DAT_ROZ_PIL": "22.01.2025",
+      "SPC": "SPC235951.pdf",
+      "DAT_ROZ_SPC": "22.01.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "L01BB02",
+        "NT": "N",
+        "NAZEV": "MERKAPTOPURIN",
+        "NAZEV_EN": "MERCAPTOPURINE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "F",
+        "NAZEV": "specifický léčebný program povolený MZČR na základě doporučení SÚKL"
+      }
+    }
+  }
 }

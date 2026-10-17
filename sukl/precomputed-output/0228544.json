@@ -1,4 +1,13 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C10",
+    "atc:C10B",
+    "atc:C10BA",
+    "atc:C10BA05",
+    "substance:14884",
+    "substance:16227"
+  ],
   "side_effects": [
     {
       "ctcae": "Allergic reaction",
@@ -10,124 +19,72 @@
     {
       "ctcae": "Anaphylaxis",
       "frequency": "very_rare",
-      "label": "Anafylaktický šok vyvolaný alergickou reakcí.",
-      "action": "hospitalize_NOW",
+      "label": "Anafylaktická reakce; vzácně může být závažná a způsobit otok obličeje, jazyka či hrdla a potíže s dýcháním.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná alergická reakce s otokem obličeje, jazyka nebo hrdla, potížemi s dýcháním nebo anafylaktickým šokem."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Edema face",
-      "frequency": "rare",
-      "label": "Angioneurotický otok; při závažné alergické reakci může otéct obličej, jazyk a hrdlo a způsobit velké potíže s dýcháním.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažný otok obličeje, jazyka nebo hrdla, zejména s potížemi s dýcháním."
-      }
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "common",
-      "label": "Alergická reakce včetně vyrážky.",
+      "ctcae": "Angioedema",
+      "frequency": "uncommon",
+      "label": "Otok způsobený alergickou reakcí; včetně otoku podkožní tkáně.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Urticaria",
-      "frequency": "uncommon",
-      "label": "Kopřivka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "uncommon",
-      "label": "Vyrážka a zarudnutí kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "uncommon",
-      "label": "Svědění.",
+      "ctcae": "Rash",
+      "frequency": "not_known",
+      "label": "Vyrážka jako součást hypersenzitivity; po uvedení přípravku na trh.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "rare",
-      "label": "Bulózní dermatitida včetně Stevensova-Johnsonova syndromu; závažné olupování a otok kůže, puchýře na kůži, v ústech, očích nebo na pohlavních orgánech a horečka.",
-      "action": "hospitalize_NOW",
+      "label": "Závažné kožní reakce včetně Stevensova-Johnsonova syndromu a toxické epidermální nekrolýzy; mohou se objevit puchýře a olupování kůže, také v ústech, očích či na pohlavních orgánech, a horečka.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažné olupování nebo otok kůže, puchýře na kůži, v ústech, očích či na pohlavních orgánech nebo vyrážka s horečkou."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "rare",
-      "label": "Bulózní dermatitida včetně toxické epidermální nekrolýzy; závažné olupování a otok kůže, puchýře na kůži, v ústech, očích nebo na pohlavních orgánech a horečka.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažné olupování nebo otok kůže, puchýře na kůži, v ústech, očích či na pohlavních orgánech nebo vyrážka s horečkou."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Erythema multiforme",
       "frequency": "rare",
-      "label": "Erythema multiforme; vyrážka s růžovočervenými skvrnami, zejména na dlaních nebo chodidlech, které mohou přecházet v puchýře.",
-      "action": "hospitalize_NOW",
+      "label": "Multiformní erytém; vyrážka s růžovočervenými skvrnami, zejména na dlaních nebo chodidlech, může přecházet do puchýřů.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vyrážka s růžovočervenými skvrnami, zejména na dlaních nebo chodidlech, nebo puchýře."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Lichenoid dermatitis",
+      "ctcae": "Thrombocytopenia",
       "frequency": "rare",
-      "label": "Lichenoidní léková reakce – vyrážka na kůži nebo vřídky v ústech.",
+      "label": "Snížení počtu krevních destiček; ve SPC uvedeno pro atorvastatin, po uvedení ezetimibu na trh četnost není známa.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Vasculitis",
-      "frequency": "rare",
-      "label": "Vaskulitida, která se může projevit fialovými kožními lézemi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Autoimmune disorder",
-      "frequency": "very_rare",
-      "label": "Lupus-like syndrom neboli léky navozený systémový lupus erythematodes, včetně vyrážky, poruch kloubů a účinků na krvinky.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví lupus-like syndrom, například vyrážka, poruchy kloubů nebo potíže související s krvinkami."
-      }
     },
     {
       "ctcae": "Hyperglycemia",
       "frequency": "common",
-      "label": "Zvýšená hladina cukru v krvi; pokud máte cukrovku, sledujte si hladinu cukru v krvi.",
+      "label": "Zvýšená hladina cukru v krvi; riziko cukrovky je vyšší při vysokém cukru a tucích v krvi, nadváze a vysokém krevním tlaku.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypoglycemia",
       "frequency": "uncommon",
-      "label": "Snížená hladina cukru v krvi; pokud máte cukrovku, sledujte si hladinu cukru v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Diabetes mellitus",
-      "frequency": null,
-      "label": "Cukrovka; pravděpodobnější je při vysoké hladině cukru a tuků v krvi, nadváze a vysokém krevním tlaku. Lékař vás bude sledovat.",
+      "label": "Snížená hladina cukru v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anorexia",
       "frequency": "uncommon",
-      "label": "Ztráta chuti k jídlu.",
+      "label": "Ztráta chuti k jídlu nebo snížená chuť k jídlu.",
       "action": null,
       "action_condition": null
     },
@@ -135,6 +92,20 @@
       "ctcae": "Weight gain",
       "frequency": "uncommon",
       "label": "Přibývání na váze.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Depression",
+      "frequency": "not_known",
+      "label": "Deprese; hlášena po uvedení přípravku na trh a u některých statinů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": "uncommon",
+      "label": "Potíže se spánkem nebo noční můry.",
       "action": null,
       "action_condition": null
     },
@@ -148,21 +119,21 @@
     {
       "ctcae": "Dizziness",
       "frequency": "uncommon",
-      "label": "Závrať.",
+      "label": "Závrať; pokud ji po užití pociťujete, neřiďte ani neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Paresthesia",
+      "ctcae": "Hypoesthesia",
       "frequency": "uncommon",
-      "label": "Necitlivost, mravenčení nebo jiné abnormální pocity; parestezie.",
+      "label": "Necitlivost nebo zhoršené vnímání citlivosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysgeusia",
       "frequency": "uncommon",
-      "label": "Zhoršený nebo změněný pocit chuti.",
+      "label": "Zhoršené vnímání chuti.",
       "action": null,
       "action_condition": null
     },
@@ -174,44 +145,92 @@
       "action_condition": null
     },
     {
+      "ctcae": "Paresthesia",
+      "frequency": "uncommon",
+      "label": "Brnění, pálení nebo jiné abnormální pocity; po uvedení ezetimibu na trh četnost není známa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Peripheral sensory neuropathy",
       "frequency": "rare",
-      "label": "Periferní neuropatie, která se může projevit znecitlivěním, mravenčením nebo pálením rukou či nohou.",
+      "label": "Periferní neuropatie, která se může projevit necitlivostí, mravenčením nebo pálením rukou či nohou.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Insomnia",
-      "frequency": "uncommon",
-      "label": "Potíže se spánkem.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Noční můry.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Depression",
+      "ctcae": "Myasthenia gravis",
       "frequency": "not_known",
-      "label": "Deprese.",
+      "label": "Myastenie může způsobit celkovou svalovou slabost, někdy včetně svalů používaných při dýchání.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Slabost končetin zhoršující se po aktivitě, dvojité vidění, pokles víček, potíže s polykáním nebo dušnost.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Eyelid function disorder",
+      "frequency": "not_known",
+      "label": "Oční forma myastenie může způsobit slabost očních svalů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Slabost očních svalů, například dvojité vidění nebo pokles víček.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "uncommon",
+      "label": "Rozmazané vidění.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Rhinitis infective",
-      "frequency": "common",
-      "label": "Zánět nosní sliznice.",
+      "ctcae": "Vision decreased",
+      "frequency": "rare",
+      "label": "Zhoršené vidění.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Sore throat",
+      "ctcae": "Tinnitus",
+      "frequency": "uncommon",
+      "label": "Zvonění v uších.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hearing impaired",
+      "frequency": "very_rare",
+      "label": "Ztráta sluchu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hot flashes",
+      "frequency": "uncommon",
+      "label": "Návaly horka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypertension",
+      "frequency": "uncommon",
+      "label": "Vysoký krevní tlak.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vasculitis",
+      "frequency": "rare",
+      "label": "Zánět cév; může se projevit fialovými kožními lézemi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pharyngolaryngeal pain",
       "frequency": "common",
-      "label": "Bolest v krku.",
+      "label": "Bolest v krku nebo hrtanu.",
       "action": null,
       "action_condition": null
     },
@@ -219,13 +238,6 @@
       "ctcae": "Epistaxis",
       "frequency": "common",
       "label": "Krvácení z nosu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pharyngolaryngeal pain",
-      "frequency": "common",
-      "label": "Bolest v hltanu a/nebo hrtanu.",
       "action": null,
       "action_condition": null
     },
@@ -239,37 +251,21 @@
     {
       "ctcae": "Dyspnea",
       "frequency": "not_known",
-      "label": "Dušnost; mezi hlášené potíže s dýcháním patří také přetrvávající kašel nebo horečka.",
+      "label": "Dušnost; po uvedení ezetimibu na trh.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pneumonitis",
-      "frequency": null,
-      "label": "Výjimečně se při léčbě statiny, zvláště při dlouhodobé léčbě, vyskytla intersticiální plicní nemoc; může se projevit dušností, suchým kašlem, únavou, úbytkem tělesné hmotnosti a horečkou.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte podezření na intersticiální plicní nemoc, například dušnost, suchý kašel a celkové zhoršení zdravotního stavu."
-      }
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "common",
-      "label": "Nevolnost.",
+      "ctcae": "Interstitial lung disease",
+      "frequency": "not_known",
+      "label": "Výjimečně byly u některých statinů hlášeny plicní potíže, zejména při dlouhodobé léčbě; mohou zahrnovat přetrvávající kašel, dušnost, horečku, únavu nebo úbytek hmotnosti.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Constipation",
+      "ctcae": "Abdominal distension",
       "frequency": "common",
-      "label": "Zácpa.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Flatulence",
-      "frequency": "common",
-      "label": "Plynatost.",
+      "label": "Plynatost nebo nadýmání.",
       "action": null,
       "action_condition": null
     },
@@ -281,9 +277,23 @@
       "action_condition": null
     },
     {
+      "ctcae": "Constipation",
+      "frequency": "common",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "common",
+      "label": "Nevolnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Dyspepsia",
       "frequency": "common",
-      "label": "Poruchy trávení (dyspepsie).",
+      "label": "Poruchy trávení.",
       "action": null,
       "action_condition": null
     },
@@ -311,28 +321,14 @@
     {
       "ctcae": "Pancreatitis",
       "frequency": "uncommon",
-      "label": "Zánět slinivky břišní.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "uncommon",
-      "label": "Zánět jater.",
+      "label": "Zánět slinivky břišní; po uvedení ezetimibu na trh četnost není známa.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gastroesophageal reflux disease",
       "frequency": "uncommon",
-      "label": "Pálení žáhy a gastroezofageální refluxní choroba.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastritis",
-      "frequency": "uncommon",
-      "label": "Zánět žaludeční sliznice.",
+      "label": "Refluxní choroba jícnu.",
       "action": null,
       "action_condition": null
     },
@@ -344,16 +340,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Cholecystitis",
-      "frequency": "not_known",
-      "label": "Zánět žlučníku.",
+      "ctcae": "Gastritis",
+      "frequency": "uncommon",
+      "label": "Zánět žaludeční sliznice.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Žlučové kameny.",
+      "ctcae": "Hepatitis",
+      "frequency": "uncommon",
+      "label": "Zánět jater; po uvedení ezetimibu na trh četnost není známa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cholestasis",
+      "frequency": "rare",
+      "label": "Porucha odtoku žluči.",
       "action": null,
       "action_condition": null
     },
@@ -365,46 +368,68 @@
       "action_condition": null
     },
     {
-      "ctcae": "Blood bilirubin increased",
-      "frequency": "rare",
-      "label": "Zežloutnutí kůže a bělma očí.",
+      "ctcae": "Cholelithiasis",
+      "frequency": "not_known",
+      "label": "Žlučové kameny; po uvedení ezetimibu na trh.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Bruising",
-      "frequency": null,
-      "label": "Neočekávané nebo neobvyklé krvácení či tvorba modřin, které mohou ukazovat na potíže s játry.",
-      "action": "contact_doctor",
+      "ctcae": "Cholecystitis",
+      "frequency": "not_known",
+      "label": "Zánět žlučníku; po uvedení ezetimibu na trh.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash",
+      "frequency": "uncommon",
+      "label": "Zarudnutí kůže nebo vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "uncommon",
+      "label": "Svědění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alopecia",
+      "frequency": "uncommon",
+      "label": "Vypadávání vlasů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dermatosis bullous",
+      "frequency": "rare",
+      "label": "Bulózní dermatitida; závažné kožní reakce mohou zahrnovat puchýře a olupování kůže.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud u vás dojde k neočekávanému nebo neobvyklému krvácení či tvorbě modřin."
+        "patient_guide": null,
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": "Lichenoid dermatitis",
+      "frequency": "rare",
+      "label": "Lichenoidní léková reakce; vyrážka se může objevit na kůži nebo jako vřídky v ústech.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "common",
-      "label": "Bolest kloubů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pain in extremity",
-      "frequency": "common",
-      "label": "Bolest rukou nebo nohou a bolest končetin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Back pain",
-      "frequency": "common",
-      "label": "Bolest zad.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myalgia",
-      "frequency": "common",
-      "label": "Bolest svalů (myalgie).",
+      "label": "Bolest kloubů, případně rukou nebo nohou.",
       "action": null,
       "action_condition": null
     },
@@ -418,65 +443,42 @@
     {
       "ctcae": "Joint effusion",
       "frequency": "common",
-      "label": "Otoky kloubů.",
+      "label": "Otok kloubů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Generalized muscle weakness",
-      "frequency": "uncommon",
-      "label": "Svalová slabost.",
+      "ctcae": "Pain in extremity",
+      "frequency": "common",
+      "label": "Bolest končetin.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Back pain",
+      "frequency": "common",
+      "label": "Bolest zad.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
-      "frequency": null,
-      "label": "Nevysvětlitelná bolest, citlivost nebo slabost svalů může vzácně znamenat závažné svalové poškození; někdy se mohou objevit také natržení svalů nebo červenohnědá moč, zejména pokud vám zároveň není dobře nebo máte vysokou teplotu.",
-      "action": "hospitalize_NOW",
+      "frequency": "common",
+      "label": "Bolest svalů; při nevysvětlitelné bolesti, citlivosti nebo slabosti svalů ihned kontaktujte lékaře.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví svalová slabost, citlivost, bolest nebo natržení svalů či červenohnědá moč, zejména pokud vám současně není dobře nebo máte vysokou teplotu."
+        "patient_guide": "Nevysvětlitelná bolest, citlivost nebo slabost svalů.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Myositis",
-      "frequency": "rare",
-      "label": "Zánět kosterního svalu (myositida).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Zánět šlachy, někdy komplikovaný jejím prasknutím.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myasthenia gravis",
-      "frequency": "not_known",
-      "label": "Myasthenia gravis – celková slabost svalů, někdy včetně svalů používaných při dýchání.",
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "uncommon",
+      "label": "Svalová slabost; ve SPC uvedena pro ezetimib se statinem i ezetimib samotný.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví nebo zhorší slabost svalů, zejména pokud máte také potíže s dýcháním."
-      }
-    },
-    {
-      "ctcae": "Eyelid function disorder",
-      "frequency": "not_known",
-      "label": "Oční forma myastenie – slabost svalů oka, která se může projevit dvojitým viděním nebo poklesem očních víček.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví slabost horních či dolních končetin zhoršující se po aktivitě, dvojité vidění, pokles očních víček, potíže s polykáním nebo dušnost."
-      }
-    },
-    {
-      "ctcae": "Myasthenia gravis",
-      "frequency": "not_known",
-      "label": "Přetrvávající svalová slabost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví slabost horních či dolních končetin zhoršující se po aktivitě, dvojité vidění, pokles očních víček, potíže s polykáním nebo dušnost."
+        "patient_guide": "Nevysvětlitelná svalová slabost.",
+        "min_severity": 2
       }
     },
     {
@@ -487,58 +489,81 @@
       "action_condition": null
     },
     {
-      "ctcae": "Non-cardiac chest pain",
-      "frequency": "uncommon",
-      "label": "Bolest na hrudi.",
+      "ctcae": "Myositis",
+      "frequency": "rare",
+      "label": "Zánět kosterních svalů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tendonitis",
+      "frequency": "rare",
+      "label": "Zánět šlach, někdy komplikovaný jejich prasknutím.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myopathy",
+      "frequency": "rare",
+      "label": "Myopatie; vzácně se může rozvinout v závažný rozpad svalů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rhabdomyolysis",
+      "frequency": "rare",
+      "label": "Rabdomyolýza nebo jiné závažné poškození svalů; může se projevit slabostí, bolestí či citlivostí svalů, natržením svalů nebo červenohnědou močí, zvláště při současné nevolnosti či vysoké teplotě, a může poškodit ledviny.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Svalová slabost, bolest nebo citlivost, natržení svalů či červenohnědá moč, zejména při současné nevolnosti nebo vysoké teplotě.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Muscle weakness lower limb",
+      "frequency": "not_known",
+      "label": "Přetrvávající svalová slabost; po uvedení ezetimibu na trh.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Slabost horních či dolních končetin, která se zhoršuje po aktivitě.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "very_rare",
+      "label": "Lupus-like syndrom, tedy léky navozený systémový lupus erythematodes, včetně vyrážky, poruch kloubů a změn krvinek.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Vyrážka spolu s poruchami kloubů nebo změnami krvinek.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Gynecomastia",
+      "frequency": "very_rare",
+      "label": "Zvětšení prsů u mužů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Peripheral edema",
       "frequency": "uncommon",
-      "label": "Otoky, zejména v oblasti kotníků (periferní edém).",
+      "label": "Otoky, zejména kolem kotníků.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Fever",
+      "ctcae": "Asthenia",
       "frequency": "uncommon",
-      "label": "Zvýšená teplota nebo horečka.",
+      "label": "Slabost; po uvedení ezetimibu na trh četnost není známa.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hot flashes",
+      "ctcae": "Chest pain - cardiac",
       "frequency": "uncommon",
-      "label": "Návaly horka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypertension",
-      "frequency": "uncommon",
-      "label": "Vysoký krevní tlak.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Malaise",
-      "frequency": "uncommon",
-      "label": "Pocit všeobecného nepohodlí nebo neklidu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pain",
-      "frequency": "uncommon",
-      "label": "Bolest.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "common",
-      "label": "Pocit únavy.",
+      "label": "Bolest na hrudi.",
       "action": null,
       "action_condition": null
     },
@@ -550,86 +575,30 @@
       "action_condition": null
     },
     {
-      "ctcae": "Generalized muscle weakness",
+      "ctcae": "Malaise",
       "frequency": "uncommon",
-      "label": "Únava svalů.",
+      "label": "Celkový pocit nepohodlí nebo neklidu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Generalized muscle weakness",
+      "ctcae": "Fever",
       "frequency": "uncommon",
-      "label": "Slabost (astenie).",
+      "label": "Zvýšená teplota.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blurred vision",
+      "ctcae": "Pain",
       "frequency": "uncommon",
-      "label": "Rozmazané vidění.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vision decreased",
-      "frequency": "rare",
-      "label": "Zhoršené vidění nebo jiné poruchy zraku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tinnitus",
-      "frequency": "uncommon",
-      "label": "Zvonění v uších.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hearing impaired",
-      "frequency": "very_rare",
-      "label": "Ztráta sluchu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alopecia",
-      "frequency": "uncommon",
-      "label": "Vypadávání vlasů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "rare",
-      "label": "Snížení počtu krevních destiček.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "common",
-      "label": "Zvýšení hladiny kreatinkinázy (CPK) v krvi.",
+      "label": "Bolest.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alanine aminotransferase increased",
-      "frequency": "common",
-      "label": "Zvýšené jaterní enzymy ALT a/nebo AST.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aspartate aminotransferase increased",
-      "frequency": "common",
-      "label": "Zvýšené jaterní enzymy ALT a/nebo AST.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "common",
-      "label": "Abnormální test funkce jater.",
+      "frequency": "uncommon",
+      "label": "Zvýšené jaterní enzymy ALT a/nebo AST; u současné léčby ezetimibem a statinem se opakované zvýšení ALT nebo AST alespoň na trojnásobek horní hranice normy vyskytlo u 1,3 % pacientů (frekvence 76,9231).",
       "action": null,
       "action_condition": null
     },
@@ -641,332 +610,533 @@
       "action_condition": null
     },
     {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Creatine phosphokinase increased",
+      "frequency": "common",
+      "label": "Zvýšená kreatinkináza v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "common",
+      "label": "Abnormální test funkce jater.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "White blood cell increased",
       "frequency": "uncommon",
       "label": "Pozitivní vyšetření moči na bílé krvinky.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Erectile dysfunction",
+      "ctcae": "Sexual dysfunction",
       "frequency": null,
-      "label": "Sexuální potíže nebo sexuální dysfunkce.",
+      "label": "Sexuální potíže; hlášeny u některých statinů.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "Glekaprevir/pibrentasvir",
-      "effect": "Současné podávání s přípravkem Zetovar je kontraindikováno; může výrazně zvýšit expozici atorvastatinu.",
+      "class_id": "group:cyp3a4_inhibitor_strong",
+      "drug_class": "Silné inhibitory CYP3A4",
+      "effect": "Mohou zvýšit hladinu atorvastatinu v krvi a riziko svalového poškození včetně myopatie a rabdomyolýzy. Pokud se souběhu nelze vyhnout, lékař zváží nižší zahajovací a maximální dávku přípravku Zetovar a klinické sledování; mezi příklady patří klarithromycin, telithromycin, azolová antimykotika a některé inhibitory HIV proteázy.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp3a4_inhibitor_moderate",
+      "drug_class": "Středně silné inhibitory CYP3A4",
+      "effect": "Mohou zvýšit hladinu atorvastatinu v krvi a riziko svalového poškození. Lékař zváží nižší maximální dávku přípravku Zetovar a klinické sledování, zejména po zahájení nebo změně dávky inhibitoru; příklady jsou erythromycin, diltiazem, verapamil a flukonazol.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:14884",
+      "drug": "RIFAMPICIN",
+      "effect": "Může měnit hladinu atorvastatinu. Současné podávání se doporučuje; opožděné podání atorvastatinu po rifampicinu může jeho hladinu výrazně snížit. Pokud se souběhu nelze vyhnout, lékař sleduje účinnost léčby.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:14884",
+      "drug": "CYKLOSPORIN",
+      "effect": "Může zvýšit systémovou expozici atorvastatinu a ezetimibu a riziko svalového poškození; Zetovar může také zvýšit hladinu cyklosporinu. Při souběhu lékař zváží snížení dávky Zetovaru a sleduje koncentraci cyklosporinu. Kombinace cyklosporinu a letermoviru s atorvastatinem se nedoporučuje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:14884",
+      "drug": "LETERMOVIR",
+      "effect": "Může zvýšit systémovou expozici atorvastatinu a riziko myopatie. Při souběhu nesmí dávka atorvastatinu překročit 20 mg denně; u této síly 10 mg/20 mg je to nejvyšší uvedená dávka. Současné užívání letermoviru s cyklosporinem a atorvastatinem se nedoporučuje.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:14884",
+      "drug": "ELBASVIR A GRAZOPREVIR",
+      "effect": "Tato kombinace může zvýšit hladinu atorvastatinu přibližně 1,9krát a riziko myopatie. Dávka atorvastatinu při souběhu nesmí překročit 20 mg denně; tato síla Zetovaru obsahuje 20 mg atorvastatinu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Glekaprevir/pibrentasvir",
+      "effect": "Současné užívání s přípravkem Zetovar je kontraindikováno při léčbě hepatitidy C.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "Kyselina fusidová podávaná systémově",
-      "effect": "Přípravek Zetovar se nesmí užívat současně se systémovou kyselinou fusidovou ani během 7 dnů po jejím ukončení. Pokud je systémová léčba nezbytná, přerušte léčbu přípravkem Zetovar po celou dobu podávání kyseliny fusidové; znovu ji lze zahájit 7 dní po její poslední dávce. Výjimečně lze při nutnosti dlouhodobé léčby zvážit souběžné užívání pouze pod pečlivým lékařským dohledem. Byly hlášeny případy rabdomyolýzy, včetně úmrtí; při svalové slabosti, bolesti nebo citlivosti ihned vyhledejte lékařskou pomoc.",
+      "class_id": "substance:14884",
+      "drug": "KYSELINA FUSIDOVÁ",
+      "effect": "Systémová kyselina fusidová, podávaná ústy nebo injekčně, může při souběhu zvýšit riziko závažného svalového poškození včetně rabdomyolýzy. Zetovar se nesmí užívat současně ani 7 dní po ukončení této léčby; pokud je systémová léčba nezbytná, lékař statin dočasně vysadí. Za výjimečných okolností lze dlouhodobý souběh zvážit pod pečlivým lékařským dohledem.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Rhabdomyolysis",
-          "frequency": "rare",
-          "label": "Svalová slabost, bolest nebo citlivost mohou být známkami rabdomyolýzy; při souběžné léčbě byly hlášeny i fatální případy.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud během užívání kyseliny fusidové zaznamenáte svalovou slabost, bolest nebo citlivost."
-          }
-        }
-      ]
-    },
-    {
-      "drug_class": "Fibráty a deriváty kyseliny fibrové (např. gemfibrozil, fenofibrát)",
-      "effect": "Současné podávání přípravku Zetovar s fibráty se nedoporučuje. Fibráty mohou zvýšit koncentraci celkového ezetimibu přibližně 1,5násobně (fenofibrát) až 1,7násobně (gemfibrozil); současné podávání s atorvastatinem může zvýšit riziko svalových příhod včetně myopatie a rabdomyolýzy. Pokud se souběhu nelze vyhnout, zvažte nižší zahajovací dávku a klinické sledování.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko svalových příhod, včetně bolesti svalů, myopatie a rabdomyolýzy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Silné inhibitory CYP3A4 (např. cyklosporin, telithromycin, klarithromycin, delavirdin, stiripentol, ketokonazol, vorikonazol, itrakonazol, posakonazol a inhibitory HIV proteázy)",
-      "effect": "Mohou výrazně zvýšit plazmatické koncentrace atorvastatinu a riziko myopatie/rabdomyolýzy. Pokud je souběžné podávání nevyhnutelné, zvažte nižší zahajovací i maximální dávku přípravku Zetovar a klinické sledování; při přípravcích zvyšujících koncentraci atorvastatinu se doporučuje nižší maximální dávka.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie a rabdomyolýzy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Inhibitory HIV proteázy (např. ritonavir, lopinavir, atazanavir, indinavir, darunavir a tipranavir/ritonavir)",
-      "effect": "Zejména silné inhibitory CYP3A4 mohou zvýšit plazmatické koncentrace atorvastatinu a riziko myopatie/rabdomyolýzy. Je-li souběžné podávání nezbytné, zvažte nižší zahajovací a maximální dávku atorvastatinu a klinické sledování; u tipranaviru/ritonaviru se nemá překročit 10 mg atorvastatinu denně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie a rabdomyolýzy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antivirotika proti hepatitidě C (elbasvir/grazoprevir)",
-      "effect": "Zvyšují plazmatickou koncentraci atorvastatinu přibližně 1,9krát. Při souběžné léčbě nesmí dávka přípravku Zetovar překročit 10 mg/20 mg denně; současně je zvýšeno riziko myopatie.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Boceprevir",
-      "effect": "Zvyšuje expozici atorvastatinu přibližně 2,3krát. Pokud je souběžné podávání nezbytné, zahajte léčbu nejnižší možnou dávkou přípravku Zetovar, upravujte ji podle klinického účinku a sledujte bezpečnost; dávka nesmí překročit 10 mg/20 mg denně.",
-      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Telaprevir",
-      "effect": "Výrazně zvyšuje expozici atorvastatinu; pokud je souběžné podávání nezbytné, nepřekračujte dávku atorvastatinu 10 mg denně a pacienta klinicky sledujte.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Letermovir",
-      "effect": "Může zvýšit systémovou expozici atorvastatinu. Při souběžném podávání nesmí dávka atorvastatinu překročit 20 mg denně; zvažte snížení dávky přípravku Zetovar a sledujte účinnost. Užívání atorvastatinu se nedoporučuje, pokud je letermovir podáván současně s cyklosporinem.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Cyklosporin",
-      "effect": "Zvyšuje plazmatické koncentrace atorvastatinu a může zvýšit expozici ezetimibu; u pacientů užívajících cyklosporin byly popsány přibližně 3,4násobné až 12násobné zvýšení expozice celkovému ezetimibu. Ezetimib může zvýšit AUC cyklosporinu; koncentrace cyklosporinu je třeba sledovat a při zahájení přípravku Zetovar postupovat opatrně.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Středně silné inhibitory CYP3A4 (např. erythromycin, diltiazem, verapamil a flukonazol)",
-      "effect": "Mohou zvýšit plazmatické koncentrace atorvastatinu a riziko myopatie. Zvažte nižší maximální dávku přípravku Zetovar a klinické sledování, zejména po zahájení podávání inhibitoru nebo změně jeho dávky. Při erythromycinu se doporučuje nižší maximální dávka.",
+      "class_id": "atc:C10AB",
+      "drug_class": "Fibráty, zejména gemfibrozil a fenofibrát",
+      "effect": "S atorvastatinem mohou zvýšit riziko svalových příhod včetně rabdomyolýzy; fibráty mohou také zvýšit koncentraci ezetimibu. Současné užívání se nedoporučuje a PIL doporučuje se mu vyhnout. Pokud se souběhu nelze vyhnout, lékař zváží nižší zahajovací dávku a klinické sledování.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Klarithromycin",
-      "effect": "Jako silný inhibitor CYP3A4 výrazně zvyšuje koncentraci atorvastatinu a riziko myopatie; pokud se souběžnému podávání nelze vyhnout, zvažte nižší zahajovací i maximální dávku a klinické sledování.",
+      "class_id": "substance:14884",
+      "drug": "DAPTOMYCIN",
+      "effect": "Může při souběhu s atorvastatinem zvýšit riziko myopatie nebo rabdomyolýzy. Lékař zváží dočasné vysazení Zetovaru; pokud se souběhu nelze vyhnout, sleduje svalové příznaky a může kontrolovat CK 2–3krát týdně.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie a rabdomyolýzy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Erythromycin",
-      "effect": "Může zvýšit koncentraci atorvastatinu (v interakční studii přibližně 1,33krát); bylo pozorováno zvýšené riziko myopatie při kombinaci erythromycinu se statiny. Doporučuje se nižší maximální dávka a klinické sledování.",
+      "class_id": "substance:14884",
+      "drug": "KOLCHICIN",
+      "effect": "Při souběhu s atorvastatinem byly hlášeny případy myopatie; při předepisování je nutná opatrnost.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Diltiazem",
-      "effect": "Může zvýšit expozici atorvastatinu přibližně 1,51krát. Po zahájení léčby diltiazemem nebo změně jeho dávky se doporučuje klinické sledování; zvažte nižší maximální dávku přípravku Zetovar.",
-      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Verapamil",
-      "effect": "Inhibuje CYP3A4 a může zvýšit expozici atorvastatinu; zvažte nižší maximální dávku přípravku Zetovar a klinické sledování.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Amiodaron",
-      "effect": "Inhibuje CYP3A4 a může zvýšit expozici atorvastatinu; zvažte nižší maximální dávku přípravku Zetovar a klinické sledování.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Inhibitory transportních proteinů OATP1B1/OATP1B3, P-gp nebo BCRP",
-      "effect": "Mohou zvýšit systémovou expozici atorvastatinu a riziko myopatie. Pokud se souběžnému podávání nelze vyhnout, doporučuje se snížení dávky přípravku Zetovar a klinické sledování účinnosti a bezpečnosti.",
-      "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Induktory CYP3A4 (např. efavirenz a třezalka tečkovaná)",
-      "effect": "Mohou snížit plazmatické koncentrace atorvastatinu; sledujte účinnost léčby.",
+      "class_id": "substance:14884",
+      "drug": "KOLestipol",
+      "effect": "Může snížit hladinu atorvastatinu a jeho aktivních metabolitů, ačkoli účinek na lipidy může být při souběhu silnější než při podávání každého léku samostatně. Ezetimib užijte nejméně 2 hodiny před nebo 4 hodiny po sekvestrantu žlučových kyselin.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Rifampicin",
-      "effect": "Může ovlivnit koncentraci atorvastatinu dvojím mechanismem. Je-li souběžné podávání nezbytné, doporučuje se podávat atorvastatin současně s rifampicinem a klinicky sledovat účinnost; opožděné podání atorvastatinu po rifampicinu bylo spojeno s výrazným snížením jeho plazmatické koncentrace.",
+      "class_id": "atc:C10AC",
+      "drug_class": "Sekvestranty žlučových kyselin, například kolestyramin",
+      "effect": "Kolestyramin může snížit celkovou expozici ezetimibu přibližně o 55 % a oslabit jeho účinek. Zetovar se užívá nejméně 2 hodiny před nebo 4 hodiny po sekvestrantu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Sekvestranty žlučových kyselin (např. cholestyramin a kolestipol)",
-      "effect": "Cholestyramin snižuje AUC celkového ezetimibu přibližně o 55 % a může zmírnit další pokles LDL cholesterolu. Kolestipol snižuje plazmatické koncentrace atorvastatinu a jeho aktivních metabolitů, přesto byl účinek na lipidy při současném podávání silnější než při podání každého přípravku samostatně. Zetovar užívejte nejméně 2 hodiny před sekvestrantem nebo nejméně 4 hodiny po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Kolestipol",
-      "effect": "Snižuje plazmatické koncentrace atorvastatinu a jeho aktivních metabolitů (relativní koncentrace 0,74), ale účinek na lipidy byl při souběžném podávání silnější než při samostatném podání každého léčiva. Dodržte odstup: Zetovar nejméně 2 hodiny před kolestipolem nebo nejméně 4 hodiny po něm.",
-      "effect_type": "synergy",
-      "side_effects": []
-    },
-    {
-      "drug": "Cholestyramin",
-      "effect": "Snižuje AUC celkového ezetimibu přibližně o 55 % a může zmírnit další snížení LDL cholesterolu. Zetovar užívejte nejméně 2 hodiny před cholestyraminem nebo nejméně 4 hodiny po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Antacida obsahující hliník nebo hořčík",
-      "effect": "Snižují rychlost absorpce ezetimibu, aniž by ovlivnila jeho biologickou dostupnost; tato změna se nepovažuje za klinicky významnou. V interakční studii snížila antacidní suspenze expozici atorvastatinu (poměr AUC 0,66); nebylo uvedeno zvláštní klinické doporučení.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Daptomycin",
-      "effect": "Při souběžném podávání se statiny byly hlášeny myopatie a/nebo rabdomyolýza. Zvažte dočasné vysazení přípravku Zetovar, pokud přínos souběžného podávání nepřeváží riziko. Pokud se kombinaci nelze vyhnout, pečlivě sledujte příznaky a měřte CK 2–3krát týdně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie a rabdomyolýzy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Kolchicin",
-      "effect": "Při souběžném podávání atorvastatinu a kolchicinu byly hlášeny případy myopatie; při jejich předepisování je nutná opatrnost.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Byly hlášeny případy myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Gemfibrozil",
-      "effect": "Může zvýšit koncentraci atorvastatinu a riziko myopatie; při souběžném podávání se doporučuje nižší zahajovací dávka a klinické sledování. Současné podávání přípravku Zetovar s gemfibrozilem se nedoporučuje.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie a rabdomyolýzy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Fenofibrát",
-      "effect": "Může zvýšit koncentraci celkového ezetimibu přibližně 1,5krát; při souběžném podávání s atorvastatinem se může zvýšit riziko svalových příhod. Současné podávání přípravku Zetovar s fenofibrátem se nedoporučuje.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko svalových příhod včetně myopatie a rabdomyolýzy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Digoxin",
-      "effect": "Opakované dávky digoxinu při současném podávání s atorvastatinem mírně zvýšily rovnovážné koncentrace digoxinu. Pacienty užívající digoxin je třeba odpovídajícím způsobem sledovat.",
+      "class_id": "substance:14884",
+      "drug": "GRAPEFRUITOVÁ ŠŤÁVA",
+      "effect": "Velká množství mohou zvýšit hladinu atorvastatinu a změnit účinek přípravku. Více než 1,2 litru denně po dobu 5 dní zvýšilo expozici atorvastatinu 2,5krát; PIL doporučuje nepít více než jednu až dvě malé skleničky denně a SPC nedoporučuje velká množství.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Perorální antikoncepce obsahující norethisteron a ethinylestradiol",
-      "effect": "Současné podávání atorvastatinu zvýšilo plazmatické koncentrace norethisteronu a ethinylestradiolu; zvláštní klinické doporučení nebylo uvedeno.",
+      "class_id": "substance:14884",
+      "drug": "WARFARIN",
+      "effect": "Atorvastatin může na začátku léčby mírně prodloužit protrombinový čas; po přidání ezetimibu byly po uvedení na trh hlášeny zvýšené hodnoty INR. Lékař má před zahájením léčby a v její časné fázi sledovat protrombinový čas a při kombinaci s ezetimibem sledovat INR.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:B01AA",
+      "drug_class": "Kumarinová antikoagulancia a fluindion",
+      "effect": "Při přidání Zetovaru může dojít ke změně protrombinového času nebo INR. Lékař má tyto hodnoty vhodně sledovat, zejména před léčbou a v její časné fázi; při změně dávky nebo vysazení Zetovaru se postup opakuje.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:14884",
+      "drug": "DIGOXIN",
+      "effect": "Atorvastatin může mírně zvýšit rovnovážnou koncentraci digoxinu. Pacienti užívající digoxin mají být odpovídajícím způsobem sledováni.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Kumarinová antikoagulancia a fluindion (např. warfarin, fenprokumon, acenokumarol)",
-      "effect": "Po přidání přípravku Zetovar k warfarinu, jinému kumarinovému antikoagulanciu nebo fluindionu řádně sledujte INR. U warfarinu nebo jiného kumarinového antikoagulancia stanovte protrombinový čas před zahájením léčby a dostatečně často v časné fázi; stejný postup zopakujte po změně dávky nebo vysazení přípravku Zetovar. Při přidání ezetimibu k warfarinu nebo fluindionu byly po uvedení na trh hlášeny zvýšené hodnoty INR.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "Warfarin",
-      "effect": "Atorvastatin v dávce 80 mg denně mírně prodloužil protrombinový čas, zejména během prvních dnů; hodnoty se během léčby vrátily k normálu. Před zahájením přípravku Zetovar a v časné fázi léčby pravidelně sledujte protrombinový čas; po změně dávky nebo vysazení přípravku postup zopakujte. Při přidání ezetimibu byly po uvedení na trh hlášeny zvýšené hodnoty INR.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "Grapefruitová šťáva",
-      "effect": "Velká množství mohou zvýšit plazmatické koncentrace atorvastatinu; více než 1,2 litru denně po dobu 5 dnů zvýšilo jeho AUC 2,5krát. Současné požívání velkých množství se nedoporučuje; nepijte více než jednu nebo dvě malé skleničky denně.",
+      "class_id": "substance:14884",
+      "drug": "PERORÁLNÍ ANTIKONCEPCE",
+      "effect": "Atorvastatin může zvýšit hladiny norethisteronu a ethinylestradiolu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Niacin (kyselina nikotinová) a její deriváty",
-      "effect": "Současné podávání může zvýšit riziko myopatie.",
+      "class_id": "substance:14884",
+      "drug": "FENOFIBRÁT",
+      "effect": "Při souběhu s atorvastatinem se může zvýšit riziko svalových příhod; fenofibrát také zvýšil koncentraci celkového ezetimibu přibližně 1,5krát. Současné užívání se nedoporučuje; pokud je nezbytné, lékař zváží nižší zahajovací dávku a klinické sledování.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:14884",
+      "drug": "GEMFIBROZIL",
+      "effect": "Při souběhu s atorvastatinem se může zvýšit riziko svalových příhod; gemfibrozil také zvýšil koncentraci celkového ezetimibu přibližně 1,7krát. Současné užívání se nedoporučuje; pokud je nezbytné, lékař zváží nižší zahajovací dávku a klinické sledování.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Zetovar snižuje zvýšený cholesterol a tuky v krvi a u dospělých se srdečním onemocněním pomáhá snižovat riziko srdečních a cévních příhod.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0228544",
+      "H": "",
+      "NAZEV": "ZETOVAR",
+      "SILA": "10MG/20MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "10MG/20MG TBL NOB 100",
+      "OBAL": "BLI",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "31",
+      "ATC_WHO": "C10BA05",
+      "RC": "31/112/18-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "1",
+      "DDDUN_WHO": "UD",
+      "DDDP_WHO": "100",
+      "ZDROJ_WHO": "NO26",
+      "LL": "14884,16227",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "ZETOVAR",
+      "MRP_CISLO": "CZ/H/1429/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OK",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "14884",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "21,7",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14884",
+          "ZDROJ": "C19",
+          "NAZEV_INN": "ATORVASTATINUM CALCICUM TRIHYDRICUM",
+          "NAZEV_EN": "ATORVASTATIN CALCIUM TRIHYDRATE",
+          "NAZEV": "TRIHYDRÁT VÁPENATÉ SOLI ATORVASTATINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "13790",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "20",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13790",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ATORVASTATINUM",
+          "NAZEV_EN": "ATORVASTATIN",
+          "NAZEV": "ATORVASTATIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "5624",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "2624",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "234",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "234",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CALCII CARBONAS",
+          "NAZEV_EN": "CALCIUM CARBONATE",
+          "NAZEV": "UHLIČITAN VÁPENATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "10287",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10287",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROLOSUM HYPOVISCOSUM",
+          "NAZEV_EN": "LOW VISCOSITY HYPROLOSE",
+          "NAZEV": "NÍZKOVISKÓZNÍ HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "1166",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1166",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "POLYSORBATUM 80",
+          "NAZEV_EN": "POLYSORBATE 80",
+          "NAZEV": "POLYSORBÁT 80"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "2378",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "SQ": "11",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "16227",
+        "SQ": "12",
+        "S": "L",
+        "AMNT": "10",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16227",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "EZETIMIBUM",
+          "NAZEV_EN": "EZETIMIBE",
+          "NAZEV": "EZETIMIB"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "2624",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "5624",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "1335",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "18178",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18178",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 30",
+          "NAZEV_EN": "POVIDONE K 30",
+          "NAZEV": "POVIDON K 30",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "3755",
+        "SQ": "17",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0228544",
+        "KOD_LATKY": "2378",
+        "SQ": "18",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0228544",
+      "PIL": "PI223062.pdf",
+      "DAT_ROZ_PIL": "03.06.2025",
+      "SPC": "SPC233336.pdf",
+      "DAT_ROZ_SPC": "07.05.2026",
+      "OBAL_TEXT": "OBAL187190.pdf",
+      "DAT_ROZ_OBAL": "24.05.2022",
+      "NR": "NR18050018.pdf",
+      "DAT_NPM_NR": "28.08.2019"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C10BA05",
+        "NT": "N",
+        "NAZEV": "ATORVASTATIN A EZETIMIB",
+        "NAZEV_EN": "ATORVASTATIN AND EZETIMIBE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

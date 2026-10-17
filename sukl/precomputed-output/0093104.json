@@ -1,9 +1,17 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A03",
+    "atc:A03F",
+    "atc:A03FA",
+    "atc:A03FA01",
+    "substance:12414"
+  ],
   "side_effects": [
     {
       "ctcae": "Somnolence",
       "frequency": "very_common",
-      "label": "Spavost; při vyšších dávkách se může objevit také výraznější ospalost.",
+      "label": "Ospalost.",
       "action": null,
       "action_condition": null
     },
@@ -17,14 +25,15 @@
     {
       "ctcae": "Extrapyramidal disorder",
       "frequency": "common",
-      "label": "Mimovolní pohyby, například tiky, třes, záškuby nebo svalové stahy; mohou se objevit zejména u dětí a mladých dospělých, při překročení doporučené dávky a dokonce po jediné dávce. Často postihují hlavu nebo krk a mohou nastat zejména na začátku léčby.",
-      "action": "discontinue_treatment",
+      "label": "Mimovolní pohyby, tiky, třes, záškuby nebo svalové stahy; zejména u dětí a mladých dospělých, při překročení doporučené dávky a někdy i po jediné dávce.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví nekontrolovatelné mimovolní pohyby, zejména hlavy nebo krku."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Extrapyramidal disorder",
+      "ctcae": "Nervous system disorders - Other, specify",
       "frequency": "common",
       "label": "Příznaky podobné Parkinsonově chorobě, například ztuhlost a třes.",
       "action": null,
@@ -33,14 +42,7 @@
     {
       "ctcae": "Akathisia",
       "frequency": "common",
-      "label": "Pohybový neklid (akatizie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "common",
-      "label": "Snížení krevního tlaku, zejména při injekčním podání.",
+      "label": "Akatizie (pohybový neklid).",
       "action": null,
       "action_condition": null
     },
@@ -52,16 +54,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
+      "ctcae": "Fatigue",
       "frequency": "common",
-      "label": "Pocit slabosti (astenie).",
+      "label": "Slabost (astenie).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blood prolactin abnormal",
       "frequency": "uncommon",
-      "label": "Zvýšená hladina prolaktinu v krvi; může způsobit tvorbu mléka u mužů i u žen, které nekojí.",
+      "label": "Zvýšená hladina prolaktinu v krvi, která může způsobit tvorbu mléka u mužů i žen, které nekojí.",
       "action": null,
       "action_condition": null
     },
@@ -75,49 +77,42 @@
     {
       "ctcae": "Hallucinations",
       "frequency": "uncommon",
-      "label": "Halucinace; při vyšších dávkách se mohou objevovat častěji.",
+      "label": "Halucinace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depressed level of consciousness",
       "frequency": "uncommon",
-      "label": "Snížená úroveň vědomí; při vyšších dávkách se může objevovat častěji.",
+      "label": "Snížená úroveň vědomí.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "uncommon",
-      "label": "Alergická reakce, včetně svědění nebo vyrážky.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Sinus bradycardia",
-      "frequency": "uncommon",
-      "label": "Zpomalení srdeční frekvence, zejména při injekčním podání.",
+      "label": "Alergická reakce (hypersenzitivita).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Extrapyramidal disorder",
       "frequency": "uncommon",
-      "label": "Svalové křeče a porucha svalového napětí (dystonie), včetně poruch vidění a mimovolního stočení oční bulvy; při vyšších dávkách se mohou objevit častěji a někdy i po jediné dávce.",
+      "label": "Dystonie, včetně poruch vidění a mimovolního stočení oční bulvy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Movements involuntary",
       "frequency": "uncommon",
-      "label": "Mimovolní pohyby (dyskineze); při vyšších dávkách se mohou objevovat častěji a někdy i po jediné dávce.",
+      "label": "Dyskineze.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Confusion",
       "frequency": "rare",
-      "label": "Zmatenost; při vyšších dávkách se může objevovat častěji.",
+      "label": "Stav zmatenosti.",
       "action": null,
       "action_condition": null
     },
@@ -129,19 +124,13 @@
       "action_condition": null
     },
     {
-      "ctcae": "Lactation disorder",
-      "frequency": "rare",
-      "label": "Tvorba a únik mléka z prsů (galaktorea).",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Methemoglobinemia",
       "frequency": "not_known",
-      "label": "Abnormální hladina krevního barviva (methemoglobinemie), která může způsobit změnu zabarvení kůže; souviset může s nedostatkem enzymu NADH cytochrom b5 reduktázy a byla hlášena zejména u novorozenců.",
+      "label": "Methemoglobinemie, která může souviset s nedostatkem reduktázy NADH cytochromu b5; zejména u novorozenců.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás zjistí abnormální hladina krevního barviva."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
@@ -154,20 +143,6 @@
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Poruchy srdečního rytmu: atrioventrikulární blokáda nebo zástava sinusového uzlu, zejména při intravenózním podání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cardiac arrest",
-      "frequency": "not_known",
-      "label": "Zástava srdce, která se může objevit krátce po injekčním podání, po zpomalení srdeční frekvence.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Electrocardiogram QT corrected interval prolonged",
-      "frequency": "not_known",
       "label": "Prodloužení QT intervalu na EKG.",
       "action": null,
       "action_condition": null
@@ -175,200 +150,370 @@
     {
       "ctcae": "Ventricular arrhythmia",
       "frequency": "not_known",
-      "label": "Torsade de pointes, závažná porucha srdečního rytmu.",
+      "label": "Torsade de pointes.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Atrioventrikulární blokáda.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Sinusová zástava.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Galactorrhea",
+      "frequency": "rare",
+      "label": "Galaktorea.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gynecomastia",
       "frequency": "not_known",
-      "label": "Zvětšení prsů u mužů.",
+      "label": "Zvětšení prsů u mužů (gynekomastie).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Movements involuntary",
       "frequency": "not_known",
-      "label": "Tardivní mimovolní pohyby, které mohou přetrvávat během dlouhodobé léčby nebo po jejím ukončení, zejména u starších pacientů.",
+      "label": "Tardivní dyskineze, která může přetrvávat; během nebo po dlouhodobé léčbě, zejména u starších pacientů.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky tardivní dyskineze, tedy mimovolní pohyby během dlouhodobé léčby nebo po ní."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Nervous system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Neuroleptický maligní syndrom, který se může projevovat vysokou horečkou, vysokým krevním tlakem, křečemi, pocením a nadměrným sliněním.",
+      "label": "Neuroleptický maligní syndrom; může se projevit vysokou horečkou, vysokým krevním tlakem, křečemi, pocením a nadměrným sliněním.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vysoká horečka, vysoký krevní tlak, křeče, pocení nebo nadměrné slinění."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "not_known",
-      "label": "Závažná alergická reakce včetně anafylaktické reakce nebo anafylaktického šoku, zejména při intravenózním podání.",
-      "action": "discontinue_treatment",
+      "label": "Závažná alergická reakce, která může zahrnovat svědění nebo vyrážku na obličeji, rtech či krku a potíže s dýcháním.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví svědění nebo vyrážka na obličeji, rtech či krku nebo potíže s dýcháním."
+        "patient_guide": "Svědění nebo vyrážka na obličeji, rtech či krku nebo potíže s dýcháním.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Šok po injekčním podání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "not_known",
-      "label": "Mdloby po injekčním podání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypertension",
-      "frequency": "not_known",
-      "label": "Přechodné zvýšení krevního tlaku; u pacientů s feochromocytomem může dojít k akutnímu zvýšení krevního tlaku. Bylo hlášeno také velmi vysoké zvýšení krevního tlaku.",
+      "ctcae": "Serotonin syndrome",
+      "frequency": null,
+      "label": "Při současném užívání metoklopramidu a serotonergních přípravků, například SSRI, může vzrůst riziko serotoninového syndromu.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
+      "class_id": null,
       "drug": "levodopa",
-      "effect": "Kombinace s metoklopramidem je kontraindikována, protože tyto přípravky mají vzájemně antagonistický účinek.",
+      "effect": "Metoklopramid a levodopa mají vzájemně opačný účinek; jejich kombinace je kontraindikována.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "dopaminergní agonisté",
-      "effect": "Kombinace s metoklopramidem je kontraindikována, protože tyto přípravky mají vzájemně antagonistický účinek.",
+      "effect": "Metoklopramid a dopaminergní agonisté mají vzájemně opačný účinek; jejich kombinace je kontraindikována.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "alkohol",
-      "effect": "Alkohol zvyšuje tlumivý účinek metoklopramidu; kombinaci je třeba se vyhnout.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zvýšený tlumivý účinek, který se může projevit ospalostí.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": null,
       "drug_class": "anticholinergika",
-      "effect": "Anticholinergika mají s metoklopramidem antagonistický účinek na motilitu zažívacího traktu.",
+      "effect": "Anticholinergika mohou působit proti účinku metoklopramidu na pohyblivost trávicího traktu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "deriváty morfinu",
-      "effect": "Deriváty morfinu mají s metoklopramidem antagonistický účinek na motilitu zažívacího traktu; zároveň se tlumivé účinky na centrální nervovou soustavu vzájemně zvyšují.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Vzájemně zvýšené tlumivé účinky na centrální nervovou soustavu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "effect": "Deriváty morfinu mohou působit proti účinku metoklopramidu na pohyblivost trávicího traktu. Jejich tlumivý účinek na centrální nervovou soustavu se s metoklopramidem vzájemně zesiluje.",
+      "effect_type": "antagonism",
+      "side_effects": []
     },
     {
-      "drug_class": "léčivé přípravky tlumící centrální nervovou soustavu (anxiolytika, sedativní H1 antihistaminika, sedativní antidepresiva, barbituráty, klonidin a související přípravky)",
-      "effect": "Tlumivé účinky těchto přípravků a metoklopramidu na centrální nervovou soustavu se vzájemně zvyšují.",
+      "class_id": "group:cns_depressant",
+      "drug_class": "Léky tlumící centrální nervovou soustavu, včetně anxiolytik, sedativních H1 antihistaminik, sedativních antidepresiv, barbiturátů, klonidinu a podobných přípravků",
+      "effect": "Tlumivý účinek těchto léků a metoklopramidu se vzájemně zesiluje.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Vzájemně zvýšené tlumivé účinky na centrální nervovou soustavu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:N05A",
       "drug_class": "neuroleptika",
-      "effect": "Metoklopramid může mít s dalšími neuroleptiky aditivní účinek na výskyt extrapyramidových poruch.",
+      "effect": "Metoklopramid může mít s neuroleptiky sčítající se účinek na výskyt extrapyramidových poruch.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Extrapyramidal disorder",
-          "frequency": null,
-          "label": "Zvýšené riziko extrapyramidových poruch.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "group:serotonergic",
       "drug_class": "serotonergní přípravky, například SSRI",
-      "effect": "Při současném užívání metoklopramidu a serotonergních přípravků může dojít ke zvýšení rizika serotoninového syndromu.",
+      "effect": "Při současném užívání s metoklopramidem může vzrůst riziko serotoninového syndromu.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Serotonin syndrome",
           "frequency": null,
-          "label": "Serotoninový syndrom.",
+          "label": "Může vzrůst riziko serotoninového syndromu při současném užívání s metoklopramidem.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
+      "class_id": null,
       "drug": "digoxin",
-      "effect": "Metoklopramid může snížit biologickou dostupnost digoxinu; je nutné pečlivě sledovat jeho koncentraci v plazmě.",
+      "effect": "Metoklopramid může snížit biologickou dostupnost digoxinu. Lékař má pečlivě sledovat jeho koncentraci v plazmě.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug": "cyklosporin",
-      "effect": "Metoklopramid zvyšuje biologickou dostupnost cyklosporinu (Cmax o 46 % a expozici o 22 %). Je nutné pečlivě sledovat jeho koncentraci v plazmě; klinický význam tohoto zvýšení není zřejmý.",
+      "effect": "Metoklopramid zvyšuje biologickou dostupnost cyklosporinu (maximální koncentraci o 46 % a expozici o 22 %). Klinický význam není jasný; lékař má pečlivě sledovat jeho koncentraci v plazmě.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "mivakurium",
-      "effect": "Injekční metoklopramid může prodloužit trvání neuromuskulární blokády inhibicí plazmatické cholinesterázy.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Prodloužení neuromuskulární blokády.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "suxamethonium",
-      "effect": "Injekční metoklopramid může prodloužit trvání neuromuskulární blokády inhibicí plazmatické cholinesterázy.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Prodloužení neuromuskulární blokády.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "silné inhibitory CYP2D6, například fluoxetin a paroxetin",
-      "effect": "Při současném podávání silných inhibitorů CYP2D6 roste úroveň účinku metoklopramidu. Klinický význam není znám, proto je nutné u pacientů sledovat výskyt nežádoucích účinků.",
+      "class_id": null,
+      "drug": "alkohol",
+      "effect": "Alkohol zvyšuje tlumivý účinek metoklopramidu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se k prevenci nebo léčbě nevolnosti a zvracení, například po chemoterapii či ozařování nebo při migréně.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0093104",
+      "H": "",
+      "NAZEV": "DEGAN",
+      "SILA": "10MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "40",
+      "CESTA": "POR",
+      "DOPLNEK": "10MG TBL NOB 40",
+      "OBAL": "TBC",
+      "DRZ": "LEK",
+      "ZEMDRZ": "SLO",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "20",
+      "ATC_WHO": "A03FA01",
+      "RC": "20/161/87-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "30",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "13,3333",
+      "ZDROJ_WHO": "NO26",
+      "LL": "12414",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "DEGAN",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0093104",
+        "KOD_LATKY": "12414",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "10,535",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "12414",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "METOCLOPRAMIDI HYDROCHLORIDUM MONOHYDRICUM",
+          "NAZEV_EN": "METOCLOPRAMIDE HYDROCHLORIDE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT METOKLOPRAMID-HYDROCHLORIDU"
+        }
+      },
+      {
+        "KOD_SUKL": "0093104",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0093104",
+        "KOD_LATKY": "2432",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "10",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2432",
+          "ZDROJ": "C15M",
+          "NAZEV_INN": "METOCLOPRAMIDI HYDROCHLORIDUM",
+          "NAZEV_EN": "METOCLOPRAMIDE HYDROCHLORIDE",
+          "NAZEV": "METOKLOPRAMID-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0093104",
+        "KOD_LATKY": "1168",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0093104",
+        "KOD_LATKY": "3059",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3059",
+          "ZDROJ": "MEM",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU"
+        }
+      },
+      {
+        "KOD_SUKL": "0093104",
+        "KOD_LATKY": "1871",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0093104",
+        "KOD_LATKY": "4296",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4296",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "OLEUM VEGETABILE HYDROGENATUM",
+          "NAZEV_EN": "HYDROGENATED VEGETABLE OIL",
+          "NAZEV": "HYDROGENOVANÝ ROSTLINNÝ OLEJ"
+        }
+      },
+      {
+        "KOD_SUKL": "0093104",
+        "KOD_LATKY": "2624",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0093104",
+      "PIL": "PI215661.pdf",
+      "DAT_ROZ_PIL": "07.11.2024",
+      "SPC": "SPC196804.pdf",
+      "DAT_ROZ_SPC": "14.03.2023",
+      "OBAL_TEXT": "OBAL155282.pdf",
+      "DAT_ROZ_OBAL": "02.04.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A03FA01",
+        "NT": "N",
+        "NAZEV": "METOKLOPRAMID",
+        "NAZEV_EN": "METOCLOPRAMIDE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

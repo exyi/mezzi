@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A05",
+    "atc:A05A",
+    "atc:A05AA",
+    "atc:A05AA02",
+    "substance:5477"
+  ],
   "side_effects": [
     {
       "ctcae": "Diarrhea",
@@ -6,34 +14,26 @@
       "label": "Měkká, řidší stolice nebo průjem.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte průjem."
-      }
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "common",
-      "label": "Měkká, řidší stolice nebo průjem.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud průjem přetrvává."
+        "patient_guide": null,
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "very_rare",
-      "label": "Silná bolest v pravém podžebří během léčby primární biliární cholangitidy (PBC).",
+      "label": "Silná bolest v pravém podžebří při léčbě primární biliární cholangitidy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Hepatic failure",
       "frequency": "very_rare",
-      "label": "Dekompenzace jaterní cirhózy při léčbě pokročilého stadia PBC; po ukončení léčby částečně odezněla.",
+      "label": "Při léčbě pokročilé primární biliární cholangitidy může dojít k dekompenzaci jaterní cirhózy; po ukončení léčby částečně ustoupila.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Biliary obstruction",
       "frequency": "very_rare",
       "label": "Ztvrdnutí žlučových kamenů v důsledku hromadění vápníku.",
       "action": null,
@@ -49,7 +49,7 @@
     {
       "ctcae": "Pruritus",
       "frequency": "not_known",
-      "label": "Svědění; při léčbě PBC se mohou příznaky na začátku léčby vzácně zhoršit, například svědění.",
+      "label": "Svědění; na začátku léčby primární biliární cholangitidy se může vzácně zhoršit.",
       "action": null,
       "action_condition": null
     },
@@ -70,64 +70,323 @@
   ],
   "combinations": [
     {
-      "drug_class": "Sekvestranty žlučových kyselin (cholestyramin, kolestipol)",
-      "effect": "Tyto léky vážou kyselinu ursodeoxycholovou ve střevě a snižují její vstřebávání i účinnost. Pokud je musíte užívat, vezměte je nejméně 2 hodiny před přípravkem URSOSAN FORTE nebo nejméně 2 hodiny po něm.",
+      "class_id": "atc:C10AC01",
+      "drug": "kolestyramin",
+      "effect": "Kolestyramin váže kyselinu ursodeoxycholovou ve střevě, a snižuje tak její vstřebávání a účinek. Pokud je současné užívání nutné, užijte kolestyramin nejméně 2 hodiny před Ursosanem Forte nebo nejméně 2 hodiny po něm.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Antacida obsahující hydroxid hlinitý a/nebo smektit (oxid hlinitý)",
-      "effect": "Tato antacida vážou kyselinu ursodeoxycholovou ve střevě a snižují její vstřebávání i účinnost. Pokud je musíte užívat, vezměte je nejméně 2 hodiny před přípravkem URSOSAN FORTE nebo nejméně 2 hodiny po něm.",
+      "class_id": "atc:C10AC02",
+      "drug": "kolestipol",
+      "effect": "Kolestipol váže kyselinu ursodeoxycholovou ve střevě, a snižuje tak její vstřebávání a účinek. Pokud je současné užívání nutné, užijte kolestipol nejméně 2 hodiny před Ursosanem Forte nebo nejméně 2 hodiny po něm.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:A02AB01",
+      "drug": "hydroxid hlinitý",
+      "effect": "Antacida obsahující hydroxid hlinitý vážou kyselinu ursodeoxycholovou ve střevě a snižují její vstřebávání a účinek. Pokud je současné užívání nutné, užijte antacidum nejméně 2 hodiny před Ursosanem Forte nebo nejméně 2 hodiny po něm.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A07BC05",
+      "drug": "smektit",
+      "effect": "Antacida obsahující smektit vážou kyselinu ursodeoxycholovou ve střevě a snižují její vstřebávání a účinek. Pokud je současné užívání nutné, užijte antacidum nejméně 2 hodiny před Ursosanem Forte nebo nejméně 2 hodiny po něm.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:5477",
+      "drug": "kyselina ursodeoxycholová",
+      "effect": "U pacientů léčených cyklosporinem může kyselina ursodeoxycholová ovlivnit jeho vstřebávání ze střeva. Lékař má kontrolovat koncentraci cyklosporinu v krvi a podle potřeby upravit jeho dávku.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01MA02",
       "drug": "ciprofloxacin",
-      "effect": "Kyselina ursodeoxycholová může v ojedinělých případech snížit vstřebávání ciprofloxacinu a jeho účinek.",
+      "effect": "Kyselina ursodeoxycholová může v ojedinělých případech snížit vstřebávání ciprofloxacinu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "dapson",
-      "effect": "Byl hlášen pokles terapeutického účinku dapsonu při současném užívání s kyselinou ursodeoxycholovou.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:C08CA08",
       "drug": "nitrendipin",
-      "effect": "Kyselina ursodeoxycholová snižuje maximální koncentraci nitrendipinu v plazmě i jeho expozici. Při současném užívání pečlivě sledujte výsledek léčby; může být nutné zvýšit dávku nitrendipinu.",
+      "effect": "Kyselina ursodeoxycholová snižuje maximální koncentraci nitrendipinu v plazmě a jeho expozici (AUC); lékař má sledovat účinek kombinace a může být nutné zvýšit dávku nitrendipinu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Další léky metabolizované podobným způsobem",
-      "effect": "Kyselina ursodeoxycholová může snižovat účinek těchto léků a může být nutné upravit jejich dávku. Pozorování mohou ukazovat na možnost indukce enzymů cytochromu P450 3A, tato indukce však nebyla prokázána ve studii s budesonidem.",
+      "class_id": "atc:J04BA02",
+      "drug": "dapson",
+      "effect": "Při současném užívání s kyselinou ursodeoxycholovou byl hlášen pokles terapeutického účinku dapsonu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "cyklosporin",
-      "effect": "Přípravek URSOSAN FORTE může ovlivnit vstřebávání cyklosporinu ze střeva a změnit jeho účinek. Lékař má kontrolovat koncentraci cyklosporinu v krvi a v případě potřeby upravit jeho dávku.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:C10AA07",
       "drug": "rosuvastatin",
-      "effect": "Při současném užívání kyseliny ursodeoxycholové 500 mg denně a rosuvastatinu 20 mg denně byla u zdravých dobrovolníků zjištěna mírně zvýšená hladina rosuvastatinu v plazmě. Klinický význam této interakce, také ve vztahu k jiným statinům, není znám.",
+      "effect": "U zdravých dobrovolníků vedlo současné užívání UDCA 500 mg denně a rosuvastatinu 20 mg denně k mírně zvýšené plazmatické hladině rosuvastatinu; klinický význam této interakce, i pro jiné statiny, není znám.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Estrogeny a hormonální antikoncepce",
-      "effect": "Estrogeny zvyšují vylučování cholesterolu do žluči a hormonální antikoncepce může podporovat vznik žlučových kamenů, což působí proti léčbě URSOSANEM FORTE při rozpouštění kamenů. Pacientky užívající přípravek k tomuto účelu mají používat účinnou nehormonální antikoncepci.",
+      "class_id": "atc:G03C",
+      "drug": "estrogeny",
+      "effect": "Při užívání Ursosanu Forte k rozpouštění žlučových kamenů mohou estrogeny zvyšovat vylučování cholesterolu do žluči a podporovat vznik žlučových kamenů, což působí opačně než léčba. Při této léčbě se doporučuje účinná nehormonální antikoncepce.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Léky snižující hladinu cholesterolu v krvi, například klofibrát",
-      "effect": "Tyto léky mohou zvyšovat vylučování cholesterolu do žluči a podporovat tvorbu žlučových kamenů, což působí proti léčbě URSOSANEM FORTE při rozpouštění kamenů.",
+      "class_id": "atc:C10AB01",
+      "drug": "klofibrát",
+      "effect": "Při užívání Ursosanu Forte k rozpouštění žlučových kamenů může klofibrát zvyšovat vylučování cholesterolu do žluči a podporovat vznik žlučových kamenů, což působí opačně než léčba.",
       "effect_type": "antagonism",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Ursosan Forte se používá k rozpouštění některých žlučových kamenů, k léčbě primární biliární cholangitidy a u dětí s cystickou fibrózou k léčbě souvisejícího onemocnění jater.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0226453",
+      "H": "",
+      "NAZEV": "URSOSAN FORTE",
+      "SILA": "500MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG TBL FLM 100",
+      "OBAL": "BLI",
+      "DRZ": "PMP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "43",
+      "ATC_WHO": "A05AA02",
+      "RC": "43/711/12-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0,75",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "66,6667",
+      "ZDROJ_WHO": "NO26",
+      "LL": "5477",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "URSOSAN FORTE",
+      "MRP_CISLO": "DE/H/3565/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0226453",
+        "KOD_LATKY": "5477",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5477",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ACIDUM URSODEOXYCHOLICUM",
+          "NAZEV_EN": "URSODEOXYCHOLIC ACID",
+          "NAZEV": "KYSELINA URSODEOXYCHOLOVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0226453",
+        "KOD_LATKY": "2970",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0226453",
+        "KOD_LATKY": "4989",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4989",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "PREGELATINISED MAIZE STARCH",
+          "NAZEV": "PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0226453",
+        "KOD_LATKY": "14679",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0226453",
+        "KOD_LATKY": "1300",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0226453",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0226453",
+        "SQ": "7",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0226453",
+        "KOD_LATKY": "10258",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10258",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910/6",
+          "NAZEV_EN": "HYPROMELLOSE 2910/6",
+          "NAZEV": "HYPROMELOSA 2910/6"
+        }
+      },
+      {
+        "KOD_SUKL": "0226453",
+        "KOD_LATKY": "2710",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0226453",
+        "KOD_LATKY": "2400",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2400",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 400",
+          "NAZEV_EN": "MACROGOL 400",
+          "NAZEV": "MAKROGOL 400"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0226453",
+      "PIL": "PI232029.pdf",
+      "DAT_ROZ_PIL": "24.03.2026",
+      "SPC": "SPC232030.pdf",
+      "DAT_ROZ_SPC": "24.03.2026",
+      "OBAL_TEXT": "OBAL232028.pdf",
+      "DAT_ROZ_OBAL": "24.03.2026",
+      "NR": "NR5435912.pdf",
+      "DAT_NPM_NR": "12.07.2017"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A05AA02",
+        "NT": "N",
+        "NAZEV": "KYSELINA URSODEOXYCHOLOVÁ",
+        "NAZEV_EN": "URSODEOXYCHOLIC ACID"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

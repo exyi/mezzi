@@ -1,4 +1,13 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A02",
+    "atc:A02B",
+    "atc:A02BC",
+    "atc:A02BC05",
+    "group:cyp2c19_inhibitor",
+    "substance:18068"
+  ],
   "side_effects": [
     {
       "ctcae": "Headache",
@@ -31,7 +40,7 @@
     {
       "ctcae": "Flatulence",
       "frequency": "common",
-      "label": "Plynatost a nadýmání.",
+      "label": "Plynatost nebo nadýmání.",
       "action": null,
       "action_condition": null
     },
@@ -50,7 +59,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
       "frequency": "common",
       "label": "Nezhoubné polypy žaludku.",
       "action": null,
@@ -59,7 +68,7 @@
     {
       "ctcae": "Peripheral edema",
       "frequency": "uncommon",
-      "label": "Otok nohou a kotníků (periferní otok).",
+      "label": "Otok nohou nebo kotníků.",
       "action": null,
       "action_condition": null
     },
@@ -73,14 +82,14 @@
     {
       "ctcae": "Dizziness",
       "frequency": "uncommon",
-      "label": "Závrať.",
+      "label": "Závratě nebo točení hlavy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "uncommon",
-      "label": "Pocity brnění (mravenčení).",
+      "label": "Brnění (mravenčení).",
       "action": null,
       "action_condition": null
     },
@@ -92,13 +101,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vertigo",
-      "frequency": "uncommon",
-      "label": "Pocit točení hlavy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Dry mouth",
       "frequency": "uncommon",
       "label": "Sucho v ústech.",
@@ -106,9 +108,9 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Investigations - Other, specify",
       "frequency": "uncommon",
-      "label": "Změny výsledků krevních testů, které ověřují funkci jater.",
+      "label": "Zvýšené hodnoty jaterních enzymů v krevních testech.",
       "action": null,
       "action_condition": null
     },
@@ -116,8 +118,11 @@
       "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
       "label": "Kožní vyrážka.",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Zvláště pokud je na místech vystavených slunci nebo je doprovázena bolestí kloubů.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Urticaria",
@@ -136,35 +141,35 @@
     {
       "ctcae": "Fracture",
       "frequency": "uncommon",
-      "label": "Zlomenina krčku stehenní kosti, zápěstí nebo páteře při užívání vyšších dávek příliš dlouho.",
+      "label": "Zlomenina krčku stehenní kosti, zápěstí nebo páteře; hlášena při vyšších dávkách a příliš dlouhém užívání.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Leukopenia",
       "frequency": "rare",
-      "label": "Snížený počet bílých krvinek, který může způsobit slabost a zvýšit náchylnost k infekcím.",
+      "label": "Snížený počet bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "rare",
-      "label": "Snížený počet krevních destiček, který může způsobit výskyt modřin.",
+      "label": "Snížený počet krevních destiček.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyponatremia",
       "frequency": "rare",
-      "label": "Nízká hladina sodíku v krvi, která může způsobit slabost, nevolnost či zvracení a křeče.",
+      "label": "Nízká hladina sodíku v krvi; může se projevit slabostí, nevolností nebo křečemi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Agitation",
       "frequency": "rare",
-      "label": "Pocit rozrušení.",
+      "label": "Rozrušení.",
       "action": null,
       "action_condition": null
     },
@@ -192,14 +197,14 @@
     {
       "ctcae": "Blurred vision",
       "frequency": "rare",
-      "label": "Rozmazané vidění.",
+      "label": "Rozmazané vidění; pokud se objeví, neřiďte ani neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Bronchospasm",
       "frequency": "rare",
-      "label": "Náhlé pocity dušnosti nebo pocit krátkého dechu (bronchospasmus).",
+      "label": "Náhlá dušnost nebo pocit krátkého dechu způsobený stažením průdušek.",
       "action": null,
       "action_condition": null
     },
@@ -213,17 +218,18 @@
     {
       "ctcae": "Candidiasis",
       "frequency": "rare",
-      "label": "Infekce zvaná moučnivka, která může postihnout střeva a je způsobená plísní.",
+      "label": "Kandidóza (moučnivka), která může postihnout střeva.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "rare",
-      "label": "Jaterní obtíže včetně zánětu jater, někdy se žloutenkou; mohou se projevit zežloutnutím kůže, tmavou močí a únavou.",
+      "label": "Zánět jater, někdy se žloutenkou.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud vám zežloutne kůže, ztmavne moč nebo se objeví únava; přestaňte přípravek užívat a ihned kontaktujte lékaře."
+        "patient_guide": "Zežloutnutí kůže, tmavá moč a únava.",
+        "min_severity": 2
       }
     },
     {
@@ -236,10 +242,11 @@
     {
       "ctcae": "Photosensitivity",
       "frequency": "rare",
-      "label": "Vyrážka na kůži při vystavení slunci.",
+      "label": "Vyrážka na kůži po vystavení slunci.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vyrážka, zejména na kůži vystavené slunci, sdělte to co nejdříve lékaři."
+        "patient_guide": "Zvláště pokud je vyrážka na místech vystavených slunci nebo je doprovázena bolestí kloubů.",
+        "min_severity": 2
       }
     },
     {
@@ -259,7 +266,7 @@
     {
       "ctcae": "Malaise",
       "frequency": "rare",
-      "label": "Celkový pocit nevolnosti a ztráty energie.",
+      "label": "Celkový pocit nevolnosti nebo ztráta energie.",
       "action": null,
       "action_condition": null
     },
@@ -271,94 +278,74 @@
       "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
-      "frequency": "rare",
-      "label": "Závažná alergická reakce, například náhlá dušnost, otok rtů, jazyka, hrdla nebo celého těla, vyrážka, mdloby, obtížné polykání; může zahrnovat horečku, angioedém nebo anafylaktickou reakci až šok.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví některý z těchto příznaků závažné alergické reakce, přestaňte přípravek užívat a ihned kontaktujte lékaře."
-      }
-    },
-    {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Agranulocytosis",
       "frequency": "very_rare",
-      "label": "Agranulocytóza, tedy nedostatek bílých krvinek, který může oslabit imunitu.",
+      "label": "Agranulocytóza (nedostatek bílých krvinek). Při infekci s horečkou a výrazně zhoršeným celkovým stavem nebo s místními příznaky, například bolestí v krku či ústech nebo obtížemi při močení, může být počet bílých krvinek nízký.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte infekci s horečkou a výrazně zhoršeným celkovým stavem nebo horečku se známkami místní infekce, například bolestí v krku, ústech či obtížemi při močení, co nejdříve kontaktujte lékaře."
+        "patient_guide": "Infekce s horečkou a závažně zhoršeným celkovým stavem nebo horečka se známkami místní infekce, například bolestí v krku, hrdle či ústech nebo obtížemi při močení.",
+        "min_severity": 2
       }
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Pancytopenie, tedy pokles více druhů krevních buněk.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Agresivita.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Hallucinations",
       "frequency": "very_rare",
-      "label": "Zrakové, hmatové nebo sluchové vjemy neexistujících věcí (halucinace).",
+      "label": "Vjemy neexistujících věcí (halucinace).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatic failure",
       "frequency": "very_rare",
-      "label": "Závažné jaterní poruchy, které mohou vést k jaternímu selhání; zejména u pacientů s již existujícím onemocněním jater.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud vám zežloutne kůže, ztmavne moč nebo se objeví únava; přestaňte přípravek užívat a ihned kontaktujte lékaře."
-      }
+      "label": "Závažné jaterní poruchy vedoucí k selhání jater.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Encephalopathy",
       "frequency": "very_rare",
-      "label": "Zánět mozku při závažných jaterních poruchách, zejména u pacientů s již existujícím onemocněním jater.",
+      "label": "Zánět mozku při závažných jaterních poruchách.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Erythema multiforme",
       "frequency": "very_rare",
-      "label": "Závažná vyrážka s puchýři a olupováním kůže (erythema multiforme); může být spojena s horečkou a bolestí kloubů.",
+      "label": "Erythema multiforme, závažná kožní reakce; může se objevit náhle, také po několika týdnech léčby, s puchýři a olupováním kůže, horečkou nebo bolestí kloubů.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se kdykoli během léčby, i po několika týdnech, objeví náhlá závažná vyrážka, puchýře nebo olupování kůže, přestaňte přípravek užívat a ihned kontaktujte lékaře."
+        "patient_guide": "Náhlý výskyt závažné vyrážky nebo zčervenání kůže s puchýři a olupováním; mohou se objevit bolestivé puchýře a krvácení ze rtů, očí, úst, nosu nebo pohlavních orgánů.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "very_rare",
-      "label": "Stevensův-Johnsonův syndrom: závažná vyrážka s puchýři a olupováním kůže, případně bolestivými puchýři nebo krvácením ze rtů, očí, úst, nosu či pohlavních orgánů; může vést k život ohrožujícímu poškození kůže a sliznic.",
+      "label": "Stevensův-Johnsonův syndrom, závažná kožní reakce; může se objevit náhle, také po několika týdnech léčby, s puchýři a olupováním kůže, horečkou nebo bolestí kloubů.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se kdykoli během léčby, i po několika týdnech, objeví náhlá závažná vyrážka, puchýře nebo olupování kůže, přestaňte přípravek užívat a ihned kontaktujte lékaře."
+        "patient_guide": "Náhlý výskyt závažné vyrážky nebo zčervenání kůže s puchýři a olupováním; mohou se objevit bolestivé puchýře a krvácení ze rtů, očí, úst, nosu nebo pohlavních orgánů.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "very_rare",
-      "label": "Toxická epidermální nekrolýza: závažná vyrážka s puchýři a olupováním kůže, případně bolestivými puchýři nebo krvácením ze rtů, očí, úst, nosu či pohlavních orgánů; může vést k život ohrožujícímu poškození kůže a sliznic.",
+      "label": "Toxická epidermální nekrolýza, závažné rozsáhlé poškození kůže a povrchových sliznic s olupováním; může se objevit náhle, také po několika týdnech léčby, s puchýři, horečkou nebo bolestí kloubů.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se kdykoli během léčby, i po několika týdnech, objeví náhlá závažná vyrážka, puchýře nebo olupování kůže, přestaňte přípravek užívat a ihned kontaktujte lékaře."
+        "patient_guide": "Náhlý výskyt závažné vyrážky nebo zčervenání kůže s puchýři a olupováním; mohou se objevit bolestivé puchýře a krvácení ze rtů, očí, úst, nosu nebo pohlavních orgánů.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS), která se může projevit závažnou vyrážkou, puchýři a olupováním kůže a může být život ohrožující.",
+      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS), závažná kožní reakce; může se objevit náhle, také po několika týdnech léčby, s puchýři a olupováním kůže, horečkou nebo bolestí kloubů.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se kdykoli během léčby, i po několika týdnech, objeví náhlá závažná vyrážka, puchýře nebo olupování kůže, přestaňte přípravek užívat a ihned kontaktujte lékaře."
+        "patient_guide": "Náhlý výskyt závažné vyrážky nebo zčervenání kůže s puchýři a olupováním; mohou se objevit bolestivé puchýře a krvácení ze rtů, očí, úst, nosu nebo pohlavních orgánů.",
+        "min_severity": 1
       }
     },
     {
@@ -369,16 +356,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Tubulointerstitial nephritis",
-      "frequency": "very_rare",
-      "label": "Intersticiální zánět ledvin; u některých pacientů bylo současně hlášeno selhání ledvin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Závažné poruchy funkce ledvin, včetně selhání ledvin.",
+      "label": "Závažné poruchy funkce ledvin.",
       "action": null,
       "action_condition": null
     },
@@ -392,27 +372,19 @@
     {
       "ctcae": "Hypomagnesemia",
       "frequency": "not_known",
-      "label": "Pokles hladiny hořčíku v krvi, pokud přípravek užíváte déle než 3 měsíce; může se projevit únavou, nechtěnými záškuby svalů, dezorientací, křečemi, závratěmi nebo zrychleným srdečním tepem a může způsobit také pokles hladiny draslíku a vápníku.",
+      "label": "Pokles hladiny hořčíku v krvi; při užívání déle než 3 měsíce se může projevit únavou, nechtěnými záškuby svalů, dezorientací, křečemi, závratěmi nebo zrychleným srdečním tepem. Může být spojena s poklesem hladin draslíku a vápníku.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se po užívání přípravku déle než 3 měsíce objeví některý z uvedených příznaků, ihned vyhledejte lékaře."
+        "patient_guide": "Únava, nechtěné záškuby svalů, dezorientace, křeče, závratě nebo zrychlený srdeční tep po užívání déle než 3 měsíce.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Colitis",
       "frequency": "not_known",
-      "label": "Zánět střeva, včetně mikroskopické kolitidy; může vést k průjmu.",
+      "label": "Zánět střeva, který může vést k průjmům.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Dermatitis psoriasiform",
-      "frequency": "not_known",
-      "label": "Subakutní kožní lupus erythematodes (SCLE), který se může projevit kožními lézemi, zejména na místech vystavených slunci, a bolestí kloubů.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kožní léze, zejména na kůži vystavené slunci, a jsou doprovázené bolestí kloubů, neprodleně vyhledejte lékařskou pomoc."
-      }
     },
     {
       "ctcae": "Rash maculo-papular",
@@ -420,152 +392,579 @@
       "label": "Vyrážka, případně provázená bolestmi kloubů.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vyrážka, zejména na kůži vystavené slunci, sdělte to co nejdříve lékaři."
+        "patient_guide": "Zvláště pokud je na místech vystavených slunci nebo je doprovázena bolestí kloubů.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "rare",
+      "label": "Těžká alergická reakce s náhlou dušností, otokem rtů, jazyka, hrdla nebo celého těla, vyrážkou, mdlobou nebo obtížným polykáním.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Náhlá dušnost, otok rtů, jazyka, hrdla nebo celého těla, vyrážka, mdloba nebo obtížné polykání.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Other, specify",
+      "frequency": "very_rare",
+      "label": "Subakutní kožní lupus erythematodes (SCLE); léze, zejména na místech vystavených slunci, mohou být doprovázeny bolestí kloubů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Kožní léze, zejména na místech vystavených slunci, doprovázené bolestí kloubů.",
+        "min_severity": 2
       }
     }
   ],
   "combinations": [
     {
+      "class_id": "substance:14980",
       "drug": "nelfinavir",
-      "effect": "Souběžné užívání s esomeprazolem je kontraindikováno; esomeprazol může snižovat hladiny nelfinaviru a jeho aktivního metabolitu.",
+      "effect": "Přípravek Helides se nesmí užívat současně s nelfinavirem; esomeprazol může snížit jeho hladinu v séru.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
+      "class_id": "substance:14980",
       "drug": "atazanavir",
-      "effect": "Souběžné podávání se nedoporučuje, protože esomeprazol může výrazně snížit dostupnost atazanaviru. Pokud je kombinace s inhibitorem protonové pumpy nevyhnutelná, doporučuje se pečlivé klinické sledování a zvýšení dávky atazanaviru na 400 mg s ritonavirem 100 mg; dávka esomeprazolu nemá překročit 20 mg.",
+      "effect": "Současné užívání se nedoporučuje, protože esomeprazol může snížit hladinu atazanaviru. Pokud je kombinace nevyhnutelná, lékař má pečlivě sledovat stav a zvýšit dávku atazanaviru na 400 mg a ritonaviru na 100 mg; dávka esomeprazolu nemá překročit 20 mg. U omeprazolu bylo popsáno snížení expozice atazanaviru přibližně o 75 % při 40 mg a o 30 % při 20 mg; zvýšení dávky atazanaviru na 400 mg při omeprazolu 40 mg účinek nevyrovnalo.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "saquinavir",
-      "effect": "Při souběžném podávání omeprazolu 40 mg denně s ritonavirem byly hlášeny zvýšené sérové hladiny sachinaviru o 80–100 %; klinický význam interakce s esomeprazolem není v textu upřesněn.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "methotrexát",
-      "effect": "Při souběžném podávání inhibitorů protonové pumpy byly u některých pacientů hlášeny zvýšené hladiny methotrexátu. Při vysokých dávkách methotrexátu může být nutné zvážit dočasné vysazení esomeprazolu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "takrolimus",
-      "effect": "Souběžné podávání esomeprazolu zvyšuje sérové hladiny takrolimu. Je třeba zesíleně sledovat koncentraci takrolimu a funkci ledvin (clearance kreatininu) a v případě potřeby upravit dávkování takrolimu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "ketokonazol",
-      "effect": "Potlačení žaludeční kyselosti esomeprazolem může snížit absorpci ketokonazolu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "itrakonazol",
-      "effect": "Potlačení žaludeční kyselosti esomeprazolem může snížit absorpci itrakonazolu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "erlotinib",
-      "effect": "Potlačení žaludeční kyselosti esomeprazolem může snížit absorpci erlotinibu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "digoxin",
-      "effect": "Esomeprazol může zvýšit absorpci digoxinu; při současném podávání omeprazolu 20 mg denně vzrostla biologická dostupnost digoxinu u zdravých dobrovolníků o 10 % (u 2 z 10 osob až o 30 %). Toxicita digoxinu byla hlášena vzácně. Opatrnost je potřebná zejména při vysokých dávkách esomeprazolu u starších pacientů a tehdy se má zesíleně sledovat terapeutický účinek digoxinu. Při plánované dlouhodobé léčbě esomeprazolem společně s digoxinem se doporučuje vyšetřit hořčík před zahájením a opakovaně během léčby.",
-      "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Hypomagnesemia",
-          "frequency": "not_known",
-          "label": "Při dlouhodobé léčbě esomeprazolem společně s digoxinem se doporučuje sledování hladiny hořčíku; při jejím poklesu se mohou objevit příznaky hypomagnezemie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčivé přípravky metabolizované CYP2C19 (diazepam, citalopram, imipramin, klomipramin a další)",
-      "effect": "Esomeprazol inhibuje CYP2C19 a může zvýšit plazmatické koncentrace souběžně užívaných léčiv metabolizovaných tímto enzymem; může být nutné snížit jejich dávkování. Toto je třeba zvážit zvláště při užívání esomeprazolu dle potřeby.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "diazepam",
-      "effect": "Souběžné užívání esomeprazolu může zvýšit koncentraci diazepamu. Po podání esomeprazolu 30 mg se clearance diazepamu, který je substrátem CYP2C19, snížila o 45 %; může být nutné zvážit úpravu dávkování.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "fenytoin",
-      "effect": "Současné podávání esomeprazolu 40 mg zvýšilo minimální plazmatické koncentrace fenytoinu u pacientů s epilepsií o 13 %. Doporučuje se sledovat plazmatické koncentrace fenytoinu při zahájení i ukončení léčby esomeprazolem.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "cilostazol",
-      "effect": "Esomeprazol inhibuje CYP2C19. Ve studii s omeprazolem 40 mg se zvýšila maximální koncentrace a expozice cilostazolu o 18 %, respektive 26 %, a jednoho jeho aktivního metabolitu o 29 %, respektive 69 %; úprava dávkování se může týkat cilostazolu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "cisaprid",
-      "effect": "Současné podávání esomeprazolu 40 mg zvýšilo AUC cisapridu o 32 % a prodloužilo jeho eliminační poločas o 31 %, bez významného zvýšení maximální plazmatické koncentrace. Mírně prodloužený QTc interval po samotném cisapridu se při kombinaci s esomeprazolem dále neprodloužil.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Warfarin a jiné kumarinové deriváty",
-      "effect": "Při souběžném podávání esomeprazolu 40 mg a warfarinu zůstaly v klinické studii koagulační časy v obvyklém rozmezí, po uvedení přípravku na trh však bylo hlášeno několik případů klinicky významně zvýšeného INR. Doporučuje se pečlivější sledování na začátku a při ukončení souběžné léčby.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
+      "class_id": "substance:14980",
       "drug": "klopidogrel",
-      "effect": "Studie prokázaly snížení expozice aktivnímu metabolitu klopidogrelu při souběžném podávání s esomeprazolem a snížení maximální inhibice agregace krevních destiček. Klinický význam není znám; jako bezpečnostní opatření se má souběžnému podávání esomeprazolu a klopidogrelu zabránit.",
+      "effect": "Současnému užívání se má zabránit: esomeprazol snižuje expozici aktivnímu metabolitu klopidogrelu; při esomeprazolu 40 mg denně byla v průměru o 40 % nižší a maximální inhibice shlukování krevních destiček o 14 % nižší. Klinický význam není znám. U kombinace esomeprazolu 20 mg s kyselinou acetylsalicylovou 81 mg byla expozice metabolitu nižší téměř o 40 %, ale maximální inhibice shlukování destiček byla stejná jako při samotném klopidogrelu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "klarithromycin",
-      "effect": "Klarithromycin je inhibitor CYP3A4. Souběžné podávání esomeprazolu s klarithromycinem 500 mg dvakrát denně zdvojnásobilo dostupnost (AUC) esomeprazolu. Úprava dávky esomeprazolu obvykle není nutná, ale má se zvážit u pacientů se závažnou poruchou funkce jater nebo při plánované dlouhodobé léčbě.",
+      "class_id": null,
+      "drug_class": "Léky metabolizované enzymem CYP2C19, například citalopram, imipramin a klomipramin",
+      "effect": "Esomeprazol inhibuje CYP2C19 a může zvýšit plazmatické koncentrace těchto léků; může být nutné, aby lékař snížil jejich dávku. Zvláštní pozornost je třeba věnovat užívání esomeprazolu dle potřeby.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky inhibující CYP2C19 a/nebo CYP3A4 (např. vorikonazol)",
-      "effect": "Souběžné podávání esomeprazolu s inhibitory CYP2C19 a CYP3A4 může zvýšit dostupnost esomeprazolu více než dvojnásobně. Úprava dávkování obvykle není nutná, má se však zvážit u pacientů se závažnou poruchou funkce jater a při plánované dlouhodobé léčbě. Vorikonazol zvýšil AUC omeprazolu o 280 %.",
+      "class_id": "substance:18068",
+      "drug": "diazepam",
+      "effect": "Esomeprazol inhibuje jeho metabolismus přes CYP2C19 a může zvýšit jeho koncentraci; může být nutné, aby lékař snížil dávku. Při 30 mg esomeprazolu byla clearance diazepamu snížena o 45 %.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "rifampicin",
-      "effect": "Rifampicin indukuje CYP2C19 a/nebo CYP3A4 a může zvýšit metabolismus esomeprazolu, čímž sníží jeho sérové hladiny.",
+      "class_id": "substance:18068",
+      "drug": "fenytoin",
+      "effect": "Esomeprazol inhibuje jeho metabolismus přes CYP2C19; při 40 mg esomeprazolu se minimální plazmatická koncentrace fenytoinu zvýšila o 13 %. Lékař má sledovat jeho koncentraci při zahájení nebo ukončení léčby esomeprazolem a může být nutné snížit dávku.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "ketokonazol",
+      "effect": "Snížení žaludeční kyselosti při užívání esomeprazolu může snížit vstřebávání ketokonazolu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "třezalka tečkovaná (Hypericum perforatum)",
-      "effect": "Třezalka tečkovaná indukuje CYP2C19 a/nebo CYP3A4 a může zvýšit metabolismus esomeprazolu, čímž sníží jeho sérové hladiny.",
+      "class_id": "substance:18068",
+      "drug": "itrakonazol",
+      "effect": "Snížení žaludeční kyselosti při užívání esomeprazolu může snížit vstřebávání itrakonazolu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Diuretika a jiné léčivé přípravky, které mohou způsobit hypomagnezemii",
-      "effect": "Při plánované dlouhodobé léčbě esomeprazolem společně s léčivými přípravky, které mohou způsobit hypomagnezemii, se doporučuje vyšetřit hladinu hořčíku před zahájením léčby a opakovaně během ní.",
+      "class_id": "substance:18068",
+      "drug": "erlotinib",
+      "effect": "Snížení žaludeční kyselosti při užívání esomeprazolu může snížit vstřebávání erlotinibu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "digoxin",
+      "effect": "Snížení žaludeční kyselosti může zvýšit vstřebávání digoxinu. Při souběžném užívání omeprazolu 20 mg denně se jeho biologická dostupnost u zdravých dobrovolníků zvýšila o 10 % (až o 30 % u 2 z 10 osob); vzácně byla hlášena toxicita digoxinu. Opatrnost a intenzivnější sledování účinku se doporučují při vysokých dávkách esomeprazolu u starších pacientů.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "cisaprid",
+      "effect": "Při současném podání 40 mg esomeprazolu se u zdravých dobrovolníků plocha pod křivkou koncentrace cisapridu zvýšila o 32 % a poločas o 31 %, bez významného zvýšení nejvyšší koncentrace; mírně prodloužený QTc po samotném cisapridu se dále neprodloužil.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "takrolimus",
+      "effect": "Souběžné podávání esomeprazolu může zvýšit sérové hladiny takrolimu. Lékař má zesílit sledování jeho koncentrace a funkce ledvin a podle potřeby upravit dávku takrolimu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "methotrexát",
+      "effect": "Při souběžném užívání inhibitoru protonové pumpy byly u některých pacientů hlášeny zvýšené hladiny methotrexátu. Při vysokých dávkách methotrexátu může lékař zvážit dočasné vysazení esomeprazolu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "warfarin",
+      "effect": "Při současném podávání esomeprazolu 40 mg byly v klinické studii koagulační časy v běžném rozmezí, po uvedení na trh však bylo hlášeno několik případů klinicky významně zvýšeného INR. Doporučuje se bližší sledování na začátku a při ukončení společné léčby.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypomagnesemia",
-          "frequency": "not_known",
-          "label": "Při dlouhodobé léčbě esomeprazolem společně s léčivými přípravky, které mohou snižovat hořčík, se doporučuje sledování hladiny hořčíku; může dojít k hypomagnezemii.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "rifampicin",
+      "effect": "Rifampicin může urychlit metabolismus esomeprazolu a snížit jeho hladinu v séru.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "třezalka tečkovaná",
+      "effect": "Třezalka tečkovaná může urychlit metabolismus esomeprazolu a snížit jeho hladinu v séru.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "klarithromycin",
+      "effect": "Klarithromycin inhibuje CYP3A4; při jeho podávání 500 mg dvakrát denně spolu s esomeprazolem se dostupnost esomeprazolu vyjádřená jako AUC zdvojnásobila. Úprava dávky obvykle není nutná, ale má se zvážit při závažné poruše funkce jater nebo plánované dlouhodobé léčbě.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Kombinovaný inhibitor CYP2C19 a CYP3A4",
+      "effect": "Současné podávání může zvýšit dostupnost esomeprazolu více než dvojnásobně. Úprava dávky obvykle není nutná, ale má se zvážit při závažné poruše funkce jater nebo plánované dlouhodobé léčbě.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:18068",
+      "drug": "vorikonazol",
+      "effect": "Vorikonazol inhibuje CYP2C19 i CYP3A4; u omeprazolu zvýšil AUC o 280 %. Při současném podávání esomeprazolu a inhibitoru obou enzymů může být dostupnost esomeprazolu více než dvojnásobná. Úprava dávky obvykle není nutná, ale má se zvážit při závažné poruše funkce jater nebo plánované dlouhodobé léčbě.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Helides snižuje tvorbu žaludeční kyseliny a používá se k léčbě refluxu a žaludečních či dvanáctníkových vředů.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0180079",
+      "H": "",
+      "NAZEV": "HELIDES",
+      "SILA": "40MG",
+      "FORMA": "CPS ETD",
+      "BALENI": "98",
+      "CESTA": "POR",
+      "DOPLNEK": "40MG CPS ETD 98",
+      "OBAL": "TBC",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "09",
+      "ATC_WHO": "A02BC05",
+      "RC": "09/407/10-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "30",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "130,6667",
+      "ZDROJ_WHO": "NO26",
+      "LL": "18068",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "0",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "HELIDES",
+      "MRP_CISLO": "CZ/H/0495/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OW",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "18068",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "43,37",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18068",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "ESOMEPRAZOLUM MAGNESICUM DIHYDRICUM",
+          "NAZEV_EN": "ESOMEPRAZOLE MAGNESIUM DIHYDRATE",
+          "NAZEV": "DIHYDRÁT HOŘEČNATÉ SOLI ESOMEPRAZOLU"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "14980",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "40",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14980",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ESOMEPRAZOLUM",
+          "NAZEV_EN": "ESOMEPRAZOLE",
+          "NAZEV": "ESOMEPRAZOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "14512",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14512",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "SACCHARI SPHAERAE",
+          "NAZEV_EN": "SUGAR SPHERES",
+          "NAZEV": "ZRNĚNÝ CUKR"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "10256",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10256",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910/3",
+          "NAZEV_EN": "HYPROMELLOSE 2910/3",
+          "NAZEV": "HYPROMELOSA 2910/3"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "503",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "503",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "DIMETICONUM",
+          "NAZEV_EN": "DIMETICONE",
+          "NAZEV": "DIMETIKON"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "1166",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1166",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "POLYSORBATUM 80",
+          "NAZEV_EN": "POLYSORBATE 80",
+          "NAZEV": "POLYSORBÁT 80"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "875",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "875",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MANNITOLUM",
+          "NAZEV_EN": "MANNITOL",
+          "NAZEV": "MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "13929",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13929",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "DIACETOMONOGLYCERIDUM",
+          "NAZEV_EN": "DIACETOMONOGLYCERIDE",
+          "NAZEV": "DIACETOMONOACYLGLYCEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "1871",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "877",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "877",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "ACIDUM METHACRYLICUM ET ETHYLIS ACRYLAS POLYMERISATUM 1:1 DISPERSIO 30%",
+          "NAZEV_EN": "METHACRYLIC ACID - ETHYL ACRYLATE COPOLYMER (1:1) DISPERSION 30 PER CENT",
+          "NAZEV": "KOPOLYMER KYSELINY METHAKRYLOVÉ A ETHYL-AKRYLÁTU 1:1 DISPERZE 30%"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "9832",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9832",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "TRIETHYLIS CITRAS",
+          "NAZEV_EN": "TRIETHYL CITRATE",
+          "NAZEV": "TRIETHYL-CITRÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "4824",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4824",
+          "ZDROJ": "C16",
+          "NAZEV_INN": "GLYCEROMACROGOLI STEARATES",
+          "NAZEV_EN": "STEAROYL MACROGOLGLYCERIDES",
+          "NAZEV": "GLYCEROMAKROGOL-STEARÁTY"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "SQ": "14",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "4256",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "2710",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "2855",
+        "SQ": "17",
+        "S": "A",
+        "AMNT": "100",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "SQ": "18",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "4256",
+        "SQ": "19",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "2710",
+        "SQ": "20",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "2855",
+        "SQ": "21",
+        "S": "A",
+        "AMNT": "100",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "SQ": "22",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0180079",
+        "KOD_LATKY": "4804",
+        "SQ": "23",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "4804",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ATRAMENTUM NIGRUM",
+          "NAZEV_EN": "BLACK INK",
+          "NAZEV": "ČERNÝ INKOUST"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0180079",
+      "PIL": "PI204596.pdf",
+      "DAT_ROZ_PIL": "09.11.2023",
+      "SPC": "SPC204597.pdf",
+      "DAT_ROZ_SPC": "09.11.2023",
+      "OBAL_TEXT": "OBAL204595.pdf",
+      "DAT_ROZ_OBAL": "09.11.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A02BC05",
+        "NT": "N",
+        "NAZEV": "ESOMEPRAZOL",
+        "NAZEV_EN": "ESOMEPRAZOLE"
+      },
+      "formy": {
+        "FORMA": "CPS ETD",
+        "NAZEV": "Enterosolventní tvrdá tobolka",
+        "NAZEV_EN": "Gastro-resistant capsule, hard",
+        "NAZEV_LAT": "Capsula enterosolvens dura",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10212000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

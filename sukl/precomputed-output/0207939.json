@@ -1,586 +1,541 @@
 {
+  "classes": [
+    "atc:R",
+    "atc:R05",
+    "atc:R05D",
+    "atc:R05DA",
+    "atc:R05DA04",
+    "substance:5382"
+  ],
   "side_effects": [
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závrať",
+      "label": "Závrať; častá podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "common",
-      "label": "Bolest hlavy",
+      "label": "Bolest hlavy; častá podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Pocit na zvracení",
+      "label": "Pocit na zvracení; častý podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "common",
-      "label": "Zvracení",
+      "label": "Zvracení; časté podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Constipation",
       "frequency": "common",
-      "label": "Zácpa; při dlouhodobém podávání může být úporná",
+      "label": "Zácpa; při dlouhodobém užívání může být úporná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Insomnia",
       "frequency": "uncommon",
-      "label": "Poruchy spánku",
+      "label": "Poruchy spánku; méně časté podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash",
       "frequency": "uncommon",
-      "label": "Vyrážka",
+      "label": "Vyrážka; méně častá podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urticaria",
       "frequency": "uncommon",
-      "label": "Kopřivka",
+      "label": "Kopřivka; méně častá podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blurred vision",
+      "ctcae": "Vision decreased",
       "frequency": "rare",
-      "label": "Poruchy zraku",
+      "label": "Poruchy zraku; vzácné podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Sinus bradycardia",
       "frequency": "rare",
-      "label": "Zúžení zornic (mióza)",
+      "label": "Zúžení zornic (mióza); vzácné podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hearing impaired",
       "frequency": "rare",
-      "label": "Poruchy sluchu",
+      "label": "Poruchy sluchu; vzácné podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dry mouth",
       "frequency": "rare",
-      "label": "Sucho v ústech",
+      "label": "Sucho v ústech; vzácné podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "very_rare",
-      "label": "Nižší počet krevních destiček (trombocytopenie)",
+      "label": "Snížení počtu krevních destiček; velmi vzácné podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Euphoria",
       "frequency": "very_rare",
-      "label": "Euforie (povznesená dobrá nálada)",
+      "label": "Euforie; velmi vzácná podle příbalové informace.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Útlum dechového centra; na tento účinek jsou citlivější děti",
-      "action": null,
-      "action_condition": null
+      "label": "Útlum dechového centra; děti jsou k němu citlivější. Velmi vzácný podle příbalové informace.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví pomalé nebo mělké dýchání.",
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": null,
+      "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Léková závislost morfinového typu",
+      "label": "Léková závislost morfinového typu; četnost nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Somnolence",
       "frequency": "not_known",
-      "label": "Útlum",
-      "action": null,
-      "action_condition": null
+      "label": "Útlum; četnost nelze určit.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví spolu s pomalým nebo mělkým dýcháním, zmateností, malými zorničkami, nevolností či zvracením, zácpou nebo nechutenstvím.",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Confusion",
       "frequency": "not_known",
-      "label": "Zmatenost",
-      "action": null,
-      "action_condition": null
+      "label": "Zmatenost; četnost nelze určit.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví spolu s pomalým nebo mělkým dýcháním, ospalostí, malými zorničkami, nevolností či zvracením, zácpou nebo nechutenstvím.",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Palpitations",
       "frequency": "not_known",
-      "label": "Bušení srdce",
+      "label": "Bušení srdce; četnost nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Sinus bradycardia",
+      "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Zpomalení srdeční činnosti (bradykardie)",
+      "label": "Zpomalení srdeční činnosti; četnost nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hot flashes",
+      "ctcae": "Flushing",
       "frequency": "not_known",
-      "label": "Návaly horka",
+      "label": "Návaly horka; četnost nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pancreatitis",
       "frequency": "not_known",
-      "label": "Pankreatitida",
+      "label": "Pankreatitida; četnost nelze určit. Může se projevit silnou bolestí v horní části břicha vystřelující do zad, nevolností, zvracením nebo horečkou.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou bolest v horní části břicha, která může vystřelovat do zad, pocit na zvracení, zvracení nebo horečku"
+        "patient_guide": "Silná bolest v horní části břicha, která může vystřelovat do zad, nevolnost, zvracení nebo horečka.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Hepatobiliary disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Žlučníkové křeče (biliární spasmy)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Dysfunkce Oddiho svěrače",
-      "action": null,
-      "action_condition": null
+      "label": "Žlučníkové křeče a porucha funkce Oddiho svěrače; četnost nelze určit. Mohou souviset s pankreatitidou a žlučovými cestami.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Silná bolest v horní části břicha, která může vystřelovat do zad, nevolnost, zvracení nebo horečka.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Poruchy močení",
+      "label": "Poruchy močení; četnost nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Sleep apnea",
       "frequency": null,
-      "label": "Poruchy dýchání související se spánkem, například spánková apnoe",
+      "label": "Při užívání kodeinu se mohou objevit poruchy dýchání ve spánku, například spánková apnoe nebo nízká hladina kyslíku v krvi. Příznaky mohou zahrnovat přerušované dýchání ve spánku, noční buzení kvůli dušnosti, potíže s udržením spánku nebo nadměrnou denní ospalost.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud si vy nebo někdo jiný všimnete přerušovaného dýchání během spánku, nočního buzení kvůli dušnosti, potíží s udržením spánku nebo nadměrné ospalosti během dne"
+        "patient_guide": "Pokud si těchto příznaků všimnete vy nebo někdo jiný.",
+        "min_severity": 2
       }
-    },
-    {
-      "ctcae": "Hypoxia",
-      "frequency": null,
-      "label": "Hypoxemie související se spánkem (nízká hladina kyslíku v krvi)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud si vy nebo někdo jiný všimnete přerušovaného dýchání během spánku, nočního buzení kvůli dušnosti, potíží s udržením spánku nebo nadměrné ospalosti během dne"
-      }
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": null,
-      "label": "Únava po náhlém vysazení po delším užívání vyšších než doporučených dávek",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myalgia",
-      "frequency": null,
-      "label": "Bolest svalů po náhlém vysazení po delším užívání vyšších než doporučených dávek",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anxiety",
-      "frequency": null,
-      "label": "Nervozita po náhlém vysazení po delším užívání vyšších než doporučených dávek",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": null,
-      "label": "Poruchy trávení po náhlém vysazení po delším užívání vyšších než doporučených dávek",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Headache",
-      "frequency": null,
-      "label": "Bolest hlavy po náhlém vysazení po delším užívání vyšších než doporučených dávek",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Somnolence",
-      "frequency": null,
-      "label": "Ospalost jako příznak toxicity opioidů u osob, které přeměňují kodein na morfin velmi rychle; při výskytu těchto příznaků přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Confusion",
-      "frequency": null,
-      "label": "Zmatenost jako příznak toxicity opioidů u osob, které přeměňují kodein na morfin velmi rychle; při výskytu těchto příznaků přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Pomalé nebo mělké dýchání jako příznak toxicity opioidů u osob, které přeměňují kodein na morfin velmi rychle; při výskytu těchto příznaků přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Malé zorničky jako příznak toxicity opioidů u osob, které přeměňují kodein na morfin velmi rychle; při výskytu těchto příznaků přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": null,
-      "label": "Pocit na zvracení jako příznak toxicity opioidů u osob, které přeměňují kodein na morfin velmi rychle; při výskytu těchto příznaků přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vomiting",
-      "frequency": null,
-      "label": "Zvracení jako příznak toxicity opioidů u osob, které přeměňují kodein na morfin velmi rychle; při výskytu těchto příznaků přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Constipation",
-      "frequency": null,
-      "label": "Zácpa jako příznak toxicity opioidů u osob, které přeměňují kodein na morfin velmi rychle; při výskytu těchto příznaků přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anorexia",
-      "frequency": null,
-      "label": "Nechutenství jako příznak toxicity opioidů u osob, které přeměňují kodein na morfin velmi rychle; při výskytu těchto příznaků přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "discontinue_treatment",
-      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "metacholon",
-      "effect": "Souběžné užívání metacholonu s kodeinem může vyvolat přechodný extrapyramidový syndrom (mimovolní pohyby).",
+      "class_id": null,
+      "drug": "HEMIHYDRÁT KODEIN-FOSFÁTU",
+      "effect": "S metacholonem nebo erythromycinem může současné užívání vyvolat přechodný extrapyramidový syndrom (mimovolní pohyby).",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Extrapyramidal disorder",
-          "frequency": null,
-          "label": "Přechodný extrapyramidový syndrom (mimovolní pohyby)",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "erythromycin",
-      "effect": "Souběžné užívání erythromycinu s kodeinem může vyvolat přechodný extrapyramidový syndrom (mimovolní pohyby).",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Extrapyramidal disorder",
-          "frequency": null,
-          "label": "Přechodný extrapyramidový syndrom (mimovolní pohyby)",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "IMAO, tymoleptika, fysostigmin a neostigmin",
-      "effect": "Tyto přípravky zvyšují analgetický účinek kodeinu.",
+      "class_id": null,
+      "drug_class": "Inhibitory MAO, tymoleptika, fysostigmin a neostigmin",
+      "effect": "Mohou zesílit analgetický účinek kodeinu.",
       "effect_type": "synergy",
       "side_effects": []
     },
     {
-      "drug": "naloxon",
-      "effect": "Naloxon snižuje analgetický účinek kodeinu.",
+      "class_id": null,
+      "drug_class": "Naloxon, nalorfin, pentazocin a buprenorfin",
+      "effect": "Mohou snížit analgetický účinek kodeinu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "nalorfin",
-      "effect": "Nalorfin snižuje analgetický účinek kodeinu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "pentazocin",
-      "effect": "Pentazocin snižuje analgetický účinek kodeinu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "buprenorfin",
-      "effect": "Buprenorfin snižuje analgetický účinek kodeinu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Analgetika-antipyretika",
-      "effect": "Kodein zvyšuje analgetický účinek analgetik-antipyretik.",
+      "class_id": null,
+      "drug_class": "Analgetika a antipyretika",
+      "effect": "Kodein může zesílit jejich analgetický účinek.",
       "effect_type": "synergy",
       "side_effects": []
     },
     {
-      "drug_class": "Léky s tlumivým účinkem na centrální nervový systém, včetně sedativ, hypnotik, opioidních analgetik, antihistaminik, neuroleptik, anxiolytik a antidepresiv",
-      "effect": "Souběžné užívání může zesílit sedativní účinek nebo útlum dechových funkcí.",
+      "class_id": "group:cns_depressant",
+      "drug_class": "Látky tlumící centrální nervový systém, včetně benzodiazepinů, sedativ, hypnotik, opioidních analgetik, antihistaminik, neuroleptik, anxiolytik a antidepresiv",
+      "effect": "S kodeinem se může zesílit sedace a útlum dýchání. Současné užívání s benzodiazepiny a opioidy zvyšuje riziko kómatu a úmrtí; pokud je taková kombinace nutná, lékař má zvolit nejnižší účinné dávky na co nejkratší dobu a pacienta pečlivě sledovat.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Somnolence",
           "frequency": null,
-          "label": "Zesílený sedativní účinek",
+          "label": "Hluboká sedace nebo ospalost při kombinaci s gabapentinem či pregabalinem.",
           "action": null,
           "action_condition": null
         },
         {
-          "ctcae": null,
+          "ctcae": "Respiratory failure",
           "frequency": null,
-          "label": "Útlum dechových funkcí",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Benzodiazepiny",
-      "effect": "Souběžné užívání může vést k sedaci, útlumu dýchání, kómatu a úmrtí v důsledku aditivního tlumivého účinku na centrální nervový systém. Pokud je souběžné podávání nutné a neexistují alternativní možnosti léčby, použijí se nejnižší účinné dávky po co nejkratší dobu a pacient má být pečlivě sledován z hlediska sedace a útlumu dýchání.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Sedace",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Útlum dýchání",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Depressed level of consciousness",
-          "frequency": null,
-          "label": "Kóma",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Death NOS",
-          "frequency": null,
-          "label": "Úmrtí",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Alkohol",
-      "effect": "Souběžné užívání kodeinu s alkoholem může zesílit sedativní účinek nebo způsobit útlum dechových funkcí, sedaci, kóma či úmrtí. Současnému užívání je nutné se vyvarovat.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zesílený sedativní účinek nebo sedace",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Útlum dechových funkcí",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Depressed level of consciousness",
-          "frequency": null,
-          "label": "Kóma",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Death NOS",
-          "frequency": null,
-          "label": "Úmrtí",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "gabapentin",
-      "effect": "Souběžné užívání s kodeinem může vést k útlumu dýchání, hypotenzi, hluboké sedaci, kómatu nebo úmrtí.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Útlum dýchání",
+          "label": "Útlum dýchání při kombinaci s gabapentinem či pregabalinem.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Hypotension",
           "frequency": null,
-          "label": "Hypotenze",
+          "label": "Pokles krevního tlaku při kombinaci s gabapentinem či pregabalinem.",
           "action": null,
           "action_condition": null
         },
         {
-          "ctcae": "Somnolence",
+          "ctcae": "Coma",
           "frequency": null,
-          "label": "Hluboká sedace",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Depressed level of consciousness",
-          "frequency": null,
-          "label": "Kóma",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Death NOS",
-          "frequency": null,
-          "label": "Úmrtí",
+          "label": "Kóma při kombinaci s gabapentinem či pregabalinem.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "pregabalin",
-      "effect": "Souběžné užívání s kodeinem může vést k útlumu dýchání, hypotenzi, hluboké sedaci, kómatu nebo úmrtí.",
+      "class_id": null,
+      "drug": "ETHANOL",
+      "effect": "Alkohol s kodeinem může zesílit sedaci a útlum dýchání; kombinaci je nutné se vyhnout. Současné užívání opioidů a alkoholu může vést ke kómatu a smrti.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Útlum dýchání",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Hluboká sedace",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Depressed level of consciousness",
-          "frequency": null,
-          "label": "Kóma",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Death NOS",
-          "frequency": null,
-          "label": "Úmrtí",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Anticholinergika a léky s anticholinergní aktivitou, například tricyklická antidepresiva, antihistaminika, antipsychotika, myorelaxancia a antiparkinsonika",
-      "effect": "Souběžné užívání s kodeinem může zvýšit anticholinergní nežádoucí účinky; může způsobit těžkou zácpu nebo zadržení moči.",
+      "class_id": null,
+      "drug_class": "Anticholinergika a léky s anticholinergní aktivitou",
+      "effect": "Mohou zesílit nežádoucí anticholinergní účinky kodeinu; může se objevit těžká zácpa nebo zadržení moči.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Constipation",
           "frequency": null,
-          "label": "Zvýšení anticholinergních nežádoucích účinků včetně těžké zácpy",
+          "label": "Těžká nebo úporná zácpa při současném užívání.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Urinary retention",
           "frequency": null,
-          "label": "Zadržení moči",
+          "label": "Zadržení moči při současném užívání.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
+      "class_id": null,
       "drug_class": "Léky proti průjmu",
-      "effect": "Souběžné užívání s kodeinem zvyšuje riziko úporné zácpy.",
+      "effect": "Současné užívání s kodeinem zvyšuje riziko úporné zácpy.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Constipation",
           "frequency": null,
-          "label": "Úporná zácpa",
+          "label": "Úporná zácpa při současném užívání.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Antihypertenziva (léky k léčbě vysokého krevního tlaku)",
-      "effect": "Kodein může při souběžném užívání zesílit hypotenzní účinek antihypertenziv.",
+      "class_id": null,
+      "drug_class": "Léky na vysoký krevní tlak",
+      "effect": "Kodein může zesílit jejich hypotenzní účinek.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zesílení hypotenzního účinku",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Látky usnadňující odkašlávání, například ambroxol",
-      "effect": "Kodein může blokovat kašlací reflex, proto je nutné se vyvarovat jeho souběžného užívání s látkami usnadňujícími odkašlávání.",
-      "effect_type": "contraindicated",
+      "class_id": null,
+      "drug_class": "Látky usnadňující odkašlávání",
+      "effect": "Současné užívání není vhodné: kodein může tlumit kašlací reflex.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "AMBROXOL",
+      "effect": "Současné užívání ambroxolu s kodeinem není vhodné, protože kodein může blokovat kašlací reflex.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "GABAPENTIN",
+      "effect": "Současné užívání s kodeinem může vést k útlumu dýchání, poklesu krevního tlaku, hluboké sedaci, kómatu nebo úmrtí.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "PREGABALIN",
+      "effect": "Současné užívání s kodeinem může vést k útlumu dýchání, poklesu krevního tlaku, hluboké sedaci, kómatu nebo úmrtí.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se u dospělých a dospívajících od 12 let na dráždivý kašel a bolest.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0207939",
+      "H": "",
+      "NAZEV": "CODEIN SLOVAKOFARMA",
+      "SILA": "15MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "10",
+      "CESTA": "POR",
+      "DOPLNEK": "15MG TBL NOB 10",
+      "OBAL": "BLI",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "36",
+      "ATC_WHO": "R05DA04",
+      "RC": "36/281/69-A/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,1",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "1,5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "5382",
+      "VYDEJ": "R",
+      "ZAV": "8",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "CODEIN SLOVAKOFARMA",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0207939",
+        "KOD_LATKY": "5382",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "14,36",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5382",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CODEINI PHOSPHAS HEMIHYDRICUS",
+          "NAZEV_EN": "CODEINE PHOSPHATE HEMIHYDRATE",
+          "NAZEV": "HEMIHYDRÁT KODEIN-FOSFÁTU",
+          "ZAV": "2"
+        }
+      },
+      {
+        "KOD_SUKL": "0207939",
+        "KOD_LATKY": "2624",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0207939",
+        "KOD_LATKY": "2898",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2898",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SOLANI AMYLUM",
+          "NAZEV_EN": "POTATO STARCH",
+          "NAZEV": "BRAMBOROVÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0207939",
+        "KOD_LATKY": "2855",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0207939",
+        "KOD_LATKY": "1871",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0207939",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0207939",
+      "PIL": "PI232425.pdf",
+      "DAT_ROZ_PIL": "09.04.2026",
+      "SPC": "SPC232426.pdf",
+      "DAT_ROZ_SPC": "09.04.2026",
+      "OBAL_TEXT": "OBAL232424.pdf",
+      "DAT_ROZ_OBAL": "09.04.2026"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "R05DA04",
+        "NT": "N",
+        "NAZEV": "KODEIN",
+        "NAZEV_EN": "CODEINE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

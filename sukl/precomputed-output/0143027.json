@@ -1,16 +1,24 @@
 {
+  "classes": [
+    "atc:G",
+    "atc:G04",
+    "atc:G04C",
+    "atc:G04CA",
+    "atc:G04CA02",
+    "substance:14672"
+  ],
   "side_effects": [
     {
       "ctcae": "Dizziness",
-      "frequency": 76.9230769231,
-      "label": "Závratě (uvedená četnost 1,3 %).",
+      "frequency": 76.9231,
+      "label": "Závratě (1,3 %); při pocitu slabosti nebo závrati si ihned sedněte nebo lehněte, dokud potíže nevymizí.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Ejaculation disorder",
       "frequency": 50.0,
-      "label": "Poruchy ejakulace, včetně zpětného toku spermatu do močového měchýře nebo malého či chybějícího množství ejakulátu; tento jev je neškodný. V klinických studiích se vyskytly přibližně u 2 % pacientů.",
+      "label": "Poruchy ejakulace, včetně zpětného toku spermatu do močového měchýře nebo malého či chybějícího objemu ejakulátu; hlášeny u přibližně 2 % pacientů. Tento jev je neškodný.",
       "action": null,
       "action_condition": null
     },
@@ -24,19 +32,19 @@
     {
       "ctcae": "Palpitations",
       "frequency": "uncommon",
-      "label": "Rychlé či nepravidelné bušení srdce (palpitace).",
+      "label": "Bušení srdce.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hypotension",
+      "ctcae": "Orthostatic hypotension",
       "frequency": "uncommon",
-      "label": "Pokles krevního tlaku při vstávání, který může způsobit závrať, motání hlavy nebo mdlobu (ortostatická hypotenze).",
+      "label": "Pokles krevního tlaku při vstávání, který může vyvolat závratě, motání hlavy nebo mdlobu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Nasal congestion",
+      "ctcae": "Rhinitis",
       "frequency": "uncommon",
       "label": "Rýma nebo ucpaný nos.",
       "action": null,
@@ -57,13 +65,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Constipation",
-      "frequency": "uncommon",
-      "label": "Zácpa.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Diarrhea",
       "frequency": "uncommon",
       "label": "Průjem.",
@@ -71,9 +72,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Constipation",
       "frequency": "uncommon",
-      "label": "Vyrážka nebo zánět kůže.",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "uncommon",
+      "label": "Vyrážka; typ vyrážky není blíže určen.",
       "action": null,
       "action_condition": null
     },
@@ -87,16 +95,17 @@
     {
       "ctcae": "Urticaria",
       "frequency": "uncommon",
-      "label": "Kopřivka.",
+      "label": "Kopřivka. Může být známkou alergické reakce.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kopřivka, ihned kontaktujte lékaře."
+        "patient_guide": "Při kopřivce.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Generalized muscle weakness",
+      "ctcae": "Asthenia",
       "frequency": "uncommon",
-      "label": "Pocit slabosti (astenie).",
+      "label": "Pocit slabosti.",
       "action": null,
       "action_condition": null
     },
@@ -108,167 +117,579 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Angioedema",
       "frequency": "rare",
-      "label": "Otok nohou, rukou, rtů, jazyka nebo krku, který může být spojen s obtížemi při dýchání (angioedém).",
+      "label": "Otok při alergické reakci.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví otok nohou, rukou, rtů, jazyka nebo krku nebo obtíže při dýchání, ihned kontaktujte lékaře."
+        "patient_guide": "Při otoku nohou, rukou, rtů, jazyka nebo krku, zejména pokud máte potíže s dýcháním.",
+        "min_severity": 1
       }
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Přetrvávající a bolestivá erekce, obvykle mimo sexuální aktivitu (priapismus).",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "very_rare",
-      "label": "Závažné onemocnění s tvorbou puchýřů na kůži, v ústech, na očích a pohlavních orgánech (Stevensův-Johnsonův syndrom).",
+      "label": "Závažné onemocnění s puchýři na kůži, v ústech, na očích a pohlavních orgánech. Přestaňte přípravek užívat a okamžitě vyhledejte lékaře.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví puchýře na kůži, v ústech, na očích nebo na pohlavních orgánech, přestaňte přípravek užívat a okamžitě vyhledejte lékaře."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Erythema multiforme",
       "frequency": "not_known",
-      "label": "Vyrážka, zánět a puchýře na kůži (erythema multiforme).",
+      "label": "Vyrážka, zánět a puchýře na kůži; četnost z dostupných údajů nelze určit. Přestaňte přípravek užívat a okamžitě vyhledejte lékaře.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vyrážka, zánět nebo puchýře na kůži, přestaňte přípravek užívat a okamžitě vyhledejte lékaře."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Exfoliative dermatitis",
       "frequency": "not_known",
-      "label": "Vyrážka, zánět a puchýře na kůži (exfoliativní dermatitida).",
+      "label": "Vyrážka, zánět a puchýře na kůži; četnost z dostupných údajů nelze určit. Přestaňte přípravek užívat a okamžitě vyhledejte lékaře.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vyrážka, zánět nebo puchýře na kůži, přestaňte přípravek užívat a okamžitě vyhledejte lékaře."
+        "patient_guide": null,
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": "Priapism",
+      "frequency": "very_rare",
+      "label": "Přetrvávající a bolestivá erekce, obvykle mimo sexuální aktivitu.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Atrial fibrillation",
       "frequency": "not_known",
-      "label": "Fibrilace síní, hlášená po uvedení přípravku na trh.",
+      "label": "Fibrilace síní hlášená po uvedení přípravku na trh; četnost z dostupných údajů nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Nepravidelný nebo zrychlený srdeční tep (arytmie či tachykardie), hlášený po uvedení přípravku na trh.",
+      "label": "Arytmie hlášená po uvedení přípravku na trh; četnost z dostupných údajů nelze určit.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tachycardia",
+      "frequency": "not_known",
+      "label": "Zrychlený srdeční tep hlášený po uvedení přípravku na trh; četnost z dostupných údajů nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspnea",
       "frequency": "not_known",
-      "label": "Dušnost.",
+      "label": "Dušnost hlášená po uvedení přípravku na trh; četnost z dostupných údajů nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "not_known",
-      "label": "Rozmazané vidění.",
+      "label": "Rozmazané vidění; četnost z dostupných údajů nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Eye disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Poruchy zraku.",
+      "label": "Poruchy zraku; četnost z dostupných údajů nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Epistaxis",
       "frequency": "not_known",
-      "label": "Krvácení z nosu.",
+      "label": "Krvácení z nosu; četnost z dostupných údajů nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dry mouth",
       "frequency": "not_known",
-      "label": "Sucho v ústech.",
+      "label": "Sucho v ústech; četnost z dostupných údajů nelze určit.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Peripheral edema",
       "frequency": null,
-      "label": "Otok.",
+      "label": "Otok (edém); u tohoto účinku není četnost uvedena.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fatigue",
       "frequency": null,
-      "label": "Únava.",
+      "label": "Únava; může se objevit stejně jako u jiných alfa-blokátorů, četnost není uvedena.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Malá zornice během operace šedého zákalu nebo glaukomu, známá jako syndrom interoperativní plovoucí duhovky (IFIS).",
+      "ctcae": "Surgical and medical procedures - Other, specify",
+      "frequency": null,
+      "label": "Při operaci šedého zákalu nebo glaukomu byl u některých pacientů současně nebo dříve léčených tamsulosinem zaznamenán syndrom interoperativní plovoucí duhovky (IFIS), který může zvýšit komplikace při operaci.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "cimetidin",
-      "effect": "Současné podávání zvyšuje koncentraci tamsulosinu v plazmě; koncentrace však zůstává v normálním rozmezí, a proto není třeba měnit dávkování.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "furosemid",
-      "effect": "Současné podávání snižuje koncentraci tamsulosinu v plazmě; koncentrace však zůstává v normálním rozmezí, a proto není třeba měnit dávkování.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "diklofenak",
-      "effect": "Diklofenak může zvýšit rychlost vylučování tamsulosinu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "warfarin",
-      "effect": "Warfarin může zvýšit rychlost vylučování tamsulosinu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": "group:cyp3a4_inhibitor_strong",
       "drug_class": "Silné inhibitory CYP3A4",
-      "effect": "Současné podávání může zvýšit expozici tamsulosinu. Při souběžném podávání s ketokonazolem se AUC a Cmax tamsulosinu zvýšily 2,8násobně a 2,2násobně. Tamsulosin se nesmí kombinovat se silnými inhibitory CYP3A4 u pacientů, kteří jsou pomalými metabolizátory CYP2D6. U ostatních pacientů se má při kombinaci se silnými inhibitory CYP3A4 postupovat opatrně.",
+      "effect": "Mohou zvýšit expozici tamsulosinu; při současném podávání je třeba opatrnost. U pomalých metabolizátorů CYP2D6 je kombinace zakázána. Ketokonazol zvýšil AUC a Cmax tamsulosinu 2,8krát, respektive 2,2krát.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
+      "class_id": "group:cyp3a4_inhibitor_moderate",
       "drug_class": "Středně silné inhibitory CYP3A4",
-      "effect": "Při současném podávání tamsulosinu se středně silnými inhibitory CYP3A4 je třeba postupovat opatrně.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "paroxetin",
-      "effect": "Paroxetin, silný inhibitor CYP2D6, při současném podávání zvýšil Cmax tamsulosinu 1,3násobně a AUC 1,6násobně; tyto nárůsty nejsou považovány za klinicky významné.",
+      "effect": "Při současném podávání s tamsulosinem je třeba opatrnost; mohou zvýšit jeho expozici.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léky snižující krevní tlak, včetně anestetik a jiných antagonistů alfa1-adrenoceptoru",
-      "effect": "Při současném podávání existuje teoretické riziko zesílení hypotenzního účinku.",
+      "class_id": null,
+      "drug": "Paroxetin",
+      "effect": "Silný inhibitor CYP2D6. Při současném podávání zvýšil Cmax a AUC tamsulosinu 1,3krát, respektive 1,6krát; zvýšení se nepovažuje za klinicky významné.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Cimetidin",
+      "effect": "Při současném podávání zvyšuje koncentraci tamsulosinu v plazmě, která však zůstává v normálním rozmezí; úprava dávky tamsulosinu není nutná.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Furosemid",
+      "effect": "Při současném podávání snižuje koncentraci tamsulosinu v plazmě, která však zůstává v normálním rozmezí; úprava dávky tamsulosinu není nutná.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Diklofenak",
+      "effect": "Může zvýšit rychlost vylučování tamsulosinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Warfarin",
+      "effect": "Může zvýšit rychlost vylučování tamsulosinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02CA",
+      "drug_class": "Antagonisté alfa1-adrenoceptorů",
+      "effect": "Při současném podávání s tamsulosinem může teoreticky zesílit účinek snižující krevní tlak.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Léky snižující krevní tlak, včetně anestetik",
+      "effect": "Při současném podávání s tamsulosinem může teoreticky zesílit účinek snižující krevní tlak. U anestetik je možný vliv na jejich účinek; pacienta je třeba před operací nebo zubním zákrokem informovat, aby sdělil, že tamsulosin užívá.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "U mužů pomáhá při potížích s močením způsobených nezhoubným zvětšením prostaty.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0143027",
+      "H": "",
+      "NAZEV": "TAMSULOSIN HCL SANDOZ PROLONG",
+      "SILA": "0,4MG",
+      "FORMA": "TBL PRO",
+      "BALENI": "90",
+      "CESTA": "POR",
+      "DOPLNEK": "0,4MG TBL PRO 90",
+      "OBAL": "BLI",
+      "DRZ": "SNJ",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "87",
+      "ATC_WHO": "G04CA02",
+      "RC": "87/415/11-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0,4",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "90",
+      "ZDROJ_WHO": "NO26",
+      "LL": "14672",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "TAMSULOSIN HCL SANDOZ PROLONG",
+      "MRP_CISLO": "NL/H/4423/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "14672",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "0,4",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14672",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "TAMSULOSINI HYDROCHLORIDUM",
+          "NAZEV_EN": "TAMSULOSIN HYDROCHLORIDE",
+          "NAZEV": "TAMSULOSIN-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "11134",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "0,367",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "11134",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "TAMSULOSINUM",
+          "NAZEV_EN": "TAMSULOSIN",
+          "NAZEV": "TAMSULOSIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "4336",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4336",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROLOSUM",
+          "NAZEV_EN": "HYPROLOSE",
+          "NAZEV": "HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "9792",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9792",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM GRANULATUM",
+          "NAZEV_EN": "GRANULATED MICROCRYSTALLINE CELLULOSE",
+          "NAZEV": "GRANULOVANÁ MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "2624",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "14769",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14769",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "POLYETHYLENOXIDUM",
+          "NAZEV_EN": "POLYETHYLENE OXIDE",
+          "NAZEV": "POLYETHYLENOXID"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "3766",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3766",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "BUTYLHYDROXYTOLUENUM",
+          "NAZEV_EN": "BUTYLHYDROXYTOLUENE",
+          "NAZEV": "BUTYLHYDROXYTOLUEN"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "2378",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "1300",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "SQ": "12",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "748",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "4336",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4336",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROLOSUM",
+          "NAZEV_EN": "HYPROLOSE",
+          "NAZEV": "HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "2400",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2400",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 400",
+          "NAZEV_EN": "MACROGOL 400",
+          "NAZEV": "MAKROGOL 400"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "2710",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "1871",
+        "SQ": "17",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "4534",
+        "SQ": "18",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4534",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FLAVUM QUINOLINI",
+          "NAZEV_EN": "QUINOLINE YELLOW",
+          "NAZEV": "CHINOLINOVÁ ŽLUŤ"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "391",
+        "SQ": "19",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "391",
+          "ZDROJ": "Z06",
+          "NAZEV_INN": "CARMINUM",
+          "NAZEV_EN": "CARMINE",
+          "NAZEV": "KARMÍN"
+        }
+      },
+      {
+        "KOD_SUKL": "0143027",
+        "KOD_LATKY": "4538",
+        "SQ": "20",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4538",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM NIGRUM",
+          "NAZEV_EN": "FERRIC OXIDE BLACK",
+          "NAZEV": "ČERNÝ OXID ŽELEZITÝ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0143027",
+      "PIL": "PI221380.pdf",
+      "DAT_ROZ_PIL": "10.04.2025",
+      "SPC": "SPC221381.pdf",
+      "DAT_ROZ_SPC": "10.04.2025",
+      "OBAL_TEXT": "OBAL164286.pdf",
+      "DAT_ROZ_OBAL": "19.11.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "G04CA02",
+        "NT": "N",
+        "NAZEV": "TAMSULOSIN",
+        "NAZEV_EN": "TAMSULOSIN"
+      },
+      "formy": {
+        "FORMA": "TBL PRO",
+        "NAZEV": "Tableta s prodlouženým uvolňováním",
+        "NAZEV_EN": "Prolonged-release tablet",
+        "NAZEV_LAT": "Tabuletta cum liberatione prolongata",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10226000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

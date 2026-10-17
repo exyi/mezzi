@@ -1,1013 +1,1314 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C09",
+    "atc:C09D",
+    "atc:C09DA",
+    "atc:C09DA07",
+    "substance:13774",
+    "substance:5513"
+  ],
   "side_effects": [
     {
-      "ctcae": "Allergic reaction",
-      "frequency": "common",
-      "label": "Dermatologické alergické reakce, zejména u pacientů se sklonem k alergickým a astmatickým reakcím",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Sepsis",
+      "frequency": "rare",
+      "label": "Sepse, někdy se závažnou zánětlivou reakcí celého organismu; v některých případech může vést k úmrtí.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Angioedema",
+      "frequency": "rare",
+      "label": "Rychlý otok kůže nebo sliznic, například obličeje, rtů, jazyka, hrdla či dýchacích cest; může ztížit dýchání nebo polykání a může být smrtelný.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "very_rare",
+      "label": "Závažná kožní reakce se silnou vyrážkou, zarudnutím, svěděním, puchýři, olupováním či otokem kůže a zánětem sliznic.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "very_rare",
+      "label": "Zánět slinivky břišní se silnou bolestí břicha a zad a pocitem těžké nevolnosti.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Ventricular arrhythmia",
+      "frequency": "not_known",
+      "label": "Život ohrožující nepravidelný srdeční rytmus.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Encephalopathy",
+      "frequency": "not_known",
+      "label": "Jaterní encefalopatie, tedy postižení mozku při onemocnění jater.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "not_known",
+      "label": "Zánět jater.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "common",
-      "label": "Kožní vyrážka s načervenalými skvrnami a pupínky (makulopapulární vyrážka)",
+      "label": "Vyrážka s načervenalými skvrnami a pupínky.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "common",
-      "label": "Alergické a astmatické reakce a reakce z přecitlivělosti, zejména kožní, u pacientů se sklonem k alergickým a astmatickým reakcím",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypokalemia",
-      "frequency": 4.0,
-      "label": "Hypokalemie s hladinou draslíku v plazmě pod 3,4 mmol/l; pozorovaná po 4 až 6 týdnech léčby",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypokalemia",
-      "frequency": 10.0,
-      "label": "Hypokalemie s hladinou draslíku v plazmě pod 3,2 mmol/l; pozorovaná po 4 až 6 týdnech léčby",
+      "label": "Kožní alergické reakce, zejména u lidí se sklonem k alergiím nebo astmatu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urinary tract infection",
       "frequency": "uncommon",
-      "label": "Infekce močových cest včetně zánětu močového měchýře",
+      "label": "Infekce močových cest.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Upper respiratory infection",
       "frequency": "uncommon",
-      "label": "Infekce horních cest dýchacích, včetně zánětu hltanu a vedlejších nosních dutin",
+      "label": "Infekce horních cest dýchacích.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anemia",
       "frequency": "uncommon",
-      "label": "Anémie (nedostatek červených krvinek)",
+      "label": "Chudokrevnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Insomnia",
       "frequency": "uncommon",
-      "label": "Nespavost nebo obtížné usínání",
+      "label": "Obtížné usínání.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depression",
       "frequency": "uncommon",
-      "label": "Deprese nebo pocit smutku",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "uncommon",
-      "label": "Mdloby (synkopa)",
+      "label": "Deprese nebo pocit smutku.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "uncommon",
-      "label": "Závrať",
+      "label": "Závrať.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Syncope",
+      "frequency": "uncommon",
+      "label": "Mdloba.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vertigo",
       "frequency": "uncommon",
-      "label": "Pocit točení hlavy (vertigo)",
+      "label": "Pocit točení hlavy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Sinus bradycardia",
+      "ctcae": "Bradycardia",
       "frequency": "uncommon",
-      "label": "Pomalý srdeční rytmus (bradykardie)",
+      "label": "Pomalý srdeční rytmus.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypotension",
       "frequency": "uncommon",
-      "label": "Nízký krevní tlak (hypotenze), včetně závratí při vstávání (ortostatické hypotenze)",
+      "label": "Nízký krevní tlak, včetně poklesu tlaku při vstávání.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspnea",
       "frequency": "uncommon",
-      "label": "Dušnost",
+      "label": "Dušnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cough",
       "frequency": "uncommon",
-      "label": "Kašel",
+      "label": "Kašel.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "uncommon",
-      "label": "Bolesti břicha a nepříjemné pocity v břiše",
+      "label": "Bolest břicha nebo nepříjemné pocity v břiše.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "uncommon",
-      "label": "Průjem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspepsia",
-      "frequency": "uncommon",
-      "label": "Porucha trávení (dyspepsie)",
+      "label": "Průjem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flatulence",
       "frequency": "uncommon",
-      "label": "Nadýmání",
+      "label": "Nadýmání.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "uncommon",
-      "label": "Zvracení",
+      "label": "Zvracení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Purpura",
+      "frequency": "uncommon",
+      "label": "Tečkovité krvácení pod kůží.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pruritus",
       "frequency": "uncommon",
-      "label": "Svědění",
+      "label": "Svědění.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperhidrosis",
       "frequency": "uncommon",
-      "label": "Zvýšené pocení",
+      "label": "Zvýšené pocení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Rash maculo-papular",
+      "ctcae": "Rash",
       "frequency": "uncommon",
-      "label": "Kožní vyrážka",
+      "label": "Poléková vyrážka.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Back pain",
       "frequency": "uncommon",
-      "label": "Bolesti zad, například ischias",
+      "label": "Bolest zad.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Muscle cramp",
       "frequency": "uncommon",
-      "label": "Svalové křeče",
+      "label": "Svalové křeče.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
       "frequency": "uncommon",
-      "label": "Bolesti svalů (myalgie)",
+      "label": "Bolest svalů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Acute kidney injury",
       "frequency": "uncommon",
-      "label": "Poškození ledvin včetně akutního selhání ledvin",
+      "label": "Poškození ledvin včetně akutního selhání ledvin.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Non-cardiac chest pain",
+      "ctcae": "Chest pain - cardiac",
       "frequency": "uncommon",
-      "label": "Bolest na hrudi",
+      "label": "Bolest na hrudi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Generalized muscle weakness",
       "frequency": "uncommon",
-      "label": "Pocit slabosti (astenie)",
+      "label": "Pocit slabosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Creatinine increased",
       "frequency": "uncommon",
-      "label": "Zvýšená hladina kreatininu v krvi",
+      "label": "Zvýšená hladina kreatininu v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperkalemia",
       "frequency": "uncommon",
-      "label": "Vysoká hladina draslíku v krvi",
+      "label": "Vysoká hladina draslíku v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Sepsis",
-      "frequency": "rare",
-      "label": "Sepse („otrava krve“), závažná infekce se zánětlivou reakcí celého organismu, která může vést k úmrtí; může se objevit náhodně nebo může mít v danou dobu neznámou příčinu",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví sepse"
-      }
-    },
-    {
       "ctcae": "Eosinophilia",
       "frequency": "rare",
-      "label": "Zvýšený počet určitých bílých krvinek (eozinofilie)",
+      "label": "Zvýšený počet určitých bílých krvinek (eozinofilů).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "rare",
-      "label": "Nízký počet krevních destiček (trombocytopenie)",
+      "label": "Nízký počet krevních destiček.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "rare",
-      "label": "Závažná alergická (anafylaktická) reakce",
+      "label": "Závažná alergická reakce.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "rare",
-      "label": "Reakce z přecitlivělosti, například vyrážka, svědění, potíže s dýcháním, sípání nebo otok obličeje",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypoglycemia",
-      "frequency": "rare",
-      "label": "Nízká hladina cukru v krvi u pacientů s diabetem",
+      "label": "Alergická reakce, například vyrážka, svědění, potíže s dýcháním, sípání nebo otok obličeje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anxiety",
       "frequency": "rare",
-      "label": "Pocit úzkosti",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Somnolence",
-      "frequency": "rare",
-      "label": "Ospalost",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Poruchy zraku",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Sinus tachycardia",
-      "frequency": "rare",
-      "label": "Rychlý srdeční rytmus (tachykardie)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dry mouth",
-      "frequency": "rare",
-      "label": "Sucho v ústech",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastritis",
-      "frequency": "rare",
-      "label": "Podrážděný žaludek nebo žaludeční nevolnost",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysgeusia",
-      "frequency": "rare",
-      "label": "Poruchy chuti (dysgeuzie)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Abnormální funkce jater nebo porucha jater; tyto účinky se pravděpodobněji vyskytují u japonských pacientů",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": "rare",
-      "label": "Rychlý otok kůže a sliznic (angioedém), který může postihnout obličej a může mít i smrtelné následky",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rychlý otok kůže nebo sliznic"
-      }
-    },
-    {
-      "ctcae": "Eczematous dermatitis",
-      "frequency": "rare",
-      "label": "Ekzém",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Zarudnutí kůže (erytém)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "rare",
-      "label": "Kopřivka",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "rare",
-      "label": "Silná poléková vyrážka nebo toxický kožní výsev",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Arthralgia",
-      "frequency": "rare",
-      "label": "Bolesti kloubů (artralgie)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pain in extremity",
-      "frequency": "rare",
-      "label": "Bolesti končetin",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pain",
-      "frequency": "rare",
-      "label": "Bolesti šlach, s příznaky podobnými zánětu šlach",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Flu like symptoms",
-      "frequency": "rare",
-      "label": "Onemocnění podobné chřipce",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Snížený hemoglobin (krevní protein)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperuricemia",
-      "frequency": "rare",
-      "label": "Zvýšená hladina kyseliny močové v krvi, která může způsobit nebo zhoršit dnu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": "rare",
-      "label": "Zvýšené hladiny jaterních enzymů",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Zvýšená hladina kreatinfosfokinázy v krvi",
+      "label": "Pocit úzkosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fatigue",
       "frequency": "rare",
-      "label": "Únava",
+      "label": "Únava.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "rare",
-      "label": "Bolest hlavy",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "rare",
-      "label": "Mravenčení (parestézie)",
+      "label": "Mravenčení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "ctcae": "Somnolence",
+      "frequency": "rare",
+      "label": "Ospalost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vision decreased",
+      "frequency": "rare",
+      "label": "Zhoršené vidění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tachycardia",
+      "frequency": "rare",
+      "label": "Rychlý srdeční rytmus.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "rare",
+      "label": "Pocit na zvracení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "rare",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dry mouth",
+      "frequency": "rare",
+      "label": "Sucho v ústech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspepsia",
+      "frequency": "rare",
+      "label": "Podrážděný žaludek nebo porucha trávení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysgeusia",
+      "frequency": "rare",
+      "label": "Porucha chuti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Abnormální funkce jater; tyto účinky byly pravděpodobnější u japonských pacientů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Eczematous dermatitis",
+      "frequency": "rare",
+      "label": "Ekzém.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erythema",
+      "frequency": "rare",
+      "label": "Zarudnutí kůže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "rare",
+      "label": "Kopřivka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash",
+      "frequency": "rare",
+      "label": "Silná poléková vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arthralgia",
+      "frequency": "rare",
+      "label": "Bolesti kloubů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pain in extremity",
+      "frequency": "rare",
+      "label": "Bolesti končetin.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tendonitis",
+      "frequency": "rare",
+      "label": "Bolesti šlach, které mohou připomínat zánět šlach.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Flu like symptoms",
+      "frequency": "rare",
+      "label": "Onemocnění podobné chřipce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hemoglobin decreased",
+      "frequency": "rare",
+      "label": "Snížený hemoglobin.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperuricemia",
+      "frequency": "rare",
+      "label": "Zvýšená hladina kyseliny močové v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "rare",
+      "label": "Zvýšená hladina jaterních enzymů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Creatine phosphokinase increased",
+      "frequency": "rare",
+      "label": "Zvýšená hladina kreatinfosfokinázy v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Agranulocytosis",
       "frequency": "very_rare",
-      "label": "Agranulocytóza",
+      "label": "Agranulocytóza.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Aplastic anemia",
       "frequency": "very_rare",
-      "label": "Aplastická anémie",
+      "label": "Aplastická anémie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hemolytic anemia",
       "frequency": "very_rare",
-      "label": "Hemolytická anémie",
+      "label": "Hemolytická anémie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "very_rare",
-      "label": "Pokles bílých krvinek (leukopenie), který může způsobit nevysvětlitelnou horečku, bolest v krku nebo jiné příznaky podobné chřipce",
+      "label": "Pokles bílých krvinek (leukopenie).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Arrhythmia",
       "frequency": "very_rare",
-      "label": "Nepravidelnosti srdečního rytmu, které mohou způsobovat rychlý tlukot srdce nebo pocit bušení srdce",
+      "label": "Nepravidelnosti srdečního rytmu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pulmonary fibrosis",
       "frequency": "very_rare",
-      "label": "Progresivní jizvení plicní tkáně (intersticiální plicní onemocnění); není známo, zda je jeho příčinou telmisartan",
+      "label": "Progresivní jizvení plicní tkáně; není známo, zda je způsobil telmisartan.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "very_rare",
-      "label": "Zánět slinivky břišní, který může způsobit silné bolesti břicha a zad a výrazný pocit nevolnosti",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví silná bolest břicha a zad a je vám velmi špatně"
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "very_rare",
-      "label": "Závažná kožní reakce včetně intenzivní vyrážky, zarudnutí kůže na celém těle, silného svědění, puchýřů, olupování nebo otoku kůže a zánětu sliznic (Stevensův-Johnsonův syndrom)",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce nebo příznaky Stevensova-Johnsonova syndromu"
-      }
     },
     {
       "ctcae": "Hypercalcemia",
       "frequency": "very_rare",
-      "label": "Vysoká hladina vápníku v krvi",
+      "label": "Vysoká hladina vápníku v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "very_rare",
-      "label": "Toxická epidermální nekrolýza",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce"
-      }
-    },
-    {
-      "ctcae": "Atrial fibrillation",
-      "frequency": "not_known",
-      "label": "Život ohrožující nepravidelný srdeční rytmus",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví život ohrožující nepravidelný srdeční rytmus"
-      }
-    },
-    {
-      "ctcae": "Encephalopathy",
-      "frequency": "not_known",
-      "label": "Onemocnění mozku způsobené onemocněním jater (jaterní encefalopatie), zejména při poruše funkce jater",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jaterní encefalopatie"
-      }
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "not_known",
-      "label": "Zánět jater (hepatitida)",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zánět jater"
-      }
-    },
-    {
       "ctcae": "Hypokalemia",
       "frequency": "not_known",
-      "label": "Deplece draslíku s nízkou hladinou draslíku v krvi; zvláště závažná může být u některých vysoce rizikových skupin pacientů",
+      "label": "Nízká hladina draslíku v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyponatremia",
       "frequency": "not_known",
-      "label": "Nízká hladina sodíku v krvi, která může vést k dehydrataci a nízkému krevnímu tlaku",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "not_known",
-      "label": "Mdloby (synkopa)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Krátkozrakost (myopie)",
+      "label": "Nízká hladina sodíku v krvi; může vést k odvodnění a nízkému krevnímu tlaku.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "not_known",
-      "label": "Rozmazané vidění",
+      "label": "Krátkozrakost nebo rozmazané vidění.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Vision decreased",
+      "ctcae": "Eye pain",
       "frequency": "not_known",
-      "label": "Postižení nebo snížení vidění",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Prosáknutí cévnatky (choroidální efuze)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Glaucoma",
-      "frequency": "not_known",
-      "label": "Snížení vidění nebo bolest oka způsobená zvýšeným tlakem v oku; možné příznaky choroidální efuze nebo akutního glaukomu s uzavřeným úhlem",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížení vidění nebo bolest oka"
-      }
-    },
-    {
-      "ctcae": "Ventricular arrhythmia",
-      "frequency": "not_known",
-      "label": "Torsade de pointes, potenciálně smrtelná porucha srdečního rytmu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Autoimmune disorder",
-      "frequency": "not_known",
-      "label": "Možné zhoršení již existujícího systémového lupus erythematodes",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Photosensitivity",
-      "frequency": "not_known",
-      "label": "Fotosenzitivní reakce: zvýšená citlivost kůže na světlo, například změna vzhledu kůže po vystavení slunci nebo umělému UVA záření",
+      "label": "Pokles vidění nebo bolest očí při zvýšeném tlaku v oku; může jít o prosáknutí cévnatky nebo akutní glaukom s uzavřeným úhlem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "not_known",
-      "label": "Prodloužení intervalu QT na EKG",
+      "label": "Abnormální záznam EKG, včetně prodloužení QT intervalu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Intestinal angioedema",
+      "frequency": "not_known",
+      "label": "Otok střeva hlášený po podobných přípravcích; může se projevit bolestí břicha, nevolností, zvracením a průjmem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Lupus erythematosus",
+      "frequency": "not_known",
+      "label": "Může se zhoršit již přítomný systémový lupus erythematodes.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Photosensitivity",
+      "frequency": "not_known",
+      "label": "Zvýšená citlivost kůže na světlo po vystavení slunci nebo umělému UVA záření.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperglycemia",
       "frequency": "not_known",
-      "label": "Zvýšená hladina glukózy v krvi u pacientů s diabetem",
+      "label": "Zvýšená hladina cukru v krvi u pacientů s diabetem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypoglycemia",
+      "frequency": "rare",
+      "label": "Nízká hladina cukru v krvi u pacientů s diabetem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Leukopenia",
+      "frequency": "very_rare",
+      "label": "Pokles bílých krvinek, který může způsobit nevysvětlitelnou horečku, bolest v krku nebo příznaky podobné chřipce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Palpitations",
+      "frequency": "very_rare",
+      "label": "Nepravidelnosti srdečního rytmu s rychlým tlukotem srdce nebo pocitem bušení srdce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "very_rare",
+      "label": "Závažná kožní reakce, toxická epidermální nekrolýza.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "common",
+      "label": "Makulopapulární vyrážka při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypokalemia",
+      "frequency": null,
+      "label": "Při léčbě indapamidem byla po 4 až 6 týdnech pozorována hypokalemie: hladina draslíku pod 3,4 mmol/l u 25 % pacientů a pod 3,2 mmol/l u 10 % pacientů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Poruchy krve: agranulocytóza, aplastická anémie, hemolytická anémie, leukopenie nebo trombocytopenie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Eosinophilia",
+      "frequency": "rare",
+      "label": "Zvýšený počet eozinofilů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypotension",
+      "frequency": "very_rare",
+      "label": "Nízký krevní tlak při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "uncommon",
+      "label": "Zvracení při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "rare",
+      "label": "Nevolnost při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "rare",
+      "label": "Zácpa při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dry mouth",
+      "frequency": "rare",
+      "label": "Sucho v ústech při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arrhythmia",
+      "frequency": "very_rare",
+      "label": "Nepravidelný srdeční rytmus při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Torsade de pointes",
+      "frequency": "not_known",
+      "label": "Potenciálně smrtelná porucha srdečního rytmu (torsade de pointes).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypercalcemia",
+      "frequency": "very_rare",
+      "label": "Zvýšená hladina vápníku v krvi při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Syncope",
+      "frequency": "not_known",
+      "label": "Mdloba při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vertigo",
+      "frequency": "rare",
+      "label": "Závrať při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "rare",
+      "label": "Únava při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "rare",
+      "label": "Bolest hlavy při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Paresthesia",
+      "frequency": "rare",
+      "label": "Mravenčení při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "not_known",
+      "label": "Krátkozrakost nebo rozmazané vidění při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Choroidal effusion",
+      "frequency": "not_known",
+      "label": "Prosáknutí cévnatky při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "very_rare",
+      "label": "Zánět slinivky břišní při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatic failure",
+      "frequency": "not_known",
+      "label": "Možný vznik jaterní encefalopatie při poruše funkce jater během léčby indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "not_known",
+      "label": "Zánět jater při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Purpura",
+      "frequency": "uncommon",
+      "label": "Purpura při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Angioedema",
+      "frequency": "very_rare",
+      "label": "Angioedém při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "very_rare",
+      "label": "Kopřivka při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Photosensitivity",
+      "frequency": "not_known",
+      "label": "Fotosenzitivní reakce při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Renal failure",
+      "frequency": "very_rare",
+      "label": "Selhání ledvin při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Electrocardiogram QT corrected interval prolonged",
+      "frequency": "not_known",
+      "label": "Prodloužení QT intervalu na EKG při léčbě indapamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperglycemia",
+      "frequency": "not_known",
+      "label": "Zvýšená hladina cukru v krvi při léčbě indapamidem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperuricemia",
       "frequency": "not_known",
-      "label": "Zvýšená hladina kyseliny močové v krvi",
+      "label": "Zvýšená hladina kyseliny močové v krvi při léčbě indapamidem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "not_known",
-      "label": "Zvýšené hladiny jaterních enzymů",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Otok střeva (intestinální angioedém) s příznaky, jako jsou bolest břicha, nevolnost, zvracení a průjem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Acute kidney injury",
-      "frequency": "very_rare",
-      "label": "Selhání ledvin",
+      "label": "Zvýšená hladina jaterních enzymů při léčbě indapamidem.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "Digoxin",
-      "effect": "Při současném podávání s telmisartanem se zvýšila mediánová vrcholová plazmatická koncentrace digoxinu o 49 % a jeho rovnovážná koncentrace o 20 %. Při zahájení léčby přípravkem YLPIO, změně jeho dávky a ukončení léčby je nutné monitorovat hladinu digoxinu, aby zůstala v terapeutickém rozmezí. Indapamid může vyvolat hypokalemii, která zvyšuje náchylnost k toxickým účinkům digitalisu; doporučuje se sledovat draslík a EKG a případně upravit léčbu.",
-      "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Hypokalemie může zvýšit toxické účinky digitalisu na srdce",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Draslík šetřící diuretika, přípravky obsahující draslík a náhražky soli obsahující draslík",
-      "effect": "Telmisartan snižuje ztrátu draslíku navozenou diuretiky; současné užívání může významně zvýšit hladinu draslíku v séru. Kombinace se nedoporučuje, pokud není indikována například pro prokázanou hypokalemii; v takovém případě je nutná opatrnost a časté kontroly draslíku. Riziko hyperkalemie je zvlášť vysoké.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšená hladina draslíku v krvi (hyperkalemie)",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Lithium",
-      "effect": "Telmisartan i indapamid mohou při současném podávání zvýšit koncentraci lithia v séru a jeho toxicitu. U indapamidu může být zvýšení výraznější při dietě s nízkým obsahem soli. Pokud je současné podávání nezbytné, pečlivě sledujte hladiny lithia a podle potřeby upravte jeho dávku.",
+      "class_id": "substance:13774",
+      "drug": "TELMISARTAN",
+      "effect": "Při současném užívání telmisartanu a digoxinu může stoupnout nejvyšší i ustálená hladina digoxinu v krvi. Lékař sleduje hladinu digoxinu při zahájení, změně dávky i ukončení léčby přípravkem YLPIO, aby zůstala v léčebném rozmezí.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (včetně selektivních inhibitorů COX-2) a vysoké dávky kyseliny salicylové (≥3 g/den)",
-      "effect": "Tyto léky mohou snížit antihypertenzní účinek telmisartanu a indapamidu. U některých pacientů, zejména u dehydratovaných osob, starších pacientů a pacientů s poruchou funkce ledvin, může současné podávání zhoršit funkci ledvin až k akutnímu selhání ledvin; toto zhoršení bývá obvykle reverzibilní. Před zahájením léčby zajistěte dostatečnou hydrataci a sledujte funkci ledvin při zahájení a pravidelně během souběžné léčby, zvláště u starších pacientů.",
+      "class_id": "substance:13774",
+      "drug": "TELMISARTAN",
+      "effect": "Telmisartan může při kombinaci s dalšími léky zvyšujícími draslík zvýšit riziko vysoké hladiny draslíku v krvi, zvláště u draslík šetřících diuretik a náhražek soli s draslíkem. Patří sem také ACE inhibitory, jiné blokátory receptoru angiotenzinu II, NSAID včetně selektivních inhibitorů COX-2, heparin, cyklosporin, takrolimus a trimethoprim. Riziko závisí na dalších rizikových faktorech; lékař může kontrolovat hladinu draslíku.",
       "effect_type": "increased_toxicity",
       "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zhoršení funkce ledvin včetně možného akutního selhání ledvin, zejména při dehydrataci, ve vyšším věku nebo při poruše funkce ledvin",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Thiazidová a kličková diuretika",
-      "effect": "Předchozí léčba vysokými dávkami diuretik, například furosemidem nebo hydrochlorothiazidem, může snížit intravaskulární objem a zvýšit riziko hypotenze po zahájení léčby telmisartanem.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Hypotenze po zahájení léčby přípravkem YLPIO",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčiva prodlužující QT interval nebo vyvolávající torsade de pointes (antiarytmika tříd Ia a III, některá antipsychotika a další uvedené přípravky)",
-      "effect": "Současné podávání zvyšuje riziko komorových arytmií, zejména torsade de pointes; riziko zvyšuje hypokalemie. Sledujte a případně upravte hladinu draslíku před kombinací, kontrolujte klinický stav, elektrolyty a EKG; doporučuje se zvolit léčivo, které při hypokalemii riziko torsade de pointes nezvyšuje. Mezi uvedená léčiva patří chinidin, dihydrochinidin, disopyramid, amiodaron, sotalol, dofetilid, ibutilid, fenothiaziny, benzamidy, butyrofenony, bepridil, cisaprid, difemanil, erythromycin i.v., halofantrin, mizolastin, pentamidin, sparfloxacin, moxifloxacin a vinkamin i.v.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Zvýšené riziko komorových arytmií, zejména torsade de pointes, zvláště při hypokalemii",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Inhibitory ACE",
-      "effect": "Duální blokáda systému renin-angiotenzin-aldosteron s telmisartanem se obecně nedoporučuje, protože zvyšuje riziko hypotenze, hyperkalemie a snížení funkce ledvin včetně akutního selhání ledvin oproti léčbě jedním přípravkem působícím na tento systém. Pokud je nezbytná, smí být provedena pouze pod dohledem specializovaného lékaře a za častého pečlivého sledování funkce ledvin, elektrolytů a krevního tlaku. U pacientů s diabetickou nefropatií se inhibitory ACE a blokátory receptorů angiotenzinu II nesmějí užívat současně. Při zahájení léčby, zejména při současném nedostatku sodíku nebo stenóze renální arterie, hrozí náhlá hypotenze a/nebo akutní selhání ledvin; v situaci deplece sodíku jsou popsána opatření včetně přerušení diuretika na 3 dny před zahájením ACE inhibitoru nebo podání nízké počáteční dávky s postupným zvyšováním. Při srdečním selhání začněte velmi nízkou dávkou ACE inhibitoru a případně nejprve snižte dávku diuretika; v prvních týdnech sledujte renální funkce.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko hypotenze, včetně náhlé hypotenze při zahájení léčby a depleci sodíku",
-          "action": null,
-          "action_condition": null
-        },
         {
           "ctcae": "Hyperkalemia",
           "frequency": null,
-          "label": "Zvýšené riziko hyperkalemie",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Snížení funkce ledvin včetně akutního selhání ledvin",
+          "label": "Zvýšené riziko vysoké hladiny draslíku v krvi při kombinaci telmisartanu s léky, které zvyšují draslík.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Antagonisté receptorů angiotenzinu II (blokátory receptorů angiotenzinu II)",
-      "effect": "Duální blokáda systému renin-angiotenzin-aldosteron s telmisartanem se obecně nedoporučuje, protože zvyšuje riziko hypotenze, hyperkalemie a snížení funkce ledvin včetně akutního selhání ledvin oproti léčbě jedním přípravkem působícím na tento systém. Pokud je nezbytná, smí být provedena pouze pod dohledem specializovaného lékaře a za častého pečlivého sledování funkce ledvin, elektrolytů a krevního tlaku. Inhibitory ACE a blokátory receptorů angiotenzinu II se nesmějí užívat současně u pacientů s diabetickou nefropatií.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko hypotenze",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hyperkalemie",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Snížení funkce ledvin včetně akutního selhání ledvin",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Aliskiren",
-      "effect": "Současné užívání telmisartanu s přípravky obsahujícími aliskiren je kontraindikováno u pacientů s diabetes mellitus nebo poruchou funkce ledvin (GFR <60 ml/min/1,73 m²). Duální blokáda RAAS se obecně nedoporučuje, protože zvyšuje riziko hypotenze, hyperkalemie a snížení funkce ledvin včetně akutního selhání ledvin. Pokud je kombinovaná blokáda nezbytná, smí být provedena pouze pod dohledem specializovaného lékaře a za častého pečlivého sledování funkce ledvin, elektrolytů a krevního tlaku.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko hypotenze",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hyperkalemie",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Snížení funkce ledvin včetně akutního selhání ledvin",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčiva vyvolávající hypokalemii: amfotericin B i.v., systémové glukokortikoidy a mineralokortikoidy, tetrakosaktid a stimulační laxativa",
-      "effect": "Účinky na snížení draslíku se sčítají a zvyšují riziko hypokalemie. Sledujte hladinu draslíku v plazmě a v případě potřeby ji upravte, zvláště při současné léčbě srdečním glykosidem. Doporučují se nestimulační laxativa místo stimulačních.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hypokalemie v důsledku sčítání účinků snižujících hladinu draslíku",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Baklofen",
-      "effect": "Bylo pozorováno zvýšení antihypertenzního účinku. Na začátku léčby zajistěte dostatečnou hydrataci a sledujte funkci ledvin.",
-      "effect_type": "synergy",
+      "class_id": "substance:13774",
+      "drug": "TELMISARTAN",
+      "effect": "Lithium může při současném užívání s telmisartanem dosáhnout vyšší hladiny v krvi a může se objevit jeho toxicita. Pokud je kombinace nutná, lékař sleduje hladinu lithia.",
+      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Digitalisové přípravky",
-      "effect": "Indapamid může způsobit hypokalemii, která zvyšuje náchylnost k toxickým účinkům digitalisu. Doporučuje se sledovat hladinu draslíku a EKG a případně upravit léčbu.",
+      "class_id": null,
+      "drug_class": "Systémové NSAID včetně selektivních inhibitorů COX-2 a kyseliny acetylsalicylové v dávce alespoň 3 g denně",
+      "effect": "NSAID mohou oslabit účinek telmisartanu na snížení tlaku; systémová NSAID včetně selektivních inhibitorů COX-2 a kyselina acetylsalicylová v dávce alespoň 3 g denně mohou také oslabit účinek indapamidu. U dehydratovaných pacientů hrozí zhoršení funkce ledvin včetně akutního selhání ledvin. Při souběžném užívání, zvláště u starších osob, se doporučuje dostatečná hydratace a lékař může sledovat funkci ledvin při zahájení léčby a pravidelně během ní.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Hypokalemia",
+          "ctcae": "Acute kidney injury",
           "frequency": null,
-          "label": "Hypokalemie může zvýšit náchylnost k toxickým účinkům digitalisu",
+          "label": "Při souběžném užívání s NSAID, zejména u dehydratovaných pacientů, může dojít ke zhoršení funkce ledvin včetně akutního selhání.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Alopurinol",
-      "effect": "Současné podávání s indapamidem může zvýšit riziko reakcí z přecitlivělosti na alopurinol.",
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Při současném užívání indapamidu a lithia se může zvýšit hladina lithia v krvi a objevit známky předávkování; riziko může být vyšší při dietě s nízkým obsahem soli. Pokud je současná léčba diuretikem nutná, lékař pečlivě sleduje hladinu lithia a podle potřeby upraví jeho dávku.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Diuretika, zejména thiazidová nebo kličková",
+      "effect": "Předchozí léčba vysokými dávkami diuretik, například furosemidem nebo hydrochlorothiazidem, může snížit objem tekutiny v cévách a zvýšit riziko nízkého krevního tlaku po zahájení léčby přípravkem YLPIO.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hypotension",
+          "frequency": null,
+          "label": "Při zahájení léčby po předchozí vysoké dávce diuretik může být vyšší riziko nízkého krevního tlaku.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:C03D",
+      "drug_class": "Draslík šetřící diuretika",
+      "effect": "Spolu s telmisartanem mohou draslík šetřící diuretika významně zvýšit hladinu draslíku v krvi. Pokud je kombinace nutná kvůli potvrzené nízké hladině draslíku, je třeba opatrnost a časté kontroly draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hyperkalemia",
+          "frequency": null,
+          "label": "Zvýšené riziko vysoké hladiny draslíku v krvi.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:A12BA",
+      "drug_class": "Přípravky obsahující draslík a náhražky soli s draslíkem",
+      "effect": "Spolu s telmisartanem mohou přípravky s draslíkem nebo náhražky soli s draslíkem významně zvýšit hladinu draslíku v krvi. Pokud je kombinace nutná kvůli potvrzené nízké hladině draslíku, je třeba opatrnost a časté kontroly draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hyperkalemia",
+          "frequency": null,
+          "label": "Zvýšené riziko vysoké hladiny draslíku v krvi.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": null,
+      "drug_class": "Léky blokující renin-angiotenzin-aldosteronový systém: ACE inhibitory, blokátory receptoru angiotenzinu II nebo aliskiren",
+      "effect": "Současné užívání více léků blokujících RAAS zvyšuje riziko nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin včetně akutního selhání. Kombinace se nedoporučuje; pokud ji lékař považuje za nezbytnou, vyžaduje dohled specialisty a časté pečlivé kontroly ledvin, elektrolytů a krevního tlaku. U pacientů s diabetickou nefropatií se ACE inhibitory a blokátory receptoru angiotenzinu II nesmějí užívat současně. Aliskiren je s telmisartanem kontraindikován u pacientů s diabetem nebo poruchou funkce ledvin (GFR pod 60 ml/min/1,73 m²).",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hypotension",
+          "frequency": null,
+          "label": "Při kombinaci léků blokujících RAAS se zvyšuje riziko nízkého krevního tlaku.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Hyperkalemia",
+          "frequency": null,
+          "label": "Při kombinaci léků blokujících RAAS se zvyšuje riziko vysoké hladiny draslíku.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Acute kidney injury",
+          "frequency": null,
+          "label": "Při kombinaci léků blokujících RAAS se zvyšuje riziko zhoršení funkce ledvin včetně akutního selhání.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Indapamid může zvýšit riziko přecitlivělosti na alopurinol.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Allergic reaction",
           "frequency": null,
-          "label": "Zvýšené riziko reakcí z přecitlivělosti na alopurinol",
+          "label": "Při současném užívání s indapamidem může být vyšší riziko přecitlivělosti na alopurinol.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Jiná antihypertenziva",
-      "effect": "Účinek telmisartanu na snížení krevního tlaku může být při současném podávání jiných antihypertenziv zvýrazněn.",
-      "effect_type": "synergy",
-      "side_effects": []
+      "class_id": null,
+      "drug_class": "Léky vyvolávající torsade de pointes",
+      "effect": "Tyto léky mohou spolu s přípravkem YLPIO zvýšit riziko komorových arytmií, zejména torsade de pointes; riziko podporuje nízká hladina draslíku. Lékař může kontrolovat draslík, klinický stav, elektrolyty a EKG a nízkou hladinu draslíku před kombinací upravit.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Ventricular arrhythmia",
+          "frequency": null,
+          "label": "Zvýšené riziko komorových arytmií, zvláště torsade de pointes.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
     },
     {
-      "drug": "Amifostin",
-      "effect": "Může zvýraznit hypotenzní účinek antihypertenziv včetně telmisartanu. Na začátku léčby zajistěte dostatečnou hydrataci a sledujte funkci ledvin.",
-      "effect_type": "synergy",
-      "side_effects": []
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Amfotericin B podávaný do žíly, systémové glukokortikoidy nebo mineralokortikoidy, tetrakosaktid a stimulační laxativa mohou společně s indapamidem zvýšit riziko nízké hladiny draslíku. Lékař může kontrolovat a podle potřeby upravit hladinu draslíku; riziko je zvlášť důležité při souběžném užívání digoxinu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hypokalemia",
+          "frequency": null,
+          "label": "Zvýšené riziko nízké hladiny draslíku při souběžném užívání léků, které ji snižují.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
     },
     {
-      "drug_class": "Alkohol, barbituráty, narkotika a antidepresiva",
-      "effect": "Mohou zesílit ortostatickou hypotenzi při léčbě přípravkem YLPIO.",
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Při současném užívání digoxinu může nízká hladina draslíku zvýšit jeho toxické účinky na srdce. Lékař může sledovat draslík a EKG a podle potřeby upravit léčbu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Cardiac disorders - Other, specify",
+          "frequency": null,
+          "label": "Nízká hladina draslíku může zvýšit toxické účinky digoxinu na srdce.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Baklofen může zesílit účinek přípravku YLPIO na snížení krevního tlaku. Při zahájení souběžné léčby se doporučuje dostatečná hydratace; lékař může sledovat funkci ledvin.",
+      "effect_type": "synergy",
+      "side_effects": [
+        {
+          "ctcae": "Hypotension",
+          "frequency": null,
+          "label": "Silnější účinek na snížení krevního tlaku při současném užívání baklofenu.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Jodované kontrastní látky mohou u dehydratovaných pacientů zvýšit riziko akutního selhání ledvin. Před jejich podáním má být zajištěna hydratace.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Acute kidney injury",
+          "frequency": null,
+          "label": "Při dehydrataci je při podání jodované kontrastní látky zvýšené riziko akutního selhání ledvin.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Tricyklická antidepresiva a antipsychotika mohou zesílit účinek přípravku YLPIO na snížení krevního tlaku a zvýšit riziko poklesu tlaku při vstávání.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Hypotension",
           "frequency": null,
-          "label": "Zvýšené riziko ortostatické hypotenze",
+          "label": "Zesílení účinku na snížení krevního tlaku a vyšší riziko poklesu tlaku při vstávání.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Imipraminová antidepresiva a neuroleptika",
-      "effect": "Mohou zesílit antihypertenzní účinek a zvýšit riziko ortostatické hypotenze; účinky se sčítají.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko ortostatické hypotenze",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Soli vápníku",
-      "effect": "Současné podávání může zvýšit riziko hyperkalcemie v důsledku sníženého vylučování vápníku močí.",
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Při současném užívání solí vápníku může indapamid snížit vylučování vápníku močí a zvýšit jeho hladinu v krvi.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Hypercalcemia",
           "frequency": null,
-          "label": "Zvýšené riziko hyperkalcemie",
+          "label": "Zvýšené riziko vysoké hladiny vápníku v krvi.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Cyklosporin a takrolimus",
-      "effect": "Při současném podávání bylo pozorováno riziko zvýšení hladiny kreatininu v plazmě, a to i bez deplece vody nebo sodíku; hladiny cirkulujícího cyklosporinu se přitom neměnily.",
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Při současném užívání cyklosporinu nebo takrolimu byly pozorovány vyšší hladiny kreatininu v krvi, a to i bez nedostatku vody či sodíku.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Creatinine increased",
           "frequency": null,
-          "label": "Zvýšená hladina kreatininu v plazmě",
+          "label": "Zvýšená hladina kreatininu v krvi.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Systémové kortikosteroidy a tetrakosaktid",
-      "effect": "Mohou snížit antihypertenzní účinek indapamidu v důsledku zadržování vody a sodíku.",
+      "class_id": "substance:5513",
+      "drug": "INDAPAMID",
+      "effect": "Systémové kortikosteroidy a tetrakosaktid mohou zadržováním vody a sodíku oslabit účinek indapamidu na snížení krevního tlaku.",
       "effect_type": "antagonism",
       "side_effects": []
-    },
-    {
-      "drug": "Metformin",
-      "effect": "Diuretiky navozené možné selhání ledvin zvyšuje riziko laktátové acidózy při podávání metforminu. Metformin se nedoporučuje, pokud hladina kreatininu v plazmě překročí 15 mg/l (135 µmol/l) u mužů nebo 12 mg/l (110 µmol/l) u žen.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy v důsledku možného selhání ledvin",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Jodované kontrastní látky",
-      "effect": "Při dehydrataci způsobené diuretiky se zvyšuje riziko akutního selhání ledvin, zvláště při použití vysokých dávek jodované kontrastní látky. Před jejím podáním zajistěte dostatečnou hydrataci.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zvýšené riziko akutního selhání ledvin při dehydrataci, zvláště při použití vysokých dávek jodované kontrastní látky",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Ramipril",
-      "effect": "Při současném podávání telmisartanu a ramiprilu se AUC 0–24 a Cmax ramiprilu a ramiprilátu zvýšily 2,5krát; klinický význam tohoto zjištění není znám. Současná duální blokáda RAAS se obecně nedoporučuje, protože zvyšuje riziko hypotenze, hyperkalemie a snížení funkce ledvin včetně akutního selhání ledvin; pokud je nezbytná, vyžaduje dohled specializovaného lékaře a časté pečlivé monitorování. U pacientů s diabetickou nefropatií se inhibitory ACE a blokátory receptorů angiotenzinu II nesmějí užívat současně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko hypotenze při duální blokádě RAAS",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hyperkalemie při duální blokádě RAAS",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zvýšené riziko snížení funkce ledvin včetně akutního selhání ledvin při duální blokádě RAAS",
-          "action": null,
-          "action_condition": null
-        }
-      ]
     }
-  ]
+  ],
+  "usage": "YLPIO se používá k léčbě vysokého krevního tlaku u dospělých, jejichž tlak je již upraven stejnými dávkami telmisartanu a indapamidu.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0231247",
+      "H": "",
+      "NAZEV": "YLPIO",
+      "SILA": "80MG/2,5MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "80MG/2,5MG TBL NOB 100",
+      "OBAL": "BLI",
+      "DRZ": "PMP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "58",
+      "ATC_WHO": "C09DA07",
+      "RC": "58/211/18-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "1",
+      "DDDUN_WHO": "UD",
+      "DDDP_WHO": "100",
+      "ZDROJ_WHO": "NO26",
+      "LL": "13774,5513",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "0",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "YLPIO",
+      "MRP_CISLO": "CZ/H/0819/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OK",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0231247",
+        "KOD_LATKY": "13774",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "80",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13774",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "TELMISARTANUM",
+          "NAZEV_EN": "TELMISARTAN",
+          "NAZEV": "TELMISARTAN"
+        }
+      },
+      {
+        "KOD_SUKL": "0231247",
+        "KOD_LATKY": "5513",
+        "SQ": "2",
+        "S": "L",
+        "AMNT": "2,5",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5513",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "INDAPAMIDUM",
+          "NAZEV_EN": "INDAPAMIDE",
+          "NAZEV": "INDAPAMID",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0231247",
+        "KOD_LATKY": "875",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "875",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MANNITOLUM",
+          "NAZEV_EN": "MANNITOL",
+          "NAZEV": "MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0231247",
+        "KOD_LATKY": "2458",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2458",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII HYDROXIDUM",
+          "NAZEV_EN": "SODIUM HYDROXIDE",
+          "NAZEV": "HYDROXID SODNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0231247",
+        "KOD_LATKY": "4078",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0231247",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0231247",
+      "PIL": "PI234556.pdf",
+      "DAT_ROZ_PIL": "11.06.2026",
+      "SPC": "SPC234557.pdf",
+      "DAT_ROZ_SPC": "11.06.2026",
+      "OBAL_TEXT": "OBAL234555.pdf",
+      "DAT_ROZ_OBAL": "11.06.2026"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C09DA07",
+        "NT": "N",
+        "NAZEV": "TELMISARTAN A DIURETIKA",
+        "NAZEV_EN": "TELMISARTAN AND DIURETICS"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

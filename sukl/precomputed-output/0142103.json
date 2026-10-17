@@ -1,32 +1,49 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C08",
+    "atc:C08C",
+    "atc:C08CA",
+    "atc:C08CA01",
+    "substance:12990"
+  ],
   "side_effects": [
     {
       "ctcae": "Peripheral edema",
       "frequency": "very_common",
-      "label": "Otok způsobený zadržováním tekutin.",
-      "action": null,
-      "action_condition": null
+      "label": "Otok, včetně otoku kotníků.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud vás otok obtěžuje nebo trvá déle než týden.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Somnolence",
       "frequency": "common",
-      "label": "Ospalost, zejména na začátku léčby.",
+      "label": "Ospalost, hlavně na začátku léčby.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závrať.",
-      "action": null,
-      "action_condition": null
+      "label": "Závrať, hlavně na začátku léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud po užití tablety pociťujete závrať, neřiďte ani neobsluhujte stroje.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Headache",
       "frequency": "common",
-      "label": "Bolest hlavy, zejména na začátku léčby.",
-      "action": null,
-      "action_condition": null
+      "label": "Bolest hlavy, hlavně na začátku léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud po užití tablety máte bolest hlavy, neřiďte ani neobsluhujte stroje.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Palpitations",
@@ -52,9 +69,12 @@
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Pocit nevolnosti.",
-      "action": null,
-      "action_condition": null
+      "label": "Nevolnost.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud po užití tablety pociťujete nevolnost, neřiďte ani neobsluhujte stroje.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Dyspepsia",
@@ -78,30 +98,26 @@
       "action_condition": null
     },
     {
-      "ctcae": "Peripheral edema",
-      "frequency": "common",
-      "label": "Otok kotníků.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Fatigue",
       "frequency": "common",
       "label": "Únava.",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud po užití tablety pociťujete únavu, neřiďte ani neobsluhujte stroje.",
+        "min_severity": 2
+      }
     },
     {
-      "ctcae": "Generalized muscle weakness",
+      "ctcae": "Asthenia",
       "frequency": "common",
       "label": "Slabost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Eye disorders - Other, specify",
+      "ctcae": "Blurred vision",
       "frequency": "common",
-      "label": "Poruchy zraku včetně dvojitého vidění.",
+      "label": "Porucha zraku včetně dvojitého vidění.",
       "action": null,
       "action_condition": null
     },
@@ -111,15 +127,6 @@
       "label": "Svalové křeče.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "common",
-      "label": "Dušnost. Náhlé sípání, bolest na hrudi, dušnost nebo potíže s dýcháním patří mezi příznaky, při kterých je třeba ihned navštívit lékaře.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví náhlé sípání, bolest na hrudi, dušnost nebo potíže s dýcháním."
-      }
     },
     {
       "ctcae": "Depression",
@@ -164,16 +171,16 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Paresthesia",
       "frequency": "uncommon",
-      "label": "Snížená citlivost.",
+      "label": "Necitlivost nebo brnění v končetinách.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Paresthesia",
+      "ctcae": "Dysesthesia",
       "frequency": "uncommon",
-      "label": "Pocit brnění v končetinách.",
+      "label": "Necitlivost k bolesti.",
       "action": null,
       "action_condition": null
     },
@@ -192,25 +199,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Rhinitis infective",
       "frequency": "uncommon",
-      "label": "Poruchy srdečního rytmu včetně pomalého srdečního tepu, komorové tachykardie a fibrilace síní. Nepravidelný srdeční tep je příznak, při kterém je třeba ihned navštívit lékaře.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví nepravidelný srdeční tep."
-      }
+      "label": "Kýchání nebo rýma způsobené zánětem nosní sliznice.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Cough",
       "frequency": "uncommon",
       "label": "Kašel.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Rhinitis infective",
-      "frequency": "uncommon",
-      "label": "Rýma způsobená zánětem nosní sliznice.",
       "action": null,
       "action_condition": null
     },
@@ -236,20 +234,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Purpura",
-      "frequency": "uncommon",
-      "label": "Purpura.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Změna zbarvení kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Hyperhidrosis",
       "frequency": "uncommon",
       "label": "Zvýšené pocení.",
@@ -264,42 +248,21 @@
       "action_condition": null
     },
     {
-      "ctcae": "Rash maculo-papular",
+      "ctcae": "Purpura",
       "frequency": "uncommon",
-      "label": "Vyrážka nebo exantém.",
+      "label": "Purpura.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Urticaria",
+      "ctcae": "Skin hypopigmentation",
       "frequency": "uncommon",
-      "label": "Kopřivka.",
+      "label": "Poruchy zbarvení kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Arthralgia",
-      "frequency": "uncommon",
-      "label": "Bolest kloubů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myalgia",
-      "frequency": "uncommon",
-      "label": "Bolest svalů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Back pain",
-      "frequency": "uncommon",
-      "label": "Bolest zad.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
+      "ctcae": "Dysuria",
       "frequency": "uncommon",
       "label": "Poruchy močení.",
       "action": null,
@@ -308,7 +271,7 @@
     {
       "ctcae": "Nocturia",
       "frequency": "uncommon",
-      "label": "Noční pomočování.",
+      "label": "Častější močení v noci.",
       "action": null,
       "action_condition": null
     },
@@ -334,13 +297,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "uncommon",
-      "label": "Bolest na hrudi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Pain",
       "frequency": "uncommon",
       "label": "Bolest.",
@@ -351,6 +307,27 @@
       "ctcae": "Malaise",
       "frequency": "uncommon",
       "label": "Celkový pocit nemoci nebo nevolnosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arthralgia",
+      "frequency": "uncommon",
+      "label": "Bolest kloubů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myalgia",
+      "frequency": "uncommon",
+      "label": "Bolest svalů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Back pain",
+      "frequency": "uncommon",
+      "label": "Bolest zad.",
       "action": null,
       "action_condition": null
     },
@@ -390,15 +367,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
-      "frequency": "very_rare",
-      "label": "Alergické reakce; mohou se projevit například náhlým sípáním, bolestí na hrudi, potížemi s dýcháním nebo otokem víček, tváří či rtů. Otok jazyka a hrdla může způsobit výrazné potíže s dýcháním.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některý z uvedených příznaků alergické reakce."
-      }
-    },
-    {
       "ctcae": "Hyperglycemia",
       "frequency": "very_rare",
       "label": "Zvýšená hladina cukru v krvi.",
@@ -406,23 +374,16 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Zvýšené svalové napětí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Peripheral sensory neuropathy",
       "frequency": "very_rare",
-      "label": "Porucha nervů, která může způsobit svalovou slabost, brnění nebo necitlivost.",
+      "label": "Porucha nervů způsobující svalovou slabost, brnění nebo necitlivost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gingival pain",
       "frequency": "very_rare",
-      "label": "Otok a krvácení z dásní.",
+      "label": "Otok dásní nebo krvácení z dásní.",
       "action": null,
       "action_condition": null
     },
@@ -434,13 +395,11 @@
       "action_condition": null
     },
     {
-      "ctcae": "Pancreatitis",
+      "ctcae": "Hepatic failure",
       "frequency": "very_rare",
-      "label": "Zánět slinivky břišní, který může způsobit závažnou bolest břicha a zad doprovázenou výrazným celkovým pocitem nemoci; při těchto příznacích je třeba ihned navštívit lékaře.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte závažnou bolest břicha a zad doprovázenou výrazným celkovým pocitem nemoci."
-      }
+      "label": "Abnormální funkce jater.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
@@ -450,54 +409,32 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Jaundice",
       "frequency": "very_rare",
-      "label": "Abnormální funkce jater, zežloutnutí kůže (žloutenka) nebo zvýšení jaterních enzymů, které může ovlivnit některé lékařské testy.",
+      "label": "Zežloutnutí kůže (žloutenka).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "very_rare",
+      "label": "Zvýšení jaterních enzymů, většinou související s cholestázou; může ovlivnit některé lékařské testy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypertonia",
+      "frequency": "very_rare",
+      "label": "Zvýšené svalové napětí.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vasculitis",
       "frequency": "very_rare",
-      "label": "Zánět krevních cév, často doprovázený kožní vyrážkou.",
+      "label": "Zánět krevních cév, často s kožní vyrážkou.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Otok víček, tváří, rtů, jazyka nebo hrdla; otok jazyka a hrdla může způsobit výrazné potíže s dýcháním.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví otok víček, tváří, rtů, jazyka nebo hrdla."
-      }
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "very_rare",
-      "label": "Závažná kožní reakce včetně erythema multiforme.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce."
-      }
-    },
-    {
-      "ctcae": "Exfoliative dermatitis",
-      "frequency": "very_rare",
-      "label": "Závažná kožní reakce včetně olupování a otoku kůže nebo exfoliativní dermatitidy.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce, například olupování nebo otok kůže."
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "very_rare",
-      "label": "Závažná kožní reakce včetně silné vyrážky, kopřivky, zarudnutí kůže po celém těle, silného svědění, puchýřů nebo zánětu sliznic (Stevensův-Johnsonův syndrom).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce."
-      }
     },
     {
       "ctcae": "Photosensitivity",
@@ -507,177 +444,434 @@
       "action_condition": null
     },
     {
-      "ctcae": "Myocardial infarction",
-      "frequency": "very_rare",
-      "label": "Srdeční infarkt; při výskytu je třeba ihned navštívit lékaře.",
+      "ctcae": "Extrapyramidal disorder",
+      "frequency": "not_known",
+      "label": "Třes, ztuhlý postoj, maskovitý výraz, pomalé pohyby a šouravá, nejistá chůze; frekvenci nelze určit.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": null,
+      "label": "Náhlé sípání, bolest na hrudi, dušnost nebo potíže s dýcháním.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte příznaky srdečního infarktu."
+        "patient_guide": "Pokud se tyto potíže objeví náhle.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": null,
+      "label": "Otok víček, tváří nebo rtů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Laryngeal edema",
+      "frequency": null,
+      "label": "Otok jazyka a hrdla způsobující velké dýchací potíže.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "very_rare",
+      "label": "Závažná kožní reakce, včetně Stevensova-Johnsonova syndromu; možná silná vyrážka, kopřivka, zarudnutí kůže po celém těle, silné svědění, puchýře, olupování či otok kůže nebo zánět sliznic.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví závažná kožní reakce nebo jiná alergická reakce.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza, závažná kožní reakce s tvorbou puchýřů a olupováním kůže.",
+      "label": "Toxická epidermální nekrolýza; frekvenci nelze určit.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce, například tvorba puchýřů nebo olupování kůže."
+        "patient_guide": "Pokud se objeví závažná kožní reakce.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Extrapyramidal disorder",
-      "frequency": "not_known",
-      "label": "Třes, ztuhlý postoj, maskovitý výraz obličeje, pomalé pohyby a šouravá, nejistá chůze.",
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Dizziness",
-      "frequency": null,
-      "label": "Při užití příliš mnoha tablet se může objevit závrať nebo pocit lehké hlavy.",
+      "ctcae": "Rash maculo-papular",
+      "frequency": "uncommon",
+      "label": "Vyrážka nebo exantém.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Angioedema",
+      "frequency": "very_rare",
+      "label": "Angioedém nebo Quinckeho edém.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jste užil(a) příliš mnoho tablet přípravku Amloratio."
+        "patient_guide": "Pokud se objeví otok víček, tváří, rtů, jazyka nebo hrdla.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Presyncope",
-      "frequency": null,
-      "label": "Při užití příliš mnoha tablet se mohou objevit mdloby nebo slabost.",
+      "ctcae": "Erythema multiforme",
+      "frequency": "very_rare",
+      "label": "Erythema multiforme.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jste užil(a) příliš mnoho tablet přípravku Amloratio."
+        "patient_guide": "Pokud se objeví závažná kožní reakce.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Hypotension",
-      "frequency": null,
-      "label": "Výrazný a pravděpodobně dlouhotrvající pokles krevního tlaku při předávkování může vést až k šoku, který může být smrtelný.",
+      "ctcae": "Exfoliative dermatitis",
+      "frequency": "very_rare",
+      "label": "Exfoliativní dermatitida.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jste užil(a) příliš mnoho tablet přípravku Amloratio."
+        "patient_guide": "Pokud se objeví závažná kožní reakce.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Pulmonary edema",
-      "frequency": null,
-      "label": "Při předávkování se může objevit plicní edém a dušnost, a to i se zpožděním 24–48 hodin po požití.",
+      "ctcae": "Allergic reaction",
+      "frequency": "very_rare",
+      "label": "Alergická reakce.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jste užil(a) příliš mnoho tablet přípravku Amloratio."
+        "patient_guide": "Pokud se objeví otok obličeje, rtů, jazyka nebo hrdla, případně jiné závažné alergické příznaky.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Sinus tachycardia",
-      "frequency": null,
-      "label": "Při významném předávkování může dojít k reflexní tachykardii.",
+      "ctcae": "Myocardial infarction",
+      "frequency": "very_rare",
+      "label": "Srdeční infarkt.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jste užil(a) příliš mnoho tablet přípravku Amloratio."
+        "patient_guide": null,
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Vasovagal reaction",
-      "frequency": null,
-      "label": "Při závažném poklesu krevního tlaku při předávkování může být kůže vlhká a chladná a může dojít ke ztrátě vědomí nebo šoku.",
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Arytmie, včetně bradykardie, komorové tachykardie a fibrilace síní; při nepravidelném srdečním tepu ihned navštivte lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud jste užil(a) příliš mnoho tablet přípravku Amloratio."
+        "patient_guide": "Pokud je srdeční tep nepravidelný.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "very_rare",
+      "label": "Zánět slinivky břišní, který může způsobit závažnou bolest břicha a zad a výrazný celkový pocit nemoci.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte závažnou bolest břicha a zad a výrazný celkový pocit nemoci.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": "common",
+      "label": "Dušnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vasculitis",
+      "frequency": "very_rare",
+      "label": "Zánět cév.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Atrial fibrillation",
+      "frequency": "uncommon",
+      "label": "Fibrilace síní; viz také hlášení arytmií.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud je srdeční tep nepravidelný.",
+        "min_severity": 2
       }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Silné nebo středně silné inhibitory CYP3A4 (včetně inhibitorů proteázy, azolových antimykotik, makrolidů, verapamilu a diltiazemu)",
-      "effect": "Současné užívání může významně zvýšit expozici amlodipinu a tím zvýšit riziko hypotenze. Klinický význam může být výraznější u starších pacientů; může být nutné klinické sledování a úprava dávky. Při současném užívání klarithromycinu se doporučuje pečlivé sledování pacientů kvůli zvýšenému riziku hypotenze.",
+      "class_id": "group:cyp3a4_inhibitor",
+      "drug_class": "Silné nebo středně silné inhibitory CYP3A4",
+      "effect": "Mohou významně zvýšit expozici amlodipinu a riziko nízkého krevního tlaku. To může být výraznější u starších pacientů; lékař může zvážit sledování a úpravu dávky.",
       "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko hypotenze při zvýšené expozici amlodipinu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Induktory CYP3A4 (zejména rifampicin a třezalka tečkovaná)",
-      "effect": "Při současné léčbě se mohou měnit plazmatické koncentrace amlodipinu. Během souběžné léčby, zejména silnými induktory CYP3A4, a po jejím ukončení je třeba sledovat krevní tlak a případně zvážit úpravu dávky.",
+      "class_id": "group:cyp3a4_inducer",
+      "drug_class": "Induktory CYP3A4",
+      "effect": "Mohou měnit hladinu amlodipinu v krvi. Při souběžném užívání, zejména silných induktorů, a po něm může lékař sledovat krevní tlak a zvážit úpravu dávky.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Grapefruit",
+      "effect": "Grapefruit nebo grapefruitová šťáva mohou u některých pacientů zvýšit biologickou dostupnost amlodipinu a více snížit krevní tlak. Souběžná konzumace se nedoporučuje; příbalová informace uvádí, že se grapefruit ani jeho šťáva nemají konzumovat.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Dantrolen",
+      "effect": "Při riziku maligní hypertermie a během její léčby se doporučuje vyhnout souběžnému podání intravenózního dantrolenu s amlodipinem, protože je popsáno riziko hyperkalémie, fibrilace komor a kardiovaskulárního kolapsu u zvířat.",
       "effect_type": null,
       "side_effects": []
     },
     {
-      "drug": "Grapefruit a grapefruitová šťáva",
-      "effect": "Současné užívání není doporučeno, protože u některých pacientů může zvýšit biologickou dostupnost amlodipinu a způsobit větší pokles krevního tlaku.",
+      "class_id": null,
+      "drug": "Takrolimus",
+      "effect": "Amlodipin může zvýšit hladinu takrolimu v krvi. Lékař má při souběžném užívání sledovat jeho hladinu a podle potřeby upravit dávku takrolimu; mechanismus interakce není plně znám.",
       "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Větší pokles krevního tlaku při zvýšené biologické dostupnosti amlodipinu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Dantrolen podávaný infuzí",
-      "effect": "U pacientů náchylných k maligní hypertermii a během jejího zvládání se doporučuje vyhnout současnému podávání blokátorů kalciových kanálů, jako je amlodipin, kvůli riziku hyperkalémie. U zvířat byla po podání verapamilu nebo intravenózního dantrolenu pozorována letální fibrilace komor a kardiovaskulární kolaps v souvislosti s hyperkalémií.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Riziko hyperkalémie při současném podávání.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Ventricular fibrillation",
-          "frequency": null,
-          "label": "U zvířat byla v souvislosti s hyperkalémií pozorována letální fibrilace komor.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "U zvířat byl v souvislosti s hyperkalémií pozorován kardiovaskulární kolaps.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": null,
+      "drug_class": "Inhibitory mTOR, například sirolimus, temsirolimus a everolimus",
+      "effect": "Amlodipin může jako slabý inhibitor CYP3A zvýšit expozici těchto léčiv, která jsou substráty CYP3A.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
     },
     {
-      "drug_class": "Jiné léky snižující krevní tlak",
-      "effect": "Účinek amlodipinu na snížení krevního tlaku může zesílit antihypertenzní účinek jiných léků snižujících krevní tlak.",
+      "class_id": null,
+      "drug": "Cyklosporin",
+      "effect": "U pacientů po transplantaci ledviny se při souběžném podávání amlodipinu může zvýšit minimální hladina cyklosporinu; zvýšení bylo variabilní, v průměru 0–40 %. Lékař má zvážit sledování hladin a podle potřeby snížit dávku cyklosporinu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Simvastatin",
+      "effect": "Současné podávání opakovaných dávek amlodipinu 10 mg se simvastatinem 80 mg zvýšilo expozici simvastatinu o 77 % oproti samotnému simvastatinu. U pacientů užívajících amlodipin je dávka simvastatinu omezena na 20 mg denně.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Léky snižující krevní tlak",
+      "effect": "Amlodipin může zesílit jejich účinek na snížení krevního tlaku; příbalová informace upozorňuje, že krevní tlak může snížit více při užívání dalších léků na vysoký krevní tlak.",
       "effect_type": "synergy",
       "side_effects": []
-    },
-    {
-      "drug": "Takrolimus",
-      "effect": "Při současném užívání s amlodipinem existuje riziko zvýšené hladiny takrolimu v krvi. U pacientů léčených takrolimem je třeba při souběžném podávání sledovat hladiny takrolimu a podle potřeby upravit jeho dávkování, aby se předešlo toxicitě.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Inhibitory mTOR (sirolimus, temsirolimus a everolimus)",
-      "effect": "Amlodipin jako slabý inhibitor CYP3A může při současném užívání zvýšit expozici inhibitorů mTOR.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Cyklosporin",
-      "effect": "U pacientů po transplantaci ledviny byly pozorovány variabilní zvýšení minimálních koncentrací cyklosporinu, v průměru o 0–40 %. U těchto pacientů léčených amlodipinem je třeba zvážit sledování hladin cyklosporinu a podle potřeby snížit jeho dávku.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Simvastatin",
-      "effect": "Současné podávání opakovaných dávek amlodipinu 10 mg a simvastatinu 80 mg zvýšilo expozici simvastatinu o 77 % oproti samotnému simvastatinu. U pacientů užívajících amlodipin je dávka simvastatinu omezena na 20 mg denně.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Amloratio se používá k léčbě vysokého krevního tlaku a některých typů bolesti na hrudi (anginy pectoris).",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0142103",
+      "H": "",
+      "NAZEV": "AMLORATIO",
+      "SILA": "5MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "5MG TBL NOB 100",
+      "OBAL": "BLI",
+      "DRZ": "RAT",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "83",
+      "ATC_WHO": "C08CA01",
+      "RC": "83/136/07-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "5",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "100",
+      "ZDROJ_WHO": "NO26",
+      "LL": "12990",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "60",
+      "EXP_T": "M",
+      "NAZEV_REG": "AMLORATIO",
+      "MRP_CISLO": "NL/H/0880/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0142103",
+        "KOD_LATKY": "12990",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "6,944",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "12990",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "AMLODIPINI BESILAS",
+          "NAZEV_EN": "AMLODIPINE BESILATE",
+          "NAZEV": "AMLODIPIN-BESILÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0142103",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0142103",
+        "KOD_LATKY": "9518",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "5",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9518",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "AMLODIPINUM",
+          "NAZEV_EN": "AMLODIPINE",
+          "NAZEV": "AMLODIPIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0142103",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0142103",
+        "KOD_LATKY": "9860",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9860",
+          "ZDROJ": "C20M",
+          "NAZEV_INN": "CALCII HYDROGENOPHOSPHAS",
+          "NAZEV_EN": "CALCIUM HYDROGEN PHOSPHATE",
+          "NAZEV": "HYDROGENFOSFOREČNAN VÁPENATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0142103",
+        "KOD_LATKY": "14679",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0142103",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0142103",
+      "PIL": "PI198282.pdf",
+      "DAT_ROZ_PIL": "27.04.2023",
+      "SPC": "SPC191017.pdf",
+      "DAT_ROZ_SPC": "08.09.2022",
+      "OBAL_TEXT": "OBAL191015.pdf",
+      "DAT_ROZ_OBAL": "08.09.2022"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C08CA01",
+        "NT": "N",
+        "NAZEV": "AMLODIPIN",
+        "NAZEV_EN": "AMLODIPINE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

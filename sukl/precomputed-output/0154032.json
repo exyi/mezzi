@@ -1,9 +1,17 @@
 {
+  "classes": [
+    "atc:G",
+    "atc:G04",
+    "atc:G04B",
+    "atc:G04BD",
+    "atc:G04BD08",
+    "substance:17227"
+  ],
   "side_effects": [
     {
       "ctcae": "Dry mouth",
-      "frequency": "very_common",
-      "label": "Sucho v ústech; při dávce 10 mg denně se vyskytlo u 22 % pacientů, při dávce 5 mg denně u 11 % pacientů a při užívání placeba u 4 % pacientů.",
+      "frequency": 4.5455,
+      "label": "Sucho v ústech; u dávky 10 mg jednou denně u 22 % pacientů.",
       "action": null,
       "action_condition": null
     },
@@ -31,35 +39,7 @@
     {
       "ctcae": "Dyspepsia",
       "frequency": "common",
-      "label": "Trávicí obtíže (dyspepsie), včetně pálení žáhy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Abdominal pain",
-      "frequency": "common",
-      "label": "Bolest břicha.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Bloating",
-      "frequency": "common",
-      "label": "Pocit plnosti v břiše.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Belching",
-      "frequency": "common",
-      "label": "Říhání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "common",
-      "label": "Žaludeční potíže.",
+      "label": "Trávicí obtíže, včetně pocitu plnosti, bolesti břicha, říhání, pálení žáhy a žaludečních potíží.",
       "action": null,
       "action_condition": null
     },
@@ -71,7 +51,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Bladder infection",
+      "ctcae": "Cystitis noninfective",
       "frequency": "uncommon",
       "label": "Zánět močového měchýře.",
       "action": null,
@@ -94,12 +74,12 @@
     {
       "ctcae": "Dry eye",
       "frequency": "uncommon",
-      "label": "Suché a podrážděné oči.",
+      "label": "Suché nebo podrážděné oči.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Dry eye",
+      "ctcae": "Nasal congestion",
       "frequency": "uncommon",
       "label": "Sucho v nose.",
       "action": null,
@@ -108,12 +88,12 @@
     {
       "ctcae": "Gastroesophageal reflux disease",
       "frequency": "uncommon",
-      "label": "Návrat žaludečního obsahu do jícnu (gastroezofageální reflux).",
+      "label": "Návrat žaludečního obsahu do jícnu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Sore throat",
       "frequency": "uncommon",
       "label": "Sucho v krku.",
       "action": null,
@@ -143,21 +123,21 @@
     {
       "ctcae": "Peripheral edema",
       "frequency": "uncommon",
-      "label": "Otoky dolních končetin (periferní otoky).",
+      "label": "Otoky dolních končetin.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Fecal impaction",
       "frequency": "rare",
-      "label": "Hromadění tmelovité nebo tvrdé stolice v tlustém střevě (fekální impakce).",
+      "label": "Nahromadění tuhé stolice v tlustém střevě.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urinary retention",
       "frequency": "rare",
-      "label": "Hromadění moče v močovém měchýři kvůli obtížnému vyprazdňování (retence moče).",
+      "label": "Hromadění moče v měchýři kvůli obtížnému vyprazdňování.",
       "action": null,
       "action_condition": null
     },
@@ -192,7 +172,7 @@
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "rare",
-      "label": "Vyrážka.",
+      "label": "Vyrážka, bez bližšího určení.",
       "action": null,
       "action_condition": null
     },
@@ -206,24 +186,25 @@
     {
       "ctcae": "Confusion",
       "frequency": "very_rare",
-      "label": "Zmatenost, stavy zmatenosti.",
+      "label": "Zmatenost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "very_rare",
-      "label": "Kožní alergie.",
+      "label": "Kožní alergická reakce.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "not_known",
-      "label": "Anafylaktická reakce.",
+      "label": "Anafylaktická reakce. Při jejím výskytu má být léčba okamžitě ukončena.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví anafylaktická reakce."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
@@ -236,28 +217,28 @@
     {
       "ctcae": "Hyperkalemia",
       "frequency": "not_known",
-      "label": "Vysoká hladina draslíku v krvi, která může způsobit nepravidelný srdeční rytmus.",
+      "label": "Zvýšená hladina draslíku v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Glaucoma",
       "frequency": "not_known",
-      "label": "Zvýšený nitrooční tlak (glaukom).",
+      "label": "Zvýšený nitrooční tlak.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "not_known",
-      "label": "Změny elektrické aktivity srdce na EKG, včetně prodloužení intervalu QT.",
+      "label": "Změny EKG včetně prodloužení QT; byly hlášeny také Torsade de pointes.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Atrial fibrillation",
       "frequency": "not_known",
-      "label": "Nepravidelná srdeční činnost (fibrilace síní).",
+      "label": "Nepravidelná srdeční činnost včetně fibrilace síní.",
       "action": null,
       "action_condition": null
     },
@@ -269,16 +250,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Tachycardia",
       "frequency": "not_known",
-      "label": "Rychlejší bušení srdce (tachykardie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Delirium",
-      "frequency": "not_known",
-      "label": "Delirium.",
+      "label": "Zrychlený srdeční tep.",
       "action": null,
       "action_condition": null
     },
@@ -292,14 +266,7 @@
     {
       "ctcae": "Hepatobiliary disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Poruchy jater.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "not_known",
-      "label": "Abnormální výsledky funkčních jaterních testů.",
+      "label": "Porucha jater.",
       "action": null,
       "action_condition": null
     },
@@ -318,50 +285,42 @@
       "action_condition": null
     },
     {
-      "ctcae": "Ileus",
+      "ctcae": "Angioedema",
       "frequency": "not_known",
-      "label": "Ileus.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Břišní diskomfort.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Colonic obstruction",
-      "frequency": "rare",
-      "label": "Obstrukce tračníku.",
-      "action": null,
-      "action_condition": null
+      "label": "Angioedém, někdy s ucpáním dýchacích cest. Léčba má být okamžitě ukončena.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Urticaria",
-      "frequency": "very_rare",
+      "frequency": "not_known",
       "label": "Kopřivka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Angioedém; pokud je spojen s otokem blokujícím dýchací cesty, léčba solifenacin-sukcinátem má být okamžitě ukončena a mají být přijata příslušná léčebná opatření.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví angioedém."
-      }
+      "ctcae": "Ileus",
+      "frequency": "not_known",
+      "label": "Neprůchodnost střev.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Erythema multiforme",
-      "frequency": "very_rare",
-      "label": "Erythema multiforme.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce, například puchýřky nebo olupování kůže."
-      }
+      "ctcae": "Abdominal pain",
+      "frequency": "not_known",
+      "label": "Nepříjemné pocity v břiše.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Abnormální výsledky jaterních testů.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Exfoliative dermatitis",
@@ -369,104 +328,291 @@
       "label": "Exfoliativní dermatitida.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce, například puchýřky nebo olupování kůže."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Dermatosis bullous",
+      "ctcae": "Erythema multiforme",
       "frequency": "not_known",
-      "label": "Dermatitida.",
+      "label": "Erythema multiforme.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce, například puchýřky nebo olupování kůže."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Generalized muscle weakness",
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
       "frequency": "not_known",
-      "label": "Ochablost svalů (svalová slabost).",
+      "label": "Svalová slabost.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Jiné anticholinergní látky",
-      "effect": "Současné podávání může zesílit léčebné účinky i nežádoucí účinky obou léčiv. Mezi ukončením léčby přípravkem Vesicare a zahájením léčby jiným anticholinergikem je nutná přestávka přibližně 1 týden.",
+      "class_id": "atc:A03A",
+      "drug_class": "Jiná anticholinergika",
+      "effect": "Při současném užívání se mohou léčebné účinky i nežádoucí účinky obou léků zesílit. Mezi ukončením Vesicare a zahájením jiného anticholinergika má být přibližně týdenní přestávka.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "group:cyp3a4_inhibitor_strong",
+      "drug_class": "Silné inhibitory CYP3A4",
+      "effect": "Mohou zvýšit hladinu solifenacinu; při souběžném užívání silného inhibitoru CYP3A4 v terapeutické dávce, například ketokonazolu, ritonaviru, nelfinaviru nebo itrakonazolu, nesmí denní dávka Vesicare překročit 5 mg. Tato kombinace je kontraindikována při závažném poškození ledvin nebo středně závažném poškození jater.",
+      "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
       "drug_class": "Agonisté cholinergních receptorů",
-      "effect": "Současné podávání může snížit léčebný účinek solifenacinu.",
+      "effect": "Mohou snížit léčebný účinek solifenacinu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "Metoklopramid",
-      "effect": "Vesicare může snížit účinek metoklopramidu, který stimuluje pohyby trávicího traktu.",
+      "class_id": "atc:A03FA",
+      "drug_class": "Léky stimulující pohyby trávicího traktu",
+      "effect": "Vesicare může snížit účinek léků stimulujících pohyby trávicího traktu, například metoklopramidu nebo cisapridu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "Cisaprid",
-      "effect": "Vesicare může snížit účinek cisapridu, který stimuluje pohyby trávicího traktu.",
-      "effect_type": "antagonism",
+      "class_id": "group:cyp3a4_inducer",
+      "drug_class": "Induktory CYP3A4",
+      "effect": "Mohou ovlivnit hladinu solifenacinu; možné farmakokinetické interakce jsou uvedeny například u rifampicinu, fenytoinu a karbamazepinu. Rozsah účinku nebyl stanoven.",
+      "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Silné inhibitory CYP3A4, například ketokonazol, ritonavir, nelfinavir a itrakonazol",
-      "effect": "Silné inhibitory CYP3A4 mohou zvýšit koncentraci solifenacinu: ketokonazol 200 mg denně zdvojnásobuje AUC a ketokonazol 400 mg denně ji ztrojnásobuje. Při současném podávání ketokonazolu nebo jiného silného inhibitoru CYP3A4 v terapeutických dávkách nesmí denní dávka přípravku Vesicare překročit 5 mg. Kombinace je kontraindikována u pacientů se závažným poškozením ledvin a středně závažným poškozením jater.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Inhibitory CYP3A4, například verapamil a diltiazem",
-      "effect": "Vzhledem k metabolismu solifenacinu prostřednictvím CYP3A4 jsou s inhibitory CYP3A4, například verapamilem a diltiazemem, možné farmakokinetické interakce.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Induktory CYP3A4, například rifampicin, fenytoin a karbamazepin",
-      "effect": "Léky jako rifampicin, fenytoin a karbamazepin mohou urychlit vylučování přípravku Vesicare z těla; s induktory CYP3A4 jsou možné farmakokinetické interakce.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Substráty CYP3A4 s vyšší afinitou",
-      "effect": "Vzhledem k metabolismu solifenacinu prostřednictvím CYP3A4 jsou možné farmakokinetické interakce se substráty CYP3A4 s vyšší afinitou.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léky, které mohou vyvolat nebo zhoršit zánět jícnu, například bisfosfonáty",
-      "effect": "Opatrnost je nutná u pacientů s brániční kýlou nebo gastroezofageálním refluxem, kteří užívají léky schopné vyvolat nebo zhoršit zánět jícnu, například bisfosfonáty.",
+      "class_id": "atc:M05B",
+      "drug_class": "Bisfosfonáty",
+      "effect": "Při současném užívání mohou bisfosfonáty, které způsobují nebo zhoršují zánět jícnu, tento problém zhoršit; opatrnost je zvlášť důležitá při brániční kýle nebo refluxu.",
       "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léky prodlužující interval QT",
-      "effect": "Při předávkování je třeba věnovat zvláštní pozornost pacientům, kteří současně užívají léky prodlužující interval QT, protože mohou zvyšovat riziko komplikací spojených s prodloužením QT.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Kombinovaná perorální kontraceptiva obsahující ethinylestradiol a levonorgestrel",
-      "effect": "Přípravek Vesicare nevykazuje farmakokinetickou interakci s kombinovanými perorálními kontraceptivy obsahujícími ethinylestradiol a levonorgestrel.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "Warfarin",
-      "effect": "Přípravek Vesicare nemění farmakokinetiku R-warfarinu ani S-warfarinu a nemění jejich účinek na protrombinový čas.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "Digoxin",
-      "effect": "Přípravek Vesicare nemá žádný vliv na farmakokinetiku digoxinu.",
-      "effect_type": null,
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Vesicare se používá k léčbě příznaků hyperaktivního močového měchýře, jako je náhlé nucení na močení, časté močení nebo únik moči.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0154032",
+      "H": "",
+      "NAZEV": "VESICARE",
+      "SILA": "10MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "10MG TBL FLM 100",
+      "OBAL": "TBC",
+      "DRZ": "AES",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "73",
+      "ATC_WHO": "G04BD08",
+      "RC": "73/067/05-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "5",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "200",
+      "ZDROJ_WHO": "NO26",
+      "LL": "17227",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "0",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "VESICARE",
+      "MRP_CISLO": "NL/H/0487/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0154032",
+        "KOD_LATKY": "17227",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "10",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17227",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "SOLIFENACINI SUCCINAS",
+          "NAZEV_EN": "SOLIFENACIN SUCCINATE",
+          "NAZEV": "SOLIFENACIN-SUKCINÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0154032",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0154032",
+        "KOD_LATKY": "16526",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "7,5",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16526",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "SOLIFENACINUM",
+          "NAZEV_EN": "SOLIFENACIN",
+          "NAZEV": "SOLIFENACIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0154032",
+        "KOD_LATKY": "2624",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0154032",
+        "KOD_LATKY": "2970",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0154032",
+        "KOD_LATKY": "748",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0154032",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0154032",
+        "SQ": "8",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0154032",
+        "KOD_LATKY": "17222",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17222",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ROSEUM OPADRY 03F14895",
+          "NAZEV_EN": "OPADRY 03F14895 (PINK)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPADRY 03F14895 RŮŽOVÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0154032",
+      "PIL": "PI210940.pdf",
+      "DAT_ROZ_PIL": "06.06.2024",
+      "SPC": "SPC155444.pdf",
+      "DAT_ROZ_SPC": "02.04.2020",
+      "OBAL_TEXT": "OBAL155441.pdf",
+      "DAT_ROZ_OBAL": "02.04.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "G04BD08",
+        "NT": "N",
+        "NAZEV": "SOLIFENACIN",
+        "NAZEV_EN": "SOLIFENACIN"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

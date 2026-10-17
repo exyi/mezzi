@@ -1,27 +1,54 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J01",
+    "atc:J01F",
+    "atc:J01FF",
+    "atc:J01FF01",
+    "substance:12410"
+  ],
   "side_effects": [
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "common",
+      "label": "Průjem.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Zejména pokud se objeví během léčby nebo do 3 týdnů po ní, hlavně je-li stolice hlenovitá nebo krvavá.",
+        "min_severity": 2
+      }
+    },
     {
       "ctcae": "Colitis",
       "frequency": "common",
-      "label": "Pseudomembranózní kolitida (zánět tlustého střeva se vznikem pablán).",
+      "label": "Zánět tlustého střeva s tvorbou pablán (pseudomembranózní kolitida).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte průjem během léčby nebo do 3 týdnů po jejím skončení, zejména pokud je stolice hlenovitá nebo krvavá."
+        "patient_guide": "Zejména pokud se objeví průjem během léčby nebo do 3 týdnů po ní, hlavně je-li stolice hlenovitá nebo krvavá.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Enterocolitis infectious",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Zánět tlustého střeva vyvolaný bakterií Clostridioides difficile.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte průjem během léčby nebo do 3 týdnů po jejím skončení, zejména pokud je stolice hlenovitá nebo krvavá."
+        "patient_guide": "Zejména pokud se objeví průjem během léčby nebo do 3 týdnů po ní, hlavně je-li stolice hlenovitá nebo krvavá.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Vaginal infection",
-      "frequency": "not_known",
-      "label": "Vaginální infekce nebo zánět poševní sliznice.",
+      "ctcae": "Liver and biliary investigations - Other, specify",
+      "frequency": "common",
+      "label": "Abnormality jaterních testů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "common",
+      "label": "Vyrážka ve formě skvrn a pupínků (makulopapulózní vyrážka).",
       "action": null,
       "action_condition": null
     },
@@ -33,66 +60,11 @@
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Snížení počtu určitého typu bílých krvinek (agranulocytóza).",
+      "ctcae": "Dysgeusia",
+      "frequency": "uncommon",
+      "label": "Porucha chuti.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Neutrophil count decreased",
-      "frequency": "not_known",
-      "label": "Přechodné snížení počtu neutrofilů, což je druh bílých krvinek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "not_known",
-      "label": "Snížení počtu bílých krvinek (leukopenie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "not_known",
-      "label": "Snížení počtu krevních destiček (trombocytopenie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "not_known",
-      "label": "Přecitlivělost (hypersenzitivita), včetně alergických reakcí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Anafylaktický šok a anafylaktické nebo anafylaktoidní reakce.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná alergická reakce, například potíže s dýcháním nebo bolest na hrudi."
-      }
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Kounisův syndrom, tedy srdeční příznaky spojené s alergickou reakcí, které mohou vést až k infarktu myokardu.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato závažná alergická reakce."
-      }
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "common",
-      "label": "Průjem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte průjem během léčby nebo do 3 týdnů po jejím skončení, zejména pokud je stolice hlenovitá nebo krvavá."
-      }
     },
     {
       "ctcae": "Abdominal pain",
@@ -112,57 +84,6 @@
       "ctcae": "Vomiting",
       "frequency": "uncommon",
       "label": "Zvracení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysgeusia",
-      "frequency": "uncommon",
-      "label": "Porucha chuti.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "common",
-      "label": "Abnormality jaterních testů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Žloutenka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Acute kidney injury",
-      "frequency": "not_known",
-      "label": "Akutní porucha ledvin nebo akutní poškození ledvin; může se projevit sníženým výdejem moči, zadržováním tekutin a otoky nohou, kotníků nebo chodidel, dušností či pocitem na zvracení. Akutní poškození ledvin bylo vzácně hlášeno.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás sníží množství moči, zadržujete tekutiny a otékají vám nohy, kotníky nebo chodidla, máte dušnost nebo pocit na zvracení."
-      }
-    },
-    {
-      "ctcae": "Esophageal ulcer",
-      "frequency": "not_known",
-      "label": "Vřed jícnu; výskyt je pravděpodobnější, pokud přípravek užíváte vleže nebo s nedostatečným množstvím vody.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Esophagitis",
-      "frequency": "not_known",
-      "label": "Zánět jícnu; výskyt je pravděpodobnější, pokud přípravek užíváte vleže nebo s nedostatečným množstvím vody.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "common",
-      "label": "Vyrážka ve formě skvrn a pupínků; může mít také podobu vyrážky podobné spalničkám.",
       "action": null,
       "action_condition": null
     },
@@ -188,129 +109,454 @@
       "action_condition": null
     },
     {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza, při které se tvoří vyrážka a puchýře a cárovitě se odlučuje svrchní vrstva kůže; v závažnějších případech se může přidat horečka a postižení sliznic.",
+      "ctcae": "Vaginal infection",
+      "frequency": null,
+      "label": "Vaginální infekce; v příbalové informaci je uveden zánět poševní sliznice.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Agranulocytosis",
+      "frequency": null,
+      "label": "Snížení počtu určitého typu bílých krvinek (agranulocytóza).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": null,
+      "label": "Snížení počtu krevních destiček (trombocytopenie).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Neutrophil count decreased",
+      "frequency": null,
+      "label": "Přechodné snížení počtu neutrofilů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "White blood cell decreased",
+      "frequency": null,
+      "label": "Snížení počtu bílých krvinek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": null,
+      "label": "Alergická reakce včetně anafylaktoidní reakce a anafylaktické reakce.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato závažná kožní reakce."
+        "patient_guide": "Při potížích s dýcháním nebo bolesti na hrudi; okamžitě přestaňte klindamycin užívat a ihned kontaktujte lékaře nebo lékařskou pohotovost.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Chest pain - cardiac",
+      "frequency": null,
+      "label": "Bolest na hrudi, která může být známkou alergické reakce zvané Kounisův syndrom.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví bolest na hrudi; okamžitě přestaňte klindamycin užívat a ihned kontaktujte lékaře nebo lékařskou pohotovost.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Esophageal ulcer",
+      "frequency": null,
+      "label": "Vřed jícnu; pravděpodobnější při užívání vleže nebo s nedostatečným množstvím vody.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Esophagitis",
+      "frequency": null,
+      "label": "Zánět jícnu; pravděpodobnější při užívání vleže nebo s nedostatečným množstvím vody.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": null,
+      "label": "Žloutenka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Acute kidney injury",
+      "frequency": null,
+      "label": "Akutní poškození ledvin; vzácně byly hlášeny případy, včetně akutního selhání ledvin. Příbalová informace uvádí i zadržování tekutin s otoky nohou, kotníků nebo chodidel, dušností či pocitem na zvracení.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při sníženém výdeji moči, zadržování tekutin s otoky nohou, kotníků nebo chodidel, dušnosti nebo pocitu na zvracení.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom, při kterém se tvoří vyrážka a puchýře a cárovitě se odlučuje svrchní vrstva kůže; v závažnějších případech se může přidat horečka a postižení sliznic.",
+      "frequency": null,
+      "label": "Závažná kožní reakce (Stevensův-Johnsonův syndrom), s vyrážkou, puchýři a odlučováním svrchní vrstvy kůže; v závažnějších případech s horečkou a postižením sliznic.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato závažná kožní reakce."
+        "patient_guide": "Při vyrážce s puchýři, odlučováním svrchní vrstvy kůže, horečkou nebo současným postižením sliznic.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS).",
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": null,
+      "label": "Závažná kožní reakce (toxická epidermální nekrolýza), s vyrážkou, puchýři a odlučováním svrchní vrstvy kůže; v závažnějších případech s horečkou a postižením sliznic.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato závažná alergická reakce."
+        "patient_guide": "Při vyrážce s puchýři, odlučováním svrchní vrstvy kůže, horečkou nebo současným postižením sliznic.",
+        "min_severity": 1
       }
-    },
-    {
-      "ctcae": "Pustular drug eruption",
-      "frequency": "not_known",
-      "label": "Akutní generalizovaná exantematózní pustulóza (AGEP).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tato závažná kožní reakce."
-      }
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "not_known",
-      "label": "Angioedém, tedy otok v různých částech těla.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Exfoliative dermatitis",
-      "frequency": "not_known",
-      "label": "Exfoliativní dermatitida s puchýři a odlučováním povrchových vrstev pokožky.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dermatosis bullous",
-      "frequency": "not_known",
-      "label": "Tvorba puchýřků na kůži (vezikulobulózní nebo bulózní dermatitida).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vasculitis",
-      "frequency": "not_known",
-      "label": "Zánět cév v kůži (kožní vaskulitida).",
+      "frequency": null,
+      "label": "Kožní puchýře a odlučování povrchových vrstev pokožky (exfoliativní dermatitida).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rash maculo-papular",
-      "frequency": "not_known",
-      "label": "Symetrický, ostře ohraničený léky vyvolaný exantém v kožních záhybech, zejména na hýždích, v tříslech a podpaží.",
+      "frequency": null,
+      "label": "Vyrážka podobná spalničkám (morbiliformní vyrážka).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Purpura",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Tečkovité krvácení na sliznicích.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Dermatosis bullous",
+      "frequency": null,
+      "label": "Tvorba puchýřků na kůži (vezikulobulózní dermatitida).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vasculitis",
+      "frequency": null,
+      "label": "Zánět cév v kůži.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "frequency": null,
+      "label": "Symetrická, ostře ohraničená vyrážka v kožních záhybech, zejména na hýždích, v tříslech a podpaží.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Immune system disorders - Other, specify",
+      "frequency": null,
+      "label": "Reakce na lék doprovázená zvýšením počtu určitého typu bílých krvinek a systémovými příznaky (DRESS).",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při reakci doprovázené vyrážkou, zvýšením počtu určitého typu bílých krvinek a celkovými příznaky.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": null,
+      "label": "Otoky na různých místech těla (angioedém).",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     }
   ],
   "combinations": [
     {
-      "drug": "erythromycin",
-      "effect": "Přípravek Dalacin C se nemá podávat současně s přípravky obsahujícími erythromycin, protože nelze vyloučit vzájemné snížení účinku obou léčiv.",
-      "effect_type": "contraindicated",
+      "class_id": "atc:J01FA01",
+      "drug": "Erythromycin",
+      "effect": "Dalacin C nemá být podáván současně s erythromycinem, protože může dojít ke vzájemnému snížení účinku obou antibiotik.",
+      "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "neuromuskulární blokátory a myorelaxancia",
-      "effect": "Klindamycin může zesílit účinek těchto léčiv tím, že vyvolává blokádu nervosvalového přenosu; tím se může zvýšit riziko útlumu dýchání. Současné podávání vyžaduje opatrnost, například u pacientů s myasthenia gravis.",
+      "class_id": null,
+      "drug_class": "léky k uvolnění svalů (myorelaxancia)",
+      "effect": "Klindamycin může zesílit účinek léků k uvolnění svalů a zvýšit riziko útlumu dýchání; při současném užívání je nutná opatrnost.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "antagonisté vitaminu K",
-      "effect": "Při současném užívání klindamycinu a antagonistů vitaminu K, například warfarinu, acenokumarolu nebo fluindionu, byly hlášeny zvýšené hodnoty koagulačních testů a/nebo krvácení. Mají se proto často kontrolovat koagulační testy.",
+      "class_id": "atc:B01AA",
+      "drug_class": "antagonisté vitaminu K, například warfarin, acenokumarol a fluindion",
+      "effect": "Při současném užívání klindamycinu a antagonistů vitaminu K byly hlášeny zvýšené hodnoty koagulačních testů nebo krvácení; lékař má často kontrolovat srážlivost krve.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "INR increased",
-          "frequency": "not_known",
+          "frequency": null,
           "label": "Zvýšené hodnoty koagulačních testů (PT/INR).",
           "action": null,
           "action_condition": null
         },
         {
-          "ctcae": null,
-          "frequency": "not_known",
-          "label": "Krvácení při současném užívání antagonisty vitaminu K.",
+          "ctcae": "Bruising",
+          "frequency": null,
+          "label": "Krvácení.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "inhibitory CYP3A4 a CYP3A5",
-      "effect": "Klindamycin se metabolizuje především enzymem CYP3A4 a v menší míře CYP3A5. Inhibitory těchto enzymů mohou snižovat clearance klindamycinu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "induktory CYP3A4 a CYP3A5",
-      "effect": "Induktory těchto enzymů mohou zvyšovat clearance klindamycinu. Při současném užívání silného induktoru CYP3A4 rifampicinu sledujte možné snížení účinnosti klindamycinu.",
+      "class_id": "group:cyp3a4_inducer_strong",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin jako silný induktor CYP3A4 může zvýšit odbourávání klindamycinu a snížit jeho účinnost; lékař má sledovat možný pokles účinnosti.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Klindamycin léčí některé bakteriální infekce.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0100339",
+      "H": "",
+      "NAZEV": "DALACIN C",
+      "SILA": "300MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "16",
+      "CESTA": "POR",
+      "DOPLNEK": "300MG CPS DUR 16",
+      "OBAL": "BLI",
+      "DRZ": "PFX",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "J01FF01",
+      "RC": "15/166/72-B/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "1,2",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "4",
+      "ZDROJ_WHO": "NO26",
+      "LL": "12410",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "60",
+      "EXP_T": "M",
+      "NAZEV_REG": "DALACIN C",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0100339",
+        "KOD_LATKY": "12410",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "355,03",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "12410",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CLINDAMYCINI HYDROCHLORIDUM",
+          "NAZEV_EN": "CLINDAMYCIN HYDROCHLORIDE",
+          "NAZEV": "KLINDAMYCIN-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0100339",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0100339",
+        "KOD_LATKY": "5480",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "300",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5480",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CLINDAMYCINUM",
+          "NAZEV_EN": "CLINDAMYCIN",
+          "NAZEV": "KLINDAMYCIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0100339",
+        "KOD_LATKY": "2378",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0100339",
+        "KOD_LATKY": "2970",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0100339",
+        "KOD_LATKY": "1871",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0100339",
+        "KOD_LATKY": "2624",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0100339",
+        "SQ": "8",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0100339",
+        "KOD_LATKY": "2855",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0100339",
+        "KOD_LATKY": "2710",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0100339",
+      "PIL": "PI236503.pdf",
+      "DAT_ROZ_PIL": "27.01.2026",
+      "SPC": "SPC236504.pdf",
+      "DAT_ROZ_SPC": "27.01.2026",
+      "OBAL_TEXT": "OBAL215247.pdf",
+      "DAT_ROZ_OBAL": "24.10.2024"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J01FF01",
+        "NT": "N",
+        "NAZEV": "KLINDAMYCIN",
+        "NAZEV_EN": "CLINDAMYCIN"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

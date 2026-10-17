@@ -1,86 +1,91 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A07",
+    "atc:A07A",
+    "atc:A07AA",
+    "atc:A07AA11",
+    "group:cyp3a4_inducer",
+    "substance:9086"
+  ],
   "side_effects": [
     {
       "ctcae": "Dizziness",
-      "frequency": 7.75,
-      "label": "Závratě.",
+      "frequency": 7.7519,
+      "label": "Závrať; ve studiích u dospělých a dospívajících byla hlášena u 12,9 % pacientů. V příbalové informaci je uvedena jako častá.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
-      "frequency": 14.29,
-      "label": "Bolesti hlavy.",
+      "frequency": 14.2857,
+      "label": "Bolest hlavy; ve studiích u dospělých a dospívajících byla hlášena u 7 % pacientů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flatulence",
-      "frequency": 11.11,
-      "label": "Plynatost.",
+      "frequency": 11.1111,
+      "label": "Plynatost; ve studiích u dospělých a dospívajících byla hlášena u 9 % pacientů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal distension",
       "frequency": 50.0,
-      "label": "Nadmuté břicho, břišní distenze.",
+      "label": "Nadmuté břicho; ve studiích u dospělých a dospívajících bylo hlášeno u 2 % pacientů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
-      "frequency": 14.29,
-      "label": "Bolest břicha.",
+      "frequency": 14.2857,
+      "label": "Bolest břicha; ve studiích u dospělých a dospívajících byla hlášena u 7 % pacientů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Constipation",
       "frequency": 25.0,
-      "label": "Zácpa.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "common",
-      "label": "Nucení na stolici.",
+      "label": "Zácpa; ve studiích u dospělých a dospívajících byla hlášena u 4 % pacientů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
       "frequency": 100.0,
-      "label": "Průjem.",
+      "label": "Průjem; ve studiích u dospělých a dospívajících byl hlášen u 1 % pacientů. Pokud se příznaky průjmu zhorší nebo přetrvávají déle než 48 hodin, léčba má být přerušena a má být zvážena jiná antibiotická léčba.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Příznaky průjmu se zhoršují nebo přetrvávají déle než 48 hodin.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": null,
+      "frequency": "common",
+      "label": "Nucení na stolici; ve studiích u dospělých a dospívajících byla hlášena u 7 % pacientů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
-      "frequency": 14.29,
-      "label": "Pocit na zvracení.",
+      "frequency": 14.2857,
+      "label": "Pocit na zvracení; ve studiích u dospělých a dospívajících byl hlášen u 7 % pacientů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": 50.0,
-      "label": "Zvracení.",
+      "label": "Zvracení; ve studiích u dospělých a dospívajících bylo hlášeno u 2 % pacientů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fever",
-      "frequency": 15.63,
-      "label": "Horečka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urine discoloration",
-      "frequency": null,
-      "label": "Načervenalé zbarvení moči; je nevýznamné.",
+      "frequency": 15.625,
+      "label": "Horečka; ve studiích u dospělých a dospívajících byla hlášena u 6,4 % pacientů.",
       "action": null,
       "action_condition": null
     },
@@ -92,37 +97,79 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Herpes simplex reactivation",
       "frequency": "uncommon",
-      "label": "Opar (herpes simplex).",
+      "label": "Opar.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Nasopharyngitis",
       "frequency": "uncommon",
       "label": "Zánět nosohltanu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Monocytosis",
       "frequency": "uncommon",
-      "label": "Zvýšený počet monocytů v krvi.",
+      "label": "Zvýšený počet monocytů v krevních testech.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Neutrophil count decreased",
       "frequency": "uncommon",
-      "label": "Snížení počtu neutrofilů, což jsou druhy bílých krvinek.",
+      "label": "Snížený počet neutrofilů v krevních testech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "not_known",
+      "label": "Snížený počet krevních destiček v krevních testech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "not_known",
+      "label": "Abnormální výsledky jaterních testů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "INR increased",
+      "frequency": "not_known",
+      "label": "Změny testů krevní srážlivosti, včetně zvýšení nebo snížení INR; u pacientů léčených warfarinem byly někdy hlášeny krvácivé příhody.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "not_known",
+      "label": "Anafylaktická reakce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypersensitivity",
+      "frequency": "not_known",
+      "label": "Přecitlivělost na léky.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Enterocolitis infectious",
+      "frequency": "not_known",
+      "label": "Klostridiová infekce; při užívání rifaximinu nelze vyloučit souvislost s průjmem spojeným s bakterií Clostridium difficile nebo s pseudomembranózní kolitidou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anorexia",
       "frequency": "uncommon",
-      "label": "Ztráta chuti k jídlu.",
+      "label": "Snížená chuť k jídlu.",
       "action": null,
       "action_condition": null
     },
@@ -134,7 +181,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Abnormal dreams",
       "frequency": "uncommon",
       "label": "Abnormální sny.",
       "action": null,
@@ -155,14 +202,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Dysesthesia",
+      "ctcae": "Hypoesthesia",
       "frequency": "uncommon",
       "label": "Snížená citlivost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Diplopia",
       "frequency": "uncommon",
       "label": "Dvojité vidění.",
       "action": null,
@@ -171,7 +218,7 @@
     {
       "ctcae": "Vertigo",
       "frequency": "uncommon",
-      "label": "Závrať (vertigo).",
+      "label": "Závrať s pocitem točení okolí.",
       "action": null,
       "action_condition": null
     },
@@ -197,7 +244,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Sore throat",
       "frequency": "uncommon",
       "label": "Sucho v krku.",
       "action": null,
@@ -218,7 +265,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Dry mouth",
       "frequency": "uncommon",
       "label": "Suché rty.",
       "action": null,
@@ -232,9 +279,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Vyrážka, skvrny na kůži, kožní výsev nebo exantém.",
+      "label": "Vyrážka nebo skvrny na kůži; typ vyrážky není blíže určen.",
       "action": null,
       "action_condition": null
     },
@@ -267,7 +314,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Polyuria",
       "frequency": "uncommon",
       "label": "Nadměrné močení.",
       "action": null,
@@ -295,7 +342,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Cold sweats",
       "frequency": "uncommon",
       "label": "Studený pot.",
       "action": null,
@@ -311,56 +358,21 @@
     {
       "ctcae": "Peripheral edema",
       "frequency": "uncommon",
-      "label": "Otoky končetin (periferní otoky).",
+      "label": "Otoky končetin.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Presyncope",
       "frequency": "not_known",
-      "label": "Klostridiová infekce.",
+      "label": "Stav blízký mdlobám.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Thrombocytopenia",
+      "ctcae": "Dermatitis",
       "frequency": "not_known",
-      "label": "Snížení počtu krevních destiček.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Anafylaktická reakce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "not_known",
-      "label": "Závažná akutní reakce na lék nebo přecitlivělost na lék.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Abnormální výsledky jaterních testů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Angioedém.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zánět kůže (dermatitida).",
+      "label": "Zánět kůže.",
       "action": null,
       "action_condition": null
     },
@@ -372,9 +384,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Erythema",
       "frequency": "not_known",
       "label": "Zarudnutí kůže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Purpura",
+      "frequency": "not_known",
+      "label": "Drobné tečkovité krvácení do kůže.",
       "action": null,
       "action_condition": null
     },
@@ -382,13 +401,6 @@
       "ctcae": "Pruritus",
       "frequency": "not_known",
       "label": "Svědění.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Purpura",
-      "frequency": "not_known",
-      "label": "Kožní výsev drobných tečkovitých krvácení (purpura).",
       "action": null,
       "action_condition": null
     },
@@ -402,79 +414,336 @@
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom: zarudlé nevystouplé terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupování kůže a vředy v ústech, krku, nose, na genitáliích nebo v očích; vyrážce může předcházet horečka a příznaky podobné chřipce. Většina případů byla hlášena u pacientů s onemocněním jater, například cirhózou nebo hepatitidou.",
-      "action": "discontinue_treatment",
+      "label": "Stevensův-Johnsonův syndrom; většina hlášených případů byla u pacientů s onemocněním jater, například cirhózou nebo hepatitidou. Mohou se objevit zarudlé ploché terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupování kůže a vředy v ústech, krku, nose, na genitáliích nebo v očích. Vyrážce může předcházet horečka a příznaky podobné chřipce. Léčbu znovu nezahajujte.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto příznaky závažné kožní reakce."
+        "patient_guide": "Zarudlé ploché terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupování kůže nebo vředy v ústech, krku, nose, na genitáliích či v očích; vyrážce může předcházet horečka a příznaky podobné chřipce. Většina případů byla hlášena u lidí s onemocněním jater, například cirhózou nebo hepatitidou.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza: zarudlé nevystouplé terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupování kůže a vředy v ústech, krku, nose, na genitáliích nebo v očích; vyrážce může předcházet horečka a příznaky podobné chřipce. Většina případů byla hlášena u pacientů s onemocněním jater, například cirhózou nebo hepatitidou.",
-      "action": "discontinue_treatment",
+      "label": "Toxická epidermální nekrolýza; většina hlášených případů byla u pacientů s onemocněním jater, například cirhózou nebo hepatitidou. Mohou se objevit zarudlé ploché terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupování kůže a vředy v ústech, krku, nose, na genitáliích nebo v očích. Vyrážce může předcházet horečka a příznaky podobné chřipce. Léčbu znovu nezahajujte.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto příznaky závažné kožní reakce."
+        "patient_guide": "Zarudlé ploché terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupování kůže nebo vředy v ústech, krku, nose, na genitáliích či v očích; vyrážce může předcházet horečka a příznaky podobné chřipce. Většina případů byla hlášena u lidí s onemocněním jater, například cirhózou nebo hepatitidou.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Angioedema",
       "frequency": "not_known",
-      "label": "Změny testů krevní srážlivosti nebo abnormální INR; byly hlášeny jak snížené, tak zvýšené hodnoty INR.",
+      "label": "Angioedém.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urine discoloration",
+      "frequency": null,
+      "label": "Načervenalé zbarvení moči; je způsobeno barvou léčivé látky a je nevýznamné.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "warfarin",
-      "effect": "U pacientů léčených warfarinem byly při současném podávání rifaximinu hlášeny jak snížené, tak zvýšené hodnoty INR, někdy s krvácivými příhodami. Pokud je kombinace nezbytná, pečlivě sledujte INR na začátku léčby rifaximinem i při jejím ukončení; k udržení požadované antikoagulace může být nutné upravit dávku perorálního antikoagulancia. U pacientů s poruchou funkce jater nelze vyloučit snížení expozice warfarinu rifaximinem.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Při kombinaci byly hlášeny jak snížené, tak zvýšené hodnoty INR, v některých případech s krvácivými příhodami.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "substance:9086",
+      "drug": "Rifaximin",
+      "effect": "Rifaximin je slabým induktorem CYP3A4. U pacientů s poruchou funkce jater může snížit expozici současně užívaným substrátům CYP3A4, například warfarinu, antiepileptikům, antiarytmikům a perorální antikoncepci; u zdravých jedinců významný vliv na farmakokinetiku substrátů CYP3A4 prokázán nebyl.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
     },
     {
-      "drug": "cyklosporin",
-      "effect": "Cyklosporin je silný inhibitor P-glykoproteinu. Současné podání jedné dávky cyklosporinu 600 mg a jedné dávky rifaximinu 550 mg u zdravých osob zvýšilo průměrnou maximální koncentraci rifaximinu 83krát a jeho AUC∞ 124krát; klinický význam tohoto zvýšení systémové expozice není znám. Při souběžném užívání je třeba opatrnosti.",
+      "class_id": "substance:9086",
+      "drug": "Rifaximin",
+      "effect": "Při současném užívání s warfarinem byly hlášeny zvýšení i snížení INR, někdy s krvácivými příhodami. Pokud je souběžné podávání nezbytné, lékař pečlivě sleduje INR na začátku a po ukončení léčby rifaximinem a může upravit dávku antikoagulancia.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:pgp_inhibitor",
+      "drug_class": "Inhibitory P-glykoproteinu, například cyklosporin",
+      "effect": "Při současném užívání rifaximinu s inhibitorem P-glykoproteinu, například cyklosporinem, je třeba opatrnosti. Jednorázová dávka cyklosporinu 600 mg zvýšila u zdravých jedinců po jednorázové dávce rifaximinu 550 mg jeho průměrnou maximální koncentraci 83krát a celkovou expozici 124krát; klinický význam tohoto zvýšení není znám.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "inhibitory CYP3A4",
-      "effect": "Není známo, zda mohou současně podávané léky inhibující CYP3A4 zvýšit systémovou expozici rifaximinu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "aktivní uhlí",
-      "effect": "Pokud současně užíváte aktivní uhlí, užijte rifaximin nejméně 2 hodiny po jeho podání.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "substráty CYP3A4 (antiepileptika)",
-      "effect": "Rifaximin je slabým induktorem CYP3A4. U pacientů s poruchou funkce jater nelze vyloučit snížení expozice současně podávaným substrátům CYP3A4, včetně antiepileptik, v důsledku vyšší systémové expozice rifaximinu než u zdravých osob.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "substráty CYP3A4 (antiarytmika)",
-      "effect": "Rifaximin je slabým induktorem CYP3A4. U pacientů s poruchou funkce jater nelze vyloučit snížení expozice současně podávaným substrátům CYP3A4, včetně antiarytmik, v důsledku vyšší systémové expozice rifaximinu než u zdravých osob.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "perorální hormonální antikoncepce",
-      "effect": "Rifaximin je slabým induktorem CYP3A4. U pacientek s poruchou funkce jater nelze vyloučit snížení expozice současně podávané perorální antikoncepci, která je substrátem CYP3A4, v důsledku vyšší systémové expozice rifaximinu než u zdravých osob.",
-      "effect_type": "decreased_exposure",
+      "class_id": "atc:A07BA01",
+      "drug_class": "Aktivní uhlí",
+      "effect": "Rifaximin užijte nejméně 2 hodiny po podání aktivního uhlí.",
+      "effect_type": null,
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Normix léčí některé střevní bakteriální infekce a průjmy, používá se také při jaterní encefalopatii, před operací tlustého střeva a při nekomplikované divertikulární nemoci.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0225543",
+      "H": "",
+      "NAZEV": "NORMIX",
+      "SILA": "200MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "28",
+      "CESTA": "POR",
+      "DOPLNEK": "200MG TBL FLM 28",
+      "OBAL": "BLI",
+      "DRZ": "ALA",
+      "ZEMDRZ": "I",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "A07AA11",
+      "RC": "15/286/99-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,6",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "9,3333",
+      "ZDROJ_WHO": "NO26",
+      "LL": "9086",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "NORMIX",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "9086",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "200",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9086",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "RIFAXIMINUM",
+          "NAZEV_EN": "RIFAXIMIN",
+          "NAZEV": "RIFAXIMIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "3059",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3059",
+          "ZDROJ": "MEM",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "5043",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5043",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "GLYCEROLI DISTEARAS",
+          "NAZEV_EN": "GLYCEROL DISTEARATE",
+          "NAZEV": "GLYCEROL-DISTEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "1300",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "1871",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "3755",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "SQ": "7",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "748",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "2710",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "519",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "519",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "DINATRII EDETAS DIHYDRICUS",
+          "NAZEV_EN": "DISODIUM EDETATE DIHYDRATE",
+          "NAZEV": "DIHYDRÁT DINATRIUM-EDETÁTU"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "1216",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1216",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "PROPYLENGLYCOLUM",
+          "NAZEV_EN": "PROPYLENE GLYCOL",
+          "NAZEV": "PROPYLENGLYKOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0225543",
+        "KOD_LATKY": "4290",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4290",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM RUBRUM",
+          "NAZEV_EN": "IRON OXIDE RED",
+          "NAZEV": "ČERVENÝ OXID ŽELEZITÝ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0225543",
+      "PIL": "PI210393.pdf",
+      "DAT_ROZ_PIL": "21.05.2024",
+      "SPC": "SPC211256.pdf",
+      "DAT_ROZ_SPC": "21.05.2024",
+      "OBAL_TEXT": "OBAL162449.pdf",
+      "DAT_ROZ_OBAL": "06.10.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A07AA11",
+        "NT": "N",
+        "NAZEV": "RIFAXIMIN",
+        "NAZEV_EN": "RIFAXIMIN"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

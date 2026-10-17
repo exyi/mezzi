@@ -1,31 +1,19 @@
 {
+  "classes": [
+    "atc:H",
+    "atc:H03",
+    "atc:H03A",
+    "atc:H03AA",
+    "atc:H03AA01",
+    "substance:828"
+  ],
   "side_effects": [
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "not_known",
-      "label": "Přecitlivělost a alergické reakce na kůži nebo v dýchacích cestách, například vyrážka, svědění, potíže s dýcháním nebo dušnost.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u Vás objeví známky nebo příznaky alergické reakce."
-      }
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Anafylaktický šok; byly hlášeny ojedinělé případy.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u Vás objeví příznaky závažné alergické reakce, například potíže s dýcháním nebo otok obličeje, rtů, hrdla či jazyka."
-      }
-    },
     {
       "ctcae": "Hyperthyroidism",
       "frequency": "common",
-      "label": "Zvýšená činnost štítné žlázy, zejména pokud dávka není snášena nebo při předávkování, zvláště po příliš rychlém zvyšování dávky na začátku léčby.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u Vás objeví příznaky zvýšené činnosti štítné žlázy."
-      }
+      "label": "Příznaky zvýšené činnosti štítné žlázy, zejména při nesnášenlivosti dávky nebo předávkování, zvláště při příliš rychlém zvyšování dávky na začátku léčby.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Palpitations",
@@ -35,9 +23,44 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Insomnia",
       "frequency": "not_known",
-      "label": "Zrychlený tep (tachykardie).",
+      "label": "Nespavost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "not_known",
+      "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Sinus tachycardia",
+      "frequency": "not_known",
+      "label": "Rychlé bušení srdce (tachykardie).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nervous system disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Nervozita.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Edema cerebral",
+      "frequency": "not_known",
+      "label": "Zvýšený nitrolební tlak, zejména u dětí (pseudotumor cerebri).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Immune system disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Přecitlivělost na levothyroxin nebo pomocnou látku; může se projevit na kůži nebo v dýchacích cestách.",
       "action": null,
       "action_condition": null
     },
@@ -51,57 +74,43 @@
     {
       "ctcae": "Chest pain - cardiac",
       "frequency": "not_known",
-      "label": "Bolest na hrudi doprovázená pocitem tísně (angina pectoris).",
+      "label": "Bolest a pocit tísně na hrudi (angina pectoris).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Edema face",
       "frequency": "not_known",
-      "label": "Angioedém, který může zahrnovat otok obličeje, rtů, hrdla nebo jazyka.",
-      "action": "contact_doctor",
+      "label": "Alergický otok obličeje, rtů, hrdla nebo jazyka (angioedém), někdy s potížemi s dýcháním.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u Vás objeví otok obličeje, rtů, hrdla nebo jazyka."
+        "patient_guide": "Otok obličeje, rtů, hrdla nebo jazyka, případně potíže s dýcháním.",
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": null,
+      "frequency": "not_known",
+      "label": "Alergická vyrážka; alergická reakce se může objevit okamžitě nebo během několika dní od podání.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Urticaria",
       "frequency": "not_known",
-      "label": "Kopřivka.",
-      "action": "contact_doctor",
+      "label": "Kopřivka jako alergická reakce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "very_rare",
+      "label": "Anafylaktický šok; byl hlášen v ojedinělých případech.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u Vás objeví alergická reakce."
+        "patient_guide": null,
+        "min_severity": 1
       }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Kožní vyrážka.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u Vás objeví alergická reakce."
-      }
-    },
-    {
-      "ctcae": "Hyperhidrosis",
-      "frequency": "not_known",
-      "label": "Nadměrné pocení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "not_known",
-      "label": "Nespavost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anxiety",
-      "frequency": "not_known",
-      "label": "Nervozita.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Restlessness",
@@ -127,7 +136,7 @@
     {
       "ctcae": "Osteoporosis",
       "frequency": "not_known",
-      "label": "Osteoporóza při vysokých dávkách levothyroxinu, zejména u žen po menopauze a zvláště při dlouhodobé léčbě.",
+      "label": "Osteoporóza při vysokých dávkách levothyroxinu, zejména u žen po menopauze a při dlouhodobé léčbě.",
       "action": null,
       "action_condition": null
     },
@@ -139,9 +148,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vascular disorders - Other, specify",
+      "ctcae": "Hypotension",
       "frequency": "not_known",
-      "label": "Oběhové selhání u předčasně narozených dětí s nízkou porodní hmotností.",
+      "label": "Oběhové selhání u předčasně narozených dětí s nízkou porodní hmotností; při zahájení léčby může rychle klesnout krevní tlak.",
       "action": null,
       "action_condition": null
     },
@@ -176,21 +185,7 @@
     {
       "ctcae": "Weight loss",
       "frequency": "not_known",
-      "label": "Snížení tělesné hmotnosti.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Headache",
-      "frequency": "not_known",
-      "label": "Bolest hlavy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Pseudotumor cerebri (zvýšený nitrolební tlak), zejména u dětí.",
+      "label": "Úbytek tělesné hmotnosti.",
       "action": null,
       "action_condition": null
     },
@@ -198,6 +193,13 @@
       "ctcae": "Tremor",
       "frequency": "not_known",
       "label": "Třes.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperhidrosis",
+      "frequency": "not_known",
+      "label": "Nadměrné pocení.",
       "action": null,
       "action_condition": null
     },
@@ -211,166 +213,439 @@
   ],
   "combinations": [
     {
-      "drug_class": "Antidiabetika (např. metformin, glimepirid, glibenklamid a inzulín)",
-      "effect": "Levothyroxin může snižovat hypoglykemický účinek antidiabetik. U pacientů s diabetem se má pravidelně kontrolovat hladina glukózy, zejména na začátku a na konci léčby hormony štítné žlázy; podle potřeby má lékař upravit dávku antidiabetika.",
+      "class_id": "atc:A10",
+      "drug_class": "Antidiabetika",
+      "effect": "Levothyroxin může snižovat účinek léků na snížení hladiny cukru v krvi. Zejména na začátku a na konci léčby Letroxem má lékař pravidelně kontrolovat hladinu cukru a podle potřeby upravit dávku antidiabetika.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Deriváty kumarinu (např. dikumarol)",
-      "effect": "Levothyroxin může zesílit účinek derivátů kumarinu tím, že vytěsňuje antikoagulancia z vazby na plazmatické bílkoviny. Při souběžné léčbě se má pravidelně kontrolovat srážlivost krve a podle potřeby snížit dávka antikoagulancia.",
+      "class_id": "atc:B01AA",
+      "drug_class": "Deriváty kumarinu",
+      "effect": "Levothyroxin může zesílit účinek derivátů kumarinu tím, že je vytěsňuje z vazby na krevní bílkoviny. Lékař má pravidelně kontrolovat srážlivost krve a podle potřeby snížit dávku antikoagulancia.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Iontoměničové pryskyřice (kolestyramin, kolestipol, kolesevelam a sodné či vápenaté soli polystyrensulfonové kyseliny)",
-      "effect": "Tyto přípravky vážou hormony štítné žlázy v trávicím traktu a snižují vstřebávání levothyroxinu, čímž mohou snížit jeho účinnost. Užívejte je 4–5 hodin po přípravku Letrox.",
+      "class_id": null,
+      "drug_class": "Iontoměničové pryskyřice včetně kolestyraminu, kolestipolu, kolesevelamu a polystyrensulfonátů",
+      "effect": "Tyto přípravky vážou levothyroxin ve střevě a snižují jeho vstřebávání a účinnost. Užívejte je 4–5 hodin po Letroxu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory protonové pumpy (např. omeprazol, esomeprazol, pantoprazol, rabeprazol a lansoprazol)",
-      "effect": "Zvýšení pH v žaludku při léčbě inhibitory protonové pumpy může snížit vstřebávání hormonů štítné žlázy. Při souběžné léčbě se doporučuje pravidelně sledovat funkci štítné žlázy a klinický stav; může být nutné zvýšit dávku levothyroxinu. Opatrnost je nutná také při ukončení léčby inhibitorem protonové pumpy.",
+      "class_id": "atc:A02BC",
+      "drug_class": "Inhibitory protonové pumpy",
+      "effect": "Zvýšení kyselosti žaludku při užívání inhibitorů protonové pumpy může snížit vstřebávání a účinnost levothyroxinu. Lékař má sledovat funkci štítné žlázy při souběžném užívání i po vysazení inhibitoru; může být nutné upravit dávku Letroxu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Sevelamer",
-      "effect": "Sevelamer může snížit vstřebávání a účinnost levothyroxinu. Při souběžném užívání se doporučuje častější a pečlivé sledování funkce štítné žlázy a hladiny TSH.",
-      "effect_type": "decreased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Hypothyroidism",
-          "frequency": "very_rare",
-          "label": "Hypotyreóza byla velmi vzácně hlášena při současném užívání sevelameru a levothyroxinu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Lanthanum carbonate",
-      "effect": "Lanthan-karbonát může snížit vstřebávání a biologickou dostupnost levothyroxinu; může tak snížit jeho účinnost.",
+      "class_id": "atc:V03AE02",
+      "drug_class": "Sevelamer",
+      "effect": "Sevelamer může snížit vstřebávání a účinnost levothyroxinu. Při souběžném užívání má lékař pečlivě sledovat hladinu TSH; velmi vzácně byla hlášena hypotyreóza.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky obsahující hliník, které vážou žaludeční kyseliny (antacida, sukralfát), přípravky obsahující železo a přípravky obsahující vápník",
-      "effect": "Tyto přípravky mohou snížit vstřebávání levothyroxinu a jeho účinnost. Přípravek Letrox užijte nejméně 2 hodiny před nimi.",
+      "class_id": "atc:V03AE03",
+      "drug_class": "Lanthan-karbonát",
+      "effect": "Lanthan-karbonát může snížit vstřebávání a účinnost levothyroxinu. Lékař má častěji kontrolovat funkci štítné žlázy.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Propylthiouracil, glukokortikoidy a beta-blokátory, zejména propranolol",
-      "effect": "Tyto látky inhibují přeměnu T4 na T3, což může vést ke snížení koncentrace T3 v séru a ke snížení účinnosti přípravku Letrox.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Amiodaron a jodované kontrastní látky",
-      "effect": "Vzhledem k vysokému obsahu jódu mohou amiodaron i jodované kontrastní látky vyvolat zvýšenou nebo sníženou činnost štítné žlázy. Zvláštní opatrnost je nutná u uzlovité strumy a možného dosud nezjištěného autonomního onemocnění štítné žlázy. Amiodaron navíc inhibuje přeměnu T4 na T3 a může ovlivnit účinek přípravku Letrox; podle potřeby může lékař upravit jeho dávku.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Salicyláty, dikumarol, vysoké dávky furosemidu (250 mg) a klofibrát",
-      "effect": "Tyto látky mohou vytěsňovat levothyroxin z vazby na plazmatické bílkoviny. To může zpočátku přechodně zvýšit volné hormony štítné žlázy a následně snížit celkové hladiny hormonů štítné žlázy.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Estrogenová hormonální antikoncepce a hormonální substituční léčba v menopauze",
-      "effect": "Estrogen zvyšuje vazebnou schopnost levothyroxinu, takže se může zvýšit potřeba levothyroxinu a může dojít k diagnostickým či léčebným odchylkám. Lékař může upravit dávku podle potřeby.",
+      "class_id": "atc:A02",
+      "drug_class": "Přípravky obsahující hliník, které vážou žaludeční kyseliny, včetně antacid a sukralfátu",
+      "effect": "Mohou snížit vstřebávání levothyroxinu a jeho účinnost. Užívejte Letrox nejméně 2 hodiny před těmito přípravky.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Sertralin a chlorochin/proguanil",
-      "effect": "Tyto látky snižují účinnost levothyroxinu a zvyšují hladinu TSH v séru.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Rifampicin, karbamazepin, fenytoin, barbituráty a přípravky obsahující třezalku tečkovanou",
-      "effect": "Tyto přípravky mohou indukovat enzymy a zvýšit jaterní clearance levothyroxinu, což vede ke snížení jeho sérové koncentrace. Pacienti mohou potřebovat zvýšení dávky hormonu štítné žlázy.",
+      "class_id": "atc:B03",
+      "drug_class": "Přípravky obsahující železo",
+      "effect": "Mohou snížit vstřebávání levothyroxinu a jeho účinnost. Užívejte Letrox nejméně 2 hodiny před těmito přípravky.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory proteázy (lopinavir, ritonavir)",
-      "effect": "Při souběžném užívání může dojít ke snížení účinku levothyroxinu. U pacientů léčených levothyroxinem se má sledovat TSH, zejména během prvního měsíce po zahájení nebo ukončení léčby ritonavirem; při souběžném užívání je třeba sledovat také příznaky onemocnění a funkci štítné žlázy.",
-      "effect_type": "antagonism",
+      "class_id": "atc:A12A",
+      "drug_class": "Přípravky obsahující vápník",
+      "effect": "Mohou snížit vstřebávání levothyroxinu a jeho účinnost. Užívejte Letrox nejméně 2 hodiny před těmito přípravky.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory tyrosinkinázy (např. imatinib, sunitinib, sorafenib a motesanib)",
-      "effect": "Inhibitory tyrosinkinázy mohou snížit účinnost levothyroxinu. Doporučuje se pečlivě sledovat klinické příznaky a funkci štítné žlázy; podle potřeby má být upravena dávka levothyroxinu.",
-      "effect_type": "antagonism",
+      "class_id": "atc:H03BA02",
+      "drug_class": "Propylthiouracil",
+      "effect": "Propylthiouracil tlumí přeměnu levothyroxinu na jeho účinnější formu liothyronin, a může tak snížit účinek Letroxu.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Semaglutid",
-      "effect": "Současné podávání semaglutidu může ovlivnit expozici levothyroxinu. Po jedné perorální dávce semaglutidu se celková expozice levothyroxinu (AUC upravená na endogenní hladiny) zvýšila o 33 %, zatímco maximální expozice (Cmax) se nezměnila. Při souběžné léčbě je třeba zvážit sledování parametrů štítné žlázy a úpravu dávky.",
+      "class_id": "atc:H02A",
+      "drug_class": "Glukokortikoidy",
+      "effect": "Glukokortikoidy tlumí přeměnu levothyroxinu na jeho účinnější formu liothyronin, a mohou tak snížit účinek Letroxu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C07",
+      "drug_class": "Beta-blokátory, zejména propranolol",
+      "effect": "Beta-blokátory tlumí přeměnu levothyroxinu na jeho účinnější formu liothyronin, a mohou tak snížit účinek Letroxu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C01BD01",
+      "drug_class": "Amiodaron",
+      "effect": "Amiodaron může kvůli vysokému obsahu jódu vyvolat zvýšenou i sníženou činnost štítné žlázy. Také tlumí přeměnu levothyroxinu na liothyronin. Zvláštní opatrnost je nutná při uzlovité strumě s možnou dosud neodhalenou autonomní tvorbou hormonů; lékař může upravit dávku Letroxu a má sledovat funkci štítné žlázy.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:V08A",
+      "drug_class": "Jodované kontrastní látky",
+      "effect": "Kvůli vysokému obsahu jódu mohou vyvolat zvýšenou i sníženou činnost štítné žlázy. Zvláštní opatrnost je nutná při uzlovité strumě s možnou dosud neodhalenou autonomní tvorbou hormonů.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02B",
+      "drug_class": "Salicyláty",
+      "effect": "Salicyláty mohou vytěsňovat levothyroxin z vazby na krevní bílkoviny, což může nejprve přechodně zvýšit množství volných hormonů a následně snížit celkové hladiny hormonů štítné žlázy. Při souběžném užívání má lékař sledovat funkci štítné žlázy.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:B01AA01",
+      "drug_class": "Dikumarol",
+      "effect": "Dikumarol může vytěsňovat levothyroxin z vazby na krevní bílkoviny, což může nejprve přechodně zvýšit množství volných hormonů a následně snížit celkové hladiny hormonů štítné žlázy. Levothyroxin zároveň může zesílit účinek dikumarolu; lékař má kontrolovat srážlivost krve a podle potřeby upravit jeho dávku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C03CA01",
+      "drug_class": "Furosemid ve vysokých dávkách (250 mg)",
+      "effect": "Vysoké dávky furosemidu mohou vytěsňovat levothyroxin z vazby na krevní bílkoviny, což může nejprve přechodně zvýšit množství volných hormonů a následně snížit jejich celkové hladiny. Při souběžném užívání má lékař sledovat funkci štítné žlázy.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C10AB01",
+      "drug_class": "Klofibrát",
+      "effect": "Klofibrát může vytěsňovat levothyroxin z vazby na krevní bílkoviny, což může nejprve přechodně zvýšit množství volných hormonů a následně snížit jejich celkové hladiny. Při souběžném užívání má lékař sledovat funkci štítné žlázy.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:G03C",
+      "drug_class": "Estrogeny, včetně estrogenové hormonální antikoncepce a hormonální substituční léčby po menopauze",
+      "effect": "Estrogeny zvyšují vazbu levothyroxinu na krevní bílkoviny, a mohou proto zvýšit potřebnou dávku levothyroxinu. Lékař má sledovat funkci štítné žlázy a podle potřeby upravit dávku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Chlorochin/proguanil",
+      "effect": "Chlorochin/proguanil mohou snížit účinnost levothyroxinu a zvýšit hladinu TSH v krvi.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J04AB02",
+      "drug_class": "Rifampicin",
+      "effect": "Rifampicin může zvýšit odbourávání levothyroxinu v játrech a snížit jeho hladinu v krvi a účinnost. Pacienti mohou potřebovat vyšší dávku levothyroxinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N03AF01",
+      "drug_class": "Karbamazepin",
+      "effect": "Karbamazepin může zvýšit odbourávání levothyroxinu v játrech a snížit jeho hladinu v krvi a účinnost. Pacienti mohou potřebovat vyšší dávku levothyroxinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N03AB02",
+      "drug_class": "Fenytoin",
+      "effect": "Fenytoin může zvýšit odbourávání levothyroxinu v játrech a snížit jeho hladinu v krvi a účinnost. Pacienti mohou potřebovat vyšší dávku levothyroxinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Barbituráty",
+      "effect": "Barbituráty mohou zvýšit odbourávání levothyroxinu v játrech a snížit jeho hladinu v krvi a účinnost. Pacienti mohou potřebovat vyšší dávku levothyroxinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N06AX25",
+      "drug_class": "Přípravky obsahující třezalku tečkovanou",
+      "effect": "Přípravky obsahující třezalku mohou zvýšit odbourávání levothyroxinu v játrech a snížit jeho hladinu v krvi a účinnost. Pacienti mohou potřebovat vyšší dávku levothyroxinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J05AE",
+      "drug_class": "Inhibitory proteázy",
+      "effect": "Při souběžném užívání lopinaviru/ritonaviru může dojít ke snížení účinku levothyroxinu. Lékař má sledovat příznaky a funkci štítné žlázy; při užívání ritonaviru má kontrolovat TSH nejméně během prvního měsíce po zahájení i ukončení léčby.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L01E",
+      "drug_class": "Inhibitory tyrosinkinázy",
+      "effect": "Imatinib, sunitinib, sorafenib a motesanib mohou snížit účinnost levothyroxinu. Lékař má sledovat klinické projevy a funkci štítné žlázy a podle potřeby upravit dávku levothyroxinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A10BJ06",
+      "drug_class": "Semaglutid",
+      "effect": "Po jedné perorální dávce semaglutidu se celková expozice levothyroxinu zvýšila o 33 %, zatímco maximální expozice se nezměnila. Při souběžné léčbě má lékař zvážit sledování funkce štítné žlázy a úpravu dávky Letroxu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Orlistat",
-      "effect": "Orlistat může snížit vstřebávání levothyroxinu a vést k hypotyreóze nebo ke zhoršené kontrole hypotyreózy.",
-      "effect_type": "decreased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Hypothyroidism",
-          "frequency": "not_known",
-          "label": "Hypotyreóza nebo zhoršená kontrola hypotyreózy při současném užívání orlistatu a levothyroxinu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Biotin",
-      "effect": "Biotin může interferovat s imunologickými testy funkce štítné žlázy založenými na interakci biotin/streptavidin a způsobit falešně zvýšené nebo falešně snížené výsledky. Při vyšetření informujte lékaře a/nebo laboratoř; pokud jsou dostupné, mají se použít testy, které nejsou na tuto interferenci citlivé.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Tyreostatika",
-      "effect": "Současné užívání levothyroxinu a tyreostatika je v těhotenství kontraindikováno. Doplňkový levothyroxin zvyšuje potřebu tyreostatika; tyreostatika mohou přecházet přes placentu a způsobit hypotyreózu u plodu. V těhotenství se má hypertyreóza léčit nízkými dávkami tyreostatika v monoterapii.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hypothyroidism",
-          "frequency": null,
-          "label": "Hypotyreóza u nenarozeného dítěte může být způsobena tyreostatiky, která procházejí placentou; při současné léčbě levothyroxinem vzniká potřeba vyšších dávek tyreostatik.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčivé přípravky určené ke snížení tělesné hmotnosti se sympatomimetickými účinky",
-      "effect": "Vyšší dávky hormonů štítné žlázy mohou v kombinaci s některými přípravky ke snížení tělesné hmotnosti, zejména s aminy se sympatomimetickými účinky, způsobit závažné nebo život ohrožující nežádoucí účinky.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "Káva",
-      "effect": "Současné užití kávy může snížit vstřebávání levothyroxinu a jeho účinnost. Po přípravku Letrox vyčkejte s pitím kávy alespoň půl hodiny až hodinu. Pokud již levothyroxin užíváte, neměňte návyky v pití kávy bez kontroly a sledování hladiny levothyroxinu lékařem.",
+      "class_id": "atc:A08AB01",
+      "drug_class": "Orlistat",
+      "effect": "Orlistat může snížit vstřebávání levothyroxinu a vést k hypotyreóze nebo horší kontrole hypotyreózy.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Potraviny obsahující sóju",
-      "effect": "Sója může snížit vstřebávání levothyroxinu a jeho účinnost. Lékař má kontrolovat hladiny hormonů štítné žlázy během konzumace sóji i po jejím ukončení a podle potřeby upravit dávku; někdy mohou být nutné neobvykle vysoké dávky, zejména u dětí léčených pro vrozenou hypotyreózu.",
+      "class_id": null,
+      "drug_class": "Biotin",
+      "effect": "Biotin může zkreslit výsledky imunologických testů štítné žlázy falešně nahoru nebo dolů. Při vyšetření má pacient informovat lékaře a laboratoř o jeho současném nebo nedávném užívání.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Jídlo bohaté na vápník, například mléko a mléčné výrobky",
+      "effect": "Současné užití s Letroxem může významně snížit vstřebávání levothyroxinu. Letrox užívejte nalačno a ne současně s jídlem.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Jídlo, zejména potraviny bohaté na vápník, jako mléko a mléčné výrobky",
-      "effect": "Užití přípravku Letrox současně s jídlem, zvláště s jídlem bohatým na vápník, může významně snížit vstřebávání levothyroxinu.",
+      "class_id": null,
+      "drug_class": "Sója a potraviny obsahující sóju",
+      "effect": "Sója může snížit vstřebávání levothyroxinu. U dětí léčených pro vrozenou hypotyreózu byla při sójové stravě hlášena zvýšená hladina TSH a mohou být potřebné neobvykle vysoké dávky. Během konzumace sóji i po jejím ukončení má lékař důkladně sledovat T4 a TSH a podle potřeby upravit dávku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N06BC01",
+      "drug_class": "Káva",
+      "effect": "Káva může snížit vstřebávání a účinnost levothyroxinu. Po Letroxu počkejte s kávou nejméně půl hodiny až hodinu. Při léčbě neměňte své dosavadní návyky v pití kávy bez kontroly lékařem.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Letrox nahrazuje hormon štítné žlázy při jeho nedostatku a používá se také u některých onemocnění štítné žlázy a při jejím vyšetření.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0187427",
+      "H": "",
+      "NAZEV": "LETROX",
+      "SILA": "100MCG",
+      "FORMA": "TBL NOB",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "100MCG TBL NOB 100",
+      "OBAL": "BLI",
+      "DRZ": "BBE",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "56",
+      "ATC_WHO": "H03AA01",
+      "RC": "56/171/83-B/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,15",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "66,6667",
+      "ZDROJ_WHO": "NO26",
+      "LL": "828",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "LETROX",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0187427",
+        "KOD_LATKY": "828",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "0,1",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "828",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "LEVOTHYROXINUM NATRICUM",
+          "NAZEV_EN": "LEVOTHYROXINE SODIUM",
+          "NAZEV": "SODNÁ SŮL LEVOTHYROXINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0187427",
+        "KOD_LATKY": "436",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "436",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "CYSTEINI HYDROCHLORIDUM MONOHYDRICUM",
+          "NAZEV_EN": "CYSTEINE HYDROCHLORIDE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT CYSTEIN-HYDROCHLORIDU"
+        }
+      },
+      {
+        "KOD_SUKL": "0187427",
+        "KOD_LATKY": "3755",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0187427",
+        "KOD_LATKY": "2970",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0187427",
+        "KOD_LATKY": "5214",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5214",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "STARCH, PREGELATINISED",
+          "NAZEV": "PŘEDBOBTNALÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0187427",
+        "KOD_LATKY": "477",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "477",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII OXIDUM LEVE",
+          "NAZEV_EN": "MAGNESIUM OXIDE, LIGHT",
+          "NAZEV": "LEHKÝ OXID HOŘEČNATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0187427",
+        "KOD_LATKY": "1871",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0187427",
+      "PIL": "PI213615.pdf",
+      "DAT_ROZ_PIL": "05.09.2024",
+      "SPC": "SPC208115.pdf",
+      "DAT_ROZ_SPC": "05.03.2024",
+      "OBAL_TEXT": "OBAL213614.pdf",
+      "DAT_ROZ_OBAL": "05.09.2024"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "H03AA01",
+        "NT": "N",
+        "NAZEV": "SODNÁ SŮL LEVOTHYROXINU",
+        "NAZEV_EN": "LEVOTHYROXINE SODIUM"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

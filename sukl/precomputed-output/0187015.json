@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C01",
+    "atc:C01E",
+    "atc:C01EB",
+    "atc:C01EB15",
+    "substance:11634"
+  ],
   "side_effects": [
     {
       "ctcae": "Dizziness",
@@ -80,14 +88,14 @@
     {
       "ctcae": "Paresthesia",
       "frequency": "uncommon",
-      "label": "Neobvyklý pocit na kůži, například brnění nebo mravenčení (parestezie)",
+      "label": "Neobvyklé pocity na kůži, například brnění nebo mravenčení",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Palpitations",
       "frequency": "rare",
-      "label": "Palpitace (rychlý nebo nepravidelný srdeční tep)",
+      "label": "Bušení srdce",
       "action": null,
       "action_condition": null
     },
@@ -99,30 +107,30 @@
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Tachycardia",
       "frequency": "rare",
-      "label": "Zrychlený srdeční tep (tachykardie)",
+      "label": "Zrychlený srdeční tep",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypotension",
       "frequency": "rare",
-      "label": "Pokles krevního tlaku, včetně poklesu při postavení, který může být spojen s malátností, závratí nebo pádem",
+      "label": "Pokles krevního tlaku při postavení; může být spojen s malátností, závratí nebo pádem, zvláště při užívání léků na vysoký krevní tlak",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Malaise",
       "frequency": "rare",
-      "label": "Malátnost (celkový pocit nevolnosti)",
+      "label": "Malátnost, celkový pocit nevolnosti",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fall",
       "frequency": "rare",
-      "label": "Pád",
+      "label": "Pád, zvláště při nestabilní chůzi nebo nízkém krevním tlaku a při užívání léků na vysoký krevní tlak",
       "action": null,
       "action_condition": null
     },
@@ -136,23 +144,24 @@
     {
       "ctcae": "Extrapyramidal disorder",
       "frequency": "not_known",
-      "label": "Příznaky parkinsonismu a jiné poruchy hybnosti, například třes, ztuhlost, zpomalené pohyby, nestabilní nebo šouravá chůze a syndrom neklidných nohou; obvykle jsou vratné po ukončení léčby",
+      "label": "Příznaky parkinsonismu a jiné poruchy hybnosti, například třes, zpomalené pohyby, ztuhlost, nestabilní či šouravá chůze a syndrom neklidných nohou; obvykle ustoupí po vysazení. Tyto poruchy mají vést k ukončení léčby.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví poruchy hybnosti, například příznaky parkinsonismu, syndrom neklidných nohou, třes nebo nestabilní chůze"
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Insomnia",
       "frequency": "not_known",
-      "label": "Nespavost (obtíže se spaním)",
+      "label": "Nespavost",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Somnolence",
       "frequency": "not_known",
-      "label": "Ospalost",
+      "label": "Ospalost, která může ovlivnit schopnost řídit nebo obsluhovat stroje",
       "action": null,
       "action_condition": null
     },
@@ -173,30 +182,32 @@
     {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS), která může zahrnovat rozsáhlou vyrážku, vysokou tělesnou teplotu, zvýšení jaterních enzymů, eozinofilii, zvětšené lymfatické uzliny a postižení dalších orgánů",
-      "action": "discontinue_treatment",
+      "label": "DRESS syndrom: rozsáhlá vyrážka, vysoká teplota, zvýšené jaterní enzymy, změny v krvi včetně eozinofilie, zvětšené uzliny a postižení dalších orgánů",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky DRESS, například rozsáhlou vyrážku, vysokou teplotu nebo zvětšené lymfatické uzliny"
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Pustular drug eruption",
       "frequency": "not_known",
-      "label": "Akutní generalizovaná exantematózní pustulóza (AGEP) nebo závažná celková červená kožní vyrážka s puchýřky",
-      "action": "discontinue_treatment",
+      "label": "Akutní generalizovaná exantematózní pustulóza (AGEP): závažná celková červená kožní vyrážka s puchýřky",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud zaznamenáte příznaky závažné kožní reakce, například závažnou celkovou červenou vyrážku s puchýřky"
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Edema face",
       "frequency": "not_known",
-      "label": "Otok obličeje, rtů, úst, jazyka nebo hrdla, který může způsobit obtíže s polykáním nebo dýcháním",
+      "label": "Otok obličeje, rtů, úst, jazyka nebo hrdla, který může způsobit potíže s polykáním nebo dýcháním",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Agranulocytosis",
       "frequency": "not_known",
       "label": "Závažné snížení počtu bílých krvinek (agranulocytóza), které zvyšuje pravděpodobnost infekce",
       "action": null,
@@ -210,7 +221,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Purpura",
+      "ctcae": "Thrombotic thrombocytopenic purpura",
       "frequency": "not_known",
       "label": "Trombocytopenická purpura",
       "action": null,
@@ -219,32 +230,215 @@
     {
       "ctcae": "Hepatitis",
       "frequency": "not_known",
-      "label": "Hepatitida (onemocnění jater), která se může projevit nevolností, zvracením, ztrátou chuti k jídlu, celkovým pocitem nemoci, horečkou, svěděním, zežloutnutím kůže a očí, světlou stolicí nebo tmavou močí",
+      "label": "Onemocnění jater (nevolnost, zvracení, nechutenství, celkový pocit nemoci, horečka, svědění, žloutenka, světlá stolice nebo tmavá moč)",
       "action": null,
       "action_condition": null
     }
   ],
-  "combinations": [
-    {
-      "drug_class": "antihypertenziva",
-      "effect": "Při užívání trimetazidinu může v souvislosti s nestabilitou při chůzi nebo nízkým krevním tlakem docházet k pádům, zvláště u pacientů, kteří zároveň užívají antihypertenziva.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": "rare",
-          "label": "Pokles krevního tlaku, včetně poklesu při postavení, který může být spojen s malátností, závratí nebo pádem",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Fall",
-          "frequency": "rare",
-          "label": "Pád, zejména v souvislosti s nestabilitou při chůzi nebo nízkým krevním tlakem",
-          "action": null,
-          "action_condition": null
+  "combinations": [],
+  "usage": "U dospělých se užívá jako doplňková léčba stabilní anginy pectoris, tedy bolesti na hrudi způsobené onemocněním srdce.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0187015",
+      "H": "",
+      "NAZEV": "TRIMETAZIDIN TEVA RETARD",
+      "SILA": "35MG",
+      "FORMA": "TBL PRO",
+      "BALENI": "60",
+      "CESTA": "POR",
+      "DOPLNEK": "35MG TBL PRO 60",
+      "OBAL": "BLI",
+      "DRZ": "TPP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "83",
+      "ATC_WHO": "C01EB15",
+      "RC": "83/908/10-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "40",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "52,5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "11634",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "1C",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "TRIMETAZIDIN TEVA RETARD",
+      "MRP_CISLO": "HU/H/0344/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0187015",
+        "KOD_LATKY": "11634",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "35",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "11634",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "TRIMETAZIDINI DIHYDROCHLORIDUM",
+          "NAZEV_EN": "TRIMETAZIDINE DIHYDROCHLORIDE",
+          "NAZEV": "TRIMETAZIDIN-DIHYDROCHLORID",
+          "DOP": "S4",
+          "NARVLA": "1C"
         }
-      ]
+      },
+      {
+        "KOD_SUKL": "0187015",
+        "KOD_LATKY": "748",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0187015",
+        "KOD_LATKY": "2774",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2774",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CALCII HYDROGENOPHOSPHAS DIHYDRICUS",
+          "NAZEV_EN": "CALCIUM HYDROGEN PHOSPHATE DIHYDRATE",
+          "NAZEV": "DIHYDRÁT HYDROGENFOSFOREČNANU VÁPENATÉHO"
+        }
+      },
+      {
+        "KOD_SUKL": "0187015",
+        "KOD_LATKY": "2378",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0187015",
+        "KOD_LATKY": "1300",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0187015",
+        "SQ": "6",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0187015",
+        "KOD_LATKY": "17919",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17919",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ROSEUM AQUAPOLISH 045.17",
+          "NAZEV_EN": "AQUAPOLISH 045.17 (PINK)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA AQUAPOLISH 045.17 RŮŽOVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0187015",
+        "SQ": "8",
+        "S": "T",
+        "AMNT": "20",
+        "UN": "DF",
+        "substance": {}
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0187015",
+      "PIL": "PI222361.pdf",
+      "DAT_ROZ_PIL": "15.05.2025",
+      "SPC": "SPC222362.pdf",
+      "DAT_ROZ_SPC": "15.05.2025",
+      "OBAL_TEXT": "OBAL222360.pdf",
+      "DAT_ROZ_OBAL": "15.05.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C01EB15",
+        "NT": "N",
+        "NAZEV": "TRIMETAZIDIN",
+        "NAZEV_EN": "TRIMETAZIDINE"
+      },
+      "formy": {
+        "FORMA": "TBL PRO",
+        "NAZEV": "Tableta s prodlouženým uvolňováním",
+        "NAZEV_EN": "Prolonged-release tablet",
+        "NAZEV_LAT": "Tabuletta cum liberatione prolongata",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10226000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
     }
-  ]
+  }
 }

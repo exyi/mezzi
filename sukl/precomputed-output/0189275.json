@@ -1,9 +1,77 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J01",
+    "atc:J01D",
+    "atc:J01DD",
+    "atc:J01DD08",
+    "substance:13186"
+  ],
   "side_effects": [
     {
       "ctcae": "Diarrhea",
       "frequency": "common",
-      "label": "Průjem.",
+      "label": "Průjem; při dávce 400 mg denně se může objevit také závažný přetrvávající průjem, někdy s krví.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud je průjem závažný a přetrvávající, zejména s bolestí nebo křečemi břicha, během léčby nebo krátce po ní; lék přestaňte užívat.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Colitis",
+      "frequency": "very_rare",
+      "label": "Zánět tlustého střeva související s antibiotiky, včetně pseudomembranózní kolitidy; může se projevit závažným přetrvávajícím průjmem, někdy s krví.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud je průjem závažný a přetrvávající, zejména s bolestí nebo křečemi břicha, během léčby nebo krátce po ní; lék přestaňte užívat.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "very_rare",
+      "label": "Náhlá závažná alergická reakce až anafylaktický šok s vyrážkou či kopřivkou, svěděním, otokem, tlakem na hrudi, dušností nebo kolapsem.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při závažné alergické reakci nebo anafylaxi; lék přestaňte užívat.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "very_rare",
+      "label": "Závažná kožní reakce s puchýři na kůži, v ústech, očích nebo na genitáliích.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví puchýře na kůži, v ústech, očích nebo na genitáliích; lék přestaňte užívat.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "very_rare",
+      "label": "Závažná kožní reakce s puchýři na kůži, v ústech, očích nebo na genitáliích.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví puchýře na kůži, v ústech, očích nebo na genitáliích; lék přestaňte užívat.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "not_known",
+      "label": "Závažná léková vyrážka s horečkou, zvětšenými lymfatickými uzlinami a zvýšeným počtem eozinofilů (DRESS).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví závažná vyrážka s horečkou a zvětšenými lymfatickými uzlinami; lék přestaňte užívat.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Abdominal pain",
+      "frequency": "uncommon",
+      "label": "Bolest břicha.",
       "action": null,
       "action_condition": null
     },
@@ -29,28 +97,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Abdominal pain",
-      "frequency": "uncommon",
-      "label": "Bolest břicha.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "uncommon",
-      "label": "Zvýšení jaterních enzymů, včetně transamináz.",
+      "label": "Zvýšení jaterních enzymů v krevních testech.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Alkaline phosphatase increased",
-      "frequency": "uncommon",
-      "label": "Zvýšení hladiny alkalické fosfatázy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
       "label": "Kožní vyrážka.",
       "action": null,
@@ -59,28 +113,21 @@
     {
       "ctcae": "Infections and infestations - Other, specify",
       "frequency": "rare",
-      "label": "Bakteriální superinfekce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Candidiasis",
-      "frequency": "rare",
-      "label": "Plísňová superinfekce, například moučnivka způsobená kvasinkami Candida.",
+      "label": "Zvýšené riziko infekcí způsobených mikroorganismy, na které cefixim nepůsobí, například moučnivky (kandidózy).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Eosinophilia",
       "frequency": "rare",
-      "label": "Zvýšený počet eozinofilů, určitého typu bílých krvinek.",
+      "label": "Zvýšený počet eozinofilů, druhu bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
-      "frequency": "uncommon",
-      "label": "Alergická reakce nebo přecitlivělost.",
+      "frequency": "rare",
+      "label": "Alergická reakce.",
       "action": null,
       "action_condition": null
     },
@@ -92,16 +139,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vertigo",
+      "ctcae": "Dizziness",
       "frequency": "rare",
-      "label": "Závratě (vertigo).",
+      "label": "Závratě.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flatulence",
       "frequency": "rare",
-      "label": "Nadýmání a větry.",
+      "label": "Nadýmání.",
       "action": null,
       "action_condition": null
     },
@@ -115,7 +162,7 @@
     {
       "ctcae": "Mucositis oral",
       "frequency": "rare",
-      "label": "Zánět sliznic, například v ústech nebo na jiných vnitřních površích těla.",
+      "label": "Zánět sliznic, například v ústech nebo na jiných vnitřních površích.",
       "action": null,
       "action_condition": null
     },
@@ -127,89 +174,16 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Creatinine increased",
       "frequency": "rare",
-      "label": "Zvýšení hladiny močoviny v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": "uncommon",
-      "label": "Angioneurotický otok.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "very_rare",
-      "label": "Závažný, přetrvávající vodnatý průjem, který může obsahovat krev a může souviset s antibiotiky.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte závažný nebo přetrvávající průjem, zejména vodnatý nebo s příměsí krve."
-      }
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "very_rare",
-      "label": "Závažná náhlá alergická reakce (anafylaktický šok), která může zahrnovat vyrážku nebo kopřivku, svědění, otok obličeje, rtů, jazyka nebo jiných částí těla, tíseň na hrudi, dušnost, sípání nebo kolaps.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky závažné alergické reakce."
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "very_rare",
-      "label": "Závažné kožní onemocnění s puchýři na kůži, v ústech, očích nebo na genitáliích (Stevens-Johnsonův syndrom).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví puchýře na kůži, v ústech, očích nebo na genitáliích."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "very_rare",
-      "label": "Závažné kožní onemocnění s puchýři na kůži, v ústech, očích nebo na genitáliích (toxická epidermální nekrolýza).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví puchýře na kůži, v ústech, očích nebo na genitáliích."
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Závažná kožní vyrážka s horečkou, zvětšenými lymfatickými uzlinami a zvýšeným počtem eozinofilů (syndrom DRESS).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky syndromu DRESS."
-      }
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "very_rare",
-      "label": "Pokles počtu bílých krvinek (leukopenie).",
+      "label": "Změny krevních testů kontrolujících funkci ledvin; SPC uvádí zvýšení kreatininu v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Agranulocytóza nebo pokles počtu různých krevních částic (pancytopenie); příznaky mohou zahrnovat únavu, nové infekce a snadný vznik modřin nebo krvácení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_rare",
-      "label": "Pokles počtu krevních destiček.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hemolytic anemia",
-      "frequency": "very_rare",
-      "label": "Hemolytická anémie.",
+      "label": "Pokles počtu různých krevních buněk; může se projevit únavou, novými infekcemi nebo snadnou tvorbou modřin a krvácením. SPC uvádí leukopenii, agranulocytózu, pancytopenii a trombocytopenii.",
       "action": null,
       "action_condition": null
     },
@@ -223,63 +197,70 @@
     {
       "ctcae": "Agitation",
       "frequency": "very_rare",
-      "label": "Neklid a zvýšená aktivita (psychomotorická hyperaktivita).",
+      "label": "Neklid a zvýšená aktivita.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "very_rare",
-      "label": "Zánět jater (hepatitida).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Cholestatická žloutenka, která může způsobit zežloutnutí kůže nebo očního bělma.",
+      "label": "Onemocnění jater včetně hepatitidy a žloutenky (zežloutnutí kůže nebo bělma očí).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Tubulointerstitial nephritis",
       "frequency": "very_rare",
-      "label": "Intersticiální zánět ledvin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Creatinine increased",
-      "frequency": "very_rare",
-      "label": "Zvýšení hladiny kreatininu v krvi.",
+      "label": "Zánětlivé onemocnění ledvin (intersticiální nefritida).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytosis",
       "frequency": "not_known",
-      "label": "Zvýšení počtu krevních destiček (trombocytóza).",
+      "label": "Zvýšený počet krevních destiček.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Neutrophil count decreased",
       "frequency": "not_known",
-      "label": "Pokles počtu neutrofilů, určitého typu bílých krvinek.",
+      "label": "Pokles počtu neutrofilů, druhu bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspepsia",
       "frequency": "not_known",
-      "label": "Dyspepsie, tedy zažívací potíže.",
+      "label": "Porucha trávení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Erythema multiforme",
-      "frequency": "not_known",
-      "label": "Kožní vyrážka nebo léze s růžovočerveným prstencem a bledým středem, která může svědit, šupit se nebo být naplněná tekutinou; může se objevit zejména na dlaních nebo ploskách nohou (erythema multiforme).",
+      "ctcae": "Edema face",
+      "frequency": "uncommon",
+      "label": "Otok obličeje jako projev alergické reakce (angioneurotický edém).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "uncommon",
+      "label": "Zvýšení jaterních enzymů (transamináz a alkalické fosfatázy) v krevních testech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "rare",
+      "label": "Zvýšení dusíku močoviny v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "very_rare",
+      "label": "Zvýšení kreatininu v krvi.",
       "action": null,
       "action_condition": null
     },
@@ -289,40 +270,274 @@
       "label": "Pozitivní přímý nebo nepřímý Coombsův test.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Erythema multiforme",
+      "frequency": "not_known",
+      "label": "Vyrážka nebo kožní léze s růžovočerveným prstencem a bledým středem; může svědit, šupit se nebo být naplněná tekutinou, často na dlaních či ploskách.",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Potenciálně nefrotoxické léky a silná diuretika, zejména aminoglykosidová antibiotika, kolistin, polymyxin B, viomycin, kyselina etakrynová nebo furosemid",
-      "effect": "Současné užívání může zvýšit riziko poruchy funkce ledvin. Funkci ledvin je třeba sledovat, zejména u pacientů, kteří ji již mají omezenou; zvláštní pozornost se doporučuje při kombinaci s aminoglykosidy, polymyxinem B, kolistinem nebo vysokými dávkami kličkových diuretik.",
+      "class_id": "group:nephrotoxic",
+      "drug_class": "Léky potenciálně škodlivé pro ledviny a silná diuretika",
+      "effect": "Současné užívání cefiximu s potenciálně nefrotoxickými látkami, jako jsou aminoglykosidová antibiotika, kolistin, polymyxin B nebo viomycin, a se silnými diuretiky, například furosemidem či kyselinou etakrynovou, zvyšuje riziko poruchy funkce ledvin. Riziko se týká zejména pacientů s již omezenou funkcí ledvin; lékař má při kombinaci sledovat funkci ledvin.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug": "Nifedipin",
       "effect": "Nifedipin může zvýšit biologickou dostupnost cefiximu až o 70 %.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Antikoagulancia, například warfarin",
-      "effect": "U několika pacientů léčených cefiximem bylo zaznamenáno prodloužení protrombinového času. Cefixim může způsobit problémy se srážením krve; u pacientů užívajících antikoagulancia je proto třeba opatrnosti.",
+      "class_id": null,
+      "drug": "Warfarin",
+      "effect": "Cefixim může prodloužit dobu srážení krve; u některých pacientů užívajících warfarin je proto třeba opatrnost.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Prodloužení protrombinového času.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky tlumící nebo zastavující střevní peristaltiku",
-      "effect": "U pacientů se závažným nebo přetrvávajícím průjmem během léčby cefiximem nebo po ní je třeba zvážit riziko život ohrožující pseudomembranózní kolitidy; užívání léků tlumících nebo zastavujících střevní peristaltiku je v této situaci kontraindikováno.",
-      "effect_type": "contraindicated",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Cefixim je antibiotikum k léčbě některých bakteriálních infekcí.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0189275",
+      "H": "",
+      "NAZEV": "CEFIXIME INNFARM",
+      "SILA": "400MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "10",
+      "CESTA": "POR",
+      "DOPLNEK": "400MG TBL FLM 10",
+      "OBAL": "BLI",
+      "DRZ": "IFN",
+      "ZEMDRZ": "SLO",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "J01DD08",
+      "RC": "15/410/13-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "0,4",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "10",
+      "ZDROJ_WHO": "NO26",
+      "LL": "13186",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "CEFIXIME INNFARM",
+      "MRP_CISLO": "CZ/H/0898/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OE",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0189275",
+        "KOD_LATKY": "13186",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "447,63",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13186",
+          "ZDROJ": "C16",
+          "NAZEV_INN": "CEFIXIMUM TRIHYDRICUM",
+          "NAZEV_EN": "CEFIXIME TRIHYDRATE",
+          "NAZEV": "TRIHYDRÁT CEFIXIMU"
+        }
+      },
+      {
+        "KOD_SUKL": "0189275",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0189275",
+        "KOD_LATKY": "9474",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "400",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9474",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CEFIXIMUM",
+          "NAZEV_EN": "CEFIXIME",
+          "NAZEV": "CEFIXIM"
+        }
+      },
+      {
+        "KOD_SUKL": "0189275",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0189275",
+        "KOD_LATKY": "2774",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2774",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CALCII HYDROGENOPHOSPHAS DIHYDRICUS",
+          "NAZEV_EN": "CALCIUM HYDROGEN PHOSPHATE DIHYDRATE",
+          "NAZEV": "DIHYDRÁT HYDROGENFOSFOREČNANU VÁPENATÉHO"
+        }
+      },
+      {
+        "KOD_SUKL": "0189275",
+        "KOD_LATKY": "17703",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17703",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PARTIM PREGELIFICATUM",
+          "NAZEV_EN": "PARTIALLY PREGELATINISED MAIZE STARCH",
+          "NAZEV": "ČÁSTEČNĚ PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0189275",
+        "KOD_LATKY": "9792",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9792",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM GRANULATUM",
+          "NAZEV_EN": "GRANULATED MICROCRYSTALLINE CELLULOSE",
+          "NAZEV": "GRANULOVANÁ MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0189275",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0189275",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0189275",
+        "KOD_LATKY": "14202",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14202",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ALBUM OPADRY Y-1-7000",
+          "NAZEV_EN": "OPADRY Y-1-7000 (WHITE)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPADRY Y-1-7000 BÍLÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0189275",
+      "PIL": "PI207166.pdf",
+      "DAT_ROZ_PIL": "06.02.2024",
+      "SPC": "SPC205209.pdf",
+      "DAT_ROZ_SPC": "23.11.2023",
+      "OBAL_TEXT": "OBAL205207.pdf",
+      "DAT_ROZ_OBAL": "23.11.2023",
+      "NR": "NR8702212.pdf",
+      "DAT_NPM_NR": "18.12.2013"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J01DD08",
+        "NT": "N",
+        "NAZEV": "CEFIXIM",
+        "NAZEV_EN": "CEFIXIME"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

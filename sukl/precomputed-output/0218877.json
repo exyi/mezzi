@@ -1,249 +1,529 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C10",
+    "atc:C10A",
+    "atc:C10AB",
+    "atc:C10AB05",
+    "substance:4352"
+  ],
   "side_effects": [
     {
-      "ctcae": "Dyspepsia",
-      "frequency": "rare",
-      "label": "Zažívací, žaludeční nebo střevní obtíže dyspeptického rázu.",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
       "ctcae": "Nausea",
-      "frequency": "rare",
-      "label": "Pocit nucení na zvracení.",
-      "action": "contact_doctor",
+      "frequency": "common",
+      "label": "Pocit na zvracení; příbalová informace řadí tyto obtíže mezi účinky, které se vyskytují u malého počtu pacientů (nejvýše 2–4 %).",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
-      "frequency": "rare",
-      "label": "Bolest v nadbřišku.",
-      "action": "contact_doctor",
+      "frequency": "common",
+      "label": "Bolest v nadbřišku; příbalová informace řadí tyto obtíže mezi účinky, které se vyskytují u malého počtu pacientů (nejvýše 2–4 %).",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": null,
       "frequency": "rare",
-      "label": "Zvýšené hladiny jaterních transamináz; léčbu je vhodné přerušit, pokud ALT nebo AST překročí trojnásobek horní hranice normy.",
+      "label": "Dyspeptické zažívací, žaludeční nebo střevní obtíže. SPC je uvádí jako vzácné; příbalová informace obecně řadí zažívací obtíže mezi účinky u malého počtu pacientů (nejvýše 2–4 %).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": null,
+      "frequency": "rare",
+      "label": "Přechodné zvýšení jaterních enzymů (transamináz) v krvi. Příbalová informace uvádí nejvýše 2–4 % pro soubor vyjmenovaných účinků; SPC uvádí zvýšení transamináz jako vzácné. Při zvýšení ALT a AST nad trojnásobek horní hranice normy se léčba přeruší.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud hladina ALT nebo AST překročí trojnásobek horní hranice normy."
+        "patient_guide": "Při zvýšení ALT a AST nad trojnásobek horní hranice normy.",
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "rare",
-      "label": "Hepatitida.",
-      "action": "contact_doctor",
+      "label": "Hepatitida; SPC ji uvádí jako vzácnou.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
       "frequency": "common",
-      "label": "Bolesti svalů.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte rozptýlené bolesti svalů, zánět svalů, svalové křeče nebo slabost, případně výrazně zvýšenou hladinu CPK (více než pětinásobek normální hodnoty)."
-      }
+      "label": "Bolesti svalů. Příbalová informace řadí tento účinek mezi účinky u malého počtu pacientů (nejvýše 2–4 %); SPC popisuje bolest svalů v souvislosti s poškozením svalů.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Myositis",
-      "frequency": "not_known",
-      "label": "Zánět svalů.",
+      "frequency": "rare",
+      "label": "Zánět svalů; SPC popisuje myositidu v souvislosti s poškozením svalů, které bylo hlášeno vzácně.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte rozptýlené bolesti svalů, zánět svalů, svalové křeče nebo slabost, případně výrazně zvýšenou hladinu CPK (více než pětinásobek normální hodnoty)."
+        "patient_guide": "Při rozptýlených bolestech svalů, svalových křečích nebo slabosti, případně při výrazném zvýšení CPK nad pětinásobek normální hodnoty.",
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Muscle cramp",
-      "frequency": "not_known",
-      "label": "Svalové křeče.",
+      "frequency": "rare",
+      "label": "Svalové křeče; SPC je popisuje v souvislosti s poškozením svalů, které bylo hlášeno vzácně.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte rozptýlené bolesti svalů, zánět svalů, svalové křeče nebo slabost, případně výrazně zvýšenou hladinu CPK (více než pětinásobek normální hodnoty)."
+        "patient_guide": "Při rozptýlených bolestech svalů, svalových křečích nebo slabosti, případně při výrazném zvýšení CPK nad pětinásobek normální hodnoty.",
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Generalized muscle weakness",
-      "frequency": "not_known",
-      "label": "Svalová slabost.",
+      "frequency": "rare",
+      "label": "Slabost svalů; SPC ji popisuje v souvislosti s poškozením svalů, které bylo hlášeno vzácně.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte rozptýlené bolesti svalů, zánět svalů, svalové křeče nebo slabost, případně výrazně zvýšenou hladinu CPK (více než pětinásobek normální hodnoty)."
+        "patient_guide": "Při rozptýlených bolestech svalů, svalových křečích nebo slabosti, případně při výrazném zvýšení CPK nad pětinásobek normální hodnoty.",
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Rhabdomyolysis",
       "frequency": "rare",
-      "label": "Vzácně se může objevit rhabdomyolýza.",
+      "label": "Rozpad svalů (rhabdomyolýza); SPC uvádí vzácné případy.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte rozptýlené bolesti svalů, zánět svalů, svalové křeče nebo slabost, případně výrazně zvýšenou hladinu CPK (více než pětinásobek normální hodnoty)."
+        "patient_guide": "Při rozptýlených bolestech svalů, svalových křečích nebo slabosti, případně při výrazném zvýšení CPK nad pětinásobek normální hodnoty.",
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Urticaria",
-      "frequency": "rare",
-      "label": "Kožní alergické reakce včetně kopřivky.",
-      "action": "contact_doctor",
+      "frequency": "common",
+      "label": "Kopřivka. Příbalová informace řadí kožní alergické reakce mezi účinky u malého počtu pacientů (nejvýše 2–4 %); SPC je uvádí jako vzácné.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Photosensitivity",
       "frequency": "rare",
-      "label": "Fotosenzitivní reakce, tedy alergická reakce na slunce.",
-      "action": "contact_doctor",
+      "label": "Fotosenzitivní reakce (alergická reakce na slunce); SPC ji uvádí jako vzácnou.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
-      "frequency": "rare",
-      "label": "Bolesti hlavy.",
-      "action": "contact_doctor",
+      "frequency": "common",
+      "label": "Bolest hlavy. Příbalová informace ji řadí mezi účinky u malého počtu pacientů (nejvýše 2–4 %); SPC ji uvádí jako vzácnou.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
-      "frequency": "rare",
-      "label": "Závratě.",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "rare",
-      "label": "Sexuální astenie (slabost).",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Výskyt žlučových kamenů.",
-      "action": "contact_doctor",
+      "frequency": "common",
+      "label": "Závratě. Příbalová informace je řadí mezi účinky u malého počtu pacientů (nejvýše 2–4 %); SPC je uvádí jako vzácné.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alopecia",
       "frequency": "rare",
-      "label": "Vypadávání vlasů.",
-      "action": "contact_doctor",
+      "label": "Vypadávání vlasů; SPC je uvádí jako vzácné.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "rare",
+      "label": "Sexuální slabost (astenie); SPC ji uvádí jako vzácnou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cholelithiasis",
+      "frequency": "rare",
+      "label": "Žlučové kameny; SPC popisuje jejich výskyt jako vzácný.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": null,
+      "label": "Zánět slinivky břišní; SPC uvádí, že byl popsán, bez údaje o četnosti.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Creatinine increased",
       "frequency": "rare",
-      "label": "Mírné zvýšení sérového kreatininu; léčbu je třeba přerušit, pokud hladina kreatininu překročí horní hranici normálního rozmezí o více než 50 %.",
+      "label": "Mírné zvýšení kreatininu v krvi; SPC je uvádí jako vzácné a popisuje, že bývá vratné. Při zvýšení kreatininu nad 50 % horní hranice normy se léčba přeruší.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud hladina kreatininu překročí horní hranici normálního rozmezí o více než 50 %."
+        "patient_guide": "Při zvýšení kreatininu nad 50 % horní hranice normy.",
+        "min_severity": 3
       }
     },
     {
       "ctcae": null,
       "frequency": "rare",
-      "label": "Mírné zvýšení hladiny urey.",
-      "action": "contact_doctor",
+      "label": "Mírné zvýšení močoviny v krvi; SPC je uvádí jako vzácné.",
+      "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Hemoglobin decreased",
       "frequency": "rare",
-      "label": "Mírné snížení hladiny hemoglobinu.",
-      "action": "contact_doctor",
+      "label": "Mírné snížení hemoglobinu; SPC je uvádí jako vzácné.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "rare",
-      "label": "Mírné snížení počtu bílých krvinek.",
-      "action": "contact_doctor",
+      "label": "Mírné snížení počtu bílých krvinek; SPC je uvádí jako vzácné.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pneumonitis",
       "frequency": "very_rare",
-      "label": "Intersticiální pneumopatie.",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "not_known",
-      "label": "Byl popsán výskyt pankreatitidy.",
-      "action": "contact_doctor",
+      "label": "Intersticiální plicní onemocnění; SPC uvádí velmi ojedinělé případy.",
+      "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
+      "class_id": null,
       "drug_class": "Perorální antikoagulancia",
-      "effect": "Fenofibrát může vytěsňovat perorální antikoagulancia z vazebných míst na plazmatických bílkovinách, zvýšit jejich antikoagulační účinek a riziko krvácení. Při zahájení léčby fenofibrátem se doporučuje snížit dávku antikoagulancia o jednu třetinu a podle potřeby ji dále upravit podle hodnot INR; je nutné pravidelné laboratorní sledování.",
+      "effect": "Fenofibrát může vytěsněním z vazebných míst plazmatických bílkovin zesílit účinek perorálních antikoagulancií a zvýšit riziko krvácení. Při zahájení fenofibrátu má lékař zvážit snížení dávky antikoagulancia o třetinu a podle hodnot INR ji dále upravit; doporučuje se pravidelné sledování krevních hodnot.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zvýšená krvácivost.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Inhibitory HMG-CoA reduktázy (statiny)",
-      "effect": "Kombinace fenofibrátu se statinem může zvýšit riziko toxického poškození svalů, zejména při již existujícím onemocnění nebo předchozím poškození svalů. Kombinace se obecně nedoporučuje a má být vyhrazena pouze pacientům s těžkou kombinovanou dyslipidémií a vysokým rizikem kardiovaskulární příhody, kteří neměli dřívější poškození svalů; svalové nežádoucí účinky je třeba pečlivě sledovat.",
+      "class_id": "atc:C10AA",
+      "drug_class": "Statiny (inhibitory HMG-CoA reduktázy)",
+      "effect": "Společné užívání s fenofibrátem zvyšuje riziko toxického poškození svalů. Kombinace se obecně nedoporučuje; SPC ji vyhrazuje pacientům s těžkou kombinovanou dyslipidémií a vysokým rizikem kardiovaskulární příhody, kteří dosud neměli poškození svalů. Při kombinované léčbě má lékař pečlivě sledovat možné svalové nežádoucí účinky.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Toxické poškození svalů.",
-          "action": "discontinue_treatment",
-          "action_condition": {
-            "patient_guide": "Pokud máte rozptýlené bolesti svalů, zánět svalů, svalové křeče nebo slabost, případně výrazně zvýšenou hladinu CPK (více než pětinásobek normální hodnoty)."
-          }
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Jiné fibráty",
-      "effect": "Současné užívání dalšího fibrátu s fenofibrátem zvyšuje riziko svalového poškození; kombinace se obecně nedoporučuje.",
+      "class_id": "atc:C10AB",
+      "drug_class": "Jiný fibrát",
+      "effect": "Současné užívání dalšího fibrátu s fenofibrátem zvyšuje riziko poškození svalů.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Poškození svalů.",
-          "action": "discontinue_treatment",
-          "action_condition": {
-            "patient_guide": "Pokud máte rozptýlené bolesti svalů, zánět svalů, svalové křeče nebo slabost, případně výrazně zvýšenou hladinu CPK (více než pětinásobek normální hodnoty)."
-          }
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
       "drug": "Cyklosporin",
-      "effect": "Při současném užívání fenofibrátu a cyklosporinu byly zaznamenány závažné případy reverzibilního poškození funkce ledvin. Funkci ledvin je třeba pečlivě sledovat a léčbu fenofibrátem ukončit při závažné změně laboratorních parametrů.",
+      "effect": "Při současném podávání s fenofibrátem byly zaznamenány závažné případy vratného poškození funkce ledvin. Lékař má pečlivě sledovat funkci ledvin a při vážné změně laboratorních hodnot léčbu fenofibrátem ukončit.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Závažné, reverzibilní poškození funkce ledvin.",
-          "action": "discontinue_treatment",
-          "action_condition": {
-            "patient_guide": "Pokud se při sledování objeví závažná změna laboratorních hodnot."
-          }
-        }
-      ]
-    },
-    {
-      "drug_class": "Estrogeny a přípravky obsahující estrogeny, včetně hormonální antikoncepce",
-      "effect": "Estrogeny podávané ústy mohou zvýšit hladinu lipidů. U pacientů s hyperlipidémií léčených estrogeny nebo antikoncepcí obsahující estrogeny je třeba zjistit, zda je hyperlipidémie primární, nebo zda je zvýšení lipidů vyvoláno estrogenem.",
-      "effect_type": "antagonism",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Fenofix s dietou pomáhá snižovat hladinu tuků v krvi.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0218877",
+      "H": "",
+      "NAZEV": "FENOFIX",
+      "SILA": "200MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "90",
+      "CESTA": "POR",
+      "DOPLNEK": "200MG CPS DUR 90",
+      "OBAL": "BLI",
+      "DRZ": "TPP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "31",
+      "ATC_WHO": "C10AB05",
+      "RC": "31/365/06-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,2",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "90",
+      "ZDROJ_WHO": "NO26",
+      "LL": "4352",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "FENOFIX",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "4352",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "200",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4352",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "FENOFIBRATUM",
+          "NAZEV_EN": "FENOFIBRATE",
+          "NAZEV": "FENOFIBRÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "1335",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "4078",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "4989",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4989",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "PREGELATINISED MAIZE STARCH",
+          "NAZEV": "PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "4987",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4987",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CROSPOVIDONUM",
+          "NAZEV_EN": "CROSPOVIDONE",
+          "NAZEV": "KROSPOVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "5624",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "14679",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "1300",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "4174",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4174",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII STEARYLIS FUMARAS",
+          "NAZEV_EN": "SODIUM STEARYL FUMARATE",
+          "NAZEV": "NATRIUM-STEARYL-FUMARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "SQ": "10",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "4527",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4527",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "RUBOR ALLURA AC",
+          "NAZEV_EN": "ALLURA RED AC",
+          "NAZEV": "ČERVEŇ ALLURA AC"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "2710",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "2855",
+        "SQ": "13",
+        "S": "A",
+        "AMNT": "100",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "SQ": "14",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0218877",
+        "KOD_LATKY": "4804",
+        "SQ": "15",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "4804",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ATRAMENTUM NIGRUM",
+          "NAZEV_EN": "BLACK INK",
+          "NAZEV": "ČERNÝ INKOUST"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0218877",
+      "PIL": "PI167262.pdf",
+      "DAT_ROZ_PIL": "26.01.2021",
+      "SPC": "SPC161060.pdf",
+      "DAT_ROZ_SPC": "03.09.2020",
+      "OBAL_TEXT": "OBAL161058.pdf",
+      "DAT_ROZ_OBAL": "03.09.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C10AB05",
+        "NT": "N",
+        "NAZEV": "FENOFIBRÁT",
+        "NAZEV_EN": "FENOFIBRATE"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

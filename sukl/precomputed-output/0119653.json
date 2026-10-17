@@ -1,118 +1,131 @@
 {
+  "classes": [
+    "atc:B",
+    "atc:B03",
+    "atc:B03A",
+    "atc:B03AE",
+    "atc:B03AE10",
+    "substance:102",
+    "substance:628"
+  ],
   "side_effects": [
     {
       "ctcae": "Nausea",
       "frequency": "common",
       "label": "Pocit na zvracení.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "common",
       "label": "Bolest břicha.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "common",
       "label": "Průjem.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Constipation",
       "frequency": "common",
       "label": "Zácpa.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Esophageal ulcer",
       "frequency": "rare",
       "label": "Vřed jícnu.",
-      "action": "contact_doctor",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Esophageal stenosis",
       "frequency": "rare",
       "label": "Zúžení jícnu.",
-      "action": "contact_doctor",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "not_known",
-      "label": "Závažná alergická reakce, která způsobuje potíže s dýcháním nebo závratě (anafylaktická reakce).",
-      "action": "hospitalize_NOW",
-      "action_condition": null
+      "label": "Anafylaktická reakce, která způsobuje potíže s dýcháním nebo závratě.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": "Edema face",
+      "ctcae": "Allergic reaction",
       "frequency": "not_known",
-      "label": "Závažná alergická reakce, která způsobuje otok obličeje nebo hrdla (angioedém).",
-      "action": "hospitalize_NOW",
-      "action_condition": null
+      "label": "Angioedém: závažná alergická reakce s otokem obličeje nebo hrdla.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": null,
+      "ctcae": "Rash maculo-papular",
       "frequency": "not_known",
       "label": "Kožní vyrážka.",
-      "action": "contact_doctor",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "not_known",
       "label": "Zvracení.",
-      "action": "contact_doctor",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Mucositis oral",
       "frequency": "not_known",
-      "label": "Vředy v ústech při nesprávném používání, pokud tablety žvýkáte, cucáte nebo zadržujete v ústech.",
-      "action": "contact_doctor",
+      "label": "Vředy v ústech při žvýkání, cucání nebo zadržování tablety v ústech.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Bronchial stricture",
       "frequency": "not_known",
-      "label": "Zúžení průdušek, které může vzniknout po vdechnutí tablety.",
+      "label": "Zúžení průdušek po vdechnutí tablety; může se projevit přetrvávajícím kašlem, vykašláváním krve nebo dušností i několik dní až měsíců po vdechnutí.",
       "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cough",
-      "frequency": null,
-      "label": "Přetrvávající kašel po vdechnutí tablety do dýchacích cest, a to i tehdy, pokud k vdechnutí došlo dny až měsíce před vznikem příznaku.",
-      "action": "hospitalize_NOW",
       "action_condition": {
-        "patient_guide": "Pokud se při polknutí tableta dostala do dýchacích cest; příznak se může objevit i několik dní až měsíců poté."
+        "patient_guide": "Po možném vdechnutí tablety nebo při uvedených potížích.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Vykašlávání krve po vdechnutí tablety do dýchacích cest, a to i tehdy, pokud k vdechnutí došlo dny až měsíce před vznikem příznaku.",
-      "action": "hospitalize_NOW",
+      "ctcae": "Bronchial obstruction",
+      "frequency": "not_known",
+      "label": "Vředy v průduškách po vdechnutí tablety mohou vést k jejich zúžení.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se při polknutí tableta dostala do dýchacích cest; příznak se může objevit i několik dní až měsíců poté."
+        "patient_guide": "Při podezření, že jste tabletu vdechl(a).",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Dyspnea",
-      "frequency": null,
-      "label": "Dušnost po vdechnutí tablety do dýchacích cest, a to i tehdy, pokud k vdechnutí došlo dny až měsíce před vznikem příznaku.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se při polknutí tableta dostala do dýchacích cest; příznak se může objevit i několik dní až měsíců poté."
-      }
-    },
-    {
-      "ctcae": null,
+      "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": null,
       "label": "Černé zbarvení stolice.",
       "action": null,
@@ -121,118 +134,448 @@
   ],
   "combinations": [
     {
-      "drug": "ciprofloxacin",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje vstřebávání ciprofloxacinu přibližně o 50 % a může způsobit, že jeho hladina v krvi bude nižší než léčebná. Současnému užívání se vyhněte.",
+      "class_id": "atc:J01MA02",
+      "drug": "Ciprofloxacin",
+      "effect": "Současné užívání snižuje vstřebávání ciprofloxacinu přibližně o 50 % a může vést k jeho nižší než léčebné hladině v krvi. Současné podávání je třeba se vyvarovat.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "levofloxacin",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje vstřebávání levofloxacinu. Současnému užívání se vyhněte.",
+      "class_id": "atc:J01MA12",
+      "drug": "Levofloxacin",
+      "effect": "Současné užívání snižuje vstřebávání levofloxacinu; současnému podávání je třeba se vyvarovat.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "moxifloxacin",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje biologickou dostupnost moxifloxacinu přibližně o 40 %. Současnému užívání se vyhněte; pokud je nezbytné, dodržte mezi užitím obou přípravků co nejdelší odstup, nejméně 6 hodin.",
+      "class_id": "atc:J01MA14",
+      "drug": "Moxifloxacin",
+      "effect": "Současné užívání snižuje biologickou dostupnost moxifloxacinu přibližně o 40 %. Pokud je současné užívání nutné, má být mezi přípravky odstup nejméně 6 hodin; souběžnému podávání je jinak třeba se vyvarovat.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "norfloxacin",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje vstřebávání norfloxacinu přibližně o 75 %. Současnému užívání se vyhněte.",
+      "class_id": "atc:J01MA06",
+      "drug": "Norfloxacin",
+      "effect": "Současné užívání snižuje vstřebávání norfloxacinu přibližně o 75 %; současnému podávání je třeba se vyvarovat.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "ofloxacin",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje vstřebávání ofloxacinu přibližně o 30 %. Současnému užívání se vyhněte.",
+      "class_id": "atc:J01MA01",
+      "drug": "Ofloxacin",
+      "effect": "Současné užívání snižuje vstřebávání ofloxacinu přibližně o 30 %; současnému podávání je třeba se vyvarovat.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Doplňky stravy s uhličitanem vápenatým nebo hořečnatým",
-      "effect": "Tyto přípravky vytvářejí se solemi železa komplexy a snižují vstřebávání obou přípravků. Pokud se jejich současnému užívání nelze vyhnout, dodržte mezi nimi co nejdelší časový odstup, nejméně 2 hodiny; může být nutné upravit dávku.",
+      "class_id": "substance:628",
+      "drug": "Hydrát síranu železnatého",
+      "effect": "Při současném užívání s levodopou se biologická dostupnost jednorázové dávky levodopy snižuje přibližně o 50 %; pravděpodobnou příčinou je tvorba chelátových komplexů. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Antacida s hydroxidem hlinitým nebo uhličitanem vápenatým či hořečnatým",
-      "effect": "Tato antacida vytvářejí se solemi železa komplexy a snižují vstřebávání obou přípravků. Pokud se jejich současnému užívání nelze vyhnout, dodržte mezi nimi co nejdelší časový odstup, nejméně 2 hodiny; může být nutné upravit dávku.",
+      "class_id": "substance:628",
+      "drug": "Hydrát síranu železnatého",
+      "effect": "Při současném užívání s karbidopou se biologická dostupnost jednorázové dávky karbidopy snižuje přibližně o 75 %; pravděpodobnou příčinou je tvorba chelátových komplexů. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "kaptopril",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje plochu pod křivkou koncentrace kaptoprilu v krvi přibližně o 37 %, pravděpodobně kvůli chemické reakci v trávicím traktu. Pokud se současnému užívání nelze vyhnout, dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
+      "class_id": null,
+      "drug": "Methyldopa",
+      "effect": "Současné užívání se solemi železa snižuje biologickou dostupnost methyldopy, pravděpodobně tvorbou chelátových komplexů, a může oslabit její účinek na krevní tlak. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "zinek",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje vstřebávání solí zinku. Pokud se současnému užívání nelze vyhnout, dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
+      "class_id": null,
+      "drug": "Penicilamin",
+      "effect": "Současné užívání se solemi železa snižuje vstřebávání penicilaminu i železa, pravděpodobně tvorbou chelátových komplexů. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "klodronát",
-      "effect": "Železo může s klodronátem vytvářet komplexy a při současném užívání se předpokládá snížené vstřebávání klodronátu. Pokud se současnému užívání nelze vyhnout, dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
+      "class_id": null,
+      "drug": "Klodronát",
+      "effect": "Železo může tvořit s klodronátem komplexy. Interakce nebyla ověřena u lidí; na základě laboratorních studií se předpokládá snížené vstřebávání klodronátu. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "deferoxamin",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje vstřebávání deferoxaminu i železa kvůli tvorbě komplexů. Pokud se současnému užívání nelze vyhnout, dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
+      "class_id": null,
+      "drug": "Risedronát",
+      "effect": "Železo může tvořit s risedronátem komplexy. Interakce nebyla ověřena u lidí; na základě laboratorních studií se předpokládá snížené vstřebávání risedronátu. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Levodopa a karbidopa",
-      "effect": "Síran železnatý při současném užívání snižuje biologickou dostupnost jednotlivých dávek levodopy přibližně o 50 % a karbidopy přibližně o 75 %, pravděpodobně kvůli tvorbě chelátových komplexů. Pokud se současnému užívání nelze vyhnout, dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
+      "class_id": null,
+      "drug": "Deferoxamin",
+      "effect": "Současné užívání snižuje vstřebávání deferoxaminu i železa v důsledku tvorby komplexů. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "methyldopa",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje biologickou dostupnost methyldopy a může oslabit její účinek na krevní tlak. Pokud se současnému užívání nelze vyhnout, dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
+      "class_id": null,
+      "drug": "Cimetidin",
+      "effect": "Cimetidin snižuje tvorbu žaludeční kyseliny, a tím i vstřebávání železa. Mezi užitím přípravků mají uplynout nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "penicilamin",
-      "effect": "Současné užívání s přípravkem Sorbifer Durules snižuje vstřebávání penicilaminu i solí železa, pravděpodobně kvůli tvorbě chelátových komplexů. Pokud se současnému užívání nelze vyhnout, dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
+      "class_id": null,
+      "drug": "Kaptopril",
+      "effect": "Současné užívání snižuje plochu pod křivkou plazmatické koncentrace kaptoprilu přibližně o 37 %, pravděpodobně chemickou reakcí v trávicím traktu. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "risedronát",
-      "effect": "Železo může s risedronátem vytvářet komplex a při současném užívání se předpokládá snížené vstřebávání risedronátu. Pokud se současnému užívání nelze vyhnout, dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
+      "class_id": null,
+      "drug": "Zinek",
+      "effect": "Současné užívání snižuje vstřebávání solí zinku. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Tetracykliny (včetně doxycyklinu a oxytetracyklinu)",
-      "effect": "Současné užívání snižuje vstřebávání tetracyklinů i železa. Pokud je současné podávání nutné, dodržte mezi užitím tetracyklinu a přípravku Sorbifer Durules co nejdelší odstup, nejméně 3 hodiny. Perorálně podané železo také tlumí enterohepatální oběh doxycyklinu, a to i při jeho nitrožilním podání. Pokud se současnému užívání nelze vyhnout, může být nutná úprava dávky.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Hormony štítné žlázy (včetně thyroxinu)",
-      "effect": "Současné užívání se železem může snížit vstřebávání thyroxinu a ohrozit úspěšnost substituční léčby. Pokud se současnému užívání nelze vyhnout, dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "cimetidin",
-      "effect": "Cimetidin snižuje tvorbu žaludeční kyseliny, a tím i vstřebávání železa. Mezi užitím cimetidinu a přípravku Sorbifer Durules musí uplynout nejméně 2 hodiny; může být nutná úprava dávky.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "chloramfenikol",
-      "effect": "Současné užívání může oddálit nástup klinického účinku léčby železem. Dodržte co nejdelší odstup, nejméně 2 hodiny; může být nutná úprava dávky.",
+      "class_id": null,
+      "drug": "Chloramfenikol",
+      "effect": "Současné užívání může oddálit nástup klinického účinku léčby železem.",
       "effect_type": "antagonism",
       "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Tetracykliny",
+      "effect": "Současné užívání snižuje vstřebávání tetracyklinů i železa. Pokud je současné podávání nutné, má být mezi přípravky odstup nejméně 3 hodiny. Železo užívané ústy také omezuje enterohepatální oběh doxycyklinu, a to i při jeho podání do žíly.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Oxytetracyklin",
+      "effect": "Železo užívané ústy omezuje enterohepatální oběh oxytetracyklinu, a to i při jeho podání do žíly. Pokud je současné podávání nutné, má být mezi přípravky odstup nejméně 3 hodiny.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A02AA01",
+      "drug_class": "Doplňky stravy s uhličitanem vápenatým nebo hořečnatým",
+      "effect": "Tyto přípravky tvoří se solemi železa komplexy a vzájemně snižují vstřebávání. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A02AD",
+      "drug_class": "Antacida obsahující hydroxid hlinitý nebo uhličitan vápenatý či hořečnatý",
+      "effect": "Tato antacida tvoří se solemi železa komplexy a vzájemně snižují vstřebávání. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:H03AA",
+      "drug_class": "Hormony štítné žlázy",
+      "effect": "Současné užívání může snížit vstřebávání thyroxinu a ohrozit úspěšnost substituční léčby. Má být dodržen co nejdelší časový odstup, nejméně 2 hodiny.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Doplňuje železo při prevenci a léčbě chudokrevnosti způsobené jeho nedostatkem.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0119653",
+      "H": "",
+      "NAZEV": "SORBIFER DURULES",
+      "SILA": "320MG/60MG",
+      "FORMA": "TBL MRL",
+      "BALENI": "60",
+      "CESTA": "POR",
+      "DOPLNEK": "320MG/60MG TBL MRL 60",
+      "OBAL": "TBC",
+      "DRZ": "EGB",
+      "ZEMDRZ": "H",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "12",
+      "ATC_WHO": "B03AE10",
+      "RC": "12/416/91-S/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0",
+      "DDDUN_WHO": "",
+      "DDDP_WHO": "0",
+      "ZDROJ_WHO": "NO26",
+      "LL": "628,102",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "SORBIFER DURULES",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "628",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "320",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "628",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERROSI SULFAS HYDRICUS",
+          "NAZEV_EN": "FERROUS SULFATE HYDRATE",
+          "NAZEV": "HYDRÁT SÍRANU ŽELEZNATÉHO"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "5523",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "100",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5523",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRUM-ION (2+)",
+          "NAZEV_EN": "IRON(II) ION",
+          "NAZEV": "KATION ŽELEZNATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "102",
+        "SQ": "4",
+        "S": "L",
+        "AMNT": "60",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "102",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ACIDUM ASCORBICUM",
+          "NAZEV_EN": "ASCORBIC ACID",
+          "NAZEV": "KYSELINA ASKORBOVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "4078",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "4348",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4348",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "POLYETHYLENUM",
+          "NAZEV_EN": "POLYETHYLENE",
+          "NAZEV": "POLYETHYLEN"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "1824",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1824",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CARBOMERUM 974 P",
+          "NAZEV_EN": "CARBOMER 974 P",
+          "NAZEV": "KARBOMER 974 P"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "748",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "3765",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "2710",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "4256",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0119653",
+        "KOD_LATKY": "2527",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2527",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "PARAFFINUM SOLIDUM",
+          "NAZEV_EN": "PARAFFIN, HARD",
+          "NAZEV": "TVRDÝ PARAFIN"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0119653",
+      "PIL": "PI236837.pdf",
+      "DAT_ROZ_PIL": "19.11.2020",
+      "SPC": "SPC236838.pdf",
+      "DAT_ROZ_SPC": "19.11.2020",
+      "OBAL_TEXT": "OBAL164272.pdf",
+      "DAT_ROZ_OBAL": "19.11.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "B03AE10",
+        "NT": "N",
+        "NAZEV": "RŮZNÉ JINÉ KOMBINACE ŽELEZA",
+        "NAZEV_EN": "VARIOUS COMBINATIONS"
+      },
+      "formy": {
+        "FORMA": "TBL MRL",
+        "NAZEV": "Tableta s řízeným uvolňováním",
+        "NAZEV_EN": "Modified-release tablet",
+        "NAZEV_LAT": "Tabuletta cum liberatione modificata",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10227000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

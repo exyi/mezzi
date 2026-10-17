@@ -1,25 +1,38 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J04",
+    "atc:J04A",
+    "atc:J04AB",
+    "atc:J04AB02",
+    "group:cyp3a4_inducer",
+    "group:cyp3a4_inducer_strong",
+    "group:pgp_inducer",
+    "substance:1840"
+  ],
   "side_effects": [
     {
-      "ctcae": "Colitis",
+      "ctcae": "Pseudomembranous colitis",
       "frequency": "not_known",
-      "label": "Pseudomembranózní kolitida (zánět tlustého střeva).",
+      "label": "Pseudomembranózní kolitida.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silný vodnatý průjem, který nepřestává, a cítíte se slabě nebo máte horečku."
+        "patient_guide": "Silný vodnatý průjem, který nepřestává, spolu se slabostí a horečkou.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "common",
-      "label": "Snížený počet krevních destiček, s purpurou nebo bez ní; modřiny se mohou tvořit snadněji a mohou se objevit bolestivé tmavě červené skvrny pod kůží, které při stlačení nezmizí.",
-      "action": "hospitalize_NOW",
+      "label": "Snížený počet krevních destiček, někdy s purpurou; obvykle při přerušované léčbě.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás snadno tvoří modřiny nebo se objeví bolestivá vyrážka s tmavě červenými skvrnami pod kůží."
+        "patient_guide": "Snadnější tvorba modřin nebo bolestivá vyrážka s tmavě červenými skvrnami, které nezmizí při stlačení.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Leukopenia",
       "frequency": "uncommon",
       "label": "Snížený počet bílých krvinek.",
       "action": null,
@@ -29,8 +42,11 @@
       "ctcae": "Disseminated intravascular coagulation",
       "frequency": "not_known",
       "label": "Diseminovaná intravaskulární koagulace.",
-      "action": null,
-      "action_condition": null
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Krvácení z nosu, uší, dásní, krku, kůže nebo žaludku, citlivé či oteklé břicho, fialové skvrny na kůži nebo černá či dehtovitá stolice.",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Eosinophilia",
@@ -40,43 +56,49 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Agranulocytosis",
       "frequency": "not_known",
-      "label": "Agranulocytóza.",
-      "action": null,
-      "action_condition": null
+      "label": "Agranulocytóza; může se projevovat častějšími infekcemi, horečkou, bolestí v krku nebo vředy v ústech.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Častější infekce s horečkou, bolestí v krku nebo vředy v ústech.",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Hemolytic anemia",
       "frequency": "not_known",
-      "label": "Hemolytická anémie; může se projevit zimnicí, nezvykle bledou kůží, únavou, dušností, zrychleným tepem nebo tmavou močí.",
-      "action": "hospitalize_NOW",
+      "label": "Hemolytická anémie; může se projevovat zimnicí, bledostí, únavou, dušností, zrychleným tepem nebo tmavou močí.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud máte zimnici, nezvykle bledou kůži, únavu, dušnost, zrychlený tep nebo tmavou moč."
+        "patient_guide": "Zimnice, neobvykle bledá kůže, únava, dušnost, zrychlený tep nebo tmavá moč.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Porucha srážlivosti krve.",
-      "action": "hospitalize_NOW",
+      "label": "Porucha srážlivosti krve související s vitaminem K.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud krvácíte z nosu, uší, dásní, krku, kůže nebo žaludku, nebo máte fialové skvrny na kůži či černou nebo dehtovitou stolici."
+        "patient_guide": "Krvácení z nosu, uší, dásní, krku, kůže nebo žaludku, citlivé či oteklé břicho, fialové skvrny na kůži nebo černá či dehtovitá stolice.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "not_known",
-      "label": "Anafylaktická reakce nebo jiná alergická reakce, která se může projevit vyrážkou, obtížemi s polykáním nebo dýcháním, sípáním či otokem rtů, obličeje, hrdla nebo jazyka.",
-      "action": "hospitalize_NOW",
+      "label": "Alergická reakce včetně anafylaxe; může zahrnovat vyrážku, potíže s polykáním nebo dýcháním, sípání či otok rtů, obličeje, hrdla nebo jazyka.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka, potíže s polykáním nebo dýcháním, sípání nebo otok rtů, obličeje, hrdla či jazyka."
+        "patient_guide": "Vyrážka, potíže s polykáním nebo dýcháním, sípání nebo otok rtů, obličeje, hrdla či jazyka.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Adrenal insufficiency",
       "frequency": "not_known",
-      "label": "Nedostatečnost nadledvin u pacientů s poruchou funkce nadledvin.",
+      "label": "Nedostatečná funkce nadledvin u pacientů s poruchou jejich funkce.",
       "action": null,
       "action_condition": null
     },
@@ -88,35 +110,37 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Porphyria",
       "frequency": "not_known",
-      "label": "Porfyrie; byly hlášeny jednotlivé případy zhoršení porfyrie.",
+      "label": "Porfyrie; byly hlášeny ojedinělé případy zhoršení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Psychosis",
       "frequency": "not_known",
-      "label": "Psychotická porucha; mohou se objevit neobvyklé myšlenky nebo halucinace.",
+      "label": "Psychotická porucha.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte neobvyklé myšlenky nebo halucinace."
+        "patient_guide": "Neobvyklé myšlenky nebo podivné představy (halucinace).",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Watering eyes",
       "frequency": "not_known",
-      "label": "Změna barvy slz.",
+      "label": "Změna barvy slz; červené zbarvení může po vysazení přetrvávat.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Shock",
       "frequency": "not_known",
-      "label": "Šok; může se projevit zmateností, ospalostí, studenou vlhkou kůží, povrchním či obtížným dýcháním, zrychleným tepem nebo bledší kůží.",
-      "action": "hospitalize_NOW",
+      "label": "Šok; může se projevovat zmateností, ospalostí, studenou vlhkou kůží, povrchním či obtížným dýcháním, zrychleným tepem nebo bledostí.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud jste zmatený(á) nebo ospalý(á), máte studenou vlhkou kůži, povrchně či obtížně dýcháte, máte zrychlený tep nebo jste bledší než obvykle."
+        "patient_guide": "Zmatenost, ospalost, studená vlhká kůže, povrchní či obtížné dýchání, zrychlený tep nebo bledost.",
+        "min_severity": 1
       }
     },
     {
@@ -127,154 +151,148 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Hemorrhage",
       "frequency": "not_known",
-      "label": "Krvácení, včetně krvácení do mozku; náhlá silná bolest hlavy může být známkou krvácení do mozku.",
-      "action": "hospitalize_NOW",
+      "label": "Krvácení; může se projevit náhlou silnou bolestí hlavy při krvácení do mozku.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud krvácíte nebo máte náhlou silnou bolest hlavy."
+        "patient_guide": "Náhlá silná bolest hlavy.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Dyspnea",
       "frequency": "not_known",
       "label": "Dušnost.",
-      "action": "hospitalize_NOW",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví nová nebo náhle zhoršená dušnost, případně sípání, kašel nebo horečka."
+        "patient_guide": "Nová nebo náhle zhoršená dušnost, případně se suchým kašlem nebo horečkou.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Bronchospasm",
       "frequency": "not_known",
       "label": "Sípání.",
-      "action": "hospitalize_NOW",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví nové nebo náhle zhoršené sípání, případně dušnost, kašel nebo horečka."
+        "patient_guide": "Nové nebo náhle zhoršené sípání, případně s kašlem nebo horečkou.",
+        "min_severity": 2
       }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Změna barvy hlenu a sputa.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Pneumonitis",
       "frequency": "not_known",
-      "label": "Intersticiální plicní onemocnění včetně pneumonitidy; může se projevit novou nebo náhle zhoršenou dušností, suchým kašlem a horečkou.",
-      "action": "hospitalize_NOW",
+      "label": "Intersticiální plicní onemocnění nebo pneumonitida při léčbě tuberkulózy; při závažném průběhu může dojít k respiračnímu selhání nebo syndromu akutní respirační tísně.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví nová nebo náhle zhoršená dušnost, suchý kašel nebo horečka."
+        "patient_guide": "Nové nebo nevysvětlitelné zhoršení plicních příznaků, zejména dušnost se suchým kašlem a horečkou.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Nausea",
       "frequency": "common",
       "label": "Pocit na zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte obavy."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "common",
       "label": "Zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte obavy."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "uncommon",
       "label": "Průjem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte silný vodnatý průjem, který nepřestává, a cítíte se slabě nebo máte horečku."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "not_known",
       "label": "Bolest břicha.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte obavy."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Tooth discoloration",
       "frequency": "not_known",
-      "label": "Změna barvy zubů, která může být trvalá.",
+      "label": "Zabarvení zubů na žlutou, oranžovou, červenou nebo hnědou; může být trvalé.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "not_known",
-      "label": "Hepatitida nebo jiná porucha jater; může se projevit horečkou, zežloutnutím kůže nebo očního bělma, únavou, slabostí, celkovou nepohodou, nechutenstvím, pocitem na zvracení nebo zvracením.",
-      "action": "hospitalize_NOW",
+      "label": "Hepatitida; časné příznaky poruchy jater mohou zahrnovat horečku, žloutnutí kůže nebo očí, únavu, slabost, celkovou nepohodu, ztrátu chuti k jídlu, nevolnost nebo zvracení.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud máte horečku a zežloutne vám kůže nebo oční bělmo, případně máte únavu, slabost, celkovou nepohodu, nechutenství, pocit na zvracení nebo zvracíte."
+        "patient_guide": "Horečka a zežloutnutí kůže nebo očního bělma, únava, slabost či celková nepohoda, ztráta chuti k jídlu, nevolnost nebo zvracení.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Blood bilirubin increased",
       "frequency": "not_known",
-      "label": "Zvýšená hladina bilirubinu v krvi (hyperbilirubinemie).",
+      "label": "Zvýšená hladina bilirubinu; v prvních dnech léčby může být přechodná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Erythema multiforme",
       "frequency": "not_known",
-      "label": "Multiformní erytém.",
-      "action": "hospitalize_NOW",
+      "label": "Erythema multiforme; načervenalé, nevystouplé terčovité nebo kruhové skvrny, často s puchýřem uprostřed.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví načervenalé, nevystouplé terčovité nebo kruhové skvrny, často s puchýřem uprostřed, olupování kůže nebo vředy v ústech, nose, na genitálu či kolem očí."
+        "patient_guide": "Skvrny mohou být doprovázeny puchýři, olupováním kůže, vředy v ústech, nose, na genitálu nebo kolem očí, horečkou či příznaky podobnými chřipce.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom; může se projevit načervenalými terčovitými skvrnami, puchýři, olupováním kůže nebo vředy v ústech, nose, na genitálu či kolem očí, někdy s horečkou a příznaky podobnými chřipce.",
-      "action": "hospitalize_NOW",
+      "label": "Stevensův-Johnsonův syndrom; načervenalé, nevystouplé terčovité nebo kruhové skvrny, často s puchýřem uprostřed.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví načervenalé terčovité skvrny, puchýře, olupování kůže nebo vředy v ústech, nose, na genitálu či kolem očí."
+        "patient_guide": "Olupování kůže, vředy v ústech, nose, na genitálu nebo kolem očí; mohou se přidat horečka a příznaky podobné chřipce.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza; může se projevit načervenalými terčovitými skvrnami, puchýři, olupováním kůže nebo vředy v ústech, nose, na genitálu či kolem očí, někdy s horečkou a příznaky podobnými chřipce.",
-      "action": "hospitalize_NOW",
+      "label": "Toxická epidermální nekrolýza; načervenalé, nevystouplé terčovité nebo kruhové skvrny, často s puchýřem uprostřed.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví načervenalé terčovité skvrny, puchýře, olupování kůže nebo vředy v ústech, nose, na genitálu či kolem očí."
+        "patient_guide": "Olupování kůže, vředy v ústech, nose, na genitálu nebo kolem očí; mohou se přidat horečka a příznaky podobné chřipce.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS); může se projevit rozsáhlou vyrážkou, vysokou tělesnou teplotou a zvětšenými lymfatickými uzlinami.",
-      "action": "hospitalize_NOW",
+      "label": "DRESS, léková reakce s eozinofilií a systémovými příznaky; rozsáhlá vyrážka, vysoká teplota a zvětšené mízní uzliny.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá vyrážka, vysoká teplota nebo zvětšené lymfatické uzliny."
+        "patient_guide": "Rozsáhlá vyrážka, vysoká tělesná teplota a zvětšené mízní uzliny.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Exfoliative dermatitis",
       "frequency": "not_known",
-      "label": "Exfoliativní dermatitida neboli zánět kůže s olupováním.",
+      "label": "Exfoliativní dermatitida.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dermatosis bullous",
       "frequency": "not_known",
-      "label": "Pemfigoid, puchýřnaté onemocnění kůže.",
+      "label": "Pemfigoid.",
       "action": null,
       "action_condition": null
     },
@@ -288,7 +306,7 @@
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "not_known",
-      "label": "Svědivá vyrážka nebo vyrážka s olupováním kůže.",
+      "label": "Svědivá vyrážka.",
       "action": null,
       "action_condition": null
     },
@@ -300,87 +318,149 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Erythema",
       "frequency": "not_known",
       "label": "Zčervenání kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Změna barvy potu.",
+      "label": "Zabarvení potu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Generalized muscle weakness",
       "frequency": "not_known",
       "label": "Svalová slabost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Myositis",
+      "ctcae": "Myopathy",
       "frequency": "not_known",
-      "label": "Myopatie, onemocnění svalů.",
+      "label": "Myopatie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Acute kidney injury",
       "frequency": "not_known",
-      "label": "Akutní poškození ledvin, obvykle v důsledku nekrózy ledvinných kanálků nebo tubulointersticiální nefritidy; může se projevit krví v moči, změnou množství moči nebo otoky, zejména nohou, kotníků či chodidel.",
-      "action": "hospitalize_NOW",
+      "label": "Akutní poškození ledvin, obvykle v důsledku nekrózy ledvinných kanálků nebo tubulointersticiální nefritidy; může se projevit krví v moči, změnou množství moči nebo otoky nohou, kotníků či chodidel.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud máte krev v moči, tvoříte více či méně moči než obvykle nebo máte otoky, zejména nohou, kotníků či chodidel."
+        "patient_guide": "Krev v moči, zvýšená či snížená tvorba moči nebo otok, zejména nohou, kotníků či chodidel.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Tubulointerstitial nephritis",
+      "frequency": "not_known",
+      "label": "Tubulointersticiální nefritida.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Krev v moči, zvýšená či snížená tvorba moči nebo otok, zejména nohou, kotníků či chodidel.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Urine discoloration",
       "frequency": "not_known",
-      "label": "Změna barvy moči.",
+      "label": "Moč může být zbarvená žlutě, oranžově, červeně nebo hnědě.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
+      "ctcae": "Postoperative hemorrhage",
       "frequency": "not_known",
-      "label": "Poporodní krvácení u matky nebo novorozence, pokud se rifampicin užívá v posledních týdnech těhotenství.",
+      "label": "Poporodní krvácení u matky nebo novorozence, pokud je rifampicin podáván v posledních týdnech těhotenství.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Irregular menstruation",
       "frequency": "not_known",
-      "label": "Porucha nebo nepravidelnost menstruačního cyklu.",
+      "label": "Nepravidelná menstruace.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "common",
-      "label": "Po počátečním zlepšení při léčbě tuberkulózy se mohou příznaky vrátit nebo se mohou objevit nové příznaky, včetně horečky, zduření lymfatických uzlin, dušnosti, kašle, bolesti hlavy, nechutenství nebo úbytku tělesné hmotnosti; může se objevit po 2 týdnech až 18 měsících od zahájení léčby.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se po počátečním zlepšení vrátí příznaky tuberkulózy nebo se objeví nové příznaky."
-      }
+      "ctcae": "Edema",
+      "frequency": "not_known",
+      "label": "Zadržování vody a otok obličeje, břicha, rukou nebo nohou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": "not_known",
+      "label": "Závratě; při rychlém posazení nebo postavení mohou být spojeny se slabostí či mdlobou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Presyncope",
+      "frequency": "not_known",
+      "label": "Pocit na omdlení, zejména při rychlém posazení nebo postavení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypotension",
+      "frequency": "not_known",
+      "label": "Snížený krevní tlak.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Flu like symptoms",
-      "frequency": "not_known",
-      "label": "Příznaky podobné chřipce včetně horečky, zimnice, bolesti hlavy, závratí a bolesti kostí; při dávce 25 mg/kg nebo vyšší podávané jednou týdně se vyskytly až u poloviny pacientů.",
+      "frequency": 50.0,
+      "label": "Příznaky podobné chřipce včetně horečky, zimnice, bolesti hlavy, závratí a bolesti kostí; nejčastěji ve 3.–6. měsíci léčby. Až u 50 % pacientů při dávce 25 mg/kg nebo vyšší podávané jednou týdně.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte zimnici, horečku, bolest hlavy, závratě nebo bolest kostí."
+        "patient_guide": "Zimnice, horečka, bolest hlavy, závratě nebo bolest kostí.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Generalized edema",
+      "ctcae": "Fever",
       "frequency": "not_known",
-      "label": "Otoky způsobené zadržováním vody, které mohou postihnout obličej, břicho, ruce nebo nohy.",
+      "label": "Horečka.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Chills",
+      "frequency": "not_known",
+      "label": "Zimnice.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "not_known",
+      "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bone pain",
+      "frequency": "not_known",
+      "label": "Bolest kostí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Paradoxical drug reaction",
+      "frequency": 10.8696,
+      "label": "Paradoxní léková reakce při léčbě tuberkulózy: návrat nebo vznik nových příznaků po předchozím zlepšení. V různých souborech byla incidence 9,2 % (53/573) až 25 % (19/76); PIL uvádí časté.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Návrat nebo zhoršení příznaků tuberkulózy či nové příznaky po předchozím zlepšení.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Aspartate aminotransferase increased",
@@ -395,299 +475,368 @@
       "label": "Zvýšená hladina alaninaminotransferázy.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "not_known",
-      "label": "Snížený krevní tlak; může způsobit závratě, slabost nebo mdloby, zejména při rychlém posazení nebo vstávání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "not_known",
-      "label": "Snížený počet určitého typu bílých krvinek (eozinofilů).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "not_known",
-      "label": "Mdloby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": "not_known",
-      "label": "Závratě.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "not_known",
-      "label": "Slabost nebo únava.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urine discoloration",
-      "frequency": "not_known",
-      "label": "Moč, sliny, hlen, pot a slzy se mohou zbarvit žlutě, oranžově, červeně nebo hnědě; červené zbarvení slz může přetrvávat po určitou dobu po vysazení přípravku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tooth discoloration",
-      "frequency": "not_known",
-      "label": "Zuby se mohou zbarvit žlutě, oranžově, červeně nebo hnědě; změna může být trvalá.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Měkké kontaktní čočky se mohou trvale zbarvit červeně.",
-      "action": null,
-      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "sachinavir a ritonavir",
-      "effect": "Současné užívání rifampicinu se sachinavirem a ritonavirem je kontraindikováno, protože může zvýšit riziko hepatotoxicity.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hepatitis",
-          "frequency": null,
-          "label": "Zvýšené riziko poškození jater.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "atovachon",
-      "effect": "Současné užívání je kontraindikováno. Při souběžném podávání byly pozorovány snížené koncentrace atovachonu a zvýšené koncentrace rifampicinu; pokles hladiny atovachonu může vést ke ztrátě jeho terapeutické účinnosti.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug": "prazikvantel",
-      "effect": "Současné užívání je kontraindikováno, protože rifampicin může výrazně snížit plazmatickou koncentraci prazikvantelu a vést ke ztrátě jeho terapeutické účinnosti.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug": "vorikonazol",
-      "effect": "Současné užívání rifampicinu s vorikonazolem je kontraindikováno; rifampicin může výrazně snížit jeho plazmatickou koncentraci a účinnost.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Inhibitory HIV proteázy, včetně sachinaviru a ritonaviru",
-      "effect": "Rifampicin je kontraindikován se sachinavirem/ritonavirem a s inhibitory HIV proteázy, protože silná indukce enzymů a transportérů může výrazně snížit jejich plazmatické koncentrace a vést ke ztrátě terapeutické účinnosti. U kombinace sachinaviru a ritonaviru je navíc zvýšeno riziko hepatotoxicity.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hepatitis",
-          "frequency": null,
-          "label": "Při kombinaci sachinaviru a ritonaviru je zvýšené riziko poškození jater.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčiva proti hepatitidě C: daklatasvir, ledipasvir, simeprevir a sofosbuvir",
-      "effect": "Současnému užívání těchto antivirotik proti hepatitidě C a rifampicinu je třeba se vyhnout; u daklatasviru, ledipasviru, simepreviru a sofosbuviru je kombinace kontraindikována. Rifampicin může výrazně snížit jejich plazmatické koncentrace a účinnost.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Antiretrovirotika kabotegravir, fostemsavir a lenakapavir",
-      "effect": "Současné užívání s rifampicinem je kontraindikováno, protože indukce CYP3A4, P-gp a UGT1A1 významně snižuje jejich plazmatické koncentrace a může vést ke ztrátě terapeutické účinnosti.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug": "lurasidon",
-      "effect": "Současné užívání je kontraindikováno, protože rifampicin může výrazně snížit jeho plazmatickou koncentraci a terapeutickou účinnost.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug": "halothan",
-      "effect": "Současné užívání se nedoporučuje, protože při kombinaci s rifampicinem je zvýšeno riziko hepatotoxicity.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hepatitis",
-          "frequency": null,
-          "label": "Zvýšené riziko poškození jater.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "isoniazid",
-      "effect": "Při současném užívání s rifampicinem je zvýšeno riziko hepatotoxicity; pacienti mají být pečlivě sledováni. Zvláštní opatrnost se doporučuje u pacientů s poruchou funkce jater, u starších a podvyživených pacientů a případně u dětí do dvou let.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hepatitis",
-          "frequency": null,
-          "label": "Zvýšené riziko poškození jater.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Cefazolin a cefalosporiny s postranním řetězcem N-methyl-thiotetrazolu",
-      "effect": "Současnému užívání s rifampicinem je třeba se vyhnout, protože může způsobit závažné, zejména při vysokých dávkách i fatální, poruchy srážlivosti krve.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Závažné poruchy srážlivosti krve.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky metabolizované enzymy nebo transportéry indukovanými rifampicinem",
-      "effect": "Rifampicin je silným induktorem řady enzymů a transportérů (včetně CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP3A4, UGT a P-gp). Může urychlit metabolismus a snížit účinek souběžně užívaných léčiv, případně zvýšit účinek proléčiv vyžadujících metabolickou aktivaci. Při zahájení nebo ukončení souběžné léčby může být nutná úprava dávek k udržení terapeutických hladin. Mezi uvedené příklady patří antiarytmika, antiepileptika, antiestrogeny, antipsychotika, kumarinová antikoagulancia, antivirotika, barbituráty, beta-blokátory, anxiolytika a hypnotika, blokátory kalciových kanálů, antibakteriální léčiva, kortikosteroidy, srdeční glykosidy, klofibrát, imunosupresiva, irinotekan, hormony štítné žlázy, losartan, narkotická analgetika, chinin, riluzol, ondansetron, statiny metabolizované CYP3A4, teofylin, tricyklická antidepresiva, cytostatika a diuretika.",
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin snižuje vstřebávání kyseliny aminosalicylové (PAS). Pokud se podávají oba léky, musí být mezi jejich dávkami odstup nejméně 8 hodin, aby byla zajištěna dostatečná hladina PAS v krvi.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "morfin",
-      "effect": "Rifampicin může snížit plazmatickou koncentraci morfinu. Během léčby rifampicinem i po jejím ukončení je třeba sledovat jeho analgetický účinek a upravit dávku morfinu.",
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Antacida mohou snížit vstřebávání rifampicinu. Rifampicin se má užít alespoň 1 hodinu před antacidem.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "klopidogrel",
-      "effect": "Rifampicin silně indukuje CYP2C19, čímž zvyšuje hladinu aktivního metabolitu klopidogrelu a inhibici krevních destiček; může se tak zvýšit riziko krvácení. Preventivní souběžné užívání se nedoporučuje.",
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin může zvýšit riziko poškození jater při současném užívání paracetamolu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "dapson",
-      "effect": "Rifampicin zvyšuje clearance dapsonu a tvorbu jeho hydroxylaminového metabolitu, což může zvýšit riziko methemoglobinemie, hemolytické anémie, agranulocytózy a hemolýzy.",
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Současné užívání rifampicinu a sachinaviru s ritonavirem je zakázáno kvůli možnému zvýšení rizika poškození jater.",
+      "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Současné užívání rifampicinu a halotanu se nedoporučuje, protože zvyšuje riziko poškození jater.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Při současném užívání s isoniazidem je třeba pečlivě sledovat riziko poškození jater, zejména u pacientů s poruchou jater, starších nebo podvyživených pacientů a případně u dětí mladších 2 let.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin spolu s cefazolinem nebo jinými cefalosporiny s postranním řetězcem N-methyl-thiotetrazolu může způsobit závažné poruchy srážlivosti, zvláště při vysokých dávkách; současnému užívání je třeba se vyhnout.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin zvyšuje tvorbu hydroxylaminového metabolitu dapsonu a jeho clearance, což může zvýšit riziko methemoglobinemie, hemolytické anémie, agranulocytózy a hemolýzy.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Methemoglobinemia",
           "frequency": null,
-          "label": "Možné zvýšené riziko methemoglobinemie.",
+          "label": "Při současném užívání dapsonu s rifampicinem může být vyšší riziko methemoglobinemie.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Hemolytic anemia",
           "frequency": null,
-          "label": "Možné zvýšené riziko hemolytické anémie.",
+          "label": "Při současném užívání dapsonu s rifampicinem může být vyšší riziko hemolytické anémie.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Agranulocytosis",
+          "frequency": null,
+          "label": "Při současném užívání dapsonu s rifampicinem může být vyšší riziko agranulocytózy.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Hemolysis",
           "frequency": null,
-          "label": "Možné zvýšené riziko hemolýzy.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Možné zvýšené riziko agranulocytózy.",
+          "label": "Při současném užívání dapsonu s rifampicinem může být vyšší riziko hemolýzy.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Systémová hormonální antikoncepce včetně estrogenů a gestagenů",
-      "effect": "Rifampicin snižuje systémovou expozici perorálním kontraceptivům, a může tak snížit jejich účinek. Během léčby je třeba používat alternativní nehormonální metodu antikoncepce; příbalová informace doporučuje spolehlivou bariérovou metodu, například kondom nebo nitroděložní tělísko.",
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin snižuje hladinu a účinek systémové hormonální antikoncepce včetně estrogenů a gestagenů. Během léčby se mají používat nehormonální metody antikoncepce; příbalová informace zvlášť uvádí spolehlivou bariérovou metodu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "amlodipin",
-      "effect": "Rifampicin jako silný induktor CYP3A4 může měnit plazmatické koncentrace amlodipinu. Během souběžné léčby i po ní je třeba sledovat krevní tlak a případně zvážit úpravu dávky.",
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Při souběžné léčbě rifampicinem se mohou měnit hladiny amlodipinu. Během léčby a po ní má lékař sledovat krevní tlak a případně zvážit úpravu dávky amlodipinu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Antidiabetika, například chlorpropamid, tolbutamid, sulfonylurey a rosiglitazon",
-      "effect": "Při léčbě rifampicinem může být kontrola diabetu obtížnější; je třeba o tom informovat lékaře.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "ketokonazol",
-      "effect": "Současné užívání ketokonazolu a rifampicinu vedlo ke snížení sérových koncentrací obou léčiv.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Antimykotika, například flukonazol, itrakonazol a vorikonazol",
-      "effect": "Rifampicin může snížit plazmatické koncentrace souběžně užívaných antimykotik; kombinaci s vorikonazolem je třeba považovat za kontraindikovanou. U ketokonazolu byly sníženy koncentrace obou současně podávaných léčiv.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "kyselina aminosalicylová (PAS)",
-      "effect": "Při souběžném podávání s rifampicinem musí být mezi dávkami odstup nejméně 8 hodin, aby byla zajištěna dostatečná hladina obou léčiv v krvi.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Antacida",
-      "effect": "Antacida mohou snížit absorpci rifampicinu. Rifampicin se má užít nejméně 1 hodinu před antacidem.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "paracetamol",
-      "effect": "Současné užívání paracetamolu a rifampicinu může zvýšit riziko hepatotoxicity.",
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin může ztížit kontrolu diabetu při současném užívání antidiabetik.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hepatitis",
-          "frequency": null,
-          "label": "Zvýšené riziko poškození jater.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Kotrimoxazol",
-      "effect": "Kotrimoxazol zvyšuje sérovou hladinu rifampicinu.",
-      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "probenecid",
-      "effect": "Probenecid zvyšuje sérovou hladinu rifampicinu.",
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Při současném užívání rifampicinu a ketokonazolu byly sníženy sérové hladiny obou léčiv.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin snižuje hladinu morfinu v krvi. Během léčby a po jejím ukončení má lékař sledovat jeho analgetický účinek a upravit dávku morfinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin zvyšuje expozici aktivnímu metabolitu klopidogrelu a tlumí funkci krevních destiček, což může zvýšit riziko krvácení; současné užívání se z preventivních důvodů nedoporučuje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin může urychlit metabolismus mnoha současně užívaných léků a snížit jejich účinek; u proléčiv může naopak zvýšit jejich působení. Při zahájení nebo ukončení rifampicinu může lékař upravit dávky k udržení účinných hladin. Příklady zahrnují antiarytmika, antiepileptika, antiestrogeny, antipsychotika, kumarinová antikoagulancia, antivirotika, barbituráty, beta-blokátory, léky na uklidnění a spaní, blokátory kalciových kanálů, antibakteriální léky, kortikosteroidy, srdeční glykosidy, klofibrát, imunosupresiva, irinotekan, hormony štítné žlázy, chinin, riluzol, ondansetron, statiny metabolizované CYP3A4, theofylin, tricyklická antidepresiva a eplerenon.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Současnému užívání rifampicinu s atovachonem, prazikvantelem, vorikonazolem, inhibitory HIV proteázy, daklatasvirem, ledipasvirem, simepre-virem, lurasidonem, sofosbuvirem, kabotegravirem, fostemsavirem nebo lenakapavirem je zakázáno nebo se mu podle konkrétního léku třeba vyhnout; rifampicin může výrazně snížit jejich hladiny a účinnost. Příbalová informace jmenuje i sachinavir a ritonavir, zatímco SPC uvádí kontraindikaci pro inhibitory HIV proteázy jako skupinu.",
+      "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Při současném užívání atovachonu byly pozorovány nižší hladiny atovachonu a vyšší hladiny rifampicinu.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1840",
+      "drug": "Rifampicin",
+      "effect": "Kotrimoxazol a probenecid zvyšují hladinu rifampicinu v krvi.",
       "effect_type": "increased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "BENEMICIN obsahuje rifampicin, antibiotikum používané k léčbě tuberkulózy, lepry a ve vybraných případech dalších bakteriálních infekcí.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0093922",
+      "H": "",
+      "NAZEV": "BENEMICIN",
+      "SILA": "300MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "300MG CPS DUR 100",
+      "OBAL": "TBC",
+      "DRZ": "TZF",
+      "ZEMDRZ": "PL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "J04AB02",
+      "RC": "15/050/88-B/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,6",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "50",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1840",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "BENEMICIN",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0093922",
+        "KOD_LATKY": "1840",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "300",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1840",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "RIFAMPICINUM",
+          "NAZEV_EN": "RIFAMPICIN",
+          "NAZEV": "RIFAMPICIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0093922",
+        "KOD_LATKY": "1871",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0093922",
+        "KOD_LATKY": "2378",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0093922",
+        "KOD_LATKY": "1335",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0093922",
+        "KOD_LATKY": "2710",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0093922",
+        "KOD_LATKY": "4290",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "4290",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM RUBRUM",
+          "NAZEV_EN": "IRON OXIDE RED",
+          "NAZEV": "ČERVENÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0093922",
+        "KOD_LATKY": "2855",
+        "SQ": "7",
+        "S": "A",
+        "AMNT": "100",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0093922",
+      "PIL": "PI231673.pdf",
+      "DAT_ROZ_PIL": "17.03.2026",
+      "SPC": "SPC231674.pdf",
+      "DAT_ROZ_SPC": "17.03.2026",
+      "OBAL_TEXT": "OBAL196652.pdf",
+      "DAT_ROZ_OBAL": "09.03.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J04AB02",
+        "NT": "N",
+        "NAZEV": "RIFAMPICIN",
+        "NAZEV_EN": "RIFAMPICIN"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

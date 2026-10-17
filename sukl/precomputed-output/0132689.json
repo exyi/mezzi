@@ -1,34 +1,54 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N06",
+    "atc:N06A",
+    "atc:N06AB",
+    "atc:N06AB04",
+    "group:qt_prolonging",
+    "group:serotonergic",
+    "substance:10628"
+  ],
   "side_effects": [
     {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "not_known",
-      "label": "Snížený počet krevních destiček (trombocytopenie), který se může projevit například modřinami nebo krvácením.",
+      "ctcae": "Somnolence",
+      "frequency": "very_common",
+      "label": "Ospalost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
-      "frequency": "not_known",
-      "label": "Přecitlivělost nebo alergická reakce.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví otok kůže, jazyka, rtů nebo obličeje nebo máte potíže s dýcháním; přestaňte přípravek užívat a ihned navštivte lékaře."
-      }
+      "ctcae": "Insomnia",
+      "frequency": "very_common",
+      "label": "Nespavost; může záviset na dávce.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Anafylaktická reakce.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví otok kůže, jazyka, rtů nebo obličeje nebo máte potíže s dýcháním; přestaňte přípravek užívat a ihned navštivte lékaře."
-      }
+      "ctcae": "Headache",
+      "frequency": "very_common",
+      "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Blood antidiuretic hormone abnormal",
-      "frequency": "not_known",
-      "label": "Nepřiměřené vylučování antidiuretického hormonu.",
+      "ctcae": "Dry mouth",
+      "frequency": "very_common",
+      "label": "Sucho v ústech; může záviset na dávce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "very_common",
+      "label": "Nevolnost; může záviset na dávce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperhidrosis",
+      "frequency": "very_common",
+      "label": "Zvýšené pocení; může záviset na dávce.",
       "action": null,
       "action_condition": null
     },
@@ -47,46 +67,19 @@
       "action_condition": null
     },
     {
-      "ctcae": "Anorexia",
-      "frequency": "uncommon",
-      "label": "Zvýšená chuť k jídlu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Weight gain",
-      "frequency": "uncommon",
-      "label": "Zvýšení tělesné hmotnosti.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyponatremia",
-      "frequency": "rare",
-      "label": "Nízká hladina sodíku v krvi; může způsobit únavu, zmatenost nebo třes svalů.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte nízkou hladinu sodíku s únavou, zmateností nebo třesem svalů; přestaňte přípravek užívat a ihned navštivte lékaře."
-      }
-    },
-    {
-      "ctcae": "Hypokalemia",
-      "frequency": "not_known",
-      "label": "Nízká hladina draslíku v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Agitation",
       "frequency": "common",
-      "label": "Pocit neklidu (agitovanost).",
-      "action": null,
-      "action_condition": null
+      "label": "Neklid (agitovanost).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Libido decreased",
       "frequency": "common",
-      "label": "Snížení libida (pohlavní touhy).",
+      "label": "Snížení sexuální touhy.",
       "action": null,
       "action_condition": null
     },
@@ -107,35 +100,154 @@
     {
       "ctcae": "Confusion",
       "frequency": "common",
-      "label": "Stav zmatenosti.",
+      "label": "Zmatenost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Anorgasmia",
       "frequency": "common",
-      "label": "Abnormální orgasmus u žen.",
+      "label": "Porucha nebo chybění orgasmu u žen.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "common",
       "label": "Abnormální sny.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Tremor",
+      "frequency": "common",
+      "label": "Třes.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Paresthesia",
+      "frequency": "common",
+      "label": "Parestézie: změněné vnímání dotyku nebo pocitů v rukou a nohou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": "common",
+      "label": "Závratě.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Concentration impairment",
+      "frequency": "common",
+      "label": "Poruchy pozornosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tinnitus",
+      "frequency": "common",
+      "label": "Zvonění v uších.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "frequency": "common",
+      "label": "Zívání.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "common",
+      "label": "Průjem; může záviset na dávce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "common",
+      "label": "Zvracení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "common",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "common",
+      "label": "Svědění kůže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myalgia",
+      "frequency": "common",
+      "label": "Bolest svalů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arthralgia",
+      "frequency": "common",
+      "label": "Bolest kloubů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erectile dysfunction",
+      "frequency": "common",
+      "label": "Problémy s dosažením nebo udržením erekce (impotence).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Ejaculation disorder",
+      "frequency": "common",
+      "label": "Porucha nebo chybění ejakulace.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "common",
+      "label": "Únava; může záviset na dávce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anorexia",
+      "frequency": "uncommon",
+      "label": "Zvýšená chuť k jídlu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Weight gain",
+      "frequency": "uncommon",
+      "label": "Zvýšení tělesné hmotnosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Aggression",
       "frequency": "uncommon",
       "label": "Agrese.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Personality change",
+      "ctcae": "Depersonalization",
       "frequency": "uncommon",
-      "label": "Depersonalizace – pocit, že pouze pozorujete své jednání a nemáte nad ním kontrolu.",
+      "label": "Depersonalizace: pocit, že pouze pozorujete své jednání a nemáte nad ním kontrolu.",
       "action": null,
       "action_condition": null
     },
@@ -149,299 +261,38 @@
     {
       "ctcae": "Mania",
       "frequency": "uncommon",
-      "label": "Mánie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Záchvaty paniky.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Skřípání nebo svírání zubů (bruxismus).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Restlessness",
-      "frequency": "not_known",
-      "label": "Neklid; někdy nepříjemný vnitřní neklid s neschopností sedět nebo stát v klidu (akatizie), zejména v prvních týdnech léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Suicidal ideation",
-      "frequency": "not_known",
-      "label": "Sebevražedné myšlenky nebo chování; případy byly hlášeny během léčby i krátce po jejím ukončení.",
-      "action": "contact_doctor",
+      "label": "Mánie; u bipolární poruchy může jít o manickou fázi.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás kdykoli objeví myšlenky na sebepoškození nebo sebevraždu, ihned vyhledejte lékaře nebo nejbližší nemocnici."
+        "patient_guide": null,
+        "min_severity": 3
       }
-    },
-    {
-      "ctcae": "Somnolence",
-      "frequency": "very_common",
-      "label": "Ospalost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "very_common",
-      "label": "Nespavost; může se objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Headache",
-      "frequency": "very_common",
-      "label": "Bolest hlavy; může se objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tremor",
-      "frequency": "common",
-      "label": "Třes; může se objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Paresthesia",
-      "frequency": "common",
-      "label": "Parestézie – snížené nebo změněné vnímání dotyku či pocitů v rukou a nohou; smyslové poruchy se mohou objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": "common",
-      "label": "Závratě; mohou se objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Concentration impairment",
-      "frequency": "common",
-      "label": "Poruchy pozornosti.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Syncope",
       "frequency": "uncommon",
-      "label": "Krátká ztráta vědomí způsobená nedostatečným krevním zásobením mozku (synkopa).",
+      "label": "Krátká ztráta vědomí způsobená nedostatečným krevním zásobením mozku.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Seizure",
-      "frequency": "rare",
-      "label": "Velký záchvat křečí se ztrátou vědomí (grand mal).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Movements involuntary",
-      "frequency": "rare",
-      "label": "Dyskineze – poruchy zahrnující oslabené volní a mimovolní pohyby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysgeusia",
-      "frequency": "rare",
-      "label": "Poruchy chuti.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Seizure",
-      "frequency": "not_known",
-      "label": "Křeče nebo záchvaty.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Serotoninový syndrom, potenciálně život ohrožující stav; může zahrnovat vysokou horečku, pocení, neklid, halucinace, zmatenost, třes, mimovolní záškuby svalů, zesílené reflexy, zvýšené napětí svalů nebo bezvědomí.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky serotoninového syndromu, například vysoká horečka, pocení, neklid, zmatenost, třes nebo mimovolní záškuby svalů; přestaňte přípravek užívat a ihned navštivte lékaře."
-      }
-    },
-    {
-      "ctcae": "Extrapyramidal disorder",
-      "frequency": "not_known",
-      "label": "Extrapyramidová porucha – změny svalového napětí, nedostatek volních pohybů nebo abnormální mimovolní pohyby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Movements involuntary",
-      "frequency": "not_known",
-      "label": "Poruchy pohybu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
+      "ctcae": "Mydriasis",
       "frequency": "uncommon",
       "label": "Nadměrné rozšíření zornic.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Poruchy zraku; mohou se objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tinnitus",
-      "frequency": "common",
-      "label": "Zvonění v uších.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Sinus bradycardia",
+      "ctcae": "Bradycardia",
       "frequency": "uncommon",
       "label": "Pomalý srdeční rytmus.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Sinus tachycardia",
+      "ctcae": "Tachycardia",
       "frequency": "uncommon",
       "label": "Rychlý srdeční rytmus.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Electrocardiogram QT corrected interval prolonged",
-      "frequency": "not_known",
-      "label": "Prodloužení QT intervalu na EKG; po uvedení přípravku na trh byly hlášeny zejména případy u žen s nízkou hladinou draslíku nebo již existujícím prodloužením QT intervalu či jiným srdečním onemocněním.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás během léčby objeví známky poruchy srdečního rytmu, například rychlý nebo nepravidelný tep či mdloby; přestaňte přípravek užívat a ihned navštivte lékaře."
-      }
-    },
-    {
-      "ctcae": "Ventricular arrhythmia",
-      "frequency": "not_known",
-      "label": "Komorové arytmie včetně torsade de pointes; po uvedení přípravku na trh byly hlášeny zejména u žen s nízkou hladinou draslíku nebo již existujícím prodloužením QT intervalu či jiným srdečním onemocněním.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rychlý nebo nepravidelný srdeční tep a mdloby, přestaňte přípravek užívat a ihned navštivte lékaře."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Krvácení; mezi hlášené případy patří také neobvyklé nebo zažívací krvácení.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud u vás dojde k neobvyklému krvácení, včetně krvácení ze zažívacího traktu, přestaňte přípravek užívat a ihned navštivte lékaře."
-      }
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "not_known",
-      "label": "Pokles krevního tlaku při rychlém vstávání (ortostatická hypotenze).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "common",
-      "label": "Zívání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Epistaxis",
-      "frequency": "not_known",
-      "label": "Krvácení z nosu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dry mouth",
-      "frequency": "very_common",
-      "label": "Sucho v ústech.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "very_common",
-      "label": "Nevolnost; může se objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "common",
-      "label": "Průjem; může se objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vomiting",
-      "frequency": "common",
-      "label": "Zvracení; může se objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Constipation",
-      "frequency": "common",
-      "label": "Zácpa.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Krvácení do zažívacího traktu, včetně krvácení z konečníku.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud u vás dojde k neobvyklému krvácení, včetně krvácení ze zažívacího traktu, přestaňte přípravek užívat a ihned navštivte lékaře."
-      }
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "rare",
-      "label": "Zánět jater.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "not_known",
-      "label": "Abnormální výsledky jaterních testů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperhidrosis",
-      "frequency": "very_common",
-      "label": "Zvýšené pocení; tento nežádoucí účinek závisí na dávce a může se objevit také při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "common",
-      "label": "Svědění kůže.",
       "action": null,
       "action_condition": null
     },
@@ -460,7 +311,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
       "label": "Vyrážka.",
       "action": null,
@@ -469,44 +320,21 @@
     {
       "ctcae": "Purpura",
       "frequency": "uncommon",
-      "label": "Purpura – červené nebo nachové skvrny na kůži způsobené krvácením do podkoží.",
+      "label": "Červené nebo nachové skvrny na kůži; krvácení do podkoží (purpura).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Photosensitivity",
       "frequency": "uncommon",
-      "label": "Větší citlivost na světlo než obvykle (fotosenzitivita).",
+      "label": "Větší citlivost na světlo než obvykle.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Bruising",
-      "frequency": "not_known",
-      "label": "Ekchymóza – nachové skvrny na kůži větší než 1 cm způsobené únikem krve do tkání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": "not_known",
-      "label": "Angioedém – náhlý otok v podkoží, který se může projevit v obličeji.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví otok kůže, jazyka, rtů nebo obličeje nebo máte potíže s dýcháním; přestaňte přípravek užívat a ihned navštivte lékaře."
-      }
-    },
-    {
-      "ctcae": "Myalgia",
-      "frequency": "common",
-      "label": "Bolest svalů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Arthralgia",
-      "frequency": "common",
-      "label": "Otok a bolesti kloubů.",
+      "ctcae": "Menorrhagia",
+      "frequency": "uncommon",
+      "label": "U žen abnormálně silná a dlouhá menstruace v pravidelných intervalech.",
       "action": null,
       "action_condition": null
     },
@@ -518,72 +346,47 @@
       "action_condition": null
     },
     {
-      "ctcae": "Erectile dysfunction",
-      "frequency": "common",
-      "label": "Problémy získat a udržet erekci (impotence).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Ejaculation disorder",
-      "frequency": "common",
-      "label": "Poruchy ejakulace.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Ejaculation disorder",
-      "frequency": "common",
-      "label": "Selhání ejakulace.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Menorrhagia",
-      "frequency": "uncommon",
-      "label": "Abnormálně silná a dlouhá menstruace v pravidelných intervalech (menoragie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Uterine hemorrhage",
-      "frequency": "not_known",
-      "label": "Krvácení z dělohy v nepravidelných intervalech, zejména uprostřed menstruačního cyklu (metroragie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Uterine hemorrhage",
-      "frequency": "not_known",
-      "label": "Silné vaginální krvácení krátce po porodu; riziko může být zvýšené zejména při poruše krvácení v anamnéze.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Přetrvávající bolestivá erekce penisu, která nesouvisí se sexuální aktivitou (priapismus).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Lactation disorder",
-      "frequency": "not_known",
-      "label": "Samovolné vylučování mléka u mužů nebo u žen mimo kojení (galaktorea).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "common",
-      "label": "Únava; může se objevit také při nízké hladině sodíku v krvi nebo při vysazování léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
+      "ctcae": "Edema",
       "frequency": "uncommon",
       "label": "Otok.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Seizure",
+      "frequency": "rare",
+      "label": "Křeče typu grand mal se ztrátou vědomí.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Extrapyramidal disorder",
+      "frequency": "rare",
+      "label": "Pohybové poruchy včetně oslabených volních a mimovolních pohybů (dyskineze).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysgeusia",
+      "frequency": "rare",
+      "label": "Poruchy chuti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hemorrhage",
+      "frequency": "rare",
+      "label": "Krvácení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "rare",
+      "label": "Zánět jater.",
       "action": null,
       "action_condition": null
     },
@@ -595,226 +398,725 @@
       "action_condition": null
     },
     {
-      "ctcae": "Palpitations",
+      "ctcae": "Thrombocytopenia",
       "frequency": "not_known",
-      "label": "Bušení srdce; může se objevit také při vysazování léčby.",
+      "label": "Snížený počet krevních destiček; může se projevit nachovými skvrnami, krvácením z dásní nebo nosu či snadnou tvorbou modřin.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Irritability",
+      "ctcae": "Hypersensitivity",
       "frequency": "not_known",
-      "label": "Podrážděnost; může se objevit také při vysazování léčby.",
+      "label": "Přecitlivělost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Psychiatric disorders - Other, specify",
+      "ctcae": "Blood antidiuretic hormone abnormal",
       "frequency": "not_known",
-      "label": "Emoční labilita; může se objevit při vysazování léčby.",
+      "label": "Nepřiměřené vylučování antidiuretického hormonu (ADH).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypokalemia",
+      "frequency": "not_known",
+      "label": "Nízká hladina draslíku v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Panic attack",
+      "frequency": "not_known",
+      "label": "Záchvat paniky.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bruxism",
+      "frequency": "not_known",
+      "label": "Svírání nebo skřípání zubů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Restlessness",
+      "frequency": "not_known",
+      "label": "Neklid.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "zejména v prvních týdnech léčby nebo pokud máte potíže sedět či stát v klidu",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Suicidal ideation",
+      "frequency": "not_known",
+      "label": "Sebevražedné myšlenky; hlášeny během léčby nebo krátce po jejím ukončení.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "pokud se objeví kdykoli myšlenky na sebepoškození nebo sebevraždu, vyhledejte ihned lékaře nebo nejbližší nemocnici",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Suicide attempt",
+      "frequency": "not_known",
+      "label": "Sebevražedné chování; hlášeno během léčby nebo krátce po jejím ukončení.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Seizure",
+      "frequency": "not_known",
+      "label": "Křeče.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Serotonin syndrome",
+      "frequency": "not_known",
+      "label": "Serotoninový syndrom: může se projevit kombinací změn duševního stavu, nestability tělesných funkcí, neklidu, svalových či nervových abnormalit, zažívacích potíží a vysoké teploty.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "při kombinaci vysoké horečky, pocení, neklidu, halucinací, zmatenosti, třesu, mimovolních záškubů nebo ztuhlosti svalů; léčbu ihned ukončete a navštivte lékaře",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Extrapyramidal disorder",
+      "frequency": "not_known",
+      "label": "Extrapyramidová porucha: změny svalového napětí, nedostatek volních pohybů nebo abnormální mimovolní pohyby.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Akathisia",
+      "frequency": "not_known",
+      "label": "Akatizie: nepříjemný vnitřní neklid s neschopností sedět nebo zůstat v klidu; nejčastěji v prvních týdnech léčby.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "zejména v prvních týdnech léčby nebo pokud máte potíže sedět či stát v klidu",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Movements involuntary",
+      "frequency": "not_known",
+      "label": "Pohybové poruchy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vision decreased",
+      "frequency": "not_known",
+      "label": "Zrakové poruchy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Orthostatic hypotension",
+      "frequency": "not_known",
+      "label": "Závratě při rychlém vzpřímení do stoje (ortostatická hypotenze).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Epistaxis",
+      "frequency": "not_known",
+      "label": "Krvácení z nosu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal hemorrhage",
+      "frequency": "not_known",
+      "label": "Krvácení ze zažívacího traktu, včetně krvácení z konečníku.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "při neobvyklém krvácení, včetně krvácení ze zažívacího traktu, léčbu ukončete a ihned navštivte lékaře",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "not_known",
+      "label": "Změny jaterních testů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bruising",
+      "frequency": "not_known",
+      "label": "Ekchymóza: nachové skvrny na kůži větší než 1 cm způsobené únikem krve do tkání.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "not_known",
+      "label": "Angioedém: náhlý otok podkoží.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "při otoku kůže, jazyka, rtů nebo obličeje či při potížích s dýcháním léčbu ukončete a ihned navštivte lékaře",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Irregular menstruation",
+      "frequency": "not_known",
+      "label": "U žen děložní krvácení v nepravidelných intervalech, zejména uprostřed menstruačního cyklu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Priapism",
+      "frequency": "not_known",
+      "label": "U mužů přetrvávající bolestivá erekce nesouvisející se sexuální aktivitou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Galactorrhea",
+      "frequency": "not_known",
+      "label": "U mužů nebo žen spontánní tvorba mléka mimo kojení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Postpartum hemorrhage",
+      "frequency": "not_known",
+      "label": "Silné vaginální krvácení krátce po porodu; hlášeno u skupiny SSRI/SNRI.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fracture",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "U pacientů užívajících tento typ antidepresiv bylo pozorováno zvýšené riziko zlomenin kostí.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pulmonary hypertension",
-      "frequency": 200.0,
-      "label": "Perzistující plicní hypertenze novorozence; riziko může být zvýšené při užívání přípravku v těhotenství, zvláště v jeho pozdním stádiu nebo posledních 3 měsících. Může se projevit zrychleným dýcháním a promodráváním.",
-      "action": "contact_doctor",
+      "ctcae": "Hyponatremia",
+      "frequency": "rare",
+      "label": "Nízká hladina sodíku v krvi; může způsobit únavu, zmatenost nebo třes svalů. Zvýšené pocení, neklid, halucinace, zmatenost, třes či svalové záškuby mohou být známkami závažného serotoninového syndromu.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud po porodu u svého dítěte zpozorujete zrychlené dýchání nebo promodrávání, okamžitě kontaktujte dětského lékaře."
+        "patient_guide": "při nízké hladině sodíku mohou být přítomny únava, zmatenost nebo třes svalů",
+        "min_severity": 3
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "not_known",
-      "label": "U novorozence po užívání SSRI/SNRI matkou v pozdní fázi těhotenství se mohou objevit dechové obtíže, promodrávání, zástava dechu, záchvaty, nestabilní teplota, poruchy příjmu potravy, zvracení, nízká hladina cukru v krvi, zvýšené nebo snížené svalové napětí, zvýšené reflexy, třes, nervozita, podrážděnost, letargie, neustálý pláč, spavost nebo potíže se spánkem; příznaky se obvykle objeví ihned nebo do 24 hodin po porodu.",
+      "label": "Prodloužení QT intervalu na EKG; po uvedení přípravku na trh hlášeno převážně u žen s nízkou hladinou draslíku, již prodlouženým QT intervalem nebo jiným srdečním onemocněním.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
-      "frequency": 200.0,
-      "label": "Při užívání SSRI/SNRI během posledního měsíce před porodem může být zvýšené riziko poporodního krvácení; údaje uvádějí méně než dvojnásobné zvýšení rizika.",
+      "ctcae": "Ventricular arrhythmia",
+      "frequency": "not_known",
+      "label": "Komorové arytmie včetně torsade de pointes; hlášeny po uvedení přípravku na trh, převážně u žen s nízkou hladinou draslíku, již prodlouženým QT intervalem nebo jiným srdečním onemocněním.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "při rychlém nebo nepravidelném tepu a mdlobách",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Glaucoma",
+      "frequency": null,
+      "label": "Glaukom s uzavřeným úhlem může vzniknout u náchylných pacientů v důsledku rozšíření zornic.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Seizure",
-      "frequency": "not_known",
-      "label": "Při náhlém ukončení léčby nebo snížení dávky se mohou objevit příznaky z vysazení, mezi něž patří také třes, závratě, smyslové poruchy, poruchy spánku, neklid nebo úzkost, nevolnost či zvracení, zmatenost, pocení, bolest hlavy, průjem, bušení srdce, emoční labilita, podrážděnost a poruchy zraku. Mohou být mírné až středně závažné, u některých pacientů však závažnější a déletrvající.",
+      "ctcae": "Sexual dysfunction",
+      "frequency": null,
+      "label": "Sexuální dysfunkce; příznaky v některých případech přetrvávaly i po ukončení léčby SSRI/SNRI.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: nevolnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: zvracení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: závratě.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysesthesia",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: smyslové poruchy včetně parestézie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: nespavost a živé sny.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anxiety",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: neklid nebo úzkost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tremor",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: třes.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Confusion",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: zmatenost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperhidrosis",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: pocení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: průjem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Palpitations",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: bušení srdce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Irritability",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: emoční labilita a podrážděnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vision decreased",
+      "frequency": null,
+      "label": "Příznaky z vysazení po ukončení léčby, zejména při náhlém ukončení nebo rychlém snižování dávky: poruchy zraku.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
+      "class_id": null,
       "drug_class": "Inhibitory monoaminooxidázy (IMAO)",
-      "effect": "Současné užívání může vyvolat závažné nežádoucí účinky včetně serotoninového syndromu a je kontraindikováno. Citalopram se nesmí užívat s IMAO; léčbu citalopramem lze zahájit nejdříve 14 dní po vysazení ireverzibilního IMAO nebo po stanovené době po vysazení reverzibilního IMAO. Po vysazení citalopramu se IMAO nemají zahajovat nejméně 7 dní; po moklobemidu je třeba před zahájením citalopramu dodržet nejméně jednodenní odstup. Selegilin lze kombinovat pouze v dávce nejvýše 10 mg denně.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Psychiatric disorders - Other, specify",
-          "frequency": "not_known",
-          "label": "Serotoninový syndrom; mohou se objevit agitovanost, třes, mimovolní svalové záškuby a vysoká teplota.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Linezolid",
-      "effect": "Současné užívání s citalopramem je kontraindikováno, pokud nelze zajistit pozorování a monitorování krevního tlaku; kombinace může vyvolat závažnou reakci včetně serotoninového syndromu.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Psychiatric disorders - Other, specify",
-          "frequency": "not_known",
-          "label": "Serotoninový syndrom; mohou se objevit agitovanost, třes, mimovolní svalové záškuby a vysoká teplota.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčivé přípravky prodlužující QT interval, včetně antiarytmik třídy IA a III, antipsychotik, tricyklických antidepresiv, některých antibiotik, antimalarik a antihistaminik",
-      "effect": "Současné užívání je kontraindikováno, protože nelze vyloučit aditivní účinek na prodloužení QT intervalu a riziko komorových arytmií. Zahrnuje například antiarytmika třídy IA a III, fenothiazinové deriváty, pimozid, haloperidol, tricyklická antidepresiva, sparfloxacin, moxifloxacin, nitrožilní erythromycin, pentamidin, halofantrin, astemizol a mizolastin.",
+      "effect": "Současné užívání může vyvolat závažné nežádoucí účinky včetně serotoninového syndromu. Citalopram se nesmí kombinovat s IMAO; léčbu lze zahájit nejdříve 14 dní po vysazení ireverzibilního IMAO nebo podle předepsané přestávky po reverzibilním IMAO. Po moklobemidu je přestávka nejméně 1 den; IMAO se nemá zahájit dříve než 7 dní po vysazení citalopramu. Selegilin lze užívat současně pouze do 10 mg denně.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "Pimozid",
-      "effect": "Současné podávání je kontraindikováno. Při kombinaci s citalopramem bylo popsáno prodloužení QT intervalu v průměru o 10 ms a zvýšení AUC a maximální plazmatické koncentrace pimozidu.",
+      "class_id": null,
+      "drug_class": "Léky prodlužující QT interval",
+      "effect": "Současné užívání je kontraindikováno, protože nelze vyloučit sčítání účinků na QT interval. Patří sem antiarytmika tříd IA a III, některá antipsychotika, tricyklická antidepresiva, některá antibiotika, antimalarika a antihistaminika.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "Selegilin",
-      "effect": "Současné užívání selegilinu v dávce do 10 mg denně neprokázalo klinicky významnou interakci; dávky vyšší než 10 mg denně jsou kontraindikovány.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Serotoninergní léčivé přípravky, například sumatriptan a další triptany, tramadol, buprenorfin, oxitriptan a tryptofan",
-      "effect": "Kombinace může zesílit účinky zprostředkované serotoninem a vést k serotoninovému syndromu. Současné užívání se nedoporučuje, dokud nebudou k dispozici další informace; při kombinaci je nutná opatrnost.",
+      "class_id": null,
+      "drug_class": "Léky se serotoninergními účinky",
+      "effect": "Kombinace může zesílit serotoninergní účinky a vyvolat serotoninový syndrom. Současné užívání triptanů, tramadolu, buprenorfinu, oxitriptanu a tryptofanu se nedoporučuje; u lithia a tryptofanu je třeba zvýšená opatrnost. Příbalová informace uvádí opatrnost, zatímco SPC souběžné užívání těchto léčiv nedoporučuje.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Psychiatric disorders - Other, specify",
-          "frequency": "not_known",
-          "label": "Serotoninový syndrom; mohou se objevit agitovanost, třes, mimovolní svalové záškuby a vysoká teplota.",
+          "ctcae": "Serotonin syndrome",
+          "frequency": null,
+          "label": "Při kombinaci citalopramu s léky se serotoninergními účinky může vzniknout serotoninový syndrom.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Lithium",
-      "effect": "Při současném užívání byly hlášeny zesílené serotoninergní účinky; kombinace má probíhat se zvýšenou opatrností a má pokračovat obvyklé monitorování hladin lithia. Farmakokinetická interakce nebyla prokázána.",
+      "class_id": null,
+      "drug_class": "Nesteroidní protizánětlivé léky",
+      "effect": "Současné užívání může zvýšit riziko krvácení.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Psychiatric disorders - Other, specify",
-          "frequency": "not_known",
-          "label": "Zesílení serotoninergních účinků; byly hlášeny případy serotoninového syndromu.",
+          "ctcae": "Hemorrhage",
+          "frequency": null,
+          "label": "Při kombinaci může být zvýšené riziko krvácení.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Třezalka tečkovaná",
-      "effect": "Při současném užívání může dojít k dynamické interakci a častějšímu výskytu nežádoucích účinků; kombinace se nedoporučuje a citalopram nemá být užíván současně s přípravky obsahujícími třezalku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Antikoagulancia a léčivé přípravky ovlivňující funkci krevních destiček, například NSAID, kyselina acetylsalicylová, dipyridamol a tiklopidin",
-      "effect": "Současné užívání může zvýšit riziko krvácení; je doporučena opatrnost, zejména při anamnéze krvácivých poruch.",
+      "class_id": null,
+      "drug_class": "Antikoagulancia a léky ovlivňující funkci krevních destiček",
+      "effect": "Současné užívání může zvýšit riziko krvácení; opatrnost je doporučena zejména u pacientů s poruchou krvácení v anamnéze.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
-          "frequency": "not_known",
-          "label": "Zvýšené riziko krvácení, včetně krvácení ze zažívacího traktu, z nosu, gynekologického, kožního nebo slizničního krvácení.",
+          "ctcae": "Hemorrhage",
+          "frequency": null,
+          "label": "Při kombinaci může být zvýšené riziko krvácení.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Atypická antipsychotika, fenothiaziny a tricyklická antidepresiva",
-      "effect": "Při současném užívání s citalopramem může být zvýšené riziko krvácení; doporučuje se opatrnost. Některé přípravky z těchto skupin mohou také prodlužovat QT interval, kdy je jejich současné užívání kontraindikováno.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": "not_known",
-          "label": "Zvýšené riziko krvácení.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčivé přípravky snižující hladinu draslíku nebo hořčíku",
-      "effect": "Při současném podávání se doporučuje opatrnost, protože nízká hladina draslíku nebo hořčíku může zvýšit riziko maligní arytmie.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léčivé přípravky snižující práh pro vznik záchvatů, například některá antidepresiva, neuroleptika, meflochin, bupropion a tramadol",
-      "effect": "Přípravky SSRI mohou snižovat práh pro vznik záchvatů; při současném užívání dalších přípravků s tímto účinkem se doporučuje obezřetnost.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
+      "class_id": "substance:10628",
       "drug": "Cimetidin",
-      "effect": "Cimetidin mírně zvýšil ustálenou hladinu citalopramu. Při kombinaci se doporučuje opatrnost a může být potřeba upravit dávku.",
+      "effect": "Cimetidin mírně zvyšuje ustálenou hladinu citalopramu. Při současném užívání je doporučena opatrnost; může být potřeba upravit dávku.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory CYP2C19, například omeprazol, esomeprazol, flukonazol, fluvoxamin, lansoprazol a tiklopidin",
-      "effect": "Při současném užívání může být nutná opatrnost a úprava dávkování. U escitalopramu, aktivního stereoizomeru citalopramu, vedl omeprazol k přibližně 50% zvýšení plazmatických koncentrací.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": "substance:10628",
       "drug": "Metoprolol",
-      "effect": "Současné podávání vedlo ke dvojnásobnému zvýšení plazmatických hladin metoprololu, bez statisticky významného zvýšení jeho účinku na krevní tlak nebo srdeční rytmus. Doporučuje se opatrnost a může být nutná úprava dávky, zejména pokud se metoprolol užívá při srdečním selhání.",
+      "effect": "Citalopram může zvýšit plazmatickou hladinu metoprololu přibližně na dvojnásobek; nebylo zjištěno významné zvýšení jeho vlivu na krevní tlak ani tep. Opatrnost je doporučena, zejména při užívání metoprololu na srdeční selhání; může být potřeba upravit dávku.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:10628",
       "drug": "Desipramin",
-      "effect": "Při kombinaci s citalopramem byla pozorována zvýšená plazmatická koncentrace desipraminu; může být nezbytné snížit jeho dávku.",
+      "effect": "Při kombinaci s citalopramem může stoupnout plazmatická koncentrace desipraminu; může být nezbytné snížit jeho dávku.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky metabolizované převážně CYP2D6 s nízkým terapeutickým indexem nebo působící na centrální nervový systém",
-      "effect": "Doporučuje se opatrnost při současném užívání, například s flekainidem, propafenonem, metoprololem při srdečním selhání, desipraminem, klomipraminem, nortriptylinem, risperidonem, thioridazinem a haloperidolem; může být nutná úprava dávkování.",
-      "effect_type": "increased_exposure",
+      "class_id": null,
+      "drug_class": "Přípravky s třezalkou tečkovanou",
+      "effect": "Současné užívání může zvýšit četnost nežádoucích účinků; citalopram se s přípravky obsahujícími třezalku nemá užívat současně.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Alkohol",
-      "effect": "Farmakodynamické ani farmakokinetické interakce nebyly pozorovány, přesto se kombinace citalopramu a alkoholu nedoporučuje.",
-      "effect_type": null,
+      "class_id": null,
+      "drug_class": "Léky snižující hladinu draslíku nebo hořčíku",
+      "effect": "Při současném užívání může vzrůst riziko závažné arytmie; doporučuje se opatrnost.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Elektrokonvulzivní terapie (ECT)",
-      "effect": "Klinické zkušenosti se současným užíváním citalopramu a ECT jsou omezené; doporučuje se opatrnost.",
+      "class_id": null,
+      "drug_class": "Léky snižující práh pro vznik záchvatů",
+      "effect": "Citalopram může snižovat práh pro vznik záchvatů; při současném užívání těchto léků se doporučuje opatrnost.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Alkohol",
+      "effect": "Kombinace citalopramu s alkoholem se nedoporučuje, přestože nebyly pozorovány farmakodynamické ani farmakokinetické interakce.",
       "effect_type": null,
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Citalec se používá k léčbě deprese, panické poruchy a obsedantně-kompulzivní poruchy (OCD).",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0132689",
+      "H": "",
+      "NAZEV": "CITALEC",
+      "SILA": "20MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "60",
+      "CESTA": "POR",
+      "DOPLNEK": "20MG TBL FLM 60",
+      "OBAL": "BLI",
+      "DRZ": "ZNB",
+      "ZEMDRZ": "SK",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "",
+      "UVADENIDO": "",
+      "IS_": "30",
+      "ATC_WHO": "N06AB04",
+      "RC": "30/553/05-C",
+      "SDOV": "PI/001/13",
+      "SDOV_DOD": "GAU",
+      "SDOV_ZEM": "CZ",
+      "REG_PROC": "SOU",
+      "DDDAMNT_WHO": "20",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "60",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10628",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "0",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "CITALEC",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "10628",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "24,98",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10628",
+          "ZDROJ": "C16",
+          "NAZEV_INN": "CITALOPRAMI HYDROBROMIDUM",
+          "NAZEV_EN": "CITALOPRAM HYDROBROMIDE",
+          "NAZEV": "CITALOPRAM-HYDROBROMID"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "8217",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "20",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "8217",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CITALOPRAMUM",
+          "NAZEV_EN": "CITALOPRAM",
+          "NAZEV": "CITALOPRAM"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "2624",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "3755",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "4989",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4989",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "PREGELATINISED MAIZE STARCH",
+          "NAZEV": "PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "5624",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "1300",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "2378",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "SQ": "10",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "14964",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14964",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ALBUM SEPIFILM 752",
+          "NAZEV_EN": "SEPIFILM 752 (WHITE)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA SEPIFILM 752 BÍLÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0132689",
+        "KOD_LATKY": "3765",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0132689",
+      "PIL": "PI198810.pdf",
+      "DAT_ROZ_PIL": "16.05.2023",
+      "SPC": "SPC198811.pdf",
+      "DAT_ROZ_SPC": "16.05.2023",
+      "OBAL_TEXT": "OBAL198809.pdf",
+      "DAT_ROZ_OBAL": "16.05.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N06AB04",
+        "NT": "N",
+        "NAZEV": "CITALOPRAM",
+        "NAZEV_EN": "CITALOPRAM"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

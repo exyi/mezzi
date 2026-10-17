@@ -1,910 +1,871 @@
 {
+  "classes": [
+    "atc:M",
+    "atc:M01",
+    "atc:M01A",
+    "atc:M01AB",
+    "atc:M01AB01",
+    "substance:767"
+  ],
   "side_effects": [
     {
       "ctcae": "Nausea",
       "frequency": "very_common",
-      "label": "Nevolnost",
+      "label": "Nevolnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "very_common",
-      "label": "Zvracení",
+      "label": "Zvracení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "very_common",
-      "label": "Průjem",
+      "label": "Průjem.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Anemia",
       "frequency": "very_common",
-      "label": "Mírné ztráty krve v zažívacím traktu, které mohou výjimečně způsobit anémii",
+      "label": "Mírné ztráty krve v zažívacím traktu, které mohou výjimečně způsobit chudokrevnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "very_common",
-      "label": "Bolest hlavy",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Malaise",
       "frequency": "very_common",
-      "label": "Malátnost",
+      "label": "Malátnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Tinnitus",
       "frequency": "common",
-      "label": "Zvonění v uších",
+      "label": "Zvonění v uších.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspepsia",
       "frequency": "common",
-      "label": "Poruchy trávení",
+      "label": "Poruchy trávení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flatulence",
       "frequency": "common",
-      "label": "Zvýšený odchod střevních plynů",
+      "label": "Zvýšený odchod střevních plynů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Stomach pain",
       "frequency": "common",
-      "label": "Žaludeční křeče",
+      "label": "Žaludeční křeče.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anorexia",
       "frequency": "common",
-      "label": "Nechutenství",
+      "label": "Nechutenství.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastric ulcer",
+      "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "common",
-      "label": "Žaludeční vředy, případně s krvácením nebo proděravěním",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Duodenal ulcer",
-      "frequency": "common",
-      "label": "Dvanáctníkové vředy, případně s krvácením nebo proděravěním",
-      "action": null,
-      "action_condition": null
+      "label": "Žaludeční nebo dvanáctníkové vředy, někdy s krvácením nebo proděravěním. Riziko krvácení závisí zejména na dávce a délce léčby; u starších lidí mohou být tyto komplikace smrtelné.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Silná bolest v nadbřišku, černá stolice nebo krev ve stolici.",
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "common",
-      "label": "Zvýšení hodnot jaterních enzymů v krvi (transamináz)",
+      "label": "Zvýšené hodnoty jaterních enzymů v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závrať",
+      "label": "Závrať; při vysokých dávkách může spolu s únavou narušit schopnost řídit a obsluhovat stroje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Somnolence",
       "frequency": "common",
-      "label": "Ospalost",
+      "label": "Ospalost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fatigue",
       "frequency": "common",
-      "label": "Snadná únavnost a vyčerpanost",
+      "label": "Snadná únavnost a vyčerpanost; při vysokých dávkách může být narušena schopnost řídit a obsluhovat stroje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depression",
       "frequency": "common",
-      "label": "Deprese",
+      "label": "Deprese.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "common",
-      "label": "Reakce z přecitlivělosti s kožní vyrážkou",
-      "action": null,
-      "action_condition": null
+      "label": "Kožní vyrážka při reakci z přecitlivělosti. Při prvních známkách vyrážky ukončete léčbu a ihned se poraďte s lékařem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Pruritus",
       "frequency": "common",
-      "label": "Svědění kůže při reakci z přecitlivělosti",
+      "label": "Svědění kůže při reakci z přecitlivělosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hematemesis",
       "frequency": "uncommon",
-      "label": "Zvracení krve",
+      "label": "Zvracení krve.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud zvracíte krev, ukončete léčbu a neprodleně informujte lékaře."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Hematochezia",
       "frequency": "uncommon",
-      "label": "Krev ve stolici nebo krvavý průjem",
+      "label": "Krev ve stolici nebo krvavý průjem.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte krev ve stolici nebo krvavý průjem, ukončete léčbu a neprodleně informujte lékaře."
+        "patient_guide": null,
+        "min_severity": 3
       }
-    },
-    {
-      "ctcae": "Gastritis",
-      "frequency": "uncommon",
-      "label": "Zánět žaludeční sliznice",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Hearing impaired",
       "frequency": "uncommon",
-      "label": "Hluchota",
+      "label": "Hluchota.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Eye disorders - Other, specify",
+      "ctcae": "Diplopia",
       "frequency": "uncommon",
-      "label": "Dvojité vidění",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví dvojité vidění, obraťte se na očního lékaře."
-      }
+      "label": "Dvojité vidění; při dlouhodobé léčbě se mohou objevit také změny sítnice a zákal rohovky, někdy bez příznaků. Rozmazané vidění vyžaduje vyšetření očním lékařem; při zjištění změn se doporučuje léčbu ukončit.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Retinopathy",
       "frequency": "uncommon",
-      "label": "Poškození sítnice (pigmentová degenerace sítnice) při dlouhodobé léčbě indometacinem; může se projevit rozmazaným viděním nebo probíhat bez příznaků",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se při dlouhodobé léčbě objeví tyto změny, doporučuje se léčbu ukončit; při rozmazaném vidění je potřebné vyšetření očním lékařem."
-      }
+      "label": "Při dlouhodobé léčbě pigmentová degenerace sítnice; změny mohou být bez příznaků.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Eye disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Zakalení rohovky při dlouhodobé léčbě indometacinem; může se projevit rozmazaným viděním nebo probíhat bez příznaků",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se při dlouhodobé léčbě objeví tyto změny, doporučuje se léčbu ukončit; při rozmazaném vidění je potřebné vyšetření očním lékařem."
-      }
+      "label": "Při dlouhodobé léčbě zakalení rohovky; změny mohou být bez příznaků.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "uncommon",
-      "label": "Poškození jater, zejména při dlouhodobé léčbě; akutní zánět jater se žloutenkou nebo bez ní, velmi vzácně s prudkým průběhem a bez předchozích příznaků",
+      "label": "Poškození jater, včetně akutního zánětu jater se žloutenkou nebo bez ní; velmi vzácně může mít závažný průběh a proběhnout bez předchozích příznaků.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Hepatic failure",
-      "frequency": "uncommon",
-      "label": "Selhání jater",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "uncommon",
-      "label": "Kopřivka",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kopřivka, přestaňte přípravek užívat a neprodleně vyhledejte lékaře."
-      }
-    },
-    {
-      "ctcae": "Bronchospasm",
-      "frequency": "uncommon",
-      "label": "Reakce z přecitlivělosti se záchvatem astmatu, případně s poklesem krevního tlaku",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví záchvat astmatu nebo pokles krevního tlaku při reakci z přecitlivělosti, přestaňte přípravek užívat a neprodleně vyhledejte lékaře."
-      }
     },
     {
       "ctcae": "Peripheral sensory neuropathy",
       "frequency": "uncommon",
-      "label": "Nezánětlivé postižení nervů (periferní neuropatie) a poruchy čití",
+      "label": "Nezánětlivé postižení nervů a poruchy čití.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Generalized muscle weakness",
       "frequency": "uncommon",
-      "label": "Svalová slabost",
+      "label": "Svalová slabost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Muscle cramp",
       "frequency": "uncommon",
-      "label": "Křeče",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "uncommon",
-      "label": "Přechodná ztráta vědomí až bezvědomí",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Confusion",
-      "frequency": "uncommon",
-      "label": "Zmatenost",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví nebo zhorší zmatenost, úzkost, psychiatrické obtíže nebo nespavost, poraďte se s lékařem; podle závažnosti může být nutné snížit dávku nebo léčbu ukončit."
-      }
-    },
-    {
-      "ctcae": "Anxiety",
-      "frequency": "uncommon",
-      "label": "Stavy úzkosti",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví nebo zhorší zmatenost, úzkost, psychiatrické obtíže nebo nespavost, poraďte se s lékařem; podle závažnosti může být nutné snížit dávku nebo léčbu ukončit."
-      }
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Psychiatrické poruchy; mohou se zhoršit příznaky dřívějších psychiatrických onemocnění",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví nebo zhorší zmatenost, úzkost, psychiatrické obtíže nebo nespavost, poraďte se s lékařem; podle závažnosti může být nutné snížit dávku nebo léčbu ukončit."
-      }
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "uncommon",
-      "label": "Nespavost",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví nebo zhorší zmatenost, úzkost, psychiatrické obtíže nebo nespavost, poraďte se s lékařem; podle závažnosti může být nutné snížit dávku nebo léčbu ukončit."
-      }
-    },
-    {
-      "ctcae": "Peripheral edema",
-      "frequency": "uncommon",
-      "label": "Otoky, například otoky končetin, zejména při vysokém krevním tlaku nebo poruše funkce ledvin",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alopecia",
-      "frequency": "uncommon",
-      "label": "Ztráta vlasů",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal pain",
-      "frequency": "uncommon",
-      "label": "Silná bolest v nadbřišku",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte silnou bolest v nadbřišku, ukončete léčbu a neprodleně informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Melena",
-      "frequency": "uncommon",
-      "label": "Černá, dehtovitá stolice",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte černou stolici, ukončete léčbu a neprodleně informujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Vředy nebo krvácení v dolní části břicha, někdy také ulcerózní zánět tlustého střeva",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Colitis",
-      "frequency": "uncommon",
-      "label": "Zhoršení ulcerózní kolitidy",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Colitis",
-      "frequency": "uncommon",
-      "label": "Zhoršení Crohnovy choroby",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Constipation",
-      "frequency": "uncommon",
-      "label": "Zácpa",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "uncommon",
-      "label": "Zánět slinivky břišní",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Mucositis oral",
-      "frequency": "uncommon",
-      "label": "Aftózní zánět sliznice úst",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Zánět jazyka",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Esophagitis",
-      "frequency": "uncommon",
-      "label": "Poškození jícnu",
+      "label": "Svalové křeče.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Seizure",
       "frequency": "uncommon",
-      "label": "Zhoršení epilepsie; podle závažnosti příznaků může být nutné snížit dávku nebo léčbu ukončit",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se vám zhorší epilepsie nebo Parkinsonova choroba, poraďte se s lékařem; podle závažnosti může být nutné snížit dávku nebo léčbu ukončit."
-      }
-    },
-    {
-      "ctcae": "Extrapyramidal disorder",
-      "frequency": "uncommon",
-      "label": "Zhoršení Parkinsonovy choroby; podle závažnosti příznaků může být nutné snížit dávku nebo léčbu ukončit",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se vám zhorší epilepsie nebo Parkinsonova choroba, poraďte se s lékařem; podle závažnosti může být nutné snížit dávku nebo léčbu ukončit."
-      }
-    },
-    {
-      "ctcae": "Hearing impaired",
-      "frequency": "very_rare",
-      "label": "Přechodné poruchy sluchu",
+      "label": "Křeče; může se také zhoršit epilepsie.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Anemia",
-      "frequency": "very_rare",
-      "label": "Poruchy krvetvorby včetně anémie; prvními příznaky mohou být horečka, bolest v krku, povrchová poranění v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení",
+      "ctcae": "Syncope",
+      "frequency": "uncommon",
+      "label": "Přechodná ztráta vědomí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Depressed level of consciousness",
+      "frequency": "uncommon",
+      "label": "Bezvědomí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Peripheral edema",
+      "frequency": "uncommon",
+      "label": "Otoky, zejména u pacientů s vysokým krevním tlakem nebo poruchou funkce ledvin.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alopecia",
+      "frequency": "uncommon",
+      "label": "Vypadávání vlasů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, poranění v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení, léčbu neprodleně ukončete a navštivte lékaře."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "White blood cell decreased",
-      "frequency": "very_rare",
-      "label": "Poruchy krvetvorby včetně leukopenie; prvními příznaky mohou být horečka, bolest v krku, povrchová poranění v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení",
+      "ctcae": "Bronchospasm",
+      "frequency": "uncommon",
+      "label": "Reakce z přecitlivělosti se záchvatem astmatu, případně s poklesem krevního tlaku. Ukončete léčbu a ihned vyhledejte lékaře.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, poranění v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení, léčbu neprodleně ukončete a navštivte lékaře."
+        "patient_guide": null,
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_rare",
-      "label": "Poruchy krvetvorby včetně trombocytopenie; prvními příznaky mohou být horečka, bolest v krku, povrchová poranění v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, poranění v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení, léčbu neprodleně ukončete a navštivte lékaře."
-      }
+      "ctcae": "Confusion",
+      "frequency": "uncommon",
+      "label": "Zmatenost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anxiety",
+      "frequency": "uncommon",
+      "label": "Stavy úzkosti.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Psychiatric disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Psychiatrické poruchy; mohou se zhoršit dřívější psychiatrické obtíže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": "uncommon",
+      "label": "Nespavost.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Poruchy krvetvorby včetně agranulocytózy; prvními příznaky mohou být horečka, bolest v krku, povrchová poranění v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení",
+      "label": "Poruchy krvetvorby, včetně chudokrevnosti, sníženého počtu bílých krvinek, agranulocytózy a sníženého počtu krevních destiček. Varovnými příznaky mohou být horečka, bolest v krku, ranky v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení. Při těchto příznacích léčbu ihned ukončete a navštivte lékaře.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, poranění v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení, léčbu neprodleně ukončete a navštivte lékaře."
+        "patient_guide": "Horečka, bolest v krku, ranky v ústech, příznaky podobné chřipce, velká únava, krvácení z nosu nebo kožní krvácení.",
+        "min_severity": 2
       }
+    },
+    {
+      "ctcae": "Hypertension",
+      "frequency": "very_rare",
+      "label": "Vysoký krevní tlak.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Palpitations",
       "frequency": "very_rare",
-      "label": "Bušení srdce",
+      "label": "Bušení srdce.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Chest pain - cardiac",
       "frequency": "very_rare",
-      "label": "Bolest na hrudi",
+      "label": "Bolest na hrudi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Heart failure",
       "frequency": "very_rare",
-      "label": "Srdeční selhání",
+      "label": "Srdeční selhání.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Myocardial infarction",
-      "frequency": null,
-      "label": "Mírně zvýšené riziko infarktu myokardu, zejména při vysokých dávkách a dlouhodobé léčbě",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stroke",
-      "frequency": null,
-      "label": "Mírně zvýšené riziko cévní mozkové příhody, zejména při vysokých dávkách a dlouhodobé léčbě",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypertension",
+      "ctcae": "Hearing impaired",
       "frequency": "very_rare",
-      "label": "Vysoký krevní tlak",
+      "label": "Přechodné poruchy sluchu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
+      "ctcae": "Anaphylaxis",
       "frequency": "very_rare",
-      "label": "Závažné celkové reakce z přecitlivělosti, které se mohou projevit otokem obličeje, jazyka nebo hrtanu se zúžením dýchacích cest, dušností, zrychleným tepem a poklesem krevního tlaku až život ohrožujícím šokem; mohou se objevit i při prvním užití",
-      "action": "hospitalize_NOW",
+      "label": "Závažná celková alergická reakce, která může zahrnovat otok obličeje, jazyka nebo hrtanu, zúžení dýchacích cest, dušnost, zrychlený tep a pokles krevního tlaku až život ohrožující šok. Je nutná okamžitá pomoc lékaře.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud vám oteče obličej, jazyk nebo hrdlo, budete mít potíže s dýcháním, zrychlený tep nebo pokles krevního tlaku, je nutná okamžitá pomoc lékaře."
+        "patient_guide": "Otok obličeje, jazyka nebo hrtanu, dušnost, zrychlený tep nebo pokles krevního tlaku.",
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": "Infections and infestations - Other, specify",
+      "frequency": "very_rare",
+      "label": "Zhoršení probíhající infekce, vzácně včetně nekrotizujícího zánětu podkožní tkáně. Pokud se známky infekce objeví nebo zhorší, neprodleně kontaktujte lékaře.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Zčervenání, otok, přehřátí, bolest nebo horečka, které se objeví nebo zhorší.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Mucositis oral",
+      "frequency": "very_rare",
+      "label": "Zánět sliznice úst.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Glossopharyngeal nerve disorder",
+      "frequency": "very_rare",
+      "label": "Zánět jazyka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Esophageal ulcer",
+      "frequency": "very_rare",
+      "label": "Poškození jícnu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Obtíže v podbřišku, například krvácení; někdy také vředovitý zánět tlustého střeva.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Colitis",
+      "frequency": "very_rare",
+      "label": "Zhoršení ulcerózní kolitidy nebo Crohnovy choroby.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "very_rare",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "very_rare",
+      "label": "Zánět slinivky břišní.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anal pain",
+      "frequency": "not_known",
+      "label": "Po zavedení čípku místní podráždění konečníku nebo bolestivé vyprazdňování.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rectal hemorrhage",
+      "frequency": "not_known",
+      "label": "Po zavedení čípku výtok krvavého hlenu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatic failure",
+      "frequency": "uncommon",
+      "label": "Selhání jater, zejména při dlouhodobé léčbě.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vasculitis",
       "frequency": "very_rare",
-      "label": "Alergický zánět cév",
+      "label": "Alergický zánět cév.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pneumonitis",
       "frequency": "very_rare",
-      "label": "Zánět plicní tkáně",
+      "label": "Zánět plicní tkáně.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "very_rare",
-      "label": "Zhoršení infekčních zánětů, například rozvoj nekrotizující infekce podkoží",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nebo zhorší známky infekce, například zarudnutí, otok, zvýšená teplota místa, bolest nebo horečka, neprodleně kontaktujte lékaře."
-      }
-    },
-    {
       "ctcae": "Hyperglycemia",
       "frequency": "very_rare",
-      "label": "Zvýšení hladiny cukru v krvi",
+      "label": "Zvýšená hladina cukru v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Glucosuria",
       "frequency": "very_rare",
-      "label": "Vylučování cukru močí",
+      "label": "Cukr v moči.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Acute kidney injury",
+      "ctcae": "Tubulointerstitial nephritis",
       "frequency": "very_rare",
-      "label": "Poškození ledvin, které může být provázeno akutní poruchou funkce ledvin",
+      "label": "Zánět ledvinné tkáně; může být provázen akutní poruchou funkce ledvin, bílkovinou nebo krví v moči.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví nebo zhorší snížené vylučování moči, otoky nebo celkový pocit nevolnosti jako známky onemocnění ledvin, ukončete léčbu a neprodleně kontaktujte lékaře."
+        "patient_guide": "Snížené vylučování moči, otoky nebo celkový pocit, že vám není dobře, pokud se objeví nebo zhorší.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Tubulointerstitial nephritis",
+      "ctcae": "Acute kidney injury",
       "frequency": "very_rare",
-      "label": "Poškození tkáně ledvin (intersticiální zánět ledvin nebo papilární nekróza)",
+      "label": "Akutní porucha funkce ledvin, která může provázet poškození ledvin.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví nebo zhorší snížené vylučování moči, otoky nebo celkový pocit nevolnosti jako známky onemocnění ledvin, ukončete léčbu a neprodleně kontaktujte lékaře."
+        "patient_guide": "Snížené vylučování moči, otoky nebo celkový pocit, že vám není dobře, pokud se objeví nebo zhorší.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Urinary protein increased",
       "frequency": "very_rare",
-      "label": "Bílkovina v moči",
+      "label": "Bílkovina v moči při poškození ledvin.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví nebo zhorší snížené vylučování moči, otoky nebo celkový pocit nevolnosti jako známky onemocnění ledvin, ukončete léčbu a neprodleně kontaktujte lékaře."
+        "patient_guide": "Snížené vylučování moči, otoky nebo celkový pocit, že vám není dobře, pokud se objeví nebo zhorší.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Hematuria",
       "frequency": "very_rare",
-      "label": "Krev v moči",
+      "label": "Krev v moči při poškození ledvin.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví nebo zhorší snížené vylučování moči, otoky nebo celkový pocit nevolnosti jako známky onemocnění ledvin, ukončete léčbu a neprodleně kontaktujte lékaře."
+        "patient_guide": "Snížené vylučování moči, otoky nebo celkový pocit, že vám není dobře, pokud se objeví nebo zhorší.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Nephrotic syndrome",
       "frequency": "very_rare",
-      "label": "Nefrotický syndrom s hromaděním vody či otoky v těle a výrazným vylučováním bílkovin močí",
+      "label": "Nefrotický syndrom s otoky a výrazným vylučováním bílkovin močí.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví nebo zhorší snížené vylučování moči, otoky nebo celkový pocit nevolnosti jako známky onemocnění ledvin, ukončete léčbu a neprodleně kontaktujte lékaře."
+        "patient_guide": "Snížené vylučování moči, otoky nebo celkový pocit, že vám není dobře, pokud se objeví nebo zhorší.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Vaginal hemorrhage",
       "frequency": "very_rare",
-      "label": "Poševní krvácení",
+      "label": "Poševní krvácení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Photosensitivity",
       "frequency": "very_rare",
-      "label": "Citlivost na světlo",
+      "label": "Citlivost na světlo.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Purpura",
       "frequency": "very_rare",
-      "label": "Místní krvácení do kůže (purpura), také alergická purpura",
+      "label": "Drobné krvácení do kůže.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "very_rare",
-      "label": "Závažná kožní reakce s puchýři, včetně Stevensova-Johnsonova syndromu",
+      "label": "Závažná kožní reakce s puchýři, včetně Stevensova-Johnsonova syndromu. Léčbu ukončete při prvních známkách vyrážky, poškození sliznic nebo jiných známkách přecitlivělosti a ihned se poraďte s lékařem.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Při prvních známkách kožní vyrážky, poškození sliznic nebo jiných příznaků přecitlivělosti léčbu ukončete a ihned se poraďte s lékařem."
+        "patient_guide": "První známky vyrážky nebo poškození sliznic.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "very_rare",
-      "label": "Závažná kožní reakce s puchýři, včetně toxické epidermální nekrolýzy (Lyellova syndromu)",
+      "label": "Závažná kožní reakce s puchýři, včetně toxické epidermální nekrolýzy. Léčbu ukončete při prvních známkách vyrážky, poškození sliznic nebo jiných známkách přecitlivělosti a ihned se poraďte s lékařem.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Při prvních známkách kožní vyrážky, poškození sliznic nebo jiných příznaků přecitlivělosti léčbu ukončete a ihned se poraďte s lékařem."
+        "patient_guide": "První známky vyrážky nebo poškození sliznic.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Exfoliative dermatitis",
+      "ctcae": "Vaginal hemorrhage",
       "frequency": "very_rare",
-      "label": "Exfoliativní dermatitida; závažná kožní reakce, která může být provázena zarudnutím a puchýři",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních známkách kožní vyrážky, poškození sliznic nebo jiných příznaků přecitlivělosti léčbu ukončete a ihned se poraďte s lékařem."
-      }
-    },
-    {
-      "ctcae": "Anal mucositis",
-      "frequency": "not_known",
-      "label": "Po zavedení čípku se mohou objevit místní příznaky podráždění konečníku",
+      "label": "Vaginální krvácení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Rectal pain",
-      "frequency": "not_known",
-      "label": "Po zavedení čípku se může objevit bolestivé vyprazdňování stolice",
+      "ctcae": "Myocardial infarction",
+      "frequency": null,
+      "label": "Mírně zvýšené riziko infarktu, pravděpodobnější při vysokých dávkách a dlouhodobé léčbě.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Po zavedení čípku se může objevit výtok krvavého hlenu",
+      "ctcae": "Stroke",
+      "frequency": null,
+      "label": "Mírně zvýšené riziko cévní mozkové příhody, pravděpodobnější při vysokých dávkách a dlouhodobé léčbě.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Jiná nesteroidní protizánětlivá léčiva (NSA), včetně salicylátů a selektivních inhibitorů COX-2",
-      "effect": "Současné podávání může synergicky zvýšit riziko gastrointestinálních vředů a krvácení; současnému užívání indometacinu s jinými NSA je třeba se vyhýbat.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Zvýšené riziko žaludečních a dalších gastrointestinálních vředů",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do zažívacího traktu",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Digoxin",
-      "effect": "Současné užívání může zvýšit hladinu digoxinu v séru.",
+      "class_id": null,
+      "drug": "digoxin",
+      "effect": "Indometacin může při současném užívání zvýšit hladinu digoxinu v krvi.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Fenytoin",
-      "effect": "Současné užívání může zvýšit hladinu fenytoinu v séru.",
+      "class_id": null,
+      "drug": "fenytoin",
+      "effect": "Indometacin může při současném užívání zvýšit hladinu fenytoinu v krvi.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Lithium",
-      "effect": "Současné užívání může zvýšit hladinu lithia v séru; nutné jsou kontroly jeho hladiny lékařem.",
+      "class_id": null,
+      "drug": "lithium",
+      "effect": "Indometacin může zvýšit hladinu lithia v krvi; lékař má kontrolovat jeho koncentraci v séru.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Diuretika a antihypertenziva",
-      "effect": "Indometacin může oslabit účinek diuretik a léků snižujících krevní tlak.",
+      "class_id": null,
+      "drug_class": "Diuretika a léky na vysoký krevní tlak",
+      "effect": "Indometacin může oslabit účinek močopudných léků a léků snižujících krevní tlak.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "ACE inhibitory a antagonisté angiotenzinu II",
-      "effect": "Indometacin může oslabit jejich účinek. U pacientů s poruchou funkce ledvin, například při dehydrataci nebo ve vyšším věku, může kombinace dále zhoršit funkci ledvin včetně možného akutního selhání ledvin, obvykle reverzibilního. Kombinaci je třeba užívat opatrně, zejména u starších osob; doporučuje se dostatečný příjem tekutin a zvážit pravidelné kontroly funkce ledvin po zahájení společné léčby.",
+      "class_id": null,
+      "drug_class": "ACE inhibitory a antagonisté receptorů angiotenzinu II",
+      "effect": "Indometacin může oslabit účinek ACE inhibitorů a při současném užívání ACE inhibitoru nebo antagonisty receptorů angiotenzinu II může zejména u dehydratovaných nebo starších lidí s poruchou ledvin dále zhoršit funkci ledvin, případně až způsobit akutní selhání ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Možné zhoršení funkce ledvin až akutní selhání ledvin",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Draslík šetřící diuretika",
-      "effect": "Současné užívání může zvýšit hladinu draslíku v krvi.",
+      "effect": "Současné užívání s indometacinem může zvýšit hladinu draslíku v krvi.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšená hladina draslíku v krvi",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:M01A",
+      "drug_class": "Jiná nesteroidní protizánětlivá léčiva",
+      "effect": "Současné užívání jiných nesteroidních protizánětlivých léčiv včetně inhibitorů COX-2 může zvýšit riziko žaludečních a dvanáctníkových vředů a krvácení. Této kombinaci je třeba se vyhnout.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
       "drug_class": "Glukokortikoidy",
-      "effect": "Současné užívání zvyšuje riziko gastrointestinálních vředů nebo krvácení.",
+      "effect": "Současné užívání indometacinu a glukokortikoidů zvyšuje riziko žaludečních a dvanáctníkových vředů nebo krvácení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Zvýšené riziko gastrointestinálních vředů",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do zažívacího traktu",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Antiagregancia, včetně kyseliny acetylsalicylové",
-      "effect": "Současné užívání může zvýšit riziko krvácení do zažívacího traktu.",
+      "class_id": null,
+      "drug_class": "Léčiva potlačující shlukování krevních destiček",
+      "effect": "Současné užívání s indometacinem zvyšuje riziko krvácení do zažívacího traktu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do zažívacího traktu",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Selektivní inhibitory zpětného vychytávání serotoninu (SSRI)",
-      "effect": "Současné užívání může zvýšit riziko krvácení do zažívacího traktu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do zažívacího traktu",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Methotrexát",
-      "effect": "Podání indometacinu během 24 hodin před podáním methotrexátu nebo po něm může zvýšit koncentraci methotrexátu v krvi a jeho toxicitu.",
+      "effect": "Současné užívání s indometacinem zvyšuje riziko krvácení do zažívacího traktu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Cyklosporin",
-      "effect": "Indometacin může zvýšit nefrotoxicitu cyklosporinu.",
+      "class_id": null,
+      "drug": "methotrexát",
+      "effect": "Užití indometacinu během 24 hodin před podáním methotrexátu nebo po něm může zvýšit koncentraci methotrexátu v krvi a jeho toxicitu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zvýšené riziko poškození ledvin způsobeného cyklosporinem",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Antikoagulancia, například warfarin",
-      "effect": "NSA mohou zesílit účinek antikoagulancií, například warfarinu.",
+      "class_id": null,
+      "drug": "cyklosporin",
+      "effect": "Indometacin může zvýšit škodlivý účinek cyklosporinu na ledviny.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Deriváty sulfonylurey a jiná antidiabetika",
-      "effect": "Po podání indometacinu bylo ojediněle hlášeno ovlivnění hladiny glukózy v krvi vyžadující úpravu dávkování antidiabetik; při současném užívání se doporučuje kontrolovat hladinu glukózy v krvi.",
+      "class_id": null,
+      "drug_class": "Léčiva tlumící krevní srážlivost",
+      "effect": "Indometacin může zesílit účinek léků tlumících krevní srážlivost, například warfarinu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Deriváty sulfonylurey",
+      "effect": "Při současném užívání může indometacin ovlivnit hladinu cukru v krvi; vzácně byla nutná úprava dávky léků na cukrovku. Lékař může doporučit kontroly hladiny cukru.",
       "effect_type": null,
-      "side_effects": [
-        {
-          "ctcae": "Hyperglycemia",
-          "frequency": null,
-          "label": "Ovlivnění hladiny cukru v krvi",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Probenecid",
-      "effect": "Probenecid zpomaluje vylučování indometacinu; může se proto hromadit v těle a zvýšit nežádoucí účinky.",
+      "class_id": null,
+      "drug": "probenecid",
+      "effect": "Probenecid zpomaluje vylučování indometacinu, takže se může hromadit v těle a zvýšit výskyt nežádoucích účinků.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Peniciliny",
-      "effect": "Při kombinaci s indometacinem je vylučování penicilinů opožděno.",
-      "effect_type": "increased_exposure",
+      "effect": "Při kombinaci s indometacinem se zpomaluje vylučování penicilinů.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Furosemid",
+      "class_id": null,
+      "drug": "furosemid",
       "effect": "Furosemid urychluje vylučování indometacinu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Triamteren",
-      "effect": "Indometacin se nemá užívat současně s triamterenem, protože existuje riziko akutního selhání ledvin.",
+      "class_id": null,
+      "drug": "triamteren",
+      "effect": "Současné užívání indometacinu a triamterenu se nedoporučuje kvůli riziku akutního selhání ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Riziko akutního selhání ledvin",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Diflunisal",
-      "effect": "Indometacin se nemá užívat současně s diflunisalem, protože se může výrazně zvýšit hladina indometacinu v plazmě; bylo popsáno smrtelné krvácení do zažívacího traktu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Výrazně zvýšené riziko krvácení do zažívacího traktu, včetně smrtelného krvácení",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": null,
+      "drug": "diflunisal",
+      "effect": "Indometacin se nemá užívat současně s diflunisalem: může výrazně zvýšit hladinu indometacinu v krvi a bylo popsáno smrtelné krvácení do zažívacího traktu.",
+      "effect_type": "contraindicated",
+      "side_effects": []
     },
     {
-      "drug_class": "Jiná léčiva proti bolesti",
-      "effect": "Současné užívání s jinými léčivy proti bolesti zvyšuje riziko tvorby vředů nebo krvácení do zažívacího traktu.",
+      "class_id": null,
+      "drug": "alkohol",
+      "effect": "Alkohol může zvýšit nežádoucí účinky indometacinu, zejména na zažívací trakt a centrální nervový systém. V příbalové informaci se doporučuje během léčby alkohol nepít.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Zvýšené riziko gastrointestinálních vředů",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do zažívacího traktu",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Alkohol",
-      "effect": "Při současné konzumaci alkoholu mohou být nežádoucí účinky NSA, zejména účinky na zažívací trakt a centrální nervový systém, zvýšeny. Během léčby se alkoholu vyhněte.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Mohou se zvýšit nežádoucí účinky na zažívací trakt",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Mohou se zvýšit nežádoucí účinky na centrální nervový systém",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Indometacin Berlin-Chemie zmírňuje bolest a zánět při zánětlivých a revmatických onemocněních kloubů, páteře a měkkých tkání a po úrazech.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0093724",
+      "H": "",
+      "NAZEV": "INDOMETACIN BERLIN-CHEMIE",
+      "SILA": "100MG",
+      "FORMA": "SUP",
+      "BALENI": "10",
+      "CESTA": "RCT",
+      "DOPLNEK": "100MG SUP 10",
+      "OBAL": "STR",
+      "DRZ": "BBE",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "29",
+      "ATC_WHO": "M01AB01",
+      "RC": "29/160/92-B/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,1",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "10",
+      "ZDROJ_WHO": "NO26",
+      "LL": "767",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "INDOMETACIN BERLIN-CHEMIE",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0093724",
+        "KOD_LATKY": "767",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "100",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "767",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "INDOMETACINUM",
+          "NAZEV_EN": "INDOMETACIN",
+          "NAZEV": "INDOMETACIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0093724",
+        "KOD_LATKY": "2970",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0093724",
+        "KOD_LATKY": "2894",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "G",
+        "substance": {
+          "KOD_LATKY": "2894",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "ADEPS SOLIDUS",
+          "NAZEV_EN": "HARD FAT",
+          "NAZEV": "TVRDÝ TUK"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0093724",
+      "PIL": "PI210760.pdf",
+      "DAT_ROZ_PIL": "04.06.2024",
+      "SPC": "SPC210761.pdf",
+      "DAT_ROZ_SPC": "04.06.2024",
+      "OBAL_TEXT": "OBAL198455.pdf",
+      "DAT_ROZ_OBAL": "04.05.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "M01AB01",
+        "NT": "N",
+        "NAZEV": "INDOMETACIN",
+        "NAZEV_EN": "INDOMETACIN"
+      },
+      "formy": {
+        "FORMA": "SUP",
+        "NAZEV": "Čípek",
+        "NAZEV_EN": "Suppository",
+        "NAZEV_LAT": "Suppositorium",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "11013000"
+      },
+      "cesty": {
+        "CESTA": "RCT",
+        "NAZEV": "Rektální podání",
+        "NAZEV_EN": "Rectal use",
+        "NAZEV_LAT": "Usus rectalis",
+        "KOD_EDQM": "20061000"
+      },
+      "obaly": {
+        "OBAL": "STR",
+        "NAZEV": "Strip",
+        "NAZEV_EN": "Strip",
+        "KOD_EDQM": "30065000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

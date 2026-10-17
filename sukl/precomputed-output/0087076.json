@@ -1,97 +1,339 @@
 {
+  "classes": [
+    "atc:R",
+    "atc:R05",
+    "atc:R05C",
+    "atc:R05CB",
+    "atc:R05CB15",
+    "substance:10561"
+  ],
   "side_effects": [
     {
-      "ctcae": "Gastroesophageal reflux disease",
-      "frequency": "uncommon",
-      "label": "Pálení žáhy",
+      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "frequency": "common",
+      "label": "Příležitostně se může objevit pálení žáhy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
-      "frequency": "uncommon",
-      "label": "Nevolnost",
+      "frequency": "common",
+      "label": "Příležitostně se může objevit nevolnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
-      "frequency": "rare",
-      "label": "Průjem",
+      "frequency": null,
+      "label": "Výjimečně se může objevit průjem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysgeusia",
       "frequency": null,
-      "label": "Porucha chuti, pozorovaná v několika případech na začátku léčby",
+      "label": "Na začátku léčby se v několika případech objevila porucha chuti.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Rash maculo-papular",
       "frequency": "very_rare",
-      "label": "Kožní vyrážka",
+      "label": "Velmi vzácně se může objevit kožní vyrážka při přecitlivělosti.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví typické příznaky přecitlivělosti"
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Fever",
       "frequency": "very_rare",
-      "label": "Zvýšená teplota, případně nečekaná hyperpyrexie",
+      "label": "Velmi vzácně se může při přecitlivělosti objevit nečekaně zvýšená teplota.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví typické příznaky přecitlivělosti"
+        "patient_guide": null,
+        "min_severity": 1
       }
     }
   ],
   "combinations": [
     {
-      "drug_class": "léky tlumící kašel (antitusika)",
-      "effect": "Současné užívání se nedoporučuje a nemá racionální opodstatnění; může způsobit hromadění sekretu v průduškách a zvýšit riziko superinfekce nebo bronchospasmu.",
+      "class_id": "atc:R05D",
+      "drug_class": "Léky tlumící kašel",
+      "effect": "Současné užívání se nedoporučuje; může vést k hromadění sekretu v průduškách a zvýšit riziko superinfekce nebo bronchospasmu.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Bronchospasm",
+          "ctcae": "Infections and infestations - Other, specify",
           "frequency": null,
-          "label": "Zvýšené riziko bronchospasmu při hromadění sekretu v průduškách",
+          "label": "Při současném užívání léků tlumících kašel může vzrůst riziko superinfekce.",
           "action": null,
           "action_condition": null
         },
         {
-          "ctcae": "Infections and infestations - Other, specify",
+          "ctcae": "Bronchospasm",
           "frequency": null,
-          "label": "Zvýšené riziko superinfekce při hromadění sekretu v průduškách",
+          "label": "Při současném užívání léků tlumících kašel může vzrůst riziko bronchospasmu.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "salbutamol",
-      "effect": "Při kombinaci s erdosteinem byl prokázán vzájemně posílený účinek.",
-      "effect_type": "synergy",
-      "side_effects": []
-    },
-    {
-      "drug": "budesonid",
-      "effect": "Při kombinaci s erdosteinem byl prokázán vzájemně posílený účinek.",
-      "effect_type": "synergy",
-      "side_effects": []
-    },
-    {
+      "class_id": null,
       "drug": "amoxicilin",
-      "effect": "Erdostein zvyšuje koncentraci amoxicilinu v hlenu dýchacích cest; tohoto účinku a posílení léčebného působení lze využít terapeuticky.",
+      "effect": "Erdostein zvyšuje koncentraci amoxicilinu v hlenu dýchacích cest; SPC uvádí rychlejší nástup účinku při současném podávání než při samotném amoxicilinu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug": "klarithromycin",
-      "effect": "Erdostein zvyšuje koncentraci klarithromycinu v hlenu dýchacích cest; tohoto účinku lze využít terapeuticky.",
+      "effect": "Erdostein zvyšuje koncentraci klarithromycinu v hlenu dýchacích cest.",
       "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "salbutamol",
+      "effect": "Při kombinaci erdosteinu se salbutamolem se jejich účinek vzájemně posiluje.",
+      "effect_type": "synergy",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "budesonid",
+      "effect": "Při kombinaci erdosteinu s budesonidem se jejich účinek vzájemně posiluje.",
+      "effect_type": "synergy",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Snižuje vazkost hlenu v dýchacích cestách a usnadňuje vykašlávání při jejich onemocnění.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0087076",
+      "H": "",
+      "NAZEV": "ERDOMED",
+      "SILA": "300MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "20",
+      "CESTA": "POR",
+      "DOPLNEK": "300MG CPS DUR 20",
+      "OBAL": "BLI",
+      "DRZ": "ANE",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "52",
+      "ATC_WHO": "R05CB15",
+      "RC": "52/045/96-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,6",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "10",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10561",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "60",
+      "EXP_T": "M",
+      "NAZEV_REG": "ERDOMED",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0087076",
+        "KOD_LATKY": "10561",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "300",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10561",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ERDOSTEINUM",
+          "NAZEV_EN": "ERDOSTEINE",
+          "NAZEV": "ERDOSTEIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0087076",
+        "KOD_LATKY": "3755",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0087076",
+        "KOD_LATKY": "1168",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0087076",
+        "KOD_LATKY": "2378",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0087076",
+        "SQ": "5",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0087076",
+        "KOD_LATKY": "2855",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0087076",
+        "KOD_LATKY": "2710",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0087076",
+        "KOD_LATKY": "4256",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0087076",
+        "KOD_LATKY": "1711",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1711",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "INDIGOCARMINUM",
+          "NAZEV_EN": "INDIGO CARMINE",
+          "NAZEV": "INDIGOKARMÍN"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0087076",
+      "PIL": "PI217591.pdf",
+      "DAT_ROZ_PIL": "09.01.2025",
+      "SPC": "SPC164354.pdf",
+      "DAT_ROZ_SPC": "24.11.2020",
+      "OBAL_TEXT": "OBAL141471.pdf",
+      "DAT_ROZ_OBAL": "09.05.2019"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "R05CB15",
+        "NT": "N",
+        "NAZEV": "ERDOSTEIN",
+        "NAZEV_EN": "ERDOSTEINE"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

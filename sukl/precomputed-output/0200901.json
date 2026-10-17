@@ -1,13 +1,29 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J01",
+    "atc:J01D",
+    "atc:J01DC",
+    "atc:J01DC02",
+    "substance:10027"
+  ],
   "side_effects": [
     {
       "ctcae": "Candidiasis",
       "frequency": "common",
-      "label": "Přerůstání kvasinek Candida a plísňové infekce, například moučnivka; pravděpodobnější při delším užívání.",
+      "label": "Přerůstání kvasinek Candida, které může způsobit plísňovou infekci; pravděpodobnější při delším užívání.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví známky plísňové infekce."
+        "patient_guide": null,
+        "min_severity": 2
       }
+    },
+    {
+      "ctcae": "Eosinophilia",
+      "frequency": "common",
+      "label": "Zvýšený počet eozinofilů v krvi.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Headache",
@@ -19,7 +35,7 @@
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závratě.",
+      "label": "Závratě; mohou snižovat bdělost, pokud se necítíte dobře, neřiďte ani neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
@@ -45,20 +61,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Eosinophilia",
-      "frequency": "common",
-      "label": "Zvýšení počtu určitého typu bílých krvinek (eozinofilie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "common",
-      "label": "Přechodné zvýšení hladin jaterních enzymů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Vomiting",
       "frequency": "uncommon",
       "label": "Zvracení.",
@@ -66,23 +68,30 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
       "label": "Kožní vyrážka.",
       "action": null,
       "action_condition": null
     },
     {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "common",
+      "label": "Přechodné zvýšení jaterních enzymů v krevních testech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Thrombocytopenia",
       "frequency": "uncommon",
-      "label": "Snížení počtu krevních destiček.",
+      "label": "Snížený počet krevních destiček.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "uncommon",
-      "label": "Snížení počtu bílých krvinek (leukopenie).",
+      "label": "Snížený počet bílých krvinek (leukopenie), někdy závažný.",
       "action": null,
       "action_condition": null
     },
@@ -94,23 +103,80 @@
       "action_condition": null
     },
     {
-      "ctcae": "Infections and infestations - Other, specify",
+      "ctcae": "Colitis",
       "frequency": "not_known",
-      "label": "Přerůstání bakterie Clostridioides difficile.",
+      "label": "Závažný průjem při pseudomembranózní kolitidě, obvykle s krví a hlenem, bolestí břicha a horečkou.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví závažný průjem, zvláště s krví nebo hlenem, bolestí břicha či horečkou.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "not_known",
+      "label": "Alergická reakce; může se projevit vystouplou svědivou vyrážkou nebo otokem, někdy obličeje či úst, který ztěžuje dýchání.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte otok obličeje nebo úst nebo se vám obtížně dýchá, vyhledejte okamžitě lékařskou pomoc.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Závažné kožní reakce včetně rozsáhlé vyrážky, puchýřů, olupování kůže nebo vředů v ústech, hrdle, nose, na genitáliích či v očích; mohou jim předcházet horečka a příznaky podobné chřipce. Patří sem také červená šupinatá rozsáhlá vyrážka s hrbolky pod kůží a puchýři a horečkou, obvykle na začátku léčby.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při rozsáhlé vyrážce, puchýřích, olupování kůže nebo vředech v ústech, hrdle, nose, na genitáliích či v očích; také při vyrážce s horečkou.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "not_known",
+      "label": "Stevensův-Johnsonův syndrom: terčovité skvrny, puchýře, olupování kůže nebo vředy na sliznicích; mohou mu předcházet horečka a příznaky podobné chřipce.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví terčovité skvrny, puchýře, olupování kůže nebo vředy na sliznicích.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "not_known",
+      "label": "Toxická epidermální nekrolýza: rozsáhlé puchýře, olupování kůže nebo vředy na sliznicích; mohou jí předcházet horečka a příznaky podobné chřipce.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví puchýře, olupování kůže nebo vředy na sliznicích.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "not_known",
+      "label": "Léková horečka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": "not_known",
+      "label": "Zežloutnutí očního bělma nebo kůže; žloutenka je převážně cholestatická.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "not_known",
+      "label": "Zánět jater (hepatitida).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hemolytic anemia",
       "frequency": "not_known",
-      "label": "Hemolytická anémie, způsobená příliš rychlým rozpadem červených krvinek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "not_known",
-      "label": "Léková horečka.",
+      "label": "Hemolytická anémie způsobená rozpadem červených krvinek.",
       "action": null,
       "action_condition": null
     },
@@ -127,56 +193,49 @@
       "label": "Anafylaxe, závažná alergická reakce.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná alergická reakce, například svědivá vystouplá vyrážka, otok obličeje nebo úst či potíže s dýcháním."
+        "patient_guide": "Pokud se objeví otok obličeje nebo úst nebo se vám obtížně dýchá, vyhledejte okamžitě lékařskou pomoc.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Fever",
       "frequency": "not_known",
-      "label": "Jarischova-Herxheimerova reakce při léčbě lymeské borreliózy: horečka, zimnice, bolest hlavy, bolest svalů a kožní vyrážka; příznaky obvykle trvají několik hodin až jeden den.",
+      "label": "Jarischova-Herxheimerova reakce při léčbě lymeské borreliózy: horečka, zimnice, bolest hlavy, bolest svalů a kožní vyrážka; obvykle trvá několik hodin až jeden den.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás během léčby lymeské borreliózy objeví horečka, zimnice, bolest hlavy, bolest svalů nebo kožní vyrážka."
+        "patient_guide": "Při léčbě lymeské borreliózy, pokud se objeví horečka, zimnice, bolest hlavy, bolest svalů nebo kožní vyrážka.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Chest pain - cardiac",
       "frequency": "not_known",
-      "label": "Kounisův syndrom: bolest na hrudi v souvislosti s alergickou reakcí, která může být příznakem alergií vyvolaného srdečního infarktu.",
+      "label": "Kounisův syndrom: bolest na hrudi při alergické reakci, která může být známkou alergií vyvolaného srdečního infarktu.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest na hrudi v souvislosti s alergickou reakcí."
+        "patient_guide": "Pokud se bolest na hrudi objeví v souvislosti s alergickou reakcí.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Colitis",
+      "ctcae": "Infections and infestations - Other, specify",
       "frequency": "not_known",
-      "label": "Pseudomembranózní kolitida, zánětlivé onemocnění tlustého střeva, které může způsobit závažný průjem, obvykle s krví a hlenem, bolesti břicha a horečku.",
+      "label": "Přerůstání Clostridioides difficile.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažný průjem, zejména s krví nebo hlenem, bolestí břicha či horečkou."
+        "patient_guide": null,
+        "min_severity": 2
       }
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Žloutenka, převážně cholestatická; zežloutnutí očního bělma nebo kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "not_known",
-      "label": "Zánět jater (hepatitida).",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Urticaria",
       "frequency": "not_known",
       "label": "Kopřivka.",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se kopřivka objeví jako součást závažné alergické reakce.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Pruritus",
@@ -186,93 +245,401 @@
       "action_condition": null
     },
     {
+      "ctcae": "Angioedema",
+      "frequency": "not_known",
+      "label": "Angioneurotický edém.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte otok obličeje nebo úst nebo se vám obtížně dýchá, vyhledejte okamžitě lékařskou pomoc.",
+        "min_severity": 1
+      }
+    },
+    {
       "ctcae": "Erythema multiforme",
       "frequency": "not_known",
       "label": "Erythema multiforme, závažná kožní reakce.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozsáhlá kožní vyrážka nebo jiné příznaky závažné kožní reakce."
+        "patient_guide": "Pokud se objeví rozsáhlá vyrážka, puchýře, olupování kůže nebo vředy na sliznicích.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Stevens-Johnson syndrome",
+      "ctcae": "Drug reaction with eosinophilia and systemic symptoms",
       "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom: načervenalé, nevyvýšené terčovité nebo kruhové skvrny, často s puchýři uprostřed, olupováním kůže nebo vředy v ústech, hrdle, nose, na genitáliích či v očích; může mu předcházet horečka a příznaky podobné chřipce.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví uvedené skvrny, puchýře, olupování kůže nebo vředy."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza: závažná kožní vyrážka s puchýři, olupováním kůže nebo vředy v ústech, hrdle, nose, na genitáliích či v očích.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná vyrážka s puchýři, olupováním kůže nebo vředy."
-      }
-    },
-    {
-      "ctcae": "Pustular drug eruption",
-      "frequency": "not_known",
-      "label": "Akutní generalizovaná exantematózní pustulóza: červená, šupinatá rozsáhlá vyrážka s hrbolky pod kůží a puchýři, doprovázená horečkou; obvykle se objevuje na začátku léčby.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozsáhlá červená šupinatá vyrážka s hrbolky nebo puchýři a horečkou."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS): rozsáhlá vyrážka, vysoká teplota a zvětšené lymfatické uzliny.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozsáhlá vyrážka, vysoká teplota a zvětšené lymfatické uzliny."
-      }
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": "not_known",
-      "label": "Angioneurotický edém (otok).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "not_known",
-      "label": "Alergické reakce, včetně závažné reakce s vystouplou svědivou vyrážkou a otokem, někdy obličeje nebo úst, který může způsobit potíže s dýcháním.",
+      "label": "DRESS: rozsáhlá vyrážka, vysoká horečka a zvětšené lymfatické uzliny.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná alergická reakce, například svědivá vystouplá vyrážka, otok obličeje nebo úst či potíže s dýcháním."
+        "patient_guide": "Pokud se objeví rozsáhlá vyrážka, vysoká horečka a zvětšené lymfatické uzliny.",
+        "min_severity": 1
       }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Léky snižující žaludeční aciditu (např. antacida)",
-      "effect": "Mohou snížit biologickou dostupnost cefuroxim-axetilu ve srovnání s podáním nalačno a mohou rušit zvýšení absorpce po jídle. Xorimax se má užívat po jídle.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": null,
       "drug": "Probenecid",
-      "effect": "Současné podávání se nedoporučuje. Probenecid významně zvyšuje maximální koncentraci, plochu pod křivkou sérových koncentrací a eliminační poločas cefuroximu.",
+      "effect": "Současné užívání s cefuroximem zvyšuje jeho maximální koncentraci, celkovou expozici a eliminační poločas; souběžné podávání se nedoporučuje.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:A02",
+      "drug_class": "Léky snižující žaludeční kyselost",
+      "effect": "Mohou snížit biologickou dostupnost cefuroximu a oslabit zvýšení jeho vstřebávání po jídle.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
       "drug_class": "Perorální antikoagulancia",
-      "effect": "Současné užívání může vést ke zvýšení INR.",
+      "effect": "Při současném užívání s cefuroximem může stoupnout INR; lékař může kontrolovat srážlivost krve.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Zvýšení INR.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Xorimax je antibiotikum k léčbě některých bakteriálních infekcí, například infekcí krku, dutin, ucha, plic, močových cest a kůže, i lymeské borreliózy.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0200901",
+      "H": "",
+      "NAZEV": "XORIMAX",
+      "SILA": "500MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "14",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG TBL FLM 14",
+      "OBAL": "BLI",
+      "DRZ": "SZK",
+      "ZEMDRZ": "A",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "J01DC02",
+      "RC": "15/085/05-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0,5",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "14",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10027",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "XORIMAX",
+      "MRP_CISLO": "NL/H/0556/003",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "10027",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "601,44",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10027",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CEFUROXIMUM AXETILUM",
+          "NAZEV_EN": "CEFUROXIME AXETIL",
+          "NAZEV": "CEFUROXIM-AXETIL"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "4709",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4709",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CEFUROXIMUM",
+          "NAZEV_EN": "CEFUROXIME",
+          "NAZEV": "CEFUROXIM"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "1335",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "4079",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4079",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "COPOVIDONUM",
+          "NAZEV_EN": "COPOVIDONE",
+          "NAZEV": "KOPOVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "5624",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "1300",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "18200",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18200",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MANNITOLUM GRANULATUM",
+          "NAZEV_EN": "GRANULATED MANNITOL",
+          "NAZEV": "GRANULOVANÝ MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "3755",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "4987",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4987",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CROSPOVIDONUM",
+          "NAZEV_EN": "CROSPOVIDONE",
+          "NAZEV": "KROSPOVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "1871",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "SQ": "13",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "748",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "2710",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "4077",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4077",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "MACROGOLUM",
+          "NAZEV_EN": "MACROGOL",
+          "NAZEV": "MAKROGOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0200901",
+        "KOD_LATKY": "1166",
+        "SQ": "17",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1166",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "POLYSORBATUM 80",
+          "NAZEV_EN": "POLYSORBATE 80",
+          "NAZEV": "POLYSORBÁT 80"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0200901",
+      "PIL": "PI221516.pdf",
+      "DAT_ROZ_PIL": "15.04.2025",
+      "SPC": "SPC221517.pdf",
+      "DAT_ROZ_SPC": "15.04.2025",
+      "OBAL_TEXT": "OBAL221515.pdf",
+      "DAT_ROZ_OBAL": "15.04.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J01DC02",
+        "NT": "N",
+        "NAZEV": "CEFUROXIM",
+        "NAZEV_EN": "CEFUROXIME"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

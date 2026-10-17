@@ -1,20 +1,97 @@
 {
+  "classes": [
+    "atc:L",
+    "atc:L02",
+    "atc:L02B",
+    "atc:L02BB",
+    "atc:L02BB03",
+    "substance:13723"
+  ],
   "side_effects": [
     {
-      "ctcae": "Anemia",
-      "frequency": "common",
-      "label": "Anémie (nízký počet červených krvinek), která může způsobovat únavu nebo bledost.",
+      "ctcae": "Rash maculo-papular",
+      "frequency": "very_common",
+      "label": "Kožní vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gynecomastia",
+      "frequency": "very_common",
+      "label": "Zvětšení a/nebo bolestivost prsů. U většiny pacientů užívajících 150 mg jako samostatnou léčbu; až u 5 % pacientů byly příznaky považovány za závažné. Po dlouhodobé léčbě nemusí zvětšení prsů po ukončení léčby samo ustoupit.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "very_common",
+      "label": "Pocit slabosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "uncommon",
-      "label": "Alergická reakce s náhlým vznikem vyrážky, svědění nebo kopřivky, otoku obličeje, rtů, jazyka, hrdla či jiné části těla, dušnosti, sípání nebo obtížného dýchání.",
+      "label": "Alergická reakce s náhlou vyrážkou, svěděním nebo kopřivkou, otokem obličeje, rtů, jazyka, hrdla či jiné části těla nebo dušností, sípáním či obtížným dýcháním.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": "common",
+      "label": "Zežloutnutí kůže nebo očního bělma; může být známkou potíží s játry. Selhání jater bylo hlášeno vzácně, až u 1 z 1 000 pacientů.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás náhle objeví některý z uvedených příznaků alergické reakce."
+        "patient_guide": null,
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": "Abdominal pain",
+      "frequency": "common",
+      "label": "Bolest břicha.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Hematuria",
+      "frequency": "common",
+      "label": "Krev v moči.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": null,
+      "label": "Závažná dušnost nebo její náhlé zhoršení, někdy s kašlem nebo horečkou; může jít o známky intersticiálního plicního onemocnění. SPC uvádí méně častý výskyt; PIL frekvenci tohoto varovného příznaku neuvádí.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Může být doprovázena kašlem nebo horečkou.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Electrocardiogram QT corrected interval prolonged",
+      "frequency": "not_known",
+      "label": "Změny EKG: prodloužení QT intervalu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anemia",
+      "frequency": "common",
+      "label": "Chudokrevnost; může způsobit únavu nebo bledost.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Anorexia",
@@ -47,16 +124,7 @@
     {
       "ctcae": "Somnolence",
       "frequency": "common",
-      "label": "Ospalost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví ospalost."
-      }
-    },
-    {
-      "ctcae": "Electrocardiogram QT corrected interval prolonged",
-      "frequency": "not_known",
-      "label": "Změny na EKG, prodloužení QT intervalu.",
+      "label": "Ospalost. Pokud se objeví, buďte opatrný při řízení a obsluze strojů.",
       "action": null,
       "action_condition": null
     },
@@ -70,11 +138,16 @@
     {
       "ctcae": "Abdominal pain",
       "frequency": "common",
-      "label": "Bolest břicha.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud vás bolí břicho."
-      }
+      "label": "Trávicí obtíže (dyspepsie).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "common",
+      "label": "Pocit na zvracení.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Constipation",
@@ -84,60 +157,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Dyspepsia",
-      "frequency": "common",
-      "label": "Trávicí obtíže (dyspepsie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Flatulence",
       "frequency": "common",
-      "label": "Plynatost (nadýmání).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "common",
-      "label": "Pocit na zvracení (nauzea).",
+      "label": "Plynatost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatobiliary disorders - Other, specify",
       "frequency": "common",
-      "label": "Poškození jater.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood bilirubin increased",
-      "frequency": "common",
-      "label": "Žloutenka (zežloutnutí kůže nebo očního bělma).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud vám zežloutne kůže nebo oční bělmo."
-      }
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": "common",
-      "label": "Zvýšené hodnoty transamináz (jaterních enzymů).",
+      "label": "Jaterní toxicita a zvýšené hodnoty jaterních enzymů; jaterní změny bývají často přechodné a mohou vymizet nebo se zlepšit při pokračující léčbě či po jejím ukončení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatic failure",
-      "frequency": "rare",
-      "label": "Selhání jater; byly hlášeny i smrtelné případy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "very_common",
-      "label": "Kožní vyrážka.",
+      "frequency": null,
+      "label": "Selhání jater; frekvence byla odhadnuta z hlášení u pacientů léčených 150 mg v otevřeném ramenu studií EPC a v PIL je uvedeno až 1 z 1 000 pacientů. Byly hlášeny i smrtelné případy.",
       "action": null,
       "action_condition": null
     },
@@ -151,14 +187,14 @@
     {
       "ctcae": "Hirsutism",
       "frequency": "common",
-      "label": "Opětovný růst vlasů nebo růst nadměrného ochlupení.",
+      "label": "Opětovný růst vlasů nebo nadměrné ochlupení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dry skin",
       "frequency": "common",
-      "label": "Suchá kůže.",
+      "label": "Suchá kůže; pro dávku 150 mg není samostatná frekvence stanovena, předpokládá se stejná jako u dávky 50 mg.",
       "action": null,
       "action_condition": null
     },
@@ -172,44 +208,21 @@
     {
       "ctcae": "Photosensitivity",
       "frequency": "rare",
-      "label": "Zvýšená citlivost kůže na sluneční záření (fotosenzitivní reakce).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hematuria",
-      "frequency": "common",
-      "label": "Krev v moči.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se vám objeví krev v moči."
-      }
-    },
-    {
-      "ctcae": "Gynecomastia",
-      "frequency": "very_common",
-      "label": "Zvětšení prsů; při dávce 150 mg v monoterapii se vyskytuje u většiny pacientů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Breast pain",
-      "frequency": "very_common",
-      "label": "Otok a citlivost prsů; při dávce 150 mg v monoterapii se bolest prsů vyskytuje u většiny pacientů a až u 5 % pacientů byla považována za závažnou. Po ukončení léčby nemusí, zejména po dlouhodobé léčbě, samovolně ustoupit.",
+      "label": "Zvýšená citlivost kůže na sluneční záření; při dávce 150 mg byly vzácně hlášeny fotosenzitivní reakce. Během léčby se vyhněte přímému nadměrnému slunečnímu a UV záření.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Erectile dysfunction",
       "frequency": "common",
-      "label": "Problémy s dosažením erekce (erektilní dysfunkce).",
+      "label": "Problémy s dosažením erekce.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Fatigue",
-      "frequency": "very_common",
-      "label": "Pocit slabosti (astenie).",
+      "ctcae": "Libido decreased",
+      "frequency": "common",
+      "label": "Snížená plodnost; může jít o období snížené nebo chybějící plodnosti.",
       "action": null,
       "action_condition": null
     },
@@ -221,7 +234,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Edema",
       "frequency": "common",
       "label": "Otok.",
       "action": null,
@@ -235,85 +248,369 @@
       "action_condition": null
     },
     {
+      "ctcae": "Edema face",
+      "frequency": "uncommon",
+      "label": "Angioedém: otok obličeje, rtů, jazyka, hrdla nebo jiné části těla.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
       "ctcae": "Pneumonitis",
       "frequency": "uncommon",
-      "label": "Intersticiální plicní onemocnění; byly hlášeny i smrtelné případy. Může se projevit závažnou dušností nebo jejím náhlým zhoršením, někdy s kašlem nebo vysokou teplotou (horečkou).",
+      "label": "Intersticiální plicní onemocnění; byly hlášeny smrtelné případy.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte závažnou dušnost nebo se vám dušnost náhle zhorší, případně ji doprovází kašel nebo vysoká teplota."
+        "patient_guide": null,
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": "INR increased",
+      "frequency": null,
+      "label": "Zvýšený protrombinový čas a INR při souběžném užívání kumarinových antikoagulancií; po uvedení přípravku na trh byly hlášeny interakce.",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "Terfenadin",
-      "effect": "Současné podávání terfenadinu s bikalutamidem je kontraindikováno.",
+      "class_id": null,
+      "drug": "CISAPRIDE",
+      "effect": "Současné užívání bikalutamidu s cisapridem je kontraindikováno.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "Astemizol",
-      "effect": "Současné podávání astemizolu s bikalutamidem je kontraindikováno.",
+      "class_id": null,
+      "drug": "TERFENADIN",
+      "effect": "Současné užívání bikalutamidu s terfenadinem je kontraindikováno.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "Cisaprid",
-      "effect": "Současné podávání cisapridu s bikalutamidem je kontraindikováno.",
+      "class_id": null,
+      "drug": "ASTEMIZOL",
+      "effect": "Současné užívání bikalutamidu s astemizolem je kontraindikováno.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "Midazolam",
-      "effect": "Po 28 dnech souběžného podávání bikalutamidu se střední expozice midazolamu (AUC) zvýšila až o 80 %. Takové zvýšení může být významné u léků s úzkým terapeutickým indexem.",
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léčivé přípravky prodlužující QT interval nebo vyvolávající torsade de pointes",
+      "effect": "Androgen-deprivační léčba může prodlužovat QT interval. Při současném užívání bikalutamidu a těchto přípravků může vzrůst riziko poruch srdečního rytmu včetně torsade de pointes; lékař má pečlivě zvážit přínosy a rizika, zvláště při rizikových faktorech. Mezi příklady patří antiarytmika třídy IA a III, methadon, moxifloxacin a antipsychotika.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "MIDAZOLAM",
+      "effect": "Po 28 dnech souběžného podávání bikalutamidu se průměrná expozice midazolamu zvýšila až o 80 %. U léků s úzkým terapeutickým rozmezím může být takový nárůst významný.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léčiva metabolizovaná převážně CYP3A4",
-      "effect": "Bikalutamid inhibuje CYP3A4, proto je při souběžném podávání léčiv metabolizovaných převážně tímto enzymem nutná opatrnost. U cyklosporinu a blokátorů kalciového kanálu může být potřebné snížení dávky, zejména pokud se prokáže zesílení účinku nebo nežádoucích účinků. U cyklosporinu se doporučuje po zahájení nebo ukončení léčby bikalutamidem důkladně sledovat jeho plazmatické koncentrace a klinický stav.",
+      "class_id": null,
+      "drug": "CYKLOSPORIN",
+      "effect": "Bikalutamid může zvýšit expozici lékům metabolizovaným převážně přes CYP3A4. Při současném podávání cyklosporinu je nutná opatrnost; lékař může podle účinku nebo nežádoucích účinků zvážit snížení dávky a po zahájení či ukončení bikalutamidu sledovat koncentraci cyklosporinu v krvi a klinický stav.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Cimetidin",
-      "effect": "Při současném podávání s bikalutamidem je nutná opatrnost, protože cimetidin může inhibovat jeho oxidaci. To může zvýšit plazmatické koncentrace bikalutamidu a teoreticky zvýraznit výskyt nežádoucích účinků.",
+      "class_id": null,
+      "drug": "BLOKÁTORY KALCIOVÉHO KANÁLU",
+      "effect": "Bikalutamid může zvýšit expozici lékům metabolizovaným převážně přes CYP3A4. Při současném podávání blokátorů kalciového kanálu je nutná opatrnost; lékař může podle účinku nebo nežádoucích účinků zvážit snížení dávky.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Ketokonazol",
-      "effect": "Při současném podávání s bikalutamidem je nutná opatrnost, protože ketokonazol může inhibovat jeho oxidaci. To může zvýšit plazmatické koncentrace bikalutamidu a teoreticky zvýraznit výskyt nežádoucích účinků.",
+      "class_id": null,
+      "drug": "CIMETIDIN",
+      "effect": "Cimetidin může inhibovat oxidaci bikalutamidu a teoreticky zvýšit jeho plazmatickou koncentraci, což by mohlo zvýraznit nežádoucí účinky; při souběžném podávání je nutná opatrnost.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": null,
+      "drug": "KETOKONAZOL",
+      "effect": "Ketokonazol může inhibovat oxidaci bikalutamidu a teoreticky zvýšit jeho plazmatickou koncentraci, což by mohlo zvýraznit nežádoucí účinky; při souběžném podávání je nutná opatrnost.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "WARFARIN",
+      "effect": "Bikalutamid může vytěsňovat warfarin z vazby na bílkoviny a zvýšit jeho účinek. Při souběžném užívání se doporučuje pečlivě sledovat PT/INR a lékař má zvážit úpravu dávky antikoagulancia; byly hlášeny případy spojené s rizikem krvácení.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
       "drug_class": "Kumarinová antikoagulancia",
-      "effect": "Bikalutamid může zvýšit účinek kumarinových antikoagulancií tím, že je vytěsňuje z vazebných míst na proteinech. Může dojít ke zvýšení protrombinového času (PT) a INR a v některých případech k riziku krvácení. Doporučuje se pečlivě sledovat PT/INR a zvážit úpravu dávky antikoagulancia.",
+      "effect": "Bikalutamid může zvýšit účinek kumarinových antikoagulancií a prodloužit PT/INR. Při souběžném užívání se doporučuje pečlivé sledování PT/INR a lékař má zvážit úpravu dávky antikoagulancia; některé případy byly spojeny s rizikem krvácení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": "not_known",
-          "label": "Zvýšení protrombinového času (PT) a mezinárodního normalizovaného poměru (INR); v některých případech spojené s rizikem krvácení.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčiva prodlužující QT interval, včetně antiarytmik třídy IA a III, methadonu, moxifloxacinu a antipsychotik",
-      "effect": "Androgen-deprivační léčba může prodlužovat QT interval. Souběžná léčba bikalutamidem a přípravky, o kterých je známo, že prodlužují QT interval nebo mohou vyvolat Torsade de pointes, má být pečlivě zvážena, zejména u pacientů s rizikovými faktory pro prodloužení QT intervalu v anamnéze.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": "not_known",
-          "label": "Prodloužení QT intervalu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se k léčbě rakoviny prostaty.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0180773",
+      "H": "",
+      "NAZEV": "BICALUPLEX",
+      "SILA": "150MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "28",
+      "CESTA": "POR",
+      "DOPLNEK": "150MG TBL FLM 28",
+      "OBAL": "BLI",
+      "DRZ": "TPP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "44",
+      "ATC_WHO": "L02BB03",
+      "RC": "44/412/05-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "50",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "84",
+      "ZDROJ_WHO": "NO26",
+      "LL": "13723",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "BICALUPLEX",
+      "MRP_CISLO": "CZ/H/0133/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "A",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0180773",
+        "KOD_LATKY": "13723",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "150",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13723",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "BICALUTAMIDUM",
+          "NAZEV_EN": "BICALUTAMIDE",
+          "NAZEV": "BIKALUTAMID"
+        }
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "KOD_LATKY": "3755",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "KOD_LATKY": "18178",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18178",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 30",
+          "NAZEV_EN": "POVIDONE K 30",
+          "NAZEV": "POVIDON K 30",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "KOD_LATKY": "5624",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "KOD_LATKY": "1335",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "KOD_LATKY": "2624",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "KOD_LATKY": "1300",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "KOD_LATKY": "17070",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17070",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ALBUM OPADRY II OY-GM-28900",
+          "NAZEV_EN": "OPADRY II OY-GM-28900 (WHITE)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPADRY II OY-GM-28900 BÍLÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0180773",
+        "SQ": "11",
+        "S": "T",
+        "AMNT": "28",
+        "UN": "DF",
+        "substance": {}
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0180773",
+      "PIL": "PI189210.pdf",
+      "DAT_ROZ_PIL": "26.07.2022",
+      "SPC": "SPC143634.pdf",
+      "DAT_ROZ_SPC": "26.06.2019",
+      "OBAL_TEXT": "OBAL143632.pdf",
+      "DAT_ROZ_OBAL": "26.06.2019"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "L02BB03",
+        "NT": "N",
+        "NAZEV": "BIKALUTAMID",
+        "NAZEV_EN": "BICALUTAMIDE"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }
