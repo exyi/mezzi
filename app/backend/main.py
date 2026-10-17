@@ -40,14 +40,6 @@ QUESTIONS_DIR = BASE_DIR / "questions"
 QUESTION_IDS_FILE = BASE_DIR / "question_ids.json"
 ANSWERS_FILE = BASE_DIR / "answers.json"
 
-# Question groups (repo root / se-translation / assets).
-GROUPS_FILE = (
-    BASE_DIR.parent.parent
-    / "se-translation"
-    / "assets"
-    / "ctcae-groups-questions-cz.json"
-)
-
 
 # --------------------------------------------------
 # MODELS: MEDICAL QUESTIONS
@@ -305,36 +297,6 @@ def get_questions(
     return {
         "count": len(questions),
         "results": questions,
-    }
-
-
-# --------------------------------------------------
-# GET QUESTION GROUPS
-# --------------------------------------------------
-
-@app.get("/api/groups")
-def get_groups():
-    """Return question groups used to gate the questionnaire."""
-
-    try:
-        data = json.loads(
-            GROUPS_FILE.read_text(encoding="utf-8")
-        )
-    except (OSError, json.JSONDecodeError) as exc:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Could not load question groups: {exc}",
-        ) from exc
-
-    if not isinstance(data, list):
-        raise HTTPException(
-            status_code=500,
-            detail="Groups file must be a JSON list",
-        )
-
-    return {
-        "count": len(data),
-        "results": data,
     }
 
 
