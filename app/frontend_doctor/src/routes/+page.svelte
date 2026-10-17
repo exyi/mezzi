@@ -124,12 +124,19 @@
 
   function gradeLabel(level: number) {
     return level === 0
-      ? 'Úroveň 0 — Bez symptomů'
-      : `Úroveň ${level}`;
+      ? 'Grade 0 — Bez symptomů'
+      : `Grade ${level}`;
   }
 
   function toggleSubmission(id: string) {
     expanded = expanded === id ? null : id;
+  }
+
+  function maxGrade(answers: SavedAnswer[]) {
+    return answers.reduce<number | null>(
+      (max, answer) => Math.max(max ?? answer.answer, answer.answer),
+      null
+    );
   }
 
   function visibleAnswers(answers: SavedAnswer[]) {
@@ -215,9 +222,11 @@
     {:else}
       <div class="submission-list">
         {#each filteredSubmissions as submission (submission.submission_id)}
+          {@const highestGrade = maxGrade(submission.answers)}
           <article class="submission">
             <button
-              class="submission-header"
+              class="submission-header grade-colors"
+              data-grade={highestGrade}
               aria-expanded={expanded === submission.submission_id}
               onclick={() => toggleSubmission(submission.submission_id)}
             >
@@ -237,6 +246,9 @@
               </div>
 
               <div class="submission-meta">
+                {#if highestGrade !== null}
+                  <span class="grade-badge">Nejvyšší úroveň: {highestGrade}</span>
+                {/if}
                 <span class="chevron" aria-hidden="true">
                   {expanded === submission.submission_id ? '−' : '+'}
                 </span>
@@ -267,17 +279,16 @@
                   </div>
                 {:else}
                   {#each visibleAnswers(submission.answers) as answer, index (`${submission.submission_id}-${answer.question_id}`)}
-                    <section class="answer-card">
+                    <section class="answer-card grade-colors" data-grade={answer.answer}>
                       <div class="answer-top">
                         <span
                           class="grade-badge"
-                          class:grade-zero={answer.answer === 0}
                         >
                           {gradeLabel(answer.answer)}
                         </span>
                       </div>
 
-                      <h3>{answer.term}</h3>
+                      <h3>{answer.term} / <i>{answer.definition}</i></h3>
 
                       <div class="metadata">
                         <span><b>SOC</b> {answer.soc}</span>
@@ -285,21 +296,13 @@
                         <span><b>Question ID</b> {answer.question_id}</span>
                       </div>
 
-                      {#if answer.definition}
-                        <div class="definition">
-                          <span class="field-label">Popis</span>
-                          <p>{answer.definition}</p>
-                        </div>
-                      {/if}
-
                       <div class="selected-answer">
                         <div class="grade-number">{answer.answer}</div>
                         <div>
                           <strong>{gradeLabel(answer.answer)}</strong>
-                          <p>
-                            {answer.grade_description ??
-                              'Bez popisu úrovně.'}
-                          </p>
+                          <br>
+                          <strong>{answer.grade_description ??
+                            'Systém nechápe jak je v tomto stavu pacient schopný odeslat dotazník.'}</strong>
                         </div>
                       </div>
                     </section>
@@ -535,13 +538,50 @@
     padding: 17px;
     justify-content: flex-start;
     border: 0;
-    background: white;
+    background: var(--grade-background, white);
+    border-left: 5px solid var(--grade-color, #e5e9f1);
     text-align: left;
     cursor: pointer;
   }
 
   .submission-header:hover {
-    background: #fafbfe;
+    filter: brightness(0.98);
+  }
+
+  .grade-colors[data-grade="0"] {
+    --grade-background: #f0fdf4;
+    --grade-highlight: #dcfce7;
+    --grade-color: #166534;
+  }
+
+  .grade-colors[data-grade="1"] {
+    --grade-background: #fefce8;
+    --grade-highlight: #fef08a;
+    --grade-color: #854d0e;
+  }
+
+  .grade-colors[data-grade="2"] {
+    --grade-background: #fff7ed;
+    --grade-highlight: #ffedd5;
+    --grade-color: #9a3412;
+  }
+
+  .grade-colors[data-grade="3"] {
+    --grade-background: #fef2f2;
+    --grade-highlight: #fee2e2;
+    --grade-color: #b91c1c;
+  }
+
+  .grade-colors[data-grade="4"] {
+    --grade-background: #fff1f2;
+    --grade-highlight: #ffe4e6;
+    --grade-color: #9f1239;
+  }
+
+  .grade-colors[data-grade="5"] {
+    --grade-background: #fdf2f8;
+    --grade-highlight: #fce7f3;
+    --grade-color: #831843;
   }
 
   .submission-icon {
@@ -674,6 +714,7 @@
     padding: 19px;
     background: white;
     border: 1px solid #e6eaf1;
+    border-left: 5px solid var(--grade-color, #e6eaf1);
     border-radius: 11px;
   }
 
@@ -692,16 +733,11 @@
   .grade-badge {
     padding: 6px 9px;
     border-radius: 7px;
-    background: #edf1ff;
-    color: #4257bf;
+    background: var(--grade-highlight, #edf1ff);
+    color: var(--grade-color, #4257bf);
     font-size: 11px;
     font-weight: 750;
     text-align: right;
-  }
-
-  .grade-badge.grade-zero {
-    background: #e8f7ee;
-    color: #187348;
   }
 
   .answer-card h3 {
@@ -745,7 +781,7 @@
     align-items: flex-start;
     gap: 12px;
     border-radius: 10px;
-    background: #f5f7fc;
+    background: var(--grade-background, #f5f7fc);
   }
 
   .grade-number {
@@ -755,8 +791,8 @@
     display: grid;
     place-items: center;
     border-radius: 10px;
-    background: #e3e9ff;
-    color: #4257bf;
+    background: var(--grade-highlight, #e3e9ff);
+    color: var(--grade-color, #4257bf);
     font-size: 18px;
     font-weight: 800;
   }
