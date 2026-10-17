@@ -18,6 +18,28 @@
     change: string | null;
   };
 
+  // Question group from ctcae-groups-questions-cz.json.
+  type Group = {
+    group: string;
+    ids: number[];
+    group_question: string;
+  };
+
+  // A gate step asks the group question (yes/no).
+  type GroupStep = {
+    kind: 'group';
+    group: Group;
+    questionIndices: number[];
+  };
+
+  // A regular step shows one question.
+  type QuestionStep = {
+    kind: 'question';
+    questionIndex: number;
+  };
+
+  type Step = GroupStep | QuestionStep;
+
   type SubmittedAnswer = {
     question_id: string | number;
     llt_code: number;
@@ -34,12 +56,23 @@
   };
 
   const API_URL = 'http://127.0.0.1:8000/api/questions';
+  const GROUPS_URL = 'http://127.0.0.1:8000/api/groups';
   const ANSWERS_URL = 'http://127.0.0.1:8000/api/answers';
 
   let questions = $state<Question[]>([]);
   let answers = $state<Record<number, number>>({});
   let symptoms = $state('');
-  let currentIndex = $state(0);
+
+  // Quiz flow: group gates and individual questions in order.
+  let steps = $state<Step[]>([]);
+  let stepIndex = $state(0);
+
+  // group name -> patient's yes/no answer to the group question.
+  let groupAnswers = $state<Record<string, boolean>>({});
+
+  // Groups are loaded once; not reactive state.
+  let groups: Group[] = [];
+  let idToGroup = new Map<number, Group>();
 
   let loading = $state(true);
   let saving = $state(false);
@@ -48,27 +81,50 @@
   let saved = $state(false);
   let submissionId = $state('');
 
-  let currentQuestion = $derived(questions[currentIndex]);
-  let totalQuestions = $derived(questions.length);
+  let currentStep = $derived(steps[stepIndex]);
 
-  let progress = $derived(
-    totalQuestions > 0
-      ? (Math.min(currentIndex + 1, totalQuestions) /
-          totalQuestions) * 100
-      : 0
+  let currentGroup = $derived(
+    currentStep?.kind === 'group' ? currentStep.group : undefined
   );
 
-  // The final symptoms step is after all medical questions.
+  let currentQuestionIndex = $derived(
+    currentStep?.kind === 'question' ? currentStep.questionIndex : -1
+  );
+
+  let currentQuestion = $derived(
+    currentQuestionIndex >= 0 ? questions[currentQuestionIndex] : undefined
+  );
+
+  let totalQuestions = $derived(questions.length);
+  let totalSteps = $derived(steps.length);
+
+  let answeredCount = $derived(Object.keys(answers).length);
+
+  // Progress reflects answered questions. Questions hidden behind a
+  // group answered with "no" count as answered (grade 0).
+  let progress = $derived(
+    totalQuestions > 0 ? (answeredCount / totalQuestions) * 100 : 0
+  );
+
+  // The final symptoms step is after all quiz steps.
   let symptomsStep = $derived(
-    totalQuestions > 0 && currentIndex === totalQuestions
+    totalSteps > 0 && stepIndex === totalSteps
   );
 
   // Results appear after the symptoms step has been submitted.
   let finished = $derived(
-    totalQuestions > 0 && currentIndex > totalQuestions
+    totalSteps > 0 && stepIndex > totalSteps
   );
 
-  let answeredCount = $derived(Object.keys(answers).length);
+  // True when only the final symptoms step follows.
+  let isLastStep = $derived.by(() => {
+    for (let i = stepIndex + 1; i < steps.length; i++) {
+      if (stepVisible(steps[i])) {
+        return false;
+      }
+    }
+    return true;
+  });
 
   onMount(() => {
     loadQuestions();
@@ -79,16 +135,32 @@
     error = '';
 
     try {
-      const response = await fetch(API_URL);
+      const [questionsResponse, groupsResponse] =
+        await Promise.all([
+          fetch(API_URL),
+          fetch(GROUPS_URL)
+        ]);
 
-      if (!response.ok) {
-        throw new Error(`Server returned ${response.status}`);
+      if (!questionsResponse.ok) {
+        throw new Error(`Server returned ${questionsResponse.status}`);
       }
 
-      const data = await response.json();
-      console.log(data)
+      if (!groupsResponse.ok) {
+        throw new Error(
+          `Server returned ${groupsResponse.status} for question groups`
+        );
+      }
+
+      const data = await questionsResponse.json();
+      const groupsData = await groupsResponse.json();
+      console.log(data, groupsData)
+
       if (!Array.isArray(data.results)) {
         throw new Error('The server returned an invalid record list.');
+      }
+
+      if (!Array.isArray(groupsData.results)) {
+        throw new Error('The server returned an invalid group list.');
       }
 
       for (const question of data.results) {
@@ -113,8 +185,31 @@
         }
       }
 
+      for (const group of groupsData.results) {
+        if (
+          typeof group.group !== 'string' ||
+          !Array.isArray(group.ids) ||
+          typeof group.group_question !== 'string'
+        ) {
+          throw new Error(
+            'A question group has an invalid format.'
+          );
+        }
+      }
+
       questions = data.results;
-      currentIndex = 0;
+      groups = groupsData.results;
+
+      idToGroup = new Map();
+      for (const group of groups) {
+        for (const id of group.ids) {
+          idToGroup.set(id, group);
+        }
+      }
+
+      steps = buildSteps(questions, groups);
+      groupAnswers = {};
+      stepIndex = 0;
       answers = {};
       symptoms = '';
       saved = false;
@@ -130,33 +225,139 @@
     }
   }
 
+  // Build the quiz flow. A group with at least 3 questions in this
+  // questionnaire becomes a gate (the group question) followed by its
+  // questions. Everything else is shown as before.
+  function buildSteps(
+    quizQuestions: Question[],
+    quizGroups: Group[]
+  ): Step[] {
+    const groupById = new Map<number, Group>();
+    for (const group of quizGroups) {
+      for (const id of group.ids) {
+        groupById.set(id, group);
+      }
+    }
+
+    const membersByGroup = new Map<string, number[]>();
+    quizQuestions.forEach((question, index) => {
+      const group = groupById.get(Number(question.id));
+      if (!group) {
+        return;
+      }
+      const members = membersByGroup.get(group.group) ?? [];
+      members.push(index);
+      membersByGroup.set(group.group, members);
+    });
+
+    const builtSteps: Step[] = [];
+    const handled = new Set<number>();
+
+    quizQuestions.forEach((question, index) => {
+      const group = groupById.get(Number(question.id));
+
+      if (group) {
+        const members = membersByGroup.get(group.group)!;
+
+        if (members.length >= 3) {
+          if (!handled.has(index)) {
+            // First member of a gated group: emit the gate,
+            // then all its questions.
+            builtSteps.push({
+              kind: 'group',
+              group,
+              questionIndices: members
+            });
+
+            for (const memberIndex of members) {
+              builtSteps.push({
+                kind: 'question',
+                questionIndex: memberIndex
+              });
+              handled.add(memberIndex);
+            }
+          }
+
+          return;
+        }
+      }
+
+      builtSteps.push({ kind: 'question', questionIndex: index });
+    });
+
+    return builtSteps;
+  }
+
+  // A question is hidden when its group was answered with "no".
+  function stepVisible(step: Step): boolean {
+    if (step.kind !== 'question') {
+      return true;
+    }
+
+    const group = idToGroup.get(
+      Number(questions[step.questionIndex].id)
+    );
+
+    return !group || groupAnswers[group.group] !== false;
+  }
+
   function selectAnswer(level: number) {
-    answers[currentIndex] = level;
+    if (currentQuestionIndex < 0) {
+      return;
+    }
+    answers[currentQuestionIndex] = level;
     saveError = '';
   }
 
-  function nextQuestion() {
-    if (
-      currentIndex < totalQuestions - 1 &&
-      answers[currentIndex] !== undefined
-    ) {
-      currentIndex += 1;
-      saveError = '';
-    } else if (
-      currentIndex === totalQuestions - 1 &&
-      answers[currentIndex] !== undefined
-    ) {
-      // Move to the separate symptoms step.
-      currentIndex = totalQuestions;
-      saveError = '';
+  function selectGroupAnswer(group: Group, hasTrouble: boolean) {
+    if (groupAnswers[group.group] === hasTrouble) {
+      return;
     }
+    groupAnswers = { ...groupAnswers, [group.group]: hasTrouble };
+
+    // "No" records grade 0 for every member question.
+    // "Yes" clears them so the patient answers them individually.
+    for (const step of steps) {
+      if (step.kind !== 'group' || step.group.group !== group.group) {
+        continue;
+      }
+      for (const index of step.questionIndices) {
+        if (hasTrouble) {
+          delete answers[index];
+        } else {
+          answers[index] = 0;
+        }
+      }
+    }
+    saveError = '';
   }
 
-  function previousQuestion() {
-    if (currentIndex > 0) {
-      currentIndex -= 1;
-      saveError = '';
+  function nextStep() {
+    if (currentGroup) {
+      if (groupAnswers[currentGroup.group] === undefined) {
+        return;
+      }
+    } else if (currentQuestionIndex >= 0) {
+      if (answers[currentQuestionIndex] === undefined) {
+        return;
+      }
     }
+
+    let next = stepIndex + 1;
+    while (next < steps.length && !stepVisible(steps[next])) {
+      next += 1;
+    }
+    stepIndex = Math.min(next, steps.length);
+    saveError = '';
+  }
+
+  function previousStep() {
+    let previous = stepIndex - 1;
+    while (previous > 0 && !stepVisible(steps[previous])) {
+      previous -= 1;
+    }
+    stepIndex = Math.max(previous, 0);
+    saveError = '';
   }
 
   async function finishQuiz() {
@@ -221,7 +422,7 @@
 
       submissionId = data.submission_id ?? '';
       saved = true;
-      currentIndex = totalQuestions + 1;
+      stepIndex = totalSteps + 1;
     } catch (err) {
       saveError =
         err instanceof Error
@@ -235,7 +436,8 @@
   function restartQuiz() {
     answers = {};
     symptoms = '';
-    currentIndex = 0;
+    stepIndex = 0;
+    groupAnswers = {};
     saved = false;
     saveError = '';
     submissionId = '';
@@ -456,7 +658,7 @@
         <div class="navigation">
           <button
             class="secondary-button"
-            onclick={previousQuestion}
+            onclick={previousStep}
             disabled={saving}
           >
             ← Zpět
@@ -485,11 +687,116 @@
         </p>
       </div>
 
-    {:else}
+    {:else if currentGroup}
+      <div class="quiz">
+        <div class="progress-info">
+          <span>Skupinová otázka</span>
+          <span>{Math.round(progress)}% Hotovo</span>
+        </div>
+
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="Průběh vyplňování dotazníku"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(progress)}
+        >
+          <div
+            class="progress-fill"
+            style={`width: ${progress}%`}
+          ></div>
+        </div>
+
+        <h2 class="question-title">
+          {currentGroup.group_question}
+        </h2>
+
+        <div class="grade-heading">
+          <div>
+            <h3>Odpověz ano nebo ne.</h3>
+          </div>
+        </div>
+
+        <div class="options grade-options">
+          <button
+            class="option grade-option yes-no-option"
+            class:selected={groupAnswers[currentGroup.group] === false}
+            aria-pressed={groupAnswers[currentGroup.group] === false}
+            onclick={() => selectGroupAnswer(currentGroup, false)}
+          >
+            <span class="grade-number">Ne</span>
+
+            <span class="grade-content">
+              <span class="grade-title">Nemám potíže</span>
+
+              <span class="grade-description">
+                Tyto otázky se automaticky vyplní jako bez potíží.
+              </span>
+            </span>
+
+            <span class="option-check">
+              {groupAnswers[currentGroup.group] === false ? '✓' : ''}
+            </span>
+          </button>
+
+          <button
+            class="option grade-option yes-no-option"
+            class:selected={groupAnswers[currentGroup.group] === true}
+            aria-pressed={groupAnswers[currentGroup.group] === true}
+            onclick={() => selectGroupAnswer(currentGroup, true)}
+          >
+            <span class="grade-number">Ano</span>
+
+            <span class="grade-content">
+              <span class="grade-title">Mám potíže</span>
+
+              <span class="grade-description">
+                Zobrazí se jednotlivé otázky.
+              </span>
+            </span>
+
+            <span class="option-check">
+              {groupAnswers[currentGroup.group] === true ? '✓' : ''}
+            </span>
+          </button>
+        </div>
+
+        <div class="navigation">
+          <button
+            class="secondary-button"
+            onclick={previousStep}
+            disabled={stepIndex === 0 || saving}
+          >
+            ← Zpět
+          </button>
+
+          <button
+            class="primary-button"
+            onclick={nextStep}
+            disabled={
+              groupAnswers[currentGroup.group] === undefined ||
+              saving
+            }
+          >
+            {isLastStep
+              ? 'Další: Další symptomy →'
+              : 'Další otázka →'}
+          </button>
+        </div>
+
+        {#if saveError}
+          <p class="save-error" role="alert">
+            {saveError}
+          </p>
+        {/if}
+      </div>
+
+    {:else if currentQuestion}
       <div class="quiz">
         <div class="progress-info">
           <span>
-            Otázka {currentIndex + 1} z {totalQuestions}
+            Otázka {currentQuestionIndex + 1} z {totalQuestions}
           </span>
           <span>{Math.round(progress)}% Hotovo</span>
         </div>
@@ -533,10 +840,10 @@
             <button
               class="option grade-option"
               class:selected={
-                answers[currentIndex] === grade.level
+                answers[currentQuestionIndex] === grade.level
               }
               aria-pressed={
-                answers[currentIndex] === grade.level
+                answers[currentQuestionIndex] === grade.level
               }
               onclick={() => selectAnswer(grade.level)}
             >
@@ -551,7 +858,7 @@
               </span>
 
               <span class="option-check">
-                {answers[currentIndex] === grade.level
+                {answers[currentQuestionIndex] === grade.level
                   ? '✓'
                   : ''}
               </span>
@@ -562,21 +869,21 @@
         <div class="navigation">
           <button
             class="secondary-button"
-            onclick={previousQuestion}
-            disabled={currentIndex === 0 || saving}
+            onclick={previousStep}
+            disabled={stepIndex === 0 || saving}
           >
             ← Zpět
           </button>
 
           <button
             class="primary-button"
-            onclick={nextQuestion}
+            onclick={nextStep}
             disabled={
-              answers[currentIndex] === undefined ||
+              answers[currentQuestionIndex] === undefined ||
               saving
             }
           >
-            {currentIndex === totalQuestions - 1
+            {isLastStep
               ? 'Další: Další symptomy →'
               : 'Další otázka →'}
           </button>
@@ -843,6 +1150,12 @@
     color: #28334b;
     font-size: 18px;
     font-weight: 800;
+  }
+
+  .yes-no-option .grade-number {
+    width: auto;
+    min-width: 40px;
+    padding: 0 10px;
   }
 
   .option.selected .grade-number {
