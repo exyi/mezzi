@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PRECOMPUTED = ROOT / "sukl" / "precomputed-output"
 REMAPPING = ROOT / "se-translation" / "assets" / "self-reportable-side-effect-remapping.csv"
 CTCAE_METADATA = ROOT / "se-translation" / "assets" / "serialized-ctcae-clean.json"
+CTCAE_SEX_SPECIFIC = ROOT / "se-translation" / "assets" / "ctcae-sex-specific.json"
 ANNOTATIONS = ROOT / "se-translation" / "assets" / "ctcae-patient-sloplabels-cs.csv"
 
 
@@ -91,6 +92,11 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
         row["id"]: row
         for row in json.loads(CTCAE_METADATA.read_text(encoding="utf-8"))
     }
+    sex_specific = {
+        row["id"]: row["sex"]
+        for row in json.loads(CTCAE_SEX_SPECIFIC.read_text(encoding="utf-8"))
+    }
+    sex = {"male": "M", "female": "F"}.get(gender)
     with REMAPPING.open(encoding="utf-8-sig", newline="") as stream:
         rules = list(csv.DictReader(stream))
     grouped = {}
@@ -158,7 +164,10 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
                         question["recommended_actions"].append(advice)
     return {
         "patient": {"gender": gender},
-        "questions": [grouped[key] for key in sorted(grouped)],
+        "questions": [
+            grouped[key] for key in sorted(grouped)
+            if sex is None or sex_specific.get(key) in (None, sex)
+        ],
     }
 
 
