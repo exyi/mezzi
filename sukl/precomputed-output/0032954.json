@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J01",
+    "atc:J01A",
+    "atc:J01AA",
+    "atc:J01AA02",
+    "substance:5389"
+  ],
   "side_effects": [
     {
       "ctcae": "Headache",
@@ -29,7 +37,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "common",
       "label": "Zvýšený obsah tuku ve stolici",
       "action": null,
@@ -38,16 +46,14 @@
     {
       "ctcae": "Photosensitivity",
       "frequency": "common",
-      "label": "Přecitlivělost na světlo; při prvních známkách zarudnutí kůže je nutné léčbu přerušit.",
+      "label": "Přecitlivělost na světlo; může se projevit zarudnutím, otokem, puchýři nebo změnou barvy kůže. Při reakci po slunečním nebo UV záření přerušte léčbu a kontaktujte lékaře.",
       "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví první známky zarudnutí kůže po vystavení slunci nebo UV záření"
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "common",
-      "label": "Vyrážka, včetně makulopapulózní a erytematózní vyrážky",
+      "label": "Kožní vyrážka, včetně makulopapulózní a zarudlé vyrážky",
       "action": null,
       "action_condition": null
     },
@@ -61,7 +67,14 @@
     {
       "ctcae": "Vaginal infection",
       "frequency": "uncommon",
-      "label": "Kvasinková infekce pochvy (kandidová vulvovaginitida)",
+      "label": "Kvasinková infekce pochvy",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Poruchy srážení krve",
       "action": null,
       "action_condition": null
     },
@@ -73,13 +86,6 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Poruchy srážení krve",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Joint effusion",
       "frequency": "uncommon",
       "label": "Otok kloubů",
@@ -87,7 +93,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
+      "ctcae": "Asthma",
       "frequency": "uncommon",
       "label": "Astma",
       "action": null,
@@ -96,7 +102,14 @@
     {
       "ctcae": "Gastritis",
       "frequency": "uncommon",
-      "label": "Pálení žáhy a zánět žaludku (gastritida)",
+      "label": "Zánět žaludku",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastroesophageal reflux disease",
+      "frequency": "uncommon",
+      "label": "Pálení žáhy",
       "action": null,
       "action_condition": null
     },
@@ -110,7 +123,7 @@
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Vyrážka postihující pohlavní ústrojí",
+      "label": "Vyrážka v oblasti pohlavního ústrojí",
       "action": null,
       "action_condition": null
     },
@@ -131,7 +144,7 @@
     {
       "ctcae": "Hemolytic anemia",
       "frequency": "rare",
-      "label": "Hemolytická anémie (rozpad červených krvinek)",
+      "label": "Hemolytická anémie",
       "action": null,
       "action_condition": null
     },
@@ -159,44 +172,40 @@
     {
       "ctcae": "White blood cell decreased",
       "frequency": "rare",
-      "label": "Snížený počet bílých krvinek, včetně leukocytů a lymfocytů",
+      "label": "Snížený počet bílých krvinek",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Leukocytosis",
       "frequency": "rare",
-      "label": "Zvýšený počet některých bílých krvinek (leukocytóza)",
+      "label": "Zvýšený počet bílých krvinek",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "ctcae": "Lymphadenopathy",
       "frequency": "rare",
-      "label": "Změněný počet některých bílých krvinek, atypické lymfocyty, toxická granulace granulocytů a zvětšení lymfatických uzlin",
+      "label": "Zvětšené lymfatické uzliny",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "rare",
-      "label": "Závažná přecitlivělost, včetně anafylaktické reakce a anafylaktického šoku; může se projevit vyrážkou, otokem, svěděním, dušností, sípáním a poruchou vědomí. Je nutná rychlá lékařská pomoc.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví náhlá závažná alergická reakce, například otok, dušnost, sípání nebo porucha vědomí"
-      }
+      "label": "Anafylaktická reakce nebo anafylaktický šok; může se projevit vyrážkou, otokem, svěděním, dušností, sípáním nebo poruchou vědomí. Je nutná rychlá lékařská pomoc.",
+      "action": "emergency",
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Angioedema",
       "frequency": "rare",
-      "label": "Angioedém (otok) jako součást závažné reakce z přecitlivělosti",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví otok jako součást závažné alergické reakce"
-      }
+      "label": "Angioedém",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Autoimmune disorder",
+      "ctcae": "Systemic lupus erythematosus",
       "frequency": "rare",
       "label": "Zhoršení systémového lupus erythematodes",
       "action": null,
@@ -219,28 +228,7 @@
     {
       "ctcae": "Purpura",
       "frequency": "rare",
-      "label": "Henochova–Schönleinova purpura (zánět drobných cév)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "rare",
-      "label": "Nízký krevní tlak",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "rare",
-      "label": "Dušnost jako součást závažné reakce z přecitlivělosti",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Sinus tachycardia",
-      "frequency": "rare",
-      "label": "Zrychlená srdeční frekvence jako součást závažné reakce z přecitlivělosti",
+      "label": "Henochova–Schönleinova purpura (zánět drobných cév); může se projevit vyrážkou, bolestí břicha, zánětem kloubů nebo postižením ledvin",
       "action": null,
       "action_condition": null
     },
@@ -252,23 +240,21 @@
       "action_condition": null
     },
     {
-      "ctcae": "Flu like symptoms",
+      "ctcae": "Jarischova-Herxheimerova reakce",
       "frequency": "rare",
-      "label": "Jarischova–Herxheimerova reakce při léčbě spirochetové infekce, která může způsobit horečku, zimnici, bolest hlavy a svalů a kožní vyrážku; obvykle sama odezní.",
+      "label": "Jarischova–Herxheimerova reakce: krátce po zahájení léčby spirochetové infekce, například Lymeské nemoci, se může objevit horečka, zimnice, bolest hlavy, svalů a kožní vyrážka; reakce obvykle sama odezní.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se krátce po zahájení léčby infekce způsobené spirochetami objeví horečka, zimnice, bolest hlavy nebo svalů či vyrážka"
-      }
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Endocrine disorders - Other, specify",
       "frequency": "rare",
-      "label": "Hnědočerné mikroskopické zbarvení tkáně štítné žlázy při dlouhodobém užívání; související porucha funkce štítné žlázy nebyla pozorována",
+      "label": "Při dlouhodobém užívání hnědočerné mikroskopické zbarvení tkáně štítné žlázy; související porucha její funkce nebyla pozorována",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Porphyria",
       "frequency": "rare",
       "label": "Porfyrie",
       "action": null,
@@ -298,17 +284,18 @@
     {
       "ctcae": "Paresthesia",
       "frequency": "rare",
-      "label": "Brnění (parestezie)",
+      "label": "Brnění",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Papilledema",
+      "ctcae": "Intracranial pressure increased",
       "frequency": "rare",
-      "label": "Zvýšený nitrolební tlak (pseudotumor cerebri), který se může projevit bolestí hlavy, nevolností, zvracením, rozmazaným viděním, skotomy nebo dvojitým viděním; byla hlášena i trvalá ztráta zraku.",
+      "label": "Zvýšený nitrolební tlak (pseudotumor cerebri), který může způsobit bolest hlavy, nevolnost, zvracení, rozmazané nebo dvojité vidění; při poruše zraku je nutné okamžité oční vyšetření.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud během léčby dojde k poruše zraku, například rozmazanému nebo dvojitému vidění"
+        "patient_guide": "Pokud se během léčby zhorší nebo změní váš zrak.",
+        "min_severity": null
       }
     },
     {
@@ -335,10 +322,28 @@
     {
       "ctcae": "Colitis",
       "frequency": "rare",
-      "label": "Pseudomembranózní kolitida a kolitida vyvolaná bakterií Clostridium difficile; těžký, přetrvávající vodnatý nebo krvavý průjem s bolestí břicha nebo horečkou vyžaduje co nejrychlejší kontakt s lékařem.",
+      "label": "Pseudomembranózní kolitida nebo kolitida vyvolaná bakterií C. difficile; těžký, přetrvávající vodnatý či krvavý průjem s bolestí břicha nebo horečkou může být jejím příznakem.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Esophagitis",
+      "frequency": "rare",
+      "label": "Zánět jícnu. Při zažívacích obtížích nebo bolesti za hrudní kostí vyhledejte lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte těžký, přetrvávající vodnatý nebo krvavý průjem, zejména s bolestí břicha nebo horečkou"
+        "patient_guide": "Pokud máte zažívací obtíže nebo bolest za hrudní kostí",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Esophageal ulcer",
+      "frequency": "rare",
+      "label": "Vřed jícnu",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte zažívací obtíže nebo bolest za hrudní kostí",
+        "min_severity": null
       }
     },
     {
@@ -349,21 +354,21 @@
       "action_condition": null
     },
     {
-      "ctcae": "Esophagitis",
+      "ctcae": "Enterocolitis",
       "frequency": "rare",
-      "label": "Zánět jícnu",
+      "label": "Zánětlivé léze v oblasti konečníku a pohlavního ústrojí, někdy s přerůstáním kvasinek rodu Candida",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Esophageal ulcer",
+      "ctcae": "Dysphagia",
       "frequency": "rare",
-      "label": "Vřed jícnu",
+      "label": "Potíže s polykáním",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal pain",
+      "ctcae": "Abdominal pain",
       "frequency": "rare",
       "label": "Bolest břicha",
       "action": null,
@@ -377,37 +382,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Dysphagia",
+      "ctcae": "Candidiasis",
       "frequency": "rare",
-      "label": "Poruchy polykání",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Mucositis oral",
-      "frequency": "rare",
-      "label": "Zánět sliznice dutiny ústní (stomatitida)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Kandidový zánět jazyka",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pharyngitis",
-      "frequency": "rare",
-      "label": "Zánět hltanu, včetně kandidového zánětu hltanu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "rare",
-      "label": "Zánětlivé léze v anogenitální oblasti spojené s přerůstáním kmenů Candida; mohou se projevit svěděním v anální oblasti",
+      "label": "Kandidový zánět jazyka, hltanu nebo ústní sliznice",
       "action": null,
       "action_condition": null
     },
@@ -421,71 +398,70 @@
     {
       "ctcae": "Hepatitis",
       "frequency": "rare",
-      "label": "Zánět jater (hepatitida)",
+      "label": "Zánět jater",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatobiliary disorders - Other, specify",
       "frequency": "rare",
-      "label": "Poškození jater, žloutenka a abnormální funkce jater",
+      "label": "Poškození jater (hepatotoxicita)",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood bilirubin increased",
+      "frequency": "rare",
+      "label": "Žloutenka",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "rare",
-      "label": "Toxická epidermální nekrolýza; může se projevit zarudlými terčovitými nebo okrouhlými skvrnami, často s puchýřkem uprostřed, olupováním kůže nebo vřídky v ústech, nose, na genitáliích či v očích. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
+      "label": "Toxická epidermální nekrolýza; může se projevit olupováním kůže, puchýři nebo vředy v ústech, krku, nose, na genitáliích či v očích. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
       "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky toxické epidermální nekrolýzy, například puchýře, olupování kůže nebo vřídky na sliznicích"
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "rare",
-      "label": "Stevensův–Johnsonův syndrom; může se projevit zarudlými terčovitými nebo okrouhlými skvrnami, často s puchýřkem uprostřed, olupováním kůže nebo vřídky v ústech, nose, na genitáliích či v očích. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
+      "label": "Stevensův–Johnsonův syndrom; mohou se objevit červené terčovité skvrny, puchýře, olupování kůže nebo vředy v ústech, krku, nose, na genitáliích či v očích. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
       "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky Stevensova–Johnsonova syndromu, například puchýře, olupování kůže nebo vřídky na sliznicích"
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Erythema multiforme",
       "frequency": "rare",
-      "label": "Erythema multiforme",
-      "action": null,
+      "label": "Erythema multiforme (závažná kožní reakce)",
+      "action": "discontinue_treatment",
       "action_condition": null
     },
     {
       "ctcae": "Exfoliative dermatitis",
       "frequency": "rare",
-      "label": "Exfoliativní dermatitida",
+      "label": "Exfoliativní dermatitida (závažná kožní reakce)",
       "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce"
-      }
+      "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
+      "ctcae": "Drug reaction with eosinophilia and systemic symptoms",
       "frequency": "rare",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS), která se může projevit rozsáhlou vyrážkou, vysokou teplotou, zvýšenými jaterními enzymy, změnami krevních vyšetření, zvětšenými lymfatickými uzlinami a postižením dalších orgánů. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
+      "label": "DRESS syndrom: rozsáhlá vyrážka, horečka, zvýšené jaterní enzymy, zvýšený počet eozinofilů, zvětšené uzliny a možné postižení dalších orgánů. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
       "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky DRESS, například rozsáhlá vyrážka, vysoká teplota nebo otok lymfatických uzlin"
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Nail loss",
       "frequency": "rare",
-      "label": "Fotoonycholýza – odchlípnutí nehtů po předchozím oslunění",
+      "label": "Fotoonycholýza: odchlípení nehtů po předchozím oslunění",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Skin hyperpigmentation",
       "frequency": "rare",
-      "label": "Zvýšená pigmentace kůže při dlouhodobém užívání doxycyklinu",
+      "label": "Zvýšená pigmentace kůže při dlouhodobém užívání",
       "action": null,
       "action_condition": null
     },
@@ -504,16 +480,16 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Blood urea nitrogen increased",
       "frequency": "rare",
       "label": "Zvýšená hladina močoviny v krvi",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Tubulointerstitial nephritis",
+      "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "rare",
-      "label": "Intersticiální nefritida",
+      "label": "Poškození ledvin",
       "action": null,
       "action_condition": null
     },
@@ -527,21 +503,14 @@
     {
       "ctcae": "Urine output decreased",
       "frequency": "rare",
-      "label": "Anurie nebo zástava tvorby moči",
+      "label": "Zástava močení a tvorby moči (anurie)",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
-      "frequency": "rare",
-      "label": "Poškození ledvin",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
+      "ctcae": "Glossitis",
       "frequency": "very_rare",
-      "label": "Černě povleklý „chlupatý“ jazyk",
+      "label": "Černě potažený „chlupatý“ jazyk",
       "action": null,
       "action_condition": null
     },
@@ -569,114 +538,62 @@
     {
       "ctcae": "Tooth discoloration",
       "frequency": "not_known",
-      "label": "Změna barvy stálých zubů",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tooth discoloration",
-      "frequency": "uncommon",
-      "label": "U dětí mladších 12 let může doxycyklin způsobit nevratnou změnu barvy zubů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tooth development disorder",
-      "frequency": "uncommon",
-      "label": "U dětí mladších 12 let byly hlášeny defekty zubní skloviny.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Growth suppression",
-      "frequency": "uncommon",
-      "label": "U dětí mladších 12 let bylo hlášeno přechodné zpomalení růstu kostí.",
+      "label": "Změna barvy trvalých zubů; v pediatrické populaci byly popsány také defekty skloviny a reverzibilní zpomalení růstu kostí.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
+      "class_id": "atc:B01AA03",
       "drug": "warfarin",
-      "effect": "Při souběžném užívání doxycyklinu a warfarinu bylo hlášeno prodloužení protrombinového času. Tetracykliny snižují plazmatickou aktivitu protrombinu, proto může být při antikoagulační léčbě nutné snížit dávku antikoagulancia.",
+      "effect": "Při současném užívání doxycyklinu s warfarinem byl hlášen prodloužený protrombinový čas. Doxycyklin může snížit plazmatickou aktivitu protrombinu; lékař může při antikoagulační léčbě upravit dávku antikoagulancia.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Prodloužení protrombinového času",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:J01C",
       "drug_class": "peniciliny",
-      "effect": "Bakteriostatické léky, jako je doxycyklin, mohou narušit baktericidní účinek penicilinu; souběžné podávání se nedoporučuje.",
+      "effect": "Doxycyklin je bakteriostatický a může oslabit baktericidní účinek penicilinu; souběžné podávání se nedoporučuje.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "přípravky obsahující dvoj- nebo trojmocné kationty (hořčík, hliník a vápník), včetně antacid",
-      "effect": "Tyto přípravky mohou v trávicím ústrojí vytvářet nevstřebatelné cheláty a snižovat vstřebávání doxycyklinu. Přípravek Doxyhexal užijte 2–3 hodiny před nimi nebo po nich.",
+      "class_id": null,
+      "drug_class": "Přípravky s dvoj- nebo trojmocnými kationty, včetně antacid s hořčíkem, hliníkem či vápníkem; přípravky se železem nebo zinkem; aktivní uhlí a kolestyramin",
+      "effect": "Tyto přípravky a látky mohou v trávicím ústrojí snížit vstřebávání doxycyklinu tvorbou nevstřebatelných komplexů. Dodržte odstup 2–3 hodiny před nebo po doxycyklinu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "přípravky obsahující železo nebo zinek",
-      "effect": "Mohou snižovat vstřebávání doxycyklinu; Doxyhexal užijte 2–3 hodiny před nimi nebo po nich.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "aktivní uhlí",
-      "effect": "Může snižovat vstřebávání doxycyklinu; Doxyhexal užijte 2–3 hodiny před ním nebo po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "kolestyramin",
-      "effect": "Může snižovat vstřebávání doxycyklinu; Doxyhexal užijte 2–3 hodiny před ním nebo po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "mléko, mléčné výrobky a ovocné šťávy obsahující vápník",
-      "effect": "Vápník v těchto poživatinách může snižovat vstřebávání doxycyklinu. Doxyhexal užijte 2–3 hodiny před jejich konzumací nebo po ní.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "alkohol",
-      "effect": "Současné požití alkoholu zkracuje sérový poločas doxycyklinu. Příbalová informace doporučuje během užívání přípravku Doxyhexal nekonzumovat alkoholické nápoje.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:N05CA",
       "drug_class": "barbituráty",
-      "effect": "Současné užívání zkracuje sérový poločas doxycyklinu.",
+      "effect": "Současné požití alkoholu nebo užívání barbiturátů zkracuje sérový poločas doxycyklinu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:N03AF01",
       "drug": "karbamazepin",
-      "effect": "Současné užívání zkracuje sérový poločas doxycyklinu.",
+      "effect": "Současné užívání karbamazepinu zkracuje sérový poločas doxycyklinu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:N03AB02",
       "drug": "fenytoin",
-      "effect": "Současné užívání zkracuje sérový poločas doxycyklinu.",
+      "effect": "Současné užívání fenytoinu zkracuje sérový poločas doxycyklinu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:N02BG09",
       "drug": "methoxyfluran",
-      "effect": "Souběžné užití tetracyklinů a methoxyfluranu bylo spojeno s fatálním poškozením ledvin.",
+      "effect": "Při souběžném použití tetracyklinů a methoxyfluranu bylo hlášeno fatální poškození ledvin.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Acute kidney injury",
           "frequency": null,
           "label": "Poškození ledvin, které může být fatální",
           "action": null,
@@ -685,24 +602,272 @@
       ]
     },
     {
-      "drug_class": "retinoidy, včetně isotretinoinu",
-      "effect": "Doxycyklin se nemá podávat během léčby akné isotretinoinem ani jinými retinoidy, ani krátce před léčbou nebo po ní, protože může dojít k reverzibilnímu zvýšení nitrolebního tlaku (pseudotumor cerebri).",
+      "class_id": "atc:D10BA01",
+      "drug": "isotretinoin",
+      "effect": "Doxycyklin se nesmí užívat během léčby akné isotretinoinem ani krátce před ní nebo po ní, protože kombinace může způsobit vratné zvýšení nitrolebního tlaku (pseudotumor cerebri).",
       "effect_type": "contraindicated",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Intracranial pressure increased",
           "frequency": null,
-          "label": "Zvýšení nitrolebního tlaku (pseudotumor cerebri)",
+          "label": "Vratné zvýšení nitrolebního tlaku (pseudotumor cerebri)",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
+      "class_id": null,
+      "drug_class": "Jiné retinoidy používané k léčbě akné",
+      "effect": "Doxycyklin se nesmí užívat během léčby akné jinými retinoidy ani krátce před ní nebo po ní, protože kombinace může způsobit vratné zvýšení nitrolebního tlaku (pseudotumor cerebri).",
+      "effect_type": "contraindicated",
+      "side_effects": [
+        {
+          "ctcae": "Intracranial pressure increased",
+          "frequency": null,
+          "label": "Vratné zvýšení nitrolebního tlaku (pseudotumor cerebri)",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:L04AD01",
       "drug": "cyklosporin",
-      "effect": "Doxycyklin může zvýšit plazmatickou koncentraci cyklosporinu. Při souběžném užívání je nutné odpovídajícím způsobem monitorovat hladiny cyklosporinu.",
+      "effect": "Doxycyklin může zvýšit plazmatickou koncentraci cyklosporinu. Při současném užívání bude lékař odpovídajícím způsobem sledovat jeho hladinu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba infekcí způsobených mikroorganismy citlivými na doxycyklin u dospělých a dospívajících od 12 let.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0032954",
+      "H": "",
+      "NAZEV": "DOXYHEXAL",
+      "SILA": "100MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "20",
+      "CESTA": "POR",
+      "DOPLNEK": "100MG TBL NOB 20",
+      "OBAL": "BLI",
+      "DRZ": "HHO",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "J01AA02",
+      "RC": "15/073/97-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,1",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "20",
+      "ZDROJ_WHO": "NO26",
+      "LL": "5389",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "DOXYHEXAL",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0032954",
+        "KOD_LATKY": "5389",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "104,1",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5389",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "DOXYCYCLINUM MONOHYDRICUM",
+          "NAZEV_EN": "DOXYCYCLINE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT DOXYCYKLINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0032954",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0032954",
+        "KOD_LATKY": "1647",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "100",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1647",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "DOXYCYCLINUM",
+          "NAZEV_EN": "DOXYCYCLINE",
+          "NAZEV": "DOXYCYKLIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0032954",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0032954",
+        "KOD_LATKY": "3059",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3059",
+          "ZDROJ": "MEM",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU"
+        }
+      },
+      {
+        "KOD_SUKL": "0032954",
+        "KOD_LATKY": "4351",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4351",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "RICINI OLEUM HYDROGENATUM",
+          "NAZEV_EN": "CASTOR OIL, HYDROGENATED",
+          "NAZEV": "HYDROGENOVANÝ RICINOVÝ OLEJ"
+        }
+      },
+      {
+        "KOD_SUKL": "0032954",
+        "KOD_LATKY": "4078",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0032954",
+        "KOD_LATKY": "1300",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0032954",
+        "KOD_LATKY": "2378",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0032954",
+      "PIL": "PI175850.pdf",
+      "DAT_ROZ_PIL": "12.08.2021",
+      "SPC": "SPC181828.pdf",
+      "DAT_ROZ_SPC": "20.01.2022",
+      "OBAL_TEXT": "OBAL119167.pdf",
+      "DAT_ROZ_OBAL": "07.02.2018"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J01AA02",
+        "NT": "N",
+        "NAZEV": "DOXYCYKLIN",
+        "NAZEV_EN": "DOXYCYCLINE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

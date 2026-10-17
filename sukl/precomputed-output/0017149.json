@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J01",
+    "atc:J01C",
+    "atc:J01CR",
+    "atc:J01CR04",
+    "substance:13415"
+  ],
   "side_effects": [
     {
       "ctcae": "Diarrhea",
@@ -6,7 +14,8 @@
       "label": "Průjem",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví průjem."
+        "patient_guide": "Pokud se průjem objeví během léčby nebo po ní, informujte lékaře.",
+        "min_severity": null
       }
     },
     {
@@ -14,580 +23,817 @@
       "frequency": "common",
       "label": "Pocit na zvracení",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví pocit na zvracení."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "common",
       "label": "Bolest břicha",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud vás začne bolet břicho."
-      }
+      "action_condition": null
     },
     {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "uncommon",
-      "label": "Snížená hladina krevních destiček",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížená hladina krevních destiček."
-      }
+      "ctcae": "Anaphylaxis",
+      "frequency": "not_known",
+      "label": "Závažná alergická reakce nebo anafylaktický šok: otok obličeje, rtů, jazyka či hrdla, potíže s polykáním nebo dýcháním, silná svědivá vyrážka, pokles krevního tlaku nebo silný, rychlý či nepravidelný tep.",
+      "action": "discontinue_treatment",
+      "action_condition": null
     },
     {
-      "ctcae": "Headache",
-      "frequency": "uncommon",
-      "label": "Bolest hlavy",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud vás začne bolet hlava."
-      }
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "not_known",
+      "label": "Bolest na hrudi při alergické reakci (Kounisův syndrom).",
+      "action": "discontinue_treatment",
+      "action_condition": null
     },
     {
-      "ctcae": "Somnolence",
-      "frequency": "uncommon",
-      "label": "Spavost",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví spavost."
-      }
-    },
-    {
-      "ctcae": "Vomiting",
-      "frequency": "uncommon",
-      "label": "Zvracení",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud začnete zvracet."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Zánět jazyka",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zánět jazyka."
-      }
-    },
-    {
-      "ctcae": "Blood bilirubin increased",
-      "frequency": "uncommon",
-      "label": "Zvýšená hladina bilirubinu v krvi",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zvýšená hladina bilirubinu v krvi."
-      }
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "uncommon",
-      "label": "Únava",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví únava."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Zánět kůže (dermatitida)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zánět kůže."
-      }
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": "rare",
-      "label": "Závratě",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závratě."
-      }
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "rare",
-      "label": "Červené skvrny na kůži připomínající terč nebo oko s tmavým středem a světlejšími červenými kruhy (erythema multiforme)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví takové skvrny na kůži."
-      }
+      "ctcae": "Agranulocytosis",
+      "frequency": "not_known",
+      "label": "Závažný pokles určitého typu bílých krvinek (agranulocytóza), který zvyšuje riziko závažné infekce.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "rare",
-      "label": "Zarudlé, nevyvýšené terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupováním kůže a vředy v ústech, krku, nose, na genitáliích nebo očích; vyrážce může předcházet horečka a příznaky podobné chřipce (Stevensův-Johnsonův syndrom)",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto kožní nebo slizniční příznaky, případně jim předchází horečka nebo příznaky podobné chřipce."
-      }
+      "label": "Stevensův-Johnsonův syndrom: zarudlé terčovité skvrny, často s puchýři, olupováním kůže a vředy v ústech, krku, nose, na genitáliích nebo očích; vyrážce může předcházet horečka a příznaky podobné chřipce.",
+      "action": "discontinue_treatment",
+      "action_condition": null
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "rare",
-      "label": "Zarudlé, nevyvýšené terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupováním kůže a vředy v ústech, krku, nose, na genitáliích nebo očích; vyrážce může předcházet horečka a příznaky podobné chřipce (toxická epidermální nekrolýza)",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto kožní nebo slizniční příznaky, případně jim předchází horečka nebo příznaky podobné chřipce."
-      }
+      "label": "Toxická epidermální nekrolýza: rozsáhlé puchýře a olupování kůže, případně vředy na sliznicích.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "DRESS: rozsáhlá vyrážka s vysokou teplotou a zvětšenými mízními uzlinami.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pustular drug eruption",
+      "frequency": "not_known",
+      "label": "Akutní generalizovaná exantematózní pustulóza: rozsáhlá červená, šupinatá vyrážka s hrbolky pod kůží a puchýři, doprovázená horečkou; obvykle se objeví na začátku léčby.",
+      "action": "discontinue_treatment",
+      "action_condition": null
     },
     {
       "ctcae": "Exfoliative dermatitis",
       "frequency": "rare",
-      "label": "Závažný rozsáhlý zánět kůže s olupováním a šupinatěním",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažný rozsáhlý zánět kůže s olupováním a šupinatěním."
-      }
+      "label": "Závažný rozsáhlý zánět kůže s olupováním a šupinatěním.",
+      "action": "discontinue_treatment",
+      "action_condition": null
     },
     {
       "ctcae": "Seizure",
       "frequency": "rare",
-      "label": "Rychlé mimovolní svalové stahy způsobující nekontrolovaný třes těla (křeče)",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví křeče."
-      }
+      "label": "Křeče s rychlými, mimovolními svalovými stahy a nekontrolovaným třesem těla.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Colitis",
       "frequency": "rare",
-      "label": "Závažný a přetrvávající průjem s krví a hlenem ve stolici způsobený závažným zánětem tlustého střeva (pseudomembranózní kolitida)",
-      "action": "hospitalize_NOW",
+      "label": "Pseudomembranózní kolitida: závažný a přetrvávající průjem s krví a hlenem ve stolici.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte závažný a přetrvávající průjem s krví a hlenem ve stolici."
+        "patient_guide": "Pokud máte závažný a přetrvávající průjem s krví a hlenem ve stolici.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Enterocolitis",
       "frequency": "rare",
-      "label": "Bolest a křeče břicha, průjem a horečka, někdy také pocit na zvracení a zvracení (enterokolitida)",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví tyto příznaky zánětu tenkého a tlustého střeva."
-      }
+      "label": "Enterokolitida: bolest a křeče břicha, průjem a horečka, někdy také nevolnost a zvracení.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "not_known",
-      "label": "Únava, pocit na zvracení, kožní reakce, bolest břicha, svědění, tmavá moč nebo zežloutnutí kůže či očního bělma jako možné příznaky poškození jater (zánět jater v důsledku městnání žluči)",
-      "action": "hospitalize_NOW",
+      "label": "Cholestatická hepatitida, tedy zánět jater při městnání žluči: únava, nevolnost, kožní reakce, bolest břicha, svědění, tmavá moč nebo zežloutnutí kůže či očního bělma.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví uvedené příznaky možného poškození jater."
+        "patient_guide": "Pokud se objeví příznaky jaterního onemocnění, například tmavá moč nebo zežloutnutí kůže či očního bělma.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Biliary obstruction",
+      "ctcae": "Cholestasis",
       "frequency": "not_known",
-      "label": "Bolest břicha, pocit na zvracení a zvracení jako příznaky městnání žluči (cholestáza)",
-      "action": "hospitalize_NOW",
+      "label": "Cholestáza (městnání žluči): bolest břicha, nevolnost a zvracení.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest břicha, pocit na zvracení a zvracení."
+        "patient_guide": "Pokud se objeví příznaky jaterního onemocnění, například bolest břicha, nevolnost nebo zvracení.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Tubulointerstitial nephritis",
       "frequency": "rare",
-      "label": "Snížené nebo nadměrné močení, močení v noci nebo bolest v boku, případně s horečkou a vyrážkou (tubulointersticiální nefritida)",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví změny močení nebo bolest v boku, případně horečka či vyrážka."
-      }
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Otok obličeje, rtů, jazyka nebo hrdla, potíže s polykáním či dýcháním, závažná svědivá vyrážka, pokles krevního tlaku nebo silný, rychlý či nepravidelný srdeční tep jako příznaky závažné alergické reakce včetně anafylaktického šoku",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některý z těchto příznaků závažné alergické reakce."
-      }
-    },
-    {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "not_known",
-      "label": "Bolest na hrudi v souvislosti s alergickou reakcí, která může být příznakem srdečního infarktu vyvolaného alergií (Kounisův syndrom)",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest na hrudi související s alergickou reakcí."
-      }
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Závažný pokles určitého typu bílých krvinek (agranulocytóza), který vede k vysokému riziku závažné infekce",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví známky závažné infekce."
-      }
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "not_known",
-      "label": "Rozšířená vyrážka, vysoká tělesná teplota a zvětšené lymfatické uzliny (DRESS, léková reakce s eozinofilií a systémovými příznaky)",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozšířená vyrážka, vysoká teplota a zvětšené lymfatické uzliny."
-      }
-    },
-    {
-      "ctcae": "Rash pustular",
-      "frequency": "not_known",
-      "label": "Červená, šupinatá rozsáhlá vyrážka s hrbolky pod kůží a puchýři, doprovázená horečkou (akutní generalizovaná exantematózní pustulóza); příznaky se obvykle objevují na začátku léčby",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozsáhlá červená šupinatá vyrážka s hrbolky nebo puchýři a horečkou, zejména na začátku léčby."
-      }
-    },
-    {
-      "ctcae": "Candidiasis",
-      "frequency": "not_known",
-      "label": "Příznaky v různých částech těla způsobené plísňovou (kvasinkovou) infekcí (kandidóza)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky kvasinkové infekce."
-      }
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Pancytopenie",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Prodloužení doby srážení krve a změny srážlivosti krve",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví změny srážlivosti krve."
-      }
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "not_known",
-      "label": "Snížený počet bílých krvinek (leukopenie)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Neutrophil count decreased",
-      "frequency": "not_known",
-      "label": "Snížený počet neutrofilů (neutropenie)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hemolytic anemia",
-      "frequency": "not_known",
-      "label": "Hemolytická anemie",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anemia",
-      "frequency": "not_known",
-      "label": "Anemie (snížený počet červených krvinek nebo červeného krevního barviva)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví anemie."
-      }
-    },
-    {
-      "ctcae": "Eosinophilia",
-      "frequency": "not_known",
-      "label": "Eozinofilie",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Purpura",
-      "frequency": "not_known",
-      "label": "Trombocytopenická purpura",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anorexia",
-      "frequency": "not_known",
-      "label": "Ztráta chuti k jídlu",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví ztráta chuti k jídlu."
-      }
-    },
-    {
-      "ctcae": "Hypokalemia",
-      "frequency": "not_known",
-      "label": "Snížená hladina draslíku v krvi",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížená hladina draslíku v krvi."
-      }
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Neurotoxicita",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky neurotoxicity."
-      }
-    },
-    {
-      "ctcae": "Vasculitis",
-      "frequency": "not_known",
-      "label": "Alergický zánět krevních cév",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví alergický zánět krevních cév."
-      }
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "not_known",
-      "label": "Dušnost",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví dušnost."
-      }
-    },
-    {
-      "ctcae": "Hematochezia",
-      "frequency": "not_known",
-      "label": "Stolice s příměsí krve; také krvavá stolice s hlenem, horečkou a bolestí břicha",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví krev ve stolici, zejména pokud je přítomen také hlen, horečka nebo bolest břicha."
-      }
-    },
-    {
-      "ctcae": "Dry mouth",
-      "frequency": "not_known",
-      "label": "Sucho v ústech",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví sucho v ústech."
-      }
-    },
-    {
-      "ctcae": "Dysgeusia",
-      "frequency": "not_known",
-      "label": "Porucha chuti",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví porucha chuti."
-      }
-    },
-    {
-      "ctcae": "Flatulence",
-      "frequency": "not_known",
-      "label": "Plynatost",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví plynatost."
-      }
-    },
-    {
-      "ctcae": "Mucositis oral",
-      "frequency": "not_known",
-      "label": "Zánět sliznice úst",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zánět sliznice úst."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Změna barvy jazyka",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás změní barva jazyka."
-      }
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Žloutenka nebo porucha funkce jater",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví žloutenka nebo jiné příznaky poruchy funkce jater."
-      }
-    },
-    {
-      "ctcae": "Arthralgia",
-      "frequency": "not_known",
-      "label": "Bolest kloubů",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud vás začnou bolet klouby."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Zánět sliznic (mukozitida)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zánět sliznic."
-      }
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "not_known",
-      "label": "Kopřivka",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kopřivka."
-      }
-    },
-    {
-      "ctcae": "Dermatosis bullous",
-      "frequency": "not_known",
-      "label": "Vyrážka s puchýři uspořádanými do kruhu se středovou krustou nebo jako šňůra perel (lineární IgA bulózní dermatóza)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vyrážka s puchýři uspořádanými do kruhu nebo jako šňůra perel."
-      }
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": "not_known",
-      "label": "Zvýšená hladina alaninaminotransferázy nebo jiných jaterních enzymů",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zvýšená hladina jaterních enzymů."
-      }
-    },
-    {
-      "ctcae": "Aspartate aminotransferase increased",
-      "frequency": "not_known",
-      "label": "Zvýšená hladina aspartátaminotransferázy",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Abnormální agregace krevních destiček nebo porucha jejich funkce",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví porucha funkce krevních destiček."
-      }
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": "not_known",
-      "label": "Angioedém",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "not_known",
-      "label": "Cholestatická hepatitida",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Biliary obstruction",
-      "frequency": "not_known",
-      "label": "Cholestáza",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Enterocolitis",
-      "frequency": "rare",
-      "label": "Enterokolitida",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Melena",
-      "frequency": "not_known",
-      "label": "Meléna",
+      "label": "Tubulointersticiální nefritida (zánět ledvin): méně časté nebo nadměrné močení, noční močení nebo bolest v boku, případně s horečkou a vyrážkou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
-      "frequency": "not_known",
-      "label": "Snížený počet krevních destiček doprovázený tvorbou modřin",
-      "action": null,
+      "frequency": "uncommon",
+      "label": "Nízká hladina krevních destiček.",
+      "action": "contact_doctor",
       "action_condition": null
     },
     {
-      "ctcae": "Hypotension",
-      "frequency": "not_known",
-      "label": "Pokles krevního tlaku jako příznak závažné alergické reakce",
-      "action": null,
+      "ctcae": "Headache",
+      "frequency": "uncommon",
+      "label": "Bolest hlavy.",
+      "action": "contact_doctor",
       "action_condition": null
     },
     {
-      "ctcae": "Palpitations",
-      "frequency": "not_known",
-      "label": "Silný, rychlý nebo nepravidelný srdeční tep jako příznak závažné alergické reakce",
-      "action": null,
+      "ctcae": "Somnolence",
+      "frequency": "uncommon",
+      "label": "Spavost.",
+      "action": "contact_doctor",
       "action_condition": null
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "uncommon",
+      "label": "Zvracení.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Glossitis",
+      "frequency": "uncommon",
+      "label": "Zánět jazyka.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood bilirubin increased",
+      "frequency": "uncommon",
+      "label": "Zvýšená hladina bilirubinu v krvi.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "uncommon",
+      "label": "Únava.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dermatitis",
+      "frequency": "uncommon",
+      "label": "Zánět kůže (dermatitida).",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": "rare",
+      "label": "Závratě.",
+      "action": "continue",
+      "action_condition": {
+        "patient_guide": "Pokud po užití přípravku pocítíte závratě, neřiďte a neobsluhujte stroje ani elektrické nástroje.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Erythema multiforme",
+      "frequency": "rare",
+      "label": "Erythema multiforme: červené skvrny nebo tečky na kůži, které mohou připomínat terč nebo oko.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Candidiasis",
+      "frequency": "not_known",
+      "label": "Kvasinková infekce (kandidóza) v různých částech těla.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Coagulation disorder",
+      "frequency": "not_known",
+      "label": "Změny srážlivosti krve.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anemia",
+      "frequency": "not_known",
+      "label": "Snížený počet červených krvinek nebo hladina červeného krevního barviva (anémie).",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Purpura",
+      "frequency": "not_known",
+      "label": "Pokles počtu krevních destiček doprovázený tvorbou modřin.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anorexia",
+      "frequency": "not_known",
+      "label": "Porucha příjmu potravy.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypokalemia",
+      "frequency": "not_known",
+      "label": "Snížená hladina draslíku v krvi.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nervous system disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Neurotoxicita.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vasculitis",
+      "frequency": "not_known",
+      "label": "Alergický zánět krevních cév.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": "not_known",
+      "label": "Dušnost.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hematochezia",
+      "frequency": "not_known",
+      "label": "Krev ve stolici.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hemorhagic enterocolitis",
+      "frequency": "not_known",
+      "label": "Krvácivá enterokolitida.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dry mouth",
+      "frequency": "not_known",
+      "label": "Sucho v ústech.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysgeusia",
+      "frequency": "not_known",
+      "label": "Změna chuti.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Mucositis oral",
+      "frequency": "not_known",
+      "label": "Zánět sliznice úst.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Flatulence",
+      "frequency": "not_known",
+      "label": "Plynatost.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tongue discoloration",
+      "frequency": "not_known",
+      "label": "Změna barvy jazyka.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": "not_known",
+      "label": "Žloutenka.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Porucha funkce jater.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arthralgia",
+      "frequency": "not_known",
+      "label": "Bolest kloubů.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Mucositis",
+      "frequency": "not_known",
+      "label": "Zánět sliznic.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "not_known",
+      "label": "Vyrážka.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "not_known",
+      "label": "Svědění.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Angioedema",
+      "frequency": "not_known",
+      "label": "Angioedém (otok pod kůží).",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "not_known",
+      "label": "Kopřivka.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dermatosis bullous",
+      "frequency": "not_known",
+      "label": "Lineární IgA bulózní dermatóza: puchýřnaté kožní onemocnění.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "not_known",
+      "label": "Zvýšená hladina jaterních enzymů (ALT).",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Aspartate aminotransferase increased",
+      "frequency": "not_known",
+      "label": "Zvýšená hladina jaterních enzymů (AST).",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "not_known",
+      "label": "Porucha funkce krevních destiček.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancytopenia",
+      "frequency": "not_known",
+      "label": "Pokles počtu krvinek různých typů (pancytopenie).",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Activated partial thromboplastin time prolonged",
+      "frequency": "not_known",
+      "label": "Prodloužení koagulačního času.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Leukopenia",
+      "frequency": "not_known",
+      "label": "Snížený počet bílých krvinek.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Neutrophil count decreased",
+      "frequency": "not_known",
+      "label": "Snížený počet neutrofilů.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hemolytic anemia",
+      "frequency": "not_known",
+      "label": "Hemolytická anémie.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Eosinophilia",
+      "frequency": "not_known",
+      "label": "Zvýšený počet eozinofilů.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "not_known",
+      "label": "Anafylaktoidní reakce nebo šok.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anorexia",
+      "frequency": "not_known",
+      "label": "Ztráta chuti k jídlu.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Kounis syndrome",
+      "frequency": "not_known",
+      "label": "Kounisův syndrom: bolest na hrudi související s alergickou reakcí.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Enterocolitis infectious",
+      "frequency": "rare",
+      "label": "Pseudomembranózní kolitida způsobená bakterií Clostridioides difficile.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se po antibiotikách objeví závažný nebo přetrvávající průjem.",
+        "min_severity": null
+      }
     }
   ],
   "combinations": [
     {
-      "drug": "alopurinol",
-      "effect": "Při současném užívání alopurinolu a ampicilinu je riziko kožních reakcí vyšší než při užívání samotného ampicilinu.",
+      "class_id": "atc:M04AA01",
+      "drug": "Alopurinol",
+      "effect": "Při současném užívání alopurinolu a ampicilinu, který vzniká po užití sultamicilinu, je riziko kožních reakcí vyšší než při samotném ampicilinu.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
           "frequency": null,
-          "label": "Kožní reakce",
+          "label": "Zvýšené riziko kožních reakcí.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "antikoagulancia",
-      "effect": "Peniciliny mohou měnit shlukování krevních destiček a výsledky koagulačních testů; tyto účinky se mohou s účinky antikoagulancií sčítat.",
-      "effect_type": "synergy",
-      "side_effects": []
-    },
-    {
-      "drug_class": "bakteriostatická antibiotika (chloramfenikol, erythromycin, sulfonamidy a tetracykliny)",
-      "effect": "Bakteriostatické léky mohou rušit baktericidní účinek penicilinů, proto je nejlepší vyhnout se jejich současnému užívání.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "perorální kontraceptiva obsahující estrogen",
-      "effect": "U žen užívajících ampicilin byly hlášeny případy snížené účinnosti perorálních kontraceptiv vedoucí k neplánovanému těhotenství. Přestože jsou důkazy slabé, pacientky mají mít možnost použít během užívání ampicilinu alternativní nebo doplňkovou antikoncepční metodu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "methotrexát",
-      "effect": "Současné užívání s peniciliny snížilo clearance methotrexátu a následně zvýšilo jeho toxicitu. Pacienty je třeba pečlivě sledovat; může být nutné zvýšit dávky leukovorinu a podávat jej delší dobu.",
+      "class_id": "atc:B01A",
+      "drug_class": "Antikoagulancia",
+      "effect": "Peniciliny mohou měnit shlukování krevních destiček a výsledky koagulačních testů; tyto účinky se mohou s antikoagulancii sčítat.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "nesteroidní protizánětlivé léky (kyselina acetylsalicylová, indometacin a fenylbutazon)",
-      "effect": "Kyselina acetylsalicylová, indometacin a fenylbutazon mohou prodloužit eliminaci penicilinů, což se projevilo prodloužením jejich eliminačního poločasu.",
+      "class_id": null,
+      "drug_class": "Bakteriostatická antibiotika: chloramfenikol, erythromycin, sulfonamidy a tetracykliny",
+      "effect": "Bakteriostatické léky mohou rušit baktericidní účinek penicilinů; souběžné léčbě je nejlepší se vyhnout.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Perorální kontraceptiva obsahující estrogen",
+      "effect": "U žen užívajících ampicilin byly hlášeny případy snížené účinnosti perorální antikoncepce vedoucí k neplánovanému těhotenství. Během užívání ampicilinu lze zvážit alternativní nebo doplňkovou antikoncepční metodu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L01BA01",
+      "drug": "Methotrexát",
+      "effect": "Peniciliny při současném užívání snížily clearance methotrexátu a následně zvýšily jeho toxicitu. Lékař bude pacienta pečlivě sledovat; může být nutné zvýšit dávku leukovorinu a podávat jej déle.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M01AB01",
+      "drug": "Indometacin",
+      "effect": "Indometacin může prodloužit vylučování penicilinů a zvýšit jejich eliminační poločas.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "probenecid",
-      "effect": "Probenecid zpomaluje renální tubulární sekreci a při současném užívání může vést k vyšším a déle přetrvávajícím hladinám ampicilinu a sulbaktamu v séru, prodloužení eliminačního poločasu a zvýšenému riziku toxicity.",
+      "class_id": "atc:M01AA01",
+      "drug": "Fenylbutazon",
+      "effect": "Fenylbutazon může prodloužit vylučování penicilinů a zvýšit jejich eliminační poločas.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02BA01",
+      "drug": "Kyselina acetylsalicylová",
+      "effect": "Kyselina acetylsalicylová může prodloužit vylučování penicilinů a zvýšit jejich eliminační poločas.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M04AB01",
+      "drug": "Probenecid",
+      "effect": "Probenecid zpomaluje vylučování ledvinami, takže při současném užívání mohou být hladiny ampicilinu a sulbaktamu v krvi vyšší a přetrvávat déle; prodlužuje se eliminační poločas a zvyšuje riziko toxicity.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba infekcí vyvolaných citlivými mikroorganismy.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0017149",
+      "H": "",
+      "NAZEV": "UNASYN",
+      "SILA": "375MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "12",
+      "CESTA": "POR",
+      "DOPLNEK": "375MG TBL FLM 12",
+      "OBAL": "BLI",
+      "DRZ": "PFX",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "J01CR04",
+      "RC": "15/295/93-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "1,5",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "3",
+      "ZDROJ_WHO": "NO26",
+      "LL": "13415",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "UNASYN",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "13415",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "506,3",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13415",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "SULTAMICILLINI TOSILAS",
+          "NAZEV_EN": "SULTAMICILLIN TOSILATE",
+          "NAZEV": "SULTAMICILIN-TOSILÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "9002",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "375",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9002",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "SULTAMICILLINUM",
+          "NAZEV_EN": "SULTAMICILLIN",
+          "NAZEV": "SULTAMICILIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "2378",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "4336",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4336",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROLOSUM",
+          "NAZEV_EN": "HYPROLOSE",
+          "NAZEV": "HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "2624",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "3059",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3059",
+          "ZDROJ": "MEM",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "2970",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "1871",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "2710",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "748",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0017149",
+        "KOD_LATKY": "3765",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0017149",
+      "PIL": "PI226291.pdf",
+      "DAT_ROZ_PIL": "16.09.2025",
+      "SPC": "SPC226292.pdf",
+      "DAT_ROZ_SPC": "16.09.2025",
+      "OBAL_TEXT": "OBAL226078.pdf",
+      "DAT_ROZ_OBAL": "09.09.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J01CR04",
+        "NT": "N",
+        "NAZEV": "SULTAMICILIN",
+        "NAZEV_EN": "SULTAMICILLIN"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

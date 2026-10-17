@@ -1,181 +1,122 @@
 {
+  "classes": [
+    "atc:D",
+    "atc:D10",
+    "atc:D10B",
+    "atc:D10BA",
+    "atc:D10BA01",
+    "substance:8571"
+  ],
   "side_effects": [
-    {
-      "ctcae": "Anemia",
-      "frequency": "very_common",
-      "label": "Anémie, která se může projevit slabostí, závratěmi a bledou kůží.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_common",
-      "label": "Změna počtu krevních destiček; krvácení nebo srážení krve může probíhat snadněji.",
-      "action": null,
-      "action_condition": null
-    },
     {
       "ctcae": "Thrombocytosis",
       "frequency": "very_common",
-      "label": "Zvýšený počet krevních destiček.",
+      "label": "Změna počtu krevních destiček; může se snadněji krvácet nebo tvořit krevní sraženiny.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Anemia",
       "frequency": "very_common",
-      "label": "Zvýšená rychlost sedimentace krvinek.",
+      "label": "Chudokrevnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Neutrophil count decreased",
       "frequency": "common",
-      "label": "Snížený počet neutrofilů.",
+      "label": "Snížený počet bílých krvinek (neutropenie), což může zvýšit náchylnost k infekcím.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "White blood cell decreased",
-      "frequency": "common",
-      "label": "Snížený počet bílých krvinek, který může zvyšovat náchylnost k infekcím.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
+      "ctcae": "Lymphadenopathy",
       "frequency": "very_rare",
-      "label": "Zvětšení lymfatických uzlin.",
+      "label": "Zvětšené lymfatické uzliny.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "rare",
-      "label": "Alergická reakce, například vyrážka, svědění nebo otok.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jakákoli alergická reakce, přestaňte přípravek užívat a obraťte se na lékaře."
-      }
+      "label": "Alergická reakce s vyrážkou, svěděním, otokem nebo potížemi s dýcháním či polykáním.",
+      "action": "discontinue_treatment",
+      "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "rare",
-      "label": "Anafylaktická reakce; alergická reakce může způsobit otoky a potíže s dýcháním nebo polykáním.",
-      "action": "hospitalize_NOW",
+      "label": "Anafylaktická reakce.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud máte závažnou alergickou reakci, například potíže s dýcháním nebo polykáním, neprodleně vyhledejte neodkladnou lékařskou pomoc."
+        "patient_guide": "Pokud je reakce závažná.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Diabetes mellitus",
       "frequency": "very_rare",
-      "label": "Cukrovka; příznaky mohou zahrnovat nadměrnou žízeň a časté močení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperuricemia",
-      "frequency": "very_rare",
-      "label": "Zvýšená hladina kyseliny močové v krvi.",
+      "label": "Cukrovka; může se projevit nadměrnou žízní a častým močením.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depression",
       "frequency": "rare",
-      "label": "Deprese nebo související poruchy, například smutek, změna nálady, úzkost nebo emoční nepohodlí.",
+      "label": "Deprese nebo její zhoršení; může se projevit smutkem, změnou nálady, úzkostí nebo emoční nepohodou.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některá z uvedených známek duševních problémů, neprodleně kontaktujte lékaře."
-      }
+      "action_condition": null
     },
     {
-      "ctcae": "Depression",
+      "ctcae": "Aggression",
       "frequency": "rare",
-      "label": "Zhoršení již existující deprese.",
+      "label": "Sklony k agresivitě nebo násilné chování.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některá ze známek duševních problémů nebo se vaše deprese zhorší, neprodleně kontaktujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Sklony k agresivitě nebo projevy násilí.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některá z uvedených známek duševních problémů, neprodleně kontaktujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Anxiety",
-      "frequency": "rare",
-      "label": "Úzkost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některá z uvedených známek duševních problémů, neprodleně kontaktujte lékaře."
-      }
-    },
-    {
-      "ctcae": "Personality change",
-      "frequency": "rare",
-      "label": "Změny nálady.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některá z uvedených známek duševních problémů, neprodleně kontaktujte lékaře."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Suicidal ideation",
       "frequency": "very_rare",
-      "label": "Myšlenky nebo pocity týkající se sebepoškozování nebo ukončení vlastního života; nemusí se přitom projevovat známky deprese.",
+      "label": "Myšlenky na sebepoškození nebo sebevraždu.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některá z uvedených známek duševních problémů, neprodleně kontaktujte lékaře."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Suicide attempt",
       "frequency": "very_rare",
       "label": "Pokus o sebevraždu.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některá z uvedených známek duševních problémů, neprodleně kontaktujte lékaře."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Psychosis",
       "frequency": "very_rare",
       "label": "Psychotické příznaky, například ztráta kontaktu s realitou, slyšení hlasů nebo vidění věcí, které neexistují.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některá z uvedených známek duševních problémů, neprodleně kontaktujte lékaře."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "very_rare",
       "label": "Neobvyklé chování.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví některá z uvedených známek duševních problémů, neprodleně kontaktujte lékaře."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "common",
-      "label": "Bolesti hlavy.",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Edema cerebral",
+      "ctcae": "Intracranial hypertension",
       "frequency": "very_rare",
-      "label": "Zvýšený tlak v mozku (benigní nitrolební hypertenze), s trvalou bolestí hlavy, pocitem na zvracení, zvracením a změnami vidění.",
-      "action": "contact_doctor",
+      "label": "Zvýšený tlak v mozku; může se projevit trvalou bolestí hlavy spolu s nevolností, zvracením nebo změnami vidění.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte trvalou bolest hlavy spolu s pocitem na zvracení, zvracením nebo změnami vidění, ihned přestaňte přípravek užívat a obraťte se na lékaře."
+        "patient_guide": "Pokud máte trvalou bolest hlavy společně s nevolností, zvracením nebo změnou vidění.",
+        "min_severity": null
       }
     },
     {
@@ -202,8 +143,8 @@
     {
       "ctcae": "Dry eye",
       "frequency": "very_common",
-      "label": "Suché oči; mohou být zarudlé, bolestivé nebo podrážděné.",
-      "action": null,
+      "label": "Suché oči; zarudnutí, bolestivost a podráždění očí.",
+      "action": "contact_doctor",
       "action_condition": null
     },
     {
@@ -214,53 +155,67 @@
       "action_condition": null
     },
     {
-      "ctcae": "Eyelid function disorder",
+      "ctcae": "Blepharitis",
       "frequency": "very_common",
       "label": "Zánět očních víček.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "very_common",
-      "label": "Dráždění očí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Blurred vision",
       "frequency": "very_rare",
-      "label": "Rozmazané nebo zastřené vidění.",
+      "label": "Nejasné nebo rozmazané vidění.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zastřené vidění, ihned přestaňte přípravek užívat a obraťte se na lékaře."
+        "patient_guide": "Pokud máte zastřené vidění.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Cataract",
       "frequency": "very_rare",
-      "label": "Katarakta.",
+      "label": "Šedý zákal.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jakýkoli jiný problém se zrakem než zastřené vidění, co nejdříve to oznamte lékaři."
+        "patient_guide": "Pokud se u vás objeví poruchy vidění.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Decreased night vision",
       "frequency": "very_rare",
-      "label": "Noční slepota nebo zhoršené vidění za tmy; někdy může nastat náhle.",
+      "label": "Snížené vidění za tmy nebo noční slepota; někdy se objeví náhle.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jakýkoli problém se zrakem, oznamte to lékaři."
+        "patient_guide": "Pokud si všimnete jakéhokoli problému s viděním.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Vision decreased",
+      "ctcae": "Color vision deficiency",
       "frequency": "very_rare",
-      "label": "Barvoslepost nebo omezené barevné vidění.",
+      "label": "Zhoršené barevné vidění.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jakýkoli problém se zrakem, oznamte to lékaři."
+        "patient_guide": "Pokud se u vás objeví poruchy vidění.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Contact lens intolerance",
+      "frequency": "very_rare",
+      "label": "Nesnášenlivost kontaktních čoček.",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Corneal opacity",
+      "frequency": "very_rare",
+      "label": "Zákal rohovky.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás objeví poruchy vidění.",
+        "min_severity": null
       }
     },
     {
@@ -269,56 +224,28 @@
       "label": "Zánět rohovky.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jakýkoli problém se zrakem, oznamte to lékaři."
-      }
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Zákal rohovky.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jakýkoli problém se zrakem, oznamte to lékaři."
-      }
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Nesnášenlivost kontaktních čoček.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jakýkoli problém se zrakem, oznamte to lékaři."
+        "patient_guide": "Pokud se u vás objeví poruchy vidění.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Photophobia",
       "frequency": "very_rare",
-      "label": "Zvýšená citlivost na světlo.",
+      "label": "Zvýšená citlivost očí na světlo.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví jakýkoli problém se zrakem, oznamte to lékaři."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Papilledema",
       "frequency": "very_rare",
-      "label": "Otok terče zrakového nervu jako příznak zvýšeného tlaku v mozku.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte trvalou bolest hlavy spolu s pocitem na zvracení, zvracením nebo změnami vidění, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
+      "label": "Otok terče zrakového nervu jako příznak zvýšeného nitrolebního tlaku.",
+      "action": "discontinue_treatment",
+      "action_condition": null
     },
     {
       "ctcae": "Hearing impaired",
       "frequency": "very_rare",
       "label": "Zhoršení sluchu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vasculitis",
-      "frequency": "very_rare",
-      "label": "Zánět cév, někdy s modřinami nebo červenými skvrnami.",
       "action": null,
       "action_condition": null
     },
@@ -330,167 +257,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "common",
-      "label": "Suchost nosu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Upper respiratory infection",
-      "frequency": "common",
-      "label": "Zánět nosohltanu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Bronchospasm",
-      "frequency": "very_rare",
-      "label": "Dušnost způsobená stažením průdušek, zejména pokud máte astma.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hoarseness",
-      "frequency": "very_rare",
-      "label": "Chrapot.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Colitis",
-      "frequency": "very_rare",
-      "label": "Zánět tlustého střeva.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte závažnou bolest žaludku, krvavý průjem, pocit na zvracení nebo zvracení, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Zánět tenkého střeva.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte závažnou bolest žaludku, krvavý průjem, pocit na zvracení nebo zvracení, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Dry mouth",
-      "frequency": "very_rare",
-      "label": "Suchost v hrdle.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Krvácení do zažívacího traktu.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte závažnou bolest žaludku, krvavý průjem, pocit na zvracení nebo zvracení, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "very_rare",
-      "label": "Krvavý průjem nebo závažný (krvácivý) průjem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte krvavý nebo závažný průjem, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Zánětlivé onemocnění střev.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte závažnou bolest žaludku, krvavý průjem, pocit na zvracení nebo zvracení, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "very_rare",
-      "label": "Pocit na zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se pocit na zvracení objeví spolu se závažnou bolestí žaludku, krvavým průjmem nebo zvracením, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "very_rare",
-      "label": "Zánět slinivky břišní; může se projevit závažnou bolestí žaludku, pocitem na zvracení nebo zvracením.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte závažnou bolest žaludku, krvavý průjem, pocit na zvracení nebo zvracení, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Anal fissure",
-      "frequency": "not_known",
-      "label": "Anální fisura, tedy malá trhlina ve sliznici konečníku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
+      "ctcae": "Dry skin",
       "frequency": "very_common",
-      "label": "Zvýšené hladiny jaterních enzymů zjištěné při krevních testech.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "very_rare",
-      "label": "Zánět jater, který se může projevit zežloutnutím kůže nebo očí a únavou.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zežloutnutí kůže nebo očí nebo pocit únavy jako příznaky zánětu jater, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Glomerulonephritis",
-      "frequency": "very_rare",
-      "label": "Zánět ledvin, který se může projevit obtížemi při močení, oteklými očními víčky a nadměrnou únavou.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví obtíže při močení, oteklá oční víčka nebo nadměrná únava jako příznaky zánětu ledvin, ihned přestaňte přípravek užívat a obraťte se na lékaře."
-      }
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zánět močové trubice.",
+      "label": "Suchá, zarudlá a olupující se kůže s mírným svěděním.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cheilitis",
       "frequency": "very_common",
-      "label": "Suché a bolestivé rty, včetně zánětu rtů.",
+      "label": "Suché a bolestivé rty se zánětem.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Dry skin",
+      "ctcae": "Dermatitis",
       "frequency": "very_common",
-      "label": "Suchá kůže, někdy zarudlá, s vyrážkou, mírným svěděním a olupováním.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "very_common",
-      "label": "Dermatitida.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Exfoliative dermatitis",
-      "frequency": "very_common",
-      "label": "Místní olupování kůže.",
+      "label": "Zánět kůže.",
       "action": null,
       "action_condition": null
     },
@@ -504,14 +287,21 @@
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "very_common",
-      "label": "Zarudlá vyrážka.",
+      "label": "Zarudlá kožní vyrážka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Skin exfoliation",
       "frequency": "very_common",
-      "label": "Křehkost kůže se zvýšeným rizikem poškození při tření.",
+      "label": "Olupování kůže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Skin fragility",
+      "frequency": "very_common",
+      "label": "Křehká kůže, která se může snadno poškodit třením.",
       "action": null,
       "action_condition": null
     },
@@ -523,23 +313,23 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Acne",
       "frequency": "very_rare",
-      "label": "Akné se může zpočátku zhoršit; obvykle se později zlepšuje. Vzácně může přetrvávat nebo se zhoršovat bez zlepšení.",
+      "label": "Akné se může v prvních týdnech přechodně zhoršit; obvykle se pak zlepší.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Acne fulminans",
       "frequency": "very_rare",
-      "label": "Zhoršující se akné bez následného zlepšení, doprovázené horečkou a bolestmi kloubů (acne fulminans).",
+      "label": "Zhoršení akné s horečkou a bolestmi kloubů (akné fulminans).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Erythema",
       "frequency": "very_rare",
-      "label": "Zanícená a oteklá kůže, která je tmavší než obvykle, zejména na obličeji.",
+      "label": "Zanícená a oteklá kůže, která je tmavší než obvykle, zvláště v obličeji.",
       "action": null,
       "action_condition": null
     },
@@ -551,7 +341,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hair texture abnormal",
+      "ctcae": "Hair color changes",
       "frequency": "very_rare",
       "label": "Změny vlasů.",
       "action": null,
@@ -572,7 +362,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Nail infection",
+      "ctcae": "Paronychia",
       "frequency": "very_rare",
       "label": "Bakteriální infekce v nehtovém lůžku.",
       "action": null,
@@ -581,7 +371,7 @@
     {
       "ctcae": "Nail changes",
       "frequency": "very_rare",
-      "label": "Změny nehtů nebo jejich dystrofie.",
+      "label": "Změny nehtů.",
       "action": null,
       "action_condition": null
     },
@@ -593,28 +383,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Localized edema",
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "very_rare",
       "label": "Otoky, výtoky nebo hnisání kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Pyogenní granulom.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin hyperpigmentation",
-      "frequency": "very_rare",
-      "label": "Zvýšená pigmentace kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Superficial soft tissue fibrosis",
+      "ctcae": "Hypertrophic scar",
       "frequency": "very_rare",
       "label": "Ztluštělá jizva po poranění nebo chirurgickém výkonu.",
       "action": null,
@@ -623,57 +399,61 @@
     {
       "ctcae": "Erythema multiforme",
       "frequency": "not_known",
-      "label": "Erythema multiforme, závažná kožní reakce.",
-      "action": "hospitalize_NOW",
+      "label": "Závažná kožní vyrážka s načervenalými, nevyvýšenými terčovitými nebo kruhovými skvrnami, často s puchýři uprostřed; mohou se olupovat části kůže a vznikat vředy v ústech, krku, nose, na genitáliích nebo v očích.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud si všimnete příznaků závažné kožní reakce, přestaňte isotretinoin užívat a okamžitě vyhledejte lékařskou pomoc."
+        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom: načervenalé, nevyvýšené terčovité nebo kruhové skvrny, často s puchýři, olupováním kůže a vředy v ústech, krku, nose, na genitáliích nebo v očích; může mu předcházet horečka nebo příznaky podobné chřipce. Závažná forma může být život ohrožující.",
-      "action": "hospitalize_NOW",
+      "label": "Stevensův–Johnsonův syndrom: závažná vyrážka s načervenalými terčovitými nebo kruhovými skvrnami, často s puchýři uprostřed, olupováním kůže nebo vředy na sliznicích; může jí předcházet horečka nebo příznaky podobné chřipce. Léčbu ihned ukončete.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud si všimnete příznaků závažné kožní reakce, přestaňte isotretinoin užívat a okamžitě vyhledejte lékařskou pomoc."
+        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza: načervenalé, nevyvýšené terčovité nebo kruhové skvrny, často s puchýři, olupováním kůže a vředy v ústech, krku, nose, na genitáliích nebo v očích; může jí předcházet horečka nebo příznaky podobné chřipce. Závažná forma může být život ohrožující.",
-      "action": "hospitalize_NOW",
+      "label": "Toxická epidermální nekrolýza: závažná vyrážka s načervenalými terčovitými nebo kruhovými skvrnami, puchýři, olupováním kůže nebo vředy na sliznicích; může jí předcházet horečka nebo příznaky podobné chřipce. Léčbu ihned ukončete.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud si všimnete příznaků závažné kožní reakce, přestaňte isotretinoin užívat a okamžitě vyhledejte lékařskou pomoc."
+        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Pustular drug eruption",
       "frequency": "not_known",
-      "label": "Akutní generalizovaná exantematózní pustulóza (AGEP): rozsáhlá červená šupinatá vyrážka s podkožními hrboly a puchýři, doprovázená horečkou; obvykle se objeví na začátku léčby.",
-      "action": "hospitalize_NOW",
+      "label": "Akutní generalizovaná exantematózní pustulóza: rozsáhlá červená, šupinatá vyrážka s podkožními hrboly a puchýři, doprovázená horečkou; obvykle se objeví na začátku léčby. Léčbu ihned ukončete.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud si všimnete příznaků závažné kožní reakce, přestaňte isotretinoin užívat a okamžitě vyhledejte lékařskou pomoc."
+        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Arthralgia",
+      "ctcae": "Back pain",
       "frequency": "very_common",
-      "label": "Bolest kloubů, zvláště u dospívajících.",
+      "label": "Bolest zad; zejména u dospívajících.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
       "frequency": "very_common",
-      "label": "Bolest svalů, zvláště u dospívajících; při intenzivní fyzické námaze se může zhoršit.",
+      "label": "Bolest svalů; zejména u dospívajících.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Back pain",
+      "ctcae": "Arthralgia",
       "frequency": "very_common",
-      "label": "Bolest zad, zvláště u dospívajících.",
+      "label": "Bolest kloubů; zejména u dospívajících.",
       "action": null,
       "action_condition": null
     },
@@ -685,56 +465,65 @@
       "action_condition": null
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "ctcae": "Tendinitis",
       "frequency": "very_rare",
-      "label": "Bolesti nebo zánět šlach.",
+      "label": "Zánět šlach.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Osteoporosis",
       "frequency": "very_rare",
-      "label": "Snížená hustota kostní hmoty zjištěná speciálními testy.",
+      "label": "Snížená hustota kostní hmoty.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "ctcae": "Epiphyseal plate closure",
       "frequency": "very_rare",
-      "label": "Poruchy kostí a změny růstu kostí, zvláště u mladých lidí.",
+      "label": "Předčasné uzavření růstových štěrbin kostí.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "ctcae": "Calcinosis",
       "frequency": "very_rare",
-      "label": "Ukládání vápníku v měkkých tkáních, které může vytvářet tvrdé boule pod kůží; kalcifikace vazů a šlach.",
+      "label": "Ukládání vápníku v měkkých tkáních, které může vytvářet tvrdé boule pod kůží.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Exostosis",
       "frequency": "very_rare",
-      "label": "Zvýšené hladiny produktů rozpadu svalů v krvi zjištěné při krevních testech; u pacientů při intenzivní fyzické námaze se mohou objevit bolesti svalů.",
+      "label": "Změny kostí včetně nadměrného růstu kostní tkáně.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood creatine phosphokinase increased",
+      "frequency": "very_rare",
+      "label": "Zvýšená hladina kreatinfosfokinázy v krvi; při intenzivní fyzické námaze se mohou objevit bolesti svalů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rhabdomyolysis",
       "frequency": "not_known",
-      "label": "Rychlý rozklad velkého množství svalových produktů v krvi, který může poškodit ledviny; příznaky mohou zahrnovat bolest svalů, tmavou moč a slabost.",
-      "action": "contact_doctor",
+      "label": "Rozpad svalů; může se projevit bolestí svalů, tmavou močí a slabostí a poškodit ledviny. Při těchto příznacích léčbu ukončete.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte bolest svalů, tmavou moč a slabost, přestaňte přípravek užívat a ihned kontaktujte lékaře."
+        "patient_guide": "Pokud máte bolest svalů, tmavou moč a slabost.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "ctcae": "Sacroiliitis",
       "frequency": "not_known",
-      "label": "Sakroileitida, druh zánětlivé bolesti zad v oblasti beder nebo hýžďových svalů.",
+      "label": "Sakroileitida, zánětlivá bolest zad v oblasti beder nebo hýždí; při přetrvávající bolesti informujte lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud během léčby máte přetrvávající bolest v oblasti beder nebo hýžďových svalů, informujte o tom lékaře."
+        "patient_guide": "Pokud během léčby přetrvává bolest v bedrech nebo hýžďových svalech.",
+        "min_severity": null
       }
     },
     {
@@ -748,27 +537,6 @@
       "ctcae": "Cholesterol high",
       "frequency": "common",
       "label": "Zvýšená hladina cholesterolu v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "HDL decreased",
-      "frequency": "very_common",
-      "label": "Snížená hladina HDL v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypertriglyceridemia",
-      "frequency": "very_common",
-      "label": "Zvýšená hladina triglyceridů v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperglycemia",
-      "frequency": "common",
-      "label": "Zvýšená hladina krevního cukru.",
       "action": null,
       "action_condition": null
     },
@@ -787,9 +555,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Malaise",
       "frequency": "very_rare",
-      "label": "Zvýšená hladina kreatinfosfokinázy v krvi.",
+      "label": "Celkový pocit nevolnosti.",
       "action": null,
       "action_condition": null
     },
@@ -801,9 +569,16 @@
       "action_condition": null
     },
     {
+      "ctcae": "Vasculitis",
+      "frequency": "very_rare",
+      "label": "Zánět krevních cév, někdy s modřinami nebo červenými skvrnami.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Urine discoloration",
       "frequency": "not_known",
-      "label": "Tmavá nebo jako kola zbarvená moč.",
+      "label": "Tmavá nebo kolová moč.",
       "action": null,
       "action_condition": null
     },
@@ -817,14 +592,14 @@
     {
       "ctcae": "Libido decreased",
       "frequency": "not_known",
-      "label": "Snížené libido.",
+      "label": "Snížená sexuální touha.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gynecomastia",
       "frequency": "not_known",
-      "label": "Zvětšení prsní žlázy u mužů, s citlivostí prsu nebo bez ní.",
+      "label": "Zvětšení prsní žlázy u mužů, někdy s citlivostí prsu.",
       "action": null,
       "action_condition": null
     },
@@ -836,108 +611,518 @@
       "action_condition": null
     },
     {
-      "ctcae": "Malaise",
+      "ctcae": "Allergic reaction",
+      "frequency": "rare",
+      "label": "Alergická reakce na Ponceau 4R (E 124); barvivo může vyvolat také astma, zvláště u lidí alergických na kyselinu acetylsalicylovou.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
       "frequency": "very_rare",
-      "label": "Všeobecný pocit nevolnosti.",
+      "label": "Alergická reakce na sójový olej.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Závažná bolest žaludku.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud máte závažnou bolest žaludku, krvavý průjem, nevolnost nebo zvracení.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Hematochezia",
+      "frequency": "very_rare",
+      "label": "Krvavý průjem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud máte závažnou bolest žaludku, krvavý průjem, nevolnost nebo zvracení.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "very_rare",
+      "label": "Nevolnost.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud máte závažnou bolest žaludku, krvavý průjem, nevolnost nebo zvracení.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "very_rare",
+      "label": "Zvracení.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud máte závažnou bolest žaludku, krvavý průjem, nevolnost nebo zvracení.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Anal fissure",
+      "frequency": "not_known",
+      "label": "Drobná trhlina ve sliznici konečníku.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "very_rare",
-      "label": "Infekce kůže a sliznic vyvolané grampozitivními bakteriemi.",
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "very_common",
+      "label": "Zvýšené jaterní enzymy zjištěné v krevních testech.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
+      "ctcae": "Hepatitis",
       "frequency": "very_rare",
-      "label": "Zvýšená tvorba granulační tkáně.",
+      "label": "Zánět jater; může se projevit zežloutnutím kůže nebo očí a únavou. Léčbu ukončete.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Glomerulonephritis",
+      "frequency": "very_rare",
+      "label": "Zánět ledvin; může se projevit obtížemi při močení, oteklými víčky nebo výraznou únavou. Léčbu ukončete.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urethritis",
+      "frequency": "not_known",
+      "label": "Zánět močové trubice.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nasal dryness",
+      "frequency": "common",
+      "label": "Suchost nosu a hrdla.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nasopharyngitis",
+      "frequency": "common",
+      "label": "Zánět nosohltanu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bronchospasm",
+      "frequency": "very_rare",
+      "label": "Dušnost způsobená stažením průdušek, zejména pokud máte astma.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hoarseness",
+      "frequency": "very_rare",
+      "label": "Chrapot.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": "very_rare",
+      "label": "Dušnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Generalized muscle weakness",
+      "frequency": "very_rare",
+      "label": "Slabost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dry mouth",
+      "frequency": "very_rare",
+      "label": "Suchost hltanu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pregnancy loss",
-      "frequency": "not_known",
-      "label": "Zvýšené riziko samovolného potratu při užívání v těhotenství.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Congenital, familial and genetic disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Při užívání v těhotenství může přípravek způsobit závažné vrozené vady nenarozeného dítěte, mimo jiné postihující mozek, obličej, uši, oči, srdce, kosti, nervový systém, brzlík nebo příštítná tělíska.",
+      "frequency": null,
+      "label": "Zvýšené riziko samovolného potratu při expozici isotretinoinu během těhotenství.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
+      "class_id": "atc:A11C",
       "drug_class": "vitamin A",
-      "effect": "Vitamin A se nesmí užívat současně s isotretinoinem kvůli nebezpečí předávkování a vzniku hypervitaminózy A.",
-      "effect_type": "contraindicated",
+      "effect": "Současně neužívejte vitamin A, protože kombinace s isotretinoinem může vést k hypervitaminóze A.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:J01A",
       "drug_class": "tetracykliny",
-      "effect": "Současné užívání isotretinoinu a tetracyklinů je nutné vyloučit. Byly hlášeny případy benigní nitrolební hypertenze (pseudotumor cerebri); současné podávání je kontraindikováno.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Edema cerebral",
-          "frequency": "not_known",
-          "label": "Benigní nitrolební hypertenze (pseudotumor cerebri), která se může projevit bolestí hlavy, pocitem na zvracení, zvracením, poruchami vidění nebo otokem terče zrakového nervu.",
-          "action": "discontinue_treatment",
-          "action_condition": {
-            "patient_guide": "Pokud se u vás objeví benigní nitrolební hypertenze, léčbu isotretinoinem neprodleně přerušte."
-          }
-        }
-      ]
-    },
-    {
-      "drug_class": "lokální keratolytika, slupovací přípravky a jiné místní přípravky k léčbě akné",
-      "effect": "Současné používání místních keratolytik, slupovacích přípravků nebo jiných místních léčeb akné se nedoporučuje, protože může vést ke zvýšenému místnímu podráždění kůže.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "léky s myotoxickým potenciálem, například statiny, kortikosteroidy, kolchicin a penicilamin",
-      "effect": "U pacientů současně užívajících léky s myotoxickým potenciálem, například inhibitory HMG-CoA reduktázy (statiny), kortikosteroidy, kolchicin nebo penicilamin, má být isotretinoin předepisován s opatrností kvůli riziku nežádoucích účinků na svaly. Při intenzivním sportování se zvyšuje riziko rabdomyolýzy; u pacientů se zvýšeným rizikem se mají kontrolovat hodnoty CPK. Při závažném zvýšení CPK se léčba isotretinoinem ukončí.",
+      "effect": "Současné užívání isotretinoinu a tetracyklinů může způsobit benigní nitrolební hypertenzi (pseudotumor cerebri); této kombinaci se vyhněte. PIL uvádí příklady oxytetracyklin, doxycyklin a minocyklin.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Myalgia",
-          "frequency": "not_known",
-          "label": "Bolest svalů.",
+          "ctcae": "Intracranial hypertension",
+          "frequency": null,
+          "label": "Benigní nitrolební hypertenze (pseudotumor cerebri).",
           "action": null,
           "action_condition": null
-        },
-        {
-          "ctcae": "Rhabdomyolysis",
-          "frequency": "not_known",
-          "label": "Rabdomyolýza; riziko svalových nežádoucích účinků a rychlého rozpadu svalů se může zvýšit.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud máte bolest svalů, tmavou moč a slabost, přestaňte přípravek užívat a ihned kontaktujte lékaře."
-          }
         }
       ]
     },
     {
-      "drug": "alkohol",
-      "effect": "Nadměrná konzumace alkoholu je uváděna jako faktor, který může přispět k rabdomyolýze a svalovým nežádoucím účinkům při léčbě isotretinoinem; během léčby je třeba se jí vyhnout.",
+      "class_id": null,
+      "drug_class": "jiné místní přípravky k léčbě akné",
+      "effect": "Současné používání isotretinoinu s jinými přípravky na akné nanášenými na kůži, zejména s místními keratolytiky nebo slupovacími přípravky, může zesílit místní podráždění kůže; této kombinaci se vyhněte.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Rhabdomyolysis",
-          "frequency": "not_known",
-          "label": "Rabdomyolýza; riziko může přispět zvýšit nadměrná konzumace alkoholu.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud máte bolest svalů, tmavou moč a slabost, přestaňte přípravek užívat a ihned kontaktujte lékaře."
-          }
+          "ctcae": "Skin irritation",
+          "frequency": null,
+          "label": "Místní podráždění kůže.",
+          "action": null,
+          "action_condition": null
         }
       ]
     }
-  ]
+  ],
+  "usage": "Léčba těžkého akné odolného vůči standardní léčbě.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0017454",
+      "H": "",
+      "NAZEV": "AKNENORMIN",
+      "SILA": "10MG",
+      "FORMA": "CPS MOL",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "10MG CPS MOL 30",
+      "OBAL": "BLI",
+      "DRZ": "AHR",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "46",
+      "ATC_WHO": "D10BA01",
+      "RC": "46/138/05-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "30",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "10",
+      "ZDROJ_WHO": "NO26",
+      "LL": "8571",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "AKNENORMIN",
+      "MRP_CISLO": "DE/H/1702/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "A",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "8571",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "10",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "8571",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ISOTRETINOINUM",
+          "NAZEV_EN": "ISOTRETINOIN",
+          "NAZEV": "ISOTRETINOIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "1354",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1354",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "SOJAE OLEUM RAFFINATUM",
+          "NAZEV_EN": "SOYA-BEAN OIL, REFINED",
+          "NAZEV": "ČIŠTĚNÝ SÓJOVÝ OLEJ"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "5465",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5465",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "TOCOFEROLUM ALFA RRR",
+          "NAZEV_EN": "RRR-ALFA-TOCOPHEROL",
+          "NAZEV": "TOKOFEROL-ALFA-RRR"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "3642",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3642",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "DINATRII EDETAS",
+          "NAZEV_EN": "DISODIUM EDETATE",
+          "NAZEV": "DINATRIUM-EDETÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "3803",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3803",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "BUTYLHYDROXYANISOLUM",
+          "NAZEV_EN": "BUTYLHYDROXYANISOLE",
+          "NAZEV": "BUTYLHYDROXYANISOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "4296",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4296",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "OLEUM VEGETABILE HYDROGENATUM",
+          "NAZEV_EN": "HYDROGENATED VEGETABLE OIL",
+          "NAZEV": "HYDROGENOVANÝ ROSTLINNÝ OLEJ"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "14034",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14034",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "SOJAE OLEUM PARTIM HYDROGENATUM",
+          "NAZEV_EN": "PARTIALLY HYDROGENATED SOYA-BEAN OIL",
+          "NAZEV": "ČÁSTEČNĚ HYDROGENOVANÝ SÓJOVÝ OLEJ"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "2920",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2920",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "CERA FLAVA",
+          "NAZEV_EN": "BEESWAX, YELLOW",
+          "NAZEV": "ŽLUTÝ VOSK"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "2855",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "13030",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13030",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "GLYCEROLUM",
+          "NAZEV_EN": "GLYCEROL",
+          "NAZEV": "GLYCEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "14542",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14542",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SORBITOLUM LIQUIDUM NON CRISTALLISABILE",
+          "NAZEV_EN": "SORBITOL, LIQUID (NON-CRYSTALLISING)",
+          "NAZEV": "TEKUTÝ NEKRYSTALIZUJÍCÍ SORBITOL 70%"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "3791",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3791",
+          "ZDROJ": "C04M",
+          "NAZEV_INN": "RUBOR PONCEAU 4R",
+          "NAZEV_EN": "PONCEAU 4R, COCHINEAL RED A",
+          "NAZEV": "PONCEAU 4R"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "4538",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4538",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM NIGRUM",
+          "NAZEV_EN": "FERRIC OXIDE BLACK",
+          "NAZEV": "ČERNÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "2710",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0017454",
+        "KOD_LATKY": "2043",
+        "SQ": "16",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "2043",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "AQUA PURIFICATA",
+          "NAZEV_EN": "WATER, PURIFIED",
+          "NAZEV": "ČIŠTĚNÁ VODA"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0017454",
+      "PIL": "PI234568.pdf",
+      "DAT_ROZ_PIL": "16.06.2026",
+      "SPC": "SPC234569.pdf",
+      "DAT_ROZ_SPC": "16.06.2026",
+      "OBAL_TEXT": "OBAL208399.pdf",
+      "DAT_ROZ_OBAL": "14.03.2024"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "D10BA01",
+        "NT": "N",
+        "NAZEV": "ISOTRETINOIN",
+        "NAZEV_EN": "ISOTRETINOIN"
+      },
+      "formy": {
+        "FORMA": "CPS MOL",
+        "NAZEV": "Měkká tobolka",
+        "NAZEV_EN": "Capsule, soft",
+        "NAZEV_LAT": "Capsula mollis",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10211000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

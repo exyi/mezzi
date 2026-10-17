@@ -1,4 +1,15 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N06",
+    "atc:N06A",
+    "atc:N06AA",
+    "atc:N06AA16",
+    "group:cns_depressant",
+    "group:qt_prolonging",
+    "group:serotonergic",
+    "substance:4491"
+  ],
   "side_effects": [
     {
       "ctcae": "Hypotension",
@@ -22,13 +33,11 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Cholestasis",
       "frequency": "rare",
       "label": "Žloutenka způsobená městnáním žluči.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud vám zežloutne kůže nebo oční bělmo, ihned vyhledejte lékaře."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Ejaculation disorder",
@@ -38,16 +47,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Fatigue",
-      "frequency": "not_known",
-      "label": "Únava.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Somnolence",
       "frequency": "not_known",
-      "label": "Spavost.",
+      "label": "Únava a spavost.",
       "action": null,
       "action_condition": null
     },
@@ -70,9 +72,7 @@
       "frequency": "not_known",
       "label": "Kožní alergické reakce, například kopřivka, svědění nebo zčervenání kůže.",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní alergická reakce, například kopřivka, svědění nebo zčervenání kůže, ihned vyhledejte lékaře."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Dry mouth",
@@ -89,7 +89,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Tachycardia",
       "frequency": "not_known",
       "label": "Zrychlený srdeční tep.",
       "action": null,
@@ -103,14 +103,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "not_known",
       "label": "Změny na EKG.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Urinary retention",
       "frequency": "not_known",
       "label": "Opožděné močení.",
       "action": null,
@@ -119,10 +119,21 @@
     {
       "ctcae": "Suicidal ideation",
       "frequency": null,
-      "label": "Sebevražedné myšlenky nebo chování během užívání přípravku nebo záhy po přerušení léčby.",
-      "action": "hospitalize_NOW",
+      "label": "Během užívání nebo záhy po přerušení léčby se mohou objevit myšlenky na sebevraždu nebo sebepoškození.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás kdykoli objeví myšlenky na sebepoškození nebo sebevraždu, ihned vyhledejte lékaře nebo nejbližší nemocnici."
+        "patient_guide": "Pokud se u vás kdykoli objeví myšlenky na sebepoškození nebo sebevraždu; ihned vyhledejte lékaře nebo nejbližší nemocnici.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Suicide attempt",
+      "frequency": null,
+      "label": "Během užívání nebo záhy po přerušení léčby se může objevit sebevražedné chování.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás kdykoli objeví myšlenky na sebepoškození nebo sebevraždu; ihned vyhledejte lékaře nebo nejbližší nemocnici.",
+        "min_severity": null
       }
     },
     {
@@ -133,204 +144,522 @@
       "action_condition": null
     },
     {
-      "ctcae": "Headache",
+      "ctcae": null,
       "frequency": null,
-      "label": "Bolest hlavy po náhlém vysazení přípravku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": null,
-      "label": "Pocit na zvracení po náhlém vysazení přípravku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Seizure",
-      "frequency": null,
-      "label": "Křeče po náhlém vysazení přípravku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": null,
-      "label": "Nespavost po náhlém vysazení přípravku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Irritability",
-      "frequency": null,
-      "label": "Podrážděnost po náhlém vysazení přípravku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperhidrosis",
-      "frequency": null,
-      "label": "Nadměrné pocení po náhlém vysazení přípravku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Venous thromboembolism",
-      "frequency": null,
-      "label": "Možnost vzniku krevních sraženin v žilách po náhlém vysazení přípravku.",
+      "label": "Při náhlém vysazení, zejména po dlouhodobém užívání, se mohou objevit bolesti hlavy, nevolnost, křeče, nespavost, podrážděnost, nadměrné pocení a krevní sraženiny v žilách.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Inhibitory MAO",
-      "effect": "Dosulepin se nesmí kombinovat s inhibitory MAO; lze jej začít užívat až 2 týdny po vysazení inhibitoru MAO.",
+      "class_id": null,
+      "drug_class": "Inhibitory monoaminooxidázy (MAO)",
+      "effect": "Dosulepin se s inhibitory MAO nesmí užívat současně; lze jej začít užívat až 2 týdny po jejich vysazení.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "Léky ovlivňující převodní systém srdce",
-      "effect": "Současné užívání může zvýšit riziko poruch srdečního rytmu a prodloužení intervalu QT. Mezi příklady patří sotalol, ibutilid, chinidin, terfenadin, astemizol a halofantrin; tyto léky se s dosulepinem nemají podávat současně.",
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léky ovlivňující převodní systém srdce, které mohou prodloužit QT interval, například sotalol, ibutilid, chinidin, terfenadin, astemizol a halofantrin",
+      "effect": "Současné užívání s dosulepinem může zvýšit riziko poruch srdečního rytmu kvůli možnému prodloužení QT intervalu; tyto léky se nemají podávat současně.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko poruch srdečního rytmu a prodloužení intervalu QT.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:B01A",
       "drug_class": "Perorální antikoagulancia",
-      "effect": "Tricyklická antidepresiva mohou prodloužit poločas a zvýšit biologickou dostupnost perorálních antikoagulancií, pravděpodobně inhibicí jejich metabolismu nebo snížením střevní motility.",
+      "effect": "Dosulepin může prodloužit poločas a zvýšit biologickou dostupnost perorálních antikoagulancií, pravděpodobně inhibicí jejich metabolismu přes cytochrom P450 nebo zpomalením střevní motility.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Antihypertenziva",
-      "effect": "Dosulepin snižuje antihypertenzní účinek guanethidinu, betanidinu, debrisochinu a klonidinu.",
+      "class_id": "atc:C02AC01",
+      "drug": "Klonidin",
+      "effect": "Dosulepin snižuje antihypertenzní účinek klonidinu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "atc:C02CC02",
+      "drug": "Guanethidin",
+      "effect": "Dosulepin snižuje antihypertenzní účinek guanethidinu.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02CC01",
+      "drug": "Betanidin",
+      "effect": "Dosulepin snižuje antihypertenzní účinek betanidinu.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02CC04",
+      "drug": "Debrisochin",
+      "effect": "Dosulepin snižuje antihypertenzní účinek debrisochinu.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C03",
       "drug_class": "Diuretika",
-      "effect": "Při současném podávání tricyklických antidepresiv s diuretiky je zvýšené riziko poklesu krevního tlaku při změně polohy.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko poklesu krevního tlaku při změně polohy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky s anticholinergním účinkem",
-      "effect": "Dosulepin může mít při současném užívání aditivní účinek s dalšími anticholinergními léky a zvýšit centrální i periferní anticholinergní účinky. Patří sem parasympatolytika (atropin, skopolamin, homatropin), neuroleptika, antiparkinsonika, antiarytmika (disopyramid, propafenon), antihistaminika (bromfeniramin, difenhydramin), myorelaxancia (baklofen) a periferní vazodilatancia (papaverin).",
+      "effect": "Při současném užívání dosulepinu s diuretiky je zvýšené riziko poklesu krevního tlaku při změně polohy.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Sympatomimetika",
-      "effect": "Dosulepin může zesílit vazokonstrikční a jiné alfa-adrenergní účinky sympatomimetik, včetně lokálních anestetik s adrenalinem; mohou se také objevit poruchy srdečního rytmu a jiné závažné nežádoucí účinky.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Mohou se objevit poruchy srdečního rytmu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky tlumící centrální nervovou soustavu, včetně hypnotik",
-      "effect": "Dosulepin zvyšuje centrálně tlumivý účinek hypnotik a dalších látek tlumících centrální nervovou soustavu.",
+      "class_id": null,
+      "drug_class": "Léky s anticholinergním účinkem, například atropin, skopolamin, homatropin, neuroleptika, antiparkinsonika, disopyramid, propafenon, bromfeniramin, difenhydramin, baklofen a papaverin",
+      "effect": "Kvůli anticholinergnímu účinku dosulepinu se mohou účinky na centrální i periferní nervový systém sčítat. Dosulepin může také zpomalit vstřebávání perorálních léků z trávicího traktu tím, že tlumí jeho pohyblivost.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": null,
+      "drug_class": "Sympatomimetika, včetně adrenalinu v lokálních anestetikách",
+      "effect": "Dosulepin může zesílit zúžení cév a další účinky na alfa-adrenergní receptory; mohou se objevit poruchy srdečního rytmu a jiné závažné nežádoucí účinky.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cns_depressant",
+      "drug_class": "Léky na spaní a další látky tlumící centrální nervovou soustavu",
+      "effect": "Dosulepin zesiluje jejich centrálně tlumivý účinek.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:V03AZ01",
       "drug": "Alkohol",
-      "effect": "Tricyklická antidepresiva zesilují centrálně tlumivý účinek alkoholu. Během léčby přípravkem Prothiaden se alkoholické nápoje nemají pít.",
+      "effect": "Dosulepin zesiluje centrálně tlumivý účinek alkoholu. Během léčby se alkoholické nápoje nemají pít.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Selektivní inhibitory zpětného vychytávání serotoninu (SSRI)",
-      "effect": "Kombinace s dalšími antidepresivy typu SSRI může vést ke zvýšení nežádoucích účinků; na počátku léčby se doporučuje pacienta sledovat.",
+      "class_id": "group:serotonergic",
+      "drug_class": "Antidepresiva typu SSRI",
+      "effect": "Při kombinaci dosulepinu s dalšími antidepresivy typu SSRI se mohou zvýšit nežádoucí účinky; na začátku léčby se doporučuje sledování pacienta.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:N02AE01",
       "drug": "Buprenorfin",
-      "effect": "Současné užití buprenorfinu s tricyklickými antidepresivy, jako je dosulepin, může způsobit serotoninový syndrom, potenciálně život ohrožující stav. Při klinicky odůvodněné kombinaci se doporučuje pečlivé sledování, zejména na začátku léčby a při zvýšení dávky; při podezření na syndrom se podle závažnosti příznaků zváží snížení dávky nebo přerušení léčby.",
+      "effect": "Současné užívání buprenorfinu s dosulepinem může vést k serotoninovému syndromu, který může ohrozit život. Jeho příznaky mohou zahrnovat změny duševního stavu, nestabilitu autonomních funkcí, nervosvalové odchylky nebo zažívací příznaky. Při klinicky odůvodněné souběžné léčbě lékař pacienta pečlivě sleduje, zejména při zahájení léčby a zvýšení dávky.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": null,
           "frequency": null,
-          "label": "Serotoninový syndrom; mohou se objevit změny duševního stavu, nestabilita autonomního nervového systému, nervosvalové abnormality nebo zažívací příznaky.",
-          "action": null,
-          "action_condition": null
+          "label": "Serotoninový syndrom může způsobit změny duševního stavu, nestabilitu autonomních funkcí, nervosvalové odchylky nebo zažívací příznaky.",
+          "action": "contact_doctor",
+          "action_condition": {
+            "patient_guide": "Pokud se objeví příznaky serotoninového syndromu, například mimovolní rytmické stahy svalů, neklid s potřebou pohybu, halucinace, bezvědomí, nadměrné pocení, třes, zesílené reflexy, zvýšené napětí svalů nebo tělesná teplota nad 38 °C.",
+            "min_severity": null
+          }
         }
       ]
     },
     {
+      "class_id": "atc:N03A",
       "drug_class": "Antiepileptika",
-      "effect": "Dosulepin snižuje terapeutickou účinnost antiepileptik tím, že snižuje práh pro vznik křečí.",
+      "effect": "Dosulepin snižuje práh pro vznik křečí, a tím snižuje terapeutickou účinnost antiepileptik.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "atc:H03AA",
       "drug_class": "Hormony štítné žlázy",
       "effect": "Hormony štítné žlázy zvyšují účinnost dosulepinu.",
       "effect_type": "synergy",
       "side_effects": []
     },
     {
+      "class_id": "atc:N05CA",
       "drug_class": "Barbituráty",
-      "effect": "Barbituráty zvyšují odbourávání dosulepinu a mohou jeho hladinu snížit až dvacetkrát. Současně mají s dosulepinem aditivní tlumivý účinek na centrální nervovou a dýchací soustavu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Anestetika",
-      "effect": "Anestetika podaná během léčby mohou zvýšit riziko poruch srdečního rytmu a poklesu krevního tlaku. Před operací se doporučuje dosulepin vysadit a anesteziolog má být informován o léčbě.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko poruch srdečního rytmu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko poklesu krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Perorální léčivé přípravky",
-      "effect": "Dosulepin může kvůli silnému anticholinergnímu účinku, který tlumí pohyby trávicího traktu, snížit vstřebávání perorálních léků.",
+      "effect": "Barbituráty mohou zvýšením odbourávání snížit hladinu dosulepinu až dvacetkrát. Současně se sčítá tlumivý účinek na centrální nervovou soustavu a dýchání.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léky tlumící centrální nervovou soustavu, léky proti bolesti a alkohol",
-      "effect": "Přípravek Prothiaden může zvýšit účinky léků na spaní, dalších přípravků tlumících centrální nervovou soustavu, léků proti bolesti a alkoholu.",
+      "class_id": null,
+      "drug_class": "Anestetika podaná během léčby dosulepinem",
+      "effect": "Anestetika mohou zvýšit riziko poruch srdečního rytmu a poklesu krevního tlaku. Pokud je operace nutná, lékař může dosulepin před výkonem vysadit a anesteziolog má být informován o léčbě.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba deprese a přídatná léčba chronických bolestí.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0004207",
+      "H": "",
+      "NAZEV": "PROTHIADEN",
+      "SILA": "25MG",
+      "FORMA": "TBL OBD",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "25MG TBL OBD 30",
+      "OBAL": "BLI",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "30",
+      "ATC_WHO": "N06AA16",
+      "RC": "30/560/69-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "150",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "4491",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "PROTHIADEN",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "4491",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "28",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4491",
+          "ZDROJ": "C19",
+          "NAZEV_INN": "DOSULEPINI HYDROCHLORIDUM",
+          "NAZEV_EN": "DOSULEPIN HYDROCHLORIDE",
+          "NAZEV": "DOSULEPIN-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "1830",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "25",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1830",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "DOSULEPINUM",
+          "NAZEV_EN": "DOSULEPIN",
+          "NAZEV": "DOSULEPIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "2624",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "2970",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "1871",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "667",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "667",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GLYCEROLUM 85%",
+          "NAZEV_EN": "GLYCEROL (85 PER CENT)",
+          "NAZEV": "GLYCEROL 85%"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "4078",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "SQ": "10",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "1383",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1383",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SACCHAROSUM",
+          "NAZEV_EN": "SUCROSE",
+          "NAZEV": "SACHAROSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "1871",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "2710",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "1320",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1320",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM",
+          "NAZEV_EN": "CARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "3818",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3818",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "POLYVINYLIS ACETAS",
+          "NAZEV_EN": "POLY(VINYL ACETATE)",
+          "NAZEV": "POLY(VINYL-ACETÁT)"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "2658",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2658",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "ACIDUM STEARICUM",
+          "NAZEV_EN": "STEARIC ACID",
+          "NAZEV": "KYSELINA STEAROVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "4504",
+        "SQ": "17",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4504",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CERA ALBA ET CARNAUBA",
+          "NAZEV_EN": "WHITE BEESWAX AND CARNAUBA WAX",
+          "NAZEV": "SMĚS BÍLÉHO A KARNAUBSKÉHO VOSKU"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "15464",
+        "SQ": "18",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "15464",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FLAVUM OVI CH",
+          "NAZEV_EN": "YOLK YELLOW CH",
+          "NAZEV": "ŽLOUTKOVÁ ŽLUŤ CH"
+        }
+      },
+      {
+        "KOD_SUKL": "0004207",
+        "KOD_LATKY": "5612",
+        "SQ": "19",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5612",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "RUBOR CERASI 149",
+          "NAZEV_EN": "CHERRY RED 149",
+          "NAZEV": "TŘEŠŇOVÁ ČERVEŇ 149"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0004207",
+      "PIL": "PI180155.pdf",
+      "DAT_ROZ_PIL": "02.12.2021",
+      "SPC": "SPC180156.pdf",
+      "DAT_ROZ_SPC": "02.12.2021",
+      "OBAL_TEXT": "OBAL180157.pdf",
+      "DAT_ROZ_OBAL": "13.10.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N06AA16",
+        "NT": "N",
+        "NAZEV": "DOSULEPIN",
+        "NAZEV_EN": "DOSULEPIN"
+      },
+      "formy": {
+        "FORMA": "TBL OBD",
+        "NAZEV": "Obalená tableta",
+        "NAZEV_EN": "Coated tablet",
+        "NAZEV_LAT": "Tabuletta obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10220000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

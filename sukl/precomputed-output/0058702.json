@@ -1,21 +1,41 @@
 {
+  "classes": [
+    "atc:L",
+    "atc:L02",
+    "atc:L02B",
+    "atc:L02BA",
+    "atc:L02BA01",
+    "substance:1540"
+  ],
   "side_effects": [
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "rare",
-      "label": "Závažná kožní reakce se zarudlými, plochými terčovitými skvrnami, často s puchýři, olupováním kůže a vředy na sliznicích; může jí předcházet horečka a příznaky podobné chřipce.",
-      "action": "hospitalize_NOW",
+      "label": "Závažná kožní vyrážka se zarudlými terčovitými skvrnami, puchýři nebo olupováním kůže a vředy na sliznicích; může jí předcházet horečka a příznaky podobné chřipce.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky naznačující Stevensův-Johnsonův syndrom, přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc."
+        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce; při známkách této reakce už léčbu znovu nezačínejte.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "rare",
-      "label": "Závažná kožní reakce s olupováním kůže a vředy na sliznicích; může jí předcházet horečka a příznaky podobné chřipce.",
-      "action": "hospitalize_NOW",
+      "label": "Závažná kožní vyrážka s puchýři, olupováním kůže nebo vředy na sliznicích; může jí předcházet horečka a příznaky podobné chřipce.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky naznačující toxickou epidermální nekrolýzu, přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc."
+        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce; při známkách této reakce už léčbu znovu nezačínejte.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Angioedema",
+      "frequency": "common",
+      "label": "Otok hlubších vrstev kůže nebo sliznic, včetně otoku obličeje, rtů, jazyka či krku; tamoxifen může vyvolat nebo zhoršit hereditární angioedém.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte hereditární angioedém a objeví se otok obličeje, rtů, jazyka nebo krku či potíže s polykáním nebo dýcháním.",
+        "min_severity": null
       }
     },
     {
@@ -28,23 +48,39 @@
     {
       "ctcae": "Hot flashes",
       "frequency": "very_common",
-      "label": "Návaly horka, částečně způsobené antiestrogenním působením tamoxifenu.",
+      "label": "Návaly horka.",
       "action": null,
       "action_condition": null
     },
     {
+      "ctcae": "Vaginal hemorrhage",
+      "frequency": "very_common",
+      "label": "Krvácení z pochvy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vaginální krvácení.",
+        "min_severity": null
+      }
+    },
+    {
       "ctcae": "Vaginal discharge",
       "frequency": "very_common",
-      "label": "Vaginální (poševní) výtok.",
-      "action": null,
-      "action_condition": null
+      "label": "Výtok z pochvy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vaginální výtok.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Irregular menstruation",
       "frequency": "very_common",
       "label": "Nepravidelná menstruace.",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví nepravidelná menstruace.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Amenorrhea",
@@ -54,14 +90,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vaginal hemorrhage",
-      "frequency": "very_common",
-      "label": "Vaginální (poševní) krvácení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Generalized edema",
+      "ctcae": "Fluid retention",
       "frequency": "very_common",
       "label": "Zadržování tekutin.",
       "action": null,
@@ -84,7 +113,7 @@
     {
       "ctcae": "Hypercalcemia",
       "frequency": "common",
-      "label": "Zvýšená hladina vápníku v krvi u pacientů s kostními metastázami, zejména při zahájení léčby.",
+      "label": "Zvýšená hladina vápníku v krvi, zejména při zahájení léčby u pacientů s kostními metastázami.",
       "action": null,
       "action_condition": null
     },
@@ -98,7 +127,7 @@
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Točení hlavy.",
+      "label": "Točení hlavy nebo závrať.",
       "action": null,
       "action_condition": null
     },
@@ -110,16 +139,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Eye disorders - Other, specify",
+      "ctcae": "Vision decreased",
       "frequency": "common",
-      "label": "Poruchy zraku, které jsou pouze částečně vratné a mohou souviset s kataraktou, změnami rohovky nebo retinopatií.",
+      "label": "Poruchy zraku, které mohou souviset se zákalem čočky, změnami rohovky nebo retinopatií a mohou být jen částečně vratné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Stroke",
       "frequency": "common",
-      "label": "Ischemické cévní mozkové příhody.",
+      "label": "Cévní mozková příhoda.",
       "action": null,
       "action_condition": null
     },
@@ -133,7 +162,7 @@
     {
       "ctcae": "Venous thromboembolism",
       "frequency": "common",
-      "label": "Tromboembolické příhody včetně hluboké žilní trombózy a plicní embolie.",
+      "label": "Krevní sraženiny v povrchových nebo hlubokých žilách a plicní embolie.",
       "action": null,
       "action_condition": null
     },
@@ -159,14 +188,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "common",
       "label": "Změny hladiny jaterních enzymů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Hepatic steatosis",
       "frequency": "common",
       "label": "Nahromadění tuku v játrech.",
       "action": null,
@@ -201,30 +230,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
+      "ctcae": "Uterine leiomyoma",
       "frequency": "common",
-      "label": "Zvětšení děložních fibromů (nezhoubných nádorů).",
+      "label": "Zvětšení děložních fibromů, nezhoubných nádorů dělohy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
+      "ctcae": "Endometrial hyperplasia",
       "frequency": "common",
-      "label": "Proliferační změny děložní sliznice: neoplazie, hyperplazie a polypy.",
+      "label": "Zbytnění děložní sliznice a další proliferační změny včetně polypů; vzácně endometrióza.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Endometrióza.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Leukopenia",
       "frequency": "uncommon",
-      "label": "Snížený počet bílých krvinek (leukopenie).",
+      "label": "Snížený počet bílých krvinek.",
       "action": null,
       "action_condition": null
     },
@@ -236,37 +258,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Stroke",
-      "frequency": "uncommon",
-      "label": "Cévní mozková příhoda.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pneumonia",
-      "frequency": "uncommon",
-      "label": "Zápal plic.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Pneumonitis",
       "frequency": "uncommon",
-      "label": "Intersticiální pneumonitida.",
+      "label": "Zánět plic.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Hepatic cirrhosis",
       "frequency": "uncommon",
       "label": "Cirhóza jater.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
+      "ctcae": "Endometrial cancer",
       "frequency": "uncommon",
-      "label": "Zhoubný nádor děložní sliznice (karcinom endometria).",
+      "label": "Zhoubný nádor děložní sliznice.",
       "action": null,
       "action_condition": null
     },
@@ -280,7 +288,7 @@
     {
       "ctcae": "Optic neuritis",
       "frequency": "rare",
-      "label": "Zánět očního nervu; v malém počtu případů došlo ke slepotě.",
+      "label": "Zánětlivé onemocnění očního nervu; v malém počtu případů došlo ke slepotě.",
       "action": null,
       "action_condition": null
     },
@@ -294,77 +302,77 @@
     {
       "ctcae": "Bone pain",
       "frequency": "rare",
-      "label": "Bolest kostí při zahájení léčby jako reakce na tamoxifen.",
+      "label": "Při zahájení léčby bolest kostí jako reakce na léčbu tamoxifenem.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pain",
+      "ctcae": "Tumor pain",
       "frequency": "rare",
-      "label": "Bolest v oblasti postižené tkáně při zahájení léčby jako reakce na tamoxifen.",
+      "label": "Při zahájení léčby bolest v oblasti postižené tkáně jako reakce na léčbu tamoxifenem.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
+      "ctcae": "Ovarian cyst",
       "frequency": "rare",
       "label": "Cystické zvětšení vaječníků.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
+      "ctcae": "Uterine sarcoma",
       "frequency": "rare",
       "label": "Děložní sarkom, většinou maligní smíšený Müllerův nádor.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
+      "ctcae": "Vaginal polyp",
       "frequency": "rare",
-      "label": "Vaginální polypy.",
+      "label": "Polypy v pochvě.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Neutrophil count decreased",
       "frequency": "rare",
-      "label": "Snížený počet neutrofilů (neutropenie).",
+      "label": "Snížený počet neutrofilů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Agranulocytosis",
       "frequency": "rare",
-      "label": "Agranulocytóza.",
+      "label": "Agranulocytóza, výrazný pokles některých bílých krvinek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancytopenia",
+      "frequency": "very_rare",
+      "label": "Velmi nízké počty krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Neutrophil count decreased",
       "frequency": "very_rare",
-      "label": "Závažná neutropenie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Pancytopenie, tedy výrazné snížení počtu různých typů krvinek.",
+      "label": "Závažná neutropenie, velmi nízký počet neutrofilů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pancreatitis",
       "frequency": "very_rare",
-      "label": "Zánět slinivky břišní při závažně zvýšené hladině triglyceridů.",
+      "label": "Zánět slinivky břišní při výrazně zvýšené hladině triglyceridů v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Cholestasis",
       "frequency": "very_rare",
-      "label": "Městnání žluči (cholestáza).",
+      "label": "Městnání žluči.",
       "action": null,
       "action_condition": null
     },
@@ -376,7 +384,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Blood bilirubin increased",
+      "ctcae": "Jaundice",
       "frequency": "very_rare",
       "label": "Žloutenka.",
       "action": null,
@@ -390,58 +398,30 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Poškození jaterních buněk.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Hepatic failure",
       "frequency": "very_rare",
-      "label": "Selhání jater; některé případy závažnějších jaterních poruch byly smrtelné.",
+      "label": "Poškození jaterních buněk a selhání jater; některé závažné případy byly smrtelné.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Autoimmune disorder",
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Kožní lupus erythematosus, autoimunitní onemocnění.",
+      "label": "Kožní lupus erythematosus, autoimunitní kožní onemocnění.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Congenital, familial and genetic disorders - Other, specify",
+      "ctcae": "Porphyria cutanea tarda",
       "frequency": "very_rare",
       "label": "Porphyria cutanea tarda, metabolické onemocnění týkající se červených krvinek.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Erythema multiforme",
-      "frequency": "rare",
-      "label": "Erythema multiforme, závažná kožní vyrážka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dermatosis bullous",
-      "frequency": "rare",
-      "label": "Bulózní pemfigoid, závažné puchýřnaté kožní onemocnění.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "rare",
-      "label": "Otok hlubších vrstev kůže nebo sliznic (angioedém).",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "not_known",
-      "label": "Prodloužení QT intervalu na elektrokardiogramu.",
+      "label": "Prodloužení QT intervalu na elektrokardiogramu; u pacientů s predispozicí k prodloužení QT intervalu může být riziko srdečních rytmových potíží vyšší.",
       "action": null,
       "action_condition": null
     },
@@ -453,93 +433,299 @@
       "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
+      "ctcae": "Hereditary angioedema",
       "frequency": "not_known",
-      "label": "Vyvolání nebo zhoršení příznaků dědičného angioedému, včetně otoku obličeje, rtů, jazyka nebo krku a potíží s polykáním či dýcháním.",
+      "label": "Zhoršení hereditárního angioedému.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte dědičný angioedém a objeví se u vás otok obličeje, rtů, jazyka nebo krku nebo potíže s polykáním či dýcháním, ihned se obraťte na lékaře."
+        "patient_guide": "Pokud máte hereditární angioedém a objeví se otok obličeje, rtů, jazyka nebo krku či potíže s polykáním nebo dýcháním.",
+        "min_severity": null
       }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Léčivé přípravky obsahující estrogeny",
-      "effect": "Při současném užívání se může snížit účinek tamoxifenu i estrogenového přípravku; například účinek perorální antikoncepce může být nespolehlivý.",
+      "class_id": "group:cyp2d6_inhibitor_strong",
+      "drug_class": "Silné inhibitory CYP2D6, pokud možno se jim během léčby tamoxifenem vyhnout",
+      "effect": "Silné inhibitory CYP2D6 (paroxetin, fluoxetin, chinidin, cinakalcet a bupropion) mohou snížit hladinu aktivního metabolitu endoxifenu v plazmě přibližně o 65–75 %; nelze vyloučit snížení účinku tamoxifenu. Lékař má, pokud možno, této kombinaci zabránit.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:G03C",
+      "drug_class": "Přípravky obsahující estrogeny",
+      "effect": "Při současném užívání s tamoxifenem může dojít ke snížení účinku obou léčiv; například účinek perorální antikoncepce může být nespolehlivý.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "atc:B01AA",
       "drug_class": "Antikoagulancia kumarinového typu",
-      "effect": "Tamoxifen může při současném užívání významně zvýšit antikoagulační účinek. Při zahájení této kombinace se doporučuje pečlivé sledování pacienta.",
+      "effect": "Tamoxifen může významně zvýšit protisrážlivý účinek kumarinových antikoagulancií. Při zahájení kombinace bude lékař pečlivě sledovat srážlivost krve.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:B01AC",
       "drug_class": "Inhibitory agregace trombocytů",
-      "effect": "Současné užívání může zvýšit sklon ke krvácení během případné trombocytopenické fáze; doporučuje se pečlivé sledování stavu koagulace.",
+      "effect": "Současné užívání tamoxifenu může zvýšit sklon ke krvácení během možné fáze s nízkým počtem krevních destiček. Doporučuje se pečlivé sledování srážlivosti.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zvýšený sklon ke krvácení během možné trombocytopenické fáze.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:L01",
       "drug_class": "Cytotoxické látky",
-      "effect": "Při kombinaci tamoxifenu s cytotoxickými látkami je zvýšené riziko tromboembolických příhod.",
+      "effect": "Při kombinaci tamoxifenu s cytotoxickými látkami se zvyšuje riziko tromboembolických příhod.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Venous thromboembolism",
           "frequency": null,
-          "label": "Zvýšené riziko tromboembolických příhod.",
+          "label": "Zvýšené riziko krevních sraženin v žilách a plicní embolie při kombinaci s cytotoxickými látkami.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Bromokriptin",
-      "effect": "Současná léčba bromokriptinem zvyšuje koncentrace tamoxifenu v séru a koncentrace jeho aktivního metabolitu N-demethyl-tamoxifenu.",
+      "class_id": "atc:G02CB01",
+      "drug": "BROMOKRIPTIN",
+      "effect": "Současná léčba bromokriptinem zvyšuje hodnoty tamoxifenu v séru a jeho aktivního metabolitu N-demethyl tamoxifenu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:L02BG",
       "drug_class": "Inhibitory aromatázy",
-      "effect": "Užívání inhibitoru aromatázy spolu s tamoxifenem jako adjuvantní léčby neprokázalo lepší účinnost než samotný tamoxifen.",
-      "effect_type": null,
+      "effect": "Použití tamoxifenu jako adjuvantní léčby v kombinaci s inhibitorem aromatázy neprokázalo zlepšení účinnosti oproti samotnému tamoxifenu.",
+      "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "group:qt_prolonging",
       "drug_class": "Léčivé přípravky, o nichž je známo, že prodlužují QT interval",
-      "effect": "Tamoxifen může prodloužit QTc interval; současné užívání s dalšími přípravky prodlužujícími QT interval může toto prodloužení dále zvýraznit. Doporučuje se opatrnost a u těchto pacientů monitorování EKG a elektrolytů.",
+      "effect": "Tamoxifen v doporučené dávce může prodloužit QTc interval; současné užívání s přípravky prodlužujícími QT interval může toto prodloužení dále zvýraznit. U těchto pacientů se doporučuje opatrnost a lékař bude sledovat EKG a elektrolyty.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Další prodloužení QT intervalu na EKG.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Silné inhibitory CYP2D6, například paroxetin, fluoxetin, chinidin, cinakalcet a bupropion",
-      "effect": "Silné inhibitory CYP2D6 mohou snížit plazmatické hladiny aktivního metabolitu endoxifenu o 65–75 %. Nelze vyloučit snížení účinnosti tamoxifenu, proto se má současnému podávání těchto inhibitorů, pokud možno, zabránit.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Rifampicin",
-      "effect": "Induktor CYP3A4 rifampicin může snížit plazmatické hladiny tamoxifenu; význam tohoto zjištění není znám.",
-      "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba některých typů rakoviny prsu u žen i mužů.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0058702",
+      "H": "",
+      "NAZEV": "TAMOXIFEN EBEWE",
+      "SILA": "20MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "20MG TBL NOB 100",
+      "OBAL": "TBC",
+      "DRZ": "EBP",
+      "ZEMDRZ": "A",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "44",
+      "ATC_WHO": "L02BA01",
+      "RC": "44/553/96-B/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "20",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "100",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1540",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "1C",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "TAMOXIFEN EBEWE",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0058702",
+        "KOD_LATKY": "1540",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "30,4",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1540",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "TAMOXIFENI CITRAS",
+          "NAZEV_EN": "TAMOXIFEN CITRATE",
+          "NAZEV": "TAMOXIFEN-CITRÁT",
+          "DOP": "S4",
+          "NARVLA": "1C"
+        }
+      },
+      {
+        "KOD_SUKL": "0058702",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0058702",
+        "KOD_LATKY": "2678",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "20",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2678",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "TAMOXIFENUM",
+          "NAZEV_EN": "TAMOXIFEN",
+          "NAZEV": "TAMOXIFEN",
+          "DOP": "S4",
+          "NARVLA": "1C"
+        }
+      },
+      {
+        "KOD_SUKL": "0058702",
+        "KOD_LATKY": "2624",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0058702",
+        "KOD_LATKY": "2970",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0058702",
+        "KOD_LATKY": "3755",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0058702",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0058702",
+        "KOD_LATKY": "1300",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0058702",
+      "PIL": "PI233211.pdf",
+      "DAT_ROZ_PIL": "05.05.2026",
+      "SPC": "SPC233212.pdf",
+      "DAT_ROZ_SPC": "05.05.2026",
+      "OBAL_TEXT": "OBAL232344.pdf",
+      "DAT_ROZ_OBAL": "02.04.2026"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "L02BA01",
+        "NT": "N",
+        "NAZEV": "TAMOXIFEN",
+        "NAZEV_EN": "TAMOXIFEN"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

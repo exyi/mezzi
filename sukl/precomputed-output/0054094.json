@@ -1,44 +1,18 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N06",
+    "atc:N06A",
+    "atc:N06AX",
+    "atc:N06AX05",
+    "group:serotonergic",
+    "substance:11589"
+  ],
   "side_effects": [
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Změny krevního obrazu (krevní dyskrazie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Agranulocytóza.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "not_known",
-      "label": "Trombocytopenie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eosinophilia",
-      "frequency": "not_known",
-      "label": "Eozinofilie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "not_known",
-      "label": "Leukopenie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anemia",
-      "frequency": "not_known",
-      "label": "Anémie.",
+      "label": "Změny krevního obrazu (krevní dyskrazie, včetně agranulocytózy, trombocytopenie, eozinofilie, leukopenie a anémie). Agranulocytóza se může projevit příznaky podobnými chřipce, bolestí v krku a horečkou.",
       "action": null,
       "action_condition": null
     },
@@ -59,7 +33,7 @@
     {
       "ctcae": "Hyponatremia",
       "frequency": "not_known",
-      "label": "Pokles hladiny sodíku v krvi.",
+      "label": "Snížená hladina sodíku v krvi.",
       "action": null,
       "action_condition": null
     },
@@ -74,13 +48,11 @@
       "ctcae": "Anorexia",
       "frequency": "not_known",
       "label": "Nechutenství.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví spolu se slabostí, nevolností, zvracením, bolestí břicha nebo žloutenkou."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Anorexia",
+      "ctcae": null,
       "frequency": "not_known",
       "label": "Zvýšená chuť k jídlu.",
       "action": null,
@@ -96,10 +68,21 @@
     {
       "ctcae": "Suicidal ideation",
       "frequency": "not_known",
-      "label": "Sebevražedné myšlenky nebo chování.",
-      "action": "hospitalize_NOW",
+      "label": "Sebevražedné myšlenky.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás kdykoli objeví myšlenky na sebepoškození nebo sebevraždu; ihned vyhledejte lékaře nebo nejbližší nemocnici."
+        "patient_guide": "Pokud se u vás kdykoli objeví myšlenky na sebepoškození nebo sebevraždu",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Suicide attempt",
+      "frequency": "not_known",
+      "label": "Sebevražedné chování, včetně pokusu o sebevraždu.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se u vás kdykoli objeví myšlenky na sebepoškození nebo sebevraždu",
+        "min_severity": null
       }
     },
     {
@@ -117,18 +100,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Confusion",
-      "frequency": "not_known",
-      "label": "Dezorientace.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Mania",
       "frequency": "not_known",
-      "label": "Mánie.",
-      "action": null,
-      "action_condition": null
+      "label": "Mánie (nadměrná veselost, rozjařenost a zvýšená aktivita).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se při léčbě depresivní fáze bipolární poruchy depresivní fáze změní v manickou",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Anxiety",
@@ -147,30 +126,39 @@
     {
       "ctcae": "Agitation",
       "frequency": "not_known",
-      "label": "Agitovanost, někdy vedoucí až k deliriu.",
+      "label": "Pohybový neklid nebo agitovanost, někdy vedoucí až k deliriu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Delusions",
       "frequency": "not_known",
-      "label": "Bludy.",
-      "action": null,
-      "action_condition": null
+      "label": "Bludy, včetně paranoidních myšlenek.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte schizofrenii nebo jiné psychotické onemocnění a vaše příznaky se zhorší",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "not_known",
       "label": "Agresivní reakce.",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se u pacienta mladšího 18 let rozvine nebo zhorší nepřátelské jednání",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Hallucinations",
       "frequency": "not_known",
       "label": "Halucinace.",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte schizofrenii nebo jiné psychotické onemocnění a vaše příznaky se zhorší",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Psychiatric disorders - Other, specify",
@@ -189,35 +177,35 @@
     {
       "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Abstinenční příznaky.",
+      "label": "Abstinenční příznaky po vysazení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nervous system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Serotoninový syndrom.",
-      "action": null,
+      "label": "Serotoninový syndrom (vysoká tělesná teplota, svalové záškuby, zmatenost nebo neklid).",
+      "action": "contact_doctor",
       "action_condition": null
     },
     {
       "ctcae": "Seizure",
       "frequency": "not_known",
-      "label": "Křeče.",
+      "label": "Epileptické záchvaty.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nervous system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Neuroleptický maligní syndrom.",
+      "label": "Neuroleptický maligní syndrom (zvýšená tělesná teplota, svalová ztuhlost a změna stavu vědomí).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Somnolence",
       "frequency": "not_known",
-      "label": "Ospalost; v prvních dnech léčby se může objevit a obvykle při pokračování léčby vymizí.",
+      "label": "Ospalost; někdy se objeví v prvních dnech léčby a obvykle vymizí při pokračování léčby.",
       "action": null,
       "action_condition": null
     },
@@ -238,14 +226,14 @@
     {
       "ctcae": "Malaise",
       "frequency": "not_known",
-      "label": "Malátnost; může se objevit v prvních dnech léčby a obvykle při pokračování léčby vymizí.",
+      "label": "Malátnost; při ukončování léčby se může objevit také jako abstinenční příznak.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Somnolence",
       "frequency": "not_known",
-      "label": "Útlum neboli sedace.",
+      "label": "Útlum nebo sedace.",
       "action": null,
       "action_condition": null
     },
@@ -287,21 +275,21 @@
     {
       "ctcae": "Movements involuntary",
       "frequency": "not_known",
-      "label": "Myoklonus (mimovolní, krátké a rychlé svalové záškuby).",
+      "label": "Myoklonus (mimovolní krátké rychlé svalové záškuby).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysphasia",
       "frequency": "not_known",
-      "label": "Expresivní afázie (potíže s vyjadřováním, pomalá a neplynulá řeč nebo obtíže s utvářením slov).",
+      "label": "Expresivní afázie (obtíže s vyjadřováním a utvářením slov).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "not_known",
-      "label": "Parestézie (pocity brnění nebo mravenčení).",
+      "label": "Parestézie (brnění nebo mravenčení).",
       "action": null,
       "action_condition": null
     },
@@ -320,37 +308,37 @@
       "action_condition": null
     },
     {
-      "ctcae": "Ventricular arrhythmia",
+      "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Srdeční arytmie, včetně torsade de pointes, palpitací, předčasných komorových stahů, komorových kupletů a komorové tachykardie.",
+      "label": "Srdeční arytmie, včetně torsade de pointes, předčasných komorových stahů, komorových kupletů a komorové tachykardie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Sinus bradycardia",
       "frequency": "not_known",
-      "label": "Zpomalení srdeční činnosti (bradykardie).",
+      "label": "Zpomalení srdeční činnosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Sinus tachycardia",
       "frequency": "not_known",
-      "label": "Zrychlení srdeční činnosti (tachykardie).",
+      "label": "Zrychlení srdeční činnosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "not_known",
-      "label": "Změny na EKG, včetně prodloužení QT intervalu.",
+      "label": "Změny EKG včetně prodloužení QT intervalu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hypotension",
+      "ctcae": "Orthostatic hypotension",
       "frequency": "not_known",
-      "label": "Ortostatický pokles krevního tlaku při rychlém vzpřímení.",
+      "label": "Pokles krevního tlaku při rychlém vzpřímení.",
       "action": null,
       "action_condition": null
     },
@@ -364,14 +352,14 @@
     {
       "ctcae": "Syncope",
       "frequency": "not_known",
-      "label": "Synkopa (krátkodobá ztráta vědomí).",
+      "label": "Krátkodobá ztráta vědomí (mdloba).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nasal congestion",
       "frequency": "not_known",
-      "label": "Ucpání nosu.",
+      "label": "Ucpaný nos.",
       "action": null,
       "action_condition": null
     },
@@ -386,19 +374,15 @@
       "ctcae": "Nausea",
       "frequency": "not_known",
       "label": "Pocit na zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví spolu se slabostí, nechutenstvím, zvracením, bolestí břicha nebo žloutenkou."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "not_known",
       "label": "Zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví spolu se slabostí, nechutenstvím, pocitem na zvracení, bolestí břicha nebo žloutenkou."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Dry mouth",
@@ -424,7 +408,7 @@
     {
       "ctcae": "Dyspepsia",
       "frequency": "not_known",
-      "label": "Trávicí obtíže (dyspepsie).",
+      "label": "Trávicí obtíže.",
       "action": null,
       "action_condition": null
     },
@@ -432,20 +416,18 @@
       "ctcae": "Stomach pain",
       "frequency": "not_known",
       "label": "Bolest žaludku nebo břicha.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví spolu se slabostí, nechutenstvím, pocitem na zvracení, zvracením nebo žloutenkou."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Gastroenteritis",
       "frequency": "not_known",
       "label": "Gastroenteritida (zánět žaludeční a střevní sliznice).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "General disorders and administration site conditions - Other, specify",
       "frequency": "not_known",
       "label": "Zvýšená tvorba slin.",
       "action": null,
@@ -459,12 +441,33 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatic failure",
-      "frequency": "rare",
-      "label": "Poruchy jaterních funkcí, včetně žloutenky a poškození jaterních buněk; intrahepatální cholestáza; závažné jaterní poruchy, jako je hepatitida nebo fulminantní hepatitida; potenciálně smrtelné selhání jater. Závažné jaterní poruchy mohou vzniknout náhle a rychle se zhoršovat.",
+      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Poruchy jaterních funkcí, včetně žloutenky a poškození jaterních buněk.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví slabost, nechutenství, pocit na zvracení, zvracení, bolest břicha nebo žloutenka",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "not_known",
+      "label": "Intrahepatální cholestáza nebo závažné jaterní poruchy, jako je hepatitida či fulminantní hepatitida; léčba musí být ihned přerušena, pokud se objeví žloutenka.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví žloutenka, přerušte léčbu; při slabosti, nechutenství, nevolnosti, zvracení, bolesti břicha nebo žloutence ihned kontaktujte lékaře."
+        "patient_guide": "Pokud se objeví žloutenka",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Hepatic failure",
+      "frequency": "not_known",
+      "label": "Jaterní selhání, které může být smrtelné; léčba musí být ihned přerušena, pokud se objeví žloutenka.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví žloutenka",
+        "min_severity": null
       }
     },
     {
@@ -505,67 +508,47 @@
     {
       "ctcae": "Myalgia",
       "frequency": "not_known",
-      "label": "Bolest svalů.",
+      "label": "Bolesti svalů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "not_known",
-      "label": "Bolest kloubů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Potíže s močením.",
+      "label": "Bolesti kloubů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urinary incontinence",
       "frequency": "not_known",
-      "label": "Inkontinence moči (únik moči).",
+      "label": "Únik moči.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urinary retention",
       "frequency": "not_known",
-      "label": "Retence moči (neschopnost močit).",
+      "label": "Neschopnost se vymočit (zadržování moči).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
+      "ctcae": "Priapism",
       "frequency": "not_known",
-      "label": "Priapismus (přetrvávající a bolestivé ztopoření penisu).",
+      "label": "Přetrvávající a bolestivé ztopoření penisu; při jeho výskytu léčbu ukončete a ihned vyhledejte lékaře.",
       "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví přetrvávající a bolestivé ztopoření penisu, ukončete léčbu trazodonem."
-      }
-    },
-    {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Priapismus (přetrvávající a bolestivé ztopoření penisu).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví přetrvávající a bolestivé ztopoření penisu, ihned vyhledejte lékaře."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Generalized muscle weakness",
       "frequency": "not_known",
       "label": "Slabost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví spolu s nechutenstvím, nevolností, zvracením, bolestí břicha nebo žloutenkou."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Edema",
       "frequency": "not_known",
       "label": "Otok.",
       "action": null,
@@ -586,7 +569,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Chest pain - cardiac",
+      "ctcae": "Non-cardiac chest pain",
       "frequency": "not_known",
       "label": "Bolest na hrudi.",
       "action": null,
@@ -602,198 +585,364 @@
     {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "not_known",
-      "label": "Zvýšení hladin jaterních enzymů.",
-      "action": null,
-      "action_condition": null
+      "label": "Zvýšené hladiny jaterních enzymů.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví slabost, nechutenství, pocit na zvracení, zvracení, bolest břicha nebo žloutenka",
+        "min_severity": null
+      }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Silné inhibitory CYP3A4 (např. erythromycin, ketokonazol, itrakonazol, ritonavir, indinavir a nefazodon)",
-      "effect": "Mohou podstatně zvýšit plazmatické koncentrace trazodonu. Při podávání ritonaviru 200 mg dvakrát denně byly hladiny trazodonu zvýšené více než dvojnásobně a objevila se nevolnost, synkopa a hypotenze. Je-li současné podávání nutné, zvažuje se nižší dávka trazodonu; souběžnému podávání se má pokud možno vyhnout.",
-      "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Nausea",
-          "frequency": "not_known",
-          "label": "Nevolnost.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Syncope",
-          "frequency": "not_known",
-          "label": "Synkopa.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": "not_known",
-          "label": "Hypotenze.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Fluoxetin",
-      "effect": "Vzácně byly při současném podávání hlášeny zvýšené plazmatické hladiny trazodonu a nežádoucí účinky. Fluoxetin inhibuje CYP1A2/2D6; mechanismus interakce není zcela objasněn a nelze vyloučit farmakodynamickou interakci v podobě serotoninového syndromu.",
+      "class_id": "group:cyp3a4_inhibitor_strong",
+      "drug_class": "Silné inhibitory CYP3A4 (například erythromycin, ketokonazol, itrakonazol, ritonavir, indinavir a nefazodon)",
+      "effect": "Tyto léky mohou podstatně zvýšit hladinu trazodonu v krvi. Pokud je souběžné podávání nutné, lékař zváží nižší dávku trazodonu; společnému podávání se má pokud možno vyhnout.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:11589",
       "drug": "Karbamazepin",
-      "effect": "Snižuje plazmatické koncentrace trazodonu a jeho aktivního metabolitu m-chlorofenylpiperazinu; dávka 400 mg/den snížila jejich koncentrace o 76 % a 60 %. Pacienta je třeba pečlivě sledovat a v případě potřeby zvážit zvýšení dávky trazodonu.",
+      "effect": "Karbamazepin snižuje hladinu trazodonu a jeho aktivního metabolitu v krvi; při souběžném užívání v dávce 400 mg denně byly hladiny sníženy o 76 % a 60 %. Lékař bude pacienta pečlivě sledovat a podle potřeby může zvýšit dávku trazodonu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Perorální kontraceptiva, fenytoin, karbamazepin a barbituráty",
-      "effect": "Urychlují metabolismus antidepresiv, což může snížit expozici trazodonu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Fenytoin",
-      "effect": "Současné podávání může zvýšit sérové hladiny fenytoinu; při souběžné léčbě je třeba zvážit monitorování jeho sérových hladin. Fenytoin může také urychlovat metabolismus antidepresiv.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Cimetidin",
-      "effect": "Cimetidin inhibuje metabolismus antidepresiv, a může tak zvýšit expozici trazodonu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Některá antipsychotika",
-      "effect": "Mohou inhibovat metabolismus antidepresiv. Sedativní účinek antipsychotik může být trazodonem zvýšen; v takových případech se doporučuje snížení dávky. U starších pacientů se může přidávat účinek na ortostatickou hypotenzi, ospalost a další anticholinergní účinky trazodonu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Hypnotika, sedativa, anxiolytika a antihistaminika",
-      "effect": "Trazodon může zvýšit jejich sedativní účinek; v takových případech se doporučuje snížení dávky. U starších pacientů může souběžné užívání psychotropních přípravků zvýšit riziko ortostatické hypotenze, ospalosti a dalších účinků trazodonu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Další serotonergní léčiva, včetně SSRI, SNRI a inhibitorů MAO, a neuroleptika",
-      "effect": "Při současném podávání byly popsány interakce typu serotoninového syndromu nebo maligního neuroleptického syndromu. U neuroleptik byly popsány i fatální případy maligního neuroleptického syndromu. Sledujte zejména vysokou tělesnou teplotu, svalové záškuby, zmatenost nebo neklid.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": "not_known",
-          "label": "Serotoninový syndrom.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": "not_known",
-          "label": "Neuroleptický maligní syndrom.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:N06AA",
       "drug_class": "Tricyklická antidepresiva",
-      "effect": "Kvůli riziku interakcí nemají být podávána současně s trazodonem. Je třeba věnovat pozornost riziku serotoninového syndromu a kardiovaskulárních nežádoucích účinků.",
-      "effect_type": "increased_toxicity",
+      "effect": "Kvůli riziku interakcí se tricyklická antidepresiva nemají užívat současně s trazodonem; hrozí serotoninový syndrom a srdeční nežádoucí účinky.",
+      "effect_type": "contraindicated",
       "side_effects": []
     },
     {
+      "class_id": "atc:N06AF",
       "drug_class": "Inhibitory monoaminooxidázy (IMAO)",
-      "effect": "Současné podávání trazodonu s IMAO ani během dvou týdnů po ukončení léčby IMAO se nedoporučuje. Nedoporučuje se ani podávat IMAO během jednoho týdne po ukončení léčby trazodonem.",
+      "effect": "Současné užívání trazodonu s IMAO ani během dvou týdnů po ukončení léčby IMAO se nedoporučuje. Podání IMAO během jednoho týdne po ukončení léčby trazodonem se také nedoporučuje.",
+      "effect_type": null,
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N06AB03",
+      "drug": "Fluoxetin",
+      "effect": "Při současném užívání fluoxetinu, který inhibuje CYP1A2/CYP2D6, byly vzácně hlášeny zvýšené hladiny trazodonu a nežádoucí účinky; nelze vyloučit serotoninový syndrom. Mechanismus farmakokinetické interakce není zcela znám.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Fenothiaziny (např. chlorpromazin, flufenazin, levomepromazin a perfenazin)",
-      "effect": "Při současném podávání s trazodonem byla pozorována závažná ortostatická hypotenze.",
+      "class_id": "atc:N05AA",
+      "drug_class": "Fenothiaziny (například chlorpromazin, flufenazin, levomepromazin a perfenazin)",
+      "effect": "Při současném užívání může dojít k závažnému poklesu krevního tlaku při rychlém vzpřímení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": "not_known",
-          "label": "Závažná ortostatická hypotenze.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:N06AX25",
       "drug": "Třezalka tečkovaná (Hypericum perforatum)",
-      "effect": "Nežádoucí účinky mohou být při současném užívání s trazodonem častější.",
+      "effect": "Nežádoucí účinky trazodonu mohou být při současném užívání přípravků s třezalkou tečkovanou častější.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Anestetika a myorelaxancia",
-      "effect": "Trazodon může zvýšit účinek myorelaxancií a těkavých anestetik; při současném podávání je třeba zvýšené opatrnosti.",
+      "class_id": "atc:N01A",
+      "drug_class": "Těkavá anestetika pro celkovou anestezii",
+      "effect": "Trazodon může zvýšit účinek těkavých anestetik; při jejich použití je nutná zvýšená opatrnost.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Myorelaxancia",
+      "effect": "Trazodon může zvýšit účinek myorelaxancií; při souběžném použití je nutná zvýšená opatrnost.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N04BA01",
+      "drug": "Levodopa",
+      "effect": "Antidepresiva mohou urychlit metabolismus levodopy.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cns_depressant",
+      "drug_class": "Antipsychotika, hypnotika, sedativa, anxiolytika a antihistaminika",
+      "effect": "Trazodon může zesílit jejich tlumivý účinek; lékař může zvážit snížení dávky těchto přípravků.",
       "effect_type": "synergy",
       "side_effects": []
     },
     {
-      "drug": "Levodopa",
-      "effect": "Antidepresiva mohou urychlovat metabolismus levodopy.",
+      "class_id": "atc:G03A",
+      "drug_class": "Perorální hormonální antikoncepce",
+      "effect": "Perorální kontraceptiva mohou urychlit metabolismus antidepresiv, včetně trazodonu, a tím snížit jejich účinek.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Perorální antikoagulancia a/nebo antiagregancia",
-      "effect": "Současné podávání s trazodonem může zvýšit riziko krvácení. Vzácně byly hlášeny změny antikoagulačních účinků, laboratorních hodnot nebo klinických příznaků; opatrnost je nutná zejména u pacientů se známou tendencí ke krvácení.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "Digoxin",
-      "effect": "Současné podávání s trazodonem může zvýšit sérové hladiny digoxinu; je třeba zvážit monitorování sérových hladin.",
+      "class_id": "atc:A02BA01",
+      "drug": "Cimetidin",
+      "effect": "Cimetidin může inhibovat metabolismus antidepresiv, včetně trazodonu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léčiva prodlužující QT interval",
-      "effect": "Současné podávání s trazodonem může zvýšit riziko komorové arytmie včetně torsade de pointes. Tuto kombinaci je třeba pečlivě zvážit a podávat s opatrností.",
+      "class_id": "atc:B01A",
+      "drug_class": "Perorální antikoagulancia",
+      "effect": "Vzácně byly při souběžném užívání popsány změněné antikoagulační účinky; současné podávání trazodonu může zvýšit riziko krvácení. U pacientů se známou tendencí ke krvácení se má dávkovat opatrně a pravidelně sledovat.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": "not_known",
-          "label": "Komorová arytmie včetně torsade de pointes.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:B01AC",
+      "drug_class": "Antiagregancia",
+      "effect": "Současné podávání trazodonu může zvýšit riziko krvácení. U pacientů se známou tendencí ke krvácení se má dávkovat opatrně a pravidelně sledovat.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léky prodlužující QT interval",
+      "effect": "Současné podávání s trazodonem může zvýšit riziko komorové arytmie, včetně torsade de pointes; kombinaci je třeba pečlivě zvážit a podávat opatrně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cns_depressant",
+      "drug": "Alkohol",
+      "effect": "Trazodon zesiluje tlumivý účinek alkoholu; během léčby se alkohol nemá konzumovat.",
+      "effect_type": "synergy",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02",
       "drug_class": "Antihypertenziva",
-      "effect": "Současné podávání může vyžadovat snížení dávky antihypertenziv. U starších pacientů může být zvýšen aditivní účinek na ortostatickou hypotenzi; možnost zesílení účinků dalších typů antihypertenziv je třeba zvážit.",
+      "effect": "Trazodon může zesílit účinek antihypertenziv; současné podávání může vyžadovat snížení jejich dávky lékařem.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": "not_known",
-          "label": "Hypotenze, včetně ortostatického poklesu krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C02AC01",
       "drug": "Klonidin",
-      "effect": "Studie na laboratorních zvířatech ukázaly, že trazodon může tlumit většinu akutního účinku klonidinu; klinické interakce však nebyly hlášeny.",
+      "effect": "Studie na zvířatech ukázaly, že trazodon může tlumit většinu akutního účinku klonidinu; význam pro člověka není určen.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "Alkohol",
-      "effect": "Trazodon zvyšuje tlumivý a sedativní účinek alkoholu. Alkohol se během léčby trazodonem nemá konzumovat.",
+      "class_id": "atc:C01AA05",
+      "drug": "Digoxin",
+      "effect": "Současné podávání může zvýšit hladinu digoxinu v krvi; u pacientů léčených oběma přípravky má lékař zvážit kontrolu jeho hladiny.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N03AB02",
+      "drug": "Fenytoin",
+      "effect": "Souběžné podávání může zvýšit hladinu fenytoinu v krvi. Fenytoin může také urychlit metabolismus antidepresiv. Lékař má u společné léčby zvážit kontrolu hladiny fenytoinu.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N03AF01",
+      "drug": "Karbamazepin",
+      "effect": "Karbamazepin může urychlit metabolismus antidepresiv; při společném podávání s trazodonem snižuje jeho hladinu v krvi.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:serotonergic",
+      "drug_class": "Další serotonergní léky (například tricyklická antidepresiva, SSRI, SNRI, IMAO a neuroleptika)",
+      "effect": "Při současném podávání s dalšími serotonergními přípravky byly popsány interakce typu serotoninového syndromu nebo maligního neuroleptického syndromu. U neuroleptik byly popsány i případy maligního neuroleptického syndromu se smrtelným následkem.",
       "effect_type": "increased_toxicity",
       "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Inhibitory CYP3A4",
+      "effect": "Inhibitory CYP3A4 mohou podstatně zvýšit plazmatické koncentrace trazodonu. Silné inhibitory CYP3A4 jsou uvedeny samostatně.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A07AA02",
+      "drug": "Barbituráty",
+      "effect": "Barbituráty mohou urychlit metabolismus antidepresiv, včetně trazodonu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba depresivních poruch u dospělých.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0054094",
+      "H": "",
+      "NAZEV": "TRITTICO AC",
+      "SILA": "75MG",
+      "FORMA": "TBL MRL",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "75MG TBL MRL 30",
+      "OBAL": "BLI",
+      "DRZ": "ANE",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "30",
+      "ATC_WHO": "N06AX05",
+      "RC": "30/504/99-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,3",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "7,5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "11589",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "0",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "TRITTICO AC",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0054094",
+        "KOD_LATKY": "11589",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "75",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "11589",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "TRAZODONI HYDROCHLORIDUM",
+          "NAZEV_EN": "TRAZODONE HYDROCHLORIDE",
+          "NAZEV": "TRAZODON-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0054094",
+        "KOD_LATKY": "1383",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1383",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SACCHAROSUM",
+          "NAZEV_EN": "SUCROSE",
+          "NAZEV": "SACHAROSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0054094",
+        "KOD_LATKY": "2982",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2982",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "CERA CARNAUBA",
+          "NAZEV_EN": "CARNAUBA WAX",
+          "NAZEV": "KARNAUBSKÝ VOSK"
+        }
+      },
+      {
+        "KOD_SUKL": "0054094",
+        "KOD_LATKY": "1168",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0054094",
+        "KOD_LATKY": "2378",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0054094",
+      "PIL": "PI199022.pdf",
+      "DAT_ROZ_PIL": "18.05.2023",
+      "SPC": "SPC199023.pdf",
+      "DAT_ROZ_SPC": "18.05.2023",
+      "OBAL_TEXT": "OBAL194043.pdf",
+      "DAT_ROZ_OBAL": "13.12.2022"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N06AX05",
+        "NT": "N",
+        "NAZEV": "TRAZODON",
+        "NAZEV_EN": "TRAZODONE"
+      },
+      "formy": {
+        "FORMA": "TBL MRL",
+        "NAZEV": "Tableta s řízeným uvolňováním",
+        "NAZEV_EN": "Modified-release tablet",
+        "NAZEV_LAT": "Tabuletta cum liberatione modificata",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10227000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

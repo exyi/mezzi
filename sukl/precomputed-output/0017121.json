@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A02",
+    "atc:A02B",
+    "atc:A02BC",
+    "atc:A02BC03",
+    "substance:10896"
+  ],
   "side_effects": [
     {
       "ctcae": "Headache",
@@ -31,10 +39,11 @@
     {
       "ctcae": "Diarrhea",
       "frequency": "common",
-      "label": "Průjem",
+      "label": "Průjem; během léčby se může mírně zvýšit riziko infekčního průjmu.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás během léčby objeví průjem"
+        "patient_guide": "Pokud se u vás během léčby objeví průjem.",
+        "min_severity": null
       }
     },
     {
@@ -61,21 +70,21 @@
     {
       "ctcae": "Dry mouth",
       "frequency": "common",
-      "label": "Sucho v ústech nebo krku",
+      "label": "Sucho v ústech nebo v krku",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "common",
-      "label": "Nezhoubné polypy žlázek v žaludečním fundu",
+      "label": "Zvýšené hodnoty jaterních testů",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
       "frequency": "common",
-      "label": "Zvýšení hodnot jaterních testů nebo jaterních enzymů",
+      "label": "Nezhoubné polypy žaludku",
       "action": null,
       "action_condition": null
     },
@@ -87,13 +96,11 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Rash maculo-papular",
       "frequency": "common",
-      "label": "Kožní vyrážka; pokud se objeví zejména na místech vystavených slunci, co nejdříve to sdělte lékaři, protože může být nutné léčbu ukončit",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vyrážka, zejména na místech vystavených slunečnímu záření"
-      }
+      "label": "Kožní vyrážka",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Pruritus",
@@ -110,23 +117,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Thrombocytopenia",
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Snížení počtu krevních destiček",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eosinophilia",
-      "frequency": "uncommon",
-      "label": "Zvýšení počtu eozinofilů",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "uncommon",
-      "label": "Snížení počtu bílých krvinek",
+      "label": "Změny počtu krvinek",
       "action": null,
       "action_condition": null
     },
@@ -154,12 +147,12 @@
     {
       "ctcae": "Fracture",
       "frequency": "uncommon",
-      "label": "Zlomeniny v oblasti kyčelního kloubu, dolního konce předloktí nebo páteře (obratlů)",
+      "label": "Zlomeniny v oblasti kyčle, dolního konce předloktí nebo páteře",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Edema",
       "frequency": "uncommon",
       "label": "Otoky",
       "action": null,
@@ -210,7 +203,7 @@
     {
       "ctcae": "Paresthesia",
       "frequency": "rare",
-      "label": "Pocit mravenčení na kůži",
+      "label": "Mravenčení kůže",
       "action": null,
       "action_condition": null
     },
@@ -229,14 +222,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Blurred vision",
+      "ctcae": "Vision decreased",
       "frequency": "rare",
       "label": "Poruchy zraku",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Glossitis",
       "frequency": "rare",
       "label": "Zánět jazyka",
       "action": null,
@@ -245,7 +238,7 @@
     {
       "ctcae": "Candidiasis",
       "frequency": "rare",
-      "label": "Kandidóza, včetně kandidózy jícnu",
+      "label": "Kandidóza, plísňová infekce, která může postihnout kůži nebo sliznice",
       "action": null,
       "action_condition": null
     },
@@ -271,9 +264,9 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Blood bilirubin increased",
       "frequency": "rare",
-      "label": "Žloutenka, která se může projevit žlutým zbarvením kůže nebo očí",
+      "label": "Žloutenka",
       "action": null,
       "action_condition": null
     },
@@ -285,7 +278,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Erythema",
       "frequency": "rare",
       "label": "Zarudnutí kůže",
       "action": null,
@@ -306,13 +299,11 @@
       "action_condition": null
     },
     {
-      "ctcae": "Tubulointerstitial nephritis",
+      "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "rare",
-      "label": "Zánět ledvin (tubulointersticiální nefritida), který může přejít v selhání ledvin; při podezření musí být léčba ihned přerušena",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví známky zánětu ledvin, například méně moči, krev v moči, horečka, vyrážka nebo ztuhlost kloubů"
-      }
+      "label": "Ledvinové problémy",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Gynecomastia",
@@ -336,12 +327,13 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Angioedema",
       "frequency": "rare",
-      "label": "Angioedém; při otoku obličeje, jazyka nebo hltanu, obtížném polykání, kopřivce nebo dýchacích obtížích vyhledejte okamžitě lékaře",
-      "action": "hospitalize_NOW",
+      "label": "Angioedém; při otoku obličeje, jazyka nebo hltanu, obtížném polykání, kopřivce nebo potížích s dýcháním vyhledejte okamžitě lékaře.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví otok obličeje, jazyka nebo hltanu, obtížné polykání, kopřivka nebo dýchací obtíže"
+        "patient_guide": "Pokud se objeví otok obličeje, jazyka nebo hltanu, obtížné polykání, kopřivka nebo potíže s dýcháním.",
+        "min_severity": null
       }
     },
     {
@@ -359,25 +351,19 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "White blood cell decreased",
       "frequency": "very_rare",
-      "label": "Snížení počtu bílých krvinek a odolnosti vůči infekcím; může jít o agranulocytózu. Při infekci s horečkou, výrazným zhoršením celkového stavu, bolestí v krku či ústech nebo potížemi s močením ihned vyhledejte lékaře",
+      "label": "Snížení počtu bílých krvinek a odolnosti vůči infekcím. Při infekci s horečkou, výrazným zhoršením celkového stavu, bolestí v krku či ústech nebo potížemi s močením vyhledejte ihned lékaře; bude třeba vyšetřit krev.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte infekci s horečkou, výrazně se zhorší váš celkový stav, bolí vás v krku či v ústech nebo máte potíže s močením"
+        "patient_guide": "Pokud se objeví infekce s horečkou, výrazně se zhorší váš celkový stav, máte horečku s bolestí v krku či ústech nebo potíže s močením.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Pancytopenia",
       "frequency": "very_rare",
       "label": "Snížení počtu všech krvinek zjištěné v krevních testech",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "very_rare",
-      "label": "Závažné reakce přecitlivělosti včetně anafylaktického šoku; mohou se projevit horečkou, vyrážkou, otoky a někdy poklesem krevního tlaku",
       "action": null,
       "action_condition": null
     },
@@ -398,42 +384,53 @@
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "very_rare",
-      "label": "Závažná kožní reakce (Stevensův-Johnsonův syndrom), která se může projevit načervenalými terčovitými nebo kruhovitými skvrnami, puchýři, olupováním kůže a vředy v ústech, nose, na genitáliích nebo očích; mohou se přidat horečka a příznaky podobné chřipce. Přestaňte přípravek užívat a ihned vyhledejte lékařskou pomoc",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví načervenalé terčovité nebo kruhovité skvrny, puchýře, olupování kůže nebo vředy v ústech, nose, na genitáliích či očích, případně horečka nebo příznaky podobné chřipce"
-      }
+      "label": "Stevensův-Johnsonův syndrom: načervenalé, nevyvýšené terčovité nebo kruhovité skvrny na trupu, často s puchýři uprostřed, olupování kůže a vředy v ústech, krku, nose, na genitáliích nebo očích; může se přidat horečka a příznaky podobné chřipce. Přestaňte přípravek užívat.",
+      "action": "emergency",
+      "action_condition": null
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "very_rare",
-      "label": "Závažná kožní reakce (toxická epidermální nekrolýza) s puchýři, olupováním a rozpadem pokožky; přestaňte přípravek užívat a ihned vyhledejte lékařskou pomoc",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví puchýře, olupování nebo rozpad pokožky"
-      }
+      "label": "Toxická epidermální nekrolýza: načervenalé, nevyvýšené terčovité nebo kruhovité skvrny na trupu, často s puchýři uprostřed, olupování kůže a vředy v ústech, krku, nose, na genitáliích nebo očích; může se přidat horečka a příznaky podobné chřipce. Přestaňte přípravek užívat.",
+      "action": "emergency",
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Anaphylaxis",
       "frequency": "very_rare",
-      "label": "Změny laboratorních hodnot, včetně zvýšení hladiny cholesterolu a triacylglycerolů v krvi",
+      "label": "Závažná reakce přecitlivělosti včetně šoku; může se projevit horečkou, vyrážkou, otoky a někdy poklesem krevního tlaku",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cholesterol high",
+      "frequency": "very_rare",
+      "label": "Zvýšená hladina cholesterolu v krvi",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypertriglyceridemia",
+      "frequency": "very_rare",
+      "label": "Zvýšená hladina triacylglycerolů v krvi",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyponatremia",
       "frequency": "not_known",
-      "label": "Nízká hladina sodíku v krvi; mohou se objevit nevolnost a zvracení, bolest hlavy, ospalost, únava, zmatenost, svalová slabost nebo křeče, podrážděnost, záchvaty či kóma",
+      "label": "Nízká hladina sodíku v krvi",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypomagnesemia",
       "frequency": "not_known",
-      "label": "Nízká hladina hořčíku v krvi; může se projevit únavou, mimovolnými záškuby svalů, dezorientací, křečemi, závratí nebo zrychleným srdečním tepem. Pokud se objeví tyto příznaky, ihned vyhledejte lékaře; mohou se také snížit hladiny draslíku a vápníku v krvi",
+      "label": "Nízká hladina hořčíku v krvi při užívání déle než 3 měsíce; může se projevit únavou, mimovolními svalovými záškuby, dezorientací, křečemi, závratí a zrychleným srdečním tepem. Při kterémkoli z těchto příznaků vyhledejte ihned lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví únava, mimovolné záškuby svalů, dezorientace, křeče, závrať nebo zrychlený srdeční tep"
+        "patient_guide": "Pokud užíváte lansoprazol déle než 3 měsíce a objeví se únava, mimovolní svalové záškuby, dezorientace, křeče, závrať nebo zrychlený srdeční tep.",
+        "min_severity": null
       }
     },
     {
@@ -458,128 +455,456 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Rash maculo-papular",
       "frequency": "not_known",
-      "label": "Subakutní kožní lupus erythematodes (SCLE), projevující se kožními lézemi, zejména na místech vystavených slunci; při současné bolesti kloubů neprodleně vyhledejte lékařskou pomoc",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kožní léze, zejména na místech vystavených slunci, a současně vás bolí klouby"
-      }
+      "label": "Vyrážka, případně provázená bolestmi kloubů",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Drug reaction with eosinophilia and systemic symptoms",
       "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS), která se může projevit rozsáhlou vyrážkou, vysokou tělesnou teplotou a zvětšenými mízními uzlinami; přestaňte přípravek užívat a ihned vyhledejte lékařskou pomoc",
-      "action": "hospitalize_NOW",
+      "label": "DRESS: rozsáhlá vyrážka, vysoká tělesná teplota a zvětšené mízní uzliny. Přestaňte přípravek užívat.",
+      "action": "emergency",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Subacute cutaneous lupus erythematosus",
+      "frequency": "very_rare",
+      "label": "Subakutní kožní lupus: kožní léze, zejména na místech vystavených slunci, doprovázené bolestí kloubů",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tubulointerstitial nephritis",
+      "frequency": "rare",
+      "label": "Akutní tubulointersticiální nefritida, která může přejít v selhání ledvin. Při sníženém množství moči nebo krvi v moči, případně při horečce, vyrážce nebo ztuhlosti kloubů informujte lékaře.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá vyrážka, vysoká tělesná teplota a zvětšené mízní uzliny"
+        "patient_guide": "Pokud zaznamenáte snížené množství moči nebo krev v moči, případně horečku, vyrážku nebo ztuhlost kloubů.",
+        "min_severity": null
       }
     }
   ],
   "combinations": [
     {
+      "class_id": "atc:J05AE08",
       "drug": "atazanavir",
-      "effect": "Lansoprazol může významně snížit biologickou dostupnost atazanaviru, jehož vstřebávání závisí na kyselosti žaludečního pH; souběžné podávání se nedoporučuje. Pokud je kombinace nezbytná, je nutné pečlivé klinické sledování a zvýšení dávky atazanaviru na 400 mg spolu se 100 mg ritonaviru. U dosud neléčených pacientů lze inhibitor protonové pumpy podat 12 hodin před atazanavirem posíleným ritonavirem nebo kobicistatem; dávky inhibitoru protonové pumpy odpovídající více než 20 mg omeprazolu se nemají překročit.",
+      "effect": "Lansoprazol může kvůli zvýšení žaludečního pH významně snížit biologickou dostupnost atazanaviru; souběžné podávání se nedoporučuje. U neposíleného režimu atazanaviru se souběžné podávání inhibitorů protonové pumpy nedoporučuje. Pokud je kombinace nezbytná, lékař zajistí pečlivé klinické sledování a může zvýšit dávku atazanaviru na 400 mg spolu se 100 mg ritonaviru. U dosud neléčených pacientů lze lansoprazol podat 12 hodin před atazanavirem posíleným ritonavirem nebo kobicistatem; dávka inhibitoru protonové pumpy srovnatelná s 20 mg omeprazolu se nemá překročit.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:J05AE04",
       "drug": "nelfinavir",
-      "effect": "Lansoprazol může významně snížit biologickou dostupnost nelfinaviru, jehož vstřebávání závisí na kyselosti žaludečního pH; souběžné podávání se nedoporučuje.",
+      "effect": "Lansoprazol může kvůli zvýšení žaludečního pH významně snížit biologickou dostupnost nelfinaviru; souběžné podávání se nedoporučuje.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:J02AB02",
       "drug": "ketokonazol",
-      "effect": "Vstřebávání ketokonazolu z trávicího traktu se zvyšuje v přítomnosti žaludeční kyseliny. Lansoprazol může vést k podterapeutickým hladinám ketokonazolu, proto se tato kombinace nemá podávat.",
-      "effect_type": "contraindicated",
+      "effect": "Žaludeční kyselina podporuje vstřebávání ketokonazolu. Lansoprazol může snížit jeho vstřebávání a vést k podterapeutickým hladinám; tato kombinace se nemá podávat.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:J02AC02",
       "drug": "itrakonazol",
-      "effect": "Vstřebávání itrakonazolu z trávicího traktu se zvyšuje v přítomnosti žaludeční kyseliny. Lansoprazol může vést k podterapeutickým hladinám itrakonazolu, proto se tato kombinace nemá podávat.",
-      "effect_type": "contraindicated",
+      "effect": "Žaludeční kyselina podporuje vstřebávání itrakonazolu. Lansoprazol může snížit jeho vstřebávání a vést k podterapeutickým hladinám; tato kombinace se nemá podávat.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:C01AA05",
       "drug": "digoxin",
-      "effect": "Souběžné podávání může zvýšit plazmatickou hladinu digoxinu. Na začátku a na konci léčby lansoprazolem je třeba sledovat plazmatické hladiny digoxinu a v případě potřeby upravit jeho dávku.",
+      "effect": "Souběžné podávání může zvýšit plazmatickou hladinu digoxinu. Lékař má sledovat jeho hladinu při zahájení i ukončení léčby lansoprazolem a podle potřeby upravit dávku.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:L01BA01",
       "drug": "methotrexát",
-      "effect": "Souběžné užívání vysokých dávek methotrexátu může zvýšit a prodloužit sérové hladiny methotrexátu nebo jeho metabolitu a vést až k toxicitě methotrexátu. Při použití vysokých dávek může být nutné zvážit dočasné vysazení lansoprazolu.",
+      "effect": "Vysoké dávky methotrexátu při současném podávání mohou zvýšit a prodloužit sérové hladiny methotrexátu a/nebo jeho metabolitu, což může vést až k jeho toxicitě. Při vysokých dávkách může být nutné zvážit dočasné vysazení lansoprazolu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:B01AA03",
       "drug": "warfarin",
-      "effect": "Ačkoli souběžné podávání 60 mg lansoprazolu a warfarinu ve studii neovlivnilo farmakokinetiku warfarinu ani INR, při souběžné léčbě inhibitory protonové pumpy a warfarinem byly hlášeny případy zvýšeného INR a protrombinového času, které mohou vést k abnormálnímu krvácení, i smrtelnému. Sledujte INR a protrombinový čas, zejména při zahájení nebo ukončení léčby.",
+      "effect": "Přestože podávání 60 mg lansoprazolu s warfarinem ve studii neovlivnilo jeho farmakokinetiku ani INR, při souběžném užívání inhibitorů protonové pumpy a warfarinu byly hlášeny zvýšené INR a protrombinový čas, které mohou vést k neobvyklému krvácení až úmrtí. Lékař má kontrolovat INR a protrombinový čas, zvláště při zahájení nebo ukončení léčby lansoprazolem.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Abnormální krvácení",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léčivé látky metabolizované CYP3A4 s úzkým terapeutickým oknem",
-      "effect": "Lansoprazol může zvýšit plazmatické koncentrace léčiv metabolizovaných CYP3A4. Při kombinaci s léčivými látkami s úzkým terapeutickým oknem je nutná opatrnost.",
+      "class_id": null,
+      "drug_class": "Léčivé látky metabolizované enzymem CYP3A4 s úzkým terapeutickým oknem",
+      "effect": "Lansoprazol může zvýšit plazmatickou koncentraci těchto léčiv. Při jejich kombinaci je třeba opatrnost.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:R03DA04",
       "drug": "theofylin",
-      "effect": "Lansoprazol snižuje plazmatickou koncentraci theofylinu, což může snížit očekávaný klinický účinek jeho dávky; při kombinaci je třeba opatrnost.",
+      "effect": "Lansoprazol snižuje plazmatickou koncentraci theofylinu, což může snížit očekávaný klinický účinek jeho dávky. Při kombinování je třeba opatrnost.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:L04AD02",
       "drug": "takrolimus",
-      "effect": "Souběžné podávání zvyšuje plazmatické koncentrace takrolimu; expozice takrolimu se může zvýšit až o 81 %. Plazmatické koncentrace takrolimu je třeba sledovat na začátku a na konci souběžné léčby.",
+      "effect": "Lansoprazol zvyšuje plazmatickou koncentraci takrolimu, který je substrátem CYP3A4 a P-glykoproteinu; expozice takrolimu se může zvýšit až o 81 %. Lékař má sledovat jeho plazmatické koncentrace na začátku a na konci souběžné léčby.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky transportované P-glykoproteinem",
-      "effect": "Lansoprazol v laboratorních podmínkách inhiboval transportní protein P-glykoprotein; klinický význam tohoto zjištění není znám.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:N06AB08",
       "drug": "fluvoxamin",
-      "effect": "Fluvoxamin inhibuje CYP2C19; při souběžném podávání se plazmatická koncentrace lansoprazolu může zvýšit až čtyřikrát. Je třeba zvážit snížení dávky lansoprazolu.",
+      "effect": "Fluvoxamin jako inhibitor CYP2C19 může zvýšit plazmatickou koncentraci lansoprazolu až čtyřnásobně. Lékař má při této kombinaci zvážit snížení dávky lansoprazolu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:J04AB02",
       "drug": "rifampicin",
-      "effect": "Rifampicin indukuje CYP2C19 a CYP3A4 a může významně snížit plazmatickou koncentraci lansoprazolu.",
+      "effect": "Rifampicin jako induktor CYP2C19 a CYP3A4 může významně snížit plazmatickou koncentraci lansoprazolu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "třezalka tečkovaná (Hypericum perforatum)",
-      "effect": "Třezalka tečkovaná indukuje CYP2C19 a CYP3A4 a může významně snížit plazmatickou koncentraci lansoprazolu.",
+      "class_id": "atc:N06AX25",
+      "drug": "třezalka tečkovaná",
+      "effect": "Třezalka tečkovaná jako induktor CYP2C19 a CYP3A4 může významně snížit plazmatickou koncentraci lansoprazolu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "sukralfát",
-      "effect": "Sukralfát může snížit biologickou dostupnost lansoprazolu. Lansoprazol se má užít nejméně jednu hodinu po sukralfátu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:A02A",
       "drug_class": "Antacida",
-      "effect": "Antacida mohou snížit biologickou dostupnost lansoprazolu. Lansoprazol se má užít nejméně jednu hodinu po antacidu.",
+      "effect": "Antacida mohou snížit biologickou dostupnost lansoprazolu. Lanzul se má užít nejméně jednu hodinu po antacidu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A02BX02",
+      "drug": "sukralfát",
+      "effect": "Sukralfát může snížit biologickou dostupnost lansoprazolu. Lanzul se má užít nejméně jednu hodinu po sukralfátu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba žaludečních a dvanáctníkových vředů, refluxní ezofagitidy a refluxní choroby jícnu, eradikace Helicobacter pylori v kombinaci s antibiotiky, prevence a léčba vředů při dlouhodobém užívání NSAID a Zollingerova-Ellisonova syndromu.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0017121",
+      "H": "",
+      "NAZEV": "LANZUL",
+      "SILA": "30MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "28",
+      "CESTA": "POR",
+      "DOPLNEK": "30MG CPS DUR 28",
+      "OBAL": "BLI",
+      "DRZ": "KRK",
+      "ZEMDRZ": "SLO",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "09",
+      "ATC_WHO": "A02BC03",
+      "RC": "09/184/99-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "30",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "28",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10896",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "LANZUL",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "10896",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "30",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10896",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "LANSOPRAZOLUM",
+          "NAZEV_EN": "LANSOPRAZOLE",
+          "NAZEV": "LANSOPRAZOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "14512",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14512",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "SACCHARI SPHAERAE",
+          "NAZEV_EN": "SUGAR SPHERES",
+          "NAZEV": "ZRNĚNÝ CUKR"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "4336",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4336",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROLOSUM",
+          "NAZEV_EN": "HYPROLOSE",
+          "NAZEV": "HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "5341",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5341",
+          "ZDROJ": "C19",
+          "NAZEV_INN": "MAGNESII SUBCARBONAS PONDEROSUS",
+          "NAZEV_EN": "MAGNESIUM CARBONATE, HEAVY",
+          "NAZEV": "TĚŽKÝ ZÁSADITÝ UHLIČITAN HOŘEČNATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "1383",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1383",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SACCHAROSUM",
+          "NAZEV_EN": "SUCROSE",
+          "NAZEV": "SACHAROSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "2970",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "1335",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "748",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "877",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "877",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "ACIDUM METHACRYLICUM ET ETHYLIS ACRYLAS POLYMERISATUM 1:1 DISPERSIO 30%",
+          "NAZEV_EN": "METHACRYLIC ACID - ETHYL ACRYLATE COPOLYMER (1:1) DISPERSION 30 PER CENT",
+          "NAZEV": "KOPOLYMER KYSELINY METHAKRYLOVÉ A ETHYL-AKRYLÁTU 1:1 DISPERZE 30%"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "1871",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "3765",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "2710",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "SQ": "13",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "2855",
+        "SQ": "14",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0017121",
+        "KOD_LATKY": "2710",
+        "SQ": "15",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0017121",
+      "PIL": "PI206786.pdf",
+      "DAT_ROZ_PIL": "23.01.2024",
+      "SPC": "SPC206787.pdf",
+      "DAT_ROZ_SPC": "23.01.2024",
+      "OBAL_TEXT": "OBAL196242.pdf",
+      "DAT_ROZ_OBAL": "28.02.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A02BC03",
+        "NT": "N",
+        "NAZEV": "LANSOPRAZOL",
+        "NAZEV_EN": "LANSOPRAZOLE"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

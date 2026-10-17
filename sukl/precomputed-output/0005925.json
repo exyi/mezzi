@@ -1,64 +1,68 @@
 {
+  "classes": [
+    "atc:L",
+    "atc:L01",
+    "atc:L01C",
+    "atc:L01CA",
+    "atc:L01CA04",
+    "substance:12330"
+  ],
   "side_effects": [
     {
       "ctcae": "Infections and infestations - Other, specify",
-      "frequency": 7.874015748,
-      "label": "Bakteriální, virové nebo mykotické infekce bez neutropenie; G1–4 12,7 %, G3–4 4,4 %.",
+      "frequency": "very_common",
+      "label": "Bakteriální, virové nebo mykotické infekce v různých částech těla bez neutropenie (G1–4 12,7 %; G3–4 4,4 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví známky infekce, například kašel, horečka nebo zimnice."
+        "patient_guide": "Pokud máte známky infekce, například kašel, horečku nebo zimnici.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Infections and infestations - Other, specify",
       "frequency": "common",
-      "label": "Bakteriální, virové nebo mykotické infekce související s útlumem kostní dřeně nebo poškozením imunity (neutropenické infekce); neutropenické infekce G3–4 3,5 %. Obvykle je lze upravit vhodnou léčbou.",
+      "label": "Infekce způsobené útlumem kostní dřeně nebo poškozením imunitního systému (neutropenické infekce; G3–4 3,5 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví známky infekce, například kašel, horečka nebo zimnice."
+        "patient_guide": "Pokud máte známky infekce, například kašel, horečku nebo zimnici.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Sepsis",
       "frequency": "not_known",
-      "label": "Neutropenická sepse, komplikovaná septikemie (někdy fatální), závažná sepse někdy spojená s orgánovým selháním a septikemie.",
+      "label": "Neutropenická sepse, komplikovaná septikémie, závažná sepse někdy spojená se selháním orgánů a septikémie.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte známky infekce, například kašel, horečku nebo zimnici."
+        "patient_guide": "Pokud máte známky infekce, například kašel, horečku nebo zimnici.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Bone marrow hypocellular",
-      "frequency": 1.398601399,
-      "label": "Útlum kostní dřeně vedoucí zejména k neutropenii; G1–4 71,5 %, G3 21,8 % a G4 25,9 %. Je reverzibilní a představuje limitující faktor dávky.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Neutrophil count decreased",
-      "frequency": 1.398601399,
-      "label": "Pokles počtu neutrofilů v rámci útlumu kostní dřeně; G1–4 71,5 %, G3 21,8 % a G4 25,9 %.",
+      "frequency": "very_common",
+      "label": "Útlum kostní dřeně vedoucí zejména k neutropenii (G1–4 71,5 %; G3 21,8 %; G4 25,9 %); je vratný a omezuje dávku.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "White blood cell decreased",
-      "frequency": 1.416430594,
-      "label": "Pokles počtu bílých krvinek (leukopenie); G1–4 70,6 %, G3 24,7 % a G4 6 %.",
+      "frequency": "very_common",
+      "label": "Leukopenie (G1–4 70,6 %; G3 24,7 %; G4 6 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anemia",
-      "frequency": 1.483679525,
-      "label": "Chudokrevnost (anémie); G1–4 67,4 %, G3–4 3,8 %.",
+      "frequency": "very_common",
+      "label": "Anémie (G1–4 67,4 %; G3–4 3,8 %), která může způsobit bledost, slabost nebo dušnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
-      "frequency": 9.259259259,
-      "label": "Pokles počtu krevních destiček (trombocytopenie), G1–2 10,8 %.",
+      "frequency": "very_common",
+      "label": "Trombocytopenie G1–2 (10,8 %); může zvýšit riziko krvácení nebo tvorby modřin.",
       "action": null,
       "action_condition": null
     },
@@ -71,17 +75,18 @@
     },
     {
       "ctcae": "Febrile neutropenia",
-      "frequency": 35.71428571,
-      "label": "Neutropenie G4 spojená s horečkou nad 38 °C, včetně febrilní neutropenie; 2,8 %.",
+      "frequency": "common",
+      "label": "Neutropenie 4. stupně spojená s horečkou nad 38 °C, včetně febrilní neutropenie (2,8 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte známky infekce, například horečku, kašel nebo zimnici."
+        "patient_guide": "Pokud máte známky infekce, například kašel, horečku nebo zimnici.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Pokles všech druhů krvinek (pancytopenie).",
+      "label": "Pancytopenie.",
       "action": null,
       "action_condition": null
     },
@@ -93,241 +98,246 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hyponatremia",
-      "frequency": "not_known",
-      "label": "Těžká hyponatremie, tedy nízká hladina sodíku v krvi.",
+      "ctcae": "Anorexia",
+      "frequency": "very_common",
+      "label": "Ztráta chuti k jídlu (G1–2 34,5 %; G3–4 4,1 %).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Anorexia",
-      "frequency": 2.898550725,
-      "label": "Ztráta chuti k jídlu (anorexie); G1–2 34,5 %, G3–4 4,1 %.",
+      "ctcae": "Hyponatremia",
+      "frequency": "not_known",
+      "label": "Těžká hyponatrémie, tedy nízká hladina sodíku v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Insomnia",
-      "frequency": 35.71428571,
-      "label": "Nespavost G1–2; 2,8 %.",
+      "frequency": "common",
+      "label": "Nespavost (G1–2 2,8 %).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Tendon reflex decreased",
-      "frequency": 9.009009009,
-      "label": "Neurosenzorické poruchy G1–2, obvykle omezené na ztrátu šlachových reflexů a zřídka závažné; 11,1 %.",
+      "ctcae": "Peripheral sensory neuropathy",
+      "frequency": "very_common",
+      "label": "Poruchy vnímání citlivosti (G1–2 11,1 %), obvykle omezené na oslabení šlachových reflexů a zřídka závažné.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Dysesthesia",
-      "frequency": 9.009009009,
-      "label": "Neurosenzorické poruchy G1–2, včetně občasných rozdílů ve vnímání dotyku; 11,1 %.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": 10.86956522,
-      "label": "Neuromotorické poruchy G1–4; G3–4 1,3 %.",
+      "ctcae": "Peripheral motor neuropathy",
+      "frequency": "common",
+      "label": "Poruchy hybnosti (G1–4 9,2 %; G3–4 1,3 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
-      "frequency": 24.3902439,
-      "label": "Bolest hlavy; G1–4 4,1 %, G3–4 0,6 %.",
+      "frequency": "common",
+      "label": "Bolest hlavy (G1–4 4,1 %; G3–4 0,6 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se bolest hlavy objeví spolu se změnou duševního stavu, křečemi, rozmazaným viděním nebo vysokým krevním tlakem."
+        "patient_guide": "Pokud se bolest hlavy objeví společně se změnou duševního stavu, křečemi, rozmazaným viděním nebo vysokým krevním tlakem.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Dizziness",
-      "frequency": 16.66666667,
-      "label": "Závratě; G1–4 6 %, G3–4 0,6 %.",
+      "frequency": "common",
+      "label": "Závratě (G1–4 6 %; G3–4 0,6 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silné závratě nebo se vám točí hlava při postavení."
+        "patient_guide": "Pokud jsou závratě při postavení silné nebo máte pocit na omdlení.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Dysgeusia",
-      "frequency": 26.31578947,
-      "label": "Poruchy chuti G1–2; 3,8 %.",
+      "frequency": "common",
+      "label": "Porucha chuti (G1–2 3,8 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Ataxia",
-      "frequency": 333.3333333,
-      "label": "Ataxie 3. stupně; 0,3 %. Může se projevit nedostatečnou kontrolou svalů, abnormální chůzí, změnami řeči nebo abnormálními pohyby očí.",
+      "frequency": "uncommon",
+      "label": "Ataxie 3. stupně (0,3 %), tedy porucha koordinace pohybů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Reversible posterior leukoencephalopathy syndrome",
       "frequency": "not_known",
-      "label": "Syndrom reverzibilní posteriorní encefalopatie.",
+      "label": "Syndrom reverzibilní posteriorní encefalopatie; může se projevovat bolestí hlavy, změnou duševního stavu, zmateností až kómatem, křečemi, rozmazaným viděním a vysokým krevním tlakem.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest hlavy, změna duševního stavu, křeče, rozmazané vidění nebo vysoký krevní tlak."
+        "patient_guide": "Pokud se objeví bolest hlavy, změna duševního stavu, křeče, rozmazané vidění nebo vysoký krevní tlak.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Vision decreased",
-      "frequency": 76.92307692,
-      "label": "Poškození zraku G1–2; 1,3 %.",
+      "frequency": "common",
+      "label": "Zhoršení zraku (G1–2 1,3 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se změny vidění objeví spolu s bolestí hlavy, změnou duševního stavu, křečemi nebo vysokým krevním tlakem."
+        "patient_guide": "Pokud se zhoršení zraku objeví společně s bolestí hlavy, změnou duševního stavu, křečemi nebo vysokým krevním tlakem.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Heart failure",
       "frequency": "uncommon",
-      "label": "Srdeční selhání; může způsobit dušnost a otok kotníků.",
+      "label": "Srdeční selhání.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Srdeční arytmie, tedy nepravidelný srdeční tep.",
+      "label": "Srdeční arytmie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myocardial infarction",
       "frequency": "not_known",
-      "label": "Infarkt myokardu, hlášený u pacientů s dřívějšími srdečními problémy nebo rizikovými faktory srdečního onemocnění.",
+      "label": "Infarkt myokardu, hlášený u pacientů s dřívějšími srdečními potížemi nebo rizikovými faktory srdečního onemocnění; někdy může být smrtelný.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou bolest na hrudi, která pro vás není obvyklá."
+        "patient_guide": "Pokud máte silnou, neobvyklou bolest na hrudi.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Hypertension",
-      "frequency": 40.0,
-      "label": "Vysoký krevní tlak (arteriální hypertenze); G1–4 2,5 %, G3–4 0,3 %.",
+      "frequency": "common",
+      "label": "Arteriální hypertenze (G1–4 2,5 %; G3–4 0,3 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se vysoký krevní tlak objeví spolu s bolestí hlavy, změnou duševního stavu, křečemi nebo rozmazaným viděním."
+        "patient_guide": "Pokud se vysoký krevní tlak objeví společně s bolestí hlavy, změnou duševního stavu, křečemi nebo rozmazaným viděním.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Hypotension",
-      "frequency": 45.45454545,
-      "label": "Nízký krevní tlak (arteriální hypotenze); G1–4 2,2 %, G3–4 0,6 %.",
+      "frequency": "common",
+      "label": "Arteriální hypotenze (G1–4 2,2 %; G3–4 0,6 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silné závratě nebo se vám točí hlava při postavení."
+        "patient_guide": "Pokud jsou závratě při postavení silné nebo máte pocit na omdlení.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Dyspnea",
-      "frequency": 35.71428571,
-      "label": "Dušnost; G1–4 2,8 %, G3–4 0,3 %.",
+      "frequency": "common",
+      "label": "Dušnost (G1–4 2,8 %; G3–4 0,3 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte dušnost spolu s bolestí na hrudi nebo mdlobami, nebo pokud se objeví jako součást alergické reakce."
+        "patient_guide": "Pokud se dušnost objeví společně s bolestí na hrudi nebo mdlobou.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Cough",
-      "frequency": 35.71428571,
-      "label": "Kašel G1–2; 2,8 %.",
+      "frequency": "common",
+      "label": "Kašel (G1–2 2,8 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kašel jako známka infekce, zejména spolu s horečkou nebo zimnicí."
+        "patient_guide": "Pokud máte známky infekce, například kašel, horečku nebo zimnici.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Venous thromboembolism",
+      "ctcae": "Pulmonary embolism",
       "frequency": "not_known",
-      "label": "Plicní embolie; může se projevit bolestí na hrudi, dušností a mdlobami.",
+      "label": "Plicní embolie, tedy krevní sraženina v cévě v plicích.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest na hrudi, dušnost a mdloby."
+        "patient_guide": "Pokud máte bolest na hrudi, dušnost nebo mdloby.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Nausea",
-      "frequency": 1.338688947,
-      "label": "Pocit na zvracení (nauzea); G1–4 74,7 %, G3–4 7,3 %.",
+      "frequency": "very_common",
+      "label": "Nevolnost (G1–4 74,7 %; G3–4 7,3 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
-      "frequency": 1.828153565,
-      "label": "Zvracení; G1–4 54,7 %, G3–4 6,3 %. Při zvracení během několika hodin po užití dávky ji neopakujte.",
+      "frequency": "very_common",
+      "label": "Zvracení (G1–4 54,7 %; G3–4 6,3 %). Pokud zvracíte několik hodin po užití tobolky, dávku neopakujte.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud zvracíte během několika hodin po užití přípravku."
+        "patient_guide": "Pokud zvracíte několik hodin po užití tobolky.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Diarrhea",
-      "frequency": 2.012072435,
-      "label": "Průjem; G1–4 49,7 %, G3–4 5,7 %.",
+      "frequency": "very_common",
+      "label": "Průjem (G1–4 49,7 %; G3–4 5,7 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Mucositis oral",
-      "frequency": 9.615384615,
-      "label": "Zánět sliznice dutiny ústní (stomatitida); G1–4 10,4 %, G3–4 0,9 %.",
+      "frequency": "very_common",
+      "label": "Zánět sliznice dutiny ústní (stomatitida; G1–4 10,4 %; G3–4 0,9 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
-      "frequency": 7.042253521,
-      "label": "Bolest břicha G1–4; 14,2 %.",
+      "frequency": "very_common",
+      "label": "Bolest břicha (G1–4 14,2 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Constipation",
-      "frequency": 5.263157895,
-      "label": "Zácpa G1–4 19 %, G3–4 0,9 %. Při silné zácpě se může objevit bolest břicha a několik dní se nemusí podařit vyprázdnit.",
+      "frequency": "very_common",
+      "label": "Zácpa (G1–4 19 %; G3–4 0,9 %). Při těžké zácpě doprovázené bolestí břicha a nemožností se několik dnů vyprázdnit vyhledejte lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou zácpu s bolestí břicha a několik dní se vám nedaří vyprázdnit."
+        "patient_guide": "Pokud máte těžkou zácpu s bolestí břicha a několik dnů se vám nedaří vyprázdnit.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": 8.547008547,
-      "label": "Žaludeční potíže (žaludeční poruchy) G1–4; 11,7 %.",
+      "frequency": "very_common",
+      "label": "Žaludeční potíže (G1–4 11,7 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Esophagitis",
-      "frequency": 26.31578947,
-      "label": "Zánět jícnu (ezofagitida) G1–3; G3 0,3 %.",
+      "frequency": "common",
+      "label": "Zánět jícnu (G1–3 3,8 %; G3 0,3 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysphagia",
-      "frequency": 43.47826087,
-      "label": "Potíže s polykáním jídla nebo tekutin (dysfagie) G1–2; 2,3 %.",
+      "frequency": "common",
+      "label": "Potíže při polykání jídla nebo tekutin (G1–2 2,3 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Ileus",
-      "frequency": 111.1111111,
-      "label": "Paralytický ileus G3–4; 0,9 %. Výjimečně může být fatální; v léčbě lze pokračovat po obnovení běžné peristaltiky.",
+      "frequency": "uncommon",
+      "label": "Paralytický ileus 3.–4. stupně (0,9 %), výjimečně může být smrtelný.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Gastrointestinal hemorrhage",
       "frequency": "not_known",
       "label": "Krvácení do trávicího traktu.",
       "action": null,
@@ -335,253 +345,182 @@
     },
     {
       "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": 76.92307692,
-      "label": "Porucha funkce jater G1–2; 1,3 %.",
+      "frequency": "common",
+      "label": "Porucha funkce jater (G1–2 1,3 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatobiliary disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Přechodné zvýšení výsledků jaterních testů.",
+      "label": "Přechodné zvýšení hodnot jaterních testů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alopecia",
-      "frequency": 3.401360544,
-      "label": "Obvykle lehké vypadávání vlasů G1–2; 29,4 %.",
+      "frequency": "very_common",
+      "label": "Obvykle mírné vypadávání vlasů (G1–2 29,4 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": 17.54385965,
-      "label": "Kožní reakce G1–2; 5,7 %.",
+      "frequency": "common",
+      "label": "Kožní reakce (G1–2 5,7 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "common",
-      "label": "Bolest kloubů včetně bolesti čelisti.",
+      "label": "Bolest kloubů, včetně bolesti čelisti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
-      "frequency": 14.28571429,
-      "label": "Bolest svalů; G1–4 7 %, G3–4 0,3 %.",
+      "frequency": "common",
+      "label": "Bolest svalů (G1–4 7 %; G3–4 0,3 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysuria",
-      "frequency": 62.5,
-      "label": "Bolestivé nebo obtížné močení (dysurie) G1–2; 1,6 %.",
+      "frequency": "common",
+      "label": "Bolest nebo obtíže při močení (G1–2 1,6 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": 52.63157895,
-      "label": "Jiné příznaky týkající se močového a pohlavního ústrojí G1–2; 1,9 %.",
+      "frequency": "common",
+      "label": "Jiné příznaky týkající se močového a pohlavního ústrojí (G1–2 1,9 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fatigue",
-      "frequency": 2.72479564,
-      "label": "Únava a malátnost; G1–4 36,7 %, G3–4 8,5 %.",
+      "frequency": "very_common",
+      "label": "Únava nebo malátnost (G1–4 36,7 %; G3–4 8,5 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fever",
-      "frequency": 7.692307692,
-      "label": "Horečka; G1–4 13 %, G3–4 12,1 %.",
+      "frequency": "very_common",
+      "label": "Horečka (G1–4 13 %; G3–4 12,1 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte horečku jako známku infekce, zejména spolu s kašlem nebo zimnicí."
+        "patient_guide": "Pokud máte známky infekce, například horečku, kašel nebo zimnici.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Pain",
-      "frequency": 26.31578947,
-      "label": "Bolest včetně bolesti v místě nádoru; G1–4 3,8 %, G3–4 0,6 %.",
+      "frequency": "common",
+      "label": "Bolest, včetně bolesti v místě nádoru (G1–4 3,8 %; G3–4 0,6 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Chills",
-      "frequency": 26.31578947,
-      "label": "Zimnice G1–2; 3,8 %.",
+      "frequency": "common",
+      "label": "Zimnice (G1–2 3,8 %).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte zimnici jako známku infekce, zejména spolu s horečkou nebo kašlem."
+        "patient_guide": "Pokud máte známky infekce, například horečku, kašel nebo zimnici.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Weight loss",
-      "frequency": 4.0,
-      "label": "Snížení tělesné hmotnosti; G1–4 25 %, G3–4 0,3 %.",
+      "frequency": "very_common",
+      "label": "Snížení tělesné hmotnosti (G1–4 25 %; G3–4 0,3 %).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Weight gain",
-      "frequency": 76.92307692,
-      "label": "Zvýšení tělesné hmotnosti G1–2; 1,3 %.",
+      "frequency": "common",
+      "label": "Zvýšení tělesné hmotnosti (G1–2 1,3 %).",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": null,
-      "label": "Mdloby; uvedené jako možný příznak plicní embolie.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte mdloby spolu s bolestí na hrudi nebo dušností."
-      }
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": null,
-      "label": "Alergická reakce, která se může projevit potížemi s dýcháním, závratěmi, poklesem krevního tlaku, vyrážkou po celém těle nebo otokem očních víček, obličeje, rtů či hrdla.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví potíže s dýcháním, závratě, pokles krevního tlaku, vyrážka po celém těle nebo otok očních víček, obličeje, rtů či hrdla."
-      }
     }
   ],
   "combinations": [
     {
+      "class_id": "atc:B01A",
+      "drug_class": "Perorální antikoagulancia",
+      "effect": "U pacientů s nádorovým onemocněním se může srážlivost krve během nemoci měnit a mezi perorálním antikoagulanciem a protinádorovou chemoterapií může dojít k interakci. Pokud lékař rozhodne o současném užívání, bude častěji kontrolovat INR.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J07BL01",
       "drug": "Vakcína proti žluté zimnici",
-      "effect": "Současné použití přípravku Navelbine Oral a vakcíny proti žluté zimnici je kontraindikováno kvůli riziku fatálního generalizovaného onemocnění vyvolaného vakcínou.",
+      "effect": "Současné použití s přípravkem Navelbine Oral je kontraindikováno kvůli riziku potenciálně smrtelného generalizovaného onemocnění z vakcíny.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Oslabené živé vakcíny",
-      "effect": "Současné podávání se nedoporučuje kvůli riziku generalizovaného, potenciálně fatálního onemocnění vyvolaného vakcínou; riziko je vyšší při již oslabené imunitě. Je-li k dispozici, doporučuje se použít inaktivovanou vakcínu, například proti poliomyelitidě.",
+      "effect": "Současné podávání se nedoporučuje kvůli riziku potenciálně smrtelného generalizovaného onemocnění z vakcíny, které je vyšší při oslabené imunitě; pokud je dostupná, doporučuje se inaktivovaná vakcína.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:N03AB02",
       "drug": "Fenytoin",
-      "effect": "Současné podávání se nedoporučuje. Cytotoxická léčba může snížit vstřebávání fenytoinu v zažívacím traktu a zvýšit riziko zhoršení křečí; fenytoin může zvýšením jaterního metabolismu snížit účinnost cytostatika i koncentraci vinorelbinu v krvi.",
-      "effect_type": "decreased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Seizure",
-          "frequency": null,
-          "label": "Možné zhoršení křečí při sníženém vstřebávání fenytoinu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Itrakonazol",
-      "effect": "Současné podávání se nedoporučuje, protože snížením jaterního metabolismu vinka-alkaloidů může zvýšit jejich neurotoxicitu. Jako silný inhibitor CYP3A4 může také zvýšit koncentraci vinorelbinu v krvi.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšená neurotoxicita vinka-alkaloidů.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Silné inhibitory CYP3A4",
-      "effect": "Při současném podávání je třeba postupovat obezřetně; mohou zvýšit koncentraci vinorelbinu v krvi. Příklady zahrnují ketokonazol a itrakonazol.",
-      "effect_type": "increased_exposure",
+      "effect": "Současné podávání se nedoporučuje: cytotoxická léčba může snížit vstřebávání fenytoinu v trávicím traktu a zhoršit kontrolu křečí; fenytoin může zvýšit jaterní metabolismus a snížit účinnost cytostatika.",
+      "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Silné induktory CYP3A4",
-      "effect": "Při současném podávání je třeba postupovat obezřetně; mohou snížit koncentraci vinorelbinu v krvi. Příklady zahrnují rifampicin a fenytoin.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Perorální antikoagulancia",
-      "effect": "Při souběžné protinádorové chemoterapii a léčbě perorálními antikoagulancii se doporučuje častěji kontrolovat INR, protože srážlivost se v průběhu onemocnění u jednotlivých pacientů výrazně mění a může docházet k interakcím.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léčivé přípravky s toxickým účinkem na kostní dřeň",
-      "effect": "Současné podávání může zhoršit myelosupresivní nežádoucí účinky přípravku Navelbine Oral.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Neutrophil count decreased",
-          "frequency": null,
-          "label": "Zhoršení myelosupresivních účinků včetně poklesu počtu neutrofilů.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "White blood cell decreased",
-          "frequency": null,
-          "label": "Zhoršení myelosupresivních účinků včetně poklesu počtu bílých krvinek.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Anemia",
-          "frequency": null,
-          "label": "Zhoršení myelosupresivních účinků včetně anémie.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Thrombocytopenia",
-          "frequency": null,
-          "label": "Zhoršení myelosupresivních účinků včetně poklesu počtu krevních destiček.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:L04AD01",
       "drug": "Cyklosporin",
-      "effect": "Současné podávání je nutné zvážit; hrozí přílišné potlačení imunity s následným rizikem lymfoproliferace.",
+      "effect": "Současné užívání je nutné zvážit kvůli příliš silnému potlačení imunity a následnému riziku lymfoproliferace.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:L04AD02",
       "drug": "Takrolimus",
-      "effect": "Současné podávání je nutné zvážit; hrozí přílišné potlačení imunity s následným rizikem lymfoproliferace.",
+      "effect": "Současné užívání je nutné zvážit kvůli příliš silnému potlačení imunity a následnému riziku lymfoproliferace.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:J02AC02",
+      "drug": "Itrakonazol",
+      "effect": "Současné podávání se nedoporučuje: snížený jaterní metabolismus vinka-alkaloidů může zvýšit jejich neurotoxicitu; itrakonazol může také zvýšit koncentraci vinorelbinu v krvi inhibicí CYP3A4.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L01DC03",
       "drug": "Mitomycin C",
-      "effect": "Při současném podávání se zvyšuje riziko bronchospasmu a dušnosti; výjimečně byla pozorována intersticiální pneumonitida.",
+      "effect": "Při současném užívání je vyšší riziko bronchospasmu a dušnosti; výjimečně byla pozorována intersticiální pneumonitida.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Bronchospasm",
           "frequency": null,
-          "label": "Zvýšené riziko bronchospasmu při současném podávání s mitomycinem C.",
+          "label": "Zvýšené riziko bronchospasmu při kombinaci s mitomycinem C.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Dyspnea",
           "frequency": null,
-          "label": "Zvýšené riziko dušnosti při současném podávání s mitomycinem C.",
+          "label": "Zvýšené riziko dušnosti při kombinaci s mitomycinem C.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Pneumonitis",
-          "frequency": "very_rare",
+          "frequency": null,
           "label": "Výjimečně byla při kombinaci s mitomycinem C pozorována intersticiální pneumonitida.",
           "action": null,
           "action_condition": null
@@ -589,85 +528,434 @@
       ]
     },
     {
-      "drug": "Cisplatina",
-      "effect": "Farmakokinetická interakce nebyla při podávání v několika léčebných cyklech zjištěna, ale při kombinaci byl výskyt granulocytopenie vyšší než při podávání samotného přípravku Navelbine Oral.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Neutrophil count decreased",
-          "frequency": null,
-          "label": "Vyšší výskyt granulocytopenie při kombinaci s cisplatinou než při podávání samotného přípravku Navelbine Oral.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "group:pgp_inhibitor",
+      "drug_class": "Silné modulátory P-glykoproteinu, které P-glykoprotein inhibují",
+      "effect": "Vinka-alkaloidy jsou substráty P-glykoproteinu; kvůli chybějící konkrétní studii je při kombinaci se silnými modulátory tohoto transportéru nutná opatrnost.",
+      "effect_type": null,
+      "side_effects": []
     },
     {
+      "class_id": "group:pgp_inducer",
+      "drug_class": "Silné modulátory P-glykoproteinu, které P-glykoprotein indukují",
+      "effect": "Vinka-alkaloidy jsou substráty P-glykoproteinu; kvůli chybějící konkrétní studii je při kombinaci se silnými modulátory tohoto transportéru nutná opatrnost.",
+      "effect_type": null,
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp3a4_inhibitor_strong",
+      "drug_class": "Silné inhibitory CYP3A4",
+      "effect": "Vinorelbin se metabolizuje především prostřednictvím CYP3A4; silné inhibitory tohoto izoenzymu mohou zvýšit koncentraci vinorelbinu v krvi. Lékař má při kombinaci postupovat obezřetně.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp3a4_inducer_strong",
+      "drug_class": "Silné induktory CYP3A4",
+      "effect": "Vinorelbin se metabolizuje především prostřednictvím CYP3A4; silné induktory tohoto izoenzymu mohou snížit koncentraci vinorelbinu v krvi. Lékař má při kombinaci postupovat obezřetně.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:myelosuppressive",
+      "drug_class": "Léčiva se známým toxickým účinkem na kostní dřeň",
+      "effect": "Současné podávání může zhoršit myelosupresivní nežádoucí účinky přípravku Navelbine Oral.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L01EH01",
       "drug": "Lapatinib",
-      "effect": "Kombinaci je nutné podávat opatrně. V klinické studii fáze I byla zaznamenána vyšší incidence neutropenie stupně 3/4. U zkoumaného režimu byla doporučená dávka intravenózního vinorelbinu 22,5 mg/m² 1. a 8. den třítýdenního cyklu spolu s lapatinibem 1 000 mg denně.",
+      "effect": "Studie fáze I s intravenózním vinorelbinem v dávce 22,5 mg/m² 1. a 8. den třítýdenního cyklu a lapatinibem 1 000 mg denně naznačila vyšší výskyt neutropenie 3.–4. stupně; taková kombinace se musí podávat opatrně. Toto dávkování se týká intravenózní formy vinorelbinu.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Neutrophil count decreased",
           "frequency": null,
-          "label": "Vyšší incidence neutropenie stupně 3/4 při kombinaci s lapatinibem; údaj pochází ze studie s uvedeným režimem intravenózního vinorelbinu a lapatinibem 1 000 mg denně.",
+          "label": "Ve studii s intravenózním vinorelbinem a lapatinibem byl naznačen vyšší výskyt neutropenie 3.–4. stupně.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Silné modulátory P-glykoproteinu",
-      "effect": "Vinka-alkaloidy jsou substráty P-glykoproteinu; vzhledem k tomu, že nejsou k dispozici konkrétní studie, je při kombinaci se silnými modulátory tohoto membránového transportéru nutná opatrnost.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Radioterapie zahrnující oblast jater",
-      "effect": "Navelbine Oral se nemá podávat současně s radioterapií, pokud ozařovaná oblast zahrnuje játra.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léčivé přípravky obsahující sorbitol nebo fruktózu",
-      "effect": "Je třeba vzít v úvahu aditivní účinek současně podávaných léčivých přípravků obsahujících sorbitol nebo fruktózu a jejich příjmu potravou. Sorbitol v perorálních léčivých přípravcích může ovlivnit biologickou dostupnost jiných současně užívaných perorálních léčiv.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léčivé přípravky s obsahem morfinu nebo jeho mimetik",
-      "effect": "U pacientů se zácpou v anamnéze nebo při současné léčbě morfinem či jeho mimetiky může být vhodné předepsat laxativa kvůli zácpě spojené s přípravkem Navelbine Oral.",
+      "class_id": "atc:L01XA01",
+      "drug": "Cisplatina",
+      "effect": "Při kombinaci s cisplatinou nebyla během několika léčebných cyklů zjištěna vzájemná farmakokinetická interakce. Granulocytopenie se však vyskytovala častěji než při podávání samotného přípravku Navelbine Oral.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Constipation",
+          "ctcae": "Neutrophil count decreased",
           "frequency": null,
-          "label": "Zácpa; laxativa mohou být vhodná u pacientů se zácpou v anamnéze nebo při souběžné léčbě morfinem či jeho mimetiky.",
+          "label": "Při kombinaci s cisplatinou se granulocytopenie vyskytovala častěji než při samotném přípravku Navelbine Oral.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Antagonisté 5HT3",
-      "effect": "Antiemetika, například ondansetron nebo granisetron, nemění farmakokinetické vlastnosti měkkých tobolek přípravku Navelbine Oral. Podpůrná léčba těmito přípravky může zmírnit nevolnost a zvracení; doporučuje se primární prevence antiemetiky.",
+      "class_id": "atc:A04AA01",
+      "drug": "Ondansetron",
+      "effect": "Antiemetika typu antagonistů 5HT3, například ondansetron, nemění farmakokinetické vlastnosti měkkých tobolek přípravku Navelbine Oral; mohou být použita jako podpůrná léčba nevolnosti a zvracení.",
       "effect_type": null,
-      "side_effects": [
-        {
-          "ctcae": "Nausea",
-          "frequency": null,
-          "label": "Podpůrná léčba může zmírnit nevolnost spojenou s přípravkem Navelbine Oral.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Vomiting",
-          "frequency": null,
-          "label": "Podpůrná léčba může zmírnit zvracení spojené s přípravkem Navelbine Oral.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A04AA02",
+      "drug": "Granisetron",
+      "effect": "Antiemetika typu antagonistů 5HT3, například granisetron, nemění farmakokinetické vlastnosti měkkých tobolek přípravku Navelbine Oral; mohou být použita jako podpůrná léčba nevolnosti a zvracení.",
+      "effect_type": null,
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A06A",
+      "drug_class": "Projímadla",
+      "effect": "Lékař může zvážit předepsání projímadla pacientům s dřívější zácpou nebo pacientům současně léčeným morfinem či jeho napodobeninami.",
+      "effect_type": null,
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02AA01",
+      "drug": "Morfin",
+      "effect": "Při současné léčbě morfinem nebo jeho napodobeninami může lékař zvážit předepsání projímadla kvůli riziku zácpy.",
+      "effect_type": null,
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Léčiva obsahující sorbitol nebo fruktózu užívaná ústy, případně sorbitol nebo fruktóza v potravě",
+      "effect": "Je nutné vzít v úvahu sčítání příjmu sorbitolu nebo fruktózy z dalších léčiv a potravy. Sorbitol v perorálních léčivých přípravcích může ovlivnit biologickou dostupnost jiných současně užívaných perorálních léčiv.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba některých typů rakoviny plic a prsu u dospělých.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0005925",
+      "H": "",
+      "NAZEV": "NAVELBINE ORAL",
+      "SILA": "30MG",
+      "FORMA": "CPS MOL",
+      "BALENI": "1",
+      "CESTA": "POR",
+      "DOPLNEK": "30MG CPS MOL 1",
+      "OBAL": "BLI",
+      "DRZ": "PIE",
+      "ZEMDRZ": "F",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "44",
+      "ATC_WHO": "L01CA04",
+      "RC": "44/239/02-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0",
+      "DDDUN_WHO": "",
+      "DDDP_WHO": "0",
+      "ZDROJ_WHO": "NO26",
+      "LL": "12330",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "NAVELBINE ORAL",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "A",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "12330",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "41,55",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "12330",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "VINORELBINI DITARTRAS",
+          "NAZEV_EN": "VINORELBINE DITARTRATE",
+          "NAZEV": "VINORELBIN-DITARTARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "10725",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "30",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10725",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "VINORELBINUM",
+          "NAZEV_EN": "VINORELBINE",
+          "NAZEV": "VINORELBIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "2956",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2956",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "ETHANOLUM ANHYDRICUM",
+          "NAZEV_EN": "ETHANOL, ANHYDROUS",
+          "NAZEV": "BEZVODÝ ETHANOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "2043",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2043",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "AQUA PURIFICATA",
+          "NAZEV_EN": "WATER, PURIFIED",
+          "NAZEV": "ČIŠTĚNÁ VODA"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "13030",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13030",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "GLYCEROLUM",
+          "NAZEV_EN": "GLYCEROL",
+          "NAZEV": "GLYCEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "2400",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2400",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 400",
+          "NAZEV_EN": "MACROGOL 400",
+          "NAZEV": "MAKROGOL 400"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "SQ": "8",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "2855",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "667",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "667",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GLYCEROLUM 85%",
+          "NAZEV_EN": "GLYCEROL (85 PER CENT)",
+          "NAZEV": "GLYCEROL 85%"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "14839",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14839",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "SORBITOLUM DEHYDRATUM",
+          "NAZEV_EN": "DEHYDRATED SORBITOL",
+          "NAZEV": "DEHYDRATOVANÝ SORBITOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "4290",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4290",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM RUBRUM",
+          "NAZEV_EN": "IRON OXIDE RED",
+          "NAZEV": "ČERVENÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "2710",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "4090",
+        "SQ": "14",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "4090",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TRIGLYCERIDA MEDIA",
+          "NAZEV_EN": "TRIGLYCERIDES, MEDIUM-CHAIN",
+          "NAZEV": "TRIACYLGLYCEROLY SE STŘEDNÍM ŘETĚZCEM"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "16175",
+        "SQ": "15",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "16175",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "PHOSPHOLIPIDORUM SOLUTIO 53%",
+          "NAZEV_EN": "PHOSPHOLIPIDS SOLUTION 53% M/M",
+          "NAZEV": "ROZTOK FOSFOLIPIDŮ 53%"
+        }
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "SQ": "16",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0005925",
+        "KOD_LATKY": "13476",
+        "SQ": "17",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "13476",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ATRAMENTUM RUBRUM",
+          "NAZEV_EN": "RED INK",
+          "NAZEV": "ČERVENÝ INKOUST"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0005925",
+      "PIL": "PI206809.pdf",
+      "DAT_ROZ_PIL": "23.01.2024",
+      "SPC": "SPC206810.pdf",
+      "DAT_ROZ_SPC": "23.01.2024",
+      "OBAL_TEXT": "OBAL183475.pdf",
+      "DAT_ROZ_OBAL": "24.02.2022"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "L01CA04",
+        "NT": "N",
+        "NAZEV": "VINORELBIN",
+        "NAZEV_EN": "VINORELBINE"
+      },
+      "formy": {
+        "FORMA": "CPS MOL",
+        "NAZEV": "Měkká tobolka",
+        "NAZEV_EN": "Capsule, soft",
+        "NAZEV_LAT": "Capsula mollis",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10211000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

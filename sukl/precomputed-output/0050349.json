@@ -1,4 +1,15 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J02",
+    "atc:J02A",
+    "atc:J02AC",
+    "atc:J02AC02",
+    "group:cyp3a4_inhibitor",
+    "group:cyp3a4_inhibitor_strong",
+    "group:pgp_inhibitor",
+    "substance:9219"
+  ],
   "side_effects": [
     {
       "ctcae": "Headache",
@@ -22,9 +33,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Rhinitis infective",
+      "ctcae": "Sinusitis",
       "frequency": "uncommon",
-      "label": "Rýma",
+      "label": "Zánět vedlejších nosních dutin",
       "action": null,
       "action_condition": null
     },
@@ -36,25 +47,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Sinusitis",
+      "ctcae": "Rhinitis infective",
       "frequency": "uncommon",
-      "label": "Zánět vedlejších nosních dutin",
+      "label": "Rýma",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "uncommon",
-      "label": "Přecitlivělost (alergie)",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví náhlé potíže s dýcháním, otok obličeje, svědění nebo vyrážka postihující celé tělo, nebo závažná kožní reakce s rozsáhlou vyrážkou, olupováním či puchýři v ústech, očích nebo na genitáliích, případně vyrážka s malými hnisavými vřídky či puchýřky."
-      }
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "uncommon",
-      "label": "Průjem",
+      "label": "Alergická reakce",
       "action": null,
       "action_condition": null
     },
@@ -62,6 +64,13 @@
       "ctcae": "Vomiting",
       "frequency": "uncommon",
       "label": "Zvracení",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "uncommon",
+      "label": "Průjem",
       "action": null,
       "action_condition": null
     },
@@ -75,7 +84,7 @@
     {
       "ctcae": "Dyspepsia",
       "frequency": "uncommon",
-      "label": "Zažívací potíže (dyspepsie)",
+      "label": "Zažívací potíže",
       "action": null,
       "action_condition": null
     },
@@ -138,90 +147,77 @@
     {
       "ctcae": "Edema face",
       "frequency": "rare",
-      "label": "Bolestivý otok kůže a sliznic (angioneurotický edém)",
+      "label": "Bolestivý otok kůže a sliznic (angioedém)",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "rare",
-      "label": "Anafylaktická reakce",
-      "action": null,
-      "action_condition": null
+      "label": "Závažná alergická reakce (anafylaxe)",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví náhlé potíže s dýcháním, otok obličeje, vyrážka nebo svědění po těle",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Hypertriglyceridemia",
       "frequency": "rare",
-      "label": "Zvýšená hladina triacylglycerolů v krvi",
+      "label": "Zvýšená hladina tuků (triacylglycerolů) v krvi",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "rare",
-      "label": "Brnění nebo slabost rukou či chodidel (parestezie)",
+      "label": "Brnění nebo slabost rukou či chodidel",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud během léčby zpozorujete neobvyklé brnění, necitlivost nebo slabost v rukou či chodidlech."
-      }
+      "action_condition": null
     },
     {
-      "ctcae": "Paresthesia",
+      "ctcae": "Hypoesthesia",
       "frequency": "rare",
-      "label": "Snížené vnímání bolesti (hypestezie)",
+      "label": "Snížené vnímání bolesti",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysgeusia",
       "frequency": "rare",
-      "label": "Nepříjemná chuť v ústech (dysgeuzie)",
+      "label": "Nepříjemná chuť v ústech",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "rare",
-      "label": "Rozmazané vidění",
+      "label": "Poruchy zraku včetně rozmazaného nebo dvojitého vidění",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozmazané nebo dvojité vidění."
-      }
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Dvojité vidění",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozmazané nebo dvojité vidění."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Hearing impaired",
       "frequency": "rare",
-      "label": "Dočasná nebo trvalá ztráta sluchu",
+      "label": "Přechodná nebo trvalá ztráta sluchu",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud u sebe pozorujete příznaky ztráty sluchu."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Tinnitus",
       "frequency": "rare",
-      "label": "Zvonění v uších (tinitus)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví zvuky v uchu."
-      }
+      "label": "Zvonění v uších",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Heart failure",
       "frequency": "rare",
-      "label": "Městnavé srdeční selhání, které se může projevit dušností, neočekávaným přírůstkem hmotnosti, otoky dolních končetin nebo břicha, neobvyklou únavou či novými problémy se spánkem",
+      "label": "Městnavé srdeční selhání; může se projevit dušností, nečekaným přibýváním na váze, otoky, únavou nebo novými potížemi se spánkem",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví dušnost, neočekávaný přírůstek tělesné hmotnosti, otoky dolních končetin nebo podbřišku, únava nebo počínající noční probouzení."
+        "patient_guide": "Pokud se objeví dušnost, neočekávané přibývání na váze, otoky dolních končetin nebo břicha, neobvyklá únava či opakované noční probouzení",
+        "min_severity": null
       }
     },
     {
@@ -229,26 +225,26 @@
       "frequency": "rare",
       "label": "Dušnost",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví dušnost jako příznak srdečního selhání."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Pancreatitis",
       "frequency": "rare",
-      "label": "Zánět slinivky břišní, který se může projevit silnou bolestí v horní části břicha, často doprovázenou pocitem na zvracení a zvracením",
+      "label": "Zánět slinivky břišní, který může způsobit silnou bolest v horní části břicha, často s nevolností a zvracením",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví silná bolest v horní části břicha, často doprovázená pocitem na zvracení a zvracením."
+        "patient_guide": "Pokud se objeví silná bolest v horní části břicha, často s nevolností a zvracením",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Hepatic failure",
       "frequency": "rare",
-      "label": "Těžké toxické poškození jater, včetně náhlého selhání jater, které může být smrtelné",
+      "label": "Těžké toxické poškození jater, včetně náhlého selhání jater",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví výrazná ztráta chuti k jídlu, pocit na zvracení, zvracení, neobvyklá únava, bolest břicha, neobvykle tmavá moč nebo světlá stolice."
+        "patient_guide": "Pokud se objeví výrazná ztráta chuti k jídlu, nevolnost či zvracení, neobvyklá únava, bolest břicha, tmavá moč nebo světlá stolice",
+        "min_severity": null
       }
     },
     {
@@ -261,52 +257,62 @@
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "rare",
-      "label": "Toxická epidermální nekrolýza",
+      "label": "Toxická epidermální nekrolýza, závažná kožní reakce s rozsáhlou vyrážkou, olupováním a puchýři",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví závažná kožní reakce s rozsáhlou vyrážkou, olupováním nebo puchýři v ústech, očích či na genitáliích."
+        "patient_guide": "Pokud se objeví rozsáhlá vyrážka s olupováním nebo puchýři v ústech, očích či na genitáliích",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "rare",
-      "label": "Stevensův-Johnsonův syndrom",
+      "label": "Stevensův–Johnsonův syndrom, závažná kožní reakce s rozsáhlou vyrážkou a puchýři",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví závažná kožní reakce s rozsáhlou vyrážkou, olupováním nebo puchýři v ústech, očích či na genitáliích."
+        "patient_guide": "Pokud se objeví rozsáhlá vyrážka s olupováním nebo puchýři v ústech, očích či na genitáliích",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Pustular drug eruption",
+      "ctcae": "Rash pustular",
       "frequency": "rare",
-      "label": "Akutní generalizovaná exantematózní pustulóza",
+      "label": "Akutní generalizovaná exantematózní pustulóza, závažná vyrážka s drobnými hnisavými puchýřky",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka s malými hnisavými vřídky."
+        "patient_guide": "Pokud se objeví rozsáhlá vyrážka s drobnými hnisavými puchýřky",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Erythema multiforme",
       "frequency": "rare",
-      "label": "Erythema multiforme",
-      "action": null,
-      "action_condition": null
+      "label": "Erythema multiforme, závažná kožní alergická reakce",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví rozsáhlá kožní vyrážka nebo závažné kožní změny",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Exfoliative dermatitis",
       "frequency": "rare",
-      "label": "Exfoliativní dermatitida",
+      "label": "Exfoliativní dermatitida, závažná kožní reakce s olupováním kůže",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví závažná kožní reakce s rozsáhlou vyrážkou nebo olupováním."
+        "patient_guide": "Pokud se objeví rozsáhlá kožní vyrážka nebo závažné kožní změny",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Vasculitis",
       "frequency": "rare",
-      "label": "Leukocytoklastická vaskulitida",
-      "action": null,
-      "action_condition": null
+      "label": "Leukocytoklastická vaskulitida, závažná kožní reakce",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví rozsáhlá kožní vyrážka nebo závažné kožní změny",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Alopecia",
@@ -319,528 +325,335 @@
       "ctcae": "Photosensitivity",
       "frequency": "rare",
       "label": "Přecitlivělost na světlo",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví citlivost na světlo."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Urinary frequency",
       "frequency": "rare",
-      "label": "Časté močení (polakisurie)",
-      "action": null,
+      "label": "Časté močení",
+      "action": "contact_doctor",
       "action_condition": null
     },
     {
       "ctcae": "Erectile dysfunction",
       "frequency": "rare",
-      "label": "Erektilní dysfunkce",
+      "label": "Porucha erekce",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Generalized edema",
+      "ctcae": "Edema",
       "frequency": "rare",
       "label": "Zadržování vody v těle (otoky)",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Creatine phosphokinase increased",
       "frequency": "rare",
       "label": "Zvýšená hladina kreatinfosfokinázy v krvi",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": null,
-      "label": "Granulocytopenie hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": null,
-      "label": "Trombocytopenie hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperglycemia",
-      "frequency": null,
-      "label": "Vysoká hladina cukru v krvi hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperkalemia",
-      "frequency": null,
-      "label": "Vysoká hladina draslíku v krvi hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypokalemia",
-      "frequency": null,
-      "label": "Nízká hladina draslíku v krvi hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypomagnesemia",
-      "frequency": null,
-      "label": "Nízká hladina hořčíku v krvi hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Confusion",
-      "frequency": null,
-      "label": "Zmatenost hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Peripheral sensory neuropathy",
-      "frequency": null,
-      "label": "Periferní neuropatie hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se rozvine neuropatie, kterou lze přičítat účinku itrakonazolu."
-      }
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": null,
-      "label": "Závrať hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Somnolence",
-      "frequency": null,
-      "label": "Spavost hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tremor",
-      "frequency": null,
-      "label": "Třes hlášený při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": null,
-      "label": "Zrychlení srdeční frekvence hlášené při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypertension",
-      "frequency": null,
-      "label": "Vysoký krevní tlak hlášený při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": null,
-      "label": "Nízký krevní tlak hlášený při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pulmonary edema",
-      "frequency": null,
-      "label": "Nahromadění tekutiny v plicích hlášené při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Voice alteration",
-      "frequency": null,
-      "label": "Porucha hlasu hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cough",
-      "frequency": null,
-      "label": "Kašel hlášený při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": null,
-      "label": "Poruchy trávení hlášené při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatic failure",
-      "frequency": null,
-      "label": "Selhání jater hlášené při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": null,
-      "label": "Zánět jater hlášený při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": null,
-      "label": "Žloutenka hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": null,
-      "label": "Zčervenalá kožní vyrážka hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperhidrosis",
-      "frequency": null,
-      "label": "Nadměrné pocení hlášené při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myalgia",
-      "frequency": null,
-      "label": "Bolest svalů hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Arthralgia",
-      "frequency": null,
-      "label": "Bolest kloubů hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": null,
-      "label": "Problémy s ledvinami hlášené při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urinary incontinence",
-      "frequency": null,
-      "label": "Samovolný únik moči hlášený při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Generalized edema",
-      "frequency": null,
-      "label": "Celkový otok hlášený při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": null,
-      "label": "Otok obličeje hlášený při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": null,
-      "label": "Bolest na hrudi hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": null,
-      "label": "Horečka hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pain",
-      "frequency": null,
-      "label": "Bolest hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": null,
-      "label": "Vyčerpání nebo únava hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Chills",
-      "frequency": null,
-      "label": "Třesavka hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": null,
-      "label": "Zvýšená hladina alaninaminotransferázy hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aspartate aminotransferase increased",
-      "frequency": null,
-      "label": "Zvýšená hladina aspartátaminotransferázy hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alkaline phosphatase increased",
-      "frequency": null,
-      "label": "Zvýšená hladina alkalické fosfatázy v krvi hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood lactate dehydrogenase increased",
-      "frequency": null,
-      "label": "Zvýšená hladina laktátdehydrogenázy v krvi hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": null,
-      "label": "Zvýšená hladina urey v krvi hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "GGT increased",
-      "frequency": null,
-      "label": "Zvýšená hladina gamaglutamyltransferázy hlášená při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": null,
-      "label": "Zvýšené jaterní enzymy hlášené při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": null,
-      "label": "Abnormální nálezy v moči a krvi hlášené při užívání jiných lékových forem s itrakonazolem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Headache",
-      "frequency": 33.3333333333,
-      "label": "U pediatrických pacientů: bolest hlavy (3,0 %)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vomiting",
-      "frequency": 33.3333333333,
-      "label": "U pediatrických pacientů: zvracení (3,0 %)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Abdominal pain",
-      "frequency": 41.6666666667,
-      "label": "U pediatrických pacientů: bolest břicha (2,4 %)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": 41.6666666667,
-      "label": "U pediatrických pacientů: průjem (2,4 %)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": 83.3333333333,
-      "label": "U pediatrických pacientů: abnormální funkce jater (1,2 %)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": 83.3333333333,
-      "label": "U pediatrických pacientů: nízký krevní tlak (1,2 %)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": 83.3333333333,
-      "label": "U pediatrických pacientů: pocit na zvracení (1,2 %)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": 83.3333333333,
-      "label": "U pediatrických pacientů: kopřivka (1,2 %)",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
+      "class_id": "group:cyp3a4_inducer_strong",
       "drug_class": "Silné induktory CYP3A4 (rifampicin, rifabutin, isoniazid, karbamazepin, fenobarbital, fenytoin, efavirenz, nevirapin a třezalka tečkovaná)",
-      "effect": "Mohou snížit expozici itrakonazolu a hydroxyitrakonazolu natolik, že se sníží antimykotická účinnost a léčba může selhat. Současnému podávání se doporučuje vyhnout až 2 týdny před zahájením a během léčby, pokud přínos nepřeváží riziko snížené účinnosti. Při nezbytném souběžném užívání se doporučuje sledovat antimykotickou účinnost a podle potřeby zvýšit dávku itrakonazolu.",
+      "effect": "Mohou snížit expozici itrakonazolu a hydroxyitrakonazolu natolik, že léčba nemusí být účinná. Lékař může sledovat antimykotickou účinnost a podle potřeby upravit dávku. Současné podávání se nedoporučuje; pokud přínos převáží riziko, je třeba se těmto lékům vyhnout dva týdny před léčbou i během ní.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léky snižující žaludeční kyselost, antacida, antagonisté H2-receptorů a inhibitory protonové pumpy",
-      "effect": "Snížená žaludeční kyselost zhoršuje vstřebávání tobolek itrakonazolu a snižuje jeho koncentraci i expozici. Antacida obsahující sloučeniny hliníku se mají užívat nejméně 1 hodinu před nebo 2 hodiny po itrakonazolu. Při užívání léků snižujících žaludeční sekreci se doporučuje užít itrakonazol s kyselým nápojem, například nedietní kolou; je třeba sledovat antimykotickou aktivitu a podle potřeby zvýšit dávku.",
+      "class_id": "group:cyp3a4_inhibitor_strong",
+      "drug_class": "Silné inhibitory CYP3A4 (ciprofloxacin, klarithromycin, erythromycin, darunavir nebo fosamprenavir posílené ritonavirem, indinavir, ritonavir a telaprevir)",
+      "effect": "Mohou zvýšit expozici itrakonazolu. Při současném podávání lékař pečlivě sleduje známky zesílených nebo prodloužených účinků a podle potřeby sníží dávku itrakonazolu; vhodné může být měření jeho plazmatické koncentrace.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A02A",
+      "drug_class": "Antacida a přípravky neutralizující žaludeční kyselinu, včetně sloučenin hliníku, hořčíku, vápníku nebo hydrogenuhličitanu sodného",
+      "effect": "Snižují vstřebávání itrakonazolu z tobolek. Užívejte je nejméně jednu hodinu před nebo dvě hodiny po Prokanazolu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Silné inhibitory CYP3A4 (ciprofloxacin, klarithromycin, erythromycin, darunavir nebo fosamprenavir posílený ritonavirem, indinavir, ritonavir a telaprevir)",
-      "effect": "Mohou zvýšit expozici itrakonazolu. Při současném užívání se doporučuje opatrnost a pečlivé sledování známek zesíleného nebo prodlouženého účinku itrakonazolu; jeho dávku je podle potřeby třeba snížit a případně měřit jeho plazmatickou koncentraci.",
-      "effect_type": "increased_exposure",
+      "class_id": "atc:A02BA",
+      "drug_class": "Antagonisté H2-receptorů a inhibitory protonové pumpy",
+      "effect": "Snížená žaludeční kyselost může omezit vstřebávání itrakonazolu z tobolek. Při současném užívání může lékař doporučit Prokanazol zapít kyselým nápojem, sledovat antimykotickou účinnost a podle potřeby upravit dávku.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Námelové alkaloidy",
-      "effect": "Itrakonazol může zvýšit jejich plazmatickou koncentraci a současné užívání je kontraindikováno během léčby a až 2 týdny po jejím ukončení.",
-      "effect_type": "contraindicated",
+      "class_id": "atc:J04A",
+      "drug_class": "Léky k léčbě tuberkulózy: bedachilin, isoniazid, rifabutin nebo rifampicin",
+      "effect": "Isoniazid, rifabutin a rifampicin mohou snížit koncentraci itrakonazolu; bedachilin může mít při kombinaci s itrakonazolem zvýšenou koncentraci. Souběžné užívání se nedoporučuje.",
+      "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Antimikrobiální a antiprotozoální léčiva (isavukonazol, halofantrin)",
-      "effect": "Itrakonazol může zvýšit koncentraci isavukonazolu a halofantrinu; současné užívání je kontraindikováno během léčby a až 2 týdny po jejím ukončení.",
-      "effect_type": "contraindicated",
+      "class_id": "atc:N03A",
+      "drug_class": "Antiepileptika: karbamazepin, fenobarbital nebo fenytoin",
+      "effect": "Tyto léky mohou snížit koncentraci itrakonazolu a oslabit jeho účinnost; itrakonazol může také zvýšit koncentraci karbamazepinu. Současné podávání se nedoporučuje.",
+      "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Cytostatika a protinádorové léky (irinotekan; venetoklax; vybrané inhibitory tyrozinkináz a další protinádorové léky)",
-      "effect": "Itrakonazol může zvýšit koncentraci irinotekanu a jeho aktivních metabolitů; současné užívání irinotekanu je kontraindikováno během léčby a až 2 týdny po jejím ukončení. Venetoklax je kontraindikován u pacientů s chronickou lymfocytární leukémií na začátku léčby a během titrace dávky; v ostatních případech se jeho užívání nedoporučuje, pokud přínos nepřeváží riziko. U dalších uvedených cytostatik se souběžné užívání nedoporučuje, protože může zvýšit jejich koncentraci; u kabazitaxelu a regorafenibu nebyla významná změna expozice prokázána, u regorafenibu se však očekává její pokles. U kobimetinibu, entrektinibu, olaparibu a talazoparibu byly popsány zvýšené koncentrace. Doporučení pro jednotlivé přípravky zahrnují vyhnout se kombinaci, případně pečlivé sledování a úpravu dávky.",
-      "effect_type": "increased_exposure",
+      "class_id": "atc:N06AX25",
+      "drug": "Třezalka tečkovaná",
+      "effect": "Může snížit koncentraci itrakonazolu a oslabit jeho účinnost. Současné užívání se nedoporučuje.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Antikoagulancia a antitrombotika",
-      "effect": "Itrakonazol může zvýšit koncentraci dabigatranu a tikagreloru; jejich souběžné užívání je kontraindikováno během léčby a až 2 týdny po jejím ukončení. Současné užívání apixabanu, edoxabanu, rivaroxabanu nebo vorapaxaru se nedoporučuje kvůli očekávanému zvýšení jejich koncentrace. U cilostazolu a kumarinů, jako je warfarin, se doporučuje opatrnost a sledování.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Antivirotika pro systémové použití",
-      "effect": "Kombinace ombitasviru, paritapreviru a ritonaviru, s dasabuvirem nebo bez něj, je kontraindikována; itrakonazol může zvýšit koncentraci paritapreviru. Elbasvir/grazoprevir a tenofovir-alafenamid-fumarát či tenofovir-disoproxil-fumarát se společně s itrakonazolem nedoporučují, protože itrakonazol může zvýšit jejich koncentraci. U kobicistatu, posíleného elvitegraviru, glekapreviru/pibrentasviru, maraviroku, ritonaviru, sachinaviru a indinaviru se doporučuje opatrnost, protože se mohou změnit jejich koncentrace.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Kardiovaskulární léčiva včetně antiarytmik, antihypertenziv, blokátorů kalciových kanálů a léčiv na plicní hypertenzi",
-      "effect": "Itrakonazol může zvýšit koncentrace bepridilu, disopyramidu, dofetilidu, dronedaronu, eplerenonu, finerenonu, ivabradinu, lerkanidipinu, nisoldipinu, ranolazinu a sildenafilu užívaného na plicní hypertenzi; jejich souběžné užívání je kontraindikováno. Kontraindikována je také kombinace s aliskirenem a chinidinem. Současné užívání felodipinu, riociguátu nebo tadalafilu na plicní hypertenzi se nedoporučuje. U bosentanu, diltiazemu, guanfacinu, dalších dihydropyridinů, verapamilu, digoxinu a nadololu se doporučuje opatrnost a sledování; některé koncentrace těchto léčiv mohou stoupnout. Blokátory kalciových kanálů mohou mít aditivní negativní inotropní účinek s itrakonazolem a současně může itrakonazol inhibovat jejich metabolismus, čímž se zvyšuje riziko městnavého srdečního selhání.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Heart failure",
-          "frequency": null,
-          "label": "Zvýšené riziko městnavého srdečního selhání při souběžném užívání blokátorů kalciových kanálů",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky prodlužující interval QT, jejichž koncentrace stoupá při inhibici CYP3A4",
-      "effect": "Zvýšená plazmatická koncentrace souběžně podávaného léčiva může zesílit nebo prodloužit jeho léčebné i nežádoucí účinky. Kombinace s některými léčivy prodlužujícími QT interval může vyvolat ventrikulární tachyarytmii včetně torsade de pointes, potenciálně život ohrožující arytmie; příslušné kontraindikované kombinace se nesmějí užívat během léčby a až 2 týdny po jejím ukončení.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Ventrikulární tachyarytmie včetně torsade de pointes",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky snižující hladinu lipidů",
-      "effect": "Itrakonazol výrazně zvyšuje koncentraci lovastatinu a simvastatinu a může zvýšit koncentraci lomitapidu; souběžné užívání těchto léčiv je kontraindikováno během léčby a až 2 týdny po jejím ukončení. Atorvastatin se současně užívat nedoporučuje, protože jeho koncentrace může stoupnout. U kombinace s atorvastatinem nebo jiným výslovně uvedeným lékem se řiďte doporučením pro danou látku.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Antipsychotika, anxiolytika, hypnotika a sedativa",
-      "effect": "Itrakonazol může zvýšit koncentrace lurasidonu, pimozidu, kvetiapinu, sertindolu, perorálního midazolamu a triazolamu; jejich souběžné užívání je kontraindikováno během léčby a až 2 týdny po jejím ukončení. U alprazolamu, aripiprazolu, brotizolamu, buspironu, nitrožilního midazolamu, risperidonu, zopiklonu, kariprazinu, galantaminu, haloperidolu, reboxetinu a venlafaxinu se doporučuje opatrnost a sledování, protože jejich koncentrace nebo účinky mohou stoupnout či se prodloužit.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Kortikosteroidy a léky k terapii obstrukčních onemocnění dýchacích cest",
-      "effect": "Souběžné podávání ciklesonidu nebo salmeterolu se nedoporučuje; itrakonazol může zvýšit koncentraci salmeterolu a aktivních metabolitů ciklesonidu. U budesonidu, dexamethasonu, flutikasonu a methylprednisolonu se doporučuje opatrnost a sledování, protože jejich koncentrace může stoupnout.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léky k terapii diabetu",
-      "effect": "Itrakonazol může zvýšit koncentrace repaglinidu a saxagliptinu. Při souběžném podávání se doporučuje opatrnost a sledování.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léky k terapii trávicích obtíží",
-      "effect": "Itrakonazol může zvýšit koncentrace cisapridu, naloxegolu a domperidonu; jejich souběžné užívání je kontraindikováno během léčby a až 2 týdny po jejím ukončení. U aprepitantu, loperamidu a netupitantu se doporučuje opatrnost a sledování.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Imunosupresiva",
-      "effect": "Itrakonazol může zvýšit koncentraci voklosporinu, jehož souběžné užívání je kontraindikováno během léčby a až 2 týdny po jejím ukončení. Sirolimus se současně užívat nedoporučuje. U cyklosporinu, takrolimu, everolimu a temsirolimu se doporučuje opatrnost a pečlivé sledování, protože jejich koncentrace může stoupnout.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Urologika a léčiva k léčbě erektilní dysfunkce",
-      "effect": "Itrakonazol může zvýšit koncentraci avanafilu, dapoxetinu a darifenacinu; jejich souběžné užívání je kontraindikováno. Vardenafil je kontraindikován u mužů starších 75 let a v ostatních případech se jeho užívání nedoporučuje. Fesoterodin je kontraindikován při středně těžké nebo těžké poruše funkce ledvin či jater; při lehké poruše se souběžnému podávání vyhněte a při normální funkci orgánů používejte s opatrností, nejvýše 4 mg denně. Solifenacin je kontraindikován při těžké poruše funkce ledvin nebo středně těžké až těžké poruše funkce jater; u ostatních pacientů se doporučuje opatrnost a dávka nejvýše 5 mg. Alfuzosin, silodosin, tadalafil na erektilní dysfunkci, tamsulosin a tolterodin se současně užívat nedoporučují. U dutasteridu, imidafenacinu, oxybutyninu a sildenafilu na erektilní dysfunkci se doporučuje opatrnost a sledování.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Kolchicin",
-      "effect": "Itrakonazol může zvýšit koncentraci kolchicinu. Souběžné užívání je kontraindikováno u pacientů s poruchou funkce ledvin nebo jater a u ostatních pacientů se nedoporučuje.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Eliglustat",
-      "effect": "Itrakonazol může zvýšit koncentraci eliglustatu. Kombinace je kontraindikována u pomalých metabolizátorů CYP2D6 a u středně rychlých nebo rychlých metabolizátorů, kteří užívají silný nebo středně silný inhibitor CYP2D6. U středně rychlých a rychlých metabolizátorů se doporučuje opatrnost; u rychlých metabolizátorů s lehkou poruchou funkce jater je třeba zvážit dávku eliglustatu 84 mg denně.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Další léčivé přípravky ovlivněné inhibicí CYP3A4 nebo P-glykoproteinu (fentanyl, alfentanil, buprenorfin, kanabinoidy, methadon, sufentanil, bedachilin, delamanid, rifabutin, karbamazepin, chinidin, chinin, antihistaminika, prazikvantel, meloxikam, bosentan, cinakalcet a další uvedené léky)",
-      "effect": "Itrakonazol může zvýšit koncentrace řady těchto léčiv; pro jednotlivé přípravky se doporučuje vyhnout se kombinaci, nedoporučuje se nebo se vyžaduje opatrnost a sledování. Zvlášť se nedoporučuje bedachilin, rifabutin, karbamazepin, ebastin, chinidin, chinin a některé další uvedené kombinace; u isavukonazolu a halofantrinu platí kontraindikace. U některých kombinací, zejména s oxykodonem, takrolimem, digoxinem, buspironem, indinavirem nebo dalšími léčivy popsanými v SPC, byly zaznamenány zvýšené koncentrace či expozice. S meloxikamem může naopak klesnout koncentrace meloxikamu a jeho účinnost; doporučuje se sledovat účinnost a podle potřeby upravit dávku.",
-      "effect_type": "increased_exposure",
+      "class_id": "atc:A02A",
+      "drug_class": "Léky snižující žaludeční sekreci nebo neutralizující žaludeční kyselinu",
+      "effect": "Mohou snížit vstřebávání itrakonazolu z tobolek. Pacienti s achlorhydrií, někteří pacienti s AIDS a pacienti užívající léky snižující žaludeční sekreci mají Prokanazol užívat s kolovým nápojem; neutralizační přípravky užívejte nejméně jednu hodinu před nebo dvě hodiny po něm. Lékař může sledovat účinnost a podle potřeby zvýšit dávku.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba plísňových infekcí pochvy, kůže, úst, očí, nehtů a vnitřních orgánů.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0050349",
+      "H": "",
+      "NAZEV": "PROKANAZOL",
+      "SILA": "100MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "14",
+      "CESTA": "POR",
+      "DOPLNEK": "100MG CPS DUR 14",
+      "OBAL": "BLI",
+      "DRZ": "PMP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "26",
+      "ATC_WHO": "J02AC02",
+      "RC": "26/243/03-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,2",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "7",
+      "ZDROJ_WHO": "NO26",
+      "LL": "9219",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "PROKANAZOL",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0050349",
+        "KOD_LATKY": "9219",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "100",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9219",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ITRACONAZOLUM",
+          "NAZEV_EN": "ITRACONAZOLE",
+          "NAZEV": "ITRAKONAZOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0050349",
+        "KOD_LATKY": "14512",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14512",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "SACCHARI SPHAERAE",
+          "NAZEV_EN": "SUGAR SPHERES",
+          "NAZEV": "ZRNĚNÝ CUKR"
+        }
+      },
+      {
+        "KOD_SUKL": "0050349",
+        "KOD_LATKY": "5085",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5085",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POLOXAMERUM 188",
+          "NAZEV_EN": "POLOXAMER 188",
+          "NAZEV": "POLOXAMER 188"
+        }
+      },
+      {
+        "KOD_SUKL": "0050349",
+        "KOD_LATKY": "748",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0050349",
+        "SQ": "5",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0050349",
+        "KOD_LATKY": "1711",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MCG",
+        "substance": {
+          "KOD_LATKY": "1711",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "INDIGOCARMINUM",
+          "NAZEV_EN": "INDIGO CARMINE",
+          "NAZEV": "INDIGOKARMÍN"
+        }
+      },
+      {
+        "KOD_SUKL": "0050349",
+        "KOD_LATKY": "4534",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MCG",
+        "substance": {
+          "KOD_LATKY": "4534",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FLAVUM QUINOLINI",
+          "NAZEV_EN": "QUINOLINE YELLOW",
+          "NAZEV": "CHINOLINOVÁ ŽLUŤ"
+        }
+      },
+      {
+        "KOD_SUKL": "0050349",
+        "KOD_LATKY": "2710",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MCG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0050349",
+        "KOD_LATKY": "2855",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0050349",
+        "KOD_LATKY": "2043",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2043",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "AQUA PURIFICATA",
+          "NAZEV_EN": "WATER, PURIFIED",
+          "NAZEV": "ČIŠTĚNÁ VODA"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0050349",
+      "PIL": "PI216933.pdf",
+      "DAT_ROZ_PIL": "10.12.2024",
+      "SPC": "SPC216934.pdf",
+      "DAT_ROZ_SPC": "10.12.2024",
+      "OBAL_TEXT": "OBAL216932.pdf",
+      "DAT_ROZ_OBAL": "10.12.2024"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J02AC02",
+        "NT": "N",
+        "NAZEV": "ITRAKONAZOL",
+        "NAZEV_EN": "ITRACONAZOLE"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

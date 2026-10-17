@@ -1,173 +1,118 @@
 {
+  "classes": [
+    "atc:P",
+    "atc:P01",
+    "atc:P01A",
+    "atc:P01AB",
+    "atc:P01AB01",
+    "substance:943"
+  ],
   "side_effects": [
     {
       "ctcae": "Headache",
       "frequency": "very_common",
-      "label": "Bolest hlavy",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
-      "frequency": 8.3333333333,
-      "label": "Pocit na zvracení; vyskytl se přibližně u 12 % pacientů.",
+      "frequency": null,
+      "label": "Pocit na zvracení; přibližně u 12 % pacientů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysgeusia",
       "frequency": null,
-      "label": "Sucho v ústech a štiplavá, nepříjemná kovová chuť v ústech, která může doprovázet pocit na zvracení.",
+      "label": "Kovová, štiplavá nepříjemná chuť v ústech.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": null,
-      "label": "Zvracení",
+      "label": "Zvracení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
       "frequency": null,
-      "label": "Průjem",
+      "label": "Průjem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": null,
-      "label": "Bolest břicha a další břišní obtíže",
+      "label": "Bolest břicha.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Constipation",
       "frequency": null,
-      "label": "Zácpa",
+      "label": "Zácpa.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Colitis",
       "frequency": "rare",
-      "label": "Těžký přetrvávající průjem během léčby nebo po ní, spojený s bakterií Clostridium difficile, včetně pseudomembranózní kolitidy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Candidiasis",
-      "frequency": "not_known",
-      "label": "Kandidóza, včetně kvasinkové poševní infekce.",
-      "action": null,
-      "action_condition": null
+      "label": "Těžký přetrvávající průjem během léčby nebo po ní (pseudomembranózní kolitida).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte těžký přetrvávající průjem během léčby nebo po ní.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "rare",
-      "label": "Leukopenie, tedy snížení počtu bílých krvinek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Neutrophil count decreased",
-      "frequency": "very_rare",
-      "label": "Neutropenie",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_rare",
-      "label": "Snížení počtu krevních destiček",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Agranulocytóza",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Pancytopenie, tedy snížení počtu všech druhů krvinek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anemia",
-      "frequency": "very_rare",
-      "label": "Snížení počtu červených krvinek",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aplastic anemia",
-      "frequency": "not_known",
-      "label": "Aplastická anémie; při dlouhodobém užívání může být vratná.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hemolytic anemia",
-      "frequency": "not_known",
-      "label": "Hemolytická anémie",
+      "label": "Leukopenie, tedy snížený počet bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "rare",
-      "label": "Anafylaxe, tedy současný výskyt několika příznaků včetně svědivé vyrážky, otoku dýchacích cest nebo výrazného poklesu krevního tlaku.",
+      "label": "Anafylaxe, tedy závažná alergická reakce s více příznaky, například svědivou vyrážkou, otokem dýchacích cest nebo výrazným poklesem krevního tlaku.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví alergická reakce s otokem rukou, nohou, kotníků, obličeje, rtů nebo krku, potížemi s polykáním či dýcháním nebo svědivou kopřivkovou vyrážkou."
+        "patient_guide": "Pokud se objeví alergická reakce s otokem rukou, nohou, kotníků, obličeje, rtů nebo krku, potížemi s polykáním či dýcháním nebo kopřivkou.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "not_known",
+      "label": "Vyrážka včetně Stevensova-Johnsonova syndromu; může začít zarudlými terčovitými skvrnami, často s puchýřkem, vřídky na sliznicích, horečkou nebo příznaky podobnými chřipce. Při těchto známkách léčbu ukončete a poraďte se s lékařem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vyrážka zhoršující se nebo postupující s puchýři či změnami sliznic, případně příznaky podobné chřipce.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "not_known",
+      "label": "Vyrážka včetně toxické epidermální nekrolýzy; může začít zarudlými terčovitými skvrnami, často s puchýřkem, vřídky na sliznicích, horečkou nebo příznaky podobnými chřipce. Při těchto známkách léčbu ukončete a poraďte se s lékařem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vyrážka zhoršující se nebo postupující s puchýři či změnami sliznic, případně příznaky podobné chřipce.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "very_rare",
-      "label": "Anafylaktický šok, tedy závažná alergická reakce.",
+      "label": "Anafylaktický šok, závažná alergická reakce.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví alergická reakce s otokem rukou, nohou, kotníků, obličeje, rtů nebo krku, potížemi s polykáním či dýcháním nebo svědivou kopřivkovou vyrážkou."
+        "patient_guide": "Pokud se objeví alergická reakce s otokem, kopřivkou nebo potížemi s dýcháním či polykáním.",
+        "min_severity": null
       }
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "not_known",
-      "label": "Kopřivka",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví alergická reakce s otokem rukou, nohou, kotníků, obličeje, rtů nebo krku, potížemi s polykáním či dýcháním nebo svědivou kopřivkovou vyrážkou."
-      }
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": "not_known",
-      "label": "Angioedém, tedy otok, který může postihnout obličej, rty, jazyk nebo hrdlo.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví alergická reakce s otokem rukou, nohou, kotníků, obličeje, rtů nebo krku, potížemi s polykáním či dýcháním nebo svědivou kopřivkovou vyrážkou."
-      }
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "not_known",
-      "label": "Horečka",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anorexia",
-      "frequency": "not_known",
-      "label": "Nechutenství",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Psychosis",
@@ -177,606 +122,719 @@
       "action_condition": null
     },
     {
-      "ctcae": "Depression",
-      "frequency": "not_known",
-      "label": "Depresivní nálada",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anxiety",
-      "frequency": "not_known",
-      "label": "Nervozita",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Encephalopathy",
       "frequency": "very_rare",
-      "label": "Encefalopatie; může se projevit dezorientací, horečkou, bolestí hlavy, halucinacemi, obrnou, citlivostí na světlo, rozmazaným viděním, poruchami pohybu nebo ztuhlým krkem.",
-      "action": "discontinue_treatment",
+      "label": "Encefalopatie (onemocnění mozku); mohou se objevit dezorientace, horečka, bolest hlavy, halucinace, ochrnutí, citlivost na světlo, rozmazané vidění, poruchy pohybu nebo ztuhlý krk.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky onemocnění mozku, například dezorientace, horečka, bolest hlavy, halucinace, obrna, citlivost na světlo, rozmazané vidění, poruchy pohybu nebo ztuhlý krk."
+        "patient_guide": "Pokud se objeví příznaky encefalopatie.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Ataxia",
+      "ctcae": "Nervous system disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Subakutní cerebelární syndrom, například ztráta koordinace, porucha řeči nebo chůze, mimovolní záškuby očí a třes; po ukončení léčby může vymizet.",
-      "action": null,
-      "action_condition": null
+      "label": "Subakutní cerebelární syndrom, například ztráta koordinace, porucha řeči, abnormální chůze, mimovolní záškuby očí a třes.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví ztráta koordinace, porucha řeči, abnormální chůze, mimovolní záškuby očí nebo třes.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Somnolence",
       "frequency": "very_rare",
-      "label": "Ospalost",
+      "label": "Ospalost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "very_rare",
-      "label": "Závratě",
+      "label": "Závratě.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Seizure",
       "frequency": "very_rare",
-      "label": "Křeče",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Peripheral sensory neuropathy",
-      "frequency": "not_known",
-      "label": "Při intenzivní nebo dlouhodobé léčbě byla hlášena periferní senzorická neuropatie, například necitlivost a brnění, píchání nebo pálení v končetinách; ve většině případů po ukončení léčby nebo snížení dávky vymizela.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Seizure",
-      "frequency": "not_known",
-      "label": "Při intenzivní nebo dlouhodobé léčbě byly hlášeny přechodné epileptiformní záchvaty.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aseptic meningitis",
-      "frequency": "not_known",
-      "label": "Aseptický zánět mozkových blan",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "not_known",
-      "label": "Nespavost",
+      "label": "Křeče; při intenzivní nebo dlouhodobé léčbě byly hlášeny také přechodné epileptiformní záchvaty (frekvence není známa).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "very_rare",
-      "label": "Poruchy zraku, například dvojité nebo rozmazané vidění; ve většině případů jsou přechodné.",
+      "label": "Přechodné poruchy zraku, například dvojité nebo rozmazané vidění, krátkozrakost, snížená ostrost zraku nebo změny barevného vidění.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Vision decreased",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "very_rare",
-      "label": "Snížená ostrost zraku nebo změny barevného vidění",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Optic neuritis",
-      "frequency": "not_known",
-      "label": "Zánět zrakového nervu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Optic nerve disorder",
-      "frequency": "not_known",
-      "label": "Neuropatie zrakového nervu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Conjunctivitis",
-      "frequency": "not_known",
-      "label": "Zánět očí",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hearing impaired",
-      "frequency": "not_known",
-      "label": "Porucha nebo ztráta sluchu, včetně percepční ztráty sluchu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tinnitus",
-      "frequency": "not_known",
-      "label": "Ušní šelest",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Electrocardiogram QT corrected interval prolonged",
-      "frequency": "not_known",
-      "label": "Prodloužení QT intervalu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "very_rare",
-      "label": "Zvýšení jaterních enzymů (AST, ALT a alkalické fosfatázy) v krevních testech",
+      "label": "Zvýšení jaterních enzymů AST, ALT nebo alkalické fosfatázy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "very_rare",
-      "label": "Cholestatický nebo smíšený zánět jater",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "very_rare",
-      "label": "Poškození jaterních buněk; po vysazení léku může vymizet.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Žloutenka; po vysazení léku může vymizet.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "very_rare",
-      "label": "Zánět slinivky břišní; po vysazení léku může vymizet.",
+      "label": "Zánět jater.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatic failure",
       "frequency": "not_known",
-      "label": "U pacientů s Cockayneovým syndromem bylo hlášeno závažné akutní selhání jater, včetně smrtelných případů.",
+      "label": "Závažná akutní jaterní toxicita nebo akutní selhání jater u pacientů s Cockayneovým syndromem, včetně smrtelných případů.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte Cockayneův syndrom a objeví se u vás bolest břicha, nechutenství, pocit na zvracení, zvracení, horečka, malátnost, únava, žloutenka, tmavá moč, světle žlutě zbarvená stolice nebo svědění."
+        "patient_guide": "Pokud máte Cockayneův syndrom a objeví se bolest břicha, nechutenství, nevolnost, zvracení, horečka, malátnost, únava, žloutenka, tmavá moč, světlá stolice nebo svědění.",
+        "min_severity": null
       }
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": "very_rare",
+      "label": "Žloutenka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "very_rare",
+      "label": "Zánět slinivky břišní.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "very_rare",
+      "label": "Kožní vyrážka.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Rash pustular",
       "frequency": "very_rare",
-      "label": "Pustulózní kožní vyrážka, včetně akutní generalizované exantematózní pustulózy.",
+      "label": "Pustulární kožní výsev.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pustular drug eruption",
+      "frequency": "very_rare",
+      "label": "Akutní generalizovaná exantematózní pustulóza.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky podobné chřipce nebo zhoršující se vyrážka, zejména s puchýři nebo změnami na sliznicích."
+        "patient_guide": "Pokud se objeví příznaky podobné chřipce nebo zhoršující se vyrážka, často s puchýři či změnami sliznic.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Pruritus",
       "frequency": "very_rare",
-      "label": "Svědění",
+      "label": "Svědění.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Erythema multiforme",
-      "frequency": "not_known",
-      "label": "Erythema multiforme",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom; může začínat příznaky podobnými chřipce a zhoršující se vyrážkou, často s puchýři nebo změnami sliznic.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky podobné chřipce nebo zhoršující se vyrážka, zejména s puchýři nebo změnami na sliznicích."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza; může začínat příznaky podobnými chřipce a zhoršující se vyrážkou, často s puchýři nebo změnami sliznic.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky podobné chřipce nebo zhoršující se vyrážka, zejména s puchýři nebo změnami na sliznicích."
-      }
-    },
-    {
-      "ctcae": "Dermatosis bullous",
+      "ctcae": "Flushing",
       "frequency": "very_rare",
-      "label": "Vyrážka s tvorbou puchýřů",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky podobné chřipce nebo zhoršující se vyrážka, zejména s puchýři nebo změnami na sliznicích."
-      }
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "very_rare",
-      "label": "Kožní vyrážka a zarudnutí",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Fixní léková erupce",
+      "label": "Zrudnutí kůže.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
       "frequency": "very_rare",
-      "label": "Bolest svalů",
+      "label": "Bolest svalů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "very_rare",
-      "label": "Bolest kloubů",
+      "label": "Bolest kloubů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysuria",
       "frequency": "very_rare",
-      "label": "Pálení nebo bolest močové trubice",
+      "label": "Pálení nebo bolest močové trubice.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cystitis noninfective",
       "frequency": "very_rare",
-      "label": "Zánět močového měchýře",
+      "label": "Zánět močového měchýře.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urine discoloration",
       "frequency": "very_rare",
-      "label": "Ztmavnutí moči",
+      "label": "Ztmavnutí moči.",
       "action": null,
       "action_condition": null
     },
     {
+      "ctcae": "Agranulocytosis",
+      "frequency": "very_rare",
+      "label": "Agranulocytóza.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Neutrophil count decreased",
+      "frequency": "very_rare",
+      "label": "Neutropenie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "very_rare",
+      "label": "Snížení počtu krevních destiček.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Pancytopenie, tedy snížení počtu všech typů krvinek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Aplastic anemia",
+      "frequency": "not_known",
+      "label": "Reverzibilní aplastická anémie; vzácně může vzniknout při dlouhodobém užívání.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Angioedema",
+      "frequency": "not_known",
+      "label": "Angioedém, tedy otok podkoží nebo sliznic.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví otok rukou, nohou, kotníků, obličeje, rtů nebo krku, potíže s polykáním či dýcháním nebo kopřivka.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "not_known",
+      "label": "Kopřivka.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví otok rukou, nohou, kotníků, obličeje, rtů nebo krku, potíže s polykáním či dýcháním nebo kopřivka.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "not_known",
+      "label": "Horečka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anorexia",
+      "frequency": "not_known",
+      "label": "Nechutenství.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Depression",
+      "frequency": "not_known",
+      "label": "Snížená nálada.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anxiety",
+      "frequency": "not_known",
+      "label": "Nervozita.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Peripheral sensory neuropathy",
+      "frequency": "not_known",
+      "label": "Při intenzivní nebo dlouhodobé léčbě periferní senzorická neuropatie, například necitlivost, brnění, píchání nebo pálení v končetinách; ve většině případů ustoupila po ukončení léčby nebo snížení dávky.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Aseptic meningitis",
+      "frequency": "not_known",
+      "label": "Aseptický zánět mozkových blan.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": "not_known",
+      "label": "Nespavost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Optic neuritis",
+      "frequency": "not_known",
+      "label": "Zánět zrakového nervu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hearing impaired",
+      "frequency": "not_known",
+      "label": "Porucha nebo ztráta sluchu, včetně percepční.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tinnitus",
+      "frequency": "not_known",
+      "label": "Ušní šelest.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Electrocardiogram QT corrected interval prolonged",
+      "frequency": "not_known",
+      "label": "Prodloužení QT intervalu.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se při současném užívání léků prodlužujících QT interval objeví závratě, mdloby, bušení či nepravidelný srdeční rytmus, dušnost nebo dočasná ztráta vědomí.",
+        "min_severity": null
+      }
+    },
+    {
       "ctcae": "Mucositis oral",
       "frequency": "not_known",
-      "label": "Zánět sliznice v ústech",
+      "label": "Zánět sliznice v ústech.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Potažený jazyk",
+      "label": "Potažený jazyk.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erythema multiforme",
+      "frequency": "not_known",
+      "label": "Erythema multiforme.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví zhoršující se vyrážka, často s puchýři nebo změnami sliznic, případně příznaky podobné chřipce.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Fixed drug eruption",
+      "frequency": "not_known",
+      "label": "Fixní léková erupce.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vaginal dryness",
       "frequency": "not_known",
-      "label": "Suchost poševní nebo vaginální sliznice",
+      "label": "Suchost poševní sliznice.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspareunia",
       "frequency": "not_known",
-      "label": "Bolest při pohlavním styku",
+      "label": "Bolest při pohlavním styku.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Libido decreased",
       "frequency": "not_known",
-      "label": "Snížení libida",
+      "label": "Snížení libida.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Candidiasis",
+      "frequency": "not_known",
+      "label": "Kvasinková infekce, někdy poševní; může být třeba doplnit léčbu protiplísňovým přípravkem.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "deriváty kumarinu",
-      "effect": "Současné užívání metronidazolu může zesílit antikoagulační účinek kumarinových derivátů a zvýšit riziko krvácení, protože se zpomaluje jejich odbourávání v játrech. Může být nutné upravit dávku antikoagulancia.",
+      "class_id": "substance:943",
+      "drug": "Kumarinové deriváty",
+      "effect": "Metronidazol může zesílit antikoagulační účinek kumarinových derivátů a zvýšit riziko krvácení, protože zpomaluje jejich odbourávání v játrech. Lékař může upravit dávku antikoagulancia.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "fenytoin",
-      "effect": "Fenytoin podporuje enzymy, které metabolizují metronidazol na jeho hydroxyderivát, a zkracuje tak biologický poločas metronidazolu přibližně na 3 hodiny.",
+      "class_id": "substance:943",
+      "drug": "Fenytoin",
+      "effect": "Fenytoin urychluje přeměnu metronidazolu na jeho hydroxyderivát a zkracuje jeho biologický poločas přibližně na 3 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "fenobarbital",
-      "effect": "Fenobarbital podporuje enzymy, které metabolizují metronidazol na jeho hydroxyderivát, a zkracuje tak biologický poločas metronidazolu přibližně na 3 hodiny.",
+      "class_id": "substance:943",
+      "drug": "Fenobarbital",
+      "effect": "Fenobarbital urychluje přeměnu metronidazolu na jeho hydroxyderivát a zkracuje jeho biologický poločas přibližně na 3 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "cimetidin",
-      "effect": "Cimetidin může snížit aktivitu jaterních mikrozomálních enzymů, prodloužit poločas metronidazolu a snížit jeho plazmatickou clearance.",
+      "class_id": "substance:943",
+      "drug": "Cimetidin",
+      "effect": "Cimetidin a další léčiva snižující aktivitu jaterních mikrozomálních enzymů mohou prodloužit poločas metronidazolu a snížit jeho plazmatickou clearance.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "lithium",
-      "effect": "U pacientů léčených vysokými dávkami lithných solí může krátkodobá léčba metronidazolem zvýšit koncentraci lithia v séru, jeho toxicitu a vést ke známkám poškození ledvin. Pokud je podání metronidazolu nutné, má se dávka lithia snížit nebo případně lithium vysadit. Při současném podávání je nutná opatrnost a častá kontrola hladin lithia, elektrolytů a kreatininu v séru.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Známky poškození ledvin v důsledku zvýšené toxicity lithia",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "fluoruracil",
-      "effect": "Metronidazol snižuje clearance fluoruracilu, a proto může zvýšit jeho toxicitu.",
+      "class_id": "substance:943",
+      "drug": "Lithium",
+      "effect": "U pacientů léčených vysokými dávkami lithných solí může při krátkodobé léčbě metronidazolem stoupnout koncentrace lithia v séru, jeho toxicita a známky poškození ledvin. Při souběžném podávání lékař zváží snížení dávky nebo vysazení lithia a často kontroluje hladiny lithia, elektrolytů a kreatininu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "cyklosporin",
-      "effect": "Při současném podávání metronidazolu hrozí zvýšení hladin cyklosporinu v séru. Hladiny cyklosporinu a kreatinin v séru mají být pečlivě sledovány a dávka cyklosporinu podle potřeby upravena. Pacienti mají lékaři oznámit příznaky toxicity cyklosporinu, jako jsou pocit na zvracení, zvracení, průjem, bolest břicha, závratě, únava, bolest hlavy, třes a křeče.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nausea",
-          "frequency": null,
-          "label": "Pocit na zvracení při toxicitě cyklosporinu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Vomiting",
-          "frequency": null,
-          "label": "Zvracení při toxicitě cyklosporinu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Diarrhea",
-          "frequency": null,
-          "label": "Průjem při toxicitě cyklosporinu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Abdominal pain",
-          "frequency": null,
-          "label": "Bolest břicha při toxicitě cyklosporinu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Dizziness",
-          "frequency": null,
-          "label": "Závratě při toxicitě cyklosporinu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Fatigue",
-          "frequency": null,
-          "label": "Únava při toxicitě cyklosporinu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Headache",
-          "frequency": null,
-          "label": "Bolest hlavy při toxicitě cyklosporinu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Tremor",
-          "frequency": null,
-          "label": "Třes při toxicitě cyklosporinu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Seizure",
-          "frequency": null,
-          "label": "Křeče při toxicitě cyklosporinu",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "busulfan",
-      "effect": "Při užívání metronidazolu se mohou zvýšit plazmatické hladiny busulfanu, což může vést k závažné toxicitě. Vzhledem k možné závažné toxicitě a úmrtnosti spojené se zvýšenými hladinami busulfanu se současné užívání s metronidazolem nedoporučuje.",
+      "class_id": "substance:943",
+      "drug": "Fluoruracil",
+      "effect": "Metronidazol snižuje clearance fluoruracilu, což může zvýšit jeho toxicitu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "amiodaron",
-      "effect": "Při současném podávání metronidazolu a amiodaronu bylo hlášeno prodloužení QT intervalu a torsade de pointes. Může být vhodné sledovat QT interval na EKG. Pacient má vyhledat lékařskou péči, pokud se objeví závratě, bušení srdce nebo mdloba; při nutném podávání léků prodlužujících QT interval má ihned kontaktovat lékaře při závratích, mdlobách, palpitacích, nepravidelném srdečním rytmu, dechové nedostatečnosti nebo přechodné ztrátě vědomí.",
+      "class_id": "substance:943",
+      "drug": "Cyklosporin",
+      "effect": "Při současném podávání metronidazolu může stoupnout hladina cyklosporinu v séru. Lékař má pečlivě sledovat hladiny cyklosporinu a kreatininu a podle potřeby upravit dávku cyklosporinu; pacient má lékaři oznámit příznaky jeho toxicity, například nevolnost, zvracení, průjem, bolest břicha, závratě, únavu, bolest hlavy, třes nebo křeče.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:943",
+      "drug": "Busulfan",
+      "effect": "Při současném užití metronidazolu mohou stoupnout plazmatické hladiny busulfanu a způsobit závažnou toxicitu. Současné použití se nedoporučuje kvůli možné závažné toxicitě a úmrtí.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:943",
+      "drug": "Amiodaron",
+      "effect": "Při současném podávání metronidazolu a amiodaronu bylo hlášeno prodloužení QT intervalu a torsade de pointes. Při této kombinaci může být vhodné sledovat QT interval na EKG; při závratích, bušení srdce nebo mdlobě má pacient vyhledat lékařskou péči.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Electrocardiogram QT corrected interval prolonged",
           "frequency": null,
-          "label": "Prodloužení QT intervalu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Torsade de pointes nebo komorová arytmie",
+          "label": "Prodloužení QT intervalu.",
           "action": "contact_doctor",
           "action_condition": {
-            "patient_guide": "Pokud se u vás objeví závratě, bušení srdce nebo mdloba."
+            "patient_guide": "Pokud se při současném užívání amiodaronu objeví závratě, bušení srdce nebo mdloba.",
+            "min_severity": null
           }
         },
         {
-          "ctcae": "Dizziness",
+          "ctcae": "Torsade de pointes",
           "frequency": null,
-          "label": "Závratě",
+          "label": "Porucha srdečního rytmu torsade de pointes.",
           "action": "contact_doctor",
           "action_condition": {
-            "patient_guide": "Pokud se u vás objeví závratě, bušení srdce nebo mdloba."
-          }
-        },
-        {
-          "ctcae": "Palpitations",
-          "frequency": null,
-          "label": "Bušení srdce",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud se u vás objeví závratě, bušení srdce nebo mdloba."
-          }
-        },
-        {
-          "ctcae": "Syncope",
-          "frequency": null,
-          "label": "Mdloba",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud se u vás objeví závratě, bušení srdce nebo mdloba."
+            "patient_guide": "Pokud se při současném užívání amiodaronu objeví závratě, bušení srdce nebo mdloba.",
+            "min_severity": null
           }
         }
       ]
     },
     {
-      "drug": "astemizol",
-      "effect": "Při současném užívání metronidazolu a látek prodlužujících QT interval byly zaznamenány ojedinělé případy prodloužení QT intervalu a komorových arytmií; kombinace může mít teoreticky aditivní účinek. Pokud je současné podání nezbytné, při příznacích změny srdečního rytmu má pacient ihned kontaktovat lékaře.",
+      "class_id": "atc:R06AX11",
+      "drug": "Astemizol",
+      "effect": "Současné podávání s metronidazolem a dalšími látkami, které mohou prodlužovat QT interval, může mít teoreticky sčítající se účinky. Pokud je kombinace nezbytná, pacient má ihned kontaktovat lékaře při příznacích změny srdečního rytmu.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Electrocardiogram QT corrected interval prolonged",
           "frequency": null,
-          "label": "Prodloužení QT intervalu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Komorové arytmie",
+          "label": "Možné prodloužení QT intervalu.",
           "action": "contact_doctor",
           "action_condition": {
-            "patient_guide": "Pokud se u vás objeví příznaky změny srdečního rytmu."
+            "patient_guide": "Pokud se při současném užívání astemizolu objeví závratě, mdloby, bušení nebo nepravidelný srdeční rytmus, dušnost či dočasná ztráta vědomí.",
+            "min_severity": null
           }
         }
       ]
     },
     {
-      "drug": "terfenadin",
-      "effect": "Při současném užívání metronidazolu a látek prodlužujících QT interval byly zaznamenány ojedinělé případy prodloužení QT intervalu a komorových arytmií; kombinace může mít teoreticky aditivní účinek. Pokud je současné podání nezbytné, při příznacích změny srdečního rytmu má pacient ihned kontaktovat lékaře.",
+      "class_id": "atc:R06AX12",
+      "drug": "Terfenadin",
+      "effect": "Současné podávání s metronidazolem a dalšími látkami, které mohou prodlužovat QT interval, může mít teoreticky sčítající se účinky. Pokud je kombinace nezbytná, pacient má ihned kontaktovat lékaře při příznacích změny srdečního rytmu.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Electrocardiogram QT corrected interval prolonged",
           "frequency": null,
-          "label": "Prodloužení QT intervalu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Komorové arytmie",
+          "label": "Možné prodloužení QT intervalu.",
           "action": "contact_doctor",
           "action_condition": {
-            "patient_guide": "Pokud se u vás objeví příznaky změny srdečního rytmu."
+            "patient_guide": "Pokud se při současném užívání terfenadinu objeví závratě, mdloby, bušení nebo nepravidelný srdeční rytmus, dušnost či dočasná ztráta vědomí.",
+            "min_severity": null
           }
         }
       ]
     },
     {
-      "drug": "alkohol",
-      "effect": "Metronidazol může při užití s alkoholem vyvolat mírné nežádoucí účinky podobné reakci po disulfiramu, například zrudnutí obličeje, bolest hlavy, pocit na zvracení, zvracení, křeče v břiše a pocení. Během léčby a nejméně 48 hodin po jejím ukončení alkohol nepijte.",
+      "class_id": "atc:N07BB01",
+      "drug": "Disulfiram",
+      "effect": "Při současném užívání metronidazolu a disulfiramu se mohou vyskytnout psychotické reakce. Pacientům, kteří užívali disulfiram během posledních 14 dnů, se metronidazol nesmí podávat.",
+      "effect_type": "contraindicated",
+      "side_effects": [
+        {
+          "ctcae": "Psychosis",
+          "frequency": null,
+          "label": "Psychotické reakce při současném užívání disulfiramu a metronidazolu.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:V03AZ01",
+      "drug": "Alkohol",
+      "effect": "Alkohol užívaný během léčby metronidazolem nebo nejméně 48 hodin po ní může vyvolat disulfiramovou reakci: zrudnutí obličeje, bolest hlavy, nevolnost, zvracení, křeče v břiše a pocení. Alkohol se v tomto období nemá konzumovat.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Flushing",
           "frequency": null,
-          "label": "Zrudnutí obličeje",
+          "label": "Zrudnutí obličeje.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Headache",
           "frequency": null,
-          "label": "Bolest hlavy",
+          "label": "Bolest hlavy.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Nausea",
           "frequency": null,
-          "label": "Pocit na zvracení",
+          "label": "Nevolnost.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Vomiting",
           "frequency": null,
-          "label": "Zvracení",
+          "label": "Zvracení.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Abdominal pain",
           "frequency": null,
-          "label": "Křeče v břiše",
+          "label": "Křeče v břiše.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Hyperhidrosis",
           "frequency": null,
-          "label": "Pocení",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "disulfiram",
-      "effect": "Při současném užívání metronidazolu a disulfiramu byly zaznamenány psychotické reakce. Metronidazol se nesmí podávat pacientům, kteří užívali disulfiram během předchozích 14 dnů.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Psychosis",
-          "frequency": null,
-          "label": "Psychotické reakce",
+          "label": "Pocení.",
           "action": null,
           "action_condition": null
         }
       ]
     }
-  ]
+  ],
+  "usage": "Léčba infekcí způsobených některými prvoky a bakteriemi a prevence infekcí před břišními, gynekologickými a porodnickými operacemi.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0002427",
+      "H": "",
+      "NAZEV": "ENTIZOL",
+      "SILA": "250MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "20",
+      "CESTA": "POR",
+      "DOPLNEK": "250MG TBL NOB 20",
+      "OBAL": "BLI",
+      "DRZ": "ZPF",
+      "ZEMDRZ": "PL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "25",
+      "ATC_WHO": "P01AB01",
+      "RC": "25/128/72-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "2,5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "943",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "ENTIZOL",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0002427",
+        "KOD_LATKY": "943",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "250",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "943",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "METRONIDAZOLUM",
+          "NAZEV_EN": "METRONIDAZOLE",
+          "NAZEV": "METRONIDAZOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0002427",
+        "KOD_LATKY": "2898",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2898",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SOLANI AMYLUM",
+          "NAZEV_EN": "POTATO STARCH",
+          "NAZEV": "BRAMBOROVÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0002427",
+        "KOD_LATKY": "2855",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0002427",
+        "KOD_LATKY": "2769",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2769",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "GLUCOSUM LIQUIDUM",
+          "NAZEV_EN": "GLUCOSE, LIQUID",
+          "NAZEV": "TEKUTÁ GLUKOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0002427",
+        "KOD_LATKY": "2378",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0002427",
+      "PIL": "PI196094.pdf",
+      "DAT_ROZ_PIL": "21.02.2023",
+      "SPC": "SPC196095.pdf",
+      "DAT_ROZ_SPC": "21.02.2023",
+      "OBAL_TEXT": "OBAL166325.pdf",
+      "DAT_ROZ_OBAL": "07.01.2021"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "P01AB01",
+        "NT": "N",
+        "NAZEV": "METRONIDAZOL",
+        "NAZEV_EN": "METRONIDAZOLE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

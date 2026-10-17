@@ -1,681 +1,987 @@
 {
+  "classes": [
+    "atc:M",
+    "atc:M01",
+    "atc:M01A",
+    "atc:M01AE",
+    "atc:M01AE03",
+    "substance:2872"
+  ],
   "side_effects": [
     {
       "ctcae": "Dyspepsia",
       "frequency": "common",
-      "label": "Nepohoda a/nebo bolest v horní části břicha (dyspepsie).",
+      "label": "Nepohoda nebo bolest v horní části břicha",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Pocit na zvracení.",
+      "label": "Pocit na zvracení",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "common",
-      "label": "Bolest břicha.",
-      "action": null,
-      "action_condition": null
+      "label": "Bolest břicha",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví bolest břicha; zvlášť pokud máte také zvracení krve, tmavou dehtovitou stolici nebo krvavý průjem.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Vomiting",
       "frequency": "common",
-      "label": "Zvracení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Headache",
-      "frequency": "uncommon",
-      "label": "Bolest hlavy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": "uncommon",
-      "label": "Točení hlavy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Somnolence",
-      "frequency": "uncommon",
-      "label": "Spavost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "uncommon",
-      "label": "Průjem.",
+      "label": "Zvracení",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Constipation",
       "frequency": "uncommon",
-      "label": "Zácpa.",
+      "label": "Zácpa",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "uncommon",
+      "label": "Průjem",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flatulence",
       "frequency": "uncommon",
-      "label": "Plynatost.",
+      "label": "Plynatost",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gastritis",
       "frequency": "uncommon",
-      "label": "Zánět žaludku.",
+      "label": "Zánět žaludku",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "uncommon",
+      "label": "Bolest hlavy",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": "uncommon",
+      "label": "Točení hlavy",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Somnolence",
+      "frequency": "uncommon",
+      "label": "Spavost",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Kožní vyrážka.",
+      "label": "Kožní vyrážka",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví vyrážka."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Pruritus",
       "frequency": "uncommon",
-      "label": "Svědění.",
+      "label": "Svědění",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Generalized edema",
       "frequency": "uncommon",
-      "label": "Celkový otok.",
+      "label": "Celkový otok",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fatigue",
       "frequency": "uncommon",
-      "label": "Únava.",
+      "label": "Únava",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anemia",
       "frequency": "rare",
-      "label": "Krvácivá anémie (snížené množství krevního barviva a červených krvinek).",
+      "label": "Krvácivá anémie",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Mucositis oral",
       "frequency": "rare",
-      "label": "Zánět sliznice v ústech.",
+      "label": "Zánět sliznice v ústech",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Gastric ulcer",
       "frequency": "rare",
-      "label": "Vřed žaludku nebo dvanáctníku.",
-      "action": null,
+      "label": "Vřed žaludku nebo dvanáctníku",
+      "action": "discontinue_treatment",
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "rare",
-      "label": "Mravenčení.",
+      "label": "Mravenčení",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "rare",
-      "label": "Rozostřené vidění.",
+      "label": "Rozostřené vidění",
       "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví porucha vidění, například rozostřené vidění."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Tinnitus",
       "frequency": "rare",
-      "label": "Zvonění nebo jiné zvuky v uších.",
+      "label": "Zvonění v uších",
       "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud vám zvoní v uších."
-      }
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Asthma",
       "frequency": "rare",
-      "label": "Průduškové astma.",
-      "action": null,
-      "action_condition": null
+      "label": "Průduškové astma",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví sípání, náhlá dušnost nebo drtivá bolest na hrudi.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "rare",
-      "label": "Zánět jater.",
-      "action": null,
-      "action_condition": null
+      "label": "Hepatitida, někdy spojená se žloutenkou nebo poruchou jaterních testů",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud kůže nebo oční bělmo zežloutne.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "rare",
-      "label": "Zvýšené hladiny aminotransferáz.",
+      "label": "Zvýšení hladin aminotransferáz",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blood bilirubin increased",
       "frequency": "rare",
-      "label": "Zvýšení hladiny sérového bilirubinu v důsledku poruchy jater.",
+      "label": "Zvýšení bilirubinu v krvi v důsledku poruchy jater",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Weight gain",
       "frequency": "rare",
-      "label": "Přibývání na váze.",
+      "label": "Přírůstek na váze",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Agranulocytosis",
       "frequency": "not_known",
-      "label": "Nedostatek bílých krvinek, který může vést k horečce, bolestem v krku a častějším infekcím.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Agranulocytóza.",
+      "label": "Nedostatek bílých krvinek (agranulocytóza), který může vést k horečce, bolesti v krku a častějším infekcím",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "not_known",
-      "label": "Nízký počet krevních destiček.",
+      "label": "Nízký počet krevních destiček",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Bone marrow hypocellular",
+      "ctcae": "Aplastic anemia",
       "frequency": "not_known",
-      "label": "Selhání kostní dřeně.",
+      "label": "Selhání kostní dřeně",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "not_known",
-      "label": "Anafylaktické reakce, včetně šoku.",
-      "action": "discontinue_treatment",
+      "label": "Závažná alergická reakce včetně šoku, která se může projevit potížemi s dýcháním nebo točením hlavy",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka, svědění, otok, výrazná malátnost nebo potíže s dýcháním."
+        "patient_guide": "Pokud se objeví otok obličeje nebo hrdla, potíže s dýcháním či polykáním nebo silná malátnost.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Změny nálady.",
+      "label": "Změny nálady",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Seizure",
       "frequency": "not_known",
-      "label": "Křeče.",
+      "label": "Křeče",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dysgeusia",
       "frequency": "not_known",
-      "label": "Změny vnímání chuti.",
+      "label": "Změny vnímání chuti",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Heart failure",
       "frequency": "not_known",
-      "label": "Srdeční selhání.",
-      "action": null,
-      "action_condition": null
+      "label": "Srdeční selhání",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví mdloba, drtivá bolest na hrudi nebo náhlá dušnost.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Hypertension",
       "frequency": "not_known",
-      "label": "Vysoký krevní tlak.",
+      "label": "Vysoký krevní tlak",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Flushing",
+      "ctcae": "Vascular disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Rozšíření cév.",
+      "label": "Rozšíření cév",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Bronchospasm",
       "frequency": "not_known",
-      "label": "Dechové potíže se sípáním nebo kašlem či dušnost, zejména u pacientů alergických na kyselinu acetylsalicylovou nebo jiná nesteroidní antirevmatika.",
-      "action": "discontinue_treatment",
+      "label": "Dechové potíže se sípáním nebo kašlem, zejména u lidí alergických na kyselinu acetylsalicylovou nebo jiná NSA",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví sípání nebo náhlá dušnost."
+        "patient_guide": "Pokud se objeví sípání, náhlá dušnost nebo drtivá bolest na hrudi.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Rhinitis",
       "frequency": "not_known",
-      "label": "Rýma.",
+      "label": "Rýma",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal hemorrhage",
+      "frequency": "not_known",
+      "label": "Krvácení do trávicího traktu, které se může projevit zvracením krve nebo černou stolicí",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví zvracení krve nebo tmavé hmoty podobné kávové sedlině, tmavá dehtovitá stolice nebo krvavý průjem.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Colitis",
       "frequency": "not_known",
-      "label": "Zhoršení ulcerózní kolitidy nebo Crohnovy choroby.",
+      "label": "Zhoršení ulcerózní kolitidy nebo Crohnovy choroby",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Gastrointestinal perforation",
       "frequency": "not_known",
-      "label": "Krvácení do trávicího traktu.",
+      "label": "Proděravění stěny střeva",
       "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zvracíte krev nebo tmavý obsah podobající se kávové sedlině, máte tmavou dehtovitou stolici nebo krvavý průjem."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Proděravění stěny střeva.",
-      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Photosensitivity",
       "frequency": "not_known",
-      "label": "Zvýšená citlivost kůže na sluneční světlo.",
+      "label": "Zvýšená citlivost kůže na sluneční světlo",
       "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví citlivost na sluneční světlo."
-      }
+      "action_condition": null
     },
     {
       "ctcae": "Alopecia",
       "frequency": "not_known",
-      "label": "Vypadávání vlasů.",
+      "label": "Vypadávání vlasů",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urticaria",
       "frequency": "not_known",
-      "label": "Kopřivka (svědivá vyrážka).",
-      "action": null,
+      "label": "Kopřivka (svědivá vyrážka)",
+      "action": "contact_doctor",
       "action_condition": null
     },
     {
-      "ctcae": "Edema face",
+      "ctcae": "Angioedema",
       "frequency": "not_known",
-      "label": "Otok, zejména v obličeji a hrdle.",
-      "action": "discontinue_treatment",
+      "label": "Otok, zejména na obličeji a v hrdle",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud vám otékají ruce, kotníky, nohy, obličej, oči, hrdlo nebo jazyk."
-      }
-    },
-    {
-      "ctcae": "Dermatosis bullous",
-      "frequency": "not_known",
-      "label": "Puchýřnaté kožní reakce.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce, například vyrážka, změny na sliznicích, puchýře nebo olupování kůže."
+        "patient_guide": "Pokud se objeví otok obličeje, očí, hrdla nebo jazyka nebo potíže s polykáním či dýcháním.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom.",
+      "label": "Stevensův-Johnsonův syndrom: závažná kožní reakce s vyrážkou a puchýři",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce, například vyrážka, změny na sliznicích, puchýře nebo olupování kůže."
+        "patient_guide": "Pokud se objeví kožní vyrážka nebo změny na sliznicích, puchýře či olupování kůže.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza.",
+      "label": "Toxická epidermální nekrolýza: závažná kožní reakce s vyrážkou, puchýři, horečkou a olupováním kůže",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce, například vyrážka, změny na sliznicích, puchýře nebo olupování kůže."
+        "patient_guide": "Pokud se objeví kožní vyrážka nebo změny na sliznicích, puchýře či olupování kůže.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Exfoliative dermatitis",
       "frequency": "not_known",
-      "label": "Exfoliativní dermatitida (olupování kůže).",
+      "label": "Exfoliativní dermatitida s olupováním kůže",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná kožní reakce, například vyrážka, změny na sliznicích, puchýře nebo olupování kůže."
+        "patient_guide": "Pokud se objeví kožní vyrážka nebo změny na sliznicích, puchýře či olupování kůže.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Acute kidney injury",
       "frequency": "not_known",
-      "label": "Akutní selhání ledvin.",
-      "action": null,
-      "action_condition": null
+      "label": "Akutní selhání ledvin",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se výrazně sníží tvorba moči.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Tubulointerstitial nephritis",
       "frequency": "not_known",
-      "label": "Tubulointersticiální zánět ledvin.",
+      "label": "Tubulointersticiální nefritida (zánět ledvin)",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nephrotic syndrome",
       "frequency": "not_known",
-      "label": "Nefritický syndrom.",
+      "label": "Nefritický syndrom",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Abnormální výsledky testů funkce ledvin.",
+      "label": "Abnormální výsledky testů funkce ledvin",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Arterial thromboembolism",
-      "frequency": null,
-      "label": "Mírně zvýšené riziko srdečních nebo mozkových cévních příhod, například infarktu myokardu nebo cévní mozkové příhody; riziko může být vyšší při vysokých dávkách a dlouhodobé léčbě.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví drtivá bolest na hrudi, náhlá dušnost, mdloba, náhlá silná bolest hlavy nebo slabost na jedné straně těla."
-      }
+      "ctcae": "Edema",
+      "frequency": "not_known",
+      "label": "Zadržování tekutin a otoky",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Syncope",
-      "frequency": null,
-      "label": "Mdloby.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud omdlíte."
-      }
+      "ctcae": "Myocardial infarction",
+      "frequency": "not_known",
+      "label": "Mírně zvýšené riziko srdečního infarktu, zejména při vysokých dávkách a dlouhodobém užívání",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Zežloutnutí kůže nebo očního bělma (žloutenka).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud vám zežloutne kůže nebo oční bělmo."
-      }
+      "ctcae": "Stroke",
+      "frequency": "not_known",
+      "label": "Mírně zvýšené riziko cévní mozkové příhody, zejména při vysokých dávkách a dlouhodobém užívání",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Urine output decreased",
+      "ctcae": "Fertility disorder",
       "frequency": null,
-      "label": "Snížení tvorby moči.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás sníží tvorba moči."
-      }
-    },
-    {
-      "ctcae": "Dysphagia",
-      "frequency": null,
-      "label": "Potíže s polykáním.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte potíže s polykáním nebo dýcháním."
-      }
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": null,
-      "label": "Potíže s dýcháním.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte potíže s polykáním nebo dýcháním."
-      }
-    },
-    {
-      "ctcae": "Headache",
-      "frequency": null,
-      "label": "Náhlá silná bolest hlavy.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví náhlá silná bolest hlavy."
-      }
-    },
-    {
-      "ctcae": "Hemiparesis",
-      "frequency": null,
-      "label": "Slabost na jedné straně těla.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví slabost na jedné straně těla."
-      }
-    },
-    {
-      "ctcae": "Abdominal pain",
-      "frequency": null,
-      "label": "Bolest břicha jako závažný varovný příznak.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest břicha jako závažný varovný příznak."
-      }
-    },
-    {
-      "ctcae": "Hematemesis",
-      "frequency": null,
-      "label": "Zvracení krve nebo tmavého obsahu podobajícího se kávové sedlině.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud zvracíte krev nebo tmavý obsah podobající se kávové sedlině."
-      }
-    },
-    {
-      "ctcae": "Melena",
-      "frequency": null,
-      "label": "Tmavá, dehtovitá stolice.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte tmavou, dehtovitou stolici."
-      }
-    },
-    {
-      "ctcae": "Hematochezia",
-      "frequency": null,
-      "label": "Krvavý průjem.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte krvavý průjem."
-      }
-    },
-    {
-      "ctcae": "Bruising",
-      "frequency": null,
-      "label": "Tvorba modřin.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás tvoří modřiny."
-      }
+      "label": "Ketoprofen může zhoršit ženskou plodnost",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Jiná nesteroidní antirevmatika (včetně selektivních inhibitorů COX-2) a vysoké dávky salicylátů",
-      "effect": "Současné užívání se nedoporučuje; zvyšuje riziko vředů a krvácení do trávicího traktu. Ketoprofen neužívejte současně s jinými nesteroidními antirevmatiky ani s vysokými dávkami salicylátů.",
+      "class_id": "atc:M01A",
+      "drug_class": "Jiná nesteroidní antirevmatika (včetně selektivních inhibitorů COX-2)",
+      "effect": "Současné užívání ketoprofenu s jinými NSA zvyšuje riziko vředů a krvácení do trávicího traktu; současnému užívání je třeba se vyhnout.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Gastrointestinal hemorrhage",
           "frequency": null,
-          "label": "Zvýšené riziko vředů a krvácení do trávicího traktu.",
+          "label": "Zvýšené riziko krvácení do trávicího traktu",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Gastric ulcer",
+          "frequency": null,
+          "label": "Zvýšené riziko vředů v trávicím traktu",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Antikoagulancia (heparin, warfarin) a protidestičkové léky (tiklopidin, klopidogrel, kyselina acetylsalicylová)",
-      "effect": "Současné užívání zvyšuje riziko krvácení. Kombinaci s heparinem, warfarinem nebo protidestičkovými léky ketoprofen neužívejte; pokud se současnému podávání nelze vyhnout, musí být pacient pečlivě sledován. U pacientů užívajících protidestičkové dávky kyseliny acetylsalicylové nebo jiné léky zvyšující gastrointestinální riziko je třeba zvážit ochrannou léčbu žaludku.",
+      "class_id": null,
+      "drug_class": "Vysoké dávky salicylátů",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko vředů a krvácení do trávicího traktu; zdroj uvádí vysoké dávky salicylátů, nikoli všechny jejich dávky.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Gastrointestinal hemorrhage",
           "frequency": null,
-          "label": "Zvýšené riziko krvácení, včetně krvácení do trávicího traktu.",
+          "label": "Zvýšené riziko krvácení do trávicího traktu",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Gastric ulcer",
+          "frequency": null,
+          "label": "Zvýšené riziko vředů v trávicím traktu",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Lithium",
-      "effect": "Ketoprofen může snížit vylučování lithia ledvinami a zvýšit jeho koncentraci v krvi, někdy až na toxickou úroveň. Je nutné pečlivě sledovat hladiny lithia a jeho dávkování může být během léčby ketoprofenem i po jejím ukončení upraveno.",
+      "class_id": "atc:B01AA03",
+      "drug": "warfarin",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko krvácení; pokud se kombinaci nelze vyhnout, pacient musí být pečlivě sledován.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hemorrhage",
+          "frequency": null,
+          "label": "Zvýšené riziko krvácení",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:B01AB01",
+      "drug": "heparin",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko krvácení; pokud se kombinaci nelze vyhnout, pacient musí být pečlivě sledován.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hemorrhage",
+          "frequency": null,
+          "label": "Zvýšené riziko krvácení",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:B01AC05",
+      "drug": "tiklopidin",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko krvácení; pokud se kombinaci nelze vyhnout, pacient musí být pečlivě sledován.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hemorrhage",
+          "frequency": null,
+          "label": "Zvýšené riziko krvácení",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:B01AC04",
+      "drug": "klopidogrel",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko krvácení; pokud se kombinaci nelze vyhnout, pacient musí být pečlivě sledován.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hemorrhage",
+          "frequency": null,
+          "label": "Zvýšené riziko krvácení",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:B01AC06",
+      "drug": "kyselina acetylsalicylová",
+      "effect": "Při současném užívání antiagregačních dávek kyseliny acetylsalicylové s ketoprofenem je vyšší gastrointestinální riziko; u rizikových pacientů je třeba zvážit ochrannou léčbu žaludku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Gastrointestinal hemorrhage",
+          "frequency": null,
+          "label": "Zvýšené gastrointestinální riziko krvácení",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:N05AN01",
+      "drug": "lithium",
+      "effect": "Ketoprofen může snížit vylučování lithia ledvinami a zvýšit jeho hladinu v krvi až k toxickým hodnotám. Lékař bude hladiny lithia pečlivě sledovat a může upravit jeho dávku během léčby ketoprofenem i po jejím ukončení.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Methotrexát",
-      "effect": "Při dávkování vyšším než 15 mg týdně se zvyšuje riziko hematologické toxicity, pravděpodobně v důsledku vytěsnění methotrexátu z vazby na bílkoviny a sníženého vylučování ledvinami.",
+      "class_id": "atc:L01BA01",
+      "drug": "methotrexát",
+      "effect": "Při dávce methotrexátu vyšší než 15 mg týdně zvyšuje současné užívání s ketoprofenem riziko krevní toxicity, pravděpodobně kvůli vytěsnění z vazby na bílkoviny a snížení vylučování ledvinami. Při dávce nižší než 15 mg týdně má lékař první týdny kontrolovat krevní obraz každý týden, častěji při poruše funkce ledvin nebo u starších pacientů.",
       "effect_type": "increased_toxicity",
-      "side_effects": []
+      "side_effects": [
+        {
+          "ctcae": "Blood and lymphatic system disorders - Other, specify",
+          "frequency": null,
+          "label": "Zvýšené riziko krevní toxicity methotrexátu při dávce nad 15 mg týdně",
+          "action": null,
+          "action_condition": null
+        }
+      ]
     },
     {
-      "drug": "Methotrexát",
-      "effect": "Při dávkování nižším než 15 mg týdně se během prvních týdnů kombinované léčby doporučuje kontrolovat krevní obraz každý týden. Při jakékoli změně funkce ledvin nebo u starších pacientů je třeba kontroly provádět častěji.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:C03",
       "drug_class": "Diuretika",
-      "effect": "Zvláště u dehydratovaných pacientů zvyšuje souběžné užívání riziko selhání ledvin kvůli snížení průtoku krve ledvinami. Před zahájením kombinované léčby je třeba pacienta zavodnit a na začátku léčby sledovat funkci ledvin.",
+      "effect": "U pacientů užívajících diuretika, zejména při dehydrataci, může ketoprofen snížit průtok krve ledvinami a zvýšit riziko selhání ledvin. Před souběžnou léčbou je třeba doplnit tekutiny a lékař při zahájení léčby sleduje funkci ledvin.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Acute kidney injury",
           "frequency": null,
-          "label": "Zvýšené riziko selhání ledvin, včetně akutního selhání ledvin.",
+          "label": "Vyšší riziko selhání ledvin, zejména při dehydrataci",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "ACE inhibitory a antagonisté angiotensinu II",
-      "effect": "U pacientů s poruchou funkce ledvin, například při dehydrataci nebo ve vyšším věku, může současné užívání způsobit další zhoršení funkce ledvin, včetně akutního selhání ledvin.",
+      "class_id": "atc:C09A",
+      "drug_class": "ACE inhibitory",
+      "effect": "U pacientů s poruchou funkce ledvin, například při dehydrataci nebo ve vyšším věku, může současné užívání s ketoprofenem dále zhoršit funkci ledvin, včetně akutního selhání ledvin.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Acute kidney injury",
           "frequency": null,
-          "label": "Možné akutní selhání ledvin při zhoršení funkce ledvin.",
+          "label": "Možné další zhoršení funkce ledvin včetně akutního selhání ledvin u pacientů s poruchou funkce ledvin",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Kortikosteroidy",
-      "effect": "Současné užívání zvyšuje riziko vzniku vředů nebo krvácení do trávicího traktu.",
+      "class_id": "atc:C09C",
+      "drug_class": "Antagonisté receptorů pro angiotensin II",
+      "effect": "U pacientů s poruchou funkce ledvin, například při dehydrataci nebo ve vyšším věku, může současné užívání s ketoprofenem dále zhoršit funkci ledvin, včetně akutního selhání ledvin.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Acute kidney injury",
           "frequency": null,
-          "label": "Zvýšené riziko vředů nebo krvácení do trávicího traktu.",
+          "label": "Možné další zhoršení funkce ledvin včetně akutního selhání ledvin u pacientů s poruchou funkce ledvin",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Pentoxifylin",
-      "effect": "Současné užívání zvyšuje riziko krvácení. Je třeba častější klinické sledování a sledování doby krvácení.",
+      "class_id": "atc:H02A",
+      "drug_class": "Perorální kortikosteroidy",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko vředu nebo krvácení v trávicím traktu.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Gastrointestinal hemorrhage",
           "frequency": null,
-          "label": "Zvýšené riziko krvácení.",
+          "label": "Zvýšené riziko krvácení v trávicím traktu",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Gastric ulcer",
+          "frequency": null,
+          "label": "Zvýšené riziko vředu v trávicím traktu",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Antihypertenziva (beta-blokátory, ACE inhibitory a diuretika)",
-      "effect": "Ketoprofen může oslabit účinek léků na vysoký krevní tlak a diuretik; u antihypertenziv se snížení účinku spojuje s potlačením vazodilatačních prostaglandinů.",
-      "effect_type": "antagonism",
+      "class_id": "atc:C04AD03",
+      "drug": "pentoxifylin",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko krvácení; je třeba častější klinické sledování a sledování doby krvácení.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Hemorrhage",
+          "frequency": null,
+          "label": "Zvýšené riziko krvácení",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:C07A",
+      "drug_class": "Antihypertenziva (beta-blokátory)",
+      "effect": "Ketoprofen může oslabit účinek léků na vysoký krevní tlak, včetně beta-blokátorů.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:B01AD",
       "drug_class": "Trombolytika",
-      "effect": "Současné užívání zvyšuje riziko krvácení.",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko krvácení.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Hemorrhage",
           "frequency": null,
-          "label": "Zvýšené riziko krvácení.",
+          "label": "Zvýšené riziko krvácení",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
+      "class_id": "group:serotonergic",
       "drug_class": "Selektivní inhibitory zpětného vychytávání serotoninu (SSRI)",
-      "effect": "Současné užívání zvyšuje riziko krvácení do trávicího traktu.",
+      "effect": "Současné užívání SSRI s ketoprofenem zvyšuje riziko krvácení do trávicího traktu; u rizikových pacientů je třeba zvážit ochrannou léčbu žaludku.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Gastrointestinal hemorrhage",
           "frequency": null,
-          "label": "Zvýšené riziko krvácení do trávicího traktu.",
+          "label": "Zvýšené riziko krvácení do trávicího traktu",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Probenecid",
-      "effect": "Současné podávání může výrazně snížit plazmatickou clearance ketoprofenu a zpomalit jeho vylučování.",
+      "class_id": "atc:M04AB01",
+      "drug": "probenecid",
+      "effect": "Probenecid může výrazně snížit plazmatickou clearance ketoprofenu, a tím zpomalit jeho vylučování.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Cyklosporin a takrolimus",
-      "effect": "Současné užívání zvyšuje riziko poškození ledvin, zejména u starších pacientů.",
+      "class_id": "atc:L04AD01",
+      "drug": "cyklosporin",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko poškození ledvin, zejména u starších pacientů.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Renal and urinary disorders - Other, specify",
+          "ctcae": "Acute kidney injury",
           "frequency": null,
-          "label": "Zvýšené riziko poškození ledvin, zejména u starších pacientů.",
+          "label": "Zvýšené riziko poškození ledvin, zejména u starších pacientů",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "atc:L04AD02",
+      "drug": "takrolimus",
+      "effect": "Současné užívání s ketoprofenem zvyšuje riziko poškození ledvin, zejména u starších pacientů.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Acute kidney injury",
+          "frequency": null,
+          "label": "Zvýšené riziko poškození ledvin, zejména u starších pacientů",
           "action": null,
           "action_condition": null
         }
       ]
     }
-  ]
+  ],
+  "usage": "Léčba zánětlivých, degenerativních a metabolických revmatických onemocnění a zmírnění akutní či chronické bolesti.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0076655",
+      "H": "",
+      "NAZEV": "KETONAL",
+      "SILA": "50MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "25",
+      "CESTA": "POR",
+      "DOPLNEK": "50MG CPS DUR 25",
+      "OBAL": "TBC",
+      "DRZ": "LEK",
+      "ZEMDRZ": "SLO",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "29",
+      "ATC_WHO": "M01AE03",
+      "RC": "29/1158/94-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,15",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "8,3333",
+      "ZDROJ_WHO": "NO26",
+      "LL": "2872",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "60",
+      "EXP_T": "M",
+      "NAZEV_REG": "KETONAL",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0076655",
+        "KOD_LATKY": "2872",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "50",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2872",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "KETOPROFENUM",
+          "NAZEV_EN": "KETOPROFEN",
+          "NAZEV": "KETOPROFEN"
+        }
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "KOD_LATKY": "2378",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "KOD_LATKY": "1300",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "SQ": "5",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "KOD_LATKY": "2855",
+        "SQ": "6",
+        "S": "A",
+        "AMNT": "100",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "KOD_LATKY": "2710",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "KOD_LATKY": "4460",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "4460",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CERULEUM PROTECTUM V",
+          "NAZEV_EN": "PATENT BLUE V",
+          "NAZEV": "PATENTNÍ MODŘ V"
+        }
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "KOD_LATKY": "2710",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0076655",
+        "KOD_LATKY": "2855",
+        "SQ": "11",
+        "S": "A",
+        "AMNT": "100",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0076655",
+      "PIL": "PI237130.pdf",
+      "DAT_ROZ_PIL": "24.04.2025",
+      "SPC": "SPC237126.pdf",
+      "DAT_ROZ_SPC": "22.11.2022",
+      "OBAL_TEXT": "OBAL237129.pdf",
+      "DAT_ROZ_OBAL": "15.12.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "M01AE03",
+        "NT": "N",
+        "NAZEV": "KETOPROFEN",
+        "NAZEV_EN": "KETOPROFEN"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

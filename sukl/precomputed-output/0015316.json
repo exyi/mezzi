@@ -1,5 +1,21 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C09",
+    "atc:C09D",
+    "atc:C09DA",
+    "atc:C09DA01",
+    "substance:14167",
+    "substance:728"
+  ],
   "side_effects": [
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "rare",
+      "label": "Závažná alergická reakce s vyrážkou, svěděním nebo otokem obličeje, rtů, úst či hrdla, který může způsobit potíže s polykáním nebo dýcháním.",
+      "action": "emergency",
+      "action_condition": null
+    },
     {
       "ctcae": "Cough",
       "frequency": "common",
@@ -17,21 +33,14 @@
     {
       "ctcae": "Nasal congestion",
       "frequency": "common",
-      "label": "Překrvení nebo ucpání nosu.",
+      "label": "Ucpaný nos nebo překrvení nosní sliznice.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Sinusitis",
       "frequency": "common",
-      "label": "Zánět vedlejších nosních dutin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Sinus disorder",
-      "frequency": "common",
-      "label": "Onemocnění vedlejších nosních dutin.",
+      "label": "Zánět vedlejších nosních dutin nebo jiné onemocnění dutin.",
       "action": null,
       "action_condition": null
     },
@@ -41,7 +50,8 @@
       "label": "Průjem.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku objeví průjem."
+        "patient_guide": "Pokud se objeví po užití přípravku, stejně jako při bolesti břicha, pocitu na zvracení nebo zvracení.",
+        "min_severity": null
       }
     },
     {
@@ -50,7 +60,8 @@
       "label": "Bolest břicha.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku objeví bolest břicha."
+        "patient_guide": "Pokud se objeví po užití přípravku, stejně jako při pocitu na zvracení, zvracení nebo průjmu.",
+        "min_severity": null
       }
     },
     {
@@ -59,7 +70,8 @@
       "label": "Nevolnost.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku objeví nevolnost."
+        "patient_guide": "Pokud se objeví po užití přípravku, stejně jako při bolesti břicha, zvracení nebo průjmu.",
+        "min_severity": null
       }
     },
     {
@@ -70,16 +82,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Myalgia",
+      "ctcae": "Muscle cramp",
       "frequency": "common",
-      "label": "Bolest svalů.",
+      "label": "Svalové křeče.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Muscle cramp",
+      "ctcae": "Myalgia",
       "frequency": "common",
-      "label": "Svalové křeče.",
+      "label": "Bolest svalů.",
       "action": null,
       "action_condition": null
     },
@@ -140,7 +152,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Anemia",
       "frequency": "common",
       "label": "Snížení hladiny hemoglobinu a hematokritu.",
       "action": null,
@@ -156,21 +168,21 @@
     {
       "ctcae": "Hypoglycemia",
       "frequency": "common",
-      "label": "Příliš nízká hladina krevního cukru.",
+      "label": "Příliš nízká hladina cukru v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anemia",
       "frequency": "uncommon",
-      "label": "Anémie, včetně snížení počtu červených krvinek.",
+      "label": "Snížený počet červených krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Purpura",
       "frequency": "uncommon",
-      "label": "Červené nebo hnědavé skvrny na kůži, někdy zejména na nohou, dolních končetinách, pažích a hýždích; mohou být spojeny s bolestmi kloubů, otoky rukou a nohou a bolestí břicha.",
+      "label": "Červené nebo hnědavé skvrny na kůži, někdy s bolestí kloubů, otokem rukou a nohou a bolestí žaludku.",
       "action": null,
       "action_condition": null
     },
@@ -184,42 +196,21 @@
     {
       "ctcae": "White blood cell decreased",
       "frequency": "uncommon",
-      "label": "Snížení počtu bílých krvinek.",
+      "label": "Snížený počet bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Problémy se srážlivostí krve.",
+      "label": "Poruchy srážlivosti krve.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "uncommon",
-      "label": "Snížení počtu krevních destiček, včetně jejich rozpadu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hemolysis",
-      "frequency": "uncommon",
-      "label": "Rozpad červených krvinek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aplastic anemia",
-      "frequency": "uncommon",
-      "label": "Aplastická anémie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Agranulocytóza.",
+      "label": "Snížený počet krevních destiček nebo jejich rozpad.",
       "action": null,
       "action_condition": null
     },
@@ -233,35 +224,21 @@
     {
       "ctcae": "Hyperuricemia",
       "frequency": "uncommon",
-      "label": "Zvýšená hladina kyseliny močové v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Arthritis",
-      "frequency": "uncommon",
-      "label": "Dna.",
+      "label": "Zvýšená hladina kyseliny močové v krvi nebo dna.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperglycemia",
       "frequency": "uncommon",
-      "label": "Zvýšená hladina krevního cukru.",
+      "label": "Zvýšená hladina cukru v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Metabolism and nutrition disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Abnormální hladiny krevních elektrolytů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "uncommon",
-      "label": "Poruchy spánku.",
+      "label": "Abnormální hladiny elektrolytů v krvi.",
       "action": null,
       "action_condition": null
     },
@@ -275,7 +252,7 @@
     {
       "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Panická porucha nebo opakující se panické záchvaty.",
+      "label": "Panická porucha s opakovanými záchvaty.",
       "action": null,
       "action_condition": null
     },
@@ -294,9 +271,9 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Abnormální sny.",
+      "label": "Abnormální sny a poruchy spánku.",
       "action": null,
       "action_condition": null
     },
@@ -350,23 +327,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Peripheral sensory neuropathy",
+      "ctcae": "Blurred vision",
       "frequency": "uncommon",
-      "label": "Periferní neuropatie.",
+      "label": "Rozmazané vidění.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blurred vision",
-      "frequency": "uncommon",
-      "label": "Rozmazané vidění nebo přechodné rozmazané vidění.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížení vidění nebo bolest oka."
-      }
-    },
-    {
-      "ctcae": "Eye pain",
+      "ctcae": "Eye disorders - Other, specify",
       "frequency": "uncommon",
       "label": "Pálení nebo bodání v očích.",
       "action": null,
@@ -382,14 +350,15 @@
     {
       "ctcae": "Vision decreased",
       "frequency": "uncommon",
-      "label": "Zhoršení zrakové ostrosti.",
+      "label": "Zhoršené vidění.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížení vidění nebo bolest oka."
+        "patient_guide": "Pokud se objeví snížení vidění nebo bolest oka.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Eye disorders - Other, specify",
       "frequency": "uncommon",
       "label": "Vidění do žluta.",
       "action": null,
@@ -405,42 +374,28 @@
     {
       "ctcae": "Vertigo",
       "frequency": "uncommon",
-      "label": "Závrať točivého typu.",
+      "label": "Závrať spojená s uchem nebo rovnováhou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypotension",
       "frequency": "uncommon",
-      "label": "Nízký krevní tlak.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "uncommon",
-      "label": "Pokles krevního tlaku při změně polohy, který může být spojen se závratí nebo slabostí při narovnání.",
+      "label": "Nízký krevní tlak, někdy se závratí nebo slabostí při napřímení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Chest pain - cardiac",
       "frequency": "uncommon",
-      "label": "Angina pectoris, tedy bolest na hrudi.",
+      "label": "Angina pectoris, tedy bolest na hrudi v důsledku špatného fungování srdce.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Ventricular arrhythmia",
+      "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Abnormální srdeční tep nebo arytmie, včetně fibrilace síní, zpomaleného či zrychleného tepu, komorové tachykardie a fibrilace komor.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stroke",
-      "frequency": "uncommon",
-      "label": "Cévní mozková příhoda.",
+      "label": "Porucha srdečního rytmu.",
       "action": null,
       "action_condition": null
     },
@@ -468,14 +423,14 @@
     {
       "ctcae": "Vasculitis",
       "frequency": "uncommon",
-      "label": "Zánět cév, často spojený s kožní vyrážkou nebo tvorbou modřin; může jít o kožní vaskulitidu či nekrotizující angiitidu.",
+      "label": "Zánět cév, často spojený s kožní vyrážkou nebo tvorbou modřin.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pharyngitis",
+      "ctcae": "Sore throat",
       "frequency": "uncommon",
-      "label": "Bolest v krku nebo zánět hltanu.",
+      "label": "Bolest v krku.",
       "action": null,
       "action_condition": null
     },
@@ -487,7 +442,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Bronchitis",
       "frequency": "uncommon",
       "label": "Zánět průdušek.",
       "action": null,
@@ -536,7 +491,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal pain",
+      "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "uncommon",
       "label": "Žaludeční nevolnost nebo žaludeční křeče.",
       "action": null,
@@ -548,7 +503,8 @@
       "label": "Zvracení.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku objeví zvracení."
+        "patient_guide": "Pokud se objeví po užití přípravku, stejně jako při bolesti břicha, pocitu na zvracení nebo průjmu.",
+        "min_severity": null
       }
     },
     {
@@ -573,9 +529,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatitis",
+      "ctcae": "Jaundice",
       "frequency": "uncommon",
-      "label": "Žloutenka v důsledku nitrojaterní cholestázy.",
+      "label": "Žloutenka, tedy zežloutnutí očního bělma a kůže.",
       "action": null,
       "action_condition": null
     },
@@ -589,7 +545,7 @@
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "uncommon",
-      "label": "Těžká kožní reakce s vyrážkou po celém těle, olupováním kůže a tvorbou puchýřů (toxická epidermální nekrolýza).",
+      "label": "Toxická epidermální nekrolýza, závažná kožní reakce s rozsáhlou vyrážkou, olupováním kůže a puchýři.",
       "action": null,
       "action_condition": null
     },
@@ -608,9 +564,9 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Dermatitis",
       "frequency": "uncommon",
-      "label": "Zánět kůže nebo dermatitida.",
+      "label": "Zánět kůže.",
       "action": null,
       "action_condition": null
     },
@@ -622,9 +578,9 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Erythema",
       "frequency": "uncommon",
-      "label": "Zarudnutí kůže nebo erytém.",
+      "label": "Zarudnutí kůže.",
       "action": null,
       "action_condition": null
     },
@@ -678,13 +634,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Arthralgia",
-      "frequency": "uncommon",
-      "label": "Bolest kloubů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Joint range of motion decreased",
       "frequency": "uncommon",
       "label": "Ztuhlost kloubů.",
@@ -692,7 +641,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Generalized muscle weakness",
+      "ctcae": "Muscle weakness lower limb",
       "frequency": "uncommon",
       "label": "Svalová slabost.",
       "action": null,
@@ -701,21 +650,14 @@
     {
       "ctcae": "Nocturia",
       "frequency": "uncommon",
-      "label": "Časté močení v noci.",
+      "label": "Časté močení i v noci.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Urinary frequency",
+      "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Časté močení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Glomerulonephritis",
-      "frequency": "uncommon",
-      "label": "Zánět ledvin.",
+      "label": "Abnormální funkce ledvin včetně zánětu ledvin.",
       "action": null,
       "action_condition": null
     },
@@ -736,14 +678,7 @@
     {
       "ctcae": "Creatinine increased",
       "frequency": "uncommon",
-      "label": "Mírné zvýšení hladiny kreatininu v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Mírné zvýšení hladiny močoviny v krvi.",
+      "label": "Mírné zvýšení hladiny močoviny a kreatininu v krvi.",
       "action": null,
       "action_condition": null
     },
@@ -785,7 +720,7 @@
     {
       "ctcae": "Localized edema",
       "frequency": "uncommon",
-      "label": "Otok na určitém místě těla.",
+      "label": "Lokalizovaný otok.",
       "action": null,
       "action_condition": null
     },
@@ -797,24 +732,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Anaphylaxis",
-      "frequency": "rare",
-      "label": "Těžká alergická reakce, včetně anafylaktické reakce nebo angioedému s otokem obličeje, rtů, úst, hrdla či jazyka, který může způsobit potíže s polykáním nebo dýcháním.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví těžká alergická reakce, například vyrážka, svědění nebo otok obličeje, rtů, úst či hrdla s potížemi s polykáním nebo dýcháním."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Otok střeva (intestinální angioedém), který může způsobit bolest břicha, nevolnost, zvracení a průjem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví bolest břicha, nevolnost, zvracení nebo průjem po užití přípravku."
-      }
-    },
-    {
       "ctcae": "Hepatitis",
       "frequency": "rare",
       "label": "Zánět jater.",
@@ -824,30 +741,38 @@
     {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "rare",
-      "label": "Abnormální jaterní testy nebo zvýšení hodnot ALT.",
+      "label": "Abnormální jaterní testy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Intestinal angioedema",
+      "frequency": "rare",
+      "label": "Otok střeva, který se může projevit bolestí břicha, nevolností, zvracením a průjmem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Adult respiratory distress syndrome",
       "frequency": "very_rare",
-      "label": "Akutní respirační tíseň, která se může projevit závažnou dušností, horečkou, slabostí a zmateností.",
-      "action": "hospitalize_NOW",
+      "label": "Akutní respirační tíseň, která může zahrnovat závažnou dušnost, horečku, slabost a zmatenost.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás po užití přípravku objeví závažná dušnost nebo potíže s dýcháním."
+        "patient_guide": "Pokud se po užití přípravku objeví závažná dušnost nebo potíže s dýcháním.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Rhabdomyolysis",
       "frequency": "not_known",
-      "label": "Nevysvětlitelná bolest svalů s tmavou močí barvy čaje (rhabdomyolýza).",
+      "label": "Nevysvětlitelná bolest svalů s tmavou, čajově zbarvenou močí (rhabdomyolýza).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Autoimmune disorder",
+      "ctcae": "Lupus erythematosus",
       "frequency": "not_known",
-      "label": "Kožní lupus erythematodes, který se projevuje šupinatými červenými skvrnami nebo kruhy, jež mohou svědit a obvykle se objevují na částech těla vystavených slunečnímu záření.",
+      "label": "Kožní lupus: šupinaté červené skvrny nebo kruhy, které mohou svědit a obvykle se objevují na místech vystavených slunečnímu záření.",
       "action": null,
       "action_condition": null
     },
@@ -861,7 +786,7 @@
     {
       "ctcae": "Malaise",
       "frequency": "not_known",
-      "label": "Celkový pocit nevolnosti nebo malátnost.",
+      "label": "Celkový pocit nevolnosti (malátnost).",
       "action": null,
       "action_condition": null
     },
@@ -875,48 +800,234 @@
     {
       "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
       "frequency": "not_known",
-      "label": "Nemelanomový kožní nádor, včetně bazaliomu a spinaliomu, nebo nádor kůže a rtů.",
+      "label": "Nemelanomové kožní nádory, včetně bazaliomu, spinaliomu a rakoviny rtů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vision decreased",
       "frequency": "not_known",
-      "label": "Snížení vidění nebo bolest oka, které mohou být známkou prosáknutí cévnatky nebo zvýšeného tlaku v oku, včetně akutního glaukomu s uzavřeným úhlem.",
+      "label": "Snížení vidění nebo bolest oka z důvodu vysokého tlaku; možné příznaky prosáknutí cévnatky nebo akutního glaukomu s uzavřeným úhlem.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížení vidění nebo bolest oka."
+        "patient_guide": "Pokud se objeví snížení vidění nebo bolest oka.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Glaucoma",
-      "frequency": "not_known",
-      "label": "Sekundární glaukom s uzavřeným úhlem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížení vidění nebo bolest oka."
-      }
-    },
-    {
-      "ctcae": "Eye pain",
-      "frequency": "not_known",
-      "label": "Bolest očí při choroidální efuzi, akutní myopii nebo glaukomu s uzavřeným úhlem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví snížení vidění nebo bolest oka."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Akutní myopie.",
+      "ctcae": "Agranulocytosis",
+      "frequency": "uncommon",
+      "label": "Agranulocytóza.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Aplastic anemia",
+      "frequency": "uncommon",
+      "label": "Aplastická anémie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hemolytic anemia",
+      "frequency": "uncommon",
+      "label": "Hemolytická anémie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Purpura",
+      "frequency": "uncommon",
+      "label": "Purpura.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "White blood cell decreased",
+      "frequency": "uncommon",
+      "label": "Leukopenie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "uncommon",
+      "label": "Trombocytopenie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
       "frequency": "not_known",
-      "label": "Choroidální efuze.",
+      "label": "Nemelanomové kožní nádory: bazaliomy a spinaliomy; riziko souvisí s kumulativní dávkou hydrochlorothiazidu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "rare",
+      "label": "Anafylaktická reakce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anorexia",
+      "frequency": "uncommon",
+      "label": "Ztráta chuti k jídlu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperglycemia",
+      "frequency": "uncommon",
+      "label": "Zvýšená hladina cukru v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperuricemia",
+      "frequency": "uncommon",
+      "label": "Zvýšená hladina kyseliny močové v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Insomnia",
+      "frequency": "uncommon",
+      "label": "Nespavost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Headache",
+      "frequency": "common",
+      "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blurred vision",
+      "frequency": "uncommon",
+      "label": "Přechodné rozmazané vidění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Eye disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Vidění do žluta.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vasculitis",
+      "frequency": "uncommon",
+      "label": "Nekrotizující zánět cév (vaskulitida, kožní vaskulitida).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pneumonitis",
+      "frequency": "uncommon",
+      "label": "Pneumonitida.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pulmonary edema",
+      "frequency": "uncommon",
+      "label": "Plicní edém.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Křeče nebo podráždění žaludku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Sialadenitis",
+      "frequency": "uncommon",
+      "label": "Zánět slinných žláz.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "uncommon",
+      "label": "Nevolnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vomiting",
+      "frequency": "uncommon",
+      "label": "Zvracení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "uncommon",
+      "label": "Průjem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "uncommon",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": "uncommon",
+      "label": "Žloutenka při nitrojaterní cholestáze.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "uncommon",
+      "label": "Pankreatitida.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Photosensitivity",
+      "frequency": "uncommon",
+      "label": "Fotosenzitivita.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "uncommon",
+      "label": "Kopřivka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "uncommon",
+      "label": "Toxická epidermální nekrolýza.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Muscle cramp",
+      "frequency": "uncommon",
+      "label": "Svalové křeče.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Glucosuria",
+      "frequency": "uncommon",
+      "label": "Cukr v moči.",
       "action": null,
       "action_condition": null
     },
@@ -930,539 +1041,619 @@
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Porucha funkce ledvin nebo selhání ledvin spojené s hydrochlorothiazidem.",
+      "label": "Porucha funkce ledvin včetně selhání ledvin.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Fever",
       "frequency": "uncommon",
-      "label": "Zánět slinných žláz.",
+      "label": "Horečka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pancreatitis",
+      "ctcae": "Dizziness",
       "frequency": "uncommon",
-      "label": "Pankreatitida spojená s hydrochlorothiazidem.",
+      "label": "Závrať.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Glaucoma",
+      "frequency": "not_known",
+      "label": "Sekundární glaukom s uzavřeným úhlem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myopia",
+      "frequency": "not_known",
+      "label": "Akutní myopie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Eye disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Choroidální efuze.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Adult respiratory distress syndrome",
+      "frequency": "very_rare",
+      "label": "Syndrom akutní respirační tísně (ARDS), hlášený po hydrochlorothiazidu.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se po užití přípravku objeví závažná dušnost nebo potíže s dýcháním.",
+        "min_severity": null
+      }
     }
   ],
   "combinations": [
     {
-      "drug": "Rifampicin",
-      "effect": "Rifampicin může snížit hladinu aktivního metabolitu losartanu; klinické důsledky této interakce nebyly hodnoceny.",
-      "effect_type": "decreased_exposure",
+      "class_id": "group:hyperkalemia_risk",
+      "drug_class": "Léky zvyšující hladinu draslíku, včetně kalium šetřících diuretik, doplňků draslíku a náhražek soli s draslíkem",
+      "effect": "Současné užívání s přípravkem Lozap H může zvýšit hladinu draslíku v krvi; kombinace se nedoporučuje. Zahrnuje také jiné léky zvyšující sérový draslík, například přípravky obsahující trimethoprim.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Flukonazol",
-      "effect": "Flukonazol může snížit hladinu aktivního metabolitu losartanu; klinické důsledky této interakce nebyly hodnoceny.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Kalium šetřící diuretika (např. spironolakton, triamteren, amilorid)",
-      "effect": "Současné užívání může zvýšit hladinu draslíku v krvi; kombinace se nedoporučuje.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Doplňky draslíku",
-      "effect": "Současné užívání může zvýšit hladinu draslíku v krvi; kombinace se nedoporučuje.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Náhražky soli obsahující draslík",
-      "effect": "Současné užívání může zvýšit hladinu draslíku v krvi; kombinace se nedoporučuje.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Jiné léky zvyšující hladinu draslíku v krvi (např. přípravky obsahující trimethoprim)",
-      "effect": "Současné užívání může zvýšit hladinu draslíku v krvi; kombinace se nedoporučuje.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:N05AN01",
       "drug": "Lithium",
-      "effect": "Losartan může snížit vylučování lithia a diuretika snižují jeho renální clearance, takže současné užívání může vést k vysokému riziku toxicity lithia. Kombinace se nedoporučuje; pokud je nezbytná, je třeba pečlivě sledovat hladiny lithia v krvi.",
+      "effect": "Přípravek Lozap H může snížit vylučování lithia a diuretikum může snížit jeho renální clearance, čímž se zvyšuje riziko toxicity lithia. Současné podávání se nedoporučuje; pokud je nutné, lékař má pečlivě sledovat hladinu lithia v krvi.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Toxicita lithia.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSAID), včetně inhibitorů COX-2 a kyseliny acetylsalicylové v protizánětlivých dávkách",
-      "effect": "Mohou oslabit antihypertenzní účinek losartanu. Současné užívání s antagonistou angiotensinu II nebo diuretikem může zvýšit riziko zhoršení funkce ledvin včetně akutního selhání ledvin a zvýšení draslíku v krvi, zvláště při již snížené funkci ledvin. Opatrnost je nutná zejména u starších pacientů; zajistěte dostatečný příjem tekutin a zvažte sledování funkce ledvin po zahájení léčby i dále pravidelně. Účinky na ledviny jsou obvykle vratné.",
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky (NSAID), včetně selektivních inhibitorů COX-2 a kyseliny acetylsalicylové v protizánětlivých dávkách",
+      "effect": "NSAID mohou oslabit účinek přípravku Lozap H na krevní tlak. Současné užívání přípravku Lozap H nebo diuretika s NSAID může zvýšit riziko zhoršení funkce ledvin včetně akutního selhání ledvin, zejména při snížené funkci ledvin. Lékař může sledovat funkci ledvin; pacient má být dostatečně zavodněn.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zhoršení funkce ledvin včetně možného akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Inhibitory ACE",
-      "effect": "Současná blokáda systému renin-angiotensin-aldosteron s inhibitorem ACE zvyšuje riziko hypotenze, hyperkalémie a snížení funkce ledvin včetně akutního selhání ledvin; kombinace se obecně nedoporučuje. Pokud je duální blokáda považována za nezbytnou, smí probíhat pouze pod dohledem specialisty a při častém pečlivém sledování funkce ledvin, elektrolytů a krevního tlaku. Inhibitory ACE a blokátory receptorů pro angiotensin II nesmějí být užívány současně u pacientů s diabetickou nefropatií.",
+      "class_id": "atc:C09A",
+      "drug_class": "Inhibitory ACE",
+      "effect": "Současná blokáda systému RAAS s inhibitory ACE a přípravkem Lozap H se obecně nedoporučuje, protože zvyšuje riziko nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin včetně akutního selhání. U pacientů s diabetickou nefropatií nesmí být inhibitory ACE a blokátory receptorů pro angiotensin II užívány současně. Pokud je dvojitá blokáda považována za nezbytnou, probíhá pouze pod dohledem specializovaného lékaře s častým sledováním funkce ledvin, elektrolytů a krevního tlaku.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Snížení funkce ledvin včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Další blokátory receptorů pro angiotensin II",
-      "effect": "Současná blokáda systému renin-angiotensin-aldosteron zvyšuje riziko hypotenze, hyperkalémie a snížení funkce ledvin včetně akutního selhání ledvin; kombinace se obecně nedoporučuje. Pokud je duální blokáda považována za nezbytnou, smí probíhat pouze pod dohledem specialisty a při častém pečlivém sledování funkce ledvin, elektrolytů a krevního tlaku. Inhibitory ACE a blokátory receptorů pro angiotensin II nesmějí být užívány současně u pacientů s diabetickou nefropatií.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Snížení funkce ledvin včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:C09XA02",
       "drug": "Aliskiren",
-      "effect": "Současné užívání přípravku Lozap H s aliskirenem je kontraindikováno u pacientů s diabetem nebo poruchou funkce ledvin (GFR < 60 ml/min/1,73 m²). Duální blokáda systému renin-angiotensin-aldosteron zvyšuje riziko hypotenze, hyperkalémie a snížení funkce ledvin včetně akutního selhání ledvin; mimo uvedenou kontraindikaci se obecně nedoporučuje. Je-li považována za nezbytnou, smí probíhat pouze pod dohledem specialisty a při častém pečlivém sledování funkce ledvin, elektrolytů a krevního tlaku.",
+      "effect": "Současné užívání s přípravkem Lozap H je kontraindikováno u pacientů s diabetem nebo poruchou funkce ledvin (GFR < 60 ml/min/1,73 m²). Duální blokáda RAAS zvyšuje riziko nízkého krevního tlaku, vysoké hladiny draslíku a zhoršení funkce ledvin.",
       "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Snížení funkce ledvin včetně akutního selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Jiné léky snižující krevní tlak, například tricyklická antidepresiva, antipsychotika, baklofen a amifostin",
-      "effect": "Současné podávání může zesílit riziko nízkého krevního tlaku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Alkohol, barbituráty, narkotika/opioidy a antidepresiva",
-      "effect": "Při souběžném užívání s hydrochlorothiazidem se může zesílit ortostatický pokles krevního tlaku. Alkohol a přípravek Lozap H mohou vzájemně zesílit své účinky; během léčby se doporučuje alkohol nepít.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Ortostatický pokles krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antidiabetika užívaná ústy a inzulin",
-      "effect": "Thiazidy mohou ovlivnit glukózovou toleranci a může být nutné upravit dávku antidiabetika včetně inzulinu.",
+      "class_id": "group:cns_depressant",
+      "drug_class": "Alkohol, barbituráty, narkotika nebo antidepresiva",
+      "effect": "Při současném užívání s hydrochlorothiazidem může být zesílen pokles krevního tlaku při postavení. Příbalová informace také doporučuje během užívání přípravku Lozap H nepít alkohol, protože se jejich účinky mohou vzájemně zesílit.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Metformin",
-      "effect": "Používejte opatrně kvůli riziku laktátové acidózy při možném funkčním selhání ledvin souvisejícím s hydrochlorothiazidem.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Laktátová acidóza.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Jiná antihypertenziva",
-      "effect": "Při současném podávání s hydrochlorothiazidem může dojít k aditivnímu účinku na snížení krevního tlaku.",
-      "effect_type": "synergy",
+      "class_id": "atc:A10",
+      "drug_class": "Antidiabetika, včetně perorálních léků a inzulinu",
+      "effect": "Hydrochlorothiazid může ovlivnit snášenlivost glukózy a může být nutné upravit dávku antidiabetika, včetně inzulinu. Metformin se má užívat opatrně kvůli riziku laktátové acidózy při případném funkčním selhání ledvin souvisejícím s hydrochlorothiazidem.",
+      "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:C10AC01",
       "drug": "Kolestyramin",
       "effect": "Kolestyramin váže hydrochlorothiazid a snižuje jeho vstřebávání z trávicího traktu až o 85 %.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:C10AC02",
       "drug": "Kolestipol",
-      "effect": "Kolestipolová pryskyřice váže hydrochlorothiazid a snižuje jeho vstřebávání z trávicího traktu až o 43 %.",
+      "effect": "Kolestipolové pryskyřice vážou hydrochlorothiazid a snižují jeho vstřebávání z trávicího traktu až o 43 %.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:H02AB",
       "drug_class": "Kortikosteroidy a ACTH",
-      "effect": "Mohou zesílit úbytek elektrolytů, zejména pokles hladiny draslíku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Pokles hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Presorické aminy (např. adrenalin)",
-      "effect": "Hydrochlorothiazid může snížit odpověď na presorické aminy; tento účinek není dostatečný k tomu, aby se jejich použití vyloučilo.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Nedepolarizující periferní myorelaxancia (např. tubokurarin)",
-      "effect": "Hydrochlorothiazid může zesílit citlivost na tato myorelaxancia.",
+      "effect": "Při současném podávání s hydrochlorothiazidem se může zesílit ztráta elektrolytů, zejména pokles hladiny draslíku.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Urikosurika (probenecid a sulfinpyrazon)",
-      "effect": "Hydrochlorothiazid může zvýšit hladinu kyseliny močové v krvi, proto může být nutná úprava dávky urikosurika; může být třeba zvýšit dávku probenecidu nebo sulfinpyrazonu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperuricemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny kyseliny močové v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:M04AB",
+      "drug_class": "Urikosurika (probenecid nebo sulfinpyrazon)",
+      "effect": "Hydrochlorothiazid může zvýšit hladinu kyseliny močové; lékař může potřebovat upravit dávku urikosurika nebo zvýšit dávku probenecidu či sulfinpyrazonu.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
     },
     {
-      "drug": "Allopurinol",
-      "effect": "Současné podávání thiazidu může zvýšit výskyt reakcí přecitlivělosti na allopurinol.",
+      "class_id": "atc:M04AA01",
+      "drug": "Alopurinol",
+      "effect": "Současné podávání thiazidu může zvýšit výskyt přecitlivělosti na alopurinol.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Allergic reaction",
-          "frequency": null,
-          "label": "Reakce přecitlivělosti.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Anticholinergika (např. atropin, biperiden)",
-      "effect": "Snížením pohyblivosti trávicího traktu a rychlosti vyprazdňování žaludku mohou zvýšit biologickou dostupnost thiazidových diuretik.",
+      "class_id": "atc:L01",
+      "drug_class": "Cytotoxické přípravky, včetně cyklofosfamidu a methotrexátu",
+      "effect": "Thiazidy mohou snížit vylučování cytotoxických přípravků ledvinami a zesílit jejich účinky potlačující kostní dřeň.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02B",
+      "drug_class": "Salicyláty ve vysokých dávkách",
+      "effect": "Hydrochlorothiazid může při vysokých dávkách salicylátů zesílit jejich toxické účinky na centrální nervový systém.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02AB01",
+      "drug": "Methyldopa",
+      "effect": "Při současném podávání hydrochlorothiazidu a methyldopy byla ojediněle hlášena hemolytická anémie.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L04AD01",
+      "drug": "Cyklosporin",
+      "effect": "Současná léčba cyklosporinem může zvýšit riziko hyperurikémie a komplikací dnavého typu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C01AA",
+      "drug_class": "Digitalisové glykosidy",
+      "effect": "Pokles draslíku nebo hořčíku způsobený thiazidem může usnadnit vznik srdečních arytmií vyvolaných digitalisovými glykosidy. Doporučuje se pravidelně sledovat hladinu draslíku v krvi a EKG.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léky s rizikem torsade de pointes, včetně antiarytmik třídy Ia a III a uvedených antipsychotik",
+      "effect": "Pokles draslíku způsobený thiazidem může zvýšit náchylnost k torsade de pointes (komorové tachykardii). Při kombinaci s léky ovlivněnými poruchami draslíku nebo s uvedenými léky navozujícími torsade de pointes se doporučuje pravidelně sledovat hladinu draslíku v krvi a EKG.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A12A",
+      "drug_class": "Vápenaté soli",
+      "effect": "Thiazidová diuretika mohou snížit vylučování vápníku a zvýšit jeho hladinu v krvi. Pokud jsou doplňky vápníku nutné, lékař má sledovat hladinu vápníku a podle ní upravit dávkování.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Cytotoxické léky (např. cyklofosfamid a methotrexát)",
-      "effect": "Thiazidy mohou snížit vylučování cytotoxických léků ledvinami a zesílit jejich účinky tlumící kostní dřeň.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Bone marrow hypocellular",
-          "frequency": null,
-          "label": "Zesílení útlumu kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Salicyláty ve vysokých dávkách",
-      "effect": "Hydrochlorothiazid může zesílit toxické účinky vysokých dávek salicylátů na centrální nervový systém.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Toxické účinky salicylátů na centrální nervový systém.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Methyldopa",
-      "effect": "Při současném podávání hydrochlorothiazidu a methyldopy byla ojediněle hlášena hemolytická anémie.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hemolytic anemia",
-          "frequency": null,
-          "label": "Hemolytická anémie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Cyklosporin",
-      "effect": "Současná léčba může zvýšit riziko hyperurikémie a komplikací dnavého typu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperuricemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny kyseliny močové v krvi.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Arthritis",
-          "frequency": null,
-          "label": "Komplikace dnavého typu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Digitalisové glykosidy",
-      "effect": "Pokles draslíku nebo hořčíku navozený thiazidem může usnadnit vznik srdečních arytmií vyvolaných digitalisem; doporučuje se pravidelně sledovat hladinu draslíku v krvi a EKG.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Srdeční arytmie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky, jejichž účinky ovlivňují poruchy hladiny draslíku, včetně antiarytmik a léků vyvolávajících torsade de pointes",
-      "effect": "Při současném užívání s přípravkem Lozap H se doporučuje pravidelně sledovat hladinu draslíku v krvi a EKG. Hypokalémie může zvyšovat náchylnost k torsade de pointes. Patří sem antiarytmika třídy Ia (chinidin, hydrochinidin, disopyramid) a III (amiodaron, sotalol, dofetilid, ibutilid), některá antipsychotika a další léky, například bepridil, cisaprid, difemanil, intravenózní erythromycin, halofantrin, mizolastin, pentamidin, terfenadin a intravenózní vinkamin.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Komorové arytmie včetně torsade de pointes.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Vápníkové soli a doplňky vápníku",
-      "effect": "Thiazidová diuretika mohou snížením vylučování zvýšit hladinu vápníku v krvi. Pokud jsou doplňky vápníku nezbytné, je třeba sledovat hladinu vápníku v krvi a podle ní upravit jejich dávku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypercalcemia",
-          "frequency": null,
-          "label": "Zvýšení hladiny vápníku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:N03AF01",
       "drug": "Karbamazepin",
-      "effect": "Současné užívání zvyšuje riziko symptomatické hyponatrémie; je nutné klinické a laboratorní sledování.",
+      "effect": "Při současném užívání hrozí symptomatická hyponatrémie; je nutné klinické a laboratorní sledování.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyponatremia",
-          "frequency": null,
-          "label": "Symptomaticky nízká hladina sodíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:V08A",
       "drug_class": "Jodované kontrastní látky",
-      "effect": "Při dehydrataci navozené diuretiky existuje zvýšené riziko akutního selhání ledvin, zvláště při vysoké dávce jodované kontrastní látky. Před podáním je třeba pacienta rehydratovat.",
+      "effect": "Při dehydrataci způsobené diuretiky je zvýšené riziko akutního selhání ledvin, zvláště při vysokých dávkách jodované kontrastní látky. Před jejím podáním má být pacient rehydratován.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Akutní selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Amfotericin B podávaný parenterálně",
-      "effect": "Může zesílit nerovnováhu elektrolytů navozenou hydrochlorothiazidem, zejména pokles hladiny draslíku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Pokles hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Stimulační projímadla",
-      "effect": "Mohou zesílit nerovnováhu elektrolytů navozenou hydrochlorothiazidem, zejména pokles hladiny draslíku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Pokles hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Kyselina glycyrrhizová, například obsažená v lékořici",
-      "effect": "Může zesílit nerovnováhu elektrolytů, zejména pokles hladiny draslíku; přípravek Lozap H se nemá užívat s lékořicí, protože by mohla snížit hladinu draslíku v krvi.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Pokles hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Grapefruitová šťáva",
-      "effect": "Může inhibovat enzymy CYP450 a snížit koncentraci aktivního metabolitu losartanu, čímž může oslabit léčebný účinek. Během užívání přípravku Lozap H se jí vyhněte.",
+      "class_id": "substance:14167",
+      "drug": "Rifampicin",
+      "effect": "Rifampicin může snížit hladinu aktivního metabolitu losartanu; klinické důsledky této interakce nebyly hodnoceny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Alkohol",
-      "effect": "Alkohol a přípravek Lozap H mohou vzájemně zesílit své účinky; doporučuje se během užívání přípravku alkohol nepít.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zesílení účinku na pokles krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:J02AC01",
+      "drug": "Flukonazol",
+      "effect": "Flukonazol může snížit hladinu aktivního metabolitu losartanu; klinické důsledky této interakce nebyly hodnoceny.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
     },
     {
-      "drug": "Nadměrné množství soli v potravě",
-      "effect": "Nadměrný příjem soli může oslabit účinek přípravku Lozap H na krevní tlak.",
+      "class_id": "substance:16830",
+      "drug": "Grapefruitová šťáva",
+      "effect": "Složky grapefruitové šťávy mohou inhibovat enzymy CYP450 a snížit koncentraci aktivního metabolitu losartanu, a tím oslabit léčebný účinek. Při užívání přípravku Lozap H je třeba se grapefruitové šťávě vyhnout.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Lékořice",
+      "effect": "Přípravek Lozap H se nemá užívat s lékořicí, protože by to mohlo snížit hladinu draslíku v krvi. Kyselina glycyrrhizová z lékořice může s hydrochlorothiazidem zesílit nerovnováhu elektrolytů, zejména pokles draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C03A",
+      "drug_class": "Jiná diuretika",
+      "effect": "Při současném užívání mohou být vhodná zvláštní bezpečnostní opatření, například krevní testy.",
+      "effect_type": null,
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A06A",
+      "drug_class": "Některá projímadla, zejména stimulační laxativa",
+      "effect": "Při současném užívání mohou být vhodná zvláštní bezpečnostní opatření, například krevní testy; stimulační laxativa mohou s hydrochlorothiazidem zesílit nerovnováhu elektrolytů, zejména pokles draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02",
+      "drug_class": "Jiná antihypertenziva",
+      "effect": "Účinek na snížení krevního tlaku může být při současném podávání s hydrochlorothiazidem aditivní.",
+      "effect_type": "synergy",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N06AA",
+      "drug_class": "Tricyklická antidepresiva",
+      "effect": "Současné užívání s hydrochlorothiazidem může zesílit riziko nízkého krevního tlaku při postavení.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N05A",
+      "drug_class": "Antipsychotika",
+      "effect": "Současné užívání s hydrochlorothiazidem může zesílit riziko nízkého krevního tlaku při postavení. U některých antipsychotik může pokles draslíku také zvýšit náchylnost k torsade de pointes; doporučuje se sledování hladiny draslíku a EKG.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M03BX01",
+      "drug": "Baklofen",
+      "effect": "Současné podávání s hydrochlorothiazidem může zesílit riziko nízkého krevního tlaku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:V03AF05",
+      "drug": "Amifostin",
+      "effect": "Současné podávání s přípravkem Lozap H může zesílit riziko nízkého krevního tlaku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C01CA24",
+      "drug": "Adrenalin",
+      "effect": "Hydrochlorothiazid může snížit odpověď na adrenalin, ale ne natolik, aby jeho použití vyloučil.",
       "effect_type": "antagonism",
       "side_effects": []
+    },
+    {
+      "class_id": "atc:M03A",
+      "drug_class": "Periferní nedepolarizující myorelaxancia, například tubokurarin",
+      "effect": "Hydrochlorothiazid může zvýšit citlivost na tato myorelaxancia.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:hypokalemia_risk",
+      "drug_class": "Amfotericin B podávaný parenterálně, kortikosteroidy, ACTH, stimulační laxativa nebo kyselina glycyrrhizová",
+      "effect": "Hydrochlorothiazid může při současném podávání zesílit nerovnováhu elektrolytů, zejména pokles hladiny draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba vysokého krevního tlaku (esenciální hypertenze).",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0015316",
+      "H": "",
+      "NAZEV": "LOZAP H",
+      "SILA": "50MG/12,5MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "50MG/12,5MG TBL FLM 30",
+      "OBAL": "BLI",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "58",
+      "ATC_WHO": "C09DA01",
+      "RC": "58/215/03-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "1",
+      "DDDUN_WHO": "UD",
+      "DDDP_WHO": "30",
+      "ZDROJ_WHO": "NO26",
+      "LL": "14167,728",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "LOZAP H",
+      "MRP_CISLO": "CZ/H/0117/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "14167",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "50",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14167",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "LOSARTANUM KALICUM",
+          "NAZEV_EN": "LOSARTAN POTASSIUM",
+          "NAZEV": "DRASELNÁ SŮL LOSARTANU"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "728",
+        "SQ": "2",
+        "S": "L",
+        "AMNT": "12,5",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "728",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYDROCHLOROTHIAZIDUM",
+          "NAZEV_EN": "HYDROCHLOROTHIAZIDE",
+          "NAZEV": "HYDROCHLOROTHIAZID",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "875",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "875",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MANNITOLUM",
+          "NAZEV_EN": "MANNITOL",
+          "NAZEV": "MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "5624",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "18178",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18178",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 30",
+          "NAZEV_EN": "POVIDONE K 30",
+          "NAZEV": "POVIDON K 30",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "SQ": "8",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "14324",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14324",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910/5",
+          "NAZEV_EN": "HYPROMELLOSE 2910/5",
+          "NAZEV": "HYPROMELOSA 2910/5"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "3765",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "1871",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "16830",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16830",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "SIMETICONI EMULSIO SE 4",
+          "NAZEV_EN": "SIMETICONE EMULSION SE 4",
+          "NAZEV": "SIMETIKONOVÁ EMULZE SE 4"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "2710",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "4479",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4479",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FLAVI QUINOLINI LACCA ALUMINICA",
+          "NAZEV_EN": "QUINOLINE YELLOW ALUMINIUM LAKE",
+          "NAZEV": "HLINITÝ LAK CHINOLINOVÉ ŽLUTI"
+        }
+      },
+      {
+        "KOD_SUKL": "0015316",
+        "KOD_LATKY": "5006",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5006",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "RUBORIS PONCEAU 4R LACCA ALUMINICA",
+          "NAZEV_EN": "PONCEAU 4R ALUMINIUM LAKE",
+          "NAZEV": "HLINITÝ LAK PONCEAU 4R"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0015316",
+      "PIL": "PI221245.pdf",
+      "DAT_ROZ_PIL": "10.04.2025",
+      "SPC": "SPC221246.pdf",
+      "DAT_ROZ_SPC": "10.04.2025",
+      "OBAL_TEXT": "OBAL200779.pdf",
+      "DAT_ROZ_OBAL": "11.07.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C09DA01",
+        "NT": "N",
+        "NAZEV": "LOSARTAN A DIURETIKA",
+        "NAZEV_EN": "LOSARTAN AND DIURETICS"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

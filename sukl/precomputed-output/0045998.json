@@ -1,123 +1,32 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J01",
+    "atc:J01C",
+    "atc:J01CE",
+    "atc:J01CE02",
+    "substance:1112"
+  ],
   "side_effects": [
     {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom: načervenalé, nevyvýšené terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupováním kůže nebo vředy v ústech, hrdle, nose, na genitáliích či v očích; může mu předcházet horečka a příznaky podobné chřipce.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví uvedené skvrny, puchýře, olupování kůže nebo vředy, případně horečka a příznaky podobné chřipce."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza: načervenalé, nevyvýšené terčovité nebo kruhové skvrny na trupu, často s puchýři uprostřed, olupováním kůže nebo vředy v ústech, hrdle, nose, na genitáliích či v očích; může jí předcházet horečka a příznaky podobné chřipce.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví uvedené skvrny, puchýře, olupování kůže nebo vředy, případně horečka a příznaky podobné chřipce."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "DRESS syndrom (léková reakce s eozinofilií a systémovými příznaky): rozsáhlá vyrážka, vysoká tělesná teplota a zvětšené lymfatické uzliny.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozsáhlá vyrážka, vysoká tělesná teplota a zvětšené lymfatické uzliny."
-      }
-    },
-    {
-      "ctcae": "Pustular drug eruption",
-      "frequency": "not_known",
-      "label": "Akutní generalizovaná exantematózní pustulóza: červená, šupinatá rozsáhlá vyrážka s hrbolky pod kůží a puchýři, doprovázená horečkou; obvykle se objevuje na začátku léčby.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví červená, šupinatá rozsáhlá vyrážka s hrbolky pod kůží nebo puchýři a horečkou."
-      }
-    },
-    {
-      "ctcae": "Exfoliative dermatitis",
-      "frequency": "rare",
-      "label": "Exfoliativní dermatitida (zánět kůže spojený s olupováním kůže).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Angioedém (otok).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Laryngeal edema",
-      "frequency": "very_rare",
-      "label": "Otok hrtanu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "very_rare",
-      "label": "Anafylaxe, závažná reakce imunitního systému; při perorálním podávání byly pozorovány všechny stupně přecitlivělosti, včetně fatální anafylaxe.",
+      "ctcae": "Rash maculo-papular",
+      "frequency": "common",
+      "label": "Kožní vyrážka; při alergii se může objevit svědění nebo třes.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky alergické reakce."
+        "patient_guide": "Pokud se objeví příznaky alergie, například svědění, třes, kopřivka, dýchací obtíže, pocit úzkosti, průjem nebo bolest břicha.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Serum sickness",
-      "frequency": "very_rare",
-      "label": "Reakce připomínající sérovou nemoc, včetně intersticiální nefritidy, neutropenie, zimnice, horečky, otoků, bolestí kloubů a extrémní vyčerpanosti; někdy mohou být jedinými projevy horečka a zvýšený počet eozinofilů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Colitis",
-      "frequency": "very_rare",
-      "label": "Zánět tlustého střeva související s antibiotiky.",
-      "action": "discontinue_treatment",
+      "ctcae": "Urticaria",
+      "frequency": "common",
+      "label": "Kopřivka.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte těžký a přetrvávající průjem."
+        "patient_guide": "Pokud se objeví příznaky alergie, například svědění, třes, kopřivka, dýchací obtíže, pocit úzkosti, průjem nebo bolest břicha.",
+        "min_severity": null
       }
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "not_known",
-      "label": "CDAD (průjem související s bakterií Clostridium difficile): těžký a přetrvávající průjem s krvavou, hlenovitou a vodnatou stolicí, tupou rozptýlenou kolikovitou bolestí břicha, horečkou a případně křečemi.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte těžký a přetrvávající průjem."
-      }
-    },
-    {
-      "ctcae": "Seizure",
-      "frequency": "not_known",
-      "label": "Toxicita vůči centrálnímu nervovému systému včetně záchvatů křečí; zvláště při vysokých dávkách nebo při závažném poškození či těžké poruše funkce ledvin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Paresthesia",
-      "frequency": "not_known",
-      "label": "Brnění nebo mravenčení při dlouhodobém podávání.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Neuropatie (poruchy periferních nervů), obvykle související s vysokými dávkami injekčně podávaného penicilinu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Nefropatie (onemocnění ledvin), obvykle související s vysokými dávkami injekčně podávaného penicilinu.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Nausea",
@@ -137,61 +46,193 @@
       "ctcae": "Abdominal pain",
       "frequency": "common",
       "label": "Bolest v nadbřišku.",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví jako příznak alergie.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "common",
       "label": "Průjem.",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví jako příznak alergie.",
+        "min_severity": null
+      }
     },
     {
-      "ctcae": null,
+      "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "common",
       "label": "Černý chlupatý jazyk.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "common",
-      "label": "Kožní vyrážka (makulopapulární dermatitida).",
-      "action": "contact_doctor",
+      "ctcae": "Angioedema",
+      "frequency": "very_rare",
+      "label": "Angioedém (otok).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Colitis",
+      "frequency": "very_rare",
+      "label": "Zánět tlustého střeva související s antibiotiky.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky alergie, například svědění, vyrážka nebo kopřivka."
+        "patient_guide": "Pokud máte těžký a přetrvávající průjem.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Urticaria",
-      "frequency": "common",
-      "label": "Kopřivka.",
-      "action": "contact_doctor",
+      "ctcae": "Tubulointerstitial nephritis",
+      "frequency": "very_rare",
+      "label": "Intersticiální zánět ledvin, popsaný jako součást reakce připomínající sérovou nemoc.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Neutrophil count decreased",
+      "frequency": "very_rare",
+      "label": "Nedostatek určitého typu bílých krvinek (neutropenie), popsaný jako součást reakce připomínající sérovou nemoc.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Chills",
+      "frequency": "very_rare",
+      "label": "Zimnice, popsaná jako součást reakce připomínající sérovou nemoc.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "very_rare",
+      "label": "Horečka, která může být jediným pozorovaným projevem reakce připomínající sérovou nemoc.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Edema",
+      "frequency": "very_rare",
+      "label": "Otok, popsaný jako součást reakce připomínající sérovou nemoc.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arthralgia",
+      "frequency": "very_rare",
+      "label": "Bolesti kloubů, popsané jako součást reakce připomínající sérovou nemoc.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "very_rare",
+      "label": "Extrémní vyčerpanost, popsaná jako součást reakce připomínající sérovou nemoc.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Laryngeal edema",
+      "frequency": "very_rare",
+      "label": "Otok hrtanu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "very_rare",
+      "label": "Anafylaxe, závažná reakce imunitního systému.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Seizure",
+      "frequency": "not_known",
+      "label": "Záchvaty křečí jako projev toxicity centrálního nervového systému, zvláště při vysokých dávkách nebo těžké poruše funkce ledvin.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Paresthesia",
+      "frequency": "not_known",
+      "label": "Brnění nebo mravenčení při dlouhodobém podávání.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Peripheral motor neuropathy",
+      "frequency": "rare",
+      "label": "Neuropatie (porucha periferních nervů), obvykle související s vysokými dávkami injekčně podávaného penicilinu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diarrhea",
+      "frequency": "not_known",
+      "label": "Těžký a přetrvávající průjem při CDAD (průjmu spojeném s bakterií Clostridium difficile), který může být krvavý, hlenovitý nebo vodnatý a doprovázený bolestí břicha, horečkou, případně křečemi.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky alergie, například svědění, vyrážka nebo kopřivka."
+        "patient_guide": "Pokud máte těžký a přetrvávající průjem.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Hepatitis",
-      "frequency": "very_rare",
-      "label": "Hepatitida (zánět jater).",
+      "ctcae": "Exfoliative dermatitis",
+      "frequency": "rare",
+      "label": "Exfoliativní dermatitida (zánět kůže spojený s olupováním), obvykle související s vysokými dávkami injekčně podávaného penicilinu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Cholestatická žloutenka (žloutenka v důsledku městnání žluči ve žlučových cestách).",
+      "ctcae": "Renal and urinary disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Nefropatie (onemocnění ledvin), obvykle související s vysokými dávkami injekčně podávaného penicilinu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": "very_rare",
-      "label": "Zvýšení hladin jaterních enzymů.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "not_known",
+      "label": "Stevensův-Johnsonův syndrom: terčovité skvrny, často s puchýři, olupováním kůže a vředy v ústech, hrdle, nose, na genitáliích nebo v očích; může mu předcházet horečka a příznaky podobné chřipce.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví načervenalé nevyvýšené terčovité nebo kruhové skvrny, puchýře, olupování kůže nebo vředy v ústech, hrdle, nose, na genitáliích či v očích, případně jim předchází horečka nebo příznaky podobné chřipce.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "not_known",
+      "label": "Toxická epidermální nekrolýza: terčovité skvrny, často s puchýři, olupováním kůže a vředy v ústech, hrdle, nose, na genitáliích nebo v očích; může jí předcházet horečka a příznaky podobné chřipce.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví načervenalé nevyvýšené terčovité nebo kruhové skvrny, puchýře, olupování kůže nebo vředy v ústech, hrdle, nose, na genitáliích či v očích, případně jim předchází horečka nebo příznaky podobné chřipce.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "not_known",
+      "label": "DRESS (léková reakce s eozinofilií a systémovými příznaky): rozsáhlá vyrážka, vysoká tělesná teplota a zvětšené lymfatické uzliny.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví rozsáhlá vyrážka, vysoká tělesná teplota a zvětšené lymfatické uzliny.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Pustular drug eruption",
+      "frequency": "not_known",
+      "label": "Akutní generalizovaná exantematózní pustulóza (AGEP): červená, šupinatá rozsáhlá vyrážka s hrbolky pod kůží a puchýři doprovázená horečkou; obvykle se objevuje na začátku léčby.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví červená, šupinatá rozsáhlá vyrážka s hrbolky pod kůží a puchýři doprovázená horečkou, obvykle na začátku léčby.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Hemolytic anemia",
@@ -215,87 +256,394 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "very_rare",
       "label": "Poruchy srážení krve.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": null,
-      "label": "Při dlouhodobém podávání antibiotik může dojít k přemnožení necitlivých mikroorganismů, včetně plísní, a k superinfekci.",
+      "ctcae": "Hepatitis",
+      "frequency": "very_rare",
+      "label": "Hepatitida (zánět jater).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hyperkalemia",
-      "frequency": null,
-      "label": "Zvýšená hladina draslíku v krvi po výrazném předávkování, zejména při poruše funkce ledvin.",
+      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Cholestatická žloutenka (žloutenka v důsledku městnání žluči).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "very_rare",
+      "label": "Zvýšení hladin jaterních enzymů.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Antikoagulancia",
-      "effect": "Fenoxymethylpenicilin může ovlivňovat antikoagulační léčbu; příbalová informace uvádí například warfarin. Konkrétní směr ani rozsah ovlivnění není upřesněn.",
-      "effect_type": null,
+      "class_id": null,
+      "drug_class": "Antikoagulační léčba",
+      "effect": "Fenoxymethylpenicilin může ovlivnit antikoagulační léčbu; Ospen může ovlivnit účinek léků na snížení srážlivosti krve, například warfarinu.",
+      "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug": "probenecid",
-      "effect": "Probenecid snižuje vylučování fenoxymethylpenicilinu soutěží při renální tubulární sekreci; příbalová informace uvádí, že může snížit jeho vylučování.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "chloramfenikol",
-      "effect": "Chloramfenikol může antagonizovat baktericidní účinek penicilinů; současné podávání se nedoporučuje a příbalová informace upozorňuje, že může snížit účinnost přípravku Ospen. Kombinaci užívejte jen tehdy, pokud ji výslovně nařídí ošetřující lékař.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "erythromycin",
-      "effect": "Erythromycin může antagonizovat baktericidní účinek penicilinů; současné podávání se nedoporučuje a příbalová informace upozorňuje, že může snížit účinnost přípravku Ospen. Kombinaci užívejte jen tehdy, pokud ji výslovně nařídí ošetřující lékař.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Tetracykliny",
-      "effect": "Tetracykliny mohou antagonizovat baktericidní účinek penicilinů; současné podávání se nedoporučuje a příbalová informace upozorňuje, že mohou snížit účinnost přípravku Ospen. Kombinaci užívejte jen tehdy, pokud ji výslovně nařídí ošetřující lékař.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "neomycin",
-      "effect": "Neomycin snižuje vstřebávání fenoxymethylpenicilinu; příbalová informace uvádí, že může snížit účinnost přípravku Ospen. Kombinaci užívejte jen tehdy, pokud ji výslovně nařídí ošetřující lékař.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:L01BA01",
       "drug": "methotrexát",
-      "effect": "Při užívání fenoxymethylpenicilinu během léčby methotrexátem může dojít ke snížení vylučování methotrexátu, a tím ke zvýšení rizika jeho toxicity.",
+      "effect": "Při současném podávání fenoxymethylpenicilinu může dojít ke snížení vylučování methotrexátu a zvýšení rizika jeho toxicity.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "perorální vakcína proti tyfu",
-      "effect": "Peniciliny mohou inaktivovat perorální vakcínu proti tyfu a snížit její účinnost.",
+      "class_id": "atc:M04AB01",
+      "drug": "probenecid",
+      "effect": "Probenecid snižuje vylučování fenoxymethylpenicilinu soutěží při tubulární sekreci v ledvinách.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01BA01",
+      "drug": "chloramfenikol",
+      "effect": "Chloramfenikol může antagonizovat baktericidní účinek fenoxymethylpenicilinu; současné podávání se nedoporučuje, pokud je výslovně nenařídil ošetřující lékař.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "guar galaktomannan (klovatina guar)",
-      "effect": "Guar galaktomannan snižuje vstřebávání fenoxymethylpenicilinu, a může tak snížit účinnost přípravku Ospen.",
+      "class_id": "atc:J01FA01",
+      "drug": "erythromycin",
+      "effect": "Erythromycin může antagonizovat baktericidní účinek fenoxymethylpenicilinu; současné podávání se nedoporučuje, pokud je výslovně nenařídil ošetřující lékař.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01A",
+      "drug_class": "tetracykliny",
+      "effect": "Tetracykliny mohou antagonizovat baktericidní účinek fenoxymethylpenicilinu; současné podávání se nedoporučuje, pokud je výslovně nenařídil ošetřující lékař.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01GB05",
+      "drug": "neomycin",
+      "effect": "Neomycin může snížit vstřebávání fenoxymethylpenicilinu; současné podávání se nedoporučuje, pokud je výslovně nenařídil ošetřující lékař.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Protizánětlivé léky, léky proti horečce a léky používané proti revmatizmu či dně",
-      "effect": "Účinky těchto léků se mohou vzájemně ovlivňovat s účinky přípravku Ospen; konkrétní léčiva ani povaha či klinický význam ovlivnění nejsou blíže uvedeny.",
-      "effect_type": null,
+      "class_id": "atc:A10BX01",
+      "drug": "guar galaktomannan",
+      "effect": "Guar galaktomannan snižuje vstřebávání fenoxymethylpenicilinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J07AP01",
+      "drug": "perorální vakcína proti břišnímu tyfu",
+      "effect": "Peniciliny mohou inaktivovat perorální vakcínu proti břišnímu tyfu.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Antibiotikum k léčbě infekcí citlivých na penicilin, například streptokokového zánětu mandlí a hltanu a infekcí dutiny ústní; také k prevenci revmatické horečky.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0045998",
+      "H": "",
+      "NAZEV": "OSPEN",
+      "SILA": "1,5MIU",
+      "FORMA": "TBL FLM",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "1,5MIU TBL FLM 30",
+      "OBAL": "BLI",
+      "DRZ": "SZK",
+      "ZEMDRZ": "A",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "J01CE02",
+      "RC": "15/218/95-C/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "13,353",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1112",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "OSPEN",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "1112",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "981",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1112",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "PHENOXYMETHYLPENICILLINUM KALICUM",
+          "NAZEV_EN": "PHENOXYMETHYLPENICILLIN POTASSIUM",
+          "NAZEV": "DRASELNÁ SŮL FENOXYMETHYLPENICILINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "1112",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "1500",
+        "UN": "KU",
+        "substance": {
+          "KOD_LATKY": "1112",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "PHENOXYMETHYLPENICILLINUM KALICUM",
+          "NAZEV_EN": "PHENOXYMETHYLPENICILLIN POTASSIUM",
+          "NAZEV": "DRASELNÁ SŮL FENOXYMETHYLPENICILINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "2378",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "3765",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "1168",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "1871",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "3453",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3453",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "MALTODEXTRINUM",
+          "NAZEV_EN": "MALTODEXTRIN",
+          "NAZEV": "MALTODEXTRIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "2710",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "1871",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "748",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "1271",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1271",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "SACCHARINUM NATRICUM DIHYDRICUM",
+          "NAZEV_EN": "SACCHARIN SODIUM DIHYDRATE",
+          "NAZEV": "DIHYDRÁT SODNÉ SOLI SACHARINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0045998",
+        "KOD_LATKY": "1080",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1080",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MENTHAE PIPERITAE ETHEROLEUM",
+          "NAZEV_EN": "PEPPERMINT OIL",
+          "NAZEV": "SILICE MÁTY PEPRNÉ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0045998",
+      "PIL": "PI217851.pdf",
+      "DAT_ROZ_PIL": "16.01.2025",
+      "SPC": "SPC217852.pdf",
+      "DAT_ROZ_SPC": "16.01.2025",
+      "OBAL_TEXT": "OBAL217919.pdf",
+      "DAT_ROZ_OBAL": "16.01.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J01CE02",
+        "NT": "N",
+        "NAZEV": "FENOXYMETHYLPENICILIN",
+        "NAZEV_EN": "PHENOXYMETHYLPENICILLIN"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

@@ -85,7 +85,7 @@ not an extraction from a specific drug:
       "frequency": "common",
       "label": "Nevolnost",
       "action": "contact_doctor",
-      "action_condition": {"patient_guide": "Pokud je vám výrazně nevolno"}
+      "action_condition": {"patient_guide": "Pokud je vám výrazně nevolno", "min_severity": null}
     }
   ],
   "combinations": [
@@ -103,14 +103,19 @@ Each side effect has five fields:
   Rates must match the entry's severity and population. A grade-specific rate
   cannot become an overall incidence; use the source's overall category instead.
 - label: Czech description, including any dose, population or severity conditions.
-- action: continue, discontinue_treatment, contact_doctor, hospitalize_NOW, or null
+- action: continue, discontinue_treatment, contact_doctor, emergency, or null
   when the source gives no recommendation.
 - action_condition: {"patient_guide": "..."} for a source-supported condition on
-  the action; null when unconditional or action is null. Text addresses the patient
+  the action; null when action is null. Include the severity threshold otherwise,
+  with patient_guide null if there is no additional condition. Text addresses the patient
   in plain Czech, preserving timing, severity, dose and other qualifiers. For example,
   {"patient_guide": "Pokud jste zároveň těhotná"}, only when supported by the source.
   Different conditions requiring different actions stay in separate entries.
-  There are no automatically evaluated FHIR conditions yet.
+  `min_severity` is an inferred precautionary action threshold: default 3,
+  lower to 2 for explicit extra attention or early warning signs, and to 1 for
+  instructions to act at the first sign or regardless of severity. Explicit source
+  thresholds take precedence. Null if grading is not meaningful. This does not
+  authorize inventing or escalating the action. There are no FHIR conditions.
 
 Actions use reaction-specific patient advice, rather than generic side-effect
 reporting boilerplate or clinician-only treatment plans. Conditions describe only
@@ -132,6 +137,7 @@ effect_type is one of:
 - increased_toxicity: increased risk or severity of adverse effects.
 - increased_exposure: increased drug concentrations or exposure.
 - decreased_exposure: decreased concentrations or exposure.
+- changed_exposure: explicit pharmacokinetic interaction with unspecified or mixed direction.
 - null: no clear supported category.
 
 When several apply, prefer contraindicated, then increased_toxicity, otherwise

@@ -1,44 +1,17 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N02",
+    "atc:N02B",
+    "atc:N02BF",
+    "atc:N02BF01",
+    "substance:8952"
+  ],
   "side_effects": [
     {
       "ctcae": "Infections and infestations - Other, specify",
       "frequency": "very_common",
       "label": "Virová infekce",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Somnolence",
-      "frequency": "very_common",
-      "label": "Ospalost",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": "very_common",
-      "label": "Točení hlavy",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Ataxia",
-      "frequency": "very_common",
-      "label": "Ztráta koordinace",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "very_common",
-      "label": "Únava",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "very_common",
-      "label": "Horečka",
       "action": null,
       "action_condition": null
     },
@@ -64,16 +37,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Otitis media",
+      "ctcae": "Infections and infestations - Other, specify",
       "frequency": "common",
-      "label": "Zánět středního ucha",
+      "label": "Jiné infekce",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Infections and infestations - Other, specify",
+      "ctcae": "Otitis media",
       "frequency": "common",
-      "label": "Jiné infekce",
+      "label": "Zánět středního ucha",
       "action": null,
       "action_condition": null
     },
@@ -85,6 +58,43 @@
       "action_condition": null
     },
     {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "not_known",
+      "label": "Snížený počet krevních destiček",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "uncommon",
+      "label": "Alergická reakce, například kopřivka",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vyrážka, kopřivka, horečka, otok uzlin, rtů, obličeje nebo jazyka, žloutnutí kůže či očí, neobvyklé modřiny nebo krvácení, výrazná únava či slabost, bolest svalů nebo časté infekce.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Immune system disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Syndrom přecitlivělosti s různými projevy, které mohou zahrnovat horečku, vyrážku, zánět jater, zvětšené uzliny nebo eozinofilii",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví rozšířená vyrážka, vysoká teplota a zvětšené uzliny nebo jiné uvedené příznaky závažné reakce.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "not_known",
+      "label": "Anafylaxe, závažná alergická reakce s obtížným dýcháním, otokem rtů, hrdla či jazyka a nízkým tlakem; vyhledejte ihned lékařskou péči",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví obtížné dýchání, otok rtů, hrdla nebo jazyka či nízký krevní tlak.",
+        "min_severity": null
+      }
+    },
+    {
       "ctcae": "Anorexia",
       "frequency": "common",
       "label": "Nechutenství",
@@ -92,16 +102,37 @@
       "action_condition": null
     },
     {
-      "ctcae": "Anorexia",
+      "ctcae": "Metabolism and nutrition disorders - Other, specify",
       "frequency": "common",
       "label": "Zvýšená chuť k jídlu",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Personality change",
+      "ctcae": "Hyperglycemia",
+      "frequency": "uncommon",
+      "label": "Zvýšená hladina cukru v krvi, nejčastěji u pacientů s cukrovkou",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypoglycemia",
+      "frequency": "rare",
+      "label": "Snížená hladina cukru v krvi, nejčastěji u pacientů s cukrovkou",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyponatremia",
+      "frequency": "not_known",
+      "label": "Snížená hladina sodíku v krvi",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hostility",
       "frequency": "common",
-      "label": "Agresivita nebo nepřátelské chování",
+      "label": "Nepřátelské nebo agresivní chování",
       "action": null,
       "action_condition": null
     },
@@ -113,16 +144,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Psychiatric disorders - Other, specify",
+      "ctcae": "Personality change",
       "frequency": "common",
-      "label": "Změny nálady nebo emoční labilita",
+      "label": "Změny nálady",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depression",
       "frequency": "common",
-      "label": "Depresivní nálada nebo deprese",
+      "label": "Depresivní nálada",
       "action": null,
       "action_condition": null
     },
@@ -143,21 +174,59 @@
     {
       "ctcae": "Cognitive disturbance",
       "frequency": "common",
-      "label": "Abnormální myšlení nebo obtíže s myšlením",
+      "label": "Potíže s myšlením",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Agitation",
+      "frequency": "uncommon",
+      "label": "Neklid a neúmyslné bezúčelné pohyby",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Suicidal ideation",
+      "frequency": "not_known",
+      "label": "Myšlenky na sebevraždu nebo sebepoškození; vyhledejte ihned lékaře",
+      "action": "contact_doctor",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hallucinations",
+      "frequency": "not_known",
+      "label": "Halucinace",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Psychiatric disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Mentální porucha",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Drug withdrawal syndrome",
+      "frequency": "not_known",
+      "label": "Příznaky z vysazení po ukončení léčby nebo snížení dávky, obvykle do 48 hodin: úzkost, nespavost, nevolnost, bolest, pocení, třes, bolest hlavy, deprese, neobvyklé pocity, závrať a celkový pocit nemoci",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví příznaky z vysazení.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Seizure",
       "frequency": "common",
-      "label": "Křeče nebo záchvaty",
+      "label": "Křeče",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Movements involuntary",
+      "ctcae": "Hyperkinesia",
       "frequency": "common",
-      "label": "Nadměrné mimovolní pohyby",
+      "label": "Nadměrné pohyby; u dětí byly častěji hlášeny mimovolné pohyby",
       "action": null,
       "action_condition": null
     },
@@ -199,28 +268,28 @@
     {
       "ctcae": "Dysesthesia",
       "frequency": "common",
-      "label": "Zvýšená citlivost kůže",
+      "label": "Změněné pocity na kůži",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "common",
-      "label": "Brnění nebo jiné abnormální pocity",
+      "label": "Brnění",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Paresthesia",
+      "ctcae": "Nervous system disorders - Other, specify",
       "frequency": "common",
-      "label": "Snížené smyslové vnímání nebo otupělost",
+      "label": "Snížená citlivost",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Ataxia",
-      "frequency": "common",
-      "label": "Porucha koordinace",
+      "frequency": "very_common",
+      "label": "Ztráta koordinace pohybů",
       "action": null,
       "action_condition": null
     },
@@ -239,9 +308,37 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vision decreased",
-      "frequency": "common",
-      "label": "Poruchy vidění, například tupozrakost",
+      "ctcae": "Hypokinesia",
+      "frequency": "uncommon",
+      "label": "Snížená pohyblivost",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Loss of consciousness",
+      "frequency": "rare",
+      "label": "Ztráta vědomí",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Movements involuntary",
+      "frequency": "not_known",
+      "label": "Jiné poruchy pohybu, například svíjení, mimovolné pohyby, ztuhlost, choreoatetóza, dyskineze nebo dystonie",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Somnolence",
+      "frequency": "very_common",
+      "label": "Ospalost",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": "very_common",
+      "label": "Závrať",
       "action": null,
       "action_condition": null
     },
@@ -253,16 +350,30 @@
       "action_condition": null
     },
     {
-      "ctcae": "Blurred vision",
+      "ctcae": "Vision decreased",
       "frequency": "common",
-      "label": "Dvojité vidění",
+      "label": "Zhoršené vidění",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vertigo",
       "frequency": "common",
-      "label": "Závrať",
+      "label": "Točení hlavy",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tinnitus",
+      "frequency": "not_known",
+      "label": "Zvonění v uších",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Palpitations",
+      "frequency": "uncommon",
+      "label": "Bušení srdce",
       "action": null,
       "action_condition": null
     },
@@ -274,7 +385,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vascular disorders - Other, specify",
+      "ctcae": "Vasodilatation",
       "frequency": "common",
       "label": "Zrudnutí nebo rozšíření cév",
       "action": null,
@@ -283,14 +394,15 @@
     {
       "ctcae": "Dyspnea",
       "frequency": "common",
-      "label": "Dušnost nebo ztížené dýchání",
+      "label": "Dušnost",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte potíže s dýcháním, zvláště jsou-li závažné"
+        "patient_guide": "Pokud se objeví potíže s dýcháním.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Bronchial infection",
+      "ctcae": "Bronchitis",
       "frequency": "common",
       "label": "Zánět průdušek",
       "action": null,
@@ -299,7 +411,7 @@
     {
       "ctcae": "Pharyngitis",
       "frequency": "common",
-      "label": "Bolest nebo zánět v krku",
+      "label": "Bolest v krku",
       "action": null,
       "action_condition": null
     },
@@ -311,30 +423,46 @@
       "action_condition": null
     },
     {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
+      "ctcae": "Rhinitis",
       "frequency": "common",
       "label": "Sucho v nose nebo rýma",
       "action": null,
       "action_condition": null
     },
     {
+      "ctcae": "Respiratory depression",
+      "frequency": "rare",
+      "label": "Mělké nebo utlumené dýchání",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví potíže s dýcháním.",
+        "min_severity": null
+      }
+    },
+    {
       "ctcae": "Vomiting",
       "frequency": "common",
       "label": "Zvracení",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud je spolu s úpornou bolestí břicha a nevolností.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Pocit na zvracení",
-      "action": null,
-      "action_condition": null
+      "label": "Nevolnost",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud je spolu s úpornou bolestí břicha a zvracením.",
+        "min_severity": null
+      }
     },
     {
-      "ctcae": "Toothache",
+      "ctcae": "Dental caries",
       "frequency": "common",
-      "label": "Zubní obtíže",
+      "label": "Onemocnění zubů",
       "action": null,
       "action_condition": null
     },
@@ -356,8 +484,11 @@
       "ctcae": "Abdominal pain",
       "frequency": "common",
       "label": "Bolest břicha",
-      "action": null,
-      "action_condition": null
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud je bolest úporná a současně se objeví nevolnost nebo zvracení.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Dyspepsia",
@@ -388,18 +519,33 @@
       "action_condition": null
     },
     {
-      "ctcae": "Edema face",
-      "frequency": "common",
-      "label": "Otok obličeje",
+      "ctcae": "Dysphagia",
+      "frequency": "uncommon",
+      "label": "Potíže s polykáním",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "not_known",
+      "label": "Akutní zánět slinivky břišní; během léčby byly hlášeny případy, souvislost s gabapentinem není jasná",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se otok objeví spolu s dalšími příznaky závažné alergické reakce, například otokem rtů nebo jazyka"
+        "patient_guide": "Pokud se objeví úporná bolest břicha, nevolnost a zvracení.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Bruising",
+      "ctcae": "Edema face",
       "frequency": "common",
-      "label": "Podlitiny nebo purpura, často po fyzickém poranění",
+      "label": "Otok obličeje",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Purpura",
+      "frequency": "common",
+      "label": "Podlitiny, nejčastěji po fyzickém poranění",
       "action": null,
       "action_condition": null
     },
@@ -418,11 +564,65 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Acne",
       "frequency": "common",
       "label": "Akné",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "not_known",
+      "label": "Stevensův–Johnsonův syndrom: terčovité nebo kruhové skvrny, puchýře a olupování kůže, vřídky v ústech, hrdle, nose, na genitáliích nebo očích; může mu předcházet horečka či příznaky podobné chřipce. Přestaňte gabapentin užívat a ihned vyhledejte lékařskou pomoc.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "not_known",
+      "label": "Toxická epidermální nekrolýza: terčovité nebo kruhové skvrny, puchýře a olupování kůže, vřídky v ústech, hrdle, nose, na genitáliích nebo očích; může jí předcházet horečka či příznaky podobné chřipce. Přestaňte gabapentin užívat a ihned vyhledejte lékařskou pomoc.",
+      "action": "discontinue_treatment",
+      "action_condition": null
+    },
+    {
+      "ctcae": "Angioedema",
+      "frequency": "not_known",
+      "label": "Angioedém",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví otok rtů, obličeje nebo jazyka.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Erythema multiforme",
+      "frequency": "not_known",
+      "label": "Erythema multiforme",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví závažná kožní vyrážka, terčovité skvrny, puchýře nebo olupování kůže.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Alopecia",
+      "frequency": "not_known",
+      "label": "Vypadávání vlasů",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví spolu s vyrážkou nebo zarudnutím kůže.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Eosinophilia",
+      "frequency": "not_known",
+      "label": "Eozinofilie jako součást závažné lékové reakce",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví rozšířená vyrážka, vysoká teplota a zvětšené uzliny nebo jiné uvedené příznaky závažné reakce.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Arthralgia",
@@ -437,7 +637,8 @@
       "label": "Bolest svalů",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud podstupujete hemodialýzu a zaznamenáte bolest svalů nebo slabost"
+        "patient_guide": "Pokud podstupujete hemodialýzu a zaznamenáte bolest nebo slabost svalů.",
+        "min_severity": null
       }
     },
     {
@@ -455,28 +656,66 @@
       "action_condition": null
     },
     {
+      "ctcae": "Rhabdomyolysis",
+      "frequency": "not_known",
+      "label": "Rozklad svalových vláken; může se projevit slabostí, citlivostí nebo bolestí svalů, horečkou, změnou barvy moči a zvýšenou kreatinfosfokinázou a může poškodit ledviny",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud současně pociťujete slabost, citlivost nebo bolest svalů a necítíte se dobře nebo máte horečku; ihned kontaktujte lékaře.",
+        "min_severity": null
+      }
+    },
+    {
+      "ctcae": "Myasthenia gravis",
+      "frequency": "not_known",
+      "label": "Zhoršení myasthenia gravis, onemocnění způsobujícího svalovou slabost",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Myoclonus",
+      "frequency": "not_known",
+      "label": "Myoklonus",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Erectile dysfunction",
       "frequency": "common",
-      "label": "Obtíže s erekcí nebo impotence",
+      "label": "Potíže s erekcí",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Breast enlargement",
+      "frequency": "not_known",
+      "label": "Zvětšení prsů nebo prsní tkáně",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Sexual dysfunction",
+      "frequency": "not_known",
+      "label": "Sexuální dysfunkce, včetně změn libida, opožděné ejakulace nebo neschopnosti dosáhnout orgasmu",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Peripheral edema",
       "frequency": "common",
-      "label": "Otok nohou a paží",
+      "label": "Otoky nohou a paží",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gait disturbance",
       "frequency": "common",
-      "label": "Obtíže s chůzí nebo abnormální chůze",
+      "label": "Potíže s chůzí",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
+      "ctcae": "Generalized muscle weakness",
       "frequency": "common",
       "label": "Slabost",
       "action": null,
@@ -492,7 +731,7 @@
     {
       "ctcae": "Malaise",
       "frequency": "common",
-      "label": "Pocit nemoci nebo malátnost",
+      "label": "Celkový pocit nemoci",
       "action": null,
       "action_condition": null
     },
@@ -504,14 +743,70 @@
       "action_condition": null
     },
     {
-      "ctcae": "Weight gain",
-      "frequency": "common",
-      "label": "Přibývání na hmotnosti",
+      "ctcae": "Fatigue",
+      "frequency": "very_common",
+      "label": "Únava",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Injury, poisoning and procedural complications - Other, specify",
+      "ctcae": "Fever",
+      "frequency": "very_common",
+      "label": "Horečka",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Generalized edema",
+      "frequency": "uncommon",
+      "label": "Celkové otoky",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "not_known",
+      "label": "Bolest na hrudi",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood creatine phosphokinase increased",
+      "frequency": "not_known",
+      "label": "Zvýšená hladina kreatinfosfokinázy v krvi",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "uncommon",
+      "label": "Zvýšené jaterní testy SGPT (ALT)",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Aspartate aminotransferase increased",
+      "frequency": "uncommon",
+      "label": "Zvýšené jaterní testy SGOT (AST)",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood bilirubin increased",
+      "frequency": "uncommon",
+      "label": "Zvýšený bilirubin v krvi",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "common",
+      "label": "Přírůstek hmotnosti",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Accidental injury",
       "frequency": "common",
       "label": "Náhodné poranění",
       "action": null,
@@ -525,81 +820,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Injury, poisoning and procedural complications - Other, specify",
+      "ctcae": "Skin abrasion",
       "frequency": "common",
       "label": "Odřenina",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Personality change",
-      "frequency": "common",
-      "label": "Agresivní chování u dětí",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Movements involuntary",
-      "frequency": "common",
-      "label": "Mimovolní pohyby u dětí",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Agitation",
-      "frequency": "uncommon",
-      "label": "Agitovanost, neklid a bezúčelné mimovolní pohyby",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "uncommon",
-      "label": "Alergická reakce, například kopřivka",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kopřivka nebo jiné příznaky závažné alergické reakce"
-      }
-    },
-    {
-      "ctcae": "Joint range of motion decreased",
-      "frequency": "uncommon",
-      "label": "Omezená pohyblivost",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Palpitations",
-      "frequency": "uncommon",
-      "label": "Zrychlená srdeční činnost nebo bušení srdce",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysphagia",
-      "frequency": "uncommon",
-      "label": "Potíže s polykáním",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "uncommon",
-      "label": "Svědění, které může postihnout obličej, trup a končetiny",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": "uncommon",
-      "label": "Abnormální výsledky krevních testů ukazující na onemocnění jater",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cognitive disturbance",
-      "frequency": "uncommon",
-      "label": "Duševní porucha",
       "action": null,
       "action_condition": null
     },
@@ -609,602 +832,313 @@
       "label": "Pád",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Hyperglycemia",
-      "frequency": "uncommon",
-      "label": "Zvýšená hladina cukru v krvi, nejčastěji u pacientů s cukrovkou",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Generalized edema",
-      "frequency": "uncommon",
-      "label": "Celkový otok",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypoglycemia",
-      "frequency": "rare",
-      "label": "Snížená hladina cukru v krvi, nejčastěji u pacientů s cukrovkou",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "rare",
-      "label": "Ztráta vědomí",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Potíže s dýcháním nebo mělké dýchání (útlum dýchání)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte potíže s dýcháním, zvláště jsou-li závažné"
-      }
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "not_known",
-      "label": "Snížený počet krevních destiček",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Suicidal ideation",
-      "frequency": "not_known",
-      "label": "Sebevražedné myšlenky",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás kdykoli objeví myšlenky na sebepoškození nebo sebevraždu"
-      }
-    },
-    {
-      "ctcae": "Hallucinations",
-      "frequency": "not_known",
-      "label": "Halucinace",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Movements involuntary",
-      "frequency": "not_known",
-      "label": "Poruchy pohybů, například svíjení, mimovolní pohyby nebo ztuhlost",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tinnitus",
-      "frequency": "not_known",
-      "label": "Zvonění v uších",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Zežloutnutí kůže a očí (žloutenka)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očního bělma"
-      }
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "not_known",
-      "label": "Zánět jater",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky závažné alergické reakce, například žloutenka nebo vyrážka"
-      }
-    },
-    {
-      "ctcae": "Acute kidney injury",
-      "frequency": "not_known",
-      "label": "Akutní selhání ledvin",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urinary incontinence",
-      "frequency": "not_known",
-      "label": "Únik moči nebo inkontinence",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zvětšení prsů nebo prsní tkáně",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Problémy se sexuální funkcí, včetně změny libida",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anorgasmia",
-      "frequency": "not_known",
-      "label": "Neschopnost dosáhnout orgasmu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Ejaculation disorder",
-      "frequency": "not_known",
-      "label": "Opožděná ejakulace nebo jiné poruchy ejakulace",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyponatremia",
-      "frequency": "not_known",
-      "label": "Nízká hladina sodíku v krvi",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Anafylaxe, závažná potenciálně život ohrožující alergická reakce s obtížným dýcháním, otokem rtů, hrdla nebo jazyka a nízkým krevním tlakem",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví potíže s dýcháním, otok rtů, hrdla nebo jazyka nebo nízký krevní tlak"
-      }
-    },
-    {
-      "ctcae": "Myasthenia gravis",
-      "frequency": "not_known",
-      "label": "Zhoršení myasthenia gravis, onemocnění způsobujícího svalovou slabost",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Příznaky z vysazení po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví příznaky z vysazení"
-      }
-    },
-    {
-      "ctcae": "Seizure",
-      "frequency": "not_known",
-      "label": "Záchvaty po vysazení léčby nebo snížení dávky",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví záchvat"
-      }
-    },
-    {
-      "ctcae": "Anxiety",
-      "frequency": "not_known",
-      "label": "Úzkost po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví úzkost"
-      }
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "not_known",
-      "label": "Poruchy spánku nebo nespavost po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví poruchy spánku"
-      }
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "not_known",
-      "label": "Nevolnost po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví nevolnost"
-      }
-    },
-    {
-      "ctcae": "Pain",
-      "frequency": "not_known",
-      "label": "Bolest po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví bolest"
-      }
-    },
-    {
-      "ctcae": "Hyperhidrosis",
-      "frequency": "not_known",
-      "label": "Pocení po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví pocení"
-      }
-    },
-    {
-      "ctcae": "Tremor",
-      "frequency": "not_known",
-      "label": "Třes po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví třes"
-      }
-    },
-    {
-      "ctcae": "Headache",
-      "frequency": "not_known",
-      "label": "Bolest hlavy po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví bolest hlavy"
-      }
-    },
-    {
-      "ctcae": "Depression",
-      "frequency": "not_known",
-      "label": "Deprese po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví deprese"
-      }
-    },
-    {
-      "ctcae": "Paresthesia",
-      "frequency": "not_known",
-      "label": "Neobvyklé pocity po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví neobvyklé pocity"
-      }
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": "not_known",
-      "label": "Závrať po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví závrať"
-      }
-    },
-    {
-      "ctcae": "Malaise",
-      "frequency": "not_known",
-      "label": "Celkový pocit nemoci nebo malátnost po ukončení léčby nebo snížení dávky, obvykle do 48 hodin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po ukončení léčby nebo snížení dávky objeví celkový pocit nemoci"
-      }
-    },
-    {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "not_known",
-      "label": "Bolest na hrudi",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Rhabdomyolysis",
-      "frequency": "not_known",
-      "label": "Rozklad svalových vláken (rhabdomyolýza), který může způsobit poruchu ledvin",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte slabost, citlivost nebo bolest svalů a současně se necítíte dobře nebo máte horečku, případně se změní barva moči"
-      }
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "not_known",
-      "label": "Zvýšená hladina kreatinfosfokinázy v krvi",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte slabost, citlivost nebo bolest svalů a současně se necítíte dobře nebo máte horečku"
-      }
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "not_known",
-      "label": "Akutní zánět slinivky břišní",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte úpornou nebo přetrvávající bolest břicha, nevolnost nebo zvracení"
-      }
-    },
-    {
-      "ctcae": "Lymph node pain",
-      "frequency": "not_known",
-      "label": "Zvětšené lymfatické uzliny, které neustupují",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zvětšené lymfatické uzliny, které neustupují, zejména spolu s vyrážkou nebo horečkou"
-      }
-    },
-    {
-      "ctcae": "Alopecia",
-      "frequency": "not_known",
-      "label": "Vypadávání vlasů při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka a zarudnutí kůže nebo vypadávání vlasů"
-      }
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "not_known",
-      "label": "Rozšířená vyrážka doprovázená vysokou teplotou a zvětšenými lymfatickými uzlinami (DRESS)",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví rozšířená vyrážka, vysoká tělesná teplota a zvětšené lymfatické uzliny"
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "not_known",
-      "label": "Závažná kožní vyrážka: načervenalé, nevystupující terčovité nebo kruhové skvrny na trupu, často s puchýřkem uprostřed, olupováním kůže a vřídky v ústech, hrdle, nose, na genitáliích nebo očích; může jí předcházet horečka nebo příznaky podobné chřipce",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví uvedená závažná vyrážka, puchýře, olupování kůže nebo vřídky na sliznicích"
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Závažná kožní vyrážka s puchýři, olupováním kůže a vřídky na sliznicích",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví závažná vyrážka, puchýře, olupování kůže nebo vřídky na sliznicích"
-      }
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "not_known",
-      "label": "Závažná kožní reakce včetně erythema multiforme",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky závažné kožní reakce"
-      }
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": "not_known",
-      "label": "Otok rtů, obličeje nebo jazyka při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok rtů, obličeje nebo jazyka"
-      }
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "not_known",
-      "label": "Vyrážka se zarudnutím kůže při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka a zarudnutí kůže"
-      }
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "not_known",
-      "label": "Kopřivka při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kopřivka"
-      }
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "not_known",
-      "label": "Horečka při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví horečka spolu s dalšími příznaky závažné alergické reakce"
-      }
-    },
-    {
-      "ctcae": "Bruising",
-      "frequency": "not_known",
-      "label": "Neobvyklá tvorba modřin nebo krvácení při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví neobvyklá tvorba modřin nebo krvácení"
-      }
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "not_known",
-      "label": "Závažná únava při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví závažná únava nebo slabost"
-      }
-    },
-    {
-      "ctcae": "Myalgia",
-      "frequency": "not_known",
-      "label": "Neočekávaná bolest svalů při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví neočekávaná bolest svalů"
-      }
-    },
-    {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "not_known",
-      "label": "Časté infekce při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví časté infekce spolu s dalšími příznaky závažné alergické reakce"
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Zežloutnutí kůže nebo očního bělma při závažné alergické reakci",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očního bělma"
-      }
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": null,
-      "label": "Při užití vyšší než doporučené dávky může dojít ke ztrátě vědomí",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jste užil(a) více přípravku, než vám bylo předepsáno"
-      }
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": null,
-      "label": "Při užití vyšší než doporučené dávky se může objevit závrať",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jste užil(a) více přípravku, než vám bylo předepsáno"
-      }
-    },
-    {
-      "ctcae": "Blurred vision",
-      "frequency": null,
-      "label": "Při užití vyšší než doporučené dávky se může objevit dvojité vidění",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jste užil(a) více přípravku, než vám bylo předepsáno"
-      }
-    },
-    {
-      "ctcae": "Dysarthria",
-      "frequency": null,
-      "label": "Při užití vyšší než doporučené dávky se může objevit zastřená řeč",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jste užil(a) více přípravku, než vám bylo předepsáno"
-      }
-    },
-    {
-      "ctcae": "Somnolence",
-      "frequency": null,
-      "label": "Při užití vyšší než doporučené dávky se může objevit ospalost",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jste užil(a) více přípravku, než vám bylo předepsáno"
-      }
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": null,
-      "label": "Při užití vyšší než doporučené dávky se může objevit průjem",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jste užil(a) více přípravku, než vám bylo předepsáno"
-      }
-    },
-    {
-      "ctcae": "Lethargy",
-      "frequency": null,
-      "label": "Při předávkování může dojít k letargii",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jste užil(a) více přípravku, než vám bylo předepsáno"
-      }
-    },
-    {
-      "ctcae": "Depressed level of consciousness",
-      "frequency": null,
-      "label": "Předávkování, zvláště při kombinaci s jinými léky tlumícími centrální nervový systém, může vést ke kómatu",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud jste užil(a) více přípravku, než vám bylo předepsáno"
-      }
     }
   ],
   "combinations": [
     {
+      "class_id": "group:cns_depressant",
       "drug_class": "Opioidy a jiné přípravky tlumící centrální nervový systém",
-      "effect": "Současné užívání může zesílit účinek gabapentinu a zvýšit riziko ospalosti, sedace a útlumu dýchání; byly hlášeny také úmrtí. Riziko může být zvlášť významné u křehkých a starších pacientů, při závažném respiračním onemocnění, polyfarmacii nebo poruše užívání návykových látek. Pacienta je třeba pečlivě sledovat a přiměřeně snížit dávku gabapentinu nebo současně užívaného opioidu či jiného tlumivého přípravku.",
+      "effect": "Současné užívání s gabapentinem může zvýšit ospalost a sedaci a způsobit útlum dýchání nebo smrt. U morfinu byla u zdravých dobrovolníků průměrná expozice gabapentinu zvýšena o 44 %, když byl morfin podán 2 hodiny před gabapentinem. Riziko je zvlášť důležité u křehkých či starších pacientů, při závažném respiračním onemocnění, polyfarmacii nebo poruše užívání návykových látek. Lékař má sledovat útlum CNS a přiměřeně snížit dávku gabapentinu nebo souběžného tlumivého přípravku, včetně opioidu.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
           "ctcae": "Somnolence",
           "frequency": null,
-          "label": "Ospalost nebo sedace při současném užívání opioidů či jiných léků tlumících centrální nervový systém",
+          "label": "Ospalost a sedace při současném užívání s opioidy nebo jinými přípravky tlumícími CNS",
           "action": null,
           "action_condition": null
         },
         {
-          "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
+          "ctcae": "Respiratory depression",
           "frequency": null,
-          "label": "Útlum dýchání při současném užívání opioidů či jiných léků tlumících centrální nervový systém",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Death NOS",
-          "frequency": null,
-          "label": "Byla hlášena úmrtí při současném užívání gabapentinu a opioidů",
+          "label": "Útlum dýchání při současném užívání s opioidy nebo jinými přípravky tlumícími CNS",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Morfin",
-      "effect": "Současné podání morfinu zvýšilo průměrnou expozici gabapentinu (AUC) o 44 %. Při souběžné léčbě je třeba sledovat ospalost, sedaci a útlum dýchání a přiměřeně snížit dávku gabapentinu nebo morfinu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Ospalost nebo sedace",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Útlum dýchání",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antacida obsahující hliník nebo hořčík",
-      "effect": "Současné podání snižuje biologickou dostupnost gabapentinu až o 24 %. Gabapentin užijte nejdříve 2 hodiny po antacidu.",
+      "class_id": null,
+      "drug_class": "Antacida obsahující současně hliník a hořčík",
+      "effect": "Antacida obsahující hliník a hořčík snižují biologickou dostupnost gabapentinu až o 24 %. Gabapentin užijte nejdříve 2 hodiny po antacidu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
-    },
-    {
-      "drug_class": "Antiepileptika: fenobarbital, fenytoin, kyselina valproová a karbamazepin",
-      "effect": "Při současném podání nebyly pozorovány interakce s gabapentinem.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Perorální kontraceptiva obsahující norethisteron a/nebo ethinylestradiol",
-      "effect": "Současné podání neovlivňuje farmakokinetiku gabapentinu ani perorálního kontraceptiva v ustáleném stavu.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "Probenecid",
-      "effect": "Probenecid nemění vylučování gabapentinu ledvinami.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "Cimetidin",
-      "effect": "Cimetidin mírně snižuje vylučování gabapentinu ledvinami; tento účinek pravděpodobně nemá klinický význam.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Léčba epilepsie a periferní neuropatické bolesti.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0019995",
+      "H": "",
+      "NAZEV": "GABAPENTIN TEVA",
+      "SILA": "400MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "50",
+      "CESTA": "POR",
+      "DOPLNEK": "400MG CPS DUR 50",
+      "OBAL": "BLI",
+      "DRZ": "TPP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "21",
+      "ATC_WHO": "N02BF01",
+      "RC": "21/239/05-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "1,8",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "11,1111",
+      "ZDROJ_WHO": "NO26",
+      "LL": "8952",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "GABAPENTIN TEVA",
+      "MRP_CISLO": "NO/H/0112/003",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "8952",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "400",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "8952",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "GABAPENTINUM",
+          "NAZEV_EN": "GABAPENTIN",
+          "NAZEV": "GABAPENTIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "1871",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "4989",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4989",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "PREGELATINISED MAIZE STARCH",
+          "NAZEV": "PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "SQ": "4",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "2710",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "4538",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4538",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM NIGRUM",
+          "NAZEV_EN": "FERRIC OXIDE BLACK",
+          "NAZEV": "ČERNÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "4290",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4290",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM RUBRUM",
+          "NAZEV_EN": "IRON OXIDE RED",
+          "NAZEV": "ČERVENÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "4256",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "2855",
+        "SQ": "9",
+        "S": "A",
+        "AMNT": "111",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "SQ": "10",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "3113",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "3113",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "LACCA",
+          "NAZEV_EN": "SHELLAC",
+          "NAZEV": "ŠELAK"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "1216",
+        "SQ": "12",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "1216",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "PROPYLENGLYCOLUM",
+          "NAZEV_EN": "PROPYLENE GLYCOL",
+          "NAZEV": "PROPYLENGLYKOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0019995",
+        "KOD_LATKY": "4538",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "4538",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM NIGRUM",
+          "NAZEV_EN": "FERRIC OXIDE BLACK",
+          "NAZEV": "ČERNÝ OXID ŽELEZITÝ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0019995",
+      "PIL": "PI237222.pdf",
+      "DAT_ROZ_PIL": "19.08.2025",
+      "SPC": "SPC237223.pdf",
+      "DAT_ROZ_SPC": "10.10.2024",
+      "OBAL_TEXT": "OBAL160531.pdf",
+      "DAT_ROZ_OBAL": "25.08.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N02BF01",
+        "NT": "N",
+        "NAZEV": "GABAPENTIN",
+        "NAZEV_EN": "GABAPENTIN"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

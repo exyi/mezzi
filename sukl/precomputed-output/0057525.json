@@ -1,513 +1,841 @@
 {
+  "classes": [
+    "atc:M",
+    "atc:M03",
+    "atc:M03B",
+    "atc:M03BX",
+    "atc:M03BX04",
+    "substance:1756"
+  ],
   "side_effects": [
     {
       "ctcae": "Anorexia",
       "frequency": "uncommon",
-      "label": "Ztráta chuti k jídlu.",
+      "label": "Ztráta chuti k jídlu",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Insomnia",
       "frequency": "uncommon",
-      "label": "Nespavost a poruchy spánku.",
+      "label": "Nespavost a poruchy spánku",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "uncommon",
-      "label": "Bolest hlavy.",
+      "label": "Bolest hlavy",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "uncommon",
-      "label": "Závratě.",
+      "label": "Závratě",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás během užívání objeví závrať."
+        "patient_guide": "Pokud se u vás objeví závratě.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Somnolence",
       "frequency": "uncommon",
-      "label": "Ospalost.",
+      "label": "Ospalost",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás během užívání objeví ospalost."
+        "patient_guide": "Pokud se u vás objeví ospalost.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Hypotension",
       "frequency": "uncommon",
-      "label": "Nízký krevní tlak.",
+      "label": "Nízký krevní tlak",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Břišní potíže nebo diskomfort v břiše.",
+      "label": "Břišní potíže",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "uncommon",
-      "label": "Průjem.",
+      "label": "Průjem",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dry mouth",
       "frequency": "uncommon",
-      "label": "Sucho v ústech.",
+      "label": "Sucho v ústech",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspepsia",
       "frequency": "uncommon",
-      "label": "Porucha trávení.",
+      "label": "Porucha trávení",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "uncommon",
-      "label": "Pocit na zvracení.",
+      "label": "Pocit na zvracení",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Generalized muscle weakness",
       "frequency": "uncommon",
-      "label": "Svalová slabost.",
+      "label": "Svalová slabost",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás během užívání objeví svalová slabost."
+        "patient_guide": "Pokud se u vás objeví svalová slabost.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Myalgia",
       "frequency": "uncommon",
-      "label": "Bolest svalů.",
+      "label": "Bolest svalů",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pain in extremity",
       "frequency": "uncommon",
-      "label": "Bolest končetin.",
+      "label": "Bolest končetin",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fatigue",
       "frequency": "uncommon",
-      "label": "Únava.",
+      "label": "Únava",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Malaise",
       "frequency": "uncommon",
-      "label": "Diskomfort (nepohodlí) a slabost.",
+      "label": "Nepohodlí a slabost",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "rare",
-      "label": "Reakce přecitlivělosti (alergická); riziko může být vyšší u žen, starších osob, při současném užívání jiných léků, zejména NSAID, při dřívější lékové alergii či alergickém onemocnění nebo při virové infekci. Může se projevit zarudnutím, vyrážkou, kopřivkou, svěděním, otokem, zrychleným tepem, nízkým tlakem nebo dušností.",
-      "action": "hospitalize_NOW",
+      "label": "Alergická reakce přecitlivělosti",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky alergické reakce, například vyrážka, silné svědění, otok, sípání nebo potíže s dýcháním či polykáním."
+        "patient_guide": "Pokud se objeví zčervenání, vyrážka, silné svědění s vystouplými pupínky, sípání, potíže s dýcháním nebo polykáním, otok obličeje, rtů, jazyka či hrdla, rychlý tep nebo pokles krevního tlaku.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "rare",
-      "label": "Závažná reakce přecitlivělosti (anafylaktická reakce).",
-      "action": "hospitalize_NOW",
+      "label": "Závažná alergická reakce (anafylaktická reakce)",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná alergická reakce."
+        "patient_guide": "Pokud se objeví příznaky závažné alergické reakce.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Hypoactivity",
       "frequency": "rare",
-      "label": "Pokles aktivity.",
+      "label": "Snížená aktivita",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depression",
       "frequency": "rare",
-      "label": "Deprese.",
+      "label": "Deprese",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Concentration impairment",
       "frequency": "rare",
-      "label": "Poruchy pozornosti.",
+      "label": "Poruchy pozornosti",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás během užívání objeví porucha pozornosti."
+        "patient_guide": "Pokud se u vás objeví porucha pozornosti.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Tremor",
       "frequency": "rare",
-      "label": "Třes.",
+      "label": "Třes",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Seizure",
       "frequency": "rare",
-      "label": "Epilepsie.",
+      "label": "Epilepsie",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás během užívání objeví epilepsie."
+        "patient_guide": "Pokud se u vás objeví epilepsie nebo záchvat.",
+        "min_severity": null
       }
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Hypoesthesia",
       "frequency": "rare",
-      "label": "Snížení citlivosti kůže.",
+      "label": "Snížení citlivosti kůže",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "rare",
-      "label": "Abnormální kožní pocity, například mravenčení nebo brnění.",
+      "label": "Mravenčení a brnění",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Lethargy",
       "frequency": "rare",
-      "label": "Letargie (útlum).",
+      "label": "Letargie (útlum)",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "rare",
-      "label": "Rozmazané vidění.",
+      "label": "Rozmazané vidění",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás během užívání objeví rozmazané vidění."
+        "patient_guide": "Pokud se u vás objeví rozmazané vidění.",
+        "min_severity": null
       }
     },
     {
       "ctcae": "Tinnitus",
       "frequency": "rare",
-      "label": "Zvonění v uších.",
+      "label": "Zvonění v uších",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vertigo",
       "frequency": "rare",
-      "label": "Závratě s pocitem točení.",
+      "label": "Závrať s pocitem točení",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Chest pain - cardiac",
       "frequency": "rare",
-      "label": "Svíravá bolest na hrudi (angina pectoris).",
+      "label": "Svíravá bolest na hrudi (angina pectoris)",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Tachycardia",
       "frequency": "rare",
-      "label": "Rychlá srdeční akce.",
+      "label": "Rychlá srdeční akce",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Palpitations",
       "frequency": "rare",
-      "label": "Pocit rychlého a nepravidelného bušení srdce.",
+      "label": "Pocit rychlého a nepravidelného bušení srdce",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flushing",
       "frequency": "rare",
-      "label": "Zčervenání.",
+      "label": "Zčervenání",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspnea",
       "frequency": "rare",
-      "label": "Dušnost.",
+      "label": "Dušnost",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Epistaxis",
       "frequency": "rare",
-      "label": "Krvácení z nosu.",
+      "label": "Krvácení z nosu",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
+      "ctcae": "Tachypnea",
       "frequency": "rare",
-      "label": "Zrychlený dech.",
+      "label": "Zrychlený dech",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "rare",
-      "label": "Bolest v nadbřišku.",
+      "label": "Bolest v nadbřišku",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Constipation",
       "frequency": "rare",
-      "label": "Zácpa.",
+      "label": "Zácpa",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flatulence",
       "frequency": "rare",
-      "label": "Nadýmání.",
+      "label": "Nadýmání",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "rare",
-      "label": "Zvracení.",
+      "label": "Zvracení",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatobiliary disorders - Other, specify",
       "frequency": "rare",
-      "label": "Mírné poškození jater.",
+      "label": "Mírné poškození jater",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Dermatitis",
       "frequency": "rare",
-      "label": "Alergický zánět kůže (dermatitida).",
+      "label": "Alergický zánět kůže (dermatitida)",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperhidrosis",
       "frequency": "rare",
-      "label": "Zvýšené pocení.",
+      "label": "Zvýšené pocení",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pruritus",
       "frequency": "rare",
-      "label": "Svědění.",
+      "label": "Svědění",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urticaria",
       "frequency": "rare",
-      "label": "Kopřivka.",
+      "label": "Kopřivka",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "rare",
-      "label": "Vyrážka.",
+      "label": "Vyrážka",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Renal and urinary disorders - Other, specify",
+      "ctcae": "Urinary incontinence",
       "frequency": "rare",
-      "label": "Pomočování.",
+      "label": "Pomočování",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urinary protein increased",
       "frequency": "rare",
-      "label": "Zvýšené množství bílkovin v moči zjištěné při laboratorním vyšetření.",
+      "label": "Zvýšené množství bílkovin v moči zjištěné při laboratorním vyšetření",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Restless legs syndrome",
       "frequency": "rare",
-      "label": "Neklid nohou.",
+      "label": "Neklid nohou",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Euphoria",
       "frequency": "rare",
-      "label": "Pocit opilosti.",
+      "label": "Pocit opilosti",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
+      "ctcae": "Hot flashes",
       "frequency": "rare",
-      "label": "Pocit tepla.",
+      "label": "Pocit tepla",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Irritability",
       "frequency": "rare",
-      "label": "Podrážděnost.",
+      "label": "Podrážděnost",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
+      "ctcae": "Polydipsia",
       "frequency": "rare",
-      "label": "Žízeň.",
+      "label": "Nadměrný pocit žízně",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypotension",
+      "frequency": "rare",
+      "label": "Pokles krevního tlaku",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "rare",
-      "label": "Změny jaterních enzymů při laboratorním vyšetření.",
+      "label": "Zvýšené jaterní enzymy",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "rare",
-      "label": "Snížení počtu krevních destiček.",
+      "label": "Snížený počet krevních destiček",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Leukocytosis",
       "frequency": "rare",
-      "label": "Zvýšení počtu bílých krvinek.",
+      "label": "Zvýšený počet bílých krvinek",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blood bilirubin increased",
       "frequency": "rare",
-      "label": "Zvýšení hladiny bilirubinu v krvi.",
+      "label": "Zvýšená hladina bilirubinu v krvi",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anemia",
       "frequency": "very_rare",
-      "label": "Anemie (chudokrevnost).",
+      "label": "Chudokrevnost",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "ctcae": "Lymphadenopathy",
       "frequency": "very_rare",
-      "label": "Zvětšení mízních uzlin.",
+      "label": "Zvětšení mízních uzlin",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "very_rare",
-      "label": "Závažná alergická reakce (anafylaktický šok), která může ohrozit život.",
-      "action": "hospitalize_NOW",
+      "label": "Závažná alergická reakce (anafylaktický šok)",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky anafylaktického šoku."
+        "patient_guide": "Pokud se objeví příznaky anafylaktického šoku.",
+        "min_severity": null
       }
-    },
-    {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Nadměrný pocit žízně.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Confusion",
       "frequency": "very_rare",
-      "label": "Zmatenost.",
+      "label": "Zmatenost",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Bradycardia",
       "frequency": "very_rare",
-      "label": "Snížení srdeční frekvence.",
+      "label": "Snížení srdeční frekvence",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Osteopenia",
       "frequency": "very_rare",
-      "label": "Mírné prořídnutí kostní tkáně.",
+      "label": "Mírné prořídnutí kostní tkáně",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Non-cardiac chest pain",
       "frequency": "very_rare",
-      "label": "Hrudní diskomfort.",
+      "label": "Nepříjemný pocit na hrudi",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Creatinine increased",
       "frequency": "very_rare",
-      "label": "Zvýšení kreatininu v krvi zjištěné při laboratorním vyšetření.",
+      "label": "Zvýšená hladina kreatininu v krvi",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Edema face",
+      "ctcae": "Angioedema",
       "frequency": "not_known",
-      "label": "Angioedém, včetně náhlého otoku rukou, nohou, kotníků, obličeje, rtů, jazyka a hrdla; mohou se přidat potíže s polykáním nebo dýcháním.",
-      "action": "hospitalize_NOW",
+      "label": "Náhlý otok rukou, nohou, kotníků, obličeje, rtů, jazyka nebo hrdla; může být spojen s obtížným polykáním nebo dýcháním",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví náhlý otok nebo potíže s polykáním či dýcháním."
+        "patient_guide": "Pokud se objeví náhlý otok nebo obtíže s polykáním či dýcháním.",
+        "min_severity": null
       }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Substráty CYP2D6: thioridazin, tolterodin, venlafaxin, atomoxetin, desipramin, dextromethorfan, metoprolol, nebivolol a perfenazin",
-      "effect": "Současné podání tolperisonu může zvýšit hladiny těchto léků v krvi, protože jsou metabolizovány převážně CYP2D6.",
+      "class_id": null,
+      "drug_class": "Léky metabolizované převážně enzymem CYP2D6: thioridazin, tolterodin, venlafaxin, atomoxetin, desipramin, dextromethorfan, metoprolol, nebivolol a perfenazin",
+      "effect": "Tolperison může při současném užívání zvýšit hladinu těchto léků v krvi a zesílit jejich účinky. Lékař může podle potřeby upravit léčbu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Jiná centrálně působící myorelaxancia",
-      "effect": "Při současném podávání je třeba zvážit snížení dávky tolperisonu.",
-      "effect_type": null,
+      "class_id": "atc:M01AX02",
+      "drug": "kyselina niflumová",
+      "effect": "Tolperison zvyšuje účinek kyseliny niflumové. Při současném podávání má lékař zvážit snížení její dávky.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSAID), včetně kyseliny niflumové",
-      "effect": "Tolperison zvyšuje účinek kyseliny niflumové a dalších NSAID; při současném podávání je třeba zvážit snížení jejich dávky.",
+      "class_id": null,
+      "drug_class": "nesteroidní protizánětlivé léky (NSAID)",
+      "effect": "Tolperison může při současném podávání zvýšit účinek NSAID; lékař má zvážit snížení jejich dávky. Kyselina niflumová je uvedena zvlášť.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M03B",
+      "drug_class": "jiná centrálně působící myorelaxancia",
+      "effect": "Při současném podávání jiných centrálně působících myorelaxancií má lékař zvážit snížení dávky tolperisonu.",
       "effect_type": null,
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Symptomatická léčba spasticity po cévní mozkové příhodě u dospělých.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0057525",
+      "H": "",
+      "NAZEV": "MYDOCALM",
+      "SILA": "150MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "150MG TBL FLM 30",
+      "OBAL": "BLI",
+      "DRZ": "GDB",
+      "ZEMDRZ": "H",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "63",
+      "ATC_WHO": "M03BX04",
+      "RC": "63/092/00-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "200",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "22,5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1756",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "MYDOCALM",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "1756",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "150",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1756",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "TOLPERISONI HYDROCHLORIDUM",
+          "NAZEV_EN": "TOLPERISONE HYDROCHLORIDE",
+          "NAZEV": "TOLPERISON-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "366",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "366",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "ACIDUM CITRICUM MONOHYDRICUM",
+          "NAZEV_EN": "CITRIC ACID MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT KYSELINY CITRONOVÉ"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "1300",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "2658",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2658",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "ACIDUM STEARICUM",
+          "NAZEV_EN": "STEARIC ACID",
+          "NAZEV": "KYSELINA STEAROVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "1871",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "3755",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "2970",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "2624",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "1300",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "2710",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "2624",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "4077",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4077",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "MACROGOLUM",
+          "NAZEV_EN": "MACROGOL",
+          "NAZEV": "MAKROGOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0057525",
+        "KOD_LATKY": "748",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0057525",
+      "PIL": "PI158301.pdf",
+      "DAT_ROZ_PIL": "16.06.2020",
+      "SPC": "SPC158302.pdf",
+      "DAT_ROZ_SPC": "16.06.2020",
+      "OBAL_TEXT": "OBAL107786.pdf",
+      "DAT_ROZ_OBAL": "19.04.2017"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "M03BX04",
+        "NT": "N",
+        "NAZEV": "TOLPERISON",
+        "NAZEV_EN": "TOLPERISONE"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }
