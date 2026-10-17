@@ -82,14 +82,14 @@ def combination_effects(code: str, prepared: dict, medications: dict) -> list[di
             if other_code == code or not isinstance(other.get("classes"), list):
                 continue
             if (class_id and class_id in other["classes"]) or (name and name in medication_names(other_medication, other)):
-                print(f"debug: kombinace {code} + {other_code}: {combination.get('effect_type')} {combination.get('effect')}", file=sys.stderr,)
-                effects.extend({
+                print(f"debug: kombinace {code} + {other_code}: {combination.get('effect_type')} {combination.get('effect')} ({len(combination.get("side_effects") or [])} effects)", file=sys.stderr,)
+                effects.extend([
                     {"side_effect_source_combination": [code, other_code, combination.get('effect_type'), combination.get('effect')], **c}
                     for c in combination.get("side_effects") or []
-                })
+                ])
                 break
     if len(effects) > 0:
-        print(f"debug: added {len(effects)} additional side effects from combinations")
+        print(f"debug: added {len(effects)} additional side effects from combinations", file=sys.stderr)
     return effects
 
 
@@ -199,6 +199,8 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
                     "sukl": code, "medication": medication.name,
                     "effect": effect.label, "relationship": relationship,
                 }
+                if "side_effect_source_combination" in raw_effect:
+                    source["side_effect_source_combination"] = raw_effect["side_effect_source_combination"]
                 if source not in question["sources"]:
                     question["sources"].append(source)
                 if effect.action:

@@ -20,6 +20,8 @@ class ActionCondition(Record):
 
 
 class SideEffect(Record):
+    model_config = ConfigDict(extra="allow")
+
     ctcae: str | None = Field(description="Exact term copied from the supplied English CTCAE v6 list, equivalent in meaning without adding a subtype or cause. Null if no suitable match.")
     frequency: Frequency = Field(description="For explicit incidence p%, use 100/p, not p (1.3% -> 76.9231). Match event, dose, population and severity; never use percentage changes in lab values or comparator rates. Source category otherwise; null if absent.")
     label: str = Field(description="Plain Czech event description with source-supported explanations and dose/population/severity qualifiers, including the scope of any numeric rate. Merge synonyms; do not invent a more specific diagnosis.")
