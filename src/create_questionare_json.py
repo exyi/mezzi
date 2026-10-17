@@ -170,6 +170,11 @@ def main() -> None:
         result = create_questionare_json(args.inputs, args.as_of)
     except (OSError, ValueError, KeyError, TypeError) as exc:
         parser.exit(1, f"error: {exc}\n")
+    if not result:
+        print(
+            "warning: no active medications found - the questionnaire is empty",
+            file=sys.stderr,
+        )
     json.dump(result, sys.stdout, ensure_ascii=False, indent=2)
     sys.stdout.write("\n")
 
