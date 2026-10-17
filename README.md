@@ -1,5 +1,8 @@
 # mezzi app setup
 
+<div style="backgroud-color: red; color: white; font-size: 2rem">
+TEST
+</div>
 
 ## How to run
 
