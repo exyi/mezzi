@@ -23,7 +23,8 @@ Uses `src/find_meds_json.py` to select estimated active medications across all
 files, with its default 30-day fallback for as-needed or unknown supply. Future
 prescriptions and explicitly non-active MedicationRequests are excluded.
 
-Output is a JSON array matching the frontend question schema: `id`, `llt_code`,
+Output is a JSON object `{"patient": {"gender": ...}, "questions": [...]}` where
+`questions` is an array matching the frontend question schema: `id`, `llt_code`,
 `soc`, `term`, `grades`, `definition`, `navigational_note`, and `change`, plus
 `recommended_actions` and `sources`. CTCAE tags come from
 `serialized-ctcae-clean.json`; Czech question text in `definition` comes from

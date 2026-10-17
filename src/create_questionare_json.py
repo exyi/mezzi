@@ -57,6 +57,41 @@ def question_targets(effect: SideEffect, annotations: dict, rules: list[dict]) -
     }
 
 
+def medication_names(medication, prepared: dict) -> set[str]:
+    metadata = prepared.get("metadata") or {}
+    product = metadata.get("product") or {}
+    names = [medication.name, product.get("NAZEV"), product.get("NAZEV_REG")]
+    for row in metadata.get("composition", []):
+        if row.get("S") in ("L", "O"):
+            substance = row.get("substance") or {}
+            names.extend(substance.get(key) for key in ("NAZEV", "NAZEV_EN", "NAZEV_INN"))
+    return {name.strip().casefold() for name in names if name and name.strip()}
+
+
+def combination_effects(code: str, prepared: dict, medications: dict) -> list[dict]:
+    """Match another active product by class ID or exact, case-insensitive name."""
+    effects = []
+    if not isinstance(prepared.get("classes"), list):
+        print(f"warning: {code} doesn't have ATC classes", file=sys.stderr)
+        return effects
+    for combination in prepared.get("combinations") or []:
+        class_id = combination.get("class_id")
+        name = (combination.get("drug") or "").strip().casefold()
+        for other_code, (other_medication, other) in medications.items():
+            if other_code == code or not isinstance(other.get("classes"), list):
+                continue
+            if (class_id and class_id in other["classes"]) or (name and name in medication_names(other_medication, other)):
+                print(f"debug: kombinace {code} + {other_code}: {combination.get('effect_type')} {combination.get('effect')}", file=sys.stderr,)
+                effects.extend({
+                    {"side_effect_source_combination": [code, other_code, combination.get('effect_type'), combination.get('effect')], **c}
+                    for c in combination.get("side_effects") or []
+                })
+                break
+    if len(effects) > 0:
+        print(f"debug: added {len(effects)} additional side effects from combinations")
+    return effects
+
+
 def create_questionare_json(inputs: list[str], as_of: date) -> dict:
     """Return patient info and Czech questions with symptom-specific severity options.
 
@@ -64,8 +99,7 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
     Uses the lookup's default 30-day fallback for PRN/unknown supply. Future
     prescriptions are excluded before selecting the latest prescription. Explicit
     non-active MedicationRequest statuses are excluded after that selection.
-    Interaction-only effects are omitted: the prepared interaction names/classes
-    do not provide reliable SUKL identifiers for matching a patient's regimen.
+    Matched combinations contribute side effects; older records without classes are skipped for combination detection.
     """
     paths = list(iter_input_files(inputs))
     if not paths:
@@ -84,7 +118,9 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
         item for item in annotate_activity(dedupe(items), as_of)
         if item.active and item.status in (None, "active")
     ]
+    print(f"Found {len(items)} prescriptions, {len(active)} are currently active", file=sys.stderr)
     active.sort(key=lambda item: (item.sukl, item.date or "", item.doc_id))
+    print(f"Active prescriptions: {', '.join(f'{item.sukl} {item.product}' for item in active)}", file=sys.stderr)
     with ANNOTATIONS.open(encoding="utf-8-sig", newline="") as stream:
         annotations = {row["term"].strip().casefold(): row for row in csv.DictReader(stream)}
     by_id = {int(row["id"]): row for row in annotations.values()}
@@ -100,6 +136,7 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
     with REMAPPING.open(encoding="utf-8-sig", newline="") as stream:
         rules = list(csv.DictReader(stream))
     grouped = {}
+    medications = {}
     seen_codes = set()
     for medication in active:
         code = str(medication.sukl).strip()
@@ -112,7 +149,10 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
             print(f"warning: no prepared SUKL data for {code!r}", file=sys.stderr)
             continue
         prepared = json.loads(path.read_text(encoding="utf-8"))
-        for raw_effect in prepared["side_effects"]:
+        medications[code] = (medication, prepared)
+    for code, (medication, prepared) in medications.items():
+        effects = prepared["side_effects"] + combination_effects(code, prepared, medications)
+        for raw_effect in effects:
             # fix older schema TODO: remove
             raw_effect = dict(raw_effect)
             if raw_effect.get("action") == "hospitalize_NOW":
