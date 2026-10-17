@@ -86,12 +86,12 @@
       }
 
       const data = await response.json();
-
-      if (!Array.isArray(data.results)) {
+      console.log(data)
+      if (!Array.isArray(data.questions)) {
         throw new Error('The server returned an invalid record list.');
       }
 
-      for (const question of data.results) {
+      for (const question of data.questions) {
         if (
           question.id === undefined ||
           typeof question.term !== 'string' ||
