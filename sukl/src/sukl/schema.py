@@ -9,18 +9,14 @@ class Record(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
-Frequency = Annotated[float, Field(ge=1)] | Literal[
-    "very_common", "common", "uncommon", "rare", "very_rare", "not_known"
-] | None
-Action = Literal["continue", "discontinue_treatment", "contact_doctor", "hospitalize_NOW"]
-EffectType = Literal[
-    "contraindicated", "synergy", "antagonism", "increased_toxicity",
-    "increased_exposure", "decreased_exposure", "changed_exposure",
-]
+Frequency = Annotated[float, Field(ge=1)] | Literal["very_common", "common", "uncommon", "rare", "very_rare", "not_known"] | None
+Action = Literal["continue", "discontinue_treatment", "contact_doctor", "emergency"]
+EffectType = Literal["contraindicated", "synergy", "antagonism", "increased_toxicity", "increased_exposure", "decreased_exposure", "changed_exposure"]
 
 
 class ActionCondition(Record):
-    patient_guide: str = Field(min_length=1, description="Plain Czech condition describing only WHEN the action applies and has some other condition than the side-effect itself, without action commands. Preserve source qualifiers and recognizable symptoms.")
+    patient_guide: str | None = Field(min_length=1, description="Plain Czech condition describing only WHEN the action applies and has some other condition than the side-effect itself, without action commands. Preserve source qualifiers and recognizable symptoms.")
+    min_severity: int | None = Field(description="Minimum CTCAEv6 grade for this side effect to be serious enough for the action to apply. Range from 1 to 5, but normally 1 or 2, since 3 requires doctor anyway. None if not known.")
 
 
 class SideEffect(Record):
