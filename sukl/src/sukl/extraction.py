@@ -89,8 +89,11 @@ def prepare(corpus: Corpus, code: str, settings: Settings, allow_partial: bool =
     all_pages = {doc.id: corpus.pages(doc.id) for doc in docs}
     manifest = [{"document_id": doc.id, "pages": len(all_pages[doc.id])} for doc in docs]
     metadata = json.dumps(corpus.catalog.metadata(code), ensure_ascii=False, indent=2)
-    vocabulary = [f"atc:{code}: {row['NAZEV']} / {row.get('NAZEV_EN', '')}" for code, row in corpus.catalog.dictionaries.get('atc', {}).items()
-                  ]
+    # ATC level 5 identifies individual substances; named compounds are resolved
+    # through find_drugs instead. Supply only the four class levels here.
+    vocabulary = [f"atc:{code}: {row['NAZEV']} / {row.get('NAZEV_EN', '')}"
+                  for code, row in corpus.catalog.dictionaries.get('atc', {}).items()
+                  if len(code) in (1, 3, 4, 5)]
     parts = [f"TARGET SUKL CODE: {code}\nMETADATA:\n{metadata}",
              f"DOCUMENT MANIFEST:\n{json.dumps(manifest)}", f"MISSING INPUTS: {json.dumps(missing)}",
              f"SEARCH COVERAGE:\n{json.dumps(corpus.status())}", "PRIMARY DOCUMENT TEXT:"]

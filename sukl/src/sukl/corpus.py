@@ -176,7 +176,11 @@ class Catalog:
                 product = self.products[code]
                 docs, missing = self.drug_documents(code)
                 matches.append({"code": code, "name": product["NAZEV"], "strength": product["SILA"],
-                                "atc": product["ATC_WHO"], "composition": self.composition.get(code, []), "document_ids": [d.id for d in docs],
+                                "atc": product["ATC_WHO"],
+                                "composition": [{"KOD_LATKY": row["KOD_LATKY"], "S": "L",
+                                                 "substance": row["substance"]}
+                                                for row in self.composition.get(code, []) if row.get("S") == "L"],
+                                "document_ids": [d.id for d in docs],
                                 "missing": missing})
                 if len(matches) >= max(1, min(limit, 20)):
                     break

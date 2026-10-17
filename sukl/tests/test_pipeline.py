@@ -174,6 +174,24 @@ class PipelineTests(unittest.TestCase):
         self.assertNotIn('metadata', claim)
         self.assertNotIn('match_status', result['combinations'][0])
 
+    def test_search_returns_active_identity_without_excipient_payload(self):
+        self.catalog.composition['0000009'].append(
+            {'KOD_LATKY': '99', 'S': 'X', 'substance': {'NAZEV': 'Excipient'}})
+        match = self.catalog.find_drugs('lecivo')[0]
+        self.assertEqual([row['KOD_LATKY'] for row in match['composition']], ['12'])
+        self.assertEqual(match['composition'][0]['substance']['NAZEV'], 'LÁTKA')
+        self.assertEqual(match['document_ids'], ['PIL:PI1.pdf', 'SPC:SPC1.pdf'])
+        self.assertEqual(len(self.catalog.metadata('9')['composition']), 2)
+
+    def test_prompt_supplies_atc_classes_without_individual_substances(self):
+        self.catalog.dictionaries['atc'] = {
+            'A01A': {'NAZEV': 'Class marker'},
+            'A01AA01': {'NAZEV': 'Substance marker'},
+        }
+        prompt, _ = prepare(self.corpus, '9', self.settings)
+        self.assertIn('atc:A01A: Class marker', prompt)
+        self.assertNotIn('Substance marker', prompt)
+
     def test_fts_is_bounded_and_query_syntax_is_not_executed(self):
         hits = self.corpus.search("nausea", kind="SPC")
         self.assertEqual(hits[0]["document_id"], "SPC:SPC1.pdf")
