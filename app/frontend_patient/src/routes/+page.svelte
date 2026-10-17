@@ -362,21 +362,15 @@
                 OTÁZKA {i + 1}
               </p>
 
-              <h3>{question.term}</h3>
+              <h3>{question.definition ?? `Uroven ${question.level}`}</h3>
 
               <p class="answer-soc">
-                {question.soc}
+                {question.soc_question}
               </p>
 
-              <p class="term-code">
-                Kód LLT: {question.llt_code}
-              </p>
-
-              {#if question.definition}
-                <p class="answer-description">
-                  {question.definition}
-                </p>
-              {/if}
+              <!-- <p class="term-code"> -->
+              <!--   Kód LLT: {question.llt_code} -->
+              <!-- </p> -->
 
               {#if answers[i] !== undefined}
                 <div class="selected-grade">
@@ -385,10 +379,7 @@
                   </span>
 
                   <div>
-                    <strong>Úroveň {answers[i]}</strong>
-                    <p>
-                      {getGradeDescription(question, answers[i])}
-                    </p>
+                    <strong>{getGradeDescription(question, answers[i])}</strong>
                   </div>
                 </div>
               {:else}
@@ -568,11 +559,7 @@
 
               <span class="grade-content">
                 <span class="grade-title">
-                  Úroveň {grade.level}
-                </span>
-                <span class="grade-description">
-                  {grade.description ??
-                    'Popis není k dispozici'}
+                  {grade.description ?? 'TODO'}
                 </span>
               </span>
 
