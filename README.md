@@ -9,7 +9,7 @@
     ```
 * Prepare questionare for your FHIR record
     ```sh
-    uv run python -m src.create_questionare_json PAC-1234.json --as-of 2026-03-22 > example-questionare.json
+    uv run python -m src.create_questionare_json PAC-1234.json --as-of 2026-03-22 > app/backend/questions/questions.json
     ```
     You can exclude `--as-of` if you want to assume current time. For demonstration that's not ideal, since most medication in test dataset are long expired.
 * Start backend
