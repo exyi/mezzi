@@ -26,6 +26,7 @@ PRECOMPUTED = ROOT / "sukl" / "precomputed-output"
 REMAPPING = ROOT / "se-translation" / "assets" / "self-reportable-side-effect-remapping.csv"
 CTCAE_METADATA = ROOT / "se-translation" / "assets" / "serialized-ctcae-clean.json"
 CTCAE_SEX_SPECIFIC = ROOT / "se-translation" / "assets" / "ctcae-sex-specific.json"
+CTCAE_GROUPS = ROOT / "se-translation" / "assets" / "ctcae-groups-questions-cz.json"
 ANNOTATIONS = ROOT / "se-translation" / "assets" / "ctcae-patient-sloplabels-cs.csv"
 
 
@@ -133,6 +134,11 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
         for row in json.loads(CTCAE_SEX_SPECIFIC.read_text(encoding="utf-8"))
     }
     sex = {"male": "M", "female": "F"}.get(gender)
+    soc_questions = {
+        question_id: group["group_question"]
+        for group in json.loads(CTCAE_GROUPS.read_text(encoding="utf-8"))
+        for question_id in group["ids"]
+    }
     with REMAPPING.open(encoding="utf-8-sig", newline="") as stream:
         rules = list(csv.DictReader(stream))
     grouped = {}
@@ -173,6 +179,7 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
                     "id": question_id,
                     "llt_code": tags["llt_code"],
                     "soc": tags["soc"],
+                    "soc_question": soc_questions.get(question_id),
                     "term": tags["term"],
                     "grades": [
                         {"level": 0, "description": "Žádné obtíže"},
