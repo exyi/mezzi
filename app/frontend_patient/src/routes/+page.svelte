@@ -508,24 +508,11 @@
           ></div>
         </div>
 
-        <div class="term-meta">
-          <span class="soc-badge">
-            {currentQuestion.soc}
-          </span>
-        </div>
+      
 
         <h2 class="question-title">
-          {currentQuestion.term}
+          {currentQuestion.definition}
         </h2>
-
-        {#if currentQuestion.definition}
-          <div class="definition-card">
-            <p class="section-label">Popis</p>
-            <p class="definition">
-              {currentQuestion.definition}
-            </p>
-          </div>
-        {/if}
 
         {#if currentQuestion.navigational_note}
           <div class="note">
@@ -537,7 +524,7 @@
 
         <div class="grade-heading">
           <div>
-            <h3> Vyber odpověď z možností. Dodatečné problémy můžeš dopsat v posledním kroku</h3>
+            <h3> Vyber odpověď z možností.</h3>
           </div>
         </div>
 
