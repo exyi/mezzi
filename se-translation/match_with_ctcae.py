@@ -110,8 +110,11 @@ class CTCAEDatabase:
             **kwargs,
         )
 
+    def ctcae_names(self) -> list[str]:
+        return list(self._records.keys())
+
     @classmethod
-    def terms_from_json(cls, raw: str) -> "CTCAEDatabase":
+    def from_json(cls, raw: str) -> "CTCAEDatabase":
         return cls([CTCAETerm.from_dict(d) for d in json.loads(raw)])
 
 
