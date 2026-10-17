@@ -248,7 +248,7 @@
     return (
       question.grades.find(
         (grade) => grade.level === level
-      )?.description ?? 'No description available'
+      )?.description ?? 'Popis není k dispozici'
     );
   }
 </script>
@@ -274,8 +274,8 @@
     {#if loading}
       <div class="message" aria-live="polite">
         <div class="spinner"></div>
-        <h2>Loading records...</h2>
-        <p>Please wait while we connect to the server.</p>
+        <h2>Načítání dotazníku…</h2>
+        <p>Počkej prosím, než se dotazník načte.</p>
       </div>
 
     {:else if error}
@@ -316,23 +316,23 @@
       <div class="results">
         <div class="success-icon">✓</div>
 
-        <p class="eyebrow">QUESTIONNAIRE COMPLETE</p>
-        <h2>Thank you!</h2>
+        <p class="eyebrow">DOTAZNÍK DOKONČEN</p>
+        <h2>Díky za vyplnení!</h2>
 
         {#if saved}
           <p class="save-success" role="status">
-            Your symptoms and answers have been saved successfully.
+            Tvé symptomy a odpovědi byly úspěšně uloženy.
           </p>
 
           {#if submissionId}
             <p class="submission-id">
-              Submission ID: {submissionId}
+              ID odeslaného dotazníku: {submissionId}
             </p>
           {/if}
         {/if}
 
         <p class="results-description">
-          You have completed all {totalQuestions} medical questions.
+          Všechny otázky jsou vyplněny. Celkový počet: {totalQuestions}.
         </p>
 
         <div class="summary">
@@ -340,18 +340,18 @@
             {answeredCount}
           </div>
           <div>
-            <strong>Records answered</strong>
-            <p>Review your selected grades below.</p>
+            <strong>Zodpovězené otázky</strong>
+            <p>Níže najdeš přehled svých odpovědí.</p>
           </div>
         </div>
 
         <section class="submitted-symptoms">
-          <h3>Patient symptoms</h3>
+          <h3>Dodatečné symptomy</h3>
 
           {#if symptoms.trim()}
             <p>{symptoms}</p>
           {:else}
-            <p class="muted">No symptoms provided.</p>
+            <p class="muted">Žádné dodatečné symptomy nebyly uvedeny.</p>
           {/if}
         </section>
 
@@ -359,7 +359,7 @@
           {#each questions as question, i (question.id)}
             <article class="answer-item">
               <p class="answer-number">
-                RECORD {i + 1}
+                OTÁZKA {i + 1}
               </p>
 
               <h3>{question.term}</h3>
@@ -369,7 +369,7 @@
               </p>
 
               <p class="term-code">
-                LLT code: {question.llt_code}
+                Kód LLT: {question.llt_code}
               </p>
 
               {#if question.definition}
@@ -385,14 +385,14 @@
                   </span>
 
                   <div>
-                    <strong>Grade {answers[i]}</strong>
+                    <strong>Úroveň {answers[i]}</strong>
                     <p>
                       {getGradeDescription(question, answers[i])}
                     </p>
                   </div>
                 </div>
               {:else}
-                <p class="unanswered">Not answered</p>
+                <p class="unanswered">Nezodpovězeno</p>
               {/if}
             </article>
           {/each}
@@ -402,7 +402,7 @@
           class="primary-button full-width"
           onclick={restartQuiz}
         >
-          Start again
+          Vyplnit znovu
         </button>
       </div>
 
@@ -437,7 +437,7 @@
           aria-labelledby="symptoms-heading"
         >
           <label id="symptoms-heading" for="patient-symptoms">
-            <span class="optional-label">Optional</span>
+            <span class="optional-label">Nepovinné</span>
           </label>
 
           <p class="symptoms-hint">
@@ -476,7 +476,7 @@
             onclick={finishQuiz}
             disabled={saving || saved}
           >
-            {saving ? 'Submitting...' : 'Odeslat dotazník →'}
+            {saving ? 'Odesílání…' : 'Odeslat dotazník →'}
           </button>
         </div>
 
@@ -506,7 +506,7 @@
         <div
           class="progress-track"
           role="progressbar"
-          aria-label="Questionnaire progress"
+          aria-label="Průběh vyplňování dotazníku"
           aria-valuemin={0}
           aria-valuemax={100}
           aria-valuenow={Math.round(progress)}
@@ -538,7 +538,7 @@
 
         {#if currentQuestion.navigational_note}
           <div class="note">
-            <strong>Navigational note:</strong>
+            <strong>Pokyny k vyplnění:</strong>
             {currentQuestion.navigational_note}
           </div>
         {/if}
@@ -572,7 +572,7 @@
                 </span>
                 <span class="grade-description">
                   {grade.description ??
-                    'No description available'}
+                    'Popis není k dispozici'}
                 </span>
               </span>
 
