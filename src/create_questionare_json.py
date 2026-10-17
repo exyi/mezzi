@@ -41,6 +41,15 @@ ACTION_LABELS = {
 }
 
 
+def patient_gender(bundle: dict) -> str | None:
+    """Gender of the Patient resource in a FHIR bundle, if present."""
+    for entry in bundle.get("entry", []):
+        res = entry.get("resource", {})
+        if res.get("resourceType") == "Patient":
+            return res.get("gender")
+    return None
+
+
 def question_targets(effect: SideEffect, annotations: dict, rules: list[dict]) -> dict:
     term = (effect.ctcae or "").strip().casefold()
     if term in annotations:
@@ -52,9 +61,10 @@ def question_targets(effect: SideEffect, annotations: dict, rules: list[dict]) -
     }
 
 
-def create_questionare_json(inputs: list[str], as_of: date) -> list[dict]:
-    """Return Czech questions, generic severity options, and source-specific actions.
+def create_questionare_json(inputs: list[str], as_of: date) -> dict:
+    """Return patient info and Czech questions with generic severity options.
 
+    Output shape: {"patient": {"gender": ...}, "questions": [...]}.
     Uses the lookup's default 30-day fallback for PRN/unknown supply. Future
     prescriptions are excluded before selecting the latest prescription. Explicit
     non-active MedicationRequest statuses are excluded after that selection.
@@ -65,8 +75,13 @@ def create_questionare_json(inputs: list[str], as_of: date) -> list[dict]:
     if not paths:
         raise ValueError("No input JSON files found")
     items = []
+    gender = None
     for path in paths:
         bundle = load_bundle(path)
+        found = patient_gender(bundle)
+        if found and gender and found != gender:
+            print(f"warning: conflicting patient gender {found!r} in {path}", file=sys.stderr)
+        gender = gender or found
         items.extend(extract_drugs(bundle, str(path)))
     items = [item for item in items if item.date and date.fromisoformat(item.date) <= as_of]
     active = [
@@ -139,7 +154,10 @@ def create_questionare_json(inputs: list[str], as_of: date) -> list[dict]:
                     }
                     if advice not in question["recommended_actions"]:
                         question["recommended_actions"].append(advice)
-    return [grouped[key] for key in sorted(grouped)]
+    return {
+        "patient": {"gender": gender},
+        "questions": [grouped[key] for key in sorted(grouped)],
+    }
 
 
 

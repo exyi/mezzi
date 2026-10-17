@@ -98,6 +98,12 @@ def load_questions():
             if isinstance(data, list):
                 questions.extend(data)
 
+            elif isinstance(data, dict) and isinstance(
+                data.get("questions"), list
+            ):
+                # generated questionnaire: {"patient": {...}, "questions": [...]}
+                questions.extend(data["questions"])
+
             elif isinstance(data, dict):
                 questions.append(data)
 
