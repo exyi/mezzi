@@ -119,20 +119,11 @@
   }
 </script>
 
-<svelte:head>
-  <title>Doctor Dashboard | Medical Questionnaire</title>
-  <meta
-    name="description"
-    content="Review submitted medical questionnaire answers."
-  />
-</svelte:head>
 
 <main class="page">
   <header class="topbar">
     <div class="brand">
-      <div class="logo">M</div>
       <div>
-        <p class="overline">CLINICAL WORKSPACE</p>
         <h1>Doctor Dashboard</h1>
       </div>
     </div>
@@ -146,52 +137,15 @@
     </button>
   </header>
 
-  <section class="intro">
-    <p class="overline">QUESTIONNAIRE MANAGEMENT</p>
-    <h2>Submitted responses</h2>
-    <p>
-      Review questionnaire submissions and the grades recorded for each
-      medical term.
-    </p>
-  </section>
-
-  <section class="stats" aria-label="Submission statistics">
-    <article class="stat">
-      <span class="stat-label">Submissions</span>
-      <strong>{submissions.length}</strong>
-      <span class="stat-foot">Saved questionnaires</span>
-    </article>
-
-    <article class="stat">
-      <span class="stat-label">Answers recorded</span>
-      <strong>{totalAnswers}</strong>
-      <span class="stat-foot">Across all submissions</span>
-    </article>
-
-    <article class="stat">
-      <span class="stat-label">Grade 0 answers</span>
-      <strong>{noSymptomsCount}</strong>
-      <span class="stat-foot">Recorded as no symptoms</span>
-    </article>
-  </section>
 
   <section class="records">
     <div class="records-heading">
       <div>
-        <h2>Questionnaire history</h2>
-        <p>Newest submissions appear first.</p>
+        <h2>Questionnaire Submissions</h2>
       </div>
       <span class="count">{filteredSubmissions.length} shown</span>
     </div>
 
-    <label class="search">
-      <span aria-hidden="true">⌕</span>
-      <input
-        type="search"
-        bind:value={search}
-        placeholder="Search term, SOC, LLT code or submission ID..."
-      />
-    </label>
 
     {#if loading}
       <div class="state-message">
