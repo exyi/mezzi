@@ -1,49 +1,48 @@
-# rakaslop
-# rakaslop
+# mezzi app setup
 
-## questionnaire/
-Patient questionnaire web app (FastAPI + Svelte). See [questionnaire/README.md](questionnaire/README.md).
 
-## Patient medication side effects
+## How to run
 
-Install all Python dependencies from the repository root with Python 3.12+:
+* Install Python dependencies
+    ```sh
+    uv sync
+    ```
+* Prepare questionare for your FHIR record
+    ```sh
+    uv run python -m src.create_questionare_json PAC-1234.json --as-of 2026-03-22 > example-questionare.json
+    ```
+    You can exclude `--as-of` if you want to assume current time. For demonstration that's not ideal, since most medication in test dataset are long expired.
+* Start backend
+    ```sh
+    cd app/backend/
+    uv run -m uvicorn main:app
+    ```
+* Start patient frontend:
+    ```sh
+    npm ci
+    npm run dev
+    ```
+* Fill out questionare, probably at `http://localhost:5173/`
+* Start doctor frontend:
+    ```sh
+    npm ci
+    npm run dev
+    ```
+* See the results, probably at `http://localhost:5174/`
 
-```sh
-uv sync
-```
 
-Run from the repository root:
+## Other notes
 
-```sh
-uv run python -m src.create_questionare_json patient.json --as-of 2026-10-17 > side-effects.json
-```
-
-Accepts multiple FHIR Bundle files, directories, or quoted globs for one patient.
-Uses `src/find_meds_json.py` to select estimated active medications across all
-files, with its default 30-day fallback for as-needed or unknown supply. Future
-prescriptions and explicitly non-active MedicationRequests are excluded.
-
-Output is a JSON object `{"patient": {"gender": ...}, "questions": [...]}` where
-`questions` is an array matching the frontend question schema: `id`, `llt_code`,
-`soc`, `term`, `grades`, `definition`, `navigational_note`, and `change`, plus
-`recommended_actions` and `sources`. CTCAE tags come from
-`serialized-ctcae-clean.json`; Czech question text in `definition` comes from
-`ctcae-patient-sloplabels-cs.csv`. Grades are generated as 0 = Žádné obtíže,
-1 = Mírné obtíže, 2 = Výrazné obtíže (none, mild, significant). These generic
-levels are not CTCAE clinical grades. `navigational_note` and `change` are null.
-
-Effects without a direct question use `self-reportable-side-effect-remapping.csv`
-(columns `source_term,target_question_id`). Source CTCAE terms match ignoring
-case and surrounding whitespace. Direct question annotations take precedence;
-unmapped effects are omitted. Multiple effects targeting one question are merged.
-Remapped sources are marked `broader` and retain their original descriptions.
-
-Recommended actions include a stable action code, Czech label, original
-`condition` (`patient_guide`, `min_severity`), and medication/effect provenance.
-These are source-specific recommendations, not unconditional advice for any
-positive answer. `min_severity` remains a CTCAE threshold; the generic options
-are not automatically equated with CTCAE grades. Broader remaps
-retain the original effect description so advice is not detached from its scope.
-Missing prepared medications are reported on stderr. Prepared side effects use
-the SUKL `SideEffect` Pydantic model, adapting legacy action names and missing
-minimum severity before validation. Interaction-only effects are omitted.
+* You can specify multiple FHIR records at the commandline (assumed to have one patient)
+* Output of `create_questionare_json` a JSON object `{"patient": {"gender": ...}, "questions": [...]}` where `questions` is an array matching the data displayed in frontend.
+  **The web application never sees the health record, only the list of potential side effects.**
+* If multiple prescriptions are found, system tries to include side effects from known drug combinations.
+* Definiton of side effects and combinations comes from scraping SUKL database:
+  ```sh
+  cd sukl
+  ./download-sukl.sh
+  export OPENAI_BASE_URL=YOUR_PROVIDER
+  export API_KEY=YOUR_KEY
+  uv run sukl extract --ids-file relevant_ids.txt --model gpt-6-luna --parallelism 30 --resume --trace
+  ```
+* The pre-generated files are created using GPT 6 Luna. Cost of running on relevant_ids.txt is few dollars.
