@@ -169,7 +169,7 @@
       </div>
 
       <div class="heading-actions">
-        <span class="count">{filteredSubmissions.length} shown</span>
+      
 
         {#if lowerGradeCount > 0}
           <button
@@ -178,8 +178,8 @@
             onclick={() => (showLowerGrades = !showLowerGrades)}
           >
             {showLowerGrades
-              ? 'Hide lower grades'
-              : `Show lower grades (${lowerGradeCount})`}
+              ? 'Schovej neakutní úrovně'
+              : `Zobraz neakutní úrovně`}
           </button>
         {/if}
       </div>
@@ -237,10 +237,6 @@
               </div>
 
               <div class="submission-meta">
-                <span class="answer-count">
-                  {submission.answers.length}
-                  {submission.answers.length === 1 ? 'answer' : 'answers'}
-                </span>
                 <span class="chevron" aria-hidden="true">
                   {expanded === submission.submission_id ? '−' : '+'}
                 </span>

@@ -254,10 +254,10 @@
 </script>
 
 <svelte:head>
-  <title>Medical Questionnaire</title>
+  <title>Dotazník symptomů</title>
   <meta
     name="description"
-    content="Review medical terminology records, select grades, and describe patient symptoms."
+
   />
 </svelte:head>
 
@@ -267,11 +267,7 @@
       <div class="logo" aria-hidden="true">M</div>
 
       <div>
-        <h1>Medical Questionnaire</h1>
-        <p class="subtitle">
-          Review each medical term and select the appropriate grade.
-          You will describe patient symptoms in the final step.
-        </p>
+        <h1>Dotazník symptomů</h1>
       </div>
     </header>
 
@@ -414,20 +410,20 @@
         <div class="final-step-heading">
           <div class="step-number">✓</div>
           <div>
-            <p class="eyebrow">FINAL STEP</p>
-            <h2 class="question-title">Patient symptoms</h2>
+            <p class="eyebrow">Poslední krok</p>
+            <h2 class="question-title">Dodatečné symptomy</h2>
           </div>
         </div>
 
         <p class="final-step-description">
-          You have completed all {totalQuestions} medical questions.
-          Now describe the patient's symptoms and any relevant details.
+          Všechny otázky vyplněny. Pokud máš problém, který nebyl zmíněn vyplň ho níže.
+  
         </p>
 
         <div class="final-step-progress">
           <div class="progress-info">
-            <span>Step 2 of 2</span>
-            <span>Ready to submit</span>
+            <span>Poslední krok</span>
+            <span>Připraveno k odeslání</span>
           </div>
 
           <div class="progress-track">
@@ -440,13 +436,11 @@
           aria-labelledby="symptoms-heading"
         >
           <label id="symptoms-heading" for="patient-symptoms">
-            Describe patient symptoms
             <span class="optional-label">Optional</span>
           </label>
 
           <p class="symptoms-hint">
-            Include what the symptoms are, when they started,
-            how they have changed, and any other relevant details.
+            Napiš symptomy, kdy začaly a frekvenci.
           </p>
 
           <textarea
@@ -455,7 +449,7 @@
             bind:value={symptoms}
             maxlength="5000"
             rows="7"
-            placeholder="Write the patient's symptoms here..."
+            placeholder="Vyplň dodatečné problémy"
             aria-describedby="symptoms-counter"
           ></textarea>
 
@@ -463,17 +457,9 @@
             id="symptoms-counter"
             class="symptoms-counter"
           >
-            {symptoms.length}/5000 characters
+            {symptoms.length}/5000 znaků
           </div>
         </section>
-
-        <div class="submission-reminder">
-          <span class="reminder-icon">i</span>
-          <p>
-            Your {totalQuestions} medical answers and the symptoms
-            you enter here will be submitted together.
-          </p>
-        </div>
 
         <div class="navigation">
           <button
@@ -481,7 +467,7 @@
             onclick={previousQuestion}
             disabled={saving}
           >
-            ← Back to last question
+            ← Zpět
           </button>
 
           <button
@@ -489,21 +475,21 @@
             onclick={finishQuiz}
             disabled={saving || saved}
           >
-            {saving ? 'Submitting...' : 'Submit questionnaire →'}
+            {saving ? 'Submitting...' : 'Odeslat dotazník →'}
           </button>
         </div>
 
         {#if saveError}
           <p class="save-error" role="alert">
-            Could not save questionnaire: {saveError}
+            Nepodařilo se uložit: {saveError}
           </p>
           <p class="retry-note">
-            Your answers and symptoms are still here. Please try again.
+            Zkus odeslat znovu.
           </p>
         {/if}
 
         <p class="footer-note">
-          Please review your answers before submitting.
+        
         </p>
       </div>
 
@@ -511,9 +497,9 @@
       <div class="quiz">
         <div class="progress-info">
           <span>
-            Question {currentIndex + 1} of {totalQuestions}
+            Otázka {currentIndex + 1} z {totalQuestions}
           </span>
-          <span>{Math.round(progress)}% complete</span>
+          <span>{Math.round(progress)}% Hotovo</span>
         </div>
 
         <div
@@ -534,9 +520,6 @@
           <span class="soc-badge">
             {currentQuestion.soc}
           </span>
-          <span class="term-code">
-            LLT code: {currentQuestion.llt_code}
-          </span>
         </div>
 
         <h2 class="question-title">
@@ -545,7 +528,7 @@
 
         {#if currentQuestion.definition}
           <div class="definition-card">
-            <p class="section-label">DEFINITION</p>
+            <p class="section-label">Popis</p>
             <p class="definition">
               {currentQuestion.definition}
             </p>
@@ -559,18 +542,10 @@
           </div>
         {/if}
 
-        {#if currentQuestion.change}
-          <p class="change-label">
-            Record change: {currentQuestion.change}
-          </p>
-        {/if}
 
         <div class="grade-heading">
           <div>
-            <h3>Select a grade</h3>
-            <p class="instruction">
-              Choose the grade that best matches this term.
-            </p>
+            <h3> Vyber odpověď z možností. Dodatečné problémy můžeš dopsat v posledním kroku</h3>
           </div>
         </div>
 
@@ -592,7 +567,7 @@
 
               <span class="grade-content">
                 <span class="grade-title">
-                  Grade {grade.level}
+                  Úroveň {grade.level}
                 </span>
                 <span class="grade-description">
                   {grade.description ??
@@ -615,7 +590,7 @@
             onclick={previousQuestion}
             disabled={currentIndex === 0 || saving}
           >
-            ← Back
+            ← Zpět
           </button>
 
           <button
@@ -627,8 +602,8 @@
             }
           >
             {currentIndex === totalQuestions - 1
-              ? 'Next: Patient symptoms →'
-              : 'Next question →'}
+              ? 'Další: Další symptomy →'
+              : 'Další otázka →'}
           </button>
         </div>
 
@@ -637,18 +612,9 @@
             {saveError}
           </p>
         {/if}
-
-        <p class="footer-note">
-          Select a grade to continue. Patient symptoms will be
-          collected in the final step.
-        </p>
       </div>
     {/if}
   </section>
-
-  <p class="page-footer">
-    Medical Questionnaire · Powered by FastAPI
-  </p>
 </main>
 
 <style>
