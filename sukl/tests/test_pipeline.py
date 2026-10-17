@@ -98,9 +98,48 @@ class PipelineTests(unittest.TestCase):
     def claim(self) -> dict:
         effect = {"ctcae": "Nausea", "frequency": "common",
                   "label": "Nauzea; kontaktujte lékaře při závažných příznacích",
-                  "action": "contact_doctor", "action_condition": {"patient_guide": "Pokud je vám výrazně nevolno"}}
-        return {"side_effects": [effect], "combinations": [{"drug": "X", "effect": "Zvyšuje riziko nauzey.",
+                  "action": "contact_doctor", "action_condition": {"patient_guide": "Pokud je vám výrazně nevolno", "min_severity": None}}
+        return {"classes": [], "usage": "Testovací léčivo", "side_effects": [effect], "combinations": [{"drug": "X", "class_id": None, "effect": "Zvyšuje riziko nauzey.",
                                                            "effect_type": "increased_toxicity", "side_effects": [effect]}]}
+
+    def test_codex_uses_subscription_cli_and_validates_output(self):
+        from unittest.mock import AsyncMock
+        settings = Settings(api="codex", ctcae_csv=self.ctcae_csv)
+        process = AsyncMock()
+        process.returncode = 0
+
+        async def launch(*command, **kwargs):
+            self.assertIn("--ignore-user-config", command)
+            self.assertEqual(command[command.index("--model") + 1], "gpt-6-luna")
+            self.assertEqual(command[command.index("--sandbox") + 1], "read-only")
+            Path(command[command.index("--output-last-message") + 1]).write_text(
+                json.dumps(self.claim()), encoding="utf-8")
+            process.communicate.return_value = (b'{"type":"turn.completed"}\n', b'')
+            return process
+
+        trace = self.root / "codex.trace.json"
+        with patch("sukl.codex.asyncio.create_subprocess_exec", side_effect=launch):
+            result = asyncio.run(extract(self.prompt, self.deps, settings, trace=trace))
+        self.assertEqual(result["metadata"]["product"]["KOD_SUKL"], "0000009")
+        self.assertEqual(result["side_effects"], self.claim()["side_effects"])
+        self.assertEqual(json.loads(trace.read_text())["status"], "completed")
+        self.assertIn(self.prompt.encode(), process.communicate.call_args.args[0])
+
+    def test_codex_rejects_unverified_class_ids(self):
+        from unittest.mock import AsyncMock
+        process = AsyncMock()
+        process.returncode = 0
+
+        async def launch(*command, **kwargs):
+            claim = self.claim()
+            claim["combinations"][0]["class_id"] = "substance:999999"
+            Path(command[command.index("--output-last-message") + 1]).write_text(json.dumps(claim))
+            process.communicate.return_value = (b'', b'')
+            return process
+
+        with patch("sukl.codex.asyncio.create_subprocess_exec", side_effect=launch):
+            with self.assertRaisesRegex(ValueError, "Unknown class_id"):
+                asyncio.run(extract(self.prompt, self.deps, Settings(api="codex")))
 
     def test_pdf_loading_encoding_and_exact_identity(self):
         self.assertEqual(self.catalog.metadata("9")["product"]["NAZEV"], "LÉČIVO")
@@ -118,6 +157,22 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(self.catalog.find_drugs("lecivo")[0]["code"], "0000009")
         with self.assertRaises(ValueError):
             self.catalog.code("LÉČIVO")
+
+    def test_llm_classification_is_preserved_and_matches_csv_identity(self):
+        from sukl.corpus import matching_combinations
+        self.catalog.dictionaries['atc'] = {'A': {}, 'A01': {}}
+        claim = self.claim()
+        claim['classes'] = ['group:qt_prolonging']
+        claim['combinations'][0]['class_id'] = 'substance:12'
+        claim['combinations'].append({'drug_class': 'Léky prodlužující QT interval',
+            'class_id': 'group:qt_prolonging', 'effect': 'Podmínka',
+            'effect_type': None, 'side_effects': []})
+        result = self.catalog.drug_output('9', claim)
+        self.assertEqual(set(result['classes']), {'atc:A', 'atc:A01', 'substance:12', 'group:qt_prolonging'})
+        self.assertEqual(result['combinations'], claim['combinations'])
+        self.assertEqual(len(matching_combinations(result, result)), 2)
+        self.assertNotIn('metadata', claim)
+        self.assertNotIn('match_status', result['combinations'][0])
 
     def test_fts_is_bounded_and_query_syntax_is_not_executed(self):
         hits = self.corpus.search("nausea", kind="SPC")
@@ -172,12 +227,12 @@ class PipelineTests(unittest.TestCase):
         with redirect_stderr(console):
             result = asyncio.run(extract(self.prompt, self.deps, self.settings, model=FunctionModel(model), trace=trace))
         self.assertEqual(calls, 3)
-        self.assertEqual(result, good)
-        self.assertEqual(set(result), {"side_effects", "combinations"})
+        self.assertEqual(result, self.catalog.drug_output("9", good))
+        self.assertEqual(set(result), {"side_effects", "combinations", "metadata", "classes", "schema_version", "usage"})
         self.assertEqual(set(result["side_effects"][0]), {"ctcae", "frequency", "label", "action", "action_condition"})
         path = self.root / "result.json"
         atomic_json(path, result)
-        self.assertEqual(json.loads(path.read_text()), good)
+        self.assertEqual(json.loads(path.read_text()), self.catalog.drug_output("9", good))
         debug = json.loads(trace.read_text())
         self.assertEqual(debug["usage"]["requests"], 3)
         self.assertEqual(debug["status"], "completed")
@@ -207,7 +262,7 @@ class PipelineTests(unittest.TestCase):
         result = asyncio.run(extract(self.prompt, self.deps, self.settings, model=FunctionModel(model)))
         self.assertEqual(calls, 1)
         self.assertEqual(self.deps.tool_calls, 0)
-        self.assertEqual(result, self.claim())
+        self.assertEqual(result, self.catalog.drug_output("9", self.claim()))
 
     def test_soft_validation_warns_once_and_allows_remaining_warnings(self):
         for correct in (True, False):
@@ -237,7 +292,7 @@ class PipelineTests(unittest.TestCase):
                     result = asyncio.run(extract(self.prompt, self.deps, Settings(request_limit=2),
                                                 model=FunctionModel(model), trace=trace))
                 self.assertEqual(calls, 2)
-                self.assertEqual(result, self.claim() if correct else bad)
+                self.assertEqual(result, self.catalog.drug_output("9", self.claim() if correct else bad))
                 debug = json.loads(trace.read_text())
                 self.assertEqual(len(debug["validation_feedback"]), 2)
                 self.assertEqual(len(debug["validation_warnings"]), 0 if correct else 2)
@@ -260,7 +315,7 @@ class PipelineTests(unittest.TestCase):
         with redirect_stderr(console):
             result = asyncio.run(extract(self.prompt, self.deps, Settings(request_limit=1), model=FunctionModel(model)))
         self.assertEqual(calls, 1)
-        self.assertEqual(result, bad)
+        self.assertEqual(result, self.catalog.drug_output("9", bad))
         self.assertIn("is not an exact CTCAE", console.getvalue())
         self.assertEqual(self.deps.validation_feedback, [])
 
@@ -275,7 +330,7 @@ class PipelineTests(unittest.TestCase):
                 self.assertIn("No further tools are possible", info.instructions)
                 returns = [p for p in messages[-1].parts if isinstance(p, ToolReturnPart)]
                 self.assertEqual(sum(p.content.get("tool_budget_exhausted", False) for p in returns), 1)
-                return ModelResponse(parts=[TextPart('{"side_effects": [], "combinations": []}')])
+                return ModelResponse(parts=[TextPart('{"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}')])
             return ModelResponse(parts=[ToolCallPart(
                 "search_documents", {"query": "Nausea", "kind": "CTCAE"},
                 tool_call_id=f"call-{calls}-{i}") for i in range(2)])
@@ -290,7 +345,7 @@ class PipelineTests(unittest.TestCase):
                                                 model=FunctionModel(model), trace=trace))
                     self.assertEqual(search.call_count, 3)
                 self.assertEqual(calls, 3)
-                self.assertEqual(result, {"side_effects": [], "combinations": []})
+                self.assertEqual(result, self.catalog.drug_output("9", {"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}))
                 if traced:
                     debug = json.loads(trace.read_text())
                     self.assertEqual(debug["status"], "completed")
@@ -313,13 +368,13 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(info.function_tools, [])
             self.assertIn("MUST return the final JSON now", info.instructions)
             self.assertEqual(sum(isinstance(p, ToolReturnPart) for p in messages[-1].parts), 30)
-            return ModelResponse(parts=[TextPart('{"side_effects": [], "combinations": []}')])
+            return ModelResponse(parts=[TextPart('{"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}')])
 
         with patch.object(self.corpus, "search", wraps=self.corpus.search) as search:
             result = asyncio.run(extract(self.prompt, self.deps, Settings(request_limit=2), model=FunctionModel(model)))
             self.assertEqual(search.call_count, 30)
         self.assertEqual(calls, 2)
-        self.assertEqual(result, {"side_effects": [], "combinations": []})
+        self.assertEqual(result, self.catalog.drug_output("9", {"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}))
 
     def test_final_request_returns_partial_coverage_with_warning(self):
         prompt, deps = prepare(self.corpus, "9", Settings(context_chars=8, ctcae_csv=self.ctcae_csv))
@@ -327,7 +382,7 @@ class PipelineTests(unittest.TestCase):
         async def model(messages, info):
             self.assertEqual(info.function_tools, [])
             self.assertIn("No further tools are possible", info.instructions)
-            return ModelResponse(parts=[TextPart('{"side_effects": [], "combinations": []}')])
+            return ModelResponse(parts=[TextPart('{"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}')])
 
         console = io.StringIO()
         trace = self.root / "partial.trace.json"
@@ -338,7 +393,7 @@ class PipelineTests(unittest.TestCase):
 
     def test_token_limit_saves_usage_even_when_last_response_is_missing(self):
         async def model(messages, info):
-            return ModelResponse(parts=[TextPart('{"side_effects": [], "combinations": []}')])
+            return ModelResponse(parts=[TextPart('{"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}')])
 
         trace = self.root / "tokens.trace.json"
         with self.assertRaises(UsageLimitExceeded):
@@ -361,7 +416,7 @@ class PipelineTests(unittest.TestCase):
                 return ModelResponse(parts=[ToolCallPart(
                     "read_pages", {"document_id": "PIL:PI1.pdf", "page": 99 if calls == 1 else 1},
                     tool_call_id=f"read-{calls}")])
-            return ModelResponse(parts=[TextPart('{"side_effects": [], "combinations": []}')])
+            return ModelResponse(parts=[TextPart('{"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}')])
 
         trace = self.root / "retry.trace.json"
         asyncio.run(extract(self.prompt, self.deps, Settings(tool_limit=2), model=FunctionModel(model), trace=trace))
@@ -378,11 +433,11 @@ class PipelineTests(unittest.TestCase):
             unread = deps.unread()
             if unread:
                 return ModelResponse(parts=[ToolCallPart("read_pages", {**unread[0], "count": 1})])
-            return ModelResponse(parts=[TextPart('{"side_effects": [], "combinations": []}')])
+            return ModelResponse(parts=[TextPart('{"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}')])
 
         result = asyncio.run(extract(prompt, deps, self.settings, model=FunctionModel(model)))
         self.assertEqual(deps.unread(), [])
-        self.assertEqual(result, {"side_effects": [], "combinations": []})
+        self.assertEqual(result, self.catalog.drug_output("9", {"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}))
 
     def test_cli_saves_plain_json_with_optional_trace_and_can_resume(self):
         from sukl.cli import parser, run
@@ -404,9 +459,15 @@ class PipelineTests(unittest.TestCase):
                 "--cache", str(self.root / "cli.sqlite"), "extract", "9", "--output", str(output), "--trace"]
         with patch("sukl.cli.extract", offline_extract):
             run(parser().parse_args(args))
+            before = output.stat().st_mtime_ns
             run(parser().parse_args([*args, "--resume"]))
+            self.assertEqual(output.stat().st_mtime_ns, before)
+            output.write_text(json.dumps(good))
+            with self.assertRaisesRegex(ValueError, "different schema"):
+                run(parser().parse_args([*args, "--resume"]))
+            output.write_text(json.dumps(self.catalog.drug_output("9", good)))
         self.assertEqual(calls, 1)
-        self.assertEqual(json.loads(output.read_text()), good)
+        self.assertEqual(json.loads(output.read_text()), self.catalog.drug_output("9", good))
         self.assertIn("messages", json.loads(output.with_suffix(".trace.json").read_text()))
 
     def batch_args(self, output_dir: Path) -> list[str]:
@@ -601,14 +662,14 @@ class PipelineTests(unittest.TestCase):
                         self.assertIn("No further tools are possible", json.dumps(body))
                     self.assertTrue(format["strict"])
                     schema = format["schema"]
-                    self.assertEqual(set(schema["properties"]), {"side_effects", "combinations"})
+                    self.assertEqual(set(schema["properties"]), {"side_effects", "combinations", "classes", "usage"})
                     self.assertFalse(schema["additionalProperties"])
                     effect = schema["$defs"]["SideEffect"]
                     self.assertEqual(set(effect["properties"]), {"ctcae", "frequency", "label", "action", "action_condition"})
                     self.assertEqual(set(effect["required"]), set(effect["properties"]))
                     self.assertFalse(effect["additionalProperties"])
                     condition = schema["$defs"]["ActionCondition"]
-                    self.assertEqual(condition["required"], ["patient_guide"])
+                    self.assertEqual(condition["required"], ["patient_guide", "min_severity"])
                     self.assertFalse(condition["additionalProperties"])
                     for name in ("DrugCombination", "DrugClassCombination"):
                         self.assertIn("effect", schema["$defs"][name]["required"])
@@ -658,7 +719,7 @@ class PipelineTests(unittest.TestCase):
                 with patch.dict(os.environ, {"API_KEY": "offline-test-key"}), patch("sukl.extraction.AsyncOpenAI", client):
                     result = asyncio.run(extract(self.prompt, self.deps, settings, trace=trace))
                 self.assertEqual(len(requests), 2)
-                self.assertEqual(result, good)
+                self.assertEqual(result, self.catalog.drug_output("9", good))
                 self.assertEqual(settings.model_settings, original_settings)
                 self.assertNotIn("offline-test-key", trace.read_text())
                 debug = json.loads(trace.read_text())
@@ -683,7 +744,7 @@ class PipelineTests(unittest.TestCase):
                     images.extend(x for x in content if isinstance(x, BinaryContent))
             self.assertEqual(len(images), 1)
             self.assertTrue(images[0].data.startswith(b"\x89PNG"))
-            return ModelResponse(parts=[TextPart('{"side_effects": [], "combinations": []}')])
+            return ModelResponse(parts=[TextPart('{"classes": [], "usage": "Testovací léčivo", "side_effects": [], "combinations": []}')])
 
         trace = self.root / "image.trace.json"
         asyncio.run(extract(self.prompt, self.deps, Settings(vision=True), model=FunctionModel(model), trace=trace))
@@ -701,11 +762,21 @@ class SchemaTests(unittest.TestCase):
             self.assertEqual(category.validate_python(value), value)
         with self.assertRaises(ValidationError):
             category.validate_python("invented_mechanism")
-        condition = {"patient_guide": "Pokud jste zároveň těhotná"}
+        condition = {"patient_guide": "Pokud jste zároveň těhotná", "min_severity": None}
         self.assertEqual(ActionCondition.model_validate(condition).model_dump(), condition)
         for invalid in ({"patient_guide": ""}, {"patient_guide": "Pokud...", "fhir": {}}, {"age": 65}):
             with self.assertRaises(ValidationError):
                 ActionCondition.model_validate(invalid)
+
+    def test_class_ids_use_shared_vocabulary(self):
+        from sukl.schema import ClassId, DrugOutput
+        identifiers = TypeAdapter(ClassId)
+        for value in ('atc:C09', 'atc:C09AA01', 'substance:12', 'group:qt_prolonging'):
+            self.assertEqual(identifiers.validate_python(value), value)
+        for value in ('free text', 'group:invented', 'atc:UNKNOWN'):
+            with self.assertRaises(ValidationError):
+                identifiers.validate_python(value)
+        self.assertNotIn('ResolvedDrugCombination', DrugOutput.model_json_schema()['$defs'])
 
     def test_frequency_is_one_small_value(self):
         frequency = TypeAdapter(Frequency)
@@ -716,9 +787,9 @@ class SchemaTests(unittest.TestCase):
                 frequency.validate_python(value)
 
     def test_combination_has_one_target_and_no_extra_fields(self):
-        valid = {"side_effects": [], "combinations": [{"drug": "X", "effect": "Zvyšuje toxicitu.", "effect_type": "increased_toxicity", "side_effects": []}]}
+        valid = {"classes": [], "usage": "Test", "side_effects": [], "combinations": [{"drug": "X", "class_id": None, "effect": "Zvyšuje toxicitu.", "effect_type": "increased_toxicity", "side_effects": []}]}
         self.assertEqual(DrugExtraction.model_validate(valid).model_dump(), valid)
-        valid["combinations"] = [{"drug_class": "Y", "effect": "Snižuje účinnost.", "effect_type": None, "side_effects": []}]
+        valid["combinations"] = [{"drug_class": "Y", "class_id": None, "effect": "Snižuje účinnost.", "effect_type": None, "side_effects": []}]
         self.assertEqual(DrugExtraction.model_validate(valid).model_dump(), valid)
         for target in ({"drug": "X", "drug_class": "Y"}, {}):
             with self.assertRaises(ValidationError):

@@ -23,7 +23,7 @@ from pydantic_ai.usage import RunUsage
 from .corpus import Corpus
 from .ctcae import load_terms, validation_warnings
 from .prompts import INSTRUCTIONS
-from .schema import DrugExtraction
+from .schema import DrugExtraction, DrugOutput, FUNCTIONAL_CLASSES
 
 DEFAULT_BASE_URL = "https://apim-rakathon-q7146n.azure-api.net/openai/v1/"
 DEFAULT_MODEL = "gpt-6-luna"
@@ -33,7 +33,7 @@ DEFAULT_MODEL = "gpt-6-luna"
 class Settings:
     model: str = DEFAULT_MODEL
     base_url: str = DEFAULT_BASE_URL
-    api: Literal["responses", "chat"] = "responses"
+    api: Literal["responses", "chat", "codex"] = "responses"
     context_chars: int = 160_000
     ctcae_csv: Path = Path("CTCAEv6.csv")
     request_limit: int = 20
@@ -89,6 +89,8 @@ def prepare(corpus: Corpus, code: str, settings: Settings, allow_partial: bool =
     all_pages = {doc.id: corpus.pages(doc.id) for doc in docs}
     manifest = [{"document_id": doc.id, "pages": len(all_pages[doc.id])} for doc in docs]
     metadata = json.dumps(corpus.catalog.metadata(code), ensure_ascii=False, indent=2)
+    vocabulary = [f"atc:{code}: {row['NAZEV']} / {row.get('NAZEV_EN', '')}" for code, row in corpus.catalog.dictionaries.get('atc', {}).items()
+                  ]
     parts = [f"TARGET SUKL CODE: {code}\nMETADATA:\n{metadata}",
              f"DOCUMENT MANIFEST:\n{json.dumps(manifest)}", f"MISSING INPUTS: {json.dumps(missing)}",
              f"SEARCH COVERAGE:\n{json.dumps(corpus.status())}", "PRIMARY DOCUMENT TEXT:"]
@@ -108,6 +110,8 @@ def prepare(corpus: Corpus, code: str, settings: Settings, allow_partial: bool =
     parts.append("UNREAD RANGES (fetch these before final output):\n" + json.dumps(deps.unread()))
     parts.append(f"CTCAE V6 TERMS ({len(deps.ctcae_terms)} exact English terms; use these as ctcae values):\n"
                  + "\n".join(sorted(deps.ctcae_terms)))
+    parts.append("STANDARD ATC CLASS IDS (classify interaction targets semantically; preserve qualifications in effect):\n" + "\n".join(vocabulary))
+    parts.append("FUNCTIONAL CLASS IDS (for target classes and combination class_id):\n" + json.dumps(FUNCTIONAL_CLASSES))
     return "\n\n".join(parts), deps
 
 
@@ -240,6 +244,17 @@ def build_agent(model: Model, vision: bool = False) -> Agent[Dependencies, DrugE
                 validate_coverage(ctx.deps)
             except ValueError as exc:
                 raise ModelRetry(str(exc)) from exc
+        # Validate references only; the model performs semantic classification.
+        catalog = ctx.deps.corpus.catalog
+        for combination in output.combinations:
+            identifier = combination.class_id
+            if identifier is None:
+                continue
+            namespace, value = identifier.split(":", 1)
+            vocabularies = {'atc': catalog.dictionaries['atc'],
+                            'substance': catalog.substances, 'group': FUNCTIONAL_CLASSES}
+            if (identifier if namespace == 'group' else value) not in vocabularies[namespace]:
+                raise ModelRetry(f"Unknown class_id {identifier}. Use a supplied/CSV ID or null; do not invent IDs.")
         warnings = validation_warnings(output, ctx.deps.ctcae_terms)
         ctx.deps.validation_warnings = warnings
         request_limit = ctx.usage_limits.request_limit
@@ -279,6 +294,9 @@ def atomic_json(path: Path, value: dict) -> None:
 
 async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
                   model: Model | None = None, trace: Path | None = None) -> dict:
+    if settings.api == "codex" and model is None:
+        from .codex import extract_codex
+        return await extract_codex(prompt, deps, settings, trace)
     # Inject a FunctionModel in tests; no real client/credentials are then constructed.
     client = None
     hostname = urlparse(settings.base_url).hostname or ""
@@ -402,4 +420,6 @@ async def extract(prompt: str, deps: Dependencies, settings: Settings, *,
               "Increase --request-limit or --context-chars for full coverage.", file=sys.stderr)
     for warning in deps.validation_warnings:
         print(f"[{deps.code}] Warning: {warning}", file=sys.stderr)
-    return result.output.model_dump(mode="json")
+    return DrugOutput.model_validate(
+        deps.corpus.catalog.drug_output(deps.code, result.output.model_dump(mode="json"))
+    ).model_dump(mode="json")

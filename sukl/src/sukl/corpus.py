@@ -62,6 +62,8 @@ class Document:
             )
             return prefix.with_suffix(".png").read_bytes()
 
+def filter_empty_keys(d: dict):
+    return {k: v for k, v in d.items() if v not in ("", None)}
 
 class Catalog:
     def __init__(self, data_dir: Path, ctcae: Path, snapshot: str | None = None):
@@ -78,13 +80,20 @@ class Catalog:
         root = data_dir / f"DLP{snapshot}"
         products = read_csv(root / "dlp_lecivepripravky.csv")
         self.products = {r["KOD_SUKL"]: r for r in products}
-        self.links = {r["KOD_SUKL"]: r for r in read_csv(root / "dlp_nazvydokumentu.csv")}
-        self.substances = {r["KOD_LATKY"]: r for r in read_csv(root / "dlp_latky.csv")}
+        self.links = {r["KOD_SUKL"]: filter_empty_keys(r) for r in read_csv(root / "dlp_nazvydokumentu.csv")}
+        self.substances = {r["KOD_LATKY"]: filter_empty_keys(r) for r in read_csv(root / "dlp_latky.csv")}
         self.composition: dict[str, list[dict]] = {}
         for row in read_csv(root / "dlp_slozeni.csv"):
+            if row["KOD_SUKL"] in (None, "", "0"):
+                continue
             self.composition.setdefault(row["KOD_SUKL"], []).append(
-                {**row, "substance": self.substances.get(row["KOD_LATKY"], {})}
+                {**filter_empty_keys(row), "substance": self.substances.get(row["KOD_LATKY"], {})}
             )
+        self.dictionaries = {}
+        for name, column in (("atc", "ATC"), ("formy", "FORMA"), ("cesty", "CESTA"),
+                             ("obaly", "OBAL"), ("vydej", "VYDEJ"), ("stavyreg", "REG")):
+            path = root / f"dlp_{name}.csv"
+            self.dictionaries[name] = {r[column]: r for r in read_csv(path)} if path.exists() else {}
         self.documents: dict[str, Document] = {}
         self.references: dict[str, list[str]] = {}
         self.unsupported: list[str] = []
@@ -121,7 +130,22 @@ class Catalog:
     def metadata(self, code: str) -> dict:
         code = self.code(code)
         return {"snapshot": self.snapshot, "product": self.products[code],
-                "composition": self.composition.get(code, []), "documents": self.links.get(code, {})}
+                "composition": self.composition.get(code, []),
+                "documents": self.links.get(code, {}),
+                "decoded": {name: self.dictionaries[name].get(self.products[code].get(column, ""))
+                            for name, column in (("atc", "ATC_WHO"), ("formy", "FORMA"),
+                                                 ("cesty", "CESTA"), ("obaly", "OBAL"),
+                                                 ("vydej", "VYDEJ"), ("stavyreg", "REG"))}}
+
+    def drug_output(self, code: str, extraction: dict) -> dict:
+        metadata = self.metadata(code)
+        atc = metadata['product'].get('ATC_WHO', '')
+        classes = list(extraction['classes'])
+        classes.extend(f'atc:{prefix}' for prefix in self.dictionaries['atc']
+                       if atc.startswith(prefix) and len(prefix) in (1, 3, 4, 5, 7))
+        classes.extend(f"substance:{row['KOD_LATKY']}" for row in metadata['composition']
+                       if row.get('S') == 'L' and row['KOD_LATKY'].isdigit())
+        return {**extraction, 'classes': sorted(set(classes)), 'metadata': metadata, 'schema_version': 3}
 
     def drug_documents(self, code: str) -> tuple[list[Document], list[str]]:
         row = self.links.get(self.code(code), {})
@@ -152,7 +176,7 @@ class Catalog:
                 product = self.products[code]
                 docs, missing = self.drug_documents(code)
                 matches.append({"code": code, "name": product["NAZEV"], "strength": product["SILA"],
-                                "atc": product["ATC_WHO"], "document_ids": [d.id for d in docs],
+                                "atc": product["ATC_WHO"], "composition": self.composition.get(code, []), "document_ids": [d.id for d in docs],
                                 "missing": missing})
                 if len(matches) >= max(1, min(limit, 20)):
                     break
@@ -261,3 +285,9 @@ class Corpus:
                 "unsupported_files": len(self.catalog.unsupported),
                 "note": "Global text search covers indexed PDFs only. Use find_drugs and read_pages for others."}
 
+
+
+def matching_combinations(drug: dict, other: dict) -> list[dict]:
+    """Candidate matches by shared ID; review effect for clinical conditions."""
+    classes = set(other['classes'])
+    return [row for row in drug['combinations'] if row['class_id'] in classes]

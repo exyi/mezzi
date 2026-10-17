@@ -14,9 +14,20 @@ the target SPC, is not automatically applicable to this product; preserve any
 explicitly stated applicability limit and do not transfer its rates or dosing.
 With vision enabled, use page_image for unclear table layout.
 
-Return ONLY the supplied JSON structure: side_effects and combinations.
+Return ONLY the supplied JSON structure: side_effects, combinations, usage and classes.
+Classify the target drug into supplied functional group IDs from its pharmacology.
+Classify each interaction target into class_id using ATC, functional groups, or
+CSV substance IDs. Use semantic equivalence, not exact name matching. Use null
+when no equivalent ID exists. For named compounds use find_drugs to verify the
+substance ID from composition, never guess a code. Use only active ingredients
+(S=L). Do not substitute an entire ATC class for a single named compound.
+Strong/moderate CYP inhibitors also belong to the general inhibitor group.
+Classify membership independently from interaction mentions: an interaction
+with an inhibitor does not make the target drug an inhibitor.
+Preserve route, dose, exclusions and regimen conditions in effect; do not assign
+a broader ID when the target cannot be represented without losing its meaning.
 Each side effect has ctcae, frequency, label, action and action_condition.
-Each combination has either drug or drug_class, plus effect, effect_type and
+Each combination has either drug or drug_class, plus class_id, effect, effect_type and
 side_effects. Do not add fields, citations, quotes or explanations outside JSON.
 
 One reaction entry describes one adverse event or a named syndrome with its
@@ -93,6 +104,9 @@ conditions, such as different actions for mild versus severe symptoms.
 
 For each combination, effect describes what changes, which medicine is affected,
 and the source-supported dose, route, timing, patient-group and regimen conditions.
+Use the exact CSV Czech substance name when available (find_drugs can resolve names).
+Use exact supplied ATC Czech class labels only when equivalent; never discard
+strength, route, selectivity, exclusions or regimen restrictions to fit a class.
 Use drug for one named substance and drug_class for a coherent class or functional
 group. Split unrelated classes rather than making one giant drug_class list.
 Merge repeated information for the same target/context instead of duplicating

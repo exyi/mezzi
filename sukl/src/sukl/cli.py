@@ -15,7 +15,7 @@ from .corpus import Catalog, Corpus, KINDS
 from .extraction import (
     DEFAULT_BASE_URL, DEFAULT_MODEL, Settings, atomic_json, extract, prepare,
 )
-from .schema import DrugExtraction
+from .schema import DrugOutput
 
 
 def positive(value: str) -> int:
@@ -148,7 +148,7 @@ async def extract_many(corpus: Corpus, codes: list[str], settings: Settings, arg
 
 def run(args: argparse.Namespace) -> None:
     if args.command == "schema":
-        print(json.dumps(DrugExtraction.model_json_schema(), indent=2, ensure_ascii=False))
+        print(json.dumps(DrugOutput.model_json_schema(), indent=2, ensure_ascii=False))
         return
     catalog = Catalog(args.data, args.ctcae, args.snapshot)
     corpus = Corpus(catalog, args.cache)
