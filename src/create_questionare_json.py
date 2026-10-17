@@ -28,11 +28,6 @@ CTCAE_METADATA = ROOT / "se-translation" / "assets" / "serialized-ctcae-clean.js
 ANNOTATIONS = ROOT / "se-translation" / "assets" / "ctcae-patient-sloplabels-cs.csv"
 
 
-OPTIONS = [
-    {"level": 0, "description": "Žádné obtíže"},
-    {"level": 1, "description": "Mírné obtíže"},
-    {"level": 2, "description": "Výrazné obtíže"},
-]
 ACTION_LABELS = {
     "continue": "Pokračujte v léčbě",
     "discontinue_treatment": "Přerušte léčbu",
@@ -62,7 +57,7 @@ def question_targets(effect: SideEffect, annotations: dict, rules: list[dict]) -
 
 
 def create_questionare_json(inputs: list[str], as_of: date) -> dict:
-    """Return patient info and Czech questions with generic severity options.
+    """Return patient info and Czech questions with symptom-specific severity options.
 
     Output shape: {"patient": {"gender": ...}, "questions": [...]}.
     Uses the lookup's default 30-day fallback for PRN/unknown supply. Future
@@ -133,7 +128,14 @@ def create_questionare_json(inputs: list[str], as_of: date) -> dict:
                     "llt_code": tags["llt_code"],
                     "soc": tags["soc"],
                     "term": tags["term"],
-                    "grades": [dict(option) for option in OPTIONS],
+                    "grades": [
+                        {"level": 0, "description": "Žádné obtíže"},
+                        *[
+                            {"level": level, "description": description}
+                            for level in range(1, 5)
+                            if (description := by_id[question_id][f"grade_{level}"].strip())
+                        ],
+                    ],
                     "definition": by_id[question_id]["label"],
                     "navigational_note": None,
                     "change": None,
