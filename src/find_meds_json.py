@@ -182,7 +182,7 @@ def _med_requests(
 
 
 def extract_drugs(
-    bundle: dict, source_file: str | None = None, prescriptions_only: bool = False
+    bundle: dict, source_file: str | None = None, prescriptions_only: bool = False, verbose: bool = False
 ) -> list[DrugPrescription]:
     entries = bundle.get("entry", [])
     resources = [e.get("resource", {}) for e in entries]
@@ -195,11 +195,17 @@ def extract_drugs(
     for res in resources:
         if res.get("resourceType") != "DocumentReference":
             continue
+        text = decode_text(res)
+
+        if verbose:
+            print(f"Parsing record {res.get('id')} | {_doc_type(res)} | {res.get('date')}")
+            print("       " + text.replace("\n", "\n        "))
+
         is_rx = _is_prescription(res)
         if prescriptions_only and not is_rx:
             continue
 
-        for line in decode_text(res).splitlines():
+        for line in text.splitlines():
             m = LINE.match(line.strip())
             if not m:
                 continue
@@ -375,6 +381,7 @@ def main():
         default="table",
         help="output format (default: table)",
     )
+    ap.add_argument("-v", "--verbose", help="Debug prints", action="store_true")
     ap.add_argument("-o", "--output", help="write to this file instead of stdout")
     ap.add_argument(
         "--prescriptions-only",
@@ -417,7 +424,7 @@ def main():
         try:
             bundle = load_bundle(path)
             bundle_items = extract_drugs(
-                bundle, str(path), args.prescriptions_only
+                bundle, str(path), args.prescriptions_only, verbose=args.verbose
             )
             # reference date for activity analysis: --as-of > bundle timestamp
             ref = args.as_of or (bundle.get("timestamp") or "")[:10]
