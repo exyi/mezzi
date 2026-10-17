@@ -28,11 +28,17 @@
     grade_description: string | null;
   };
 
+  type SubmissionPayload = {
+    symptoms: string;
+    answers: SubmittedAnswer[];
+  };
+
   const API_URL = 'http://127.0.0.1:8000/api/questions';
   const ANSWERS_URL = 'http://127.0.0.1:8000/api/answers';
 
   let questions = $state<Question[]>([]);
   let answers = $state<Record<number, number>>({});
+  let symptoms = $state('');
   let currentIndex = $state(0);
 
   let loading = $state(true);
@@ -47,17 +53,22 @@
 
   let progress = $derived(
     totalQuestions > 0
-      ? ((currentIndex + 1) / totalQuestions) * 100
+      ? (Math.min(currentIndex + 1, totalQuestions) /
+          totalQuestions) * 100
       : 0
   );
 
-  let finished = $derived(
-    totalQuestions > 0 && currentIndex >= totalQuestions
+  // The final symptoms step is after all medical questions.
+  let symptomsStep = $derived(
+    totalQuestions > 0 && currentIndex === totalQuestions
   );
 
-  let answeredCount = $derived(
-    Object.keys(answers).length
+  // Results appear after the symptoms step has been submitted.
+  let finished = $derived(
+    totalQuestions > 0 && currentIndex > totalQuestions
   );
+
+  let answeredCount = $derived(Object.keys(answers).length);
 
   onMount(() => {
     loadQuestions();
@@ -77,9 +88,7 @@
       const data = await response.json();
 
       if (!Array.isArray(data.results)) {
-        throw new Error(
-          'The server returned an invalid record list.'
-        );
+        throw new Error('The server returned an invalid record list.');
       }
 
       for (const question of data.results) {
@@ -107,6 +116,7 @@
       questions = data.results;
       currentIndex = 0;
       answers = {};
+      symptoms = '';
       saved = false;
       submissionId = '';
       saveError = '';
@@ -132,6 +142,13 @@
     ) {
       currentIndex += 1;
       saveError = '';
+    } else if (
+      currentIndex === totalQuestions - 1 &&
+      answers[currentIndex] !== undefined
+    ) {
+      // Move to the separate symptoms step.
+      currentIndex = totalQuestions;
+      saveError = '';
     }
   }
 
@@ -146,7 +163,9 @@
     if (
       saving ||
       saved ||
-      answers[currentIndex] === undefined
+      questions.some(
+        (_, index) => answers[index] === undefined
+      )
     ) {
       return;
     }
@@ -154,7 +173,9 @@
     saving = true;
     saveError = '';
 
-    const payload: { answers: SubmittedAnswer[] } = {
+    const payload: SubmissionPayload = {
+      symptoms: symptoms.trim(),
+
       answers: questions.map((question, index) => {
         const selectedLevel = answers[index];
 
@@ -169,8 +190,7 @@
           term: question.term,
           definition: question.definition ?? null,
           answer: selectedLevel,
-          grade_description:
-            selectedGrade?.description ?? null
+          grade_description: selectedGrade?.description ?? null
         };
       })
     };
@@ -201,7 +221,7 @@
 
       submissionId = data.submission_id ?? '';
       saved = true;
-      currentIndex = totalQuestions;
+      currentIndex = totalQuestions + 1;
     } catch (err) {
       saveError =
         err instanceof Error
@@ -214,6 +234,7 @@
 
   function restartQuiz() {
     answers = {};
+    symptoms = '';
     currentIndex = 0;
     saved = false;
     saveError = '';
@@ -233,22 +254,23 @@
 </script>
 
 <svelte:head>
-  <title>Questionnaire</title>
+  <title>Medical Questionnaire</title>
   <meta
     name="description"
-    content="Review medical terminology records and select a grade for each term."
+    content="Review medical terminology records, select grades, and describe patient symptoms."
   />
 </svelte:head>
 
 <main class="page">
   <section class="card">
     <header class="header">
-      <div class="logo">M</div>
+      <div class="logo" aria-hidden="true">M</div>
 
       <div>
         <h1>Medical Questionnaire</h1>
         <p class="subtitle">
-          Review each term and select the appropriate grade.
+          Review each medical term and select the appropriate grade.
+          You will describe patient symptoms in the final step.
         </p>
       </div>
     </header>
@@ -269,7 +291,6 @@
           Check that FastAPI is running on port 8000 and that
           your JSON records have the expected structure.
         </p>
-
         <button
           class="primary-button"
           onclick={loadQuestions}
@@ -283,10 +304,9 @@
         <div class="message-icon">i</div>
         <h2>No records found</h2>
         <p>
-          Add medical terminology records to your backend
-          JSON files and ensure their IDs are enabled.
+          Add medical terminology records to your backend JSON
+          files and ensure their IDs are enabled.
         </p>
-
         <button
           class="secondary-button"
           onclick={loadQuestions}
@@ -304,7 +324,7 @@
 
         {#if saved}
           <p class="save-success" role="status">
-            Your answers have been saved successfully.
+            Your symptoms and answers have been saved successfully.
           </p>
 
           {#if submissionId}
@@ -315,19 +335,28 @@
         {/if}
 
         <p class="results-description">
-          You have completed all {totalQuestions} records.
+          You have completed all {totalQuestions} medical questions.
         </p>
 
         <div class="summary">
           <div class="summary-number">
             {answeredCount}
           </div>
-
           <div>
             <strong>Records answered</strong>
             <p>Review your selected grades below.</p>
           </div>
         </div>
+
+        <section class="submitted-symptoms">
+          <h3>Patient symptoms</h3>
+
+          {#if symptoms.trim()}
+            <p>{symptoms}</p>
+          {:else}
+            <p class="muted">No symptoms provided.</p>
+          {/if}
+        </section>
 
         <div class="answer-list">
           {#each questions as question, i (question.id)}
@@ -359,21 +388,14 @@
                   </span>
 
                   <div>
-                    <strong>
-                      Grade {answers[i]}
-                    </strong>
+                    <strong>Grade {answers[i]}</strong>
                     <p>
-                      {getGradeDescription(
-                        question,
-                        answers[i]
-                      )}
+                      {getGradeDescription(question, answers[i])}
                     </p>
                   </div>
                 </div>
               {:else}
-                <p class="unanswered">
-                  Not answered
-                </p>
+                <p class="unanswered">Not answered</p>
               {/if}
             </article>
           {/each}
@@ -387,13 +409,110 @@
         </button>
       </div>
 
+    {:else if symptomsStep}
+      <div class="quiz">
+        <div class="final-step-heading">
+          <div class="step-number">✓</div>
+          <div>
+            <p class="eyebrow">FINAL STEP</p>
+            <h2 class="question-title">Patient symptoms</h2>
+          </div>
+        </div>
+
+        <p class="final-step-description">
+          You have completed all {totalQuestions} medical questions.
+          Now describe the patient's symptoms and any relevant details.
+        </p>
+
+        <div class="final-step-progress">
+          <div class="progress-info">
+            <span>Step 2 of 2</span>
+            <span>Ready to submit</span>
+          </div>
+
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 100%"></div>
+          </div>
+        </div>
+
+        <section
+          class="symptoms-card"
+          aria-labelledby="symptoms-heading"
+        >
+          <label id="symptoms-heading" for="patient-symptoms">
+            Describe patient symptoms
+            <span class="optional-label">Optional</span>
+          </label>
+
+          <p class="symptoms-hint">
+            Include what the symptoms are, when they started,
+            how they have changed, and any other relevant details.
+          </p>
+
+          <textarea
+            id="patient-symptoms"
+            class="symptoms-input"
+            bind:value={symptoms}
+            maxlength="5000"
+            rows="7"
+            placeholder="Write the patient's symptoms here..."
+            aria-describedby="symptoms-counter"
+          ></textarea>
+
+          <div
+            id="symptoms-counter"
+            class="symptoms-counter"
+          >
+            {symptoms.length}/5000 characters
+          </div>
+        </section>
+
+        <div class="submission-reminder">
+          <span class="reminder-icon">i</span>
+          <p>
+            Your {totalQuestions} medical answers and the symptoms
+            you enter here will be submitted together.
+          </p>
+        </div>
+
+        <div class="navigation">
+          <button
+            class="secondary-button"
+            onclick={previousQuestion}
+            disabled={saving}
+          >
+            ← Back to last question
+          </button>
+
+          <button
+            class="primary-button"
+            onclick={finishQuiz}
+            disabled={saving || saved}
+          >
+            {saving ? 'Submitting...' : 'Submit questionnaire →'}
+          </button>
+        </div>
+
+        {#if saveError}
+          <p class="save-error" role="alert">
+            Could not save questionnaire: {saveError}
+          </p>
+          <p class="retry-note">
+            Your answers and symptoms are still here. Please try again.
+          </p>
+        {/if}
+
+        <p class="footer-note">
+          Please review your answers before submitting.
+        </p>
+      </div>
+
     {:else}
       <div class="quiz">
         <div class="progress-info">
           <span>
-            Record {currentIndex + 1} of {totalQuestions}
+            Question {currentIndex + 1} of {totalQuestions}
           </span>
-
           <span>{Math.round(progress)}% complete</span>
         </div>
 
@@ -411,12 +530,10 @@
           ></div>
         </div>
 
-
         <div class="term-meta">
           <span class="soc-badge">
             {currentQuestion.soc}
           </span>
-
           <span class="term-code">
             LLT code: {currentQuestion.llt_code}
           </span>
@@ -477,7 +594,6 @@
                 <span class="grade-title">
                   Grade {grade.level}
                 </span>
-
                 <span class="grade-description">
                   {grade.description ??
                     'No description available'}
@@ -502,44 +618,29 @@
             ← Back
           </button>
 
-          {#if currentIndex === totalQuestions - 1}
-            <button
-              class="primary-button"
-              onclick={finishQuiz}
-              disabled={
-                answers[currentIndex] === undefined ||
-                saving ||
-                saved
-              }
-            >
-              {saving ? 'Saving...' : 'Finish →'}
-            </button>
-          {:else}
-            <button
-              class="primary-button"
-              onclick={nextQuestion}
-              disabled={
-                answers[currentIndex] === undefined ||
-                saving
-              }
-            >
-              Next record →
-            </button>
-          {/if}
+          <button
+            class="primary-button"
+            onclick={nextQuestion}
+            disabled={
+              answers[currentIndex] === undefined ||
+              saving
+            }
+          >
+            {currentIndex === totalQuestions - 1
+              ? 'Next: Patient symptoms →'
+              : 'Next question →'}
+          </button>
         </div>
 
         {#if saveError}
           <p class="save-error" role="alert">
-            Could not save answers: {saveError}
-          </p>
-
-          <p class="retry-note">
-            Your answers are still here. Try Finish again.
+            {saveError}
           </p>
         {/if}
 
         <p class="footer-note">
-          Your answers will be submitted when you finish.
+          Select a grade to continue. Patient symptoms will be
+          collected in the final step.
         </p>
       </div>
     {/if}
@@ -564,7 +665,8 @@
     background: #f3f6fc;
   }
 
-  :global(button) {
+  :global(button),
+  :global(textarea) {
     font: inherit;
   }
 
@@ -632,6 +734,14 @@
     padding-top: 28px;
   }
 
+  .eyebrow {
+    margin: 0 0 12px;
+    color: #5965d9;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+
   .progress-info {
     display: flex;
     justify-content: space-between;
@@ -652,20 +762,8 @@
   .progress-fill {
     height: 100%;
     border-radius: inherit;
-    background: linear-gradient(
-      90deg,
-      #5965e8,
-      #8291ff
-    );
+    background: linear-gradient(90deg, #5965e8, #8291ff);
     transition: width 200ms ease;
-  }
-
-  .eyebrow {
-    margin: 0 0 12px;
-    color: #5965d9;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
   }
 
   .term-meta {
@@ -780,9 +878,7 @@
     border: 1px solid #dfe4ef;
     border-radius: 12px;
     cursor: pointer;
-    transition:
-      border-color 150ms,
-      background 150ms;
+    transition: border-color 150ms, background 150ms;
   }
 
   .option:hover {
@@ -858,9 +954,7 @@
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    transition:
-      background 150ms,
-      transform 150ms;
+    transition: background 150ms, transform 150ms;
   }
 
   .primary-button {
@@ -892,6 +986,137 @@
   button:focus-visible {
     outline: 3px solid #a8b1ff;
     outline-offset: 3px;
+  }
+
+  .final-step-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .final-step-heading .eyebrow {
+    margin-bottom: 8px;
+  }
+
+  .final-step-heading .question-title {
+    font-size: 28px;
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: #16794a;
+    background: #e5f8ed;
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .final-step-description {
+    margin: 20px 0;
+    color: #68738a;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .final-step-progress {
+    margin-bottom: 28px;
+  }
+
+  .final-step-progress .progress-track {
+    margin-bottom: 0;
+  }
+
+  .symptoms-card {
+    padding: 20px;
+    border: 1px solid #e5e8f3;
+    border-radius: 13px;
+    background: #fafbff;
+  }
+
+  .symptoms-card label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    color: #28334b;
+    font-size: 15px;
+    font-weight: 750;
+  }
+
+  .optional-label {
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #eef0ff;
+    color: #5965dc;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .symptoms-hint {
+    margin: 8px 0 14px;
+    color: #798297;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .symptoms-input {
+    width: 100%;
+    min-height: 150px;
+    padding: 13px;
+    resize: vertical;
+    border: 1px solid #dfe4ef;
+    border-radius: 10px;
+    background: white;
+    color: #192238;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .symptoms-input:focus {
+    outline: 3px solid #a8b1ff;
+    outline-offset: 2px;
+    border-color: #5965dc;
+  }
+
+  .symptoms-counter {
+    margin-top: 7px;
+    color: #9299aa;
+    font-size: 11px;
+    text-align: right;
+  }
+
+  .submission-reminder {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 13px;
+    border-radius: 10px;
+    background: #f5f6ff;
+  }
+
+  .reminder-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #e3e7ff;
+    color: #5965dc;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .submission-reminder p {
+    margin: 0;
+    color: #59647b;
+    font-size: 12px;
+    line-height: 1.7;
   }
 
   .footer-note {
@@ -956,9 +1181,7 @@
   }
 
   @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
+    to { transform: rotate(360deg); }
   }
 
   .summary {
@@ -991,6 +1214,33 @@
     font-size: 13px;
   }
 
+  .submitted-symptoms {
+    margin: 0 0 24px;
+    padding: 18px;
+    text-align: left;
+    border: 1px solid #e5e8f3;
+    border-radius: 13px;
+    background: #fafbff;
+  }
+
+  .submitted-symptoms h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+  }
+
+  .submitted-symptoms p {
+    margin: 0;
+    color: #515d74;
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .submitted-symptoms .muted {
+    color: #9299aa;
+  }
+
   .answer-list {
     margin-bottom: 24px;
     text-align: left;
@@ -1020,6 +1270,13 @@
     margin: 5px 0;
     color: #798297;
     font-size: 12px;
+  }
+
+  .answer-description {
+    color: #515d74;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
   }
 
   .selected-grade {
@@ -1057,7 +1314,7 @@
   .save-success {
     padding: 12px;
     border-radius: 10px;
-    color: #16794a;
+    color: #16794a !important;
     background: #e5f8ed;
     font-size: 14px;
   }
@@ -1112,6 +1369,7 @@
 
     .navigation {
       align-items: stretch;
+      flex-wrap: wrap;
     }
 
     .primary-button,
@@ -1126,6 +1384,10 @@
 
     .grade-description {
       font-size: 12px;
+    }
+
+    .final-step-heading .question-title {
+      font-size: 24px;
     }
   }
 

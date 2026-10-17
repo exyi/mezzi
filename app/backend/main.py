@@ -5,12 +5,12 @@ import json
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 app = FastAPI(
     title="Medical Terminology Questions API",
-    version="0.4.0",
+    version="0.5.0",
 )
 
 
@@ -18,7 +18,6 @@ app = FastAPI(
 # CORS CONFIGURATION
 # --------------------------------------------------
 
-# Allow requests from your Svelte development server.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -36,6 +35,7 @@ app.add_middleware(
 # --------------------------------------------------
 
 BASE_DIR = Path(__file__).parent
+
 QUESTIONS_DIR = BASE_DIR / "questions"
 QUESTION_IDS_FILE = BASE_DIR / "question_ids.json"
 ANSWERS_FILE = BASE_DIR / "answers.json"
@@ -62,7 +62,7 @@ class Question(BaseModel):
 
 
 # --------------------------------------------------
-# MODELS: SUBMITTED ANSWERS
+# MODELS: SUBMITTED ANSWERS AND SYMPTOMS
 # --------------------------------------------------
 
 class SubmittedAnswer(BaseModel):
@@ -76,6 +76,13 @@ class SubmittedAnswer(BaseModel):
 
 
 class AnswerSubmission(BaseModel):
+    # Patient's free-text symptom description.
+    # Optional; defaults to an empty string.
+    symptoms: str = Field(
+        default="",
+        max_length=5000,
+    )
+
     answers: list[SubmittedAnswer]
 
 
@@ -86,7 +93,11 @@ class AnswerSubmission(BaseModel):
 def load_questions():
     """Load questions from all JSON files in the questions directory."""
 
-    QUESTIONS_DIR.mkdir(parents=True, exist_ok=True)
+    QUESTIONS_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
     questions = []
 
     for file_path in sorted(QUESTIONS_DIR.glob("*.json")):
@@ -139,7 +150,9 @@ def load_question_ids():
 
     try:
         data = json.loads(
-            QUESTION_IDS_FILE.read_text(encoding="utf-8")
+            QUESTION_IDS_FILE.read_text(
+                encoding="utf-8"
+            )
         )
 
         if not isinstance(data, list):
@@ -156,7 +169,10 @@ def load_question_ids():
                 "Every question ID must be a string or integer"
             )
 
-        return {str(question_id) for question_id in data}
+        return {
+            str(question_id)
+            for question_id in data
+        }
 
     except (json.JSONDecodeError, ValueError) as exc:
         raise HTTPException(
@@ -190,7 +206,7 @@ def get_filtered_questions():
     ]
 
     for question in filtered_questions:
-        # Copy the grades list to avoid modifying loaded data.
+        # Copy grades to avoid modifying source data.
         grades = list(question["grades"])
 
         has_grade_zero = any(
@@ -232,7 +248,9 @@ def root():
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok"}
+    return {
+        "status": "ok"
+    }
 
 
 # --------------------------------------------------
@@ -241,7 +259,10 @@ def health():
 
 @app.get("/api/questions")
 def get_questions(
-    q: str = Query(default="", max_length=200)
+    q: str = Query(
+        default="",
+        max_length=200,
+    )
 ):
     """Return enabled questions, optionally matching a search query."""
 
@@ -303,8 +324,13 @@ def get_question(question_id: str):
 @app.get("/api/submissions")
 def get_submissions():
     """
-    Return saved questionnaire submissions for the
-    Svelte Doctor Dashboard, newest first.
+    Return saved questionnaire submissions, newest first.
+
+    Each submission contains:
+    - submission_id
+    - submitted_at
+    - symptoms
+    - answers
     """
 
     if not ANSWERS_FILE.exists():
@@ -315,7 +341,9 @@ def get_submissions():
 
     try:
         data = json.loads(
-            ANSWERS_FILE.read_text(encoding="utf-8")
+            ANSWERS_FILE.read_text(
+                encoding="utf-8"
+            )
         )
 
         if not isinstance(data, list):
@@ -352,14 +380,16 @@ def get_submissions():
 
 
 # --------------------------------------------------
-# SAVE QUESTIONNAIRE ANSWERS
+# SAVE QUESTIONNAIRE ANSWERS AND PATIENT SYMPTOMS
 # --------------------------------------------------
 
 @app.post("/api/answers")
-def save_answers(submission: AnswerSubmission):
-    """Validate and save submitted questionnaire answers."""
+def save_answers(
+    submission: AnswerSubmission
+):
+    """Validate and save patient symptoms and questionnaire answers."""
 
-    # Accept grades from 0 through 5.
+    # Validate grades.
     for answer in submission.answers:
         if answer.answer not in range(0, 6):
             raise HTTPException(
@@ -384,10 +414,12 @@ def save_answers(submission: AnswerSubmission):
                 detail="Could not create answers.json.",
             ) from exc
 
-    # Load previous submissions.
+    # Load existing submissions.
     try:
         existing_data = json.loads(
-            ANSWERS_FILE.read_text(encoding="utf-8")
+            ANSWERS_FILE.read_text(
+                encoding="utf-8"
+            )
         )
 
         if not isinstance(existing_data, list):
@@ -407,19 +439,25 @@ def save_answers(submission: AnswerSubmission):
             detail="Could not read answers.json.",
         ) from exc
 
-    # Generate a unique submission ID.
+    # Generate a unique ID for this submission.
     submission_id = str(uuid4())
 
-    # Build the record and provide a default description
-    # when a Grade 0 answer has no description.
+    # Build the submission record.
     record = {
         "submission_id": submission_id,
+
         "submitted_at": datetime.now(
             timezone.utc
         ).isoformat(),
+
+        # Save the patient's free-text symptoms.
+        "symptoms": submission.symptoms.strip(),
+
+        # Save all questionnaire answers.
         "answers": [
             {
                 **answer.model_dump(),
+
                 "grade_description": (
                     answer.grade_description
                     or (
@@ -433,10 +471,10 @@ def save_answers(submission: AnswerSubmission):
         ],
     }
 
-    # Append without replacing earlier submissions.
+    # Append the new submission without replacing older ones.
     existing_data.append(record)
 
-    # Save all submissions.
+    # Write all submissions to answers.json.
     try:
         ANSWERS_FILE.write_text(
             json.dumps(
@@ -450,10 +488,14 @@ def save_answers(submission: AnswerSubmission):
     except OSError as exc:
         raise HTTPException(
             status_code=500,
-            detail="Could not write answers to answers.json.",
+            detail=(
+                "Could not write answers to answers.json."
+            ),
         ) from exc
 
     return {
-        "message": "Answers saved successfully",
+        "message": (
+            "Symptoms and answers saved successfully"
+        ),
         "submission_id": submission_id,
     }

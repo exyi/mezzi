@@ -14,6 +14,7 @@
   type Submission = {
     submission_id: string;
     submitted_at: string;
+    symptoms?: string | null;
     answers: SavedAnswer[];
   };
 
@@ -35,6 +36,7 @@
       const submissionText = [
         submission.submission_id,
         submission.submitted_at,
+        submission.symptoms ?? '',
         ...submission.answers.flatMap((answer) => [
           answer.question_id,
           answer.llt_code,
@@ -44,7 +46,9 @@
           answer.answer,
           answer.grade_description ?? ''
         ])
-      ].join(' ').toLowerCase();
+      ]
+        .join(' ')
+        .toLowerCase();
 
       return submissionText.includes(query);
     });
@@ -58,12 +62,6 @@
       0
     )
   );
-
-  function visibleAnswers(answers: SavedAnswer[]) {
-    return answers
-      .filter((answer) => showLowerGrades || answer.answer >= 2)
-      .sort((a, b) => b.answer - a.answer);
-  }
 
   let totalAnswers = $derived(
     submissions.reduce(
@@ -104,9 +102,10 @@
 
       submissions = data.results;
     } catch (err) {
-      error = err instanceof Error
-        ? err.message
-        : 'Could not load submissions.';
+      error =
+        err instanceof Error
+          ? err.message
+          : 'Could not load submissions.';
     } finally {
       loading = false;
     }
@@ -125,12 +124,18 @@
 
   function gradeLabel(level: number) {
     return level === 0
-      ? 'Grade 0 — No symptoms'
-      : `Grade ${level}`;
+      ? 'Úroveň 0 — Bez symptomů'
+      : `Úroveň ${level}`;
   }
 
   function toggleSubmission(id: string) {
     expanded = expanded === id ? null : id;
+  }
+
+  function visibleAnswers(answers: SavedAnswer[]) {
+    return answers
+      .filter((answer) => showLowerGrades || answer.answer >= 2)
+      .sort((a, b) => b.answer - a.answer);
   }
 </script>
 
@@ -138,7 +143,6 @@
   <header class="topbar">
     <div class="brand">
       <div>
-        <h1>Doctor Dashboard</h1>
       </div>
     </div>
 
@@ -147,14 +151,21 @@
       onclick={loadSubmissions}
       disabled={loading}
     >
-      ↻ Refresh
+      ↻ Obnov výsledky
     </button>
   </header>
+
+  <section class="intro">
+    <h2>Dotazník výsledky</h2>
+  </section>
+
+  
 
   <section class="records">
     <div class="records-heading">
       <div>
-        <h2>Questionnaire Submissions</h2>
+        <h2>Jednotlivé dotazníky</h2>
+        <p>Klikni na dotazník pro zobrazení detailů.</p>
       </div>
 
       <div class="heading-actions">
@@ -177,11 +188,11 @@
     {#if loading}
       <div class="state-message">
         <div class="spinner"></div>
-        <p>Loading saved submissions...</p>
+        <p>Načítám výsledky...</p>
       </div>
     {:else if error}
       <div class="state-message error-state" role="alert">
-        <h3>Unable to load submissions</h3>
+        <h3>Nešlo načíst výsledky</h3>
         <p>{error}</p>
         <button class="primary-button" onclick={loadSubmissions}>
           Try again
@@ -190,9 +201,11 @@
     {:else if filteredSubmissions.length === 0}
       <div class="state-message">
         <div class="empty-icon">⌕</div>
-        <h3>{submissions.length === 0
-          ? 'No submissions yet'
-          : 'No matching submissions'}</h3>
+        <h3>
+          {submissions.length === 0
+            ? 'No submissions yet'
+            : 'No matching submissions'}
+        </h3>
         <p>
           {submissions.length === 0
             ? 'Submitted questionnaires will appear here.'
@@ -208,14 +221,19 @@
               aria-expanded={expanded === submission.submission_id}
               onclick={() => toggleSubmission(submission.submission_id)}
             >
-              <div class="submission-icon">▤</div>
+              
 
               <div class="submission-main">
-                <strong>Questionnaire submission</strong>
+                <strong>Výsledky dotazníku</strong>
                 <span>{formatDate(submission.submitted_at)}</span>
                 <span class="submission-id">
                   ID: {submission.submission_id}
                 </span>
+                {#if submission.symptoms?.trim()}
+                  <span class="symptoms-indicator">
+                    Pacient dopsal nějaké symptomy ručně
+                  </span>
+                {/if}
               </div>
 
               <div class="submission-meta">
@@ -223,7 +241,7 @@
                   {submission.answers.length}
                   {submission.answers.length === 1 ? 'answer' : 'answers'}
                 </span>
-                <span class="chevron">
+                <span class="chevron" aria-hidden="true">
                   {expanded === submission.submission_id ? '−' : '+'}
                 </span>
               </div>
@@ -231,45 +249,66 @@
 
             {#if expanded === submission.submission_id}
               <div class="submission-details">
-                {#each visibleAnswers(submission.answers) as answer, index (`${submission.submission_id}-${answer.question_id}-${index}`)}
-                  <section class="answer-card">
-                    <div class="answer-top">
-                      <span class="record-number">
-                        RECORD {index + 1}
-                      </span>
-
-                      <span class:grade-zero={answer.answer === 0} class="grade-badge">
-                        {gradeLabel(answer.answer)}
-                      </span>
-                    </div>
-
-                    <h3>{answer.term}</h3>
-
-                    <div class="metadata">
-                      <span><b>SOC</b> {answer.soc}</span>
-                      <span><b>LLT code</b> {answer.llt_code}</span>
-                      <span><b>Question ID</b> {answer.question_id}</span>
-                    </div>
-
-                    {#if answer.definition}
-                      <div class="definition">
-                        <span class="field-label">DEFINITION</span>
-                        <p>{answer.definition}</p>
-                      </div>
-                    {/if}
-
-                    <div class="selected-answer">
-                      <div class="grade-number">{answer.answer}</div>
+                {#if submission.symptoms?.trim()}
+                  <section class="symptoms-card">
+                    <div class="symptoms-heading">
                       <div>
-                        <strong>{gradeLabel(answer.answer)}</strong>
-                        <p>
-                          {answer.grade_description ??
-                            'No grade description was recorded.'}
-                        </p>
+                        <h3>Ručně dopsané symptomy pacientem</h3>
                       </div>
                     </div>
+
+                    <p class="symptoms-text">{submission.symptoms}</p>
                   </section>
-                {/each}
+                {/if}
+
+                {#if visibleAnswers(submission.answers).length === 0}
+                  <div class="no-answers">
+                    {#if submission.answers.length === 0}
+                      Nebyly poskytnuty odpovědi.
+                    {:else}
+                      Nebyly nalezeny potíže co by byly nalehavé. Pro zobrazení odpovědí stiskni "Všechny odpovědi"
+                    {/if}
+                  </div>
+                {:else}
+                  {#each visibleAnswers(submission.answers) as answer, index (`${submission.submission_id}-${answer.question_id}`)}
+                    <section class="answer-card">
+                      <div class="answer-top">
+                        <span
+                          class="grade-badge"
+                          class:grade-zero={answer.answer === 0}
+                        >
+                          {gradeLabel(answer.answer)}
+                        </span>
+                      </div>
+
+                      <h3>{answer.term}</h3>
+
+                      <div class="metadata">
+                        <span><b>SOC</b> {answer.soc}</span>
+                        <span><b>LLT code</b> {answer.llt_code}</span>
+                        <span><b>Question ID</b> {answer.question_id}</span>
+                      </div>
+
+                      {#if answer.definition}
+                        <div class="definition">
+                          <span class="field-label">Popis</span>
+                          <p>{answer.definition}</p>
+                        </div>
+                      {/if}
+
+                      <div class="selected-answer">
+                        <div class="grade-number">{answer.answer}</div>
+                        <div>
+                          <strong>{gradeLabel(answer.answer)}</strong>
+                          <p>
+                            {answer.grade_description ??
+                              'Bez popisu úrovně.'}
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  {/each}
+                {/if}
               </div>
             {/if}
           </article>
@@ -322,59 +361,10 @@
     justify-content: flex-start;
   }
 
-  .logo {
-    width: 46px;
-    height: 46px;
-    display: grid;
-    place-items: center;
-    border-radius: 13px;
-    background: #e6ecff;
-    color: #4257bf;
-    font-size: 23px;
-    font-weight: 800;
-  }
-
-  .overline {
-    margin: 0 0 5px;
-    color: #6675b9;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.4px;
-  }
-
   h1 {
     margin: 0;
     font-size: 23px;
     letter-spacing: -0.5px;
-  }
-
-  .refresh-button,
-  .primary-button {
-    min-height: 40px;
-    padding: 0 15px;
-    border: 1px solid #d9dfeb;
-    border-radius: 9px;
-    background: white;
-    color: #344054;
-    font-weight: 650;
-    cursor: pointer;
-  }
-
-  .primary-button {
-    border-color: #465ac4;
-    background: #465ac4;
-    color: white;
-  }
-
-  button:disabled {
-    opacity: 0.55;
-    cursor: not-allowed;
-  }
-
-  button:focus-visible,
-  input:focus-visible {
-    outline: 3px solid #b7c5ff;
-    outline-offset: 3px;
   }
 
   .intro {
@@ -387,7 +377,7 @@
     letter-spacing: -0.8px;
   }
 
-  .intro > p:last-child {
+  .intro > p {
     margin: 9px 0 0;
     color: #667085;
     font-size: 14px;
@@ -428,6 +418,35 @@
     font-size: 12px;
   }
 
+  .refresh-button,
+  .primary-button {
+    min-height: 40px;
+    padding: 0 15px;
+    border: 1px solid #d9dfeb;
+    border-radius: 9px;
+    background: white;
+    color: #344054;
+    font-weight: 650;
+    cursor: pointer;
+  }
+
+  .primary-button {
+    border-color: #465ac4;
+    background: #465ac4;
+    color: white;
+  }
+
+  button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  button:focus-visible,
+  input:focus-visible {
+    outline: 3px solid #b7c5ff;
+    outline-offset: 3px;
+  }
+
   .records {
     padding: 24px;
     background: white;
@@ -450,6 +469,14 @@
     font-size: 13px;
   }
 
+  .heading-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
   .count {
     padding: 6px 10px;
     border-radius: 20px;
@@ -457,14 +484,6 @@
     color: #596579;
     font-size: 12px;
     white-space: nowrap;
-  }
-
-  .heading-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 10px;
   }
 
   .lower-grades-button {
@@ -564,6 +583,13 @@
     font-size: 11px;
   }
 
+  .submission-main .symptoms-indicator {
+    width: fit-content;
+    color: #3156a6;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
   .submission-meta {
     display: flex;
     align-items: center;
@@ -585,6 +611,66 @@
     padding: 0 16px 16px;
     border-top: 1px solid #edf0f5;
     background: #fbfcfe;
+  }
+
+  /* Additional patient-reported symptoms */
+  .symptoms-card {
+    margin-top: 16px;
+    padding: 19px;
+    border: 1px solid #d8e4f7;
+    border-radius: 11px;
+    background: #f4f8ff;
+  }
+
+  .symptoms-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .symptoms-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: #e2eaff;
+    color: #4257bf;
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  .symptoms-heading h3 {
+    margin: 0;
+    color: #253858;
+    font-size: 15px;
+  }
+
+  .symptoms-heading p {
+    margin: 5px 0 0;
+    color: #667085;
+    font-size: 12px;
+  }
+
+  .symptoms-text {
+    margin: 15px 0 0;
+    color: #344054;
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .no-answers {
+    margin-top: 16px;
+    padding: 18px;
+    border: 1px dashed #d9dfeb;
+    border-radius: 10px;
+    color: #667085;
+    background: white;
+    font-size: 13px;
+    line-height: 1.6;
   }
 
   .answer-card {
@@ -723,7 +809,9 @@
   }
 
   @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   footer {
@@ -765,6 +853,11 @@
 
     .records-heading {
       align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .heading-actions {
+      justify-content: flex-start;
     }
 
     .submission-header {
@@ -791,7 +884,8 @@
       padding: 0 9px 10px;
     }
 
-    .answer-card {
+    .answer-card,
+    .symptoms-card {
       padding: 14px;
     }
 
@@ -810,7 +904,9 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
     }
