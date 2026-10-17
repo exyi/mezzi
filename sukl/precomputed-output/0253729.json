@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C10",
+    "atc:C10A",
+    "atc:C10AA",
+    "atc:C10AA07",
+    "substance:16812"
+  ],
   "side_effects": [
     {
       "ctcae": "Headache",
@@ -10,11 +18,9 @@
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závratě.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závrať a chcete řídit nebo obsluhovat stroje"
-      }
+      "label": "Závrať; může ovlivnit řízení a obsluhu strojů.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Constipation",
@@ -40,14 +46,15 @@
     {
       "ctcae": "Myalgia",
       "frequency": "common",
-      "label": "Bolest svalů; svalové příznaky jsou častější u dětí a dospívajících než u dospělých.",
+      "label": "Bolest svalů; svalové příznaky jsou častější u dětí a dospívajících než u dospělých. Při neobvyklých křečích nebo bolestech trvajících déle, než očekáváte, přestaňte přípravek užívat a ihned kontaktujte lékaře.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud jsou svalové křeče nebo bolesti neobvyklé a trvají déle, než byste očekával(a)"
+        "patient_guide": "Neobvyklé svalové křeče nebo bolesti, které trvají déle, než očekáváte.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Generalized muscle weakness",
+      "ctcae": "Asthenia",
       "frequency": "common",
       "label": "Slabost.",
       "action": null,
@@ -55,22 +62,22 @@
     },
     {
       "ctcae": "Urinary protein increased",
-      "frequency": "uncommon",
-      "label": "Zvýšené množství bílkoviny v moči; u dávky 10 mg bylo zaznamenáno u méně než 1 % pacientů a obvykle se upraví bez přerušení léčby.",
+      "frequency": "common",
+      "label": "Zvýšené množství bílkoviny v moči; při dávce 40 mg, obvykle se upraví bez přerušení léčby.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diabetes mellitus",
       "frequency": "common",
-      "label": "Cukrovka; riziko je vyšší při vysoké hladině cukru a tuků v krvi, nadváze a vysokém krevním tlaku.",
+      "label": "Cukrovka; pravděpodobnost je vyšší při vysoké hladině cukru a tuků v krvi, nadváze a vysokém krevním tlaku.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Vyrážka.",
+      "label": "Vyrážka, svědění kůže a jiné kožní reakce; vyrážka může být také popisována jako svědění nebo kopřivka.",
       "action": null,
       "action_condition": null
     },
@@ -89,85 +96,91 @@
       "action_condition": null
     },
     {
-      "ctcae": "Pancreatitis",
+      "ctcae": "Urinary protein increased",
       "frequency": "uncommon",
+      "label": "Zvýšené množství bílkoviny v moči při dávce 10 mg nebo 20 mg; obvykle se upraví bez přerušení léčby.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypersensitivity reaction",
+      "frequency": "rare",
+      "label": "Závažná alergická reakce, včetně otoku obličeje, rtů, jazyka nebo hrdla, potíží s dýcháním či polykáním a silného svědění kůže s pupínky; přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Otok obličeje, rtů, jazyka nebo hrdla, potíže s dýcháním či polykáním nebo silné svědění kůže s pupínky.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "rare",
+      "label": "Nízký počet krevních destiček, který může způsobit neobvyklou tvorbu modřin a krvácení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "rare",
       "label": "Zánět slinivky břišní, který se může projevit silnou bolestí břicha.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "rare",
-      "label": "Snížený počet krevních destiček, který může způsobit neobvyklou tvorbu modřin a krvácení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "rare",
-      "label": "Závažná alergická reakce, například otok obličeje, rtů, jazyka nebo hrdla, potíže s dýcháním či polykáním nebo silné svědění s pupínky.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok obličeje, rtů, jazyka nebo hrdla, potíže s dýcháním či polykáním nebo nesnesitelné svědění s pupínky"
-      }
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Anafylaktická reakce.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví závažná alergická reakce, například otok obličeje, rtů, jazyka nebo hrdla nebo potíže s dýcháním či polykáním"
-      }
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "uncommon",
-      "label": "Myopatie včetně zánětu svalů; nežádoucí účinky na svaly se objevují častěji při vyšších dávkách, zejména nad 20 mg.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Rhabdomyolysis",
-      "frequency": "rare",
-      "label": "Rozpad svalů (rabdomyolýza), vzácně s poškozením ledvin; riziko je vyšší při dávce 40 mg.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte neobvyklé svalové křeče nebo bolesti, které trvají déle, než byste očekával(a)"
-      }
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "rare",
-      "label": "Přetržení svalu.",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "rare",
       "label": "Zvýšení jaterních enzymů v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Autoimmune disorder",
+      "ctcae": "Rhabdomyolysis",
       "frequency": "rare",
-      "label": "Syndrom podobný lupusu, zahrnující vyrážku, kloubní potíže a změny krevních buněk.",
+      "label": "Rabdomyolýza, závažné poškození svalů; někdy může vést k život ohrožujícímu stavu. Svalové obtíže přestaňte řešit užíváním přípravku a ihned informujte lékaře.",
       "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Nevysvětlitelné svalové bolesti, slabost nebo křeče, zvláště pokud jsou spojeny s horečkou a nevolností.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Myositis",
+      "frequency": "rare",
+      "label": "Zánět svalů, včetně myositidy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Lupus-like syndrome",
+      "frequency": "rare",
+      "label": "Onemocnění podobné lupusu, které může zahrnovat vyrážku, poruchy kloubů a změny krevních buněk.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Muscle weakness",
+      "frequency": "rare",
+      "label": "Přetržení svalu.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Jaundice",
+      "frequency": "very_rare",
+      "label": "Žloutenka, tedy zežloutnutí kůže nebo očí.",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "very_rare",
       "label": "Zánět jater.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Žloutenka, tedy zežloutnutí kůže nebo očí.",
       "action": null,
       "action_condition": null
     },
@@ -179,16 +192,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Polyneuropatie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Peripheral sensory neuropathy",
       "frequency": "very_rare",
-      "label": "Poškození nervů rukou nebo nohou, například necitlivost.",
+      "label": "Poškození nervů rukou nebo nohou, které může způsobit necitlivost.",
       "action": null,
       "action_condition": null
     },
@@ -209,434 +215,610 @@
     {
       "ctcae": "Gynecomastia",
       "frequency": "very_rare",
-      "label": "Zvětšení prsů u mužů.",
+      "label": "Zvětšení prsou u mužů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "not_known",
-      "label": "Průjem.",
+      "label": "Průjem; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cough",
       "frequency": "not_known",
-      "label": "Kašel.",
+      "label": "Kašel; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspnea",
       "frequency": "not_known",
-      "label": "Dušnost.",
+      "label": "Dušnost; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Edema",
       "frequency": "not_known",
-      "label": "Otoky.",
+      "label": "Otok; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Insomnia",
       "frequency": "not_known",
-      "label": "Poruchy spánku včetně nespavosti a nočních můr.",
+      "label": "Poruchy spánku včetně nespavosti a nočních můr; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Erectile dysfunction",
       "frequency": "not_known",
-      "label": "Potíže s pohlavním životem.",
+      "label": "Potíže s pohlavním životem; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depression",
       "frequency": "not_known",
-      "label": "Deprese.",
+      "label": "Deprese; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "ctcae": "Pulmonary fibrosis",
       "frequency": "not_known",
-      "label": "Poruchy šlach, někdy komplikované jejich přetržením.",
+      "label": "Intersticiální plicní nemoc hlášená u některých statinů, zejména při dlouhodobé léčbě; může se projevit přetrvávajícím kašlem, dušností nebo horečkou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tendon rupture",
+      "frequency": "not_known",
+      "label": "Poruchy šlach, někdy s jejich přetržením; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myasthenia gravis",
       "frequency": "not_known",
-      "label": "Myasthenia gravis nebo její oční forma, případně zhoršení těchto onemocnění; může se projevit svalovou slabostí, dvojitým viděním, poklesem víček, potížemi s polykáním nebo dušností.",
+      "label": "Myasthenia gravis s celkovou svalovou slabostí, někdy včetně svalů potřebných k dýchání; četnost nelze z dostupných údajů určit. Při zhoršení příznaků kontaktujte lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví zhoršující se slabost končetin po námaze, dvojité vidění, pokles víček, potíže s polykáním nebo dušnost"
+        "patient_guide": "Slabost horních nebo dolních končetin zhoršující se po aktivitě, dvojité vidění, pokles očních víček, potíže s polykáním nebo dušnost.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Myositis",
+      "ctcae": "Eye disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Imunitním systémem zprostředkovaná nekrotizující myopatie s přetrvávající slabostí svalů v blízkosti trupu a zvýšenou hladinou kreatinkinázy; může se objevit během léčby i po jejím ukončení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": null,
-      "label": "Intersticiální plicní nemoc; u některých statinů byly ve výjimečných případech hlášeny případy zejména při dlouhodobé léčbě.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
-      "frequency": null,
-      "label": "Porucha sexuálních funkcí; byla hlášena u některých statinů.",
-      "action": null,
-      "action_condition": null
+      "label": "Oční forma myastenie se slabostí očních svalů; četnost nelze z dostupných údajů určit. Při zhoršení příznaků kontaktujte lékaře.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Slabost horních nebo dolních končetin zhoršující se po aktivitě, dvojité vidění, pokles očních víček, potíže s polykáním nebo dušnost.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Stevensův–Johnsonův syndrom: terčovité nebo kruhovité skvrny, často s puchýři, olupování kůže a vředy v ústech, krku, nose, na genitáliích nebo očích; může mu předcházet horečka a příznaky podobné chřipce.",
-      "action": "hospitalize_NOW",
+      "label": "Stevensův-Johnsonův syndrom: terčovité nebo kruhovité skvrny, často s puchýři, olupování kůže či vředy v ústech, krku, nose, na genitáliích nebo očích; mohou mu předcházet horečka a příznaky podobné chřipce. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví terčovité nebo kruhovité skvrny, puchýře, olupování kůže nebo vředy v ústech, krku, nose, na genitáliích či očích, případně horečka a příznaky podobné chřipce"
+        "patient_guide": "Terčovité nebo kruhovité skvrny, puchýře, olupování kůže nebo vředy v ústech, krku, nose, na genitáliích či očích; mohou jim předcházet horečka a příznaky podobné chřipce.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Léková reakce DRESS: rozsáhlá kožní vyrážka, vysoká teplota a zvětšené lymfatické uzliny.",
-      "action": "hospitalize_NOW",
+      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS): rozsáhlá vyrážka, vysoká teplota a zvětšené mízní uzliny. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá kožní vyrážka společně s vysokou teplotou nebo zvětšenými lymfatickými uzlinami"
+        "patient_guide": "Rozsáhlá vyrážka, vysoká tělesná teplota a zvětšené mízní uzliny.",
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Jiné závažné kožní reakce včetně olupování kůže, puchýřů nebo vředů v ústech.",
-      "action": "hospitalize_NOW",
+      "ctcae": "Rhabdomyolysis",
+      "frequency": "rare",
+      "label": "Rabdomyolýza při kombinaci s kyselinou fusidovou užívanou celkově; byly hlášeny i smrtelné případy. Při současném systémovém podávání musí být léčba rosuvastatinem přerušena; při svalové slabosti, bolesti nebo citlivosti ihned vyhledejte lékařskou pomoc.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví závažná kožní vyrážka, olupování kůže, puchýře nebo vředy v ústech"
+        "patient_guide": "Současné systémové užívání kyseliny fusidové a svalová slabost, bolest nebo citlivost.",
+        "min_severity": 1
       }
     }
   ],
   "combinations": [
     {
-      "drug": "cyklosporin",
-      "effect": "Současné užívání je kontraindikováno: zvyšuje plazmatickou koncentraci rosuvastatinu přibližně 7,1násobně a může zvýšit riziko svalového poškození. Lékař musí zvolit jinou léčbu.",
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Rosuvastatin zvyšuje protrombinový čas (INR) při zahájení léčby nebo zvýšení dávky u pacientů užívajících warfarin nebo jiné kumarinové antikoagulancium; při přerušení léčby nebo snížení dávky může INR klesnout. Lékař má v těchto situacích kontrolovat INR.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Při současném užívání perorální antikoncepce zvyšuje rosuvastatin expozici ethinylestradiolu o 26 % a norgestrelu o 34 %; zvýšení je třeba zohlednit při volbě dávky antikoncepce. Podobný účinek při hormonální substituční léčbě nelze vyloučit, dostupná farmakokinetická data nejsou.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Současné užívání s cyklosporinem je kontraindikováno; plazmatická koncentrace rosuvastatinu se zvýšila přibližně sedminásobně, koncentrace cyklosporinu se nezměnila.",
       "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Současné užívání gemfibrozilu zdvojnásobilo koncentraci rosuvastatinu (Cmax a AUC) a zvyšuje riziko myopatie. Kombinace se nedoporučuje; dávka 40 mg je při současném užívání fibrátu kontraindikována a lékař má upravit dávkování rosuvastatinu podle očekávané expozice.",
+      "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Myositis",
+          "ctcae": "Myopathy",
           "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
+          "label": "Při současném užívání gemfibrozilu se zvyšuje riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Fenofibrát a další fibráty i dávky niacinu alespoň 1 g denně zvyšují při současném užívání riziko myopatie; 40 mg rosuvastatinu je s fibrátem kontraindikováno. U pacientů užívajících tyto léky má počáteční dávka rosuvastatinu být 5 mg a lékař má pečlivě zvážit přínosy a rizika.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Myopathy",
+          "frequency": null,
+          "label": "Při současném užívání fibrátů nebo niacinu v dávce alespoň 1 g denně se zvyšuje riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Při současném užívání ezetimibu se AUC rosuvastatinu zvýšila 1,2násobně. Nelze vyloučit farmakodynamické interakce týkající se nežádoucích účinků.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Antacida s hydroxidem hlinitým a hydroxidem hořečnatým snižují plazmatickou koncentraci rosuvastatinu přibližně o 50 %; účinek je menší, pokud se antacidum podá 2 hodiny po rosuvastatinu. Klinický význam nebyl zkoumán.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Erytromycin snížil AUC rosuvastatinu o 20 % a Cmax o 30 %, pravděpodobně zvýšením střevní motility.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Tikagrelor inhibuje transportér BCRP a zvyšuje AUC rosuvastatinu 2,6násobně; tím může zvýšit riziko myopatie. Lékař má zvážit přínosy prevence závažných kardiovaskulárních příhod a rizika vyšší koncentrace rosuvastatinu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Myopathy",
+          "frequency": null,
+          "label": "Tikagrelor může při současném užívání zvýšit riziko myopatie.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Systémová kyselina fusidová zvyšuje riziko myopatie včetně rabdomyolýzy. Při nezbytné systémové léčbě kyselinou fusidovou se rosuvastatin po dobu léčby přeruší a lze jej znovu zahájit 7 dní po poslední dávce kyseliny fusidové. Výjimečné souběžné podávání při dlouhodobé léčbě závažné infekce lze zvážit pouze pod pečlivým lékařským dohledem.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Myopathy",
+          "frequency": null,
+          "label": "Při současném systémovém užívání kyseliny fusidové se zvyšuje riziko myopatie.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Rhabdomyolysis",
           "frequency": null,
-          "label": "Zvýšené riziko rabdomyolýzy.",
+          "label": "Při současném systémovém užívání kyseliny fusidové bylo hlášeno zvýšené riziko rabdomyolýzy včetně smrtelných případů.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "sofosbuvir/velpatasvir/voxilaprevir",
-      "effect": "Současné užívání této kombinace s rosuvastatinem je kontraindikováno. V interakční studii byla expozice rosuvastatinu zvýšena 7,4násobně.",
+      "class_id": "group:cyp3a4_inhibitor",
+      "drug_class": "Inhibitory proteázy, včetně kombinací s ritonavirem",
+      "effect": "Současné užívání některých inhibitorů proteázy může výrazně zvýšit expozici rosuvastatinu; u kombinace atazanavir/ritonavir se AUC zvýšila 3,1násobně. Současné podávání s některými inhibitory proteázy se nedoporučuje bez úpravy dávky rosuvastatinu; lékař dávku upraví s ohledem na očekávanou expozici a pečlivě zváží přínosy a rizika.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:16812",
+      "drug": "VÁPENATÁ SŮL ROSUVASTATINU",
+      "effect": "Současné podávání s kombinací sofosbuvir/velpatasvir/voxilaprevir je kontraindikováno; expozice rosuvastatinu se zvýšila 7,4násobně.",
       "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug": "kyselina fusidová",
-      "effect": "Při systémovém podávání (ústy nebo injekčně) se může zvýšit riziko myopatie včetně rabdomyolýzy. Rosuvastatin se nesmí užívat současně ani po dobu 7 dní po ukončení léčby kyselinou fusidovou. Pokud je systémová léčba kyselinou fusidovou nezbytná, léčbu rosuvastatinem je třeba po tuto dobu přerušit; obnovit ji lze 7 dní po poslední dávce kyseliny fusidové. Ve výjimečných případech dlouhodobé léčby závažné infekce lze souběžné podávání zvážit pouze pod pečlivým lékařským dohledem.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myositis",
-          "frequency": null,
-          "label": "Myopatie se svalovou slabostí, bolestí nebo citlivostí svalů.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Rhabdomyolysis",
-          "frequency": null,
-          "label": "Rabdomyolýza, včetně případů s fatálním následkem.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "tikagrelor",
-      "effect": "Inhibice transportéru BCRP může zvýšit expozici rosuvastatinu přibližně 2,6násobně a zvýšit riziko myopatie. Lékař zváží přínos a riziko kombinace a podle potřeby upraví dávku rosuvastatinu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myositis",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "inhibitory proteáz používané k léčbě HIV nebo virové hepatitidy, zejména kombinace ritonavir/atazanavir, lopinavir/ritonavir nebo ritonavir/tipranavir",
-      "effect": "Tyto kombinace mohou zvýšit expozici rosuvastatinu; například atazanavir/ritonavir přibližně 3,1násobně a lopinavir/ritonavir 2,1násobně. Souběžné podávání některých inhibitorů proteáz se nedoporučuje bez úpravy dávky rosuvastatinu. Pokud se očekává zvýšení AUC přibližně dvojnásobné nebo vyšší, lékař má zvážit počáteční dávku rosuvastatinu 5 mg a upravit maximální denní dávku tak, aby expozice nepřekročila expozici při 40 mg samotného rosuvastatinu.",
-      "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Myositis",
-          "frequency": null,
-          "label": "Při zvýšené expozici rosuvastatinu je vyšší riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "gemfibrozil",
-      "effect": "Zvyšuje hodnoty Cmax a AUC rosuvastatinu přibližně na dvojnásobek a zvyšuje riziko myopatie. Kombinace se nedoporučuje. Pokud je souběžná léčba nezbytná, počáteční dávka rosuvastatinu má být 5 mg; dávka 40 mg je při užívání fibrátu kontraindikována.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myositis",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "ostatní fibráty, včetně fenofibrátu",
-      "effect": "Při kombinaci s rosuvastatinem se mohou vyskytnout farmakodynamické interakce a zvýšené riziko myopatie, přestože u fenofibrátu se klinicky významná farmakokinetická interakce neočekává. Počáteční dávka rosuvastatinu má být 5 mg; dávka 40 mg je při současném užívání fibrátu kontraindikována.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myositis",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "niacin (kyselina nikotinová)",
-      "effect": "Dávky niacinu snižující hladinu lipidů, tedy 1 g denně nebo vyšší, mohou při kombinaci s rosuvastatinem zvýšit riziko myopatie.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myositis",
-          "frequency": null,
-          "label": "Zvýšené riziko myopatie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "ezetimib",
-      "effect": "Při současném podávání 10 mg rosuvastatinu a 10 mg ezetimibu se AUC rosuvastatinu zvýšila 1,2násobně. Nelze vyloučit farmakodynamickou interakci z hlediska nežádoucích účinků; velmi vzácně byla při kombinaci ezetimibu s inhibitory HMG-CoA reduktázy hlášena rabdomyolýza.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Rhabdomyolysis",
-          "frequency": null,
-          "label": "Rabdomyolýza byla velmi vzácně hlášena při kombinaci ezetimibu s inhibitory HMG-CoA reduktázy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "antacida s hydroxidem hlinitým a hydroxidem hořečnatým",
-      "effect": "Současné podání může snížit plazmatickou koncentraci rosuvastatinu přibližně o 50 %. Tento vliv je menší, pokud se antacidum užije 2 hodiny po rosuvastatinu; klinický význam interakce nebyl stanoven.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "erythromycin",
-      "effect": "Současné podávání snížilo AUC rosuvastatinu o 20 % a Cmax o 30 %; může to souviset se zvýšením střevní motility vyvolaným erythromycinem.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "warfarin",
-      "effect": "Zahájení léčby rosuvastatinem nebo zvýšení jeho dávky může zvýšit protrombinový čas a INR. Přerušení léčby rosuvastatinem nebo snížení jeho dávky může INR snížit. Při těchto změnách bude lékař kontrolovat INR.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Zvýšení INR.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "antagonisté vitaminu K, včetně kumarinových antikoagulancií",
-      "effect": "Zahájení léčby rosuvastatinem nebo zvýšení jeho dávky může zvýšit protrombinový čas a INR; přerušení nebo snížení dávky rosuvastatinu může INR snížit. Při těchto změnách bude lékař kontrolovat INR.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Zvýšení INR.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "perorální antikoncepce",
-      "effect": "Současné podávání rosuvastatinu zvýšilo AUC ethinylestradiolu o 26 % a norgestrelu o 34 %. Lékař má toto zvýšení hladin zohlednit při určení dávky antikoncepce.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "hormonální substituční léčba",
-      "effect": "Při souběžném podávání nejsou dostupné farmakokinetické údaje; nelze vyloučit podobné zvýšení hladin hormonů jako u perorální antikoncepce. Kombinace byla podávána velkému počtu žen a byla dobře tolerována.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "darolutamid",
-      "effect": "V interakční studii zvýšil darolutamid expozici rosuvastatinu přibližně 5,2násobně. Při souběžném podávání léčiv zvyšujících expozici rosuvastatinu lékař zváží úpravu dávky; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "regorafenib",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 3,8násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "roxadustat",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 2,9násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "velpatasvir",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 2,7násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "momelotinib",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 2,7násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "ombitasvir/paritaprevir/ritonavir s dasabuvirem",
-      "effect": "V interakční studii zvýšil tento režim expozici rosuvastatinu přibližně 2,6násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "teriflunomid a leflunomid",
-      "effect": "Při souběžném podávání byla expozice rosuvastatinu zvýšena přibližně 2,5násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "vadadustat",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 2,5násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "grazoprevir/elbasvir",
-      "effect": "V interakční studii zvýšil tento režim expozici rosuvastatinu přibližně 2,3násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "glekaprevir/pibrentasvir",
-      "effect": "V interakční studii zvýšil tento režim expozici rosuvastatinu přibližně 2,2násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "capmatinib",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 2,1násobně. Lékař zváží úpravu dávky rosuvastatinu; při očekávaném zvýšení AUC přibližně dvojnásobném nebo vyšším se doporučuje počáteční dávka rosuvastatinu 5 mg a úprava maximální dávky.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "klopidogrel",
-      "effect": "Po nasycovací dávce 300 mg a následné dávce 75 mg zvýšil klopidogrel expozici rosuvastatinu přibližně 2násobně. Lékař zváží úpravu dávky rosuvastatinu podle očekávaného zvýšení expozice.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "fostamatinib",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 2násobně. Lékař zváží úpravu dávky rosuvastatinu podle očekávaného zvýšení expozice.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "febuxostat",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 1,9násobně. Při zvýšení dávky rosuvastatinu nad 20 mg je třeba opatrnost; lékař může podle potřeby upravit dávku.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "tafamidis",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 2násobně. Lékař zváží úpravu dávky rosuvastatinu podle očekávaného zvýšení expozice.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "eltrombopag",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 1,6násobně. Při zvýšení dávky rosuvastatinu nad 20 mg je třeba opatrnost; lékař může podle potřeby upravit dávku.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "darunavir/ritonavir",
-      "effect": "V interakční studii zvýšil tento režim expozici rosuvastatinu přibližně 1,5násobně. Při zvýšení dávky rosuvastatinu nad 20 mg je třeba opatrnost; lékař může podle potřeby upravit dávku.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "tipranavir/ritonavir",
-      "effect": "V interakční studii zvýšil tento režim expozici rosuvastatinu přibližně 1,4násobně. Při zvýšení dávky rosuvastatinu nad 20 mg je třeba opatrnost; lékař může podle potřeby upravit dávku.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "dronedaron",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 1,4násobně; klinický význam tohoto zvýšení nebyl blíže stanoven.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "itrakonazol",
-      "effect": "V interakční studii zvýšil expozici rosuvastatinu přibližně 1,4násobně. Při zvýšení dávky rosuvastatinu nad 20 mg je třeba opatrnost; lékař může podle potřeby upravit dávku.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "baikalin",
-      "effect": "V interakční studii snížil expozici rosuvastatinu o 47 %; klinický význam tohoto snížení nebyl uveden.",
-      "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Rosumop snižuje hladinu cholesterolu v krvi a pomáhá předcházet srdečním a mozkovým příhodám.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0253729",
+      "H": "",
+      "NAZEV": "ROSUMOP",
+      "SILA": "10MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "90",
+      "CESTA": "POR",
+      "DOPLNEK": "10MG TBL FLM 90",
+      "OBAL": "BLI",
+      "DRZ": "SNJ",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "31",
+      "ATC_WHO": "C10AA07",
+      "RC": "31/364/10-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "10",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "90",
+      "ZDROJ_WHO": "NO26",
+      "LL": "16812",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "ROSUMOP",
+      "MRP_CISLO": "PT/H/0247/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "16812",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "10,396",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16812",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "ROSUVASTATINUM CALCICUM",
+          "NAZEV_EN": "ROSUVASTATIN CALCIUM",
+          "NAZEV": "VÁPENATÁ SŮL ROSUVASTATINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "16247",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "10",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16247",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ROSUVASTATINUM",
+          "NAZEV_EN": "ROSUVASTATIN",
+          "NAZEV": "ROSUVASTATIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "3508",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3508",
+          "ZDROJ": "C22M",
+          "NAZEV_INN": "LACTOSUM",
+          "NAZEV_EN": "LACTOSE",
+          "NAZEV": "LAKTOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "1300",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "17625",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17625",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM SILICIFICATUM 90",
+          "NAZEV_EN": "SILICIFIED MICROCRYSTALLINE CELLULOSE 90",
+          "NAZEV": "SILICIFIKOVANÁ MIKROKRYSTALICKÁ CELULOSA 90"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "2970",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "1871",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "4174",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4174",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII STEARYLIS FUMARAS",
+          "NAZEV_EN": "SODIUM STEARYL FUMARATE",
+          "NAZEV": "NATRIUM-STEARYL-FUMARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "SQ": "10",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "5504",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5504",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910",
+          "NAZEV_EN": "HYPROMELLOSE 2910",
+          "NAZEV": "HYPROMELOSA 2910"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "875",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "875",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MANNITOLUM",
+          "NAZEV_EN": "MANNITOL",
+          "NAZEV": "MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "3765",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "2710",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "4256",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "4290",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4290",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM RUBRUM",
+          "NAZEV_EN": "IRON OXIDE RED",
+          "NAZEV": "ČERVENÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "1871",
+        "SQ": "17",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "SQ": "18",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0253729",
+        "KOD_LATKY": "1871",
+        "SQ": "19",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0253729",
+      "PIL": "PI236086.pdf",
+      "DAT_ROZ_PIL": "20.05.2025",
+      "SPC": "SPC236087.pdf",
+      "DAT_ROZ_SPC": "20.05.2025",
+      "OBAL_TEXT": "OBAL186145.pdf",
+      "DAT_ROZ_OBAL": "28.04.2022"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C10AA07",
+        "NT": "N",
+        "NAZEV": "ROSUVASTATIN",
+        "NAZEV_EN": "ROSUVASTATIN"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

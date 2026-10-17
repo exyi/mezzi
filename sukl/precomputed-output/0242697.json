@@ -1,32 +1,34 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N02",
+    "atc:N02C",
+    "atc:N02CC",
+    "atc:N02CC01",
+    "substance:10645"
+  ],
   "side_effects": [
     {
       "ctcae": "Allergic reaction",
       "frequency": "not_known",
-      "label": "Alergická kožní reakce, například červené skvrny nebo kopřivka.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud je alergická reakce závažná"
-      }
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Anafylaxe: závažná alergická reakce s otokem očních víček, obličeje nebo rtů, náhlou dušností, rychlým tepem, pocitem tísně na hrudi nebo celkovým kolapsem.",
-      "action": "hospitalize_NOW",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Paresthesia",
-      "frequency": "common",
-      "label": "Brnění (parestézie).",
+      "label": "Kožní alergická reakce, například červené skvrny nebo kopřivka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Anaphylaxis",
+      "frequency": "not_known",
+      "label": "Závažná alergická reakce s otokem očních víček, obličeje nebo rtů, náhlou dušností, rychlým tepem, tlakem na hrudi nebo kolapsem.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Při silné alergické reakci",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Paresthesia",
       "frequency": "common",
-      "label": "Snížená citlivost nebo jiné poruchy čití (hypestezie).",
+      "label": "Brnění.",
       "action": null,
       "action_condition": null
     },
@@ -40,14 +42,21 @@
     {
       "ctcae": "Somnolence",
       "frequency": "common",
-      "label": "Ospalost.",
+      "label": "Ospalost; pokud vás ovlivňuje, neřiďte ani neobsluhujte stroje.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysesthesia",
+      "frequency": "common",
+      "label": "Poruchy čití.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypertension",
       "frequency": "common",
-      "label": "Přechodné zvýšení krevního tlaku, které se objevuje brzy po léčbě.",
+      "label": "Přechodné zvýšení krevního tlaku, obvykle brzy po léčbě.",
       "action": null,
       "action_condition": null
     },
@@ -61,28 +70,28 @@
     {
       "ctcae": "Dyspnea",
       "frequency": "common",
-      "label": "Dušnost.",
+      "label": "Dýchavičnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Nevolnost; není jasné, zda souvisí se sumatriptanem, nebo se samotnou migrénou.",
+      "label": "Nevolnost; není jasné, zda souvisí s lékem, nebo s migrénou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "common",
-      "label": "Zvracení; není jasné, zda souvisí se sumatriptanem, nebo se samotnou migrénou.",
+      "label": "Zvracení; není jasné, zda souvisí s lékem, nebo s migrénou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "General disorders and administration site conditions - Other, specify",
       "frequency": "common",
-      "label": "Pocit tíhy, obvykle přechodný a někdy intenzivní, který může postihnout kteroukoli část těla včetně hrudníku a krku.",
+      "label": "Pocit tíhy, obvykle přechodný, někdy intenzivní a kdekoli na těle včetně hrudníku a krku.",
       "action": null,
       "action_condition": null
     },
@@ -94,13 +103,11 @@
       "action_condition": null
     },
     {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
+      "ctcae": "Pain",
       "frequency": "common",
-      "label": "Přechodná bolest nebo pocit horka či chladu, tlaku nebo tísně; mohou být intenzivní a objevit se kdekoli na těle včetně hrudníku a krku.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud po užití cítíte bolest nebo tlak na hrudi, které rychle neodeznívají nebo se zhoršují"
-      }
+      "label": "Přechodná bolest, pocit horka nebo chladu, tlaku či tísně; mohou být intenzivní a objevit se kdekoli na těle včetně hrudníku a krku.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Generalized muscle weakness",
@@ -119,7 +126,7 @@
     {
       "ctcae": "Breast pain",
       "frequency": "rare",
-      "label": "Bolest prsu nebo bradavky, hlášená u kojících žen; obvykle je přechodná a odezní během 3 až 12 hodin.",
+      "label": "Bolest prsu; u kojících žen také bolest bradavky, obvykle přechodná a odezní během 3 až 12 hodin.",
       "action": null,
       "action_condition": null
     },
@@ -140,7 +147,7 @@
     {
       "ctcae": "Seizure",
       "frequency": "not_known",
-      "label": "Záchvaty; některé byly hlášeny u pacientů s dřívějšími záchvaty nebo s okolnostmi, které k nim mohou vést, ale také u pacientů bez zjevných rizikových faktorů.",
+      "label": "Záchvaty; hlášeny u pacientů s předchozími záchvaty i bez zjevných rizikových faktorů.",
       "action": null,
       "action_condition": null
     },
@@ -161,56 +168,42 @@
     {
       "ctcae": "Nystagmus",
       "frequency": "not_known",
-      "label": "Mimovolní rychlé pohyby očí (nystagmus).",
+      "label": "Mimovolní rychlé pohyby očí.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flashing lights",
       "frequency": "not_known",
-      "label": "Mžitky nebo záblesky světla.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Skotom, tedy výpadek nebo tmavá skvrna v zorném poli.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eye disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Dvojité vidění (diplopie).",
+      "label": "Mžitky; mohou souviset i se samotnou migrénou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vision decreased",
       "frequency": "not_known",
-      "label": "Zhoršení zraku.",
+      "label": "Zhoršení zraku; může souviset i se samotnou migrénou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vision decreased",
       "frequency": "not_known",
-      "label": "Ztráta zraku, včetně hlášení o trvalém poškození; poruchy zraku mohou doprovázet také samotnou migrénu.",
+      "label": "Ztráta zraku, včetně hlášení o trvalém poškození; může souviset i se samotnou migrénou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Zpomalený srdeční tep (bradykardie).",
+      "label": "Pomalý tep (bradykardie).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Tachycardia",
       "frequency": "not_known",
-      "label": "Zrychlený srdeční tep (tachykardie).",
+      "label": "Rychlý tep (tachykardie).",
       "action": null,
       "action_condition": null
     },
@@ -224,12 +217,12 @@
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Porucha srdečního rytmu (arytmie).",
+      "label": "Porucha srdečního rytmu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
       "label": "Přechodné ischemické změny na EKG.",
       "action": null,
@@ -238,16 +231,19 @@
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Spasmus (stažení) koronární tepny.",
+      "label": "Křeč srdeční tepny (koronární vazospasmus).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Chest pain - cardiac",
       "frequency": "not_known",
-      "label": "Angina pectoris (bolest na hrudi způsobená nedostatečným prokrvením srdce).",
-      "action": null,
-      "action_condition": null
+      "label": "Angina pectoris (bolest na hrudi).",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Pokud bolest nebo tlak na hrudi po užití rychle neodezní nebo se zhoršuje",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Myocardial infarction",
@@ -264,7 +260,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vascular disorders - Other, specify",
+      "ctcae": "Peripheral ischemia",
       "frequency": "not_known",
       "label": "Raynaudův fenomén: prsty na rukou nebo nohou zbělají a znecitliví.",
       "action": null,
@@ -273,7 +269,7 @@
     {
       "ctcae": "Colitis",
       "frequency": "not_known",
-      "label": "Ischemická kolitida (zánět střeva z nedostatečného prokrvení); může se projevit bolestí v levém podbřišku a krvavým průjmem.",
+      "label": "Ischemický zánět střeva; může se projevit bolestí v levém podbřišku a krvavým průjmem.",
       "action": null,
       "action_condition": null
     },
@@ -285,13 +281,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Dysphagia",
-      "frequency": "not_known",
-      "label": "Potíže s polykáním.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Hyperhidrosis",
       "frequency": "not_known",
       "label": "Nadměrné pocení.",
@@ -299,7 +288,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "ctcae": "Neck pain",
       "frequency": "not_known",
       "label": "Ztuhlost šíje.",
       "action": null,
@@ -315,106 +304,373 @@
     {
       "ctcae": "Pain",
       "frequency": "not_known",
-      "label": "Bolest nebo zhoršení bolesti v místě poranění či zánětu, například při nedávném zranění nebo zánětlivém onemocnění.",
+      "label": "Bolest nebo zhoršení bolesti v místě nedávného poranění či zánětu, například při revmatismu nebo zánětu tlustého střeva.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Headache",
+      "ctcae": "Dysphagia",
       "frequency": "not_known",
-      "label": "Při častém nebo každodenním užívání léků na bolest hlavy se může bolest hlavy zhoršit nebo může vzniknout bolest hlavy z nadměrného užívání léků.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte časté nebo každodenní bolesti hlavy i přes pravidelné užívání léků na bolest hlavy, nebo kvůli jejich pravidelnému užívání"
-      }
+      "label": "Potíže s polykáním.",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Ergotamin a jeho deriváty, včetně metysergidu",
-      "effect": "Současné užívání přípravku Frimig s ergotaminem nebo jeho deriváty je kontraindikováno; může se teoreticky zvýšit riziko spasmu koronárních tepen. Před užitím přípravku Frimig se doporučuje počkat nejméně 24 hodin po ergotaminu a po užití přípravku Frimig nejméně 6 hodin před užitím ergotaminu. V příbalové informaci se rovněž uvádí, že tyto léky nemáte užívat současně, přestat je užívat alespoň 24 hodin před Frimigem a znovu je neužívat alespoň 6 hodin po něm.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Teoreticky zvýšené riziko spasmu koronárních tepen při současném užívání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Jiné triptany nebo agonisté receptoru 5-HT1",
-      "effect": "Současné užívání přípravku Frimig s jiným triptanem nebo agonistou receptoru 5-HT1 je kontraindikováno; může se teoreticky zvýšit riziko spasmu koronárních tepen. Doporučuje se počkat nejméně 24 hodin po jiném agonistovi před užitím přípravku Frimig a nejméně 24 hodin po Frimigu před užitím jiného agonisty. V příbalové informaci se uvádí, že tyto léky nemáte užívat současně, přestat je užívat alespoň 24 hodin před Frimigem a znovu je neužívat alespoň 24 hodin po něm.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Teoreticky zvýšené riziko spasmu koronárních tepen při současném užívání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Inhibitory monoaminooxidázy (IMAO), reverzibilní i ireverzibilní",
-      "effect": "Současné užívání přípravku Frimig s inhibitory monoaminooxidázy je kontraindikováno. Přípravek Frimig se nesmí užívat ani po dobu dvou týdnů od ukončení léčby IMAO.",
+      "class_id": "atc:N02CA",
+      "drug_class": "Ergotamin nebo jeho deriváty, včetně metysergidu",
+      "effect": "Současné užití se sumatriptanem je kontraindikováno kvůli možnému zvýšení rizika křeče srdečních tepen. Před sumatriptanem vyčkejte nejméně 24 hodin od ergotaminu; po sumatriptanu vyčkejte nejméně 6 hodin před ergotaminem.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "Selektivní inhibitory zpětného vychytávání serotoninu (SSRI)",
-      "effect": "Při současném užívání přípravku Frimig a SSRI byl vzácně hlášen serotoninový syndrom. Pokud je tato kombinace klinicky odůvodněná, lékař bude pacienta odpovídajícím způsobem sledovat.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": "rare",
-          "label": "Serotoninový syndrom, který může zahrnovat neklid, zmatenost, pocení, halucinace, zesílené reflexy, svalové křeče, chvění, třes a zvýšený srdeční tep.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud se při této kombinaci objeví neklid, zmatenost, pocení, halucinace, zesílené reflexy, svalové křeče, chvění, třes nebo zvýšený srdeční tep"
-          }
-        }
-      ]
+      "class_id": "atc:N02CC",
+      "drug_class": "Jiné triptany nebo agonisté receptoru 5‑HT1",
+      "effect": "Současné užití se sumatriptanem je kontraindikováno kvůli možnému zvýšení rizika křeče srdečních tepen. Před sumatriptanem vyčkejte nejméně 24 hodin od jiného agonisty; po sumatriptanu vyčkejte nejméně 24 hodin.",
+      "effect_type": "contraindicated",
+      "side_effects": []
     },
     {
-      "drug_class": "Inhibitory zpětného vychytávání serotoninu a noradrenalinu (SNRI)",
-      "effect": "Serotoninový syndrom byl hlášen při současné léčbě přípravkem Frimig a SNRI. Pokud je tato kombinace klinicky odůvodněná, lékař bude pacienta odpovídajícím způsobem sledovat.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Serotoninový syndrom, který může zahrnovat neklid, zmatenost, pocení, halucinace, zesílené reflexy, svalové křeče, chvění, třes a zvýšený srdeční tep.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud se při této kombinaci objeví neklid, zmatenost, pocení, halucinace, zesílené reflexy, svalové křeče, chvění, třes nebo zvýšený srdeční tep"
-          }
-        }
-      ]
+      "class_id": null,
+      "drug_class": "Inhibitory monoaminooxidázy (IMAO)",
+      "effect": "Současné užití se sumatriptanem je kontraindikováno. Sumatriptan neužívejte po dobu dvou týdnů po ukončení léčby IMAO; příbalová informace uvádí také neužívat jej, pokud jste IMAO užíval(a) v posledních dvou týdnech.",
+      "effect_type": "contraindicated",
+      "side_effects": []
     },
     {
-      "drug": "lithium",
-      "effect": "Při současném užívání přípravku Frimig a lithia existuje riziko serotoninového syndromu.",
+      "class_id": "group:serotonergic",
+      "drug_class": "SSRI a SNRI antidepresiva",
+      "effect": "Při současném užívání sumatriptanu s SSRI nebo SNRI může vzácně vzniknout serotoninový syndrom; příbalová informace popisuje také neklid, zmatenost, pocení, halucinace, zvýšené reflexy, svalové křeče, chvění a zrychlený tep. Pokud je souběžná léčba klinicky odůvodněná, SPC doporučuje odpovídající sledování pacienta.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Nervous system disorders - Other, specify",
+          "ctcae": null,
           "frequency": null,
-          "label": "Serotoninový syndrom.",
+          "label": "Serotoninový syndrom při souběžném užívání SSRI nebo SNRI antidepresiv.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "třezalka tečkovaná (Hypericum perforatum)",
-      "effect": "Při současném užívání přípravku Frimig a přípravků obsahujících třezalku tečkovanou se mohou nežádoucí účinky vyskytovat častěji.",
+      "class_id": "substance:10645",
+      "drug_class": "Lithium",
+      "effect": "Při současném užívání sumatriptanu a lithia existuje riziko serotoninového syndromu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": null,
+          "frequency": null,
+          "label": "Serotoninový syndrom při současném užívání lithia.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": null,
+      "drug_class": "Přípravky s třezalkou tečkovanou",
+      "effect": "Současné užívání přípravků s třezalkou tečkovanou může zvýšit četnost nežádoucích účinků sumatriptanu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Frimig 50 mg se užívá k akutní léčbě záchvatů migrény s aurou i bez ní.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0242697",
+      "H": "",
+      "NAZEV": "FRIMIG",
+      "SILA": "50MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "6",
+      "CESTA": "POR",
+      "DOPLNEK": "50MG TBL FLM 6",
+      "OBAL": "BLI",
+      "DRZ": "ORN",
+      "ZEMDRZ": "SF",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "33",
+      "ATC_WHO": "N02CC01",
+      "RC": "33/625/08-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "50",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "6",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10645",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "FRIMIG",
+      "MRP_CISLO": "FI/H/0666/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "10645",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "70",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10645",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "SUMATRIPTANI SUCCINAS",
+          "NAZEV_EN": "SUMATRIPTAN SUCCINATE",
+          "NAZEV": "SUMATRIPTAN-SUKCINÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "10644",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "50",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10644",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "SUMATRIPTANUM",
+          "NAZEV_EN": "SUMATRIPTAN",
+          "NAZEV": "SUMATRIPTAN"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "2624",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "5624",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "3755",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "3508",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3508",
+          "ZDROJ": "C22M",
+          "NAZEV_INN": "LACTOSUM",
+          "NAZEV_EN": "LACTOSE",
+          "NAZEV": "LAKTOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "2624",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "875",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "875",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MANNITOLUM",
+          "NAZEV_EN": "MANNITOL",
+          "NAZEV": "MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "2710",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "4105",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4105",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "TRIACETINUM",
+          "NAZEV_EN": "TRIACETIN",
+          "NAZEV": "TRIACETIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0242697",
+        "KOD_LATKY": "1871",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0242697",
+      "PIL": "PI229888.pdf",
+      "DAT_ROZ_PIL": "22.01.2026",
+      "SPC": "SPC229889.pdf",
+      "DAT_ROZ_SPC": "22.01.2026",
+      "OBAL_TEXT": "OBAL143699.pdf",
+      "DAT_ROZ_OBAL": "26.06.2019"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N02CC01",
+        "NT": "N",
+        "NAZEV": "SUMATRIPTAN",
+        "NAZEV_EN": "SUMATRIPTAN"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

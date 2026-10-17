@@ -1,14 +1,22 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A12",
+    "atc:A12A",
+    "atc:A12AX",
+    "substance:15455",
+    "substance:234"
+  ],
   "side_effects": [
     {
       "ctcae": "Hypercalcemia",
       "frequency": "uncommon",
-      "label": "Významné zvýšení hladiny vápníku v krvi (hyperkalcémie).",
+      "label": "Významné zvýšení hladiny vápníku v krvi (hyperkalcémie); příznaky mohou zahrnovat nevolnost, zvracení, nechutenství, zácpu, bolest žaludku, bolest kostí, velkou žízeň, častější močení, svalovou slabost, ospalost a zmatenost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": null,
       "frequency": "uncommon",
       "label": "Významné zvýšení množství vápníku v moči (hyperkalciurie).",
       "action": null,
@@ -71,7 +79,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
+      "ctcae": "Milk-alkali syndrome",
       "frequency": "very_rare",
       "label": "Milk-alkali syndrom, obvykle pouze při předávkování.",
       "action": null,
@@ -80,105 +88,413 @@
     {
       "ctcae": "Dyspepsia",
       "frequency": "very_rare",
-      "label": "Porucha trávení (dyspepsie).",
+      "label": "Dyspepsie.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Jiné přípravky obsahující vápník a/nebo vitamin D",
-      "effect": "Současné užívání dalších přípravků s vápníkem nebo vitaminem D může výrazně zvýšit hladinu vápníku v krvi a způsobit škodlivé účinky. Videmel s nimi užívejte pouze po poradě s lékařem; lékař může kontrolovat hladinu vápníku v krvi a moči.",
+      "class_id": null,
+      "drug_class": "Další přípravky obsahující vápník nebo vitamin D",
+      "effect": "Současné užívání může výrazně zvýšit hladinu vápníku v krvi a způsobit škodlivé účinky. Další přípravky s vápníkem nebo vitaminem D užívejte jen po poradě s lékařem.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypercalcemia",
-          "frequency": null,
-          "label": "Výrazné zvýšení hladiny vápníku v krvi (hyperkalcémie).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Thiazidová diuretika",
-      "effect": "Thiazidová diuretika snižují vylučování vápníku močí, a proto při současném užívání s přípravkem Videmel zvyšují riziko hyperkalcémie. Lékař bude pravidelně kontrolovat hladinu vápníku v krvi.",
+      "effect": "Snižují vylučování vápníku močí a při současném užívání zvyšují riziko vysoké hladiny vápníku v krvi. Lékař má pravidelně kontrolovat hladinu vápníku v krvi.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypercalcemia",
-          "frequency": null,
-          "label": "Zvýšené riziko hyperkalcémie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Systémově podávané kortikosteroidy",
-      "effect": "Kortikosteroidy podávané ústy nebo injekčně snižují vstřebávání vápníku; při současném užívání může být nutné zvýšit dávku přípravku Videmel.",
+      "class_id": "atc:H02A",
+      "drug_class": "Systémové kortikosteroidy",
+      "effect": "Snižují vstřebávání vápníku; při současném užívání může být nutné zvýšit dávku přípravku Videmel. Dávku upravuje lékař.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Pryskyřice na výměnu iontů (např. kolestyramin) a projímadla (např. parafinový olej)",
-      "effect": "Tyto přípravky snižují vstřebávání vitaminu D z přípravku Videmel.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Tetracyklinová antibiotika",
-      "effect": "Uhličitan vápenatý v přípravku Videmel může ovlivnit vstřebávání tetracyklinových antibiotik. Tetracyklinový přípravek užijte nejméně 2 hodiny před nebo 4–6 hodin po přípravku Videmel.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:C01A",
       "drug_class": "Srdeční glykosidy",
-      "effect": "Hyperkalcémie při léčbě vápníkem a vitaminem D může zvýšit toxicitu srdečních glykosidů. Při současném podávání lékař zajistí sledování EKG a hladiny vápníku v krvi.",
+      "effect": "Vysoká hladina vápníku při léčbě přípravkem Videmel může zvýšit jejich toxicitu. Při současném užívání má lékař sledovat EKG a hladinu vápníku v krvi.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Bisfosfonáty a fluorid sodný",
-      "effect": "Vápník může snížit jejich vstřebávání v trávicím traktu. Tyto přípravky mají být podány nejméně 3 hodiny před přípravkem Videmel.",
+      "class_id": null,
+      "drug_class": "Pryskyřice na výměnu iontů, například kolestyramin, nebo projímadla, například parafinový olej",
+      "effect": "Mohou snížit vstřebávání vitaminu D z přípravku Videmel.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Rifampicin, fenytoin a barbituráty",
-      "effect": "Tyto přípravky mohou zvýšit metabolický obrat vitaminu D3 a snížit jeho účinnost.",
+      "class_id": "atc:J01AA",
+      "drug_class": "Tetracyklinová antibiotika",
+      "effect": "Uhličitan vápenatý může ovlivnit jejich vstřebávání. Antibiotikum užijte nejméně 2 hodiny před přípravkem Videmel nebo 4–6 hodin po něm.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:M05BA",
+      "drug_class": "Bisfosfonáty",
+      "effect": "Vápník může snížit jejich vstřebávání. Bisfosfonát užijte nejméně 3 hodiny před přípravkem Videmel.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A01AA01",
+      "drug_class": "Fluorid sodný",
+      "effect": "Vápník může snížit jeho vstřebávání. Fluorid sodný užijte nejméně 3 hodiny před přípravkem Videmel.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01MA",
       "drug_class": "Chinolonová antibiotika",
-      "effect": "Současně podávaný vápník může narušit vstřebávání chinolonových antibiotik. Užijte je nejméně 2 hodiny před nebo 6 hodin po přípravku s vápníkem.",
+      "effect": "Vápník může narušit jejich vstřebávání. Antibiotikum užijte nejméně 2 hodiny před přípravkem Videmel nebo 6 hodin po něm.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Přípravky obsahující železo, zinek nebo stroncium",
-      "effect": "Vápník může snížit jejich vstřebávání. Užijte tyto přípravky nejméně 2 hodiny před nebo po přípravku Videmel.",
+      "effect": "Vápník může snížit jejich vstřebávání. Tyto přípravky užijte nejméně 2 hodiny před přípravkem Videmel nebo po něm.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Estramustin",
-      "effect": "Vápník může omezit vstřebávání estramustinu. Užijte přípravek obsahující vápník nejméně 2 hodiny před nebo po estramustinu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:H03AA",
       "drug_class": "Hormony štítné žlázy",
-      "effect": "Vápník může omezit jejich vstřebávání. Užijte přípravek obsahující vápník nejméně 2 hodiny před nebo po hormonech štítné žlázy.",
+      "effect": "Vápník může omezit jejich vstřebávání. Přípravek s vápníkem užijte nejméně 2 hodiny před hormonem nebo po něm.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Potraviny s vysokým obsahem kyseliny šťavelové nebo fytové",
-      "effect": "Kyselina šťavelová (například ve špenátu, šťovíku a rebarboře) a kyselina fytová (v celozrnných výrobcích) mohou tvorbou nerozpustných sloučenin zabránit vstřebávání vápníku. Po jejich konzumaci vyčkejte s užitím přípravku Videmel nejméně 2 hodiny.",
+      "class_id": null,
+      "drug_class": "Estramustin",
+      "effect": "Vápník může omezit jeho vstřebávání. Přípravek s vápníkem užijte nejméně 2 hodiny před estramustinem nebo po něm.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J04AB02",
+      "drug_class": "Rifampicin",
+      "effect": "Může snížit účinek vitaminu D3 tím, že zvyšuje jeho metabolický obrat.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Fenytoin",
+      "effect": "Může snížit účinek vitaminu D3 tím, že zvyšuje jeho metabolický obrat.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Barbituráty",
+      "effect": "Mohou snížit účinek vitaminu D3 tím, že zvyšují jeho metabolický obrat.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Potraviny s vysokým obsahem kyseliny šťavelové nebo fytové, například špenát, šťovík, rebarbora a celozrnné výrobky",
+      "effect": "Mohou bránit vstřebávání vápníku. Po jejich konzumaci počkejte s užitím přípravku Videmel nejméně 2 hodiny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Videmel doplňuje vápník a vitamin D při jejich nedostatku a pomáhá předcházet úbytku kostní hmoty.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0250044",
+      "H": "",
+      "NAZEV": "VIDEMEL",
+      "SILA": "600MG/400IU",
+      "FORMA": "TBL FLM",
+      "BALENI": "90",
+      "CESTA": "POR",
+      "DOPLNEK": "600MG/400IU TBL FLM 90",
+      "OBAL": "BLI",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "39",
+      "ATC_WHO": "A12AX",
+      "RC": "39/707/10-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "UD",
+      "DDDP_WHO": "45",
+      "ZDROJ_WHO": "NO26",
+      "LL": "234,15455",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "VIDEMEL",
+      "MRP_CISLO": "HU/H/0229/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "234",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "1,5",
+        "UN": "G",
+        "substance": {
+          "KOD_LATKY": "234",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CALCII CARBONAS",
+          "NAZEV_EN": "CALCIUM CARBONATE",
+          "NAZEV": "UHLIČITAN VÁPENATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "231",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "600",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "231",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CALCIUM",
+          "NAZEV_EN": "CALCIUM",
+          "NAZEV": "VÁPNÍK"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "15455",
+        "SQ": "4",
+        "S": "L",
+        "AMNT": "4",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "15455",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "COLECALCIFEROLI PULVIS",
+          "NAZEV_EN": "CHOLECALCIFEROL CONCENTRATE (POWDER FORM)",
+          "NAZEV": "PRÁŠKOVÝ CHOLEKALCIFEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "0",
+        "SQ": "5",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "402",
+        "SQ": "6",
+        "S": "O",
+        "AMNT": "0,01",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "402",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "COLECALCIFEROLUM",
+          "NAZEV_EN": "COLECALCIFEROL",
+          "NAZEV": "CHOLEKALCIFEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "0",
+        "SQ": "7",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "402",
+        "SQ": "8",
+        "S": "O",
+        "AMNT": "400",
+        "UN": "IU",
+        "substance": {
+          "KOD_LATKY": "402",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "COLECALCIFEROLUM",
+          "NAZEV_EN": "COLECALCIFEROL",
+          "NAZEV": "CHOLEKALCIFEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "3755",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "4079",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4079",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "COPOVIDONUM",
+          "NAZEV_EN": "COPOVIDONE",
+          "NAZEV": "KOPOVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "17840",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17840",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "CROSPOVIDONUM TYPUS A",
+          "NAZEV_EN": "CROSPOVIDONE TYPE A",
+          "NAZEV": "KROSPOVIDON TYP A",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "2378",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "SQ": "13",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0250044",
+        "KOD_LATKY": "18559",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18559",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FLAVUM SEPIFILM 4202 PW",
+          "NAZEV_EN": "SEPIFILM 4202 PW YELLOW",
+          "NAZEV": "POTAHOVÁ SOUSTAVA SEPIFILM 4202 PW ŽLUTÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0250044",
+      "PIL": "PI237197.pdf",
+      "DAT_ROZ_PIL": "14.05.2024",
+      "SPC": "SPC237198.pdf",
+      "DAT_ROZ_SPC": "22.09.2020",
+      "OBAL_TEXT": "OBAL237196.pdf",
+      "DAT_ROZ_OBAL": "19.09.2024"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A12AX",
+        "NT": "N",
+        "NAZEV": "VÁPNÍK, KOMBINACE S VITAMINEM D A/NEBO JINÝMI LÉČIVY",
+        "NAZEV_EN": "CALCIUM, COMBINATIONS WITH VITAMIN D AND/OR OTHER DRUGS"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

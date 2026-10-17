@@ -1,109 +1,413 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A09",
+    "atc:A09A",
+    "atc:A09AA",
+    "atc:A09AA02",
+    "substance:3275"
+  ],
   "side_effects": [
     {
       "ctcae": "Abdominal pain",
       "frequency": "very_common",
-      "label": "Bolest břicha.",
+      "label": "Bolest břicha; v klinických studiích byla velmi častá.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Pocit na zvracení.",
+      "label": "Pocit na zvracení; v klinických studiích častý.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "common",
-      "label": "Zvracení.",
+      "label": "Zvracení; v klinických studiích časté.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Constipation",
       "frequency": "common",
-      "label": "Zácpa.",
+      "label": "Zácpa; v klinických studiích častá.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal distension",
       "frequency": "common",
-      "label": "Nadmutí břicha.",
+      "label": "Nadmutí břicha; v klinických studiích časté.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "common",
-      "label": "Průjem.",
+      "label": "Průjem; v klinických studiích častý.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Vyrážka.",
+      "label": "Vyrážka; v klinických studiích méně častá. Typ vyrážky není blíže určen.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pruritus",
+      "ctcae": "Hypersensitivity",
       "frequency": "not_known",
-      "label": "Svědění.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "not_known",
-      "label": "Kopřivka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Immune system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Alergická přecitlivělost; může se projevit celkovou vyrážkou, angioedémem, otokem rtů, sliznice úst nebo obličeje, pálením či otokem kolem očí nebo astmatickými obtížemi.",
+      "label": "Přecitlivělost; při používání byly hlášeny generalizovaná vyrážka, angioedém, otok rtů, sliznice úst nebo obličeje, pálení či otok kolem očí a astmatické obtíže. Frekvenci nelze z dostupných údajů určit.",
       "action": "discontinue_treatment",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "not_known",
-      "label": "Závažná alergická reakce až anafylaktický šok; léčbu ihned přerušte a vyhledejte okamžitou lékařskou pomoc.",
-      "action": "hospitalize_NOW",
+      "label": "Anafylaktická reakce včetně anafylaktického šoku; při šoku byly hlášeny také bušení srdce a nízký krevní tlak. Frekvenci nelze z dostupných údajů určit.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví svědění, kopřivka nebo vyrážka, otok obličeje, očí, rtů, rukou či nohou, pocit na omdlení nebo slabost, potíže s dýcháním či polykáním, bušení srdce, závrať, kolaps nebo bezvědomí."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Colonic stenosis",
       "frequency": "not_known",
-      "label": "Jizvení a zúžení střeva (fibrotizující kolonopatie), hlášené u pacientů s cystickou fibrózou při vysokých dávkách, zejména nad 10 000 jednotek lipázy/kg tělesné hmotnosti/den; může snížit průchodnost střeva.",
+      "label": "Jizvení nebo zúžení střeva (fibrotizující kolonopatie), zejména u pacientů s cystickou fibrózou při dávce nad 10 000 jednotek lipázy/kg tělesné hmotnosti denně; hlášeny byly striktury v oblasti přechodu tenkého a tlustého střeva i v tlustém střevě. Frekvenci nelze z dostupných údajů určit. Při silné bolesti břicha, zácpě, pocitu na zvracení nebo zvracení informujte ihned lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou bolest břicha, potíže s průchodem stolice, zácpu, pocit na zvracení nebo zvracíte."
+        "patient_guide": "Při silné bolesti břicha, zácpě, pocitu na zvracení nebo zvracení.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Mucositis oral",
       "frequency": null,
-      "label": "Bolest a podráždění či zánět sliznice úst, krvácení nebo vřídky v ústech, pokud tobolku rozkousáte nebo ji či její obsah držíte delší dobu v ústech.",
+      "label": "Bolest, podráždění či zánět sliznice úst, krvácení nebo vředy v ústech při rozkousání tobolek nebo jejich delším držení v ústech.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis viral",
-      "frequency": null,
-      "label": "Možná infekce virem hepatitidy E: u přípravku z prasečího původu nelze přítomnost viru vyloučit. U pacientů s cystickou fibrózou léčených pankreatickými enzymy byla zaznamenána vyšší séroprevalence, avšak studie měla významná omezení a zdroj ani dobu infekce neurčila.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte oslabenou imunitu, užíváte vysoké dávky přípravku a objeví se horečka, pocit na zvracení, neobvyklá bolest břicha nebo změna její povahy, případně zežloutnutí kůže či očního bělma."
-      }
     }
   ],
-  "combinations": []
+  "combinations": [],
+  "usage": "Kreon nahrazuje trávicí enzymy slinivky, pokud jich tělo nevytváří dostatek.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0267069",
+      "H": "",
+      "NAZEV": "KREON",
+      "SILA": "35000U",
+      "FORMA": "CPS ETD",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "35000U CPS ETD 100",
+      "OBAL": "TBC",
+      "DRZ": "VTH",
+      "ZEMDRZ": "IRL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "49",
+      "ATC_WHO": "A09AA02",
+      "RC": "49/123/17-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0",
+      "DDDUN_WHO": "",
+      "DDDP_WHO": "0",
+      "ZDROJ_WHO": "NO26",
+      "LL": "3275",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "KREON",
+      "MRP_CISLO": "DE/H/5183/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "BI"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "3275",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "420",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3275",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "PANCREATIS PULVIS",
+          "NAZEV_EN": "PANCREAS POWDER",
+          "NAZEV": "PRÁŠKOVÝ PANKREATIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "834",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "35000",
+        "UN": "U",
+        "substance": {
+          "KOD_LATKY": "834",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "LIPASUM",
+          "NAZEV_EN": "LIPASE",
+          "NAZEV": "LIPASA"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "11898",
+        "SQ": "4",
+        "S": "O",
+        "AMNT": "25200",
+        "UN": "U",
+        "substance": {
+          "KOD_LATKY": "11898",
+          "ZDROJ": "LIF",
+          "NAZEV_INN": "AMYLASUM",
+          "NAZEV_EN": "AMYLASE",
+          "NAZEV": "AMYLASA"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "1221",
+        "SQ": "5",
+        "S": "O",
+        "AMNT": "1400",
+        "UN": "U",
+        "substance": {
+          "KOD_LATKY": "1221",
+          "ZDROJ": "LIF",
+          "NAZEV_INN": "PROTEASUM",
+          "NAZEV_EN": "PROTEASE",
+          "NAZEV": "PROTEASA"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "2404",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2404",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 4000",
+          "NAZEV_EN": "MACROGOL 4000",
+          "NAZEV": "MAKROGOL 4000"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "4282",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4282",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "HYPROMELLOSI PHTHALAS",
+          "NAZEV_EN": "HYPROMELLOSE PHTHALATE",
+          "NAZEV": "FTALÁT HYPROMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "2034",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2034",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "ALCOHOL CETYLICUS",
+          "NAZEV_EN": "CETYL ALCOHOL",
+          "NAZEV": "CETYLALKOHOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "9832",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9832",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "TRIETHYLIS CITRAS",
+          "NAZEV_EN": "TRIETHYL CITRATE",
+          "NAZEV": "TRIETHYL-CITRÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "2739",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2739",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "DIMETICONUM 1000",
+          "NAZEV_EN": "DIMETICONE 1000",
+          "NAZEV": "DIMETIKON 1000"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "SQ": "11",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "2855",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "4290",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4290",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM RUBRUM",
+          "NAZEV_EN": "IRON OXIDE RED",
+          "NAZEV": "ČERVENÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "4256",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0267069",
+        "KOD_LATKY": "1335",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0267069",
+      "PIL": "PI237137.pdf",
+      "DAT_ROZ_PIL": "28.07.2026",
+      "SPC": "SPC237138.pdf",
+      "DAT_ROZ_SPC": "16.07.2024",
+      "OBAL_TEXT": "OBAL204619.pdf",
+      "DAT_ROZ_OBAL": "09.11.2023",
+      "NR": "NR9532817.pdf",
+      "DAT_NPM_NR": "31.10.2018"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A09AA02",
+        "NT": "N",
+        "NAZEV": "MULTIENZYMOVÉ PŘÍPRAVKY (LIPASA, PROTEASA APOD.)",
+        "NAZEV_EN": "MULTIENZYMES (LIPASE, PROTEASE ETC.)"
+      },
+      "formy": {
+        "FORMA": "CPS ETD",
+        "NAZEV": "Enterosolventní tvrdá tobolka",
+        "NAZEV_EN": "Gastro-resistant capsule, hard",
+        "NAZEV_LAT": "Capsula enterosolvens dura",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10212000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

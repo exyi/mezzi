@@ -1,55 +1,65 @@
 {
+  "classes": [
+    "atc:L",
+    "atc:L04",
+    "atc:L04A",
+    "atc:L04AX",
+    "atc:L04AX01",
+    "substance:1709"
+  ],
   "side_effects": [
     {
       "ctcae": "Infections and infestations - Other, specify",
       "frequency": "very_common",
-      "label": "Virové, kvasinkové, bakteriální nebo prvokové infekce u pacientů po transplantaci léčených azathioprinem spolu s jinými imunosupresivy.",
+      "label": "Virové, kvasinkové, bakteriální nebo prvokové infekce u pacientů po transplantaci.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte horečku, zimnici nebo známky infekce."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Infections and infestations - Other, specify",
       "frequency": "uncommon",
-      "label": "Virové, kvasinkové, bakteriální nebo prvokové infekce u pacientů, kteří nejsou po transplantaci.",
+      "label": "Virové, kvasinkové, bakteriální nebo prvokové infekce u pacientů mimo transplantaci.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte horečku, zimnici nebo známky infekce."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Infections and infestations - Other, specify",
       "frequency": "very_rare",
-      "label": "Progresivní multifokální leukoencefalopatie (PML), infekce mozku způsobená virem JC, hlášená při užívání azathioprinu spolu s dalšími imunosupresivy.",
-      "action": "contact_doctor",
+      "label": "Progresivní multifokální leukoencefalopatie (PML), infekce centrálního nervového systému virem JC, hlášená při kombinaci s dalšími imunosupresivy.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky připomínající PML."
+        "patient_guide": "Při prvních známkách nebo příznacích připomínajících PML.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
       "frequency": "rare",
-      "label": "Různé nádory, včetně nádorů krve, lymfatického systému a kůže; popsané jsou také lymfoproliferativní onemocnění, melanomy a jiné nádory kůže, sarkomy a karcinom děložního čípku in situ.",
+      "label": "Nádory včetně lymfoproliferativních onemocnění, nádorů krve a kůže, sarkomů a karcinomu děložního hrdla in situ.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Bone marrow hypocellular",
       "frequency": "very_common",
-      "label": "Potlačení funkce kostní dřeně, obvykle vratné a závislé na dávce.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se vám vytvoří vředy v hrdle, máte horečku nebo infekci, tvoří se vám podlitiny nebo krvácíte."
-      }
+      "label": "Potlačení funkce kostní dřeně.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "very_common",
-      "label": "Snížený počet bílých krvinek; při obvyklých dávkách byl pokles popsán u více než poloviny léčených pacientů.",
+      "label": "Snížený počet bílých krvinek (leukopenie), který může vést k infekci; SPC uvádí výskyt u více než 50 % pacientů při obvyklých dávkách.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se vám vytvoří vředy v hrdle, máte horečku nebo infekci."
+        "patient_guide": "Pokud se objeví horečka, infekce, vředy v hrdle, podlitiny nebo krvácení.",
+        "min_severity": 2
       }
     },
     {
@@ -58,25 +68,25 @@
       "label": "Snížený počet krevních destiček, který může vést ke snadné tvorbě podlitin nebo krvácení.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se vám tvoří podlitiny nebo krvácíte."
+        "patient_guide": "Pokud se objeví podlitiny nebo krvácení.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Anemia",
       "frequency": "uncommon",
-      "label": "Snížený počet červených krvinek; může způsobit únavu, bolest hlavy, dušnost při námaze, závratě a bledost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví výrazná únava, dušnost při námaze, závratě nebo bledost."
-      }
+      "label": "Snížený počet červených krvinek (anémie); může způsobit únavu, bolest hlavy, dušnost při námaze, závratě a bledost.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "rare",
-      "label": "Agranulocytóza nebo pancytopenie.",
+      "label": "Poruchy krve a kostní dřeně, které mohou způsobit slabost, únavu, bledost, bolest hlavy, bolestivost jazyka, dušnost, podlitiny nebo infekce.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se vám vytvoří vředy v hrdle, máte horečku nebo infekci, tvoří se vám podlitiny nebo krvácíte."
+        "patient_guide": "Pokud se objeví horečka, infekce, vředy v hrdle, podlitiny nebo krvácení.",
+        "min_severity": 2
       }
     },
     {
@@ -85,172 +95,246 @@
       "label": "Aplastická anémie.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se vám vytvoří vředy v hrdle, máte horečku nebo infekci, tvoří se vám podlitiny nebo krvácíte."
-      }
-    },
-    {
-      "ctcae": "Anemia",
-      "frequency": "rare",
-      "label": "Megaloblastická anémie.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se vám vytvoří vředy v hrdle, máte horečku nebo infekci, tvoří se vám podlitiny nebo krvácíte."
+        "patient_guide": "Pokud se objeví horečka, infekce, vředy v hrdle, podlitiny nebo krvácení.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "rare",
-      "label": "Erytroidní hypoplazie.",
+      "label": "Agranulocytóza, pancytopenie, megaloblastická anémie nebo erytroidní hypoplazie.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se vám vytvoří vředy v hrdle, máte horečku nebo infekci, tvoří se vám podlitiny nebo krvácíte."
-      }
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": null,
-      "label": "Vratné zvýšení středního objemu červených krvinek a obsahu hemoglobinu v červených krvinkách, závislé na dávce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Immune system disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Reakce přecitlivělosti, která může zahrnovat celkovou nevolnost, závratě, nevolnost, zvracení, průjem, horečku, třes, vyrážku, kožní uzlíky, zánět cév, bolesti svalů a kloubů, nízký krevní tlak nebo poruchy srdce, ledvin, jater či střev.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví náhlé sípání, potíže s dýcháním, otok víček, obličeje nebo rtů, vyrážka nebo svědění, zejména po celém těle."
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "very_rare",
-      "label": "Stevensův-Johnsonův syndrom, závažná život ohrožující kožní reakce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "very_rare",
-      "label": "Toxická epidermální nekrolýza, závažná život ohrožující kožní reakce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Nedostatek vitaminu B3 (pelagra), který může být spojen s lokalizovanou pigmentovanou vyrážkou, průjmem a zhoršením paměti, úsudku nebo jiných myšlenkových schopností.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte průjem společně s lokalizovanou pigmentovanou vyrážkou nebo zhoršením paměti, úsudku či jiných myšlenkových schopností."
-      }
-    },
-    {
-      "ctcae": "Reversible posterior leukoencephalopathy syndrome",
-      "frequency": "not_known",
-      "label": "Syndrom reverzibilní encefalopatie v zadní cirkulaci (PRES), někdy provázený otokem mozku; příznaky mohou zahrnovat silnou bolest hlavy, změny vidění, epileptické záchvaty, zmatenost nebo snížené vědomí.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte silnou bolest hlavy, změny vidění, epileptický záchvat, zmatenost nebo snížené vědomí."
-      }
-    },
-    {
-      "ctcae": "Tremor",
-      "frequency": "not_known",
-      "label": "Třes.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pneumonitis",
-      "frequency": "very_rare",
-      "label": "Vratný zánět plic, který může způsobit dušnost, kašel a horečku.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dušnost, kašel nebo horečku."
+        "patient_guide": "Pokud se objeví horečka, infekce, vředy v hrdle, podlitiny nebo krvácení.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Nausea",
       "frequency": "very_common",
-      "label": "Pocit na zvracení; někdy se zmírní, když tablety užíváte po jídle.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anorexia",
-      "frequency": "very_common",
-      "label": "Nechutenství.",
-      "action": null,
-      "action_condition": null
+      "label": "Pocit na zvracení a nechutenství, někdy se zvracením; užívání tablet po jídle může nevolnost omezit.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud je nevolnost silná.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Vomiting",
       "frequency": "very_common",
-      "label": "Občasné zvracení, často společně s pocitem na zvracení a nechutenstvím.",
-      "action": null,
-      "action_condition": null
+      "label": "Občasné zvracení, zejména spolu s nevolností a nechutenstvím.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud je zvracení silné.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Pancreatitis",
       "frequency": "uncommon",
-      "label": "Zánět slinivky břišní, který může vyvolat silnou bolest v nadbřišku, nevolnost a zvracení.",
+      "label": "Zánět slinivky břišní; zvláště u pacientů po transplantaci ledviny nebo se zánětlivým onemocněním střev. Může způsobit silnou bolest v nadbřišku, nevolnost a zvracení.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou nevolnost nebo průjem."
+        "patient_guide": "Pokud se objeví silná bolest v nadbřišku, nevolnost nebo zvracení.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Colitis",
       "frequency": "rare",
-      "label": "Zánět tlustého střeva, hlášený u pacientů po transplantaci.",
+      "label": "Kolitida; závažné střevní komplikace byly popsány u pacientů po transplantaci při imunosupresivní léčbě, jejich příčina není jednoznačně stanovena.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte průjem."
+        "patient_guide": "Pokud se objeví silný průjem.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "rare",
-      "label": "Divertikulitida (zánět výchlipek střeva), hlášená u pacientů po transplantaci.",
+      "label": "Divertikulitida nebo perforace střeva; hlášeno u pacientů po transplantaci při imunosupresivní léčbě, jejich příčina není jednoznačně stanovena.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou nevolnost nebo průjem."
-      }
-    },
-    {
-      "ctcae": "Colonic perforation",
-      "frequency": "rare",
-      "label": "Proděravění střeva, hlášené u pacientů po transplantaci.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte silnou nevolnost nebo průjem."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Diarrhea",
       "frequency": "rare",
-      "label": "Silný průjem u pacientů léčených azathioprinem pro zánětlivé onemocnění střev; po opětovném nasazení léčby se může vrátit.",
+      "label": "Silný průjem u pacientů se zánětlivým onemocněním střev; po opětovném nasazení léčby se znovu objevil.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte průjem."
+        "patient_guide": "Pokud je průjem silný.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Abdominal pain",
-      "frequency": "rare",
-      "label": "Bolest břicha jako součást střevních potíží.",
+      "ctcae": "Diarrhea",
+      "frequency": null,
+      "label": "Průjem může spolu s lokalizovanou pigmentovanou vyrážkou a zhoršením paměti, úsudku nebo jiných myšlenkových schopností ukazovat na nedostatek vitaminu B3 (pelagru).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou nevolnost nebo průjem."
+        "patient_guide": "Pokud se průjem objeví spolu s lokalizovanou pigmentovanou vyrážkou a zhoršením paměti, úsudku nebo jiných myšlenkových schopností.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Constipation",
+      "ctcae": "Hypersensitivity",
+      "frequency": "uncommon",
+      "label": "Reakce přecitlivělosti, které mohou zahrnovat malátnost, závratě, nevolnost, zvracení, průjem, horečku, třes, kožní vyrážku či uzlíky, zánět cév, bolesti svalů a kloubů, nízký krevní tlak nebo poruchy srdce, ledvin, jater či střev.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "very_rare",
+      "label": "Život ohrožující alergická reakce s těžkým postižením kůže, včetně Stevensova-Johnsonova syndromu.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "very_rare",
+      "label": "Život ohrožující alergická reakce s těžkým postižením kůže, včetně toxické epidermální nekrolýzy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "very_rare",
+      "label": "Život ohrožující alergická reakce; může se projevit náhlým sípáním, obtížným dýcháním, otokem víček, tváře nebo rtů, vyrážkou či svěděním po těle.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví náhlé sípání, obtížné dýchání, otok víček, tváře nebo rtů, vyrážka nebo svědění po těle.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "very_rare",
+      "label": "Stevensův-Johnsonův syndrom.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "very_rare",
+      "label": "Toxická epidermální nekrolýza.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Pneumonitis",
+      "frequency": "very_rare",
+      "label": "Reverzibilní zánět plic, který může způsobit dušnost, kašel a horečku.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Cholestasis",
+      "frequency": "uncommon",
+      "label": "Cholestáza; po vysazení léčby bývá obvykle vratná a může provázet reakci přecitlivělosti.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "uncommon",
+      "label": "Zhoršení výsledků jaterních testů; po vysazení léčby bývá obvykle vratné.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Hepatic failure",
       "frequency": "rare",
-      "label": "Zácpa jako součást střevních potíží.",
+      "label": "Těžké poškození jater, které může ohrožovat život; vzácně bylo hlášeno při dlouhodobém užívání.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví žloutenka, snadná tvorba podlitin, nepříjemné pocity v břiše, ztráta chuti k jídlu, únava, nevolnost nebo zvracení.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Portal hypertension",
+      "frequency": null,
+      "label": "Necirhotická portální hypertenze.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví abnormality jaterních enzymů, mírná žloutenka, nízký počet krevních destiček nebo zvětšení sleziny.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "frequency": null,
+      "label": "Portosinusoidální cévní onemocnění jater.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví abnormality jaterních enzymů, mírná žloutenka, nízký počet krevních destiček nebo zvětšení sleziny.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Alopecia",
+      "frequency": "rare",
+      "label": "Vypadávání vlasů, které se může zlepšit i při pokračující léčbě; souvislost s azathioprinem není jistá.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Reversible posterior leukoencephalopathy syndrome",
+      "frequency": null,
+      "label": "Syndrom reverzibilní encefalopatie v zadní cirkulaci (PRES), s otokem mozku, který může být vratný; může se projevit silnou bolestí hlavy, změnou vidění, záchvaty, zmateností nebo sníženým vědomím, někdy s vysokým krevním tlakem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví příznaky PRES, jako je bolest hlavy, změna duševního stavu, záchvaty, vysoký krevní tlak nebo poruchy vidění.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Sweet syndrome",
+      "frequency": "not_known",
+      "label": "Sweetův syndrom (akutní febrilní neutrofilní dermatóza): bolestivé vystouplé tmavě červené, růžové nebo fialové bulky, především na pažích, rukou, prstech, obličeji a krku; mohou být doprovázeny horečkou.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví bolestivé vystouplé tmavě červené, růžové nebo fialové bulky, zejména na pažích, rukou, prstech, obličeji nebo krku, s horečkou nebo bez ní.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Pelagra",
+      "frequency": "not_known",
+      "label": "Nedostatek vitaminu B3 (pelagra) spojený s lokalizovanou pigmentovanou kožní vyrážkou, průjmem a zhoršením paměti, úsudku nebo jiných myšlenkových schopností.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví průjem, lokalizovaná pigmentovaná vyrážka nebo zhoršení paměti, úsudku či jiných myšlenkových schopností.",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Salivary gland infection",
@@ -260,134 +344,18 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Cholestáza; může se objevit také v těhotenství.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očního bělma, svědění nebo jiné příznaky poškození jater."
-      }
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "uncommon",
-      "label": "Zhoršení výsledků jaterních funkčních testů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatic failure",
-      "frequency": "rare",
-      "label": "Závažné, někdy život ohrožující poškození jater, zejména při dlouhodobé léčbě.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očního bělma, snadná tvorba podlitin, nepříjemné pocity v břiše, nechutenství, únava, nevolnost nebo zvracení."
-      }
-    },
-    {
-      "ctcae": "Portal hypertension",
+      "ctcae": "Tremor",
       "frequency": "not_known",
-      "label": "Necirhotická portální hypertenze.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky poškození jater, například zežloutnutí kůže nebo očního bělma, snadná tvorba podlitin nebo nepříjemné pocity v břiše."
-      }
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Portosinusoidální cévní onemocnění jater.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky poškození jater, například zežloutnutí kůže nebo očního bělma, snadná tvorba podlitin nebo nepříjemné pocity v břiše."
-      }
-    },
-    {
-      "ctcae": "Alopecia",
-      "frequency": "rare",
-      "label": "Vypadávání vlasů, které se může zlepšit i při pokračování v léčbě.",
+      "label": "Třes.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Sweetův syndrom (akutní febrilní neutrofilní dermatóza): bolestivé vystouplé tmavě červené, růžové nebo fialové bulky na kůži, někdy doprovázené horečkou.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolestivé vystouplé červené, růžové nebo fialové bulky na kůži, zejména společně s horečkou."
-      }
-    },
-    {
-      "ctcae": "Fetal growth retardation",
-      "frequency": null,
-      "label": "Zpomalení růstu plodu pozorované při léčbě azathioprinem společně s prednisolonem.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Premature delivery",
-      "frequency": null,
-      "label": "Předčasný porod pozorovaný při léčbě azathioprinem společně s prednisolonem.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
-      "frequency": null,
-      "label": "Přechodné snížení imunitních funkcí dítěte po nitroděložní expozici azathioprinu společně s prednisonem.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": null,
-      "label": "Leukopenie u některých novorozenců, jejichž matky užívaly azathioprin během těhotenství.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": null,
-      "label": "Trombocytopenie u některých novorozenců, jejichž matky užívaly azathioprin během těhotenství.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": null,
-      "label": "Únava.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví společně s dalšími příznaky poškození jater, jako je zežloutnutí kůže nebo očního bělma, nechutenství, nevolnost nebo zvracení."
-      }
     },
     {
       "ctcae": "Dizziness",
       "frequency": null,
-      "label": "Závratě.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví společně s náhlým sípáním, potížemi s dýcháním, otokem obličeje nebo vyrážkou či svěděním."
-      }
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": null,
-      "label": "Horečka.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte horečku."
-      }
-    },
-    {
-      "ctcae": "Chills",
-      "frequency": null,
-      "label": "Zimnice.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte zimnici."
-      }
+      "label": "Závratě; při závratích neřiďte. Alkohol je může zhoršit; po jeho požití neřiďte ani neobsluhujte stroje.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Myalgia",
@@ -395,7 +363,8 @@
       "label": "Bolest svalů.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví společně s horečkou, zimnicí nebo dalšími závažnými potížemi."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
@@ -404,7 +373,8 @@
       "label": "Bolest kostí.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví společně s horečkou, zimnicí nebo dalšími závažnými potížemi."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
@@ -413,7 +383,18 @@
       "label": "Ztuhlost svalů.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví společně s horečkou, zimnicí nebo dalšími závažnými potížemi."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": null,
+      "label": "Únava.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
@@ -422,16 +403,18 @@
       "label": "Zánět krevních cév.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví společně s horečkou, zimnicí nebo dalšími závažnými potížemi."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": null,
-      "label": "Poruchy ledvin, které mohou být provázeny změnou množství nebo barvy moči.",
+      "label": "Poruchy ledvin; mohou se projevit změnou množství nebo barvy moči.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se změní množství nebo barva moči."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
@@ -440,229 +423,415 @@
       "label": "Bolest na hrudi.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte bolest na hrudi."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Dyspnea",
       "frequency": null,
-      "label": "Dušnost, někdy společně s otokem dolních končetin při potížích se srdcem.",
+      "label": "Dušnost nebo otok dolních končetin při potížích se srdcem.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte dušnost nebo otok dolních končetin."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Peripheral edema",
       "frequency": null,
-      "label": "Otok dolních končetin, někdy společně s dušností při potížích se srdcem.",
+      "label": "Otok dolních končetin při potížích se srdcem.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte otok dolních končetin nebo dušnost."
-      }
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": null,
-      "label": "Potíže se srdcem, které se mohou projevit bolestí na hrudi, dušností nebo otokem dolních končetin.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte bolest na hrudi, dušnost nebo otok dolních končetin."
-      }
-    },
-    {
-      "ctcae": "Nausea",
-      "frequency": "very_common",
-      "label": "Silná nevolnost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud je nevolnost silná."
-      }
-    },
-    {
-      "ctcae": "Diarrhea",
-      "frequency": "rare",
-      "label": "Průjem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte průjem."
+        "patient_guide": null,
+        "min_severity": 3
       }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Inhibitory xantinoxidázy: alopurinol, oxypurinol a thiopurinol",
-      "effect": "Tyto léky zpomalují přeměnu aktivní 6-thioinosinové kyseliny na neaktivní metabolit, a mohou tak zvýšit toxické účinky azathioprinu. Při jejich současném podávání musí lékař snížit dávku azathioprinu na čtvrtinu původní dávky. Při kombinaci azathioprinu s alopurinolem byly hlášeny smrtelné případy.",
+      "class_id": "substance:1709",
+      "drug": "ALOPURINOL",
+      "effect": "Alopurinol, oxypurinol nebo thiopurinol snižují odbourávání aktivní složky azathioprinu. Lékař má dávku azathioprinu snížit na čtvrtinu původní dávky; při současném užívání s alopurinolem byly hlášeny případy úmrtí.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Bone marrow hypocellular",
-          "frequency": null,
-          "label": "Útlum funkce kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "febuxostat",
-      "effect": "Podle neklinických údajů může febuxostat prodloužit účinek azathioprinu a zesílit útlum kostní dřeně. Současné podávání se nedoporučuje, protože nejsou k dispozici údaje pro stanovení vhodné úpravy dávky.",
+      "class_id": null,
+      "drug": "Febuxostat",
+      "effect": "Febuxostat může prodloužit účinek azathioprinu a výrazněji utlumit kostní dřeň. Současné užívání se nedoporučuje; dostupné údaje nestačí k určení vhodného snížení dávky azathioprinu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Bone marrow hypocellular",
-          "frequency": null,
-          "label": "Útlum funkce kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Nedepolarizující myorelaxancia, například atrakurium, rokuronium a cisatrakurium",
-      "effect": "Azathioprin může oslabit nebo zrušit účinek nedepolarizujících myorelaxancií. Před operací má pacient informovat anesteziologa o léčbě azathioprinem.",
+      "class_id": null,
+      "drug": "Oxipurinol",
+      "effect": "Oxipurinol snižuje odbourávání aktivní složky azathioprinu. Lékař má dávku azathioprinu snížit na čtvrtinu původní dávky.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Thiopurinol",
+      "effect": "Thiopurinol snižuje odbourávání aktivní složky azathioprinu. Lékař má dávku azathioprinu snížit na čtvrtinu původní dávky.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L04AD01",
+      "drug": "Cyklosporin",
+      "effect": "Při kombinaci azathioprinu s cyklosporinem může být imunosuprese nadměrná.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L04AD02",
+      "drug": "Takrolimus",
+      "effect": "Při kombinaci azathioprinu s takrolimem může být imunosuprese nadměrná.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L04AB02",
+      "drug": "Infliximab",
+      "effect": "Při léčbě Crohnovy choroby s azathioprinem bylo v prvních týdnech po infuzi infliximabu zaznamenáno přechodné zvýšení aktivního metabolitu azathioprinu a snížení průměrného počtu bílých krvinek; po 3 měsících se hodnoty vrátily k předchozím hladinám.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A07EC",
+      "drug_class": "Deriváty kyseliny aminosalicylové (olsalazin, mesalazin a sulfasalazin)",
+      "effect": "Olsalazin, mesalazin a sulfasalazin mohou brzdit jaterní metabolismus azathioprinu a zvýšit jeho účinek na kostní dřeň. Riziko může být vyšší při vrozeném nedostatku TPMT.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:B01AA",
+      "drug_class": "Kumarinová antikoagulancia",
+      "effect": "Azathioprin může oslabit účinek warfarinu nebo fenprokumonu; při současném užívání je třeba pečlivě sledovat srážlivost krve.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Depolarizující myorelaxancia, například suxamethonium (sukcinylcholin)",
-      "effect": "Azathioprin může zesílit nervosvalovou blokádu vyvolanou depolarizujícími myorelaxancii. Před operací má pacient informovat anesteziologa o léčbě azathioprinem.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Jiná imunosupresiva, například cyklosporin a takrolimus",
-      "effect": "Při současné léčbě azathioprinem se může zvýšit riziko nadměrného potlačení imunity.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "infliximab",
-      "effect": "U pacientů léčených pro Crohnovu chorobu se při souběžném podávání azathioprinu po infuzi infliximabu v prvních týdnech přechodně zvýšila hladina aktivního metabolitu azathioprinu 6-TGN a klesl průměrný počet bílých krvinek; po třech měsících se hodnoty vrátily k předchozím hladinám.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "White blood cell decreased",
-          "frequency": null,
-          "label": "Přechodný pokles počtu bílých krvinek po infuzi infliximabu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Deriváty kyseliny aminosalicylové: olsalazin, mesalazin a sulfasalazin",
-      "effect": "Tyto léky mohou inhibovat metabolismus azathioprinu a zvýšit jeho účinek na kostní dřeň. Riziko může být vyšší u pacientů se sníženou aktivitou TPMT.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Bone marrow hypocellular",
-          "frequency": null,
-          "label": "Útlum funkce kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Kumarinová antikoagulancia: warfarin a fenprokumon",
-      "effect": "Azathioprin může oslabit antikoagulační účinek warfarinu nebo fenprokumonu. Lékař má pečlivě sledovat srážlivost krve.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
+      "class_id": "atc:C09",
       "drug_class": "Inhibitory ACE",
       "effect": "Současná léčba azathioprinem a inhibitory ACE zvyšuje riziko útlumu kostní dřeně.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Bone marrow hypocellular",
-          "frequency": null,
-          "label": "Útlum funkce kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Kombinace trimethoprimu a sulfamethoxazolu",
-      "effect": "Současná léčba azathioprinem a kombinací trimethoprimu se sulfamethoxazolem zvyšuje riziko útlumu kostní dřeně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Bone marrow hypocellular",
-          "frequency": null,
-          "label": "Útlum funkce kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "cimetidin",
-      "effect": "Současná léčba cimetidinem a azathioprinem zvyšuje riziko útlumu kostní dřeně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Bone marrow hypocellular",
-          "frequency": null,
-          "label": "Útlum funkce kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "indometacin",
-      "effect": "Současná léčba indometacinem a azathioprinem zvyšuje riziko útlumu kostní dřeně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Bone marrow hypocellular",
-          "frequency": null,
-          "label": "Útlum funkce kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčiva s myelosupresivními nebo cytotoxickými účinky",
-      "effect": "Současné podávání s azathioprinem může zesílit toxický účinek na kostní dřeň. Riziko se týká také myelosupresivní léčby dokončené krátce před zahájením azathioprinu; souběžná léčba cytostatiky vyžaduje lékařský dohled.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Bone marrow hypocellular",
-          "frequency": null,
-          "label": "Útlum funkce kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "methotrexát",
-      "effect": "Methotrexát zvyšuje expozici aktivnímu metabolitu azathioprinu 6-merkaptopurinu. Perorální dávka 20 mg/m² zvýšila AUC přibližně o 31 %; intravenózní dávky 2 g/m² a 5 g/m² ji zvýšily přibližně o 69 %, respektive 93 %. Při současném podávání vysokých dávek methotrexátu má lékař upravit dávku azathioprinu tak, aby byl zachován dostatečný počet bílých krvinek.",
-      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": null,
+      "drug": "Trimethoprim",
+      "effect": "Současná léčba azathioprinem a trimethoprimem zvyšuje riziko útlumu kostní dřeně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Sulfamethoxazol",
+      "effect": "Současná léčba azathioprinem a sulfamethoxazolem zvyšuje riziko útlumu kostní dřeně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A02BA01",
+      "drug": "Cimetidin",
+      "effect": "Současná léčba azathioprinem a cimetidinem zvyšuje riziko útlumu kostní dřeně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C01EB03",
+      "drug": "Indometacin",
+      "effect": "Současná léčba azathioprinem a indometacinem zvyšuje riziko útlumu kostní dřeně.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:myelosuppressive",
+      "drug_class": "Léčiva s myelosupresivními nebo cytotoxickými účinky",
+      "effect": "Současné užívání azathioprinu s léčivy, která tlumí kostní dřeň nebo jsou cytotoxická, může zesílit toxické účinky na kostní dřeň. Platí to i pro takovou léčbu dokončenou krátce před zahájením azathioprinu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M03AC",
+      "drug_class": "Nedepolarizující neuromuskulární blokátory",
+      "effect": "Azathioprin může oslabit účinek nedepolarizujících myorelaxancií. Pacient má před operací informovat anesteziologa o léčbě azathioprinem.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M03AB01",
+      "drug": "Suxamethonium",
+      "effect": "Azathioprin může zesílit neuromuskulární blokádu vyvolanou depolarizujícími myorelaxancii, jako je suxamethonium. Pacient má před operací informovat anesteziologa o léčbě azathioprinem.",
+      "effect_type": "synergy",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J07",
       "drug_class": "Živé vakcíny",
-      "effect": "Azathioprin může vyvolat netypickou a potenciálně škodlivou odpověď na živé vakcíny. Živé vakcíny jsou při léčbě azathioprinem kontraindikovány.",
+      "effect": "Živé vakcíny mohou u pacientů léčených azathioprinem vyvolat netypickou a potenciálně škodlivou odpověď; jejich podávání je kontraindikováno.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "Neživé vakcíny, včetně toxoidových vakcín",
-      "effect": "Při léčbě azathioprinem může být odpověď na neživé vakcíny slabší; oslabená odpověď na vakcínu proti hepatitidě B byla pozorována při kombinaci azathioprinu s kortikosteroidy. Lékař má po podání inaktivované nebo toxoidové vakcíny sledovat imunitní odpověď stanovením titru. Malá studie nezjistila škodlivý vliv obvyklých dávek azathioprinu na odpověď na polyvalentní pneumokokovou vakcínu.",
-      "effect_type": "antagonism",
+      "class_id": "atc:J07BC01",
+      "drug": "Vakcína proti hepatitidě B",
+      "effect": "U pacientů léčených kombinací azathioprinu a kortikosteroidů byla pozorována slabší imunitní odpověď na vakcínu proti hepatitidě B.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "furosemid",
-      "effect": "Furosemid snížil metabolismus azathioprinu v lidské jaterní tkáni in vitro; klinický význam tohoto zjištění není znám.",
-      "effect_type": null,
+      "class_id": null,
+      "drug": "Methotrexát",
+      "effect": "Methotrexát může zvýšit expozici aktivnímu metabolitu azathioprinu. Při současném podávání vysokých dávek methotrexátu má lékař upravit dávku azathioprinu tak, aby byl zachován dostatečný počet bílých krvinek.",
+      "effect_type": "increased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Imasup tlumí imunitní systém a užívá se po transplantaci nebo k léčbě některých závažných autoimunitních onemocnění.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0249252",
+      "H": "",
+      "NAZEV": "IMASUP",
+      "SILA": "25MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "25MG TBL FLM 100",
+      "OBAL": "BLI",
+      "DRZ": "BAU",
+      "ZEMDRZ": "IRL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "59",
+      "ATC_WHO": "L04AX01",
+      "RC": "59/500/15-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0,15",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "16,6667",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1709",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "60",
+      "EXP_T": "M",
+      "NAZEV_REG": "IMASUP",
+      "MRP_CISLO": "EE/H/0313/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0249252",
+        "KOD_LATKY": "1709",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "25",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1709",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "AZATHIOPRINUM",
+          "NAZEV_EN": "AZATHIOPRINE",
+          "NAZEV": "AZATHIOPRIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0249252",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT_OD": "PL",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0249252",
+        "KOD_LATKY": "3755",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0249252",
+        "KOD_LATKY": "14679",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0249252",
+        "KOD_LATKY": "4989",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4989",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "PREGELATINISED MAIZE STARCH",
+          "NAZEV": "PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0249252",
+        "KOD_LATKY": "1166",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1166",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "POLYSORBATUM 80",
+          "NAZEV_EN": "POLYSORBATE 80",
+          "NAZEV": "POLYSORBÁT 80"
+        }
+      },
+      {
+        "KOD_SUKL": "0249252",
+        "KOD_LATKY": "18178",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18178",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 30",
+          "NAZEV_EN": "POVIDONE K 30",
+          "NAZEV": "POVIDON K 30",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0249252",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0249252",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0249252",
+        "KOD_LATKY": "16929",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16929",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FUSCUM OPADRY 02G56674",
+          "NAZEV_EN": "OPADRY 02G56674 (BROWN)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPADRY 02G56674 HNĚDÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0249252",
+      "PIL": "PI229791.pdf",
+      "DAT_ROZ_PIL": "20.01.2026",
+      "SPC": "SPC229792.pdf",
+      "DAT_ROZ_SPC": "20.01.2026",
+      "OBAL_TEXT": "OBAL220251.pdf",
+      "DAT_ROZ_OBAL": "18.03.2025",
+      "NR": "NR17468414.pdf",
+      "DAT_NPM_NR": "07.10.2015"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "L04AX01",
+        "NT": "N",
+        "NAZEV": "AZATHIOPRIN",
+        "NAZEV_EN": "AZATHIOPRINE"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

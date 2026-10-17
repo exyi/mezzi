@@ -1,16 +1,27 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C10",
+    "atc:C10A",
+    "atc:C10AC",
+    "atc:C10AC01",
+    "substance:1615"
+  ],
   "side_effects": [
     {
       "ctcae": "Constipation",
       "frequency": "very_common",
-      "label": "Zácpa; přípravek může zhoršit i již existující zácpu.",
+      "label": "Zácpa; může se zhoršit již existující zácpa.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Nevolnost.",
+      "label": "Nevolnost nebo nucení na zvracení.",
       "action": null,
       "action_condition": null
     },
@@ -22,7 +33,7 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Gastroesophageal reflux disease",
       "frequency": "common",
       "label": "Pálení žáhy.",
       "action": null,
@@ -38,7 +49,7 @@
     {
       "ctcae": "Dyspepsia",
       "frequency": "common",
-      "label": "Poruchy trávení (dyspepsie).",
+      "label": "Dyspepsie.",
       "action": null,
       "action_condition": null
     },
@@ -64,9 +75,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Malabsorption",
+      "ctcae": null,
       "frequency": "very_rare",
-      "label": "Zhoršení již existující poruchy trávení tuků (steatorey).",
+      "label": "Zesílení již existující steatorey.",
       "action": null,
       "action_condition": null
     },
@@ -78,30 +89,30 @@
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Folate deficiency",
       "frequency": "very_rare",
-      "label": "Snížená koncentrace kyseliny listové v krvi.",
+      "label": "Snížení koncentrace kyseliny listové v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alkaline phosphatase increased",
       "frequency": null,
-      "label": "Zvýšená alkalická fosfatáza, pozorovaná na začátku léčby.",
+      "label": "Na začátku léčby může stoupnout hladina alkalické fosfatázy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": null,
-      "label": "Zvýšené hodnoty jaterních transamináz, pozorované na začátku léčby.",
+      "label": "Na začátku léčby mohou stoupnout transaminázy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Acidosis",
       "frequency": "very_rare",
-      "label": "Hyperchloremická acidóza při dlouhodobé léčbě u dětí a pacientů se selháním ledvin.",
+      "label": "Hyperchlorémická acidóza při dlouhodobé léčbě u dětí a pacientů se selháním ledvin.",
       "action": null,
       "action_condition": null
     },
@@ -113,93 +124,225 @@
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": null,
-      "label": "Zarudnutí a podráždění kůže, jazyka nebo oblasti konečníku.",
+      "label": "Zarudnutí a podráždění kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hypertriglyceridemia",
+      "ctcae": "Immune system disorders - Other, specify",
       "frequency": null,
-      "label": "Zvýšení hladiny triglyceridů v krvi.",
+      "label": "Zarudnutí a podráždění jazyka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anal pain",
+      "frequency": null,
+      "label": "Zarudnutí a podráždění v oblasti konečníku.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dental caries",
       "frequency": null,
-      "label": "Zubní kaz; přípravek může poškozovat zuby.",
+      "label": "Přípravek může přispívat ke vzniku zubního kazu.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Statiny (inhibitory HMG-CoA-reduktázy)",
-      "effect": "Při současném užívání s Vasosanem P dochází k aditivnímu snížení LDL cholesterolu. Oba přípravky lze podle pokynů lékaře užívat společně nebo v různou dobu; dávkování statinu se řídí jeho vlastními pokyny.",
-      "effect_type": "synergy",
-      "side_effects": []
-    },
-    {
-      "drug": "Fenylbutazon",
-      "effect": "Vasosan P může při současném perorálním užívání prodloužit nebo snížit vstřebávání fenylbutazonu. Pokud interakci nelze vyloučit, lékař může doporučit užít fenylbutazon alespoň 1 hodinu před Vasosanem P nebo 4 hodiny po něm, aby se omezilo snížení jeho vstřebávání.",
+      "class_id": null,
+      "drug_class": "Některé současně užívané perorální léky, například fenylbutazon, hydrochlorothiazid, tetracyklin, penicilin G, fenobarbital a léky na štítnou žlázu",
+      "effect": "Kolestyramin může prodloužit nebo snížit vstřebávání těchto léků. Pokud nelze interakci vyloučit, lékař může doporučit užít druhý lék nejméně 1 hodinu před nebo 4 hodiny po Vasosanu P, aby se snížilo riziko jeho horšího vstřebávání.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Hydrochlorothiazid",
-      "effect": "Vasosan P může při současném perorálním užívání prodloužit nebo snížit vstřebávání hydrochlorothiazidu. Pokud interakci nelze vyloučit, lékař může doporučit užít hydrochlorothiazid alespoň 1 hodinu před Vasosanem P nebo 4 hodiny po něm, aby se omezilo snížení jeho vstřebávání.",
-      "effect_type": "decreased_exposure",
+      "class_id": "atc:B01AA",
+      "drug_class": "Antagonisté vitaminu K užívaní ústy",
+      "effect": "Kolestyramin může snížit vstřebávání vitaminu K a ovlivnit účinek těchto léků; po vysazení kolestyraminu se může jejich účinek zvýšit. Lékař má antikoagulační léčbu pečlivě sledovat a podle potřeby zvážit kontrolu hladiny léku nebo jeho účinku.",
+      "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Tetracykliny",
-      "effect": "Vasosan P může při současném perorálním užívání prodloužit nebo snížit jejich vstřebávání. Pokud interakci nelze vyloučit, lékař může doporučit užít tetracyklin alespoň 1 hodinu před Vasosanem P nebo 4 hodiny po něm, aby se omezilo snížení jeho vstřebávání.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Penicilin G",
-      "effect": "Vasosan P může při současném perorálním užívání prodloužit nebo snížit vstřebávání penicilinu G. Pokud interakci nelze vyloučit, lékař může doporučit užít penicilin G alespoň 1 hodinu před Vasosanem P nebo 4 hodiny po něm, aby se omezilo snížení jeho vstřebávání.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Fenobarbital",
-      "effect": "Vasosan P může při současném perorálním užívání prodloužit nebo snížit vstřebávání fenobarbitalu. Pokud interakci nelze vyloučit, lékař může doporučit užít fenobarbital alespoň 1 hodinu před Vasosanem P nebo 4 hodiny po něm, aby se omezilo snížení jeho vstřebávání.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Hormony štítné žlázy a přípravky k jejich náhradě",
-      "effect": "Vasosan P může snížit vstřebávání těchto přípravků, včetně tyroxinu. Je třeba sledovat účinek substituční léčby; pokud interakci nelze vyloučit, lékař může doporučit užít druhý lék alespoň 1 hodinu před Vasosanem P nebo 4 hodiny po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
+      "class_id": null,
       "drug": "Digitoxin",
-      "effect": "Vasosan P může významně ovlivnit farmakokinetiku digitoxinu i při časovém odstupu. Po vysazení Vasosanu P se může hladina digitoxinu v krvi zvýšit; pokud byla dávka digitoxinu při léčbě Vasosanem P nastavena na udržovací dávku, může její rychlé zvýšení představovat život ohrožující situaci.",
-      "effect_type": "increased_exposure",
+      "effect": "Kolestyramin může změnit farmakokinetiku digitoxinu i při časovém odstupu. Po vysazení kolestyraminu může hladina digitalisu v krvi stoupnout; rychlé vysazení může být život ohrožující, pokud byl potenciálně toxický lék, například digitoxin, během léčby nastaven na udržovací dávku.",
+      "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Perorální antikoagulancia, zejména antagonisté vitaminu K",
-      "effect": "Vasosan P může ovlivnit vstřebávání a účinek perorálních antikoagulancií také změnou enterohepatálního oběhu a snížením vstřebávání vitaminu K. Po vysazení Vasosanu P se může účinek perorálních antikoagulancií zvýšit. Lékař má antikoagulační léčbu pečlivě kontrolovat a podle klinického významu může sledovat hladiny nebo účinky léčiva.",
-      "effect_type": null,
+      "class_id": "atc:H03AA",
+      "drug_class": "Hormony štítné žlázy",
+      "effect": "Kolestyramin prokazatelně snižuje vstřebávání tyroxinu. Lékař má sledovat účinek substituční léčby.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Estrogeny, včetně ethinylestradiolu v perorální antikoncepci",
-      "effect": "Vasosan P může ovlivnit farmakokinetiku estrogenů i při časovém odstupu a snižovat poločas ethinylestradiolu. Při současném užívání perorální antikoncepce proto nelze vyloučit snížení jejího antikoncepčního účinku.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Vitaminy rozpustné v tucích (A, D, E a K)",
-      "effect": "Vasosan P může snížit vstřebávání vitaminů rozpustných v tucích. Zvláštní opatrnost je nutná u pacientů náchylných k jejich nedostatku nebo s malabsorpcí; lékař může sledovat hladiny vitaminů A, D a E, stav vitaminu K pomocí koagulačních faktorů a podle potřeby doporučit doplnění vitaminů.",
+      "class_id": "atc:G03A",
+      "drug_class": "Perorální hormonální antikoncepce",
+      "effect": "Kolestyramin může snížit hladinu ethinylestradiolu a nelze vyloučit snížení antikoncepčního účinku.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Vasosan P snižuje hladinu cholesterolu a používá se také při průjmu způsobeném žlučovými kyselinami nebo při svědění či žloutence z částečného uzávěru žlučových cest.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0232589",
+      "H": "",
+      "NAZEV": "VASOSAN P",
+      "SILA": "4G",
+      "FORMA": "POR GRA SUS",
+      "BALENI": "50",
+      "CESTA": "POR",
+      "DOPLNEK": "4G POR GRA SUS 50",
+      "OBAL": "SCC",
+      "DRZ": "",
+      "ZEMDRZ": "",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "F",
+      "V_PLATDO": "",
+      "NEOMEZ": "",
+      "UVADENIDO": "",
+      "IS_": "31",
+      "ATC_WHO": "C10AC01",
+      "RC": "",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "",
+      "DDDAMNT_WHO": "14",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "14,2857",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1615",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "VASOSAN P",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "",
+      "OCHRANNY_PRVEK": "",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0232589",
+        "KOD_LATKY": "1615",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "73,82",
+        "UN": "G",
+        "substance": {
+          "KOD_LATKY": "1615",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "COLESTYRAMINUM",
+          "NAZEV_EN": "COLESTYRAMINE",
+          "NAZEV": "KOLESTYRAMIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0232589",
+        "KOD_LATKY": "1383",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "G",
+        "substance": {
+          "KOD_LATKY": "1383",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SACCHAROSUM",
+          "NAZEV_EN": "SUCROSE",
+          "NAZEV": "SACHAROSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0232589",
+        "KOD_LATKY": "21079",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "G",
+        "substance": {
+          "KOD_LATKY": "21079",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "PECTINI MALI EXTRACTUM",
+          "NAZEV_EN": "APPLE PECTIN EXTRACT",
+          "NAZEV": "EXTRAKT Z JABLEČNÉHO PEKTINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0232589",
+        "KOD_LATKY": "9793",
+        "SQ": "4",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "9793",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AROMA AURANTII",
+          "NAZEV_EN": "ORANGE FLAVOUR",
+          "NAZEV": "POMERANČOVÉ AROMA"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0232589",
+      "PIL": "PI215502.pdf",
+      "DAT_ROZ_PIL": "05.11.2024",
+      "SPC": "SPC215503.pdf",
+      "DAT_ROZ_SPC": "05.11.2024"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C10AC01",
+        "NT": "N",
+        "NAZEV": "KOLESTYRAMIN",
+        "NAZEV_EN": "COLESTYRAMINE"
+      },
+      "formy": {
+        "FORMA": "POR GRA SUS",
+        "NAZEV": "Granule pro perorální suspenzi",
+        "NAZEV_EN": "Granules for oral suspension",
+        "NAZEV_LAT": "Granula pro suspensione perorali",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10113000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "SCC",
+        "NAZEV": "Sáček",
+        "NAZEV_EN": "Sachet",
+        "KOD_EDQM": "30054000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "F",
+        "NAZEV": "specifický léčebný program povolený MZČR na základě doporučení SÚKL"
+      }
+    }
+  }
 }

@@ -1,9 +1,17 @@
 {
+  "classes": [
+    "atc:M",
+    "atc:M01",
+    "atc:M01A",
+    "atc:M01AX",
+    "atc:M01AX25",
+    "substance:17835"
+  ],
   "side_effects": [
     {
       "ctcae": "Dyspepsia",
       "frequency": "very_rare",
-      "label": "Zažívací potíže: tlak v žaludku, pálení žáhy, nevolnost nebo nucení na zvracení.",
+      "label": "Zažívací potíže, například tlak v žaludku, pálení žáhy, nevolnost nebo nucení na zvracení; obvykle nevedou k přerušení léčby.",
       "action": null,
       "action_condition": null
     },
@@ -24,18 +32,29 @@
     {
       "ctcae": "Allergic reaction",
       "frequency": "very_rare",
-      "label": "Alergická reakce, například kožní vyrážka, otok obličeje nebo hrdla, sípání či potíže s dýcháním.",
+      "label": "Alergická reakce, někdy s otokem obličeje nebo hrdla, sípáním či potížemi s dýcháním.",
       "action": "discontinue_treatment",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "very_rare",
+      "label": "Otok obličeje jako projev alergické reakce.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Urticaria",
       "frequency": "not_known",
       "label": "Kopřivka.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kopřivka."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Pruritus",
@@ -47,12 +66,144 @@
     {
       "ctcae": "Generalized edema",
       "frequency": "very_rare",
-      "label": "Otok a/nebo zadržování tekutiny v těle u pacientů se srdečním nebo ledvinným selháním.",
+      "label": "U pacientů se srdečním nebo ledvinným selháním byl velmi vzácně hlášen otok a/nebo zadržování tekutin v těle.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte srdeční nebo ledvinné selhání a objeví se u vás otok nebo zadržování tekutiny v těle."
+        "patient_guide": "Pokud máte srdeční nebo ledvinné selhání.",
+        "min_severity": 2
       }
     }
   ],
-  "combinations": []
+  "combinations": [],
+  "usage": "Používá se k dlouhodobé léčbě degenerativních onemocnění kloubů, zejména kolen, kyčlí a kloubů prstů ruky.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0248801",
+      "H": "",
+      "NAZEV": "CONDROSULF",
+      "SILA": "800MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "800MG TBL NOB 30",
+      "OBAL": "BLI",
+      "DRZ": "IBB",
+      "ZEMDRZ": "SK",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "",
+      "UVADENIDO": "",
+      "IS_": "29",
+      "ATC_WHO": "M01AX25",
+      "RC": "29/198/20-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0",
+      "DDDUN_WHO": "",
+      "DDDP_WHO": "0",
+      "ZDROJ_WHO": "NO26",
+      "LL": "17835",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "CONDROSULF",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0248801",
+        "KOD_LATKY": "17835",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "800",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17835",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "CHONDROITINI NATRII SULFAS",
+          "NAZEV_EN": "CHONDROITIN SULFATE SODIUM",
+          "NAZEV": "SODNÁ SŮL CHONDROITIN-SULFÁTU"
+        }
+      },
+      {
+        "KOD_SUKL": "0248801",
+        "KOD_LATKY": "2378",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0248801",
+      "PIL": "PI212163.pdf",
+      "DAT_ROZ_PIL": "23.07.2024",
+      "SPC": "SPC212164.pdf",
+      "DAT_ROZ_SPC": "23.07.2024",
+      "OBAL_TEXT": "OBAL188896.pdf",
+      "DAT_ROZ_OBAL": "19.07.2022",
+      "NR": "NR13837820.pdf",
+      "DAT_NPM_NR": "19.07.2022"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "M01AX25",
+        "NT": "N",
+        "NAZEV": "CHONDROITIN-SULFÁT",
+        "NAZEV_EN": "CHONDROITIN SULFATE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

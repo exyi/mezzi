@@ -1,256 +1,96 @@
 {
+  "classes": [
+    "atc:L",
+    "atc:L04",
+    "atc:L04A",
+    "atc:L04AX",
+    "atc:L04AX03",
+    "group:myelosuppressive",
+    "substance:1746"
+  ],
   "side_effects": [
     {
-      "ctcae": "Shingles",
-      "frequency": "common",
-      "label": "Pásový opar (herpes zoster).",
+      "ctcae": "Allergic reaction",
+      "frequency": null,
+      "label": "Závažná alergická reakce: sípání, potíže s dýcháním nebo otok obličeje či rtů; také vyrážka či svědění po celém těle.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Pneumonitis",
+      "frequency": null,
+      "label": "Plicní komplikace, například zánět plicních sklípků nebo plicní tkáně; může se projevit suchým kašlem, dušností, bolestí na hrudi či horečkou.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": null,
+      "label": "Poškození nebo zánět jater; možné příznaky jsou žloutenka, tmavá moč, nevolnost, bolest na pravé straně břicha a svědění.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Acute kidney injury",
+      "frequency": null,
+      "label": "Poškození či selhání ledvin, které se může projevit otoky nebo výrazným úbytkem či zástavou močení.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "uncommon",
-      "label": "Oportunní infekce, které mohou být smrtelné, včetně pneumonie vyvolané Pneumocystis jirovecii.",
+      "frequency": null,
+      "label": "Infekce včetně závažných infekcí; při léčbě může být oslabená obranyschopnost.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Sepsis",
       "frequency": "rare",
-      "label": "Sepse, která může být smrtelná.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
-      }
-    },
-    {
-      "ctcae": "Herpes simplex reactivation",
-      "frequency": "very_rare",
-      "label": "Infekce virem herpes simplex, včetně rozšířené infekce.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
-      }
-    },
-    {
-      "ctcae": "Hepatitis viral",
-      "frequency": "very_rare",
-      "label": "Zánět jater vyvolaný virem herpes simplex.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "very_rare",
-      "label": "Kryptokokóza.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
-      }
-    },
-    {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "very_rare",
-      "label": "Histoplazmóza.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
-      }
-    },
-    {
-      "ctcae": "Cytomegalovirus infection reactivation",
-      "frequency": "very_rare",
-      "label": "Infekce cytomegalovirem, včetně pneumonie.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
-      }
-    },
-    {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "very_rare",
-      "label": "Nokardióza.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
-      }
-    },
-    {
-      "ctcae": "Pneumonia",
-      "frequency": "not_known",
-      "label": "Pneumonie, včetně pneumonie vyvolané Pneumocystis jirovecii.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví dýchací obtíže nebo jiné problémy s plícemi."
-      }
-    },
-    {
-      "ctcae": "Hepatitis B reactivation",
-      "frequency": "not_known",
-      "label": "Opětovné vzplanutí infekce virem hepatitidy B.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Hepatitis viral",
-      "frequency": "not_known",
-      "label": "Zhoršení infekce virem hepatitidy C.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
-      "frequency": "uncommon",
-      "label": "Maligní lymfom; v některých případech po ukončení léčby methotrexátem vymizí.",
+      "label": "Sepse, někdy smrtelná.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
-      "frequency": "rare",
-      "label": "Lymfoproliferativní onemocnění (nadměrná tvorba bílých krvinek), částečně vratné.",
+      "ctcae": "White blood cell decreased",
+      "frequency": "very_common",
+      "label": "Pokles počtu bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "very_common",
-      "label": "Snížený počet krevních destiček.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví neobvyklé modřiny, krvácení, krvácení z nosu, malé červené skvrny na kůži nebo silné vyčerpání."
-      }
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "very_common",
-      "label": "Snížený počet bílých krvinek.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, vředy v ústech, chřipkové obtíže nebo silné vyčerpání."
-      }
+      "label": "Pokles počtu krevních destiček.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Anemia",
       "frequency": "common",
-      "label": "Chudokrevnost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, vředy v ústech, chřipkové obtíže nebo silné vyčerpání."
-      }
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "common",
-      "label": "Pancytopenie (výrazný pokles počtu všech krvinek).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, vředy v ústech, chřipkové obtíže, silné vyčerpání, krvácení z nosu nebo malé červené skvrny na kůži."
-      }
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "common",
-      "label": "Útlum kostní dřeně.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, vředy v ústech, chřipkové obtíže, silné vyčerpání, krvácení z nosu nebo malé červené skvrny na kůži."
-      }
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "common",
-      "label": "Agranulocytóza (výrazný pokles některých bílých krvinek).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, vředy v ústech, chřipkové obtíže nebo silné vyčerpání."
-      }
-    },
-    {
-      "ctcae": "Anemia",
-      "frequency": "rare",
-      "label": "Megaloblastová anemie, zejména při dlouhodobé léčbě starších pacientů.",
+      "label": "Anémie; může se objevit také útlum kostní dřeně, agranulocytóza nebo pancytopenie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Aplastic anemia",
       "frequency": "very_rare",
-      "label": "Aplastická anemie.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, vředy v ústech, chřipkové obtíže, silné vyčerpání, krvácení z nosu nebo malé červené skvrny na kůži."
-      }
-    },
-    {
-      "ctcae": "Eosinophilia",
-      "frequency": "very_rare",
-      "label": "Zvýšený počet eozinofilů v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Neutrophil count decreased",
-      "frequency": "very_rare",
-      "label": "Snížený počet neutrofilů.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví horečka, bolest v krku, vředy v ústech, chřipkové obtíže nebo silné vyčerpání."
-      }
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Zvětšení mízních uzlin, částečně vratné.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "uncommon",
-      "label": "Alergická reakce, která může dosáhnout až anafylaktického šoku.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se náhle objeví sípání, potíže s dýcháním, otok očních víček, obličeje nebo rtů, vyrážka nebo svědění, zejména po celém těle."
-      }
-    },
-    {
-      "ctcae": "Immune system disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Oslabení imunitního systému (imunosuprese).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
-      }
-    },
-    {
-      "ctcae": "Diabetes mellitus",
-      "frequency": "uncommon",
-      "label": "Cukrovka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Depression",
-      "frequency": "uncommon",
-      "label": "Deprese.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Změny nálady a přechodné poruchy vnímání.",
+      "label": "Aplastická anémie.",
       "action": null,
       "action_condition": null
     },
@@ -264,13 +104,13 @@
     {
       "ctcae": "Vertigo",
       "frequency": "very_common",
-      "label": "Pocit otáčení (vertigo).",
+      "label": "Závrať nebo pocit otáčení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Somnolence",
-      "frequency": "common",
+      "frequency": "very_common",
       "label": "Ospalost.",
       "action": null,
       "action_condition": null
@@ -278,113 +118,9 @@
     {
       "ctcae": "Paresthesia",
       "frequency": "common",
-      "label": "Mravenčení.",
+      "label": "Mravenčení; vzácně také přechodné poruchy čití.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Hemiparesis",
-      "frequency": "uncommon",
-      "label": "Ochrnutí nebo slabost jedné poloviny těla.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví necitlivost nebo slabost na jedné straně těla, potíže s mluvením nebo závratě."
-      }
-    },
-    {
-      "ctcae": "Confusion",
-      "frequency": "uncommon",
-      "label": "Zmatenost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nové nebo zhoršující se neurologické potíže, například změny myšlení, paměti či orientace."
-      }
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Ochrnutí nebo částečná ztráta svalové síly.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nové nebo zhoršující se neurologické potíže."
-      }
-    },
-    {
-      "ctcae": "Dysarthria",
-      "frequency": "rare",
-      "label": "Porucha řeči, včetně nezřetelné řeči nebo potíží s vyjadřováním.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nové nebo zhoršující se neurologické potíže."
-      }
-    },
-    {
-      "ctcae": "Leukoencephalopathy",
-      "frequency": "rare",
-      "label": "Leukoencefalopatie (poškození bílé hmoty mozkové).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nové nebo zhoršující se neurologické potíže."
-      }
-    },
-    {
-      "ctcae": "Myasthenia gravis",
-      "frequency": "very_rare",
-      "label": "Svalová slabost v důsledku myastenie.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nová nebo zhoršující se celková svalová slabost."
-      }
-    },
-    {
-      "ctcae": "Pain in extremity",
-      "frequency": "very_rare",
-      "label": "Bolest končetin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysgeusia",
-      "frequency": "very_rare",
-      "label": "Kovová pachuť v ústech.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aseptic meningitis",
-      "frequency": "very_rare",
-      "label": "Akutní aseptická meningitida, která může být provázena silnou bolestí hlavy, horečkou, nevolností, zvracením a poruchou vědomí.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví silná bolest hlavy, horečka, nevolnost, zvracení nebo porucha vědomí."
-      }
-    },
-    {
-      "ctcae": "Meningismus",
-      "frequency": "very_rare",
-      "label": "Meningismus (příznaky podráždění mozkových blan).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nové nebo zhoršující se neurologické potíže."
-      }
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Poškození nebo poruchy hlavových nervů.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nové nebo zhoršující se neurologické potíže."
-      }
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Neurotoxicita, arachnoiditida, paraplegie, stupor, nekoordinované svalové pohyby, demence nebo zvýšený tlak mozkomíšního moku.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nové nebo zhoršující se neurologické potíže, například změny svalové síly, zraku, myšlení, paměti nebo orientace."
-      }
     },
     {
       "ctcae": "Conjunctivitis",
@@ -394,206 +130,34 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vision decreased",
-      "frequency": "rare",
-      "label": "Poruchy zraku, někdy závažné.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nová porucha nebo zhoršení zraku."
-      }
-    },
-    {
-      "ctcae": "Retinal vascular disorder",
-      "frequency": "rare",
-      "label": "Sraženina v sítnicové žíle.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Periorbital edema",
-      "frequency": "very_rare",
-      "label": "Otok kolem očí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eyelid function disorder",
-      "frequency": "very_rare",
-      "label": "Zánět očních víček.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Watering eyes",
-      "frequency": "very_rare",
-      "label": "Zvýšené slzení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Photophobia",
-      "frequency": "very_rare",
-      "label": "Zvýšená citlivost na světlo.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vision decreased",
-      "frequency": "very_rare",
-      "label": "Přechodná slepota nebo ztráta zraku.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nová porucha nebo zhoršení zraku."
-      }
-    },
-    {
-      "ctcae": "Pericarditis",
-      "frequency": "very_rare",
-      "label": "Zánět osrdečníku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pericardial effusion",
-      "frequency": "very_rare",
-      "label": "Tekutina v osrdečníkovém vaku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pericardial tamponade",
-      "frequency": "very_rare",
-      "label": "Stlačení srdce tekutinou v osrdečníkovém vaku (srdeční tamponáda).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vasculitis",
-      "frequency": "uncommon",
-      "label": "Zánět cév, včetně alergického zánětu cév.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "rare",
-      "label": "Nízký krevní tlak.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Venous thromboembolism",
-      "frequency": "rare",
-      "label": "Krevní sraženiny v žilách, včetně hluboké žilní trombózy a tromboflebitidy.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest nebo tíseň na hrudi, dýchací obtíže, bolest končetiny nebo jiné příznaky krevní sraženiny."
-      }
-    },
-    {
-      "ctcae": "Arterial thromboembolism",
-      "frequency": "rare",
-      "label": "Krevní sraženiny v tepnách, včetně mozkové trombózy.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest nebo tíseň na hrudi, dýchací obtíže, necitlivost či slabost na jedné straně těla, potíže s mluvením nebo závratě."
-      }
-    },
-    {
       "ctcae": "Cough",
       "frequency": "very_common",
       "label": "Kašel.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví dýchací obtíže nebo jiné problémy s plícemi."
-      }
-    },
-    {
-      "ctcae": "Pneumonitis",
-      "frequency": "common",
-      "label": "Plicní komplikace způsobené intersticiálním zánětem plic nebo pneumonitidou; mohou mít závažný průběh a vést k úmrtí bez ohledu na dávku či délku léčby.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví suchý, dráždivý kašel, dušnost, bolest na hrudi, horečka nebo jiné dýchací obtíže."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Pulmonary fibrosis",
       "frequency": "uncommon",
       "label": "Plicní fibróza.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví dýchací obtíže nebo jiné problémy s plícemi."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Pleural effusion",
       "frequency": "uncommon",
       "label": "Tekutina mezi plícemi a hrudní stěnou (pleurální výpotek).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví dýchací obtíže nebo jiné problémy s plícemi."
-      }
-    },
-    {
-      "ctcae": "Pharyngitis",
-      "frequency": "rare",
-      "label": "Zánět hltanu.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest v krku, zejména spolu s horečkou nebo vředy v ústech."
-      }
-    },
-    {
-      "ctcae": "Apnea",
-      "frequency": "rare",
-      "label": "Přerušené dýchání.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Venous thromboembolism",
-      "frequency": "rare",
-      "label": "Plicní embolie (krevní sraženina v plicích).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kašel, bolest na hrudi, náhlá dušnost nebo vykašlávání krve."
-      }
-    },
-    {
-      "ctcae": "Pulmonary fibrosis",
-      "frequency": "very_rare",
-      "label": "Chronické intersticiální poškození plic nebo reakce podobná astmatu s kašlem, dýchacími obtížemi a abnormálními výsledky plicních funkčních testů.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kašel, dýchací obtíže nebo jiné problémy s plícemi."
-      }
-    },
-    {
       "ctcae": "Bronchopulmonary hemorrhage",
       "frequency": "not_known",
-      "label": "Plicní alveolární krvácení; hlášeno při léčbě methotrexátem u revmatologických a souvisejících onemocnění.",
+      "label": "Plicní krvácení; hlášeno u pacientů se základním revmatologickým onemocněním.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví plivání nebo vykašlávání krve."
-      }
-    },
-    {
-      "ctcae": "Non-cardiac chest pain",
-      "frequency": "not_known",
-      "label": "Bolest na hrudi.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest na hrudi, zejména spolu s kašlem, náhlou dušností nebo vykašláváním krve."
-      }
-    },
-    {
-      "ctcae": "Hypoxia",
-      "frequency": "not_known",
-      "label": "Nedostatek kyslíku (hypoxie).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví dýchací obtíže nebo jiné problémy s plícemi."
+        "patient_guide": "Při vykašlávání nebo plivání krve.",
+        "min_severity": 2
       }
     },
     {
@@ -606,55 +170,39 @@
     {
       "ctcae": "Diarrhea",
       "frequency": "very_common",
-      "label": "Průjem, zejména během prvních 24 až 48 hodin po užití methotrexátu.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví průjem."
-      }
+      "label": "Průjem, zvláště během prvních 24 až 48 hodin po dávce.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "very_common",
       "label": "Bolest břicha.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví silná bolest břicha, zejména spolu s horečkou, nevolností, zvracením, silným průjmem nebo krví ve stolici."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "very_common",
       "label": "Nevolnost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se nevolnost objeví spolu se silnou bolestí břicha, horečkou, zvracením, silným průjmem nebo krví ve stolici."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "very_common",
       "label": "Zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se zvracení objeví spolu se silnou bolestí břicha, horečkou, silným průjmem nebo krví ve stolici."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Mucositis oral",
       "frequency": "very_common",
-      "label": "Zánět a vředy v ústech a hrdle (ulcerózní stomatitida), zejména během prvních 24 až 48 hodin po užití methotrexátu.",
-      "action": "discontinue_treatment",
+      "label": "Zánět nebo vředy v ústech a hrdle, zvláště během prvních 24 až 48 hodin po dávce.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vředy v ústech nebo ulcerózní stomatitida."
-      }
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Vředy a krvácení v trávicím traktu.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví krev ve stolici nebo černá stolice."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
@@ -663,26 +211,33 @@
       "label": "Zánět slinivky břišní.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví bolest v horní části břicha, nevolnost, zvracení nebo horečka."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Zánět trávicího traktu.",
-      "action": "contact_doctor",
+      "frequency": "uncommon",
+      "label": "Vředy nebo krvácení v trávicím traktu.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví jakékoli potíže s trávicím traktem."
+        "patient_guide": "Při průjmu, zvracení krve, černé stolici nebo krvi ve stolici.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Gum infection",
+      "ctcae": "Enteritis",
+      "frequency": "rare",
+      "label": "Zánět trávicího traktu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gingivitis",
       "frequency": "rare",
       "label": "Zánět dásní.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví potíže s trávicím traktem nebo zánět dásní."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Melena",
@@ -690,7 +245,8 @@
       "label": "Černá nebo dehtovitá stolice.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví černá nebo dehtovitá stolice."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
@@ -699,114 +255,23 @@
       "label": "Zvracení krve.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví zvracení krve."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Neinfekční zánět pobřišnice.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví silná bolest břicha, horečka, nevolnost, zvracení, silný průjem nebo krev ve stolici."
-      }
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Proděravění střeva.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví silná bolest břicha, horečka, nevolnost, zvracení, silný průjem nebo krev ve stolici."
-      }
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zánět jazyka.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví potíže s trávicím traktem."
-      }
-    },
-    {
-      "ctcae": "Alanine aminotransferase increased",
+      "ctcae": "Hepatic disorders - Other, specify",
       "frequency": "very_common",
-      "label": "Zvýšení hladiny jaterního enzymu ALT.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Aspartate aminotransferase increased",
-      "frequency": "very_common",
-      "label": "Zvýšení hladiny jaterního enzymu AST.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Alkaline phosphatase increased",
-      "frequency": "very_common",
-      "label": "Zvýšení hladiny alkalické fosfatázy.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Blood bilirubin increased",
-      "frequency": "very_common",
-      "label": "Zvýšení hladiny bilirubinu.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Poškození jater, ztučnění jater, chronická fibróza nebo cirhóza jater.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Hypoalbuminemia",
-      "frequency": "uncommon",
-      "label": "Snížená hladina albuminu v krvi.",
+      "label": "Zvýšení hladin jaterních enzymů; obvykle přechodné a bez příznaků.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatitis",
-      "frequency": "rare",
-      "label": "Zánět jater.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Hepatic necrosis",
-      "frequency": "very_rare",
-      "label": "Akutní nekróza jater nebo akutní rozpad jaterních buněk.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
-    },
-    {
-      "ctcae": "Hepatic failure",
-      "frequency": "very_rare",
-      "label": "Selhání jater.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očí, tmavá moč, nevolnost, zvracení, nechutenství, bolest v pravé části břicha nebo svědění."
-      }
+      "ctcae": "Hepatic disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Poškození jater, ztukovatění, fibróza, cirhóza nebo pokles albuminu; při dlouhodobé léčbě se může objevit chronické poškození.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Alopecia",
@@ -818,7 +283,7 @@
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "common",
-      "label": "Vyrážka a zarudnutí kůže.",
+      "label": "Vyrážka nebo zarudnutí kůže; mohou se objevit také kožní vředy a svědění.",
       "action": null,
       "action_condition": null
     },
@@ -830,160 +295,62 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin ulceration",
-      "frequency": "common",
-      "label": "Kožní vředy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "uncommon",
-      "label": "Stevensův-Johnsonův syndrom, závažná kožní reakce s vyrážkou a puchýři, která může být život ohrožující.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví červené tečky nebo skvrny, často s puchýři uprostřed, celkovým pocitem nemoci či horečkou nebo s olupováním kůže."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "uncommon",
-      "label": "Toxická epidermální nekrolýza, závažná kožní reakce s puchýři a olupováním kůže, která může být život ohrožující.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví červené tečky nebo skvrny, často s puchýři uprostřed, celkovým pocitem nemoci či horečkou nebo s olupováním kůže."
-      }
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "rare",
-      "label": "Erythema multiforme (závažná kožní reakce).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví červené tečky nebo skvrny, často s puchýři uprostřed, celkovým pocitem nemoci či horečkou."
-      }
-    },
-    {
-      "ctcae": "Papulovesicular rash",
-      "frequency": "uncommon",
-      "label": "Herpetiformní kožní vyrážka tvořená shluky puchýřků.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Urticaria",
       "frequency": "uncommon",
       "label": "Kopřivka.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se vyrážka nebo svědění rozšíří po celém těle, nebo se přidá otok obličeje či potíž s dýcháním."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Skin hyperpigmentation",
       "frequency": "uncommon",
-      "label": "Zvýšená pigmentace kůže.",
+      "label": "Ztmavnutí kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin induration",
+      "ctcae": "Skin ulceration",
       "frequency": "uncommon",
-      "label": "Bouličky pod kůží (nodulóza).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Wound complication",
-      "frequency": "uncommon",
-      "label": "Zhoršené hojení ran.",
+      "label": "Kožní vředy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Photosensitivity",
       "frequency": "uncommon",
-      "label": "Zvýšená citlivost kůže na sluneční světlo, někdy projevující se silným spálením.",
+      "label": "Citlivost kůže na slunce, někdy jako silné spálení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Akné.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Purpura",
-      "frequency": "rare",
-      "label": "Drobné krvácivé tečky na kůži.",
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "uncommon",
+      "label": "Stevensův-Johnsonův syndrom, závažná kožní reakce.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví malé červené skvrny na kůži, neobvyklé modřiny nebo krvácení."
+        "patient_guide": "Pokud se červené tečky nebo skvrny, často s puchýři uprostřed, zhoršují, olupuje se kůže nebo se tvoří puchýře; může se přidat horečka a celkový pocit nemoci.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Bruising",
-      "frequency": "rare",
-      "label": "Modřiny.",
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "uncommon",
+      "label": "Toxická epidermální nekrolýza (Lyellův syndrom), závažná kožní reakce.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví neobvyklé modřiny nebo krvácení."
+        "patient_guide": "Pokud se červené tečky nebo skvrny, často s puchýři uprostřed, zhoršují, olupuje se kůže nebo se tvoří puchýře; může se přidat horečka a celkový pocit nemoci.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Nail discoloration",
+      "ctcae": "Erythema multiforme",
       "frequency": "rare",
-      "label": "Zvýšená pigmentace nehtů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nail loss",
-      "frequency": "rare",
-      "label": "Ztráta nehtů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Folliculitis",
-      "frequency": "very_rare",
-      "label": "Infekce vlasových váčků (furunkulóza).",
+      "label": "Erythema multiforme, závažná kožní reakce.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
+        "patient_guide": "Pokud se červené tečky nebo skvrny, často s puchýři uprostřed, zhoršují, olupuje se kůže nebo se tvoří puchýře; může se přidat horečka a celkový pocit nemoci.",
+        "min_severity": 2
       }
-    },
-    {
-      "ctcae": "Telangiectasia",
-      "frequency": "very_rare",
-      "label": "Viditelné a přetrvávající rozšíření drobných cév pod kůží.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Paronychia",
-      "frequency": "very_rare",
-      "label": "Zánět nehtového lůžka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Léková reakce s vyrážkou po celém těle a zvýšeným počtem eozinofilů (DRESS).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka po celém těle."
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zánět kůže nebo olupování kůže.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
@@ -1002,7 +369,7 @@
     {
       "ctcae": "Osteoporosis",
       "frequency": "uncommon",
-      "label": "Křehké kosti (osteoporóza).",
+      "label": "Osteoporóza.",
       "action": null,
       "action_condition": null
     },
@@ -1014,41 +381,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Osteonecrosis",
-      "frequency": "not_known",
-      "label": "Odumírání kostní hmoty (osteonekróza).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Creatinine clearance decreased",
-      "frequency": "very_common",
-      "label": "Snížené vylučování kreatininu, které může být známkou zhoršené funkce ledvin.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok rukou, kotníků nebo nohou, nebo se sníží či zastaví tvorba moči."
-      }
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Nefropatie nebo selhání ledvin.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok rukou, kotníků nebo nohou, nebo se sníží či zastaví tvorba moči."
-      }
-    },
-    {
       "ctcae": "Cystitis noninfective",
       "frequency": "uncommon",
-      "label": "Zánět močového měchýře s vředy, někdy s krví v moči.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urinary retention",
-      "frequency": "uncommon",
-      "label": "Porucha vyprazdňování močového měchýře.",
+      "label": "Zánět močového měchýře, někdy s vředy a krví v moči.",
       "action": null,
       "action_condition": null
     },
@@ -1065,62 +400,244 @@
       "label": "Omezená nebo žádná tvorba moči.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se sníží nebo zastaví tvorba moči, případně se objeví otok rukou, kotníků nebo nohou."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Hyperuricemia",
-      "frequency": "rare",
-      "label": "Zvýšená hladina kyseliny močové v krvi.",
+      "ctcae": "Creatinine clearance decreased",
+      "frequency": "very_common",
+      "label": "Snížené vylučování kreatininu, zjištěné lékařským testem; může signalizovat sníženou funkci ledvin.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Creatinine increased",
       "frequency": "rare",
-      "label": "Zvýšená hladina kreatininu v krvi.",
+      "label": "Zvýšení kreatininu v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Hyperuricemia",
       "frequency": "rare",
-      "label": "Zvýšená hladina močoviny nebo močovinového dusíku v krvi.",
+      "label": "Zvýšení kyseliny močové v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hematuria",
-      "frequency": "very_rare",
-      "label": "Krev v moči.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urinary protein increased",
-      "frequency": "very_rare",
-      "label": "Zvýšené vylučování bílkovin do moči.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
+      "ctcae": "Depression",
       "frequency": "uncommon",
-      "label": "Vývojové vady plodu.",
+      "label": "Deprese.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Confusion",
+      "frequency": "uncommon",
+      "label": "Zmatenost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hemiparesis",
+      "frequency": "uncommon",
+      "label": "Ochrnutí jedné strany těla.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Leukoencephalopathy",
+      "frequency": "rare",
+      "label": "Leukoencefalopatie; případy byly hlášeny také při užívání ústy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při nových nebo zhoršujících se neurologických příznacích, například svalové slabosti, poruše zraku nebo změnách myšlení, paměti či orientace.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Thromboembolic event",
+      "frequency": "rare",
+      "label": "Krevní sraženiny v žilách nebo tepnách (tromboembolické příhody).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypotension",
+      "frequency": "rare",
+      "label": "Nízký krevní tlak.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "uncommon",
+      "label": "Horečka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "very_common",
+      "label": "Únava; schopnost řídit nebo obsluhovat stroje může být zhoršena, zejména po alkoholu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Malaise",
+      "frequency": "very_common",
+      "label": "Celková nevolnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Lymphoma",
+      "frequency": "uncommon",
+      "label": "Lymfom; v některých případech po ukončení léčby vymizel.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Diabetes mellitus",
+      "frequency": "uncommon",
+      "label": "Cukrovka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatitis B reactivation",
+      "frequency": "not_known",
+      "label": "Opětovné vzplanutí infekce virem hepatitidy B.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatitis viral",
+      "frequency": "not_known",
+      "label": "Zhoršení infekce virem hepatitidy C.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pneumonia",
+      "frequency": "not_known",
+      "label": "Pneumonie; četnost nelze z dostupných údajů určit.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arachnoiditis",
+      "frequency": "not_known",
+      "label": "Arachnoiditida.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Neurotoxicity",
+      "frequency": "not_known",
+      "label": "Poškození nervového systému.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pulmonary hemorrhage",
+      "frequency": "not_known",
+      "label": "Plicní alveolární krvácení.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při vykašlávání nebo plivání krve.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Chest pain",
+      "frequency": "not_known",
+      "label": "Bolest na hrudi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypoxia",
+      "frequency": "not_known",
+      "label": "Nedostatek kyslíku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Peritonitis",
+      "frequency": "not_known",
+      "label": "Zánět pobřišnice.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Glossitis",
+      "frequency": "not_known",
+      "label": "Zánět jazyka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Drug reaction with eosinophilia and systemic symptoms",
+      "frequency": "not_known",
+      "label": "DRESS syndrom: léková reakce s vyrážkou po celém těle a zvýšeným počtem eozinofilů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Osteonecrosis",
+      "frequency": "not_known",
+      "label": "Odumírání kostní tkáně.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tremor",
+      "frequency": "not_known",
+      "label": "Třes.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Edema",
+      "frequency": "not_known",
+      "label": "Otok.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Azoospermia",
+      "frequency": "very_rare",
+      "label": "Přechodně snížená tvorba spermií; po ukončení léčby se obvykle upraví.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Ovarian function insufficiency",
+      "frequency": "rare",
+      "label": "Přechodně snížená tvorba vajíček; po ukončení léčby se obvykle upraví.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Irregular menstruation",
+      "frequency": "rare",
+      "label": "Přechodné poruchy menstruačního cyklu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pregnancy loss",
       "frequency": "rare",
-      "label": "Samovolný potrat.",
+      "label": "Potrat.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
-      "frequency": "very_rare",
-      "label": "Úmrtí plodu.",
+      "ctcae": "Congenital, familial and genetic disorders - Other, specify",
+      "frequency": "uncommon",
+      "label": "Vývojové vady plodu.",
       "action": null,
       "action_condition": null
     },
@@ -1134,382 +651,355 @@
     {
       "ctcae": "Oligospermia",
       "frequency": "rare",
-      "label": "Přechodně snížená tvorba spermií.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Irregular menstruation",
-      "frequency": "rare",
-      "label": "Přechodné poruchy menstruace.",
+      "label": "Přechodně snížená tvorba spermií; po ukončení léčby se obvykle upraví.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Amenorrhea",
-      "frequency": "very_rare",
-      "label": "Poruchy menstruačního cyklu včetně vynechání menstruace.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Snížená tvorba vajíček nebo spermií, neplodnost, ztráta zájmu o sex, impotence, výtok z pochvy nebo zvětšení prsů u mužů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "very_common",
-      "label": "Únava.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Malaise",
-      "frequency": "very_common",
-      "label": "Malátnost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "uncommon",
-      "label": "Horečka.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se horečka objeví spolu s bolestí v krku, vředy v ústech, chřipkovými obtížemi nebo silným vyčerpáním."
-      }
-    },
-    {
-      "ctcae": "Chills",
       "frequency": "not_known",
-      "label": "Třesavka.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky infekce, například horečka, bolest nebo bolest v krku."
-      }
+      "label": "Vynechání menstruace.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
+      "ctcae": "Erectile dysfunction",
       "frequency": "not_known",
-      "label": "Otok.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok rukou, kotníků nebo nohou."
-      }
+      "label": "Porucha erekce.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Fetal growth retardation",
+      "ctcae": "Gynecomastia",
       "frequency": "not_known",
-      "label": "Zpomalení růstu plodu.",
+      "label": "Zvětšení prsů u mužů.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "L-asparagináza",
-      "effect": "L-asparagináza působí proti účinku methotrexátu a může snížit jeho léčebný účinek.",
+      "class_id": "atc:L01XX02",
+      "drug_class": "L-asparagináza",
+      "effect": "L-asparagináza může oslabit účinek methotrexátu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "cholestyramin",
-      "effect": "Cholestyramin může zvýšit vylučování methotrexátu mimo ledviny tím, že přeruší jeho enterohepatální oběh; tím může snížit jeho koncentraci.",
+      "class_id": "atc:C10AC01",
+      "drug_class": "Kolestyramin",
+      "effect": "Kolestyramin může zvýšit vylučování methotrexátu mimo ledviny.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:B05AX01",
       "drug_class": "Koncentráty erytrocytů",
-      "effect": "Při současném podání koncentrátů erytrocytů a methotrexátu může prodlouženě přetrvávat vysoká hladina methotrexátu v krvi a zvýšit se jeho toxicita. Pacienta je třeba zvlášť sledovat.",
+      "effect": "Při současném podání je nutné pečlivé sledování, protože dlouhodobě zvýšená hladina methotrexátu může zvýšit jeho toxicitu.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Léčiva vyvolávající nedostatek folátu, včetně sulfonamidů a trimethoprim-sulfamethoxazolu",
-      "effect": "Mohou zvýšit toxicitu methotrexátu, zvláště při již existujícím nedostatku kyseliny listové. Kombinace pyrimethaminu nebo kotrimoxazolu s methotrexátem může vyvolat pancytopenii.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Pancytopenie (pokles počtu všech krvinek), hlášená při kombinaci s pyrimethaminem nebo kotrimoxazolem.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:B03BB01",
+      "drug_class": "Kyselina listová a její deriváty",
+      "effect": "Kyselina listová a její deriváty mohou snížit toxicitu methotrexátu, ale současně mohou oslabit jeho účinek; význam závisí na indikaci a dávkování.",
+      "effect_type": "antagonism",
+      "side_effects": []
     },
     {
-      "drug_class": "Přípravky s kyselinou listovou nebo kyselinou folinovou",
-      "effect": "Kyselina listová nebo folinová může snížit toxicitu methotrexátu, včetně trávicích obtíží, zánětu ústní sliznice, vypadávání vlasů a zvýšení jaterních enzymů. Přípravky s folátem mohou také narušit účinnost methotrexátu.",
+      "class_id": "atc:L04AX01",
+      "drug_class": "Azathioprin",
+      "effect": "Při kombinaci může být zvýšena toxicita methotrexátu, zejména poškození jater; je nutné pečlivější sledování jaterních enzymů.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L04AK01",
+      "drug_class": "Leflunomid",
+      "effect": "Kombinace může zvýšit riziko pancytopenie a poškození jater.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:D05BB",
+      "drug_class": "Retinoidy",
+      "effect": "Současné užívání může zvýšit poškození jater.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A07EC01",
+      "drug_class": "Sulfasalazin",
+      "effect": "Sulfasalazin může zesílit účinky methotrexátu inhibicí tvorby kyseliny listové a zvýšit riziko nežádoucích účinků; v některých studiích byl tento účinek pozorován jen u jednotlivých pacientů.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky (NSAID) a salicyláty",
+      "effect": "Mohou snížit vylučování methotrexátu ledvinami a zvýšit jeho toxicitu. U nízkých dávek se mohou u revmatoidní artritidy užívat jen opatrně a pod pečlivým dohledem; kombinace se zejména vysokými dávkami methotrexátu může vyvolat závažné nežádoucí účinky. Při hraniční funkci ledvin se kombinace nedoporučuje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01C",
+      "drug_class": "Peniciliny",
+      "effect": "Mohou snížit vylučování methotrexátu ledvinami a zvýšit jeho hladinu v krvi, což může vést k hematologické a zažívací toxicitě.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01E",
+      "drug_class": "Sulfonamidy a trimethoprim-sulfamethoxazol",
+      "effect": "Mohou snížit vylučování methotrexátu nebo vyvolat nedostatek folátu, a tím zvýšit jeho toxicitu; kombinace pyrimethaminu nebo kotrimoxazolu s methotrexátem může vést k pancytopenii.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01AA",
+      "drug_class": "Tetracykliny",
+      "effect": "Perorální tetracykliny mohou snížit vstřebávání methotrexátu ve střevě nebo ovlivnit jeho enterohepatální oběh.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01BA01",
+      "drug_class": "Chloramfenikol",
+      "effect": "Může snížit vstřebávání methotrexátu ve střevě nebo ovlivnit jeho enterohepatální oběh; při léčbě spojené s možnými účinky na kostní dřeň je třeba počítat s výraznější poruchou krvetvorby.",
       "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01MA02",
+      "drug_class": "Ciprofloxacin",
+      "effect": "Snižuje tubulární vylučování methotrexátu; při současném podávání je nutné pečlivé sledování.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A02BC",
+      "drug_class": "Inhibitory protonové pumpy",
+      "effect": "Omeprazol, pantoprazol a lansoprazol mohou zpomalit nebo omezit vylučování methotrexátu ledvinami a zvýšit jeho hladinu i toxicitu, zejména při poruše funkce ledvin.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L01BB02",
+      "drug_class": "Merkaptopurin",
+      "effect": "Methotrexát může zvýšit hladinu merkaptopurinu v krvi; lékař může upravit jeho dávku.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N01AX13",
+      "drug_class": "Oxid dusný",
+      "effect": "Oxid dusný zesiluje vliv methotrexátu na metabolismus folátů a může zvýšit riziko těžkého útlumu kostní dřeně a zánětu sliznic; při intratekálním podání také riziko závažné neurotoxicity. Kombinaci je třeba se vyhnout.",
+      "effect_type": "increased_toxicity",
       "side_effects": [
-        {
-          "ctcae": "Diarrhea",
-          "frequency": null,
-          "label": "Trávicí obtíže včetně průjmu; kyselina listová nebo folinová může snížit toxicitu methotrexátu.",
-          "action": null,
-          "action_condition": null
-        },
         {
           "ctcae": "Mucositis oral",
           "frequency": null,
-          "label": "Zánět sliznice dutiny ústní; kyselina listová nebo folinová může snížit toxicitu methotrexátu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Alopecia",
-          "frequency": null,
-          "label": "Vypadávání vlasů; kyselina listová nebo folinová může snížit toxicitu methotrexátu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Alanine aminotransferase increased",
-          "frequency": null,
-          "label": "Zvýšení jaterních enzymů; kyselina listová nebo folinová může snížit toxicitu methotrexátu.",
+          "label": "Zánět sliznice dutiny ústní při současném užití s oxidem dusným.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "Alkohol a jiné hepatotoxické léčivé přípravky, včetně azathioprinu, leflunomidu, retinoidů a sulfasalazinu",
-      "effect": "Pravidelné požívání alkoholu nebo současné užívání dalších léčivých přípravků poškozujících játra může zvýšit hepatotoxicitu methotrexátu. Alkohol se má během léčby vynechat; při současném užívání dalších hepatotoxických léčivých přípravků má lékař pečlivěji sledovat jaterní enzymy.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hepatobiliary disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko poškození jater methotrexátem.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "kortikosteroidy",
-      "effect": "U pacientů s pásovým oparem nebo postherpetickou neuralgií vedlo současné užívání kortikosteroidů a methotrexátu v ojedinělých případech k rozšířenému pásovému oparu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Shingles",
-          "frequency": null,
-          "label": "Rozšířený pásový opar u pacientů s pásovým oparem nebo postherpetickou neuralgií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "leflunomid",
-      "effect": "Současné užívání leflunomidu a methotrexátu může zvýšit riziko pancytopenie.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Pancytopenie (pokles počtu všech krvinek).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "merkaptopurin",
-      "effect": "Methotrexát může při současném užívání zvýšit plazmatickou hladinu merkaptopurinu; lékař může upravit dávku merkaptopurinu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Nesteroidní protizánětlivé léky a salicyláty",
-      "effect": "Mohou omezit vylučování methotrexátu ledvinami, zvýšit jeho hladinu a toxicitu. Při nízkých dávkách methotrexátu je lze použít pouze opatrně a pod pečlivým lékařským dohledem; souběžné podávání se nedoporučuje při rizikových faktorech, například hraniční funkci ledvin. Při současném podávání, zejména vysokých dávek methotrexátu, byly hlášeny závažné nežádoucí účinky včetně úmrtí, výrazného útlumu kostní dřeně, aplastické anemie a trávicí toxicity.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Výrazný útlum kostní dřeně, hlášený zejména při současném podávání vysokých dávek methotrexátu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Aplastic anemia",
-          "frequency": null,
-          "label": "Aplastická anemie, hlášená zejména při současném podávání vysokých dávek methotrexátu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Trávicí toxicita, hlášená zejména při současném podávání vysokých dávek methotrexátu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Základní antirevmatika, včetně sloučenin zlata, penicilaminu, hydroxychlorochinu, sulfasalazinu, azathioprinu a cyklosporinu",
-      "effect": "Možné zvýšení toxických účinků methotrexátu nelze vyloučit; kombinace nebyly dostatečně hodnoceny. Sulfasalazin může zesílit účinky methotrexátu inhibicí syntézy kyseliny listové a zvýšit riziko nežádoucích účinků.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Perorální antibiotika, včetně tetracyklinů, chloramfenikolu a neabsorbovatelných širokospektrých antibiotik",
-      "effect": "Mohou snížit vstřebávání methotrexátu ve střevě nebo ovlivnit jeho enterohepatální oběh, a tím snížit jeho expozici.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Peniciliny a sulfonamidy",
-      "effect": "Mohou snížit renální clearance methotrexátu, zvýšit jeho koncentraci v krvi a vést k hematologické a trávicí toxicitě.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Hematologická toxicita methotrexátu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Trávicí toxicita methotrexátu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "ciprofloxacin",
-      "effect": "Ciprofloxacin snižuje tubulární vylučování methotrexátu; současné podávání vyžaduje pečlivé sledování.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Inhibitory protonové pumpy, včetně omeprazolu, pantoprazolu a lansoprazolu",
-      "effect": "Mohou zpomalit nebo omezit vylučování methotrexátu ledvinami, zvýšit jeho hladinu v krvi a způsobit známky toxicity, zejména při poruše funkce ledvin.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "theofylin",
-      "effect": "Methotrexát může snížit clearance theofylinu; lékař má při současném užívání sledovat hladinu theofylinu.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Pyrimethamin a kotrimoxazol",
-      "effect": "Kombinace s methotrexátem může aditivním působením na metabolismus folátu vyvolat pancytopenii.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Pancytopenie (pokles počtu všech krvinek).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léčivé přípravky snižující tubulární sekreci methotrexátu, včetně kyseliny para-aminohippurové, probenecidu, sulfonamidů a slabých organických kyselin",
-      "effect": "Mohou omezit tubulární vylučování methotrexátu a zvýšit jeho toxicitu, zejména při nízkých dávkách methotrexátu. Současné podávání vyžaduje pečlivé sledování.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léčivé přípravky spojené s nežádoucími účinky na kostní dřeň, včetně derivátů aminofenazonu, chloramfenikolu, fenytoinu, pyrimethaminu, sulfonamidů, trimethoprim-sulfamethoxazolu a cytostatik",
-      "effect": "Při současném nebo předchozím užívání těchto přípravků je nutno počítat s možností výrazných poruch krvetvorby vyvolaných methotrexátem.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Výrazné poruchy krvetvorby.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "metamizol",
-      "effect": "Současné podávání metamizolu a methotrexátu může zvýšit hematotoxický účinek methotrexátu, zejména u starších pacientů; tyto přípravky nemají být podávány současně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšená hematotoxicita methotrexátu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "triamteren",
-      "effect": "Při současném podávání triamterenu a methotrexátu byl popsán útlum kostní dřeně a snížení hladiny folátu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Útlum kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Investigations - Other, specify",
-          "frequency": null,
-          "label": "Snížená hladina folátu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "levetiracetam",
-      "effect": "Současné užívání může snížit clearance methotrexátu a zvýšit či prodloužit jeho koncentraci v krvi až na potenciálně toxické hladiny. Lékař má pečlivě sledovat hladiny methotrexátu a levetiracetamu v krvi.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "oxid dusný",
-      "effect": "Oxid dusný zesiluje účinek methotrexátu na metabolismus folátů, což může způsobit závažný, nepředvídatelný útlum kostní dřeně a stomatitidu. Souběžné použití se má vyhnout.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Závažný, nepředvídatelný útlum kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Mucositis oral",
-          "frequency": null,
-          "label": "Stomatitida.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Živé vakcíny",
-      "effect": "Živé vakcíny se během léčby methotrexátem nesmějí podávat.",
-      "effect_type": "contraindicated",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léčivé přípravky zvyšující biologickou dostupnost methotrexátu vytěsněním z vazby na plazmatické bílkoviny, včetně derivátů aminofenazonu, kyseliny para-aminobenzoové, barbiturátů, doxorubicinu, perorální antikoncepce, fenylbutazonu, fenytoinu, probenecidu, salicylátů, sulfonamidů, tetracyklinů, trankvilizérů, derivátů sulfonylmočoviny, penicilinů, pristinamycinu a chloramfenikolu",
-      "effect": "Tyto přípravky mohou zvýšit biologickou dostupnost methotrexátu, tedy nepřímo zvýšit jeho dávku a toxicitu. Při jejich současném užívání je nutné methotrexát pečlivě sledovat.",
+      "class_id": "atc:N03AX14",
+      "drug_class": "Levetiracetam",
+      "effect": "Současné podávání může snížit vylučování methotrexátu a zvýšit nebo prodloužit jeho koncentraci v krvi na potenciálně toxické hladiny; lékař má pečlivě sledovat hladiny obou léčiv.",
       "effect_type": "increased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Methotrexát se používá k léčbě některých zánětlivých onemocnění, lupénky a akutní lymfoblastické leukemie.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0273019",
+      "H": "",
+      "NAZEV": "METHOTREXAT EBEWE",
+      "SILA": "10MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "50",
+      "CESTA": "POR",
+      "DOPLNEK": "10MG TBL NOB 50",
+      "OBAL": "BLI",
+      "DRZ": "EBP",
+      "ZEMDRZ": "A",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "44",
+      "ATC_WHO": "L04AX03",
+      "RC": "44/272/10-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "2,5",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "200",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1746",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "METHOTREXAT EBEWE",
+      "MRP_CISLO": "DK/H/0797/003",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "A",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0273019",
+        "KOD_LATKY": "1746",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "10",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1746",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "METHOTREXATUM",
+          "NAZEV_EN": "METHOTREXATE",
+          "NAZEV": "METHOTREXÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0273019",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0273019",
+        "KOD_LATKY": "2970",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0273019",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0273019",
+        "KOD_LATKY": "1300",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0273019",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0273019",
+      "PIL": "PI231145.pdf",
+      "DAT_ROZ_PIL": "03.03.2026",
+      "SPC": "SPC216860.pdf",
+      "DAT_ROZ_SPC": "03.12.2024",
+      "OBAL_TEXT": "OBAL195888.pdf",
+      "DAT_ROZ_OBAL": "14.02.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "L04AX03",
+        "NT": "N",
+        "NAZEV": "METHOTREXÁT",
+        "NAZEV_EN": "METHOTREXATE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

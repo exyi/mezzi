@@ -1,23 +1,57 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C02",
+    "atc:C02C",
+    "atc:C02CA",
+    "atc:C02CA04",
+    "substance:12480"
+  ],
   "side_effects": [
     {
-      "ctcae": "Upper respiratory infection",
+      "ctcae": "Palpitations",
       "frequency": "common",
-      "label": "Infekce dýchacích cest (nosu, krku nebo plic).",
-      "action": null,
-      "action_condition": null
+      "label": "Bušení srdce.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
-      "ctcae": "Urinary tract infection",
-      "frequency": "common",
-      "label": "Infekce močových cest, včetně infekce ledvin nebo močového měchýře.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "uncommon",
+      "label": "Bolest nebo tlak na hrudi; při bolesti vystřelující do paže nebo zad může jít o infarkt.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Bolest na hrudi vystřelující do paže nebo zad.",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Stroke",
+      "frequency": "uncommon",
+      "label": "Cévní mozková příhoda; může se projevit kolapsem, slabostí či necitlivostí končetin, bolestí hlavy, závratí, zmateností, poruchou vidění nebo řeči či obtížemi s polykáním.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Kolaps, slabost či necitlivost paží nebo nohou, bolest hlavy, závratě, zmatenost, poruchy vidění, obtíže s polykáním nebo potíže s řečí.",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "uncommon",
+      "label": "Otok obličeje, jazyka nebo hrdla s potížemi s dýcháním jako známka závažné alergické reakce.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Otok obličeje, jazyka nebo hrdla způsobující potíže s dýcháním.",
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závratě.",
+      "label": "Závratě; při vstávání mohou souviset s poklesem krevního tlaku a jsou pravděpodobnější na začátku léčby.",
       "action": null,
       "action_condition": null
     },
@@ -29,6 +63,34 @@
       "action_condition": null
     },
     {
+      "ctcae": "Upper respiratory infection",
+      "frequency": "common",
+      "label": "Infekce dýchacích cest (nosu, krku nebo plic).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urinary tract infection",
+      "frequency": "common",
+      "label": "Infekce ledvin nebo močového měchýře.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Vertigo",
+      "frequency": "common",
+      "label": "Pocit závratě nebo točení (vertigo).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Sinus tachycardia",
+      "frequency": "common",
+      "label": "Zrychlený srdeční tep.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Somnolence",
       "frequency": "common",
       "label": "Ospalost.",
@@ -36,86 +98,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vertigo",
+      "ctcae": "Generalized muscle weakness",
       "frequency": "common",
-      "label": "Pocit točení nebo závratě (vertigo).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Palpitations",
-      "frequency": "common",
-      "label": "Pocit bušení srdce. Pokud se objeví, příbalová informace doporučuje neprodleně informovat lékaře.",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "common",
-      "label": "Zrychlený srdeční tep (tachykardie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "common",
-      "label": "Nízký krevní tlak.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "common",
-      "label": "Pokles krevního tlaku při vstávání (posturální hypotenze).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "common",
-      "label": "Zánět průdušek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cough",
-      "frequency": "common",
-      "label": "Kašel.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "common",
-      "label": "Dušnost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nasal congestion",
-      "frequency": "common",
-      "label": "Rýma nebo ucpaný nos.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Abdominal pain",
-      "frequency": "common",
-      "label": "Bolest břicha.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspepsia",
-      "frequency": "common",
-      "label": "Poruchy trávení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dry mouth",
-      "frequency": "common",
-      "label": "Sucho v ústech.",
+      "label": "Slabost.",
       "action": null,
       "action_condition": null
     },
@@ -127,9 +112,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Pruritus",
+      "ctcae": "Peripheral edema",
       "frequency": "common",
-      "label": "Svědění.",
+      "label": "Otoky chodidel, kotníků nebo rukou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypotension",
+      "frequency": "common",
+      "label": "Nízký krevní tlak.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Presyncope",
+      "frequency": "common",
+      "label": "Pocit na omdlení při vstávání; nejpravděpodobnější je na začátku léčby.",
       "action": null,
       "action_condition": null
     },
@@ -148,30 +147,65 @@
       "action_condition": null
     },
     {
-      "ctcae": "Bladder infection",
+      "ctcae": "Abdominal pain",
       "frequency": "common",
-      "label": "Zánět močového měchýře.",
+      "label": "Bolest břicha.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dry mouth",
+      "frequency": "common",
+      "label": "Sucho v ústech.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspepsia",
+      "frequency": "common",
+      "label": "Poruchy trávení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bronchitis",
+      "frequency": "common",
+      "label": "Zánět průdušek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cough",
+      "frequency": "common",
+      "label": "Kašel.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "common",
+      "label": "Svědění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": "common",
+      "label": "Dušnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nasal congestion",
+      "frequency": "common",
+      "label": "Rýma nebo ucpaný nos.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urinary incontinence",
       "frequency": "common",
-      "label": "Neschopnost kontrolovat močení (močová inkontinence).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
-      "frequency": "common",
-      "label": "Slabost (astenie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "common",
-      "label": "Bolest na hrudi.",
+      "label": "Neschopnost kontrolovat močení.",
       "action": null,
       "action_condition": null
     },
@@ -183,127 +217,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Peripheral edema",
-      "frequency": "common",
-      "label": "Otoky chodidel, kotníků nebo rukou.",
+      "ctcae": "Insomnia",
+      "frequency": "uncommon",
+      "label": "Poruchy spánku.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "uncommon",
-      "label": "Alergická reakce. Pokud se objeví otok obličeje, jazyka nebo hrdla s potížemi s dýcháním, přestaňte přípravek užívat a zavolejte sanitku.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok obličeje, jazyka nebo hrdla, který způsobuje potíže s dýcháním."
-      }
     },
     {
       "ctcae": "Anorexia",
       "frequency": "uncommon",
       "label": "Ztráta chuti k jídlu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Arthritis",
-      "frequency": "uncommon",
-      "label": "Bolestivý otok a zánět kloubů způsobený nahromaděním krystalků kyseliny močové (dna).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anorexia",
-      "frequency": "uncommon",
-      "label": "Zvýšená chuť k jídlu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anxiety",
-      "frequency": "uncommon",
-      "label": "Úzkost nebo obavy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Depression",
-      "frequency": "uncommon",
-      "label": "Deprese.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Insomnia",
-      "frequency": "uncommon",
-      "label": "Nespavost nebo jiné poruchy spánku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stroke",
-      "frequency": "uncommon",
-      "label": "Cévní mozková příhoda. Při příznacích uvedených v příbalové informaci přestaňte přípravek užívat a zavolejte sanitku.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kolaps, slabost nebo necitlivost paží či nohou, bolest hlavy, závratě, zmatenost, poruchy vidění, potíže s polykáním nebo potíže s mluvením."
-      }
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Snížený nebo změněný hmat či citlivost (hypestezie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "uncommon",
-      "label": "Mdloby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tremor",
-      "frequency": "uncommon",
-      "label": "Třes.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tinnitus",
-      "frequency": "uncommon",
-      "label": "Zvonění v uších.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "uncommon",
-      "label": "Náhlá bolest nebo pocit tlaku na hrudi (angina pectoris); při výskytu neprodleně informujte lékaře.",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myocardial infarction",
-      "frequency": "uncommon",
-      "label": "Infarkt myokardu. Při uvedeném typu bolesti na hrudi přestaňte přípravek užívat a zavolejte sanitku.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud bolest na hrudi vystřeluje do paže nebo zad."
-      }
-    },
-    {
-      "ctcae": "Epistaxis",
-      "frequency": "uncommon",
-      "label": "Krvácení z nosu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Constipation",
-      "frequency": "uncommon",
-      "label": "Zácpa.",
       "action": null,
       "action_condition": null
     },
@@ -315,9 +238,23 @@
       "action_condition": null
     },
     {
+      "ctcae": "Tremor",
+      "frequency": "uncommon",
+      "label": "Třes.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Constipation",
+      "frequency": "uncommon",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Flatulence",
       "frequency": "uncommon",
-      "label": "Nadýmání nebo větry.",
+      "label": "Větry.",
       "action": null,
       "action_condition": null
     },
@@ -329,23 +266,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Gastroenteritis",
       "frequency": "uncommon",
-      "label": "Zánět žaludku a střev (gastroenteritida).",
+      "label": "Zánět žaludku a střev.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "uncommon",
-      "label": "Abnormální výsledky jaterních testů.",
+      "label": "Abnormální hodnoty jaterních testů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Rash maculo-papular",
+      "ctcae": "Gout",
       "frequency": "uncommon",
-      "label": "Kožní vyrážka.",
+      "label": "Dna: bolestivý otok a zánět kloubů způsobené nahromaděním krystalků kyseliny močové.",
       "action": null,
       "action_condition": null
     },
@@ -357,9 +294,51 @@
       "action_condition": null
     },
     {
-      "ctcae": "Dysuria",
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Bolestivé močení.",
+      "label": "Kožní vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Epistaxis",
+      "frequency": "uncommon",
+      "label": "Krvácení z nosu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Syncope",
+      "frequency": "uncommon",
+      "label": "Mdloby.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Increased appetite",
+      "frequency": "uncommon",
+      "label": "Zvýšená chuť k jídlu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Depression",
+      "frequency": "uncommon",
+      "label": "Deprese.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anxiety",
+      "frequency": "uncommon",
+      "label": "Obavy nebo úzkost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysesthesia",
+      "frequency": "uncommon",
+      "label": "Snížený nebo změněný hmat či cit.",
       "action": null,
       "action_condition": null
     },
@@ -371,16 +350,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Urinary frequency",
-      "frequency": "uncommon",
-      "label": "Časté močení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Erectile dysfunction",
       "frequency": "uncommon",
-      "label": "Potíže s dosažením nebo udržením erekce.",
+      "label": "Neschopnost dosáhnout nebo udržet erekci.",
       "action": null,
       "action_condition": null
     },
@@ -392,9 +364,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Edema face",
+      "ctcae": "Dysuria",
       "frequency": "uncommon",
-      "label": "Otok obličeje.",
+      "label": "Bolestivé močení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urinary frequency",
+      "frequency": "uncommon",
+      "label": "Méně časté nutkání k močení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tinnitus",
+      "frequency": "uncommon",
+      "label": "Zvonění v uších.",
       "action": null,
       "action_condition": null
     },
@@ -406,60 +392,94 @@
       "action_condition": null
     },
     {
+      "ctcae": "Angina pectoris",
+      "frequency": "uncommon",
+      "label": "Náhlá bolest nebo pocit tlaku na hrudi (angina pectoris).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
       "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "rare",
-      "label": "Blokáda zažívacího traktu; při jejím výskytu neprodleně informujte lékaře.",
+      "label": "Blokáda zažívacího traktu.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Cholestasis",
+      "frequency": "very_rare",
+      "label": "Jaterní onemocnění s tmavou močí, světlou stolicí, žloutnutím kůže nebo očí, nevolností, horečkou a bolestí břicha (cholestáza).",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "very_rare",
-      "label": "Snížený počet bílých krvinek (leukopenie), který se může projevit častými infekcemi, horečkou, bolestí v krku nebo vředy v ústech; při těchto příznacích neprodleně informujte lékaře.",
+      "label": "Nízký počet bílých krvinek; může se projevit častými infekcemi s horečkou, bolestí v krku nebo vředy v ústech.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví časté infekce spolu s horečkou, bolestí v krku nebo vředy v ústech."
+        "patient_guide": "Časté infekce doprovázené horečkou, bolestí v krku nebo vředy v ústech.",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Priapism",
+      "frequency": "very_rare",
+      "label": "Přetrvávající bolestivá erekce (priapismus); neléčená může poškodit tkáň penisu a způsobit trvalou ztrátu potence.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Přetrvávající bolestivá erekce.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "very_rare",
-      "label": "Snížený počet krevních destiček (trombocytopenie), který se může projevit snadnou tvorbou modřin nebo krvácením trvajícím déle než obvykle.",
+      "label": "Nízký počet krevních destiček; může se projevit podlitinami, snadnou krvácivostí nebo krvácením trvajícím déle než obvykle.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "very_rare",
-      "label": "Rozmazané vidění.",
+      "label": "Rozmazané vidění. Pokud se objeví, neřiďte a neobsluhujte stroje.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bradycardia",
+      "frequency": "very_rare",
+      "label": "Zpomalený srdeční rytmus.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Zpomalený srdeční tep (bradykardie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Nepravidelný srdeční rytmus (arytmie).",
+      "label": "Nepravidelný srdeční rytmus (srdeční arytmie).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Bronchospasm",
       "frequency": "very_rare",
-      "label": "Zhoršení sípání a kašle způsobené stažením průdušek (bronchospasmus).",
+      "label": "Zhoršení sípání a kašel (bronchospasmus).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Irritability",
       "frequency": "very_rare",
-      "label": "Nervozita.",
+      "label": "Pocit nervozity.",
       "action": null,
       "action_condition": null
     },
@@ -471,23 +491,23 @@
       "action_condition": null
     },
     {
+      "ctcae": "Polyuria",
+      "frequency": "very_rare",
+      "label": "Zvýšený objem vyloučené moči.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Poruchy močení.",
+      "label": "Poruchy při močení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nocturia",
       "frequency": "very_rare",
-      "label": "Noční nucení na močení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Zvýšený objem vyloučené moči (polyurie nebo zvýšená diuréza).",
+      "label": "Nutkání k močení v noci.",
       "action": null,
       "action_condition": null
     },
@@ -501,14 +521,14 @@
     {
       "ctcae": "Paresthesia",
       "frequency": "very_rare",
-      "label": "Brnění, píchání nebo znecitlivění kůže (parestézie).",
+      "label": "Brnění, píchání nebo znecitlivění kůže.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
-      "frequency": "not_known",
-      "label": "Závratě při vstávání; pravděpodobnější jsou na začátku léčby.",
+      "frequency": "very_rare",
+      "label": "Závratě při vstávání; pravděpodobnější na začátku léčby.",
       "action": null,
       "action_condition": null
     },
@@ -550,14 +570,14 @@
     {
       "ctcae": "Fatigue",
       "frequency": "very_rare",
-      "label": "Únava.",
+      "label": "Únava. Pokud se objeví, neřiďte a neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Malaise",
       "frequency": "very_rare",
-      "label": "Celkový pocit nevolnosti nebo špatného zdravotního stavu.",
+      "label": "Celkový pocit špatného zdravotního stavu.",
       "action": null,
       "action_condition": null
     },
@@ -569,128 +589,387 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Cholestáza (porucha odtoku žluči). Při známkách jaterního onemocnění uvedených v příbalové informaci neprodleně informujte lékaře.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví tmavá moč, světlá stolice, zežloutnutí kůže nebo očí, nevolnost, horečka nebo bolest břicha."
-      }
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "very_rare",
-      "label": "Hepatitida (zánět jater). Při známkách jaterního onemocnění uvedených v příbalové informaci neprodleně informujte lékaře.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví tmavá moč, světlá stolice, zežloutnutí kůže nebo očí, nevolnost, horečka nebo bolest břicha."
-      }
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Žloutenka. Při známkách jaterního onemocnění uvedených v příbalové informaci neprodleně informujte lékaře.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví tmavá moč, světlá stolice, zežloutnutí kůže nebo očí, nevolnost, horečka nebo bolest břicha."
-      }
-    },
-    {
       "ctcae": "Eye disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Oční komplikace při operaci šedého zákalu (peroperační syndrom plovoucí duhovky, IFIS). Před operací informujte očního lékaře o současném nebo dřívějším užívání doxazosinu.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud podstupujete operaci šedého zákalu."
-      }
-    },
-    {
-      "ctcae": "Ejaculation disorder",
-      "frequency": "not_known",
-      "label": "Abnormální, retrográdní ejakulace, při níž semeno přechází do močového měchýře.",
+      "label": "Oční komplikace během operace šedého zákalu (peroperační syndrom plovoucí duhovky, IFIS). Před operací informujte očního lékaře o současném i dřívějším užívání doxazosinu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Reproductive system and breast disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Přetrvávající bolestivá erekce (priapismus); je nutné okamžitě vyhledat lékařskou pomoc.",
-      "action": "hospitalize_NOW",
+      "ctcae": "Ejaculation disorder",
+      "frequency": "not_known",
+      "label": "Abnormální ejakulace, při níž se sperma dostává do močového měchýře (retrográdní ejakulace).",
+      "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Inhibitory PDE-5 (sildenafil, tadalafil a vardenafil)",
-      "effect": "Současné užívání s doxazosinem může u některých pacientů způsobit symptomatický pokles krevního tlaku a závratě, protože oba přípravky rozšiřují cévy. Lékař má zahájit léčbu inhibitorem PDE-5 až po stabilizaci pacienta na alfa-blokátoru a nejnižší možnou dávkou; doporučuje se odstup nejméně 6 hodin od doxazosinu. Studie s tabletami doxazosinu s prodlouženým uvolňováním nebyly provedeny.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Symptomatický pokles krevního tlaku, případně se závratěmi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "group:cyp3a4_inhibitor_strong",
+      "drug_class": "Silné inhibitory CYP3A4",
+      "effect": "Doxazosin je substrátem CYP3A4. Při současném užívání silných inhibitorů CYP3A4, například klarithromycinu, indinaviru, itrakonazolu, ketokonazolu, nefazodonu, nelfinaviru, ritonaviru, sachinaviru, telithromycinu nebo vorikonazolu, je nutná opatrnost; konkrétní změna koncentrace doxazosinu není v textu stanovena.",
+      "effect_type": null,
+      "side_effects": []
     },
     {
-      "drug_class": "Ostatní alfa-blokátory",
-      "effect": "Doxazosin zesiluje jejich účinek na snížení krevního tlaku, což může vést k výraznějšímu poklesu krevního tlaku.",
+      "class_id": null,
+      "drug_class": "Léky na poruchy erekce (inhibitory PDE-5)",
+      "effect": "Doxazosin společně se sildenafilem, tadalafilem nebo vardenafilem může u některých pacientů způsobit symptomatický pokles krevního tlaku, protože obě léčiva rozšiřují cévy. Léčba inhibitorem PDE-5 se má zahájit až při stabilním stavu na alfa-blokátoru, nejnižší možnou dávkou a s odstupem 6 hodin od doxazosinu. Studie s tabletami s prodlouženým uvolňováním nebyly provedeny.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Výraznější pokles krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C02CA",
+      "drug_class": "Jiné alfa-blokátory",
+      "effect": "Doxazosin zesiluje jejich účinek na snížení krevního tlaku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
       "drug_class": "Jiná antihypertenziva",
-      "effect": "Doxazosin zesiluje jejich účinek na snížení krevního tlaku, což může vést k výraznějšímu poklesu krevního tlaku.",
+      "effect": "Doxazosin může zesílit jejich účinek na snížení krevního tlaku.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Výraznější pokles krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSAID)",
-      "effect": "NSAID mohou snížit antihypertenzní účinek doxazosinu.",
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky (NSAID), například ibuprofen",
+      "effect": "NSAID mohou snížit účinek doxazosinu na snížení krevního tlaku.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "atc:G03C",
       "drug_class": "Estrogeny",
-      "effect": "Estrogeny mohou snížit antihypertenzní účinek doxazosinu.",
+      "effect": "Estrogeny mohou snížit účinek doxazosinu na snížení krevního tlaku.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Sympatomimetika uvedená v souhrnu údajů o přípravku (dopamin, efedrin, adrenalin, metaraminol, metoxamin a fenylefrin)",
-      "effect": "Tyto látky mohou snížit antihypertenzní účinek doxazosinu. Doxazosin může naopak snížit krevní a cévní odpověď na uvedené látky.",
+      "class_id": null,
+      "drug_class": "Sympatomimetika: dopamin, efedrin, adrenalin, metaraminol, metoxamin a fenylefrin",
+      "effect": "Doxazosin může snížit jejich účinek na krevní tlak a cévy. Současně mohou sympatomimetika snížit účinek doxazosinu na snížení krevního tlaku.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Silné inhibitory CYP3A4 (klarithromycin, indinavir, itrakonazol, ketokonazol, nefazodon, nelfinavir, ritonavir, sachinavir, telithromycin a vorikonazol)",
-      "effect": "Doxazosin je substrátem CYP3A4; při současném podávání silných inhibitorů tohoto enzymu je zapotřebí opatrnost, protože mohou omezit jeho metabolismus a zvýšit expozici doxazosinu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "cimetidin",
-      "effect": "Ve studii u 22 zdravých mužů zvýšil cimetidin při dávce 400 mg dvakrát denně průměrnou AUC doxazosinu o 10 %; průměrné Cmax ani biologický poločas se statisticky významně nezměnily. Zvýšení AUC bylo v rozmezí variability mezi jednotlivými osobami. Studie použila jednorázovou dávku doxazosinu 1 mg.",
+      "class_id": "substance:12480",
+      "drug": "Cimetidin",
+      "effect": "Ve studii u 22 zdravých mužů vedla jedna dávka 1 mg doxazosinu první den čtyřdenního podávání cimetidinu 400 mg dvakrát denně ke zvýšení průměrné AUC doxazosinu o 10 %; průměrné Cmax ani poločas se statisticky významně nezměnily. Studie nebyla provedena s cílovou tabletou s prodlouženým uvolňováním.",
       "effect_type": "increased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se k léčbě vysokého krevního tlaku a příznaků nezhoubného zvětšení prostaty.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0263025",
+      "H": "",
+      "NAZEV": "DOXAZOSIN G.L. PHARMA",
+      "SILA": "4MG",
+      "FORMA": "TBL PRO",
+      "BALENI": "98",
+      "CESTA": "POR",
+      "DOPLNEK": "4MG TBL PRO 98",
+      "OBAL": "BLI",
+      "DRZ": "GCL",
+      "ZEMDRZ": "A",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "58",
+      "ATC_WHO": "C02CA04",
+      "RC": "58/147/06-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "4",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "98",
+      "ZDROJ_WHO": "NO26",
+      "LL": "12480",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "DOXAZOSIN G.L. PHARMA",
+      "MRP_CISLO": "CZ/H/1115/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "12480",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "4,85",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "12480",
+          "ZDROJ": "C17",
+          "NAZEV_INN": "DOXAZOSINI MESILAS",
+          "NAZEV_EN": "DOXAZOSIN MESILATE",
+          "NAZEV": "DOXAZOSIN-MESILÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "8994",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "4",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "8994",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "DOXAZOSINUM",
+          "NAZEV_EN": "DOXAZOSIN",
+          "NAZEV": "DOXAZOSIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "4077",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4077",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "MACROGOLUM",
+          "NAZEV_EN": "MACROGOL",
+          "NAZEV": "MAKROGOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "3766",
+        "SQ": "5",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "3766",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "BUTYLHYDROXYTOLUENUM",
+          "NAZEV_EN": "BUTYLHYDROXYTOLUENE",
+          "NAZEV": "BUTYLHYDROXYTOLUEN"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "3755",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "1168",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "12877",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "12877",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TOCOFEROLUM ALFA",
+          "NAZEV_EN": "ALPHA-TOCOPHEROL",
+          "NAZEV": "TOKOFEROL-ALFA"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "1300",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "4174",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4174",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII STEARYLIS FUMARAS",
+          "NAZEV_EN": "SODIUM STEARYL FUMARATE",
+          "NAZEV": "NATRIUM-STEARYL-FUMARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "SQ": "11",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "877",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "877",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "ACIDUM METHACRYLICUM ET ETHYLIS ACRYLAS POLYMERISATUM 1:1 DISPERSIO 30%",
+          "NAZEV_EN": "METHACRYLIC ACID - ETHYL ACRYLATE COPOLYMER (1:1) DISPERSION 30 PER CENT",
+          "NAZEV": "KOPOLYMER KYSELINY METHAKRYLOVÉ A ETHYL-AKRYLÁTU 1:1 DISPERZE 30%"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "1300",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "2403",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2403",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 1500",
+          "NAZEV_EN": "MACROGOL 1500",
+          "NAZEV": "MAKROGOL 1500"
+        }
+      },
+      {
+        "KOD_SUKL": "0263025",
+        "KOD_LATKY": "2710",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0263025",
+      "PIL": "PI177807.pdf",
+      "DAT_ROZ_PIL": "05.10.2021",
+      "SPC": "SPC177808.pdf",
+      "DAT_ROZ_SPC": "05.10.2021",
+      "OBAL_TEXT": "OBAL177806.pdf",
+      "DAT_ROZ_OBAL": "05.10.2021"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C02CA04",
+        "NT": "N",
+        "NAZEV": "DOXAZOSIN",
+        "NAZEV_EN": "DOXAZOSIN"
+      },
+      "formy": {
+        "FORMA": "TBL PRO",
+        "NAZEV": "Tableta s prodlouženým uvolňováním",
+        "NAZEV_EN": "Prolonged-release tablet",
+        "NAZEV_LAT": "Tabuletta cum liberatione prolongata",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10226000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

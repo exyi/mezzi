@@ -1,271 +1,553 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C08",
+    "atc:C08C",
+    "atc:C08CA",
+    "atc:C08CA02",
+    "substance:8777"
+  ],
   "side_effects": [
     {
       "ctcae": "Peripheral edema",
       "frequency": "very_common",
-      "label": "Otoky kotníků; mohou záviset na dávce.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud otoky přetrvávají."
-      }
+      "label": "Otoky kotníků; jejich výskyt závisí na dávce.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "common",
-      "label": "Bolest hlavy.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud bolest hlavy přetrvává."
-      }
+      "label": "Bolest hlavy; častěji se objevuje na začátku léčby nebo po zvýšení dávky a obvykle časem odezní.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Flushing",
       "frequency": "common",
-      "label": "Zrudnutí v obličeji.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud zrudnutí přetrvává."
-      }
+      "label": "Zrudnutí v obličeji; častěji se objevuje na začátku léčby nebo po zvýšení dávky a obvykle časem odezní.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Sinus tachycardia",
       "frequency": "uncommon",
       "label": "Zrychlený tep.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud zrychlený tep přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Palpitations",
       "frequency": "uncommon",
       "label": "Bušení srdce.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud bušení srdce přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Hypotension",
       "frequency": "uncommon",
-      "label": "Nízký krevní tlak.",
-      "action": "contact_doctor",
+      "label": "Nízký krevní tlak. Výrazné snížení tlaku může vzácně způsobit závrať a bolest na hrudi.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud nízký krevní tlak přetrvává."
-      }
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "uncommon",
-      "label": "Výrazný pokles krevního tlaku může u některých pacientů vést k nedostatečnému zásobení srdečního svalu krví; příznaky mohou zahrnovat závrať a bolest na hrudi.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví závrať a bolest na hrudi."
+        "patient_guide": "Pokud se objeví závrať a bolest na hrudi, může jít o nedostatečné zásobení srdce krví.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Nausea",
       "frequency": "uncommon",
       "label": "Nevolnost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud nevolnost přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "uncommon",
       "label": "Bolest břicha.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud bolest břicha přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "uncommon",
       "label": "Pálení, bodání nebo necitlivost kůže.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud pálení, bodání nebo necitlivost kůže přetrvávají."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
       "label": "Kožní vyrážka.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud vyrážka přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Pruritus",
       "frequency": "uncommon",
       "label": "Svědění kůže.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud svědění přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "General disorders and administration site conditions - Other, specify",
+      "ctcae": "Fatigue",
       "frequency": "uncommon",
       "label": "Slabost.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud slabost přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "uncommon",
-      "label": "Závrať.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud závrať přetrvává."
-      }
+      "label": "Závrať; při bolesti hlavy, nevolnosti, závrati nebo slabosti může být zhoršena schopnost řídit a obsluhovat stroje, zejména na začátku léčby.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Syncope",
       "frequency": "rare",
       "label": "Mdloba.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud mdloby přetrvávají."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "rare",
       "label": "Zvracení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud zvracení přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Urticaria",
       "frequency": "rare",
       "label": "Kopřivka.",
-      "action": "discontinue_treatment",
+      "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "rare",
       "label": "Bolest kloubů.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud bolest kloubů přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Myalgia",
       "frequency": "rare",
       "label": "Bolest svalů.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud bolest svalů přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Erectile dysfunction",
       "frequency": "rare",
-      "label": "Impotence nebo jiné sexuální poruchy.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud impotence nebo sexuální poruchy přetrvávají."
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Zvětšení dásní; mírný otok se může objevit zejména při výrazném zánětu dásní nebo tkání kolem zubů.",
+      "label": "Impotence nebo sexuální poruchy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Periodontal disease",
+      "ctcae": "Gingival hyperplasia",
       "frequency": "very_rare",
-      "label": "Zánět dásní; pečlivá ústní hygiena může zabránit otoku dásní.",
+      "label": "Mírný otok dásní; byl hlášen u pacientů se zánětem dásní nebo okolí zubů. Pečlivá ústní hygiena mu může předcházet.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Gum infection",
+      "frequency": "very_rare",
+      "label": "Zánět dásní.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "very_rare",
       "label": "Zvýšené hodnoty jaterních enzymů.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud zvýšené hodnoty jaterních enzymů přetrvávají."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Photosensitivity",
       "frequency": "very_rare",
-      "label": "Kožní reakce způsobená zvýšenou citlivostí na sluneční záření.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud kožní reakce přetrvává."
-      }
+      "label": "Kožní reakce při zvýšené citlivosti na sluneční záření.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Vasculitis",
       "frequency": "very_rare",
-      "label": "Zánět malých krevních cév v kůži (leukocytoklastická vaskulitida).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud zánět přetrvává."
-      }
+      "label": "Zánět malých krevních cév v kůži.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Urinary frequency",
       "frequency": "very_rare",
       "label": "Časté močení.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud časté močení přetrvává."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
+      "ctcae": "Hypersensitivity",
       "frequency": "very_rare",
-      "label": "Reakce přecitlivělosti, například horečka nebo angioedém. Při alergické reakci, například vyrážce podobné kopřivce nebo otoku obličeje, rtů, jazyka či hrdla, přestaňte přípravek užívat a ihned kontaktujte lékaře.",
+      "label": "Reakce přecitlivělosti, například horečka nebo otok rtů a jazyka.",
       "action": "discontinue_treatment",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": "Pokud se objeví alergická reakce, například vyrážka podobná kopřivce nebo otok tváře, rtů, jazyka či krku, přestaňte přípravek užívat a kontaktujte ihned lékaře.",
+        "min_severity": 1
+      }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Silné inhibitory CYP3A4, například itrakonazol, ketokonazol, erythromycin a inhibitory HIV proteázy, například ritonavir",
-      "effect": "Tyto léky zvyšují koncentraci felodipinu v krvi. Při souběžném podávání itrakonazolu se maximální koncentrace felodipinu zvýšila 8krát a jeho celková expozice 6krát; při erythromycinu se obě hodnoty zvýšily přibližně 2,5krát. Kombinace se silnými inhibitory CYP3A4 se mají vyloučit. Pokud při zvýšené expozici vzniknou klinicky významné nežádoucí účinky, lékař upraví dávku felodipinu a/nebo přeruší léčbu inhibitorem CYP3A4.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Cimetidin",
-      "effect": "Cimetidin zvyšuje maximální koncentraci i celkovou expozici felodipinu přibližně o 55 %. Pokud při zvýšené expozici vzniknou klinicky významné nežádoucí účinky, lékař upraví dávku felodipinu a/nebo přeruší léčbu cimetidinem.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Grapefruitová šťáva",
-      "effect": "Flavonoidy v grapefruitové šťávě zvyšují koncentraci a účinek felodipinu a mohou zvýšit riziko nežádoucích účinků. Tablety felodipinu se nesmějí užívat současně s grapefruitovou šťávou.",
+      "class_id": "group:cyp3a4_inhibitor_strong",
+      "drug_class": "Silné inhibitory CYP3A4",
+      "effect": "Silné inhibitory CYP3A4, například itrakonazol, ketokonazol, erythromycin nebo ritonavir, zvyšují hladinu felodipinu v krvi; u itrakonazolu byla maximální koncentrace vyšší 8krát a celková expozice 6krát, u erythromycinu přibližně 2,5krát. Kombinaci je třeba vyloučit. Při klinicky významných nežádoucích účincích způsobených zvýšenou expozicí lékař upraví dávku felodipinu a/nebo přeruší léčbu inhibitorem.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "Silné induktory CYP3A4, například fenytoin, karbamazepin, fenobarbital a další barbituráty, rifampicin, efavirenz, nevirapin a třezalka tečkovaná",
-      "effect": "Tyto látky snižují koncentraci felodipinu v krvi a mohou snížit jeho účinnost. Při souběžném podávání karbamazepinu, fenytoinu nebo fenobarbitalu klesla maximální koncentrace felodipinu o 82 % a celková expozice o 96 %. Kombinace se silnými induktory CYP3A4 se mají vyloučit. Pokud se účinnost felodipinu sníží, lékař upraví jeho dávku a/nebo přeruší léčbu induktorem CYP3A4.",
+      "class_id": "group:cyp3a4_inducer_strong",
+      "drug_class": "Silné induktory CYP3A4",
+      "effect": "Silné induktory CYP3A4, například karbamazepin, fenytoin, fenobarbital nebo rifampicin, snižují hladinu felodipinu v krvi; při podávání s karbamazepinem, fenytoinem nebo fenobarbitalem klesla maximální koncentrace o 82 % a celková expozice o 96 %. Kombinaci je třeba vyloučit. Při nízké účinnosti způsobené sníženou expozicí lékař upraví dávku felodipinu a/nebo přeruší léčbu induktorem.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "substance:8777",
       "drug": "Takrolimus",
-      "effect": "Felodipin může zvýšit koncentraci takrolimu v krvi. Při souběžném podávání bude lékař sledovat jeho sérovou koncentraci a podle potřeby upraví dávkování takrolimu.",
+      "effect": "Felodipin může zvýšit koncentraci takrolimu v krvi. Při souběžném podávání lékař sleduje jeho sérové koncentrace a podle potřeby upraví dávku takrolimu.",
       "effect_type": "increased_exposure",
       "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Grapefruitová šťáva",
+      "effect": "Grapefruitová šťáva může zvýšit účinek felodipinu a riziko nežádoucích účinků. Tablety felodipinu se s grapefruitovou šťávou nesmějí užívat.",
+      "effect_type": "contraindicated",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N06AX25",
+      "drug": "Třezalka tečkovaná",
+      "effect": "Třezalka tečkovaná může snížit účinek felodipinu; tuto kombinaci je třeba vyloučit.",
+      "effect_type": "contraindicated",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Presid se používá k léčbě vysokého krevního tlaku a stabilní anginy pectoris.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0235780",
+      "H": "",
+      "NAZEV": "PRESID",
+      "SILA": "5MG",
+      "FORMA": "TBL PRO",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "5MG TBL PRO 30",
+      "OBAL": "BLI",
+      "DRZ": "TEV",
+      "ZEMDRZ": "NL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "83",
+      "ATC_WHO": "C08CA02",
+      "RC": "83/119/01-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "5",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "30",
+      "ZDROJ_WHO": "NO26",
+      "LL": "8777",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "48",
+      "EXP_T": "M",
+      "NAZEV_REG": "PRESID",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "8777",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "5",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "8777",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "FELODIPINUM",
+          "NAZEV_EN": "FELODIPINE",
+          "NAZEV": "FELODIPIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "3755",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "3761",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3761",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910/50",
+          "NAZEV_EN": "HYPROMELLOSE 2910/50",
+          "NAZEV": "HYPROMELOSA 2910/50"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "4078",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "2587",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2587",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "PROPYLIS GALLAS",
+          "NAZEV_EN": "PROPYL GALLATE",
+          "NAZEV": "PROPYL-GALLÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "1300",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "10258",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10258",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910/6",
+          "NAZEV_EN": "HYPROMELLOSE 2910/6",
+          "NAZEV": "HYPROMELOSA 2910/6"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "4290",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4290",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM RUBRUM",
+          "NAZEV_EN": "IRON OXIDE RED",
+          "NAZEV": "ČERVENÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "4256",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "2710",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "1871",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0235780",
+        "KOD_LATKY": "1216",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1216",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "PROPYLENGLYCOLUM",
+          "NAZEV_EN": "PROPYLENE GLYCOL",
+          "NAZEV": "PROPYLENGLYKOL"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0235780",
+      "PIL": "PI215021.pdf",
+      "DAT_ROZ_PIL": "17.10.2024",
+      "SPC": "SPC163240.pdf",
+      "DAT_ROZ_SPC": "22.10.2020",
+      "OBAL_TEXT": "OBAL163238.pdf",
+      "DAT_ROZ_OBAL": "22.10.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C08CA02",
+        "NT": "N",
+        "NAZEV": "FELODIPIN",
+        "NAZEV_EN": "FELODIPINE"
+      },
+      "formy": {
+        "FORMA": "TBL PRO",
+        "NAZEV": "Tableta s prodlouženým uvolňováním",
+        "NAZEV_EN": "Prolonged-release tablet",
+        "NAZEV_LAT": "Tabuletta cum liberatione prolongata",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10226000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

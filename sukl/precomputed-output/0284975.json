@@ -1,680 +1,765 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N02",
+    "atc:N02A",
+    "atc:N02AB",
+    "atc:N02AB03",
+    "group:cns_depressant",
+    "group:serotonergic",
+    "substance:612"
+  ],
   "side_effects": [
     {
       "ctcae": "Nausea",
       "frequency": "very_common",
-      "label": "Pocit na zvracení",
+      "label": "Pocit na zvracení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závrať",
+      "label": "Závrať.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "common",
-      "label": "Bolest hlavy",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Somnolence",
       "frequency": "common",
-      "label": "Nadměrná ospalost; při neobvyklé nebo extrémní ospalosti je nutná okamžitá pomoc",
-      "action": "hospitalize_NOW",
+      "label": "Nadměrná ospalost. Při neobvyklé nebo extrémní ospalosti ihned vyhledejte lékařskou pomoc.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud jste neobvykle nebo extrémně ospalý/á"
+        "patient_guide": "Neobvyklá nebo extrémní ospalost.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Dyspnea",
       "frequency": "common",
-      "label": "Dušnost nebo dýchavičnost",
+      "label": "Dušnost nebo dýchavičnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Mucositis oral",
       "frequency": "common",
-      "label": "Zánět ústní sliznice",
+      "label": "Zánět v ústech.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "common",
-      "label": "Zvracení",
+      "label": "Zvracení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Constipation",
       "frequency": "common",
-      "label": "Zácpa",
+      "label": "Zácpa.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dry mouth",
       "frequency": "common",
-      "label": "Sucho v ústech",
+      "label": "Sucho v ústech.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hyperhidrosis",
       "frequency": "common",
-      "label": "Zvýšené pocení",
+      "label": "Pocení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fatigue",
       "frequency": "common",
-      "label": "Únava, vyčerpání nebo nedostatek energie",
+      "label": "Vyčerpanost, únava nebo nedostatek energie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "uncommon",
-      "label": "Alergická reakce nebo přecitlivělost",
+      "label": "Alergická reakce nebo přecitlivělost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Tremor",
       "frequency": "uncommon",
-      "label": "Chvění nebo třes",
+      "label": "Chvění nebo třes.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "uncommon",
-      "label": "Zhoršené nebo rozmazané vidění",
+      "label": "Zhoršené nebo rozmazané vidění.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Tachycardia",
       "frequency": "uncommon",
-      "label": "Rychlý nebo pomalý srdeční tep",
+      "label": "Rychlý srdeční tep.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bradycardia",
+      "frequency": "uncommon",
+      "label": "Pomalý srdeční tep.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypotension",
       "frequency": "uncommon",
-      "label": "Nízký krevní tlak",
+      "label": "Nízký krevní tlak.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Amnesia",
+      "ctcae": "Memory impairment",
       "frequency": "uncommon",
-      "label": "Ztráta paměti",
+      "label": "Ztráta paměti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depression",
       "frequency": "uncommon",
-      "label": "Deprese",
+      "label": "Deprese.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Delusions",
+      "ctcae": "Paranoia",
       "frequency": "uncommon",
-      "label": "Podezřívavé myšlenky nebo bezdůvodný pocit strachu",
+      "label": "Podezřívavé myšlenky nebo bezdůvodný pocit strachu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Confusion",
       "frequency": "uncommon",
-      "label": "Zmatenost",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cognitive disturbance",
-      "frequency": "uncommon",
-      "label": "Dezorientace",
+      "label": "Zmatenost nebo dezorientace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anxiety",
       "frequency": "uncommon",
-      "label": "Úzkost",
+      "label": "Úzkost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Psychiatric disorders - Other, specify",
+      "ctcae": "Depression",
       "frequency": "uncommon",
-      "label": "Smutek, neklid, neobvykle povznesená nálada, kolísání nálady nebo emoční labilita",
+      "label": "Smutek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Restlessness",
+      "frequency": "uncommon",
+      "label": "Neklid.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Euphoria",
       "frequency": "uncommon",
-      "label": "Euforická nálada",
+      "label": "Neobvyklý pocit štěstí nebo zdraví.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Concentration impairment",
+      "ctcae": "Psychiatric disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Porucha pozornosti nebo snadné rozptýlení",
+      "label": "Kolísání nálady nebo emoční labilita.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Insomnia",
+      "ctcae": "Abdominal distension",
       "frequency": "uncommon",
-      "label": "Problémy se spaním nebo narušený spánek",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anorexia",
-      "frequency": "uncommon",
-      "label": "Ztráta chuti k jídlu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Změna čichu nebo nepříjemně změněné vnímání pachů",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysgeusia",
-      "frequency": "uncommon",
-      "label": "Změna chuti",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Lethargy",
-      "frequency": "uncommon",
-      "label": "Letargie",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Snížená citlivost na dotek",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Oropharyngeal pain",
-      "frequency": "uncommon",
-      "label": "Bolest v ústech nebo v hrdle",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Tlak v hrdle",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Stálý pocit plnosti",
+      "label": "Stálý pocit plnosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "uncommon",
-      "label": "Bolest žaludku nebo břicha",
+      "label": "Bolest žaludku nebo břicha.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dyspepsia",
       "frequency": "uncommon",
-      "label": "Porucha trávení",
+      "label": "Porucha trávení.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Oral pain",
       "frequency": "uncommon",
-      "label": "Bolest v ústech",
+      "label": "Vředy v ústech, bolest v ústech nebo v hrdle, tlak v hrdle, vředy na dásních nebo rtech a potíže s jazykem.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Oral cavity fistula",
+      "ctcae": "Anorexia",
       "frequency": "uncommon",
-      "label": "Vředy v ústech",
+      "label": "Ztráta chuti k jídlu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gingival pain",
+      "ctcae": "Dysgeusia",
       "frequency": "uncommon",
-      "label": "Vředy na dásních",
+      "label": "Změna chuti nebo čichu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Lip pain",
+      "ctcae": "Insomnia",
       "frequency": "uncommon",
-      "label": "Vředy na rtech",
+      "label": "Problémy se spaním nebo narušený spánek.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Concentration impairment",
       "frequency": "uncommon",
-      "label": "Poruchy jazyka",
+      "label": "Porucha pozornosti nebo snadné rozptýlení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastroparesis",
+      "ctcae": "Generalized muscle weakness",
       "frequency": "uncommon",
-      "label": "Porucha vyprazdňování žaludku",
+      "label": "Slabost nebo ztráta síly.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Kožní léze nebo jiné abnormality na kůži",
+      "label": "Abnormality na kůži.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Vyrážka",
+      "label": "Vyrážka; její typ není blíže určen.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pruritus",
       "frequency": "uncommon",
-      "label": "Svědění, včetně alergického svědění",
+      "label": "Svědění nebo alergické svědění.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Urticaria",
-      "frequency": "not_known",
-      "label": "Kopřivka",
+      "ctcae": "Night sweats",
+      "frequency": "uncommon",
+      "label": "Noční pocení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysesthesia",
+      "frequency": "uncommon",
+      "label": "Snížená citlivost na dotek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Bruising",
       "frequency": "uncommon",
-      "label": "Snadná tvorba modřin",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperhidrosis",
-      "frequency": "uncommon",
-      "label": "Noční pocení",
+      "label": "Snadná tvorba modřin.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "uncommon",
-      "label": "Bolest kloubů",
+      "label": "Bolest kloubů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
       "frequency": "uncommon",
-      "label": "Ztuhlost svalů",
+      "label": "Ztuhlost svalů nebo kloubů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Joint range of motion decreased",
+      "ctcae": "Withdrawal syndrome",
       "frequency": "uncommon",
-      "label": "Ztuhlost kloubů",
+      "label": "Syndrom z vysazení; může se projevit nevolností, zvracením, průjmem, úzkostí, zimnicí, třesem a pocením.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Injury, poisoning and procedural complications - Other, specify",
+      "frequency": "uncommon",
+      "label": "Náhodné předávkování.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Erectile dysfunction",
       "frequency": "uncommon",
-      "label": "U mužů potíže s dosažením nebo udržením erekce",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "uncommon",
-      "label": "Příznaky z vysazení, například pocit na zvracení, zvracení, průjem, úzkost, zimnice, třes a pocení",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se po vysazení objeví příznaky z vysazení nebo máte obavy ohledně zmírnění bolesti"
-      }
-    },
-    {
-      "ctcae": "Injury, poisoning and procedural complications - Other, specify",
-      "frequency": "uncommon",
-      "label": "Náhodné předávkování",
+      "label": "U mužů neschopnost dosáhnout nebo udržet erekci.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Malaise",
       "frequency": "uncommon",
-      "label": "Celkový pocit nemoci",
+      "label": "Celkový pocit nemoci.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Diarrhea",
+      "ctcae": "Angioedema",
       "frequency": "not_known",
-      "label": "Průjem",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Seizure",
-      "frequency": "not_known",
-      "label": "Křeče nebo záchvaty",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Peripheral edema",
-      "frequency": "not_known",
-      "label": "Otok rukou nebo nohou",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hallucinations",
-      "frequency": "not_known",
-      "label": "Halucinace – vidění nebo slyšení věcí, které ve skutečnosti neexistují",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "not_known",
-      "label": "Horečka",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Depressed level of consciousness",
-      "frequency": "not_known",
-      "label": "Snížený stupeň vědomí",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Syncope",
-      "frequency": "not_known",
-      "label": "Ztráta vědomí",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Delirium",
-      "frequency": "not_known",
-      "label": "Delirium; může zahrnovat neklid, dezorientaci, zmatenost, strach, halucinace, poruchy spánku nebo noční můry",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Otok jazyka",
+      "label": "Otok jazyka.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Závažné dýchací problémy, zpomalené nebo mělké dýchání; při zpomaleném či mělkém dýchání je nutná okamžitá pomoc",
-      "action": "hospitalize_NOW",
+      "label": "Závažné dýchací problémy. Při zpomaleném nebo mělkém dýchání ihned vyhledejte lékařskou pomoc.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se vám dýchání zpomalí nebo je mělké"
+        "patient_guide": "Zpomalené nebo mělké dýchání.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Fall",
       "frequency": "not_known",
-      "label": "Pád",
+      "label": "Pád.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flushing",
       "frequency": "not_known",
-      "label": "Návaly horka nebo zčervenání",
+      "label": "Návaly nebo pocit silného horka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hot flashes",
+      "ctcae": "Diarrhea",
       "frequency": "not_known",
-      "label": "Pocit silného horka",
+      "label": "Průjem.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Seizure",
       "frequency": "not_known",
-      "label": "Snížená účinnost při opakovaném užívání (tolerance)",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se vám zdá, že přípravek účinkuje méně nebo bolest neustupuje navzdory vyšší dávce"
-      }
+      "label": "Křeče nebo záchvaty.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Peripheral edema",
       "frequency": "not_known",
-      "label": "Závislost na přípravku nebo návyk",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud přípravek užíváte déle nebo ve vyšší dávce, než vám doporučil lékař, užíváte ho z jiných důvodů, opakovaně se vám nedaří užívání omezit nebo se po vysazení necítíte dobře"
-      }
+      "label": "Otok rukou nebo nohou.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Hallucinations",
       "frequency": "not_known",
-      "label": "Zneužívání přípravku",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud přípravek užíváte z jiných důvodů, než vám byl předepsán, nebo se opakovaně a neúspěšně pokoušíte jeho užívání kontrolovat"
-      }
+      "label": "Vidění nebo slyšení věcí, které nejsou skutečné.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "not_known",
+      "label": "Horečka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Depressed level of consciousness",
+      "frequency": "not_known",
+      "label": "Snížený stupeň vědomí nebo ztráta vědomí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "not_known",
+      "label": "Svědivá vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Delirium",
+      "frequency": "not_known",
+      "label": "Delirium; může se projevit neklidem, potřebou pohybu, dezorientací, zmateností, strachem, halucinacemi, poruchami spánku nebo nočními můrami.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Sleep apnea",
       "frequency": "not_known",
-      "label": "Poruchy dýchání ve spánku, včetně spánkové apnoe",
+      "label": "Poruchy dýchání ve spánku, včetně spánkové apnoe a nízké hladiny kyslíku ve spánku. Příznaky mohou zahrnovat přerušované dýchání během spánku, noční probouzení kvůli dušnosti, potíže udržet spánek nebo nadměrnou denní ospalost.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud si vy nebo někdo jiný všimne přerušovaného dýchání během spánku, nočního probouzení kvůli dušnosti, potíží udržet spánek nebo nadměrné ospalosti během dne"
+        "patient_guide": "Přerušované dýchání během spánku, noční probouzení kvůli dušnosti, potíže udržet spánek nebo nadměrná ospalost během dne.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Hypoxia",
-      "frequency": "not_known",
-      "label": "Nízká hladina kyslíku v krvi během spánku",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud si vy nebo někdo jiný všimne přerušovaného dýchání během spánku, nočního probouzení kvůli dušnosti, potíží udržet spánek nebo nadměrné ospalosti během dne"
-      }
-    },
-    {
-      "ctcae": "Pain",
-      "frequency": "not_known",
-      "label": "Zvýšená citlivost na bolest (hyperalgezie), která neodpovídá zvýšení dávky léku proti bolesti",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte bolesti nebo zvýšenou citlivost na bolest, která neodpovídá zvýšení dávky léku předepsané lékařem"
-      }
-    },
-    {
-      "ctcae": "Adrenal insufficiency",
-      "frequency": null,
-      "label": "Možná adrenální insuficience, při níž nadledviny nevytvářejí dostatek hormonů; může se projevit pocitem na zvracení, zvracením, nechutenstvím, únavou, slabostí, závratí a nízkým krevním tlakem",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se současně objeví pocit na zvracení, zvracení, nechutenství, únava, slabost, závrať a nízký krevní tlak"
-      }
-    },
-    {
-      "ctcae": null,
-      "frequency": "not_known",
-      "label": "Abstinenční syndrom u novorozence po dlouhodobé léčbě fentanylem během těhotenství; může být život ohrožující",
+      "ctcae": "Drug tolerance",
+      "frequency": "uncommon",
+      "label": "Při opakovaném používání se může vyvinout léková tolerance.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Drug dependence",
+      "frequency": "uncommon",
+      "label": "Opakované používání může vést k závislosti na léku.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud přípravek používáte déle nebo ve vyšší dávce, než lékař doporučil, užíváte ho z jiných důvodů, opakovaně se neúspěšně pokoušíte přestat nebo se po vysazení necítíte dobře a po opětovném užití se vám uleví.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Drug abuse",
+      "frequency": "uncommon",
+      "label": "Zneužívání léku.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud přípravek používáte déle nebo ve vyšší dávce, než lékař doporučil, užíváte ho z jiných důvodů, opakovaně se neúspěšně pokoušíte přestat nebo se po vysazení necítíte dobře a po opětovném užití se vám uleví.",
+        "min_severity": 2
+      }
     }
   ],
   "combinations": [
     {
-      "drug": "natrium-oxybát",
-      "effect": "Současné užívání fentanylu s léčivými přípravky obsahujícími natrium-oxybát je kontraindikováno. Léčbu natrium-oxybátem je třeba ukončit před zahájením léčby přípravkem Lunaldin.",
+      "class_id": "group:cyp3a4_inhibitor",
+      "drug_class": "Léky tlumící CYP3A4, například některá makrolidová antibiotika, azolová antimykotika a některé inhibitory proteáz",
+      "effect": "Mohou zvýšit biologickou dostupnost fentanylu tím, že sníží jeho odbourávání, a zesílit nebo prodloužit opioidní účinky. Při současném užívání je třeba postupovat opatrně; lékař může upravit dávku Lunaldinu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp3a4_inducer",
+      "drug_class": "Léky a přípravky indukující CYP3A4, například rifampicin, rifabutin, karbamazepin, fenytoin, fenobarbital a třezalka tečkovaná",
+      "effect": "Mohou snížit účinnost fentanylu. Účinek indukce se může projevit postupně, může trvat nejméně 2 týdny, než zesílí, a po vysazení může nejméně 2 týdny odeznívat. Po ukončení nebo snížení dávky induktoru může vzrůst riziko účinku či toxicity fentanylu; lékař má léčbu pečlivě sledovat a podle potřeby upravit dávku Lunaldinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cns_depressant",
+      "drug_class": "Látky tlumící centrální nervový systém, například opioidy, celková anestetika, gabapentin nebo pregabalin, myorelaxancia, sedativní antidepresiva a antihistaminika, barbituráty, benzodiazepiny, hypnotika, antipsychotika, klonidin a příbuzné látky",
+      "effect": "Mohou spolu s Lunaldinem zesílit útlum centrální nervové soustavy a zvýšit riziko ospalosti, útlumu dýchání, nízkého tlaku, kómatu a úmrtí. Současné podávání sedativ je určeno jen pro případy, kdy není možná jiná léčba; lékař má omezit dávku a dobu souběžné léčby a pacienty pečlivě sledovat.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N01AX11",
+      "drug": "Natrium-oxybat",
+      "effect": "Současné užívání přípravků obsahujících natrium-oxybát a fentanyl je kontraindikováno; léčbu natrium-oxybátem je třeba přerušit před zahájením Lunaldinu.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory CYP3A4, například makrolidová antibiotika, azolová antimykotika a některé inhibitory proteáz",
-      "effect": "Tyto léky mohou snížit odbourávání fentanylu a zvýšit jeho biologickou dostupnost, takže účinky fentanylu mohou být silnější nebo déle trvat. Příklady zahrnují erythromycin, ketokonazol, itrakonazol a ritonavir. Lékař může upravit dávku a bude sledovat možné známky toxicity.",
-      "effect_type": "increased_exposure",
+      "class_id": "atc:N06AF",
+      "drug": "Inhibitory monoaminooxidázy (IMAO)",
+      "effect": "Lunaldin se nedoporučuje pacientům, kteří v předchozích 14 dnech užívali IMAO; současné užívání se nedoporučuje kvůli hlášenému silnému a nepředvídatelnému zesílení analgetického účinku. Může se zvýšit také riziko serotoninového syndromu.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Induktory CYP3A4, například rifampicin, rifabutin, karbamazepin, fenytoin, fenobarbital a třezalka tečkovaná",
-      "effect": "Při současném užívání mohou tyto přípravky snížit účinnost fentanylu. Účinek se může rozvíjet postupně, dosažení maxima může trvat nejméně 2 týdny a po vysazení může indukce přetrvávat nejméně 2 týdny. Po ukončení léčby induktorem nebo snížení jeho dávky může naopak vzrůst účinek či toxicita fentanylu; lékař bude dávku a možné známky toxicity pečlivě sledovat.",
-      "effect_type": "changed_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "grapefruitový džus",
-      "effect": "Grapefruitový džus inhibuje CYP3A4 a může zvýšit biologickou dostupnost fentanylu, a tím zesílit jeho nežádoucí účinky. Pacientům užívajícím Lunaldin se nedoporučuje grapefruitový džus pít.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léky tlumící centrální nervový systém, například opioidy, celková anestetika, gabapentin nebo pregabalin, myorelaxancia, sedativní antidepresiva, sedativní antihistaminika, barbituráty, benzodiazepiny a hypnotika",
-      "effect": "Současné užívání může sčítáním tlumivých účinků zvýšit ospalost a riziko sedace, útlumu dýchání, nízkého krevního tlaku, kómatu a úmrtí. Kombinace se sedativy, jako jsou benzodiazepiny nebo jim podobné látky, je vyhrazena pro případy, kdy nejsou dostupné jiné možnosti léčby; lékař má omezit dávku a dobu současné léčby a pečlivě sledovat známky sedace a útlumu dýchání.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zvýšená ospalost nebo sedace",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Útlum dýchání",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Kóma",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Death NOS",
-          "frequency": null,
-          "label": "Úmrtí",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "alkohol",
-      "effect": "Alkohol zesiluje sedativní účinky fentanylu. Při užívání Lunaldinu se nedoporučuje pít alkohol ani užívat léčivé přípravky obsahující alkohol; ospalost může být silnější než obvykle.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Silnější ospalost nebo útlum",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Serotonergní léčivé přípravky, zejména SSRI a SNRI; také léky narušující metabolismus serotoninu, včetně IMAO",
-      "effect": "Současné užívání fentanylu s těmito léky může zvýšit riziko potenciálně život ohrožujícího serotoninového syndromu, a to i při doporučených dávkách. Zvláštní opatrnost je potřebná při současném podání. Lunaldin se nedoporučuje pacientům, kteří dostávali IMAO v předchozích 14 dnech; současné podávání opioidních analgetik s IMAO bylo spojeno také se silným a nepředvídatelným zesílením analgetického účinku. Při podezření na serotoninový syndrom má být léčba Lunaldinem ukončena.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Potenciálně život ohrožující serotoninový syndrom; může zahrnovat změny duševního stavu, zrychlený tep, kolísání krevního tlaku, zvýšenou teplotu, zvýrazněné reflexy, poruchu koordinace, svalovou ztuhlost nebo zažívací obtíže",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Parciální opioidní agonisté nebo antagonisté, například buprenorfin, nalbufin a pentazocin",
-      "effect": "Tyto léky působí zčásti antagonisticky proti analgetickému účinku fentanylu a u pacientů závislých na opioidech mohou vyvolat příznaky z vysazení. Současné užívání se nedoporučuje.",
+      "class_id": "atc:N02AE01",
+      "drug": "Buprenorfin",
+      "effect": "Současné užívání se nedoporučuje. Buprenorfin může částečně oslabit analgetický účinek fentanylu a u pacientů závislých na opioidech vyvolat příznaky z vysazení.",
       "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02AF02",
+      "drug": "Nalbufin",
+      "effect": "Současné užívání se nedoporučuje. Nalbufin může částečně oslabit analgetický účinek fentanylu a u pacientů závislých na opioidech vyvolat příznaky z vysazení.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02AD01",
+      "drug": "Pentazocin",
+      "effect": "Současné užívání se nedoporučuje. Pentazocin může částečně oslabit analgetický účinek fentanylu a u pacientů závislých na opioidech vyvolat příznaky z vysazení.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:serotonergic",
+      "drug_class": "Serotonergní léky, například SSRI a SNRI",
+      "effect": "Současné podávání fentanylu může zvýšit riziko potenciálně život ohrožujícího serotoninového syndromu, a to i při doporučených dávkách. Při podezření na tento syndrom se má léčba Lunaldinem ukončit.",
+      "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": null,
+          "ctcae": "Serotonin syndrome",
           "frequency": null,
-          "label": "Příznaky z vysazení, například pocit na zvracení, zvracení, průjem, úzkost, zimnice, třes a pocení",
-          "action": null,
-          "action_condition": null
+          "label": "Serotoninový syndrom může zahrnovat změny duševního stavu, například neklid, halucinace nebo kóma, nestabilní tep, krevní tlak či teplotu, zvýšené reflexy, poruchu koordinace, ztuhlost svalů nebo zažívací potíže, například nevolnost, zvracení či průjem.",
+          "action": "discontinue_treatment",
+          "action_condition": {
+            "patient_guide": "Při současném užívání serotonergních léků.",
+            "min_severity": 2
+          }
         }
       ]
     },
     {
-      "drug_class": "Antipsychotika a antidepresiva",
-      "effect": "Lunaldin může s těmito léky vzájemně reagovat a změnit duševní stav; mohou se objevit agitovanost, halucinace nebo kóma, spolu se zvýšenou teplotou, zrychleným tepem, nestabilním krevním tlakem, zvýrazněnými reflexy, svalovou ztuhlostí, poruchou koordinace nebo zažívacími příznaky. Lékař posoudí, zda je Lunaldin vhodný.",
+      "class_id": null,
+      "drug_class": "Grapefruitový džus",
+      "effect": "Grapefruitový džus může inhibovat CYP3A4 a zvýšit účinky Lunaldinu nebo jejich nežádoucí projevy. Příbalová informace pacientům doporučuje grapefruitový džus při předepsaném Lunaldinu nepít.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cns_depressant",
+      "drug_class": "Alkohol a léky obsahující alkohol",
+      "effect": "Alkohol zesiluje sedativní účinky opioidních analgetik a může u některých osob způsobit silnější ospalost. Současné užívání alkoholických nápojů nebo léků s alkoholem se nedoporučuje.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Změna duševního stavu nebo příznaky serotoninového syndromu, včetně agitovanosti, halucinací, zrychleného tepu, kolísání krevního tlaku, zvýšené teploty, zvýrazněných reflexů, svalové ztuhlosti, poruchy koordinace či zažívacích obtíží",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Lunaldin je určen dospělým, kteří pravidelně užívají opioidy na nádorovou bolest a potřebují tlumit její náhlé zhoršení.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0284975",
+      "H": "",
+      "NAZEV": "LUNALDIN",
+      "SILA": "100MCG",
+      "FORMA": "SLG TBL NOB",
+      "BALENI": "30",
+      "CESTA": "SLG",
+      "DOPLNEK": "100MCG SLG TBL NOB 30",
+      "OBAL": "BLI",
+      "DRZ": "GNG",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "65",
+      "ATC_WHO": "N02AB03",
+      "RC": "65/132/09-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0,6",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "612",
+      "VYDEJ": "R",
+      "ZAV": "1",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "LUNALDIN",
+      "MRP_CISLO": "SE/H/0575/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0284975",
+        "KOD_LATKY": "612",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "0,1571",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "612",
+          "ZDROJ": "C18",
+          "NAZEV_INN": "FENTANYLI CITRAS",
+          "NAZEV_EN": "FENTANYL CITRATE",
+          "NAZEV": "FENTANYL-CITRÁT",
+          "ZAV": "1",
+          "DOP": "S7"
+        }
+      },
+      {
+        "KOD_SUKL": "0284975",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0284975",
+        "KOD_LATKY": "2220",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "0,1",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2220",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "FENTANYLUM",
+          "NAZEV_EN": "FENTANYL",
+          "NAZEV": "FENTANYL",
+          "ZAV": "1",
+          "DOP": "S7"
+        }
+      },
+      {
+        "KOD_SUKL": "0284975",
+        "KOD_LATKY": "875",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "875",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MANNITOLUM",
+          "NAZEV_EN": "MANNITOL",
+          "NAZEV": "MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0284975",
+        "KOD_LATKY": "16688",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16688",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM SILICIFICATUM",
+          "NAZEV_EN": "SILICIFIED MICROCRYSTALLINE CELLULOSE",
+          "NAZEV": "SILICIFIKOVANÁ MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0284975",
+        "KOD_LATKY": "5624",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0284975",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0284975",
+      "PIL": "PI230919.pdf",
+      "DAT_ROZ_PIL": "24.02.2026",
+      "SPC": "SPC222344.pdf",
+      "DAT_ROZ_SPC": "15.05.2025",
+      "OBAL_TEXT": "OBAL222342.pdf",
+      "DAT_ROZ_OBAL": "15.05.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N02AB03",
+        "NT": "N",
+        "NAZEV": "FENTANYL",
+        "NAZEV_EN": "FENTANYL"
+      },
+      "formy": {
+        "FORMA": "SLG TBL NOB",
+        "NAZEV": "Sublingvální tableta",
+        "NAZEV_EN": "Sublingual tablet",
+        "NAZEV_LAT": "Tabuletta sublingualis",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10318000"
+      },
+      "cesty": {
+        "CESTA": "SLG",
+        "NAZEV": "Sublingvální podání",
+        "NAZEV_EN": "Sublingual use",
+        "NAZEV_LAT": "Usus sublingualis",
+        "KOD_EDQM": "20067000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

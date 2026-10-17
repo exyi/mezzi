@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A12",
+    "atc:A12B",
+    "atc:A12BA",
+    "atc:A12BA01",
+    "substance:1174"
+  ],
   "side_effects": [
     {
       "ctcae": "Hyperkalemia",
@@ -8,7 +16,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Gastrointestinal pain",
       "frequency": "not_known",
       "label": "Břišní diskomfort.",
       "action": null,
@@ -31,39 +39,49 @@
     {
       "ctcae": "Melena",
       "frequency": "not_known",
-      "label": "Meléna (černá stolice s natrávenou krví).",
+      "label": "Černá stolice s natrávenou krví.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Upper gastrointestinal hemorrhage",
       "frequency": "not_known",
       "label": "Krvácení do trávicího traktu.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se během léčby objeví krvácení do trávicího traktu."
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Obstruction gastric",
       "frequency": "not_known",
       "label": "Neprůchodnost trávicího traktu.",
-      "action": null,
-      "action_condition": null
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Gastrointestinal perforation",
       "frequency": "not_known",
       "label": "Proděravění trávicího traktu.",
-      "action": null,
-      "action_condition": null
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Gastrointestinal ulcer",
       "frequency": "not_known",
       "label": "Vřed v trávicím traktu.",
-      "action": null,
-      "action_condition": null
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Nausea",
@@ -76,116 +94,262 @@
       "ctcae": "Vomiting",
       "frequency": "not_known",
       "label": "Zvracení.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se během léčby objeví silné zvracení."
-      }
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSAID)",
-      "effect": "Při současném užívání s přípravkem Kalnormin může stoupnout hladina draslíku v krvi a zvýšit se riziko nežádoucích účinků na trávicí ústrojí.",
+      "class_id": "group:hyperkalemia_risk",
+      "drug_class": "Diuretika šetřící draslík",
+      "effect": "Při současném užívání se může nadměrně zvýšit hladina draslíku v krvi; Kalnormin se má podávat s opatrností.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Nadměrné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Draslík šetřící diuretika",
-      "effect": "Při současném užívání s přípravkem Kalnormin může stoupnout hladina draslíku v krvi.",
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky",
+      "effect": "Při současném užívání se může zvýšit riziko nežádoucích účinků na trávicí ústrojí; Kalnormin se má podávat s opatrností.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Nadměrné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Inhibitory ACE a blokátory receptorů pro angiotenzin II (sartany, ARB)",
-      "effect": "Soli draslíku v přípravku Kalnormin mohou zesílit účinek těchto léků vedoucí ke zvýšení hladiny draslíku v krvi. Při souběžné léčbě má lékař pacienta sledovat.",
+      "class_id": "atc:C09A",
+      "drug_class": "ACE inhibitory",
+      "effect": "Soli draslíku mohou zvýšit účinek těchto léků na hladinu draslíku v krvi; při souběžném užívání mají být pacienti sledováni.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Nadměrné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Heparin",
-      "effect": "Při současném užívání s přípravkem Kalnormin může stoupnout hladina draslíku v krvi.",
+      "class_id": "atc:C09C",
+      "drug_class": "Blokátory receptorů pro angiotenzin II (sartany)",
+      "effect": "Soli draslíku mohou zvýšit účinek těchto léků na hladinu draslíku v krvi; při souběžném užívání mají být pacienti sledováni.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Nadměrné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Cyklosporin",
-      "effect": "Při současném užívání s přípravkem Kalnormin může stoupnout hladina draslíku v krvi.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Nadměrné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "substance:1174",
       "drug": "Digoxin",
-      "effect": "Při současném užívání s přípravkem Kalnormin může stoupnout hladina draslíku v krvi. Náhlé vysazení přípravku Kalnormin může zvýšit toxicitu digoxinu.",
+      "effect": "Náhlé vysazení Kalnorminu může zvýšit toxicitu digoxinu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Nadměrné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C07",
       "drug_class": "Beta-blokátory",
-      "effect": "Při současném užívání s přípravkem Kalnormin může stoupnout hladina draslíku v krvi.",
+      "effect": "Kalnormin se má při současném užívání podávat s opatrností, protože kombinace může zvýšit hladinu draslíku v krvi.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Nadměrné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Anticholinergika",
-      "effect": "Při současném podávání s přípravkem Kalnormin se může zvýšit riziko nežádoucích účinků na trávicí ústrojí.",
+      "class_id": "substance:1174",
+      "drug": "Heparin",
+      "effect": "Kalnormin se má při současném užívání podávat s opatrností, protože kombinace může zvýšit hladinu draslíku v krvi.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1174",
+      "drug": "Cyklosporin",
+      "effect": "Kalnormin se má při současném užívání podávat s opatrností, protože kombinace může ovlivnit hladinu draslíku v krvi.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:hyperkalemia_risk",
+      "drug_class": "Léky obsahující draslík, včetně některých multivitaminových a multiminerálních přípravků a náhražek soli",
+      "effect": "Současné užívání může zvýšit hladinu draslíku v krvi.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Kalnormin se používá u dospělých k prevenci nebo léčbě nízké hladiny draslíku v krvi.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0279264",
+      "H": "",
+      "NAZEV": "KALNORMIN",
+      "SILA": "1G",
+      "FORMA": "TBL PRO",
+      "BALENI": "30",
+      "CESTA": "POR",
+      "DOPLNEK": "1G TBL PRO 30",
+      "OBAL": "BLI",
+      "DRZ": "BAU",
+      "ZEMDRZ": "IRL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "39",
+      "ATC_WHO": "A12BA01",
+      "RC": "39/730/92-S/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "3",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "10",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1174",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "KALNORMIN",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0279264",
+        "KOD_LATKY": "1174",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "1000",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1174",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "KALII CHLORIDUM",
+          "NAZEV_EN": "POTASSIUM CHLORIDE",
+          "NAZEV": "CHLORID DRASELNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0279264",
+        "KOD_LATKY": "1300",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0279264",
+        "KOD_LATKY": "9559",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9559",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "POLYVINYLBUTYRALUM",
+          "NAZEV_EN": "POLYVINYLBUTYRALE",
+          "NAZEV": "POLYVINYLBUTYRAL"
+        }
+      },
+      {
+        "KOD_SUKL": "0279264",
+        "KOD_LATKY": "2034",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2034",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "ALCOHOL CETYLICUS",
+          "NAZEV_EN": "CETYL ALCOHOL",
+          "NAZEV": "CETYLALKOHOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0279264",
+        "KOD_LATKY": "2378",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0279264",
+        "KOD_LATKY": "1871",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0279264",
+      "PIL": "PI230684.pdf",
+      "DAT_ROZ_PIL": "17.02.2026",
+      "SPC": "SPC225780.pdf",
+      "DAT_ROZ_SPC": "02.09.2025",
+      "OBAL_TEXT": "OBAL225778.pdf",
+      "DAT_ROZ_OBAL": "02.09.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A12BA01",
+        "NT": "N",
+        "NAZEV": "CHLORID DRASELNÝ",
+        "NAZEV_EN": "POTASSIUM CHLORIDE"
+      },
+      "formy": {
+        "FORMA": "TBL PRO",
+        "NAZEV": "Tableta s prodlouženým uvolňováním",
+        "NAZEV_EN": "Prolonged-release tablet",
+        "NAZEV_LAT": "Tabuletta cum liberatione prolongata",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10226000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

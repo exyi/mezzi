@@ -1,25 +1,34 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A12",
+    "atc:A12A",
+    "atc:A12AX",
+    "substance:15455",
+    "substance:234"
+  ],
   "side_effects": [
     {
       "ctcae": "Allergic reaction",
       "frequency": "not_known",
-      "label": "Reakce přecitlivělosti, například angioedém (otok obličeje, jazyka nebo rtů) nebo otok hrtanu.",
+      "label": "Reakce přecitlivělosti, včetně otoku obličeje, jazyka, rtů nebo hrdla (angioedém či otok hrtanu).",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví otok obličeje, jazyka, rtů nebo hrdla"
+        "patient_guide": "Otok obličeje, jazyka, rtů nebo hrdla.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Hypercalcemia",
       "frequency": "uncommon",
-      "label": "Zvýšená hladina vápníku v krvi; může se objevit při užívání vysokých dávek.",
+      "label": "Zvýšená hladina vápníku v krvi; při vysokých dávkách.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
+      "ctcae": null,
       "frequency": "uncommon",
-      "label": "Zvýšené množství vápníku v moči; může se objevit při užívání vysokých dávek.",
+      "label": "Zvýšená hladina vápníku v moči; při vysokých dávkách.",
       "action": null,
       "action_condition": null
     },
@@ -33,7 +42,7 @@
     {
       "ctcae": "Dyspepsia",
       "frequency": "rare",
-      "label": "Trávicí potíže (dyspepsie).",
+      "label": "Trávicí potíže.",
       "action": null,
       "action_condition": null
     },
@@ -66,13 +75,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Milk-alkali syndrom (Burnettův syndrom), obvykle při požití nadměrného množství vápníku. Může se projevovat častým močením, přetrvávající bolestí hlavy, ztrátou chuti k jídlu, nevolností nebo zvracením, neobvyklou únavou či slabostí, zvýšenou hladinou vápníku v krvi, alkalózou a poruchou funkce ledvin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Pruritus",
       "frequency": "very_rare",
       "label": "Svědění.",
@@ -80,7 +82,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "very_rare",
       "label": "Vyrážka.",
       "action": null,
@@ -94,116 +96,445 @@
       "action_condition": null
     },
     {
+      "ctcae": "Metabolism and nutrition disorders - Other, specify",
+      "frequency": "very_rare",
+      "label": "Milk-alkali syndrom (Burnettův syndrom), obvykle pouze při nadměrném příjmu vápníku.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Hyperphosphatemia",
       "frequency": null,
-      "label": "U pacientů s poruchou funkce ledvin může hrozit zvýšení hladiny fosfátů v krvi.",
+      "label": "U pacientů s poruchou funkce ledvin se může zvýšit hladina fosfátů v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Renal calculi",
       "frequency": null,
-      "label": "U pacientů s poruchou funkce ledvin může hrozit tvorba ledvinových kamenů.",
+      "label": "U pacientů s poruchou funkce ledvin se mohou tvořit ledvinové kameny.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": null,
-      "label": "U pacientů s poruchou funkce ledvin může hrozit zvýšené ukládání vápníku v ledvinách (nefrokalcinóza).",
+      "label": "U pacientů s poruchou funkce ledvin se může zvýšit ukládání vápníku v ledvinách (nefrokalcinóza).",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "tetracyklinové přípravky",
-      "effect": "Uhličitan vápenatý může narušit jejich vstřebávání, a tím snížit jejich účinek. Tetracyklinový přípravek se má užívat nejméně 2 hodiny před přípravkem Calcichew D3 Lemon nebo 4–6 hodin po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "bisfosfonáty",
-      "effect": "Vápník může snížit jejich vstřebávání v trávicím traktu. Bisfosfonát se má užívat nejméně 1 hodinu před přípravkem Calcichew D3 Lemon.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "levothyroxin",
-      "effect": "Vápník může snížit vstřebávání levothyroxinu a tím i jeho účinek. Tyto přípravky se mají užívat s odstupem nejméně 4 hodin.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "chinolonová antibiotika",
-      "effect": "Vápník může snížit jejich vstřebávání. Chinolonové antibiotikum se má užívat nejméně 2 hodiny před přípravkem Calcichew D3 Lemon nebo 6 hodin po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "železo",
-      "effect": "Soli vápníku mohou snížit vstřebávání železa. Železo se má užívat nejméně 2 hodiny před přípravkem Calcichew D3 Lemon nebo 2 hodiny po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "zinek",
-      "effect": "Soli vápníku mohou snížit vstřebávání zinku. Zinek se má užívat nejméně 2 hodiny před přípravkem Calcichew D3 Lemon nebo 2 hodiny po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "stroncium-ranelát",
-      "effect": "Soli vápníku mohou snížit jeho vstřebávání. Stroncium-ranelát se má užívat nejméně 2 hodiny před přípravkem Calcichew D3 Lemon nebo 2 hodiny po něm.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "orlistat",
-      "effect": "Orlistat může snížit vstřebávání vitaminů rozpustných v tucích, například vitaminu D3 obsaženého v přípravku Calcichew D3 Lemon.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "thiazidová diuretika",
-      "effect": "Snižují vylučování vápníku močí, a proto při souběžném užívání zvyšují riziko hyperkalcémie. Lékař má pravidelně kontrolovat hladinu vápníku v krvi.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypercalcemia",
-          "frequency": null,
-          "label": "Zvýšená hladina vápníku v krvi (hyperkalcémie).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "srdeční glykosidy",
-      "effect": "Při léčbě vápníkem a vitaminem D může hyperkalcémie zvýšit toxicitu srdečních glykosidů. Lékař má sledovat EKG a hladinu vápníku v krvi.",
+      "class_id": "atc:C03A",
+      "drug_class": "Thiazidová diuretika",
+      "effect": "Thiazidová diuretika snižují vylučování vápníku močí, a mohou tak zvýšit jeho hladinu v krvi. Při souběžném užívání má lékař pravidelně sledovat hladinu vápníku v séru.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "přípravky obsahující vápník a/nebo vitamin D a přípravky či potraviny s obsahem vápníku (například mléko), včetně doplňků stravy",
-      "effect": "Souběžný příjem může zvýšit riziko hyperkalcémie a milk-alkali syndromu s následnou poruchou funkce ledvin. Lékař má v takových případech často kontrolovat hladinu vápníku v krvi a funkci ledvin.",
+      "class_id": "atc:C01A",
+      "drug_class": "Srdeční glykosidy",
+      "effect": "Při léčbě vápníkem a vitaminem D může zvýšená hladina vápníku zvýšit toxicitu srdečních glykosidů. Lékař má sledovat EKG a hladinu vápníku v séru.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypercalcemia",
-          "frequency": null,
-          "label": "Zvýšená hladina vápníku v krvi (hyperkalcémie).",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Metabolism and nutrition disorders - Other, specify",
-          "frequency": null,
-          "label": "Milk-alkali syndrom s následnou poruchou funkce ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:234",
+      "drug": "Uhličitan vápenatý",
+      "effect": "Uhličitan vápenatý může snížit vstřebávání tetracyklinových přípravků. Perorální tetracyklin užívejte nejméně 2 hodiny před nebo 4–6 hodin po přípravku Calcichew D3 Lemon.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M05B",
+      "drug_class": "Bisfosfonáty",
+      "effect": "Vápník může snížit vstřebávání bisfosfonátů. Bisfosfonát užívejte nejméně 1 hodinu před přípravkem Calcichew D3 Lemon.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:234",
+      "drug": "Uhličitan vápenatý",
+      "effect": "Vápník může snížit vstřebávání levothyroxinu a jeho účinek. Levothyroxin užívejte nejméně 4 hodiny před nebo po přípravku Calcichew D3 Lemon.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01M",
+      "drug_class": "Chinolonová antibiotika",
+      "effect": "Vápník může snížit vstřebávání chinolonových antibiotik a jejich účinek. Užívejte je nejméně 2 hodiny před nebo 6 hodin po přípravku Calcichew D3 Lemon.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:B03A",
+      "drug_class": "Přípravky železa",
+      "effect": "Vápník může snížit vstřebávání železa. Užívejte je nejméně 2 hodiny před nebo po přípravku Calcichew D3 Lemon.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A12CB",
+      "drug_class": "Přípravky zinku",
+      "effect": "Vápník může snížit vstřebávání zinku. Užívejte jej nejméně 2 hodiny před nebo po přípravku Calcichew D3 Lemon.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M05BX03",
+      "drug": "Stroncium-ranelát",
+      "effect": "Vápník může snížit vstřebávání stroncium-ranelátu. Užívejte jej nejméně 2 hodiny před nebo po přípravku Calcichew D3 Lemon.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:402",
+      "drug": "Cholekalciferol",
+      "effect": "Orlistat může snížit vstřebávání vitaminu D3, který je rozpustný v tucích.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Přípravek doplňuje vápník a vitamin D u dospělých s rizikem jejich nedostatku a při léčbě osteoporózy.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0265451",
+      "H": "",
+      "NAZEV": "CALCICHEW D3 LEMON",
+      "SILA": "500MG/400IU",
+      "FORMA": "TBL MND",
+      "BALENI": "60",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG/400IU TBL MND 60",
+      "OBAL": "TBC",
+      "DRZ": "ORF",
+      "ZEMDRZ": "DK",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "39",
+      "ATC_WHO": "A12AX",
+      "RC": "39/549/12-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "UD",
+      "DDDP_WHO": "30",
+      "ZDROJ_WHO": "NO26",
+      "LL": "234,15455",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "30",
+      "EXP_T": "M",
+      "NAZEV_REG": "CALCICHEW D3 LEMON",
+      "MRP_CISLO": "SE/H/0126/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "234",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "1250",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "234",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CALCII CARBONAS",
+          "NAZEV_EN": "CALCIUM CARBONATE",
+          "NAZEV": "UHLIČITAN VÁPENATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "231",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "231",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CALCIUM",
+          "NAZEV_EN": "CALCIUM",
+          "NAZEV": "VÁPNÍK"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "15455",
+        "SQ": "4",
+        "S": "L",
+        "AMNT": "4",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "15455",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "COLECALCIFEROLI PULVIS",
+          "NAZEV_EN": "CHOLECALCIFEROL CONCENTRATE (POWDER FORM)",
+          "NAZEV": "PRÁŠKOVÝ CHOLEKALCIFEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "0",
+        "SQ": "5",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "402",
+        "SQ": "6",
+        "S": "O",
+        "AMNT": "0,01",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "402",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "COLECALCIFEROLUM",
+          "NAZEV_EN": "COLECALCIFEROL",
+          "NAZEV": "CHOLEKALCIFEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "1311",
+        "SQ": "7",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "1311",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "NATRII ASCORBAS",
+          "NAZEV_EN": "SODIUM ASCORBATE",
+          "NAZEV": "NATRIUM-ASKORBÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "12877",
+        "SQ": "8",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "12877",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TOCOFEROLUM ALFA",
+          "NAZEV_EN": "ALPHA-TOCOPHEROL",
+          "NAZEV": "TOKOFEROL-ALFA"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "15729",
+        "SQ": "9",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "15729",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM OXIDATUM",
+          "NAZEV_EN": "OXIDIZED MAIZE STARCH",
+          "NAZEV": "OXIDOVANÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "1383",
+        "SQ": "10",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "1383",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SACCHAROSUM",
+          "NAZEV_EN": "SUCROSE",
+          "NAZEV": "SACHAROSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "4090",
+        "SQ": "11",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "4090",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TRIGLYCERIDA MEDIA",
+          "NAZEV_EN": "TRIGLYCERIDES, MEDIUM-CHAIN",
+          "NAZEV": "TRIACYLGLYCEROLY SE STŘEDNÍM ŘETĚZCEM"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "1300",
+        "SQ": "12",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "1525",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1525",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "XYLITOLUM",
+          "NAZEV_EN": "XYLITOL",
+          "NAZEV": "XYLITOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "10624",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10624",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AROMA CITRI",
+          "NAZEV_EN": "LEMON FLAVOUR",
+          "NAZEV": "CITRONOVÉ AROMA"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "1168",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "2378",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0265451",
+        "KOD_LATKY": "16144",
+        "SQ": "17",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16144",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SUCRALOSUM",
+          "NAZEV_EN": "SUCRALOSE",
+          "NAZEV": "SUKRALOSA"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0265451",
+      "PIL": "PI200498.pdf",
+      "DAT_ROZ_PIL": "29.06.2023",
+      "SPC": "SPC184130.pdf",
+      "DAT_ROZ_SPC": "15.03.2022",
+      "OBAL_TEXT": "OBAL184128.pdf",
+      "DAT_ROZ_OBAL": "15.03.2022"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A12AX",
+        "NT": "N",
+        "NAZEV": "VÁPNÍK, KOMBINACE S VITAMINEM D A/NEBO JINÝMI LÉČIVY",
+        "NAZEV_EN": "CALCIUM, COMBINATIONS WITH VITAMIN D AND/OR OTHER DRUGS"
+      },
+      "formy": {
+        "FORMA": "TBL MND",
+        "NAZEV": "Žvýkací tableta",
+        "NAZEV_EN": "Chewable tablet",
+        "NAZEV_LAT": "Tabuletta manducabilis",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10228000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

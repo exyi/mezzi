@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C07",
+    "atc:C07A",
+    "atc:C07AB",
+    "atc:C07AB02",
+    "substance:4634"
+  ],
   "side_effects": [
     {
       "ctcae": "Fatigue",
@@ -17,33 +25,36 @@
     {
       "ctcae": "Headache",
       "frequency": "common",
-      "label": "Bolesti hlavy.",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Bradycardia",
       "frequency": "common",
-      "label": "Pomalý srdeční tep (bradykardie).",
-      "action": null,
-      "action_condition": null
+      "label": "Pomalý srdeční tep.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud tep zůstává pod 55 tepů za minutu, i když se cítíte dobře, nebo vám pomalý tep působí obtíže.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Palpitations",
       "frequency": "common",
-      "label": "Bušení srdce (palpitace).",
+      "label": "Bušení srdce.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypotension",
       "frequency": "common",
-      "label": "Nízký krevní tlak při posazení nebo postavení; velmi vzácně může být provázen mdlobou.",
+      "label": "Nízký krevní tlak při vstávání, velmi vzácně s mdlobou.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Vascular disorders - Other, specify",
+      "ctcae": "Coldness of extremity",
       "frequency": "common",
       "label": "Chladné ruce nebo nohy.",
       "action": null,
@@ -66,7 +77,7 @@
     {
       "ctcae": "Abdominal pain",
       "frequency": "common",
-      "label": "Bolesti břicha.",
+      "label": "Bolest břicha.",
       "action": null,
       "action_condition": null
     },
@@ -120,7 +131,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Psychiatric disorders - Other, specify",
+      "ctcae": "Nightmares",
       "frequency": "uncommon",
       "label": "Noční můry.",
       "action": null,
@@ -148,37 +159,37 @@
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Kardiogenní šok u pacientů s akutním infarktem myokardu. Ve studii byla u podskupiny s nízkým indexem rizika šoku četnost 2,3 % při léčbě metoprololem oproti 1,9 % při placebu.",
+      "ctcae": "Cardiogenic shock",
+      "frequency": null,
+      "label": "Kardiogenní šok u pacientů s akutním infarktem myokardu; ve studii u 46 000 pacientů s akutním infarktem byl ve skupině léčené metoprolol-tartarátem u podskupiny s nízkým indexem rizika šoku zjištěn u 2,3 % oproti 1,9 % při placebu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Atrioventricular block first degree",
       "frequency": "uncommon",
-      "label": "Atrioventrikulární blokáda prvního stupně.",
+      "label": "AV blokáda 1. stupně.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Peripheral edema",
+      "ctcae": "Edema",
       "frequency": "uncommon",
-      "label": "Otoky, zejména kotníků.",
+      "label": "Otoky.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Chest pain - cardiac",
       "frequency": "uncommon",
-      "label": "Bolest v oblasti srdce.",
+      "label": "Bolest v oblasti srdce nebo na hrudi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Bronchospasm",
       "frequency": "uncommon",
-      "label": "Zúžení průdušek (bronchospasmus), i když jste dříve neměl(a) obstrukční onemocnění dýchacích cest.",
+      "label": "Zúžení průdušek, i bez dřívější obstrukční choroby dýchacích cest.",
       "action": null,
       "action_condition": null
     },
@@ -190,9 +201,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash",
       "frequency": "uncommon",
-      "label": "Kožní vyrážka, včetně kopřivkovitých, lupénce podobných nebo dystrofických kožních změn.",
+      "label": "Kožní vyrážka; v SPC jsou popsány kopřivkovité, psoriasiformní a dystrofické kožní léze.",
       "action": null,
       "action_condition": null
     },
@@ -206,19 +217,19 @@
     {
       "ctcae": "Anxiety",
       "frequency": "rare",
-      "label": "Nervozita nebo úzkost.",
+      "label": "Nervozita a úzkost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Erectile dysfunction",
       "frequency": "rare",
-      "label": "Impotence nebo jiné poruchy sexuálních funkcí.",
+      "label": "Impotence nebo jiné sexuální poruchy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Eye disorders - Other, specify",
+      "ctcae": "Vision decreased",
       "frequency": "rare",
       "label": "Poruchy vidění.",
       "action": null,
@@ -227,19 +238,19 @@
     {
       "ctcae": "Dry eye",
       "frequency": "rare",
-      "label": "Suché nebo podrážděné oči.",
+      "label": "Suché oči nebo podráždění očí.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Conjunctivitis",
       "frequency": "rare",
-      "label": "Zánět spojivek, který se může projevit zarudnutím oka.",
+      "label": "Zánět spojivek (zarudlé oko).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
+      "ctcae": "Rhinitis",
       "frequency": "rare",
       "label": "Rýma nebo výtok z nosu.",
       "action": null,
@@ -267,23 +278,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Arrhythmia",
       "frequency": "very_rare",
-      "label": "Poruchy srdečního rytmu (arytmie).",
+      "label": "Poruchy srdečního rytmu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Cardiac conduction disorder",
       "frequency": "very_rare",
-      "label": "Poruchy vedení elektrických vzruchů v srdci.",
+      "label": "Poruchy vedení srdečního vzruchu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "very_rare",
-      "label": "Snížení počtu krevních destiček, které může zvýšit riziko krvácení nebo tvorby modřin.",
+      "label": "Snížení počtu krevních destiček, které zvyšuje riziko krvácení nebo tvorby modřin.",
       "action": null,
       "action_condition": null
     },
@@ -339,7 +350,7 @@
     {
       "ctcae": "Hepatitis",
       "frequency": "very_rare",
-      "label": "Zánět jater (hepatitida).",
+      "label": "Zánět jater.",
       "action": null,
       "action_condition": null
     },
@@ -351,7 +362,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Dermatitis psoriasiform",
+      "ctcae": "Psoriasis",
       "frequency": "very_rare",
       "label": "Zhoršení lupénky.",
       "action": null,
@@ -365,382 +376,484 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Syncope",
       "frequency": "very_rare",
-      "label": "Gangréna u pacientů, kteří již mají poruchy periferního krevního oběhu.",
+      "label": "Mdloba při nízkém krevním tlaku při vstávání.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": null,
-      "label": "Pomalý srdeční tep u plodu nebo novorozence, pokud je matka léčena metoprololem v pozdním těhotenství; novorozence je třeba po porodu pečlivě sledovat 48–72 hodin.",
+      "ctcae": "Sinus bradycardia",
+      "frequency": "very_rare",
+      "label": "Arytmie nebo porucha srdečního rytmu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Respiratory failure",
-      "frequency": null,
-      "label": "Útlum dýchání u plodu nebo novorozence, pokud je matka léčena metoprololem v pozdním těhotenství; novorozence je třeba po porodu pečlivě sledovat 48–72 hodin.",
+      "ctcae": "Peripheral ischemia",
+      "frequency": "very_rare",
+      "label": "Gangréna u pacientů s již existujícími poruchami periferního prokrvení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hypotension",
-      "frequency": null,
-      "label": "Nízký krevní tlak u plodu nebo novorozence, pokud je matka léčena metoprololem v pozdním těhotenství; novorozence je třeba po porodu pečlivě sledovat 48–72 hodin.",
+      "ctcae": "Rash maculo-papular",
+      "frequency": "very_rare",
+      "label": "Progredující lupénka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hypoglycemia",
+      "ctcae": "Generalized edema",
       "frequency": null,
-      "label": "Nízká hladina cukru v krvi u plodu nebo novorozence, pokud je matka léčena metoprololem v pozdním těhotenství; novorozence je třeba po porodu pečlivě sledovat 48–72 hodin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": null,
-      "label": "Pomalý srdeční tep u kojeného dítěte při léčbě matky metoprololem; dítě je třeba pečlivě sledovat.",
+      "label": "Kardiogenní šok u pacientů s akutním infarktem myokardu.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Blokátory kalciových kanálů verapamilového nebo diltiazemového typu",
-      "effect": "Egilok se nemá užívat současně s verapamilem nebo diltiazemem, protože se mohou zesílit negativní účinky na sílu stahu a rychlost srdeční činnosti a mohou vzniknout závažné poruchy srdečního rytmu. U pacientů léčených betablokátorem se je třeba vyhnout intravenóznímu podání verapamilu nebo jiného antagonisty vápníku verapamilového typu, protože hrozí srdeční zástava.",
+      "class_id": "atc:C08DA01",
+      "drug_class": "Verapamil",
+      "effect": "Současné užívání Egiloku s verapamilem se nemá používat, protože může zesílit zpomalující účinky na srdce a vést k závažným poruchám srdečního rytmu. Intravenózní verapamil se u pacientů léčených betablokátory nesmí podávat kvůli riziku zástavy srdce.",
       "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Závažné poruchy srdečního rytmu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Asystole",
-          "frequency": null,
-          "label": "Srdeční zástava při intravenózním podání verapamilu nebo jiného antagonisty vápníku verapamilového typu pacientovi léčenému betablokátorem.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Další léky snižující krevní tlak",
-      "effect": "Účinky Egiloku a dalších léků snižujících krevní tlak se mohou sčítat. Lékař bude při kombinaci dbát na riziko nízkého krevního tlaku a pomalého srdečního tepu.",
+      "class_id": null,
+      "drug_class": "Blokátory vápníkových kanálů diltiazemového typu",
+      "effect": "Současné užívání Egiloku s diltiazemem nebo jinými blokátory vápníkových kanálů diltiazemového typu se nemá používat; může zesílit negativní účinky na srdeční stažlivost a tepovou frekvenci a způsobit závažné poruchy srdečního rytmu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Pomalý srdeční tep.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "klonidin",
-      "effect": "Při současné léčbě je nutné nejprve vysadit Egilok a teprve o několik dní později klonidin; vysazení klonidinu jako prvního může vyvolat výrazné zvýšení krevního tlaku. Lékař bude dbát také na riziko nízkého krevního tlaku nebo pomalého srdečního tepu při souběžném užívání.",
+      "class_id": null,
+      "drug_class": "Antihypertenziva",
+      "effect": "Účinky Egiloku a dalších léků na vysoký krevní tlak se obvykle sčítají; při kombinaci je třeba opatrnost kvůli riziku nízkého krevního tlaku, kombinace ale může zlepšit kontrolu tlaku. U klonidinu se nejprve vysazuje Egilok a až po několika dnech klonidin, jinak hrozí prudké zvýšení tlaku.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypertension",
-          "frequency": null,
-          "label": "Výrazné zvýšení krevního tlaku (hypertenzní krize) při vysazení klonidinu před Egilokem.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak při současném užívání.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Pomalý srdeční tep při současném užívání.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Perorální antiarytmika, zejména chinidinového typu, amiodaron a propafenon",
-      "effect": "Tyto léky mohou zesílit účinky Egiloku; amiodaron, chinidin a propafenon mohou navíc zvýšit jeho hladinu v krvi. Lékař bude dbát na riziko nízkého krevního tlaku, pomalého srdečního tepu a poruch vedení vzruchu.",
+      "class_id": "atc:C01BA01",
+      "drug_class": "Chinidin",
+      "effect": "Chinidin může zesílit účinky Egiloku a zvýšit riziko nízkého krevního tlaku, pomalého tepu a poruchy vedení vzruchu; může také zvýšit hladinu metoprololu v krvi a jeho účinky.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Pomalý srdeční tep.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Atrioventricular block complete",
-          "frequency": null,
-          "label": "Porucha vedení srdečního vzruchu až atrioventrikulární blokáda.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Srdeční glykosidy",
-      "effect": "Při kombinaci s Egilokem hrozí pomalý srdeční tep a poruchy vedení srdečního vzruchu. Egilok nemění pozitivní účinek srdečních glykosidů na sílu srdečního stahu.",
+      "class_id": "atc:C01BD01",
+      "drug_class": "Amiodaron",
+      "effect": "Amiodaron může zesílit účinky Egiloku a zvýšit riziko nízkého krevního tlaku, pomalého tepu a poruchy vedení vzruchu; může také zvýšit hladinu metoprololu v krvi a jeho účinky.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Pomalý srdeční tep.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Poruchy vedení srdečního vzruchu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Inhibitory CYP2D6: cimetidin, difenhydramin, thioridazin, celekoxib, paroxetin, fluoxetin, sertralin, escitalopram a hydralazin",
-      "effect": "Tyto léky mohou zpomalit odbourávání Egiloku a zvýšit jeho hladinu v krvi, čímž se mohou zesílit jeho účinky. Lékař může podle potřeby upravit dávku a bude dbát na riziko nízkého krevního tlaku nebo zpomalení srdečního tepu.",
+      "class_id": "atc:C01BC03",
+      "drug_class": "Propafenon",
+      "effect": "Propafenon může zesílit účinky Egiloku; může také zvýšit hladinu metoprololu v krvi a jeho účinky.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Pomalý srdeční tep.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Induktory CYP2D6, například rifampicin a barbituráty",
-      "effect": "Mohou urychlit odbourávání Egiloku v játrech, a tím oslabit jeho účinek; v důsledku toho může dojít ke zvýšení krevního tlaku.",
-      "effect_type": "decreased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Hypertension",
-          "frequency": null,
-          "label": "Zvýšený krevní tlak v důsledku oslabení účinku Egiloku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Alfa- a beta-sympatomimetika, například adrenalin a noradrenalin",
-      "effect": "Současné podávání může vést ke zvýšení krevního tlaku, výraznému zpomalení srdečního tepu nebo srdeční zástavě. Egilok může také oslabit účinek adrenalinu používaného při léčbě reakce přecitlivělosti; kardioselektivní betablokátory ovlivňují kontrolu krevního tlaku adrenalinem méně než neselektivní betablokátory.",
+      "class_id": "atc:C01AA05",
+      "drug_class": "Digoxin",
+      "effect": "Digoxin a další srdeční glykosidy mohou při kombinaci s Egilokem zvýšit riziko pomalého tepu a poruch vedení vzruchu; Egilok neovlivňuje jejich pozitivní účinek na sílu srdečního stahu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypertension",
-          "frequency": null,
-          "label": "Zvýšení krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Výrazné zpomalení srdečního tepu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac arrest",
-          "frequency": null,
-          "label": "Srdeční zástava.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Beta2-sympatomimetika a bronchodilatační léky, například terbutalin, salbutamol, fenoterol a salmeterol",
-      "effect": "Egilok může funkčně působit proti beta2-sympatomimetikům a oslabit jimi vyvolané rozšíření průdušek. U pacientů s příznaky obstrukčního plicního onemocnění lze metoprolol za určitých podmínek podávat společně s agonistou beta2-receptorů; jeho vliv na bronchodilataci je při terapeutických dávkách menší než u neselektivních betablokátorů.",
+      "class_id": "atc:C02CC02",
+      "drug_class": "Guanethidin",
+      "effect": "Guanethidin může spolu s Egilokem zvýšit riziko nízkého krevního tlaku a pomalého tepu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02AA02",
+      "drug_class": "Reserpin",
+      "effect": "Reserpin může spolu s Egilokem zvýšit riziko nízkého krevního tlaku a pomalého tepu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02AB01",
+      "drug_class": "Alfa-methyldopa",
+      "effect": "Alfa-methyldopa může spolu s Egilokem zvýšit riziko nízkého krevního tlaku a pomalého tepu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02AC01",
+      "drug_class": "Klonidin",
+      "effect": "Při kombinaci s Egilokem je nutné nejprve vysadit Egilok a několik dní poté klonidin; opačné pořadí může vyvolat prudké zvýšení krevního tlaku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02AC02",
+      "drug_class": "Guanfacin",
+      "effect": "Guanfacin může spolu s Egilokem zvýšit riziko nízkého krevního tlaku a pomalého tepu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C02DB02",
+      "drug_class": "Hydralazin",
+      "effect": "Hydralazin může zvýšit hladinu metoprololu v krvi, a tím zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Celková anestetika",
+      "effect": "Celková anestetika mohou při kombinaci s Egilokem zesílit tlumivý účinek na srdce. Před operací má pacient informovat anesteziologa; SPC nedoporučuje Egilok před operací vysazovat.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Alfa- a beta-sympatomimetika",
+      "effect": "Při kombinaci s Egilokem hrozí vysoký krevní tlak, výrazně pomalý tep nebo zástava srdce. Za určitých podmínek adrenalin ovlivňuje krevní tlak při současném kardioselektivním betablokátoru méně než při neselektivním betablokátoru.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02CA02",
+      "drug_class": "Ergotamin",
+      "effect": "Ergotamin může zesílit stažení cév způsobené Egilokem a zhoršit prokrvení rukou a nohou.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Léky tlumící centrální nervový systém",
+      "effect": "Hypnotika, trankvilizéry, tricyklická antidepresiva a neuroleptika mohou s Egilokem zvýšit riziko nízkého krevního tlaku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:V03AZ01",
+      "drug_class": "Alkohol",
+      "effect": "Alkohol může zesílit účinek Egiloku snižující krevní tlak; SPC také uvádí riziko nízkého krevního tlaku při kombinaci s léky tlumícími centrální nervový systém. Příbalová informace uvádí, že se alkohol během léčby nemá pít.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Beta2-sympatomimetika",
+      "effect": "Egilok může funkčně oslabit účinek beta2-sympatomimetik. U pacienta s astmatem může být nutná jejich kombinace s Egilokem nebo úprava jejich dávky; při terapeutických dávkách ovlivňuje Egilok jimi vyvolané rozšíření průdušek méně než neselektivní betablokátory.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky a jiné inhibitory tvorby prostaglandinů, například indometacin, diklofenak, piroxikam a flurbiprofen",
-      "effect": "Tyto léky mohou oslabit účinek Egiloku na snížení krevního tlaku, a tím vést ke zvýšení krevního tlaku.",
+      "class_id": null,
+      "drug_class": "Nesteroidní protizánětlivé léky",
+      "effect": "Nesteroidní protizánětlivé léky, například indometacin, mohou oslabit účinek Egiloku na krevní tlak.",
       "effect_type": "antagonism",
-      "side_effects": [
-        {
-          "ctcae": "Hypertension",
-          "frequency": null,
-          "label": "Zvýšený krevní tlak v důsledku oslabení antihypertenzního účinku Egiloku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léky obsahující estrogeny, včetně perorální antikoncepce a hormonální substituční léčby",
-      "effect": "Estrogeny mohou oslabit účinek Egiloku na snížení krevního tlaku, a tím vést ke zvýšení krevního tlaku.",
+      "class_id": null,
+      "drug_class": "Estrogeny",
+      "effect": "Estrogeny, včetně přípravků v perorální antikoncepci a hormonální substituční léčbě, mohou oslabit účinek Egiloku na krevní tlak.",
       "effect_type": "antagonism",
-      "side_effects": [
-        {
-          "ctcae": "Hypertension",
-          "frequency": null,
-          "label": "Zvýšený krevní tlak v důsledku oslabení antihypertenzního účinku Egiloku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "ergotamin",
-      "effect": "Současné užívání může zesílit stahující účinek Egiloku na cévy a zhoršit prokrvení rukou a nohou.",
+      "class_id": "atc:A10",
+      "drug_class": "Léky k léčbě cukrovky",
+      "effect": "Egilok může zesílit účinek inzulinu a tablet na snížení hladiny cukru v krvi, zároveň může zakrýt příznaky hypoglykémie, jako je třes a rychlý tep. U pacientů s diabetem je nutné pečlivější sledování hladiny glukózy a může být třeba upravit dávku těchto léků.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Peripheral ischemia",
-          "frequency": null,
-          "label": "Zhoršené prokrvení rukou a nohou.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léky k léčbě cukrovky, včetně inzulinu a perorálních antidiabetik",
-      "effect": "Egilok může ovlivnit účinek těchto léků na hladinu cukru a může zastřít příznaky nízké hladiny cukru, například třes a rychlý tep. Texty příbalové informace a souhrnu údajů se liší v tom, zda Egilok účinek na snížení hladiny cukru zesiluje, nebo oslabuje. U pacientů s cukrovkou je třeba pečlivě sledovat hladinu glukózy a lékař může upravit dávku antidiabetik.",
-      "effect_type": null,
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Nízká hladina cukru v krvi; její příznaky, například třes a rychlý tep, mohou být zastřeny.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Deriváty sulfonylurey, například gliquidon, gliklazid, glibenklamid, glipizid, glimepirid a tolbutamid",
-      "effect": "Současné podávání betablokátoru a derivátu sulfonylurey může zvýšit riziko závažné hypoglykémie. Pacienti s cukrovkou mají pečlivě kontrolovat hladinu glukózy v krvi a lékař ji má častěji sledovat.",
+      "class_id": "atc:A10BB",
+      "drug_class": "Deriváty sulfonylurey",
+      "effect": "Při současném podávání s Egilokem se může zvýšit riziko závažné hypoglykémie; pacienti s diabetem mají pečlivě kontrolovat hladinu glukózy a lékař může upravit dávku léčby.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Závažná hypoglykémie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Parasympatomimetika",
-      "effect": "Při kombinaci s Egilokem hrozí nízký krevní tlak, pomalý srdeční tep a atrioventrikulární blokáda.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Pomalý srdeční tep.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Atrioventricular block complete",
-          "frequency": null,
-          "label": "Atrioventrikulární blokáda.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Celková anestetika",
-      "effect": "Celková anestetika mohou při kombinaci s Egilokem zesílit útlum srdeční činnosti. Před operací je třeba informovat anesteziologa o léčbě Egilokem; vysazení léčby se nedoporučuje.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Útlum srdeční činnosti.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:M03A",
       "drug_class": "Kurarová myorelaxancia",
-      "effect": "Egilok může zesílit nervosvalovou blokádu vyvolanou těmito léky.",
+      "effect": "Egilok může zesílit nervosvalovou blokádu způsobenou kurarovými myorelaxancii.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Generalized muscle weakness",
-          "frequency": null,
-          "label": "Zesílená nervosvalová blokáda.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léky působící na centrální nervový systém, například hypnotika, trankvilizéry, tricyklická antidepresiva a neuroleptika, a alkohol",
-      "effect": "Při současném užívání se může zvýšit riziko nízkého krevního tlaku. Alkohol může také zesílit účinek Egiloku na snížení krevního tlaku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Nízký krevní tlak.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "group:cyp2d6_inhibitor",
+      "drug_class": "Inhibitory CYP2D6",
+      "effect": "Cimetidin, difenhydramin, amiodaron, chinidin, propafenon, thioridazin, celekoxib, alkohol, hydralazin a některá SSRI (paroxetin, fluoxetin, sertralin, escitalopram) mohou inhibicí CYP2D6 zvýšit hladinu metoprololu v krvi a zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
     },
     {
-      "drug_class": "Další betablokátory, včetně betablokátorů v očních kapkách, inhibitory monoaminooxidázy a blokátory sympatických ganglií",
-      "effect": "Současné užívání vyžaduje pečlivý lékařský dohled a sledování krevního tlaku.",
+      "class_id": "group:cyp2d6_inhibitor",
+      "drug_class": "Cimetidin",
+      "effect": "Cimetidin inhibicí CYP2D6 může zvýšit hladinu metoprololu v krvi a zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:R06AA02",
+      "drug_class": "Difenhydramin",
+      "effect": "Difenhydramin inhibicí CYP2D6 může zvýšit hladinu metoprololu v krvi a zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N05AC02",
+      "drug_class": "Thioridazin",
+      "effect": "Thioridazin inhibicí CYP2D6 může zvýšit hladinu metoprololu v krvi a zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:M01AH01",
+      "drug_class": "Celekoxib",
+      "effect": "Celekoxib inhibicí CYP2D6 může zvýšit hladinu metoprololu v krvi a zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp2d6_inhibitor",
+      "drug_class": "Paroxetin",
+      "effect": "Paroxetin inhibicí CYP2D6 může zvýšit hladinu metoprololu v krvi a zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp2d6_inhibitor",
+      "drug_class": "Fluoxetin",
+      "effect": "Fluoxetin inhibicí CYP2D6 může zvýšit hladinu metoprololu v krvi a zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp2d6_inhibitor",
+      "drug_class": "Sertralin",
+      "effect": "Sertralin inhibicí CYP2D6 může zvýšit hladinu metoprololu v krvi a zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp2d6_inhibitor",
+      "drug_class": "Escitalopram",
+      "effect": "Escitalopram inhibicí CYP2D6 může zvýšit hladinu metoprololu v krvi a zesílit jeho účinky.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp2d6_inhibitor",
+      "drug_class": "Rifampicin",
+      "effect": "Rifampicin může indukcí CYP2D6 zrychlit metabolismus metoprololu a oslabit jeho účinky.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Barbituráty",
+      "effect": "Barbituráty mohou indukcí CYP2D6 zrychlit metabolismus metoprololu a oslabit jeho účinky.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Blokátory sympatických ganglií, jiné betablokátory nebo inhibitory MAO",
+      "effect": "Současné užívání s blokátory sympatických ganglií, jinými betablokátory (například očními kapkami) nebo inhibitory MAO vyžaduje pečlivý lékařský dohled; pacient má pravidelně sledovat krevní tlak.",
       "effect_type": null,
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Egilok se používá k léčbě vysokého krevního tlaku, anginy pectoris, některých poruch srdečního rytmu, po infarktu a k prevenci migrény.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0260954",
+      "H": "",
+      "NAZEV": "EGILOK",
+      "SILA": "50MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "60",
+      "CESTA": "POR",
+      "DOPLNEK": "50MG TBL NOB 60",
+      "OBAL": "TBC",
+      "DRZ": "EGB",
+      "ZEMDRZ": "H",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "",
+      "UVADENIDO": "",
+      "IS_": "58",
+      "ATC_WHO": "C07AB02",
+      "RC": "58/451/99-C",
+      "SDOV": "PI/011/22",
+      "SDOV_DOD": "GAU",
+      "SDOV_ZEM": "CZ",
+      "REG_PROC": "SOU",
+      "DDDAMNT_WHO": "0,15",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "20",
+      "ZDROJ_WHO": "NO26",
+      "LL": "4634",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "EGILOK",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": ""
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0260954",
+        "KOD_LATKY": "4634",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "50",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4634",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "METOPROLOLI TARTRAS",
+          "NAZEV_EN": "METOPROLOL TARTRATE",
+          "NAZEV": "METOPROLOL-TARTARÁT",
+          "DOP": "P1"
+        }
+      },
+      {
+        "KOD_SUKL": "0260954",
+        "KOD_LATKY": "3755",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0260954",
+        "KOD_LATKY": "14679",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0260954",
+        "KOD_LATKY": "1300",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0260954",
+        "KOD_LATKY": "10067",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10067",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 90",
+          "NAZEV_EN": "POVIDONE K 90",
+          "NAZEV": "POVIDON K 90",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0260954",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0260954",
+      "PIL": "PI233767.pdf",
+      "DAT_ROZ_PIL": "21.05.2026",
+      "SPC": "SPC233768.pdf",
+      "DAT_ROZ_SPC": "21.05.2026",
+      "OBAL_TEXT": "OBAL191119.pdf",
+      "DAT_ROZ_OBAL": "13.09.2022"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C07AB02",
+        "NT": "N",
+        "NAZEV": "METOPROLOL",
+        "NAZEV_EN": "METOPROLOL"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

@@ -1,23 +1,17 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C03",
+    "atc:C03C",
+    "atc:C03CA",
+    "atc:C03CA01",
+    "substance:651"
+  ],
   "side_effects": [
     {
       "ctcae": "Metabolism and nutrition disorders - Other, specify",
       "frequency": "very_common",
-      "label": "Nerovnováha tekutin a minerálů v těle, včetně případů s příznaky.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dehydration",
-      "frequency": "very_common",
-      "label": "Dehydratace, zejména u starších pacientů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
-      "frequency": "very_common",
-      "label": "Snížený objem krve v krevním oběhu (hypovolemie), zejména u starších pacientů.",
+      "label": "Nerovnováha tekutin a minerálů v těle, včetně případných příznaků; dehydratace a snížený objem krve, zejména u starších pacientů.",
       "action": null,
       "action_condition": null
     },
@@ -31,7 +25,7 @@
     {
       "ctcae": "Hypotension",
       "frequency": "very_common",
-      "label": "Nízký krevní tlak, včetně poklesu tlaku při vstávání z lehu.",
+      "label": "Nízký krevní tlak, včetně poklesu tlaku při vstávání.",
       "action": null,
       "action_condition": null
     },
@@ -43,9 +37,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "ctcae": "Hemoconcentration",
       "frequency": "common",
-      "label": "Zahuštění krve při nadměrném vylučování moči (hemokoncentrace).",
+      "label": "Zahuštění krve při nadměrném vylučování moči.",
       "action": null,
       "action_condition": null
     },
@@ -57,7 +51,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
+      "ctcae": "Hypochloremia",
       "frequency": "common",
       "label": "Nedostatek chloridů v krvi, zejména při sníženém příjmu kuchyňské soli.",
       "action": null,
@@ -66,7 +60,7 @@
     {
       "ctcae": "Hypokalemia",
       "frequency": "common",
-      "label": "Nedostatek draslíku v krvi, zejména při současném nízkém příjmu draslíku nebo jeho zvýšených ztrátách, například při zvracení či dlouhodobém průjmu.",
+      "label": "Nedostatek draslíku v krvi, zejména při jeho sníženém příjmu nebo zvýšených ztrátách, například při zvracení či dlouhodobém průjmu.",
       "action": null,
       "action_condition": null
     },
@@ -87,14 +81,14 @@
     {
       "ctcae": "Arthritis",
       "frequency": "common",
-      "label": "Záchvat dny.",
+      "label": "Záchvaty dny.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Encephalopathy",
       "frequency": "common",
-      "label": "Jaterní encefalopatie u pacientů s pokročilým poškozením nebo poruchou funkce jater.",
+      "label": "Jaterní encefalopatie u pacientů s pokročilým poškozením jater.",
       "action": null,
       "action_condition": null
     },
@@ -102,34 +96,6 @@
       "ctcae": "Urinary frequency",
       "frequency": "common",
       "label": "Zvýšené množství moči.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypocalcemia",
-      "frequency": "not_known",
-      "label": "Nedostatek vápníku v krvi; ve vzácných případech může vést ke křečím (tetanii).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypomagnesemia",
-      "frequency": "not_known",
-      "label": "Nedostatek hořčíku v krvi; ve vzácných případech může vést ke křečím nebo poruše srdečního rytmu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alkalosis",
-      "frequency": "not_known",
-      "label": "Metabolická alkalóza (zvýšené pH krve).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Pseudo-Bartterův syndrom, porucha funkce ledvin související se zneužíváním nebo dlouhodobým užíváním furosemidu, spojená se zvýšeným pH krve, ztrátou draslíku a nízkým krevním tlakem.",
       "action": null,
       "action_condition": null
     },
@@ -146,25 +112,26 @@
       "label": "Alergické reakce kůže a sliznic.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
+        "patient_guide": "Při prvních příznacích přecitlivělosti.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Hyperglycemia",
       "frequency": "uncommon",
-      "label": "Porušená tolerance glukózy nebo zvýšená hladina cukru v krvi; u pacientů s cukrovkou se může zhoršit její metabolický stav a skrytá cukrovka se může projevit.",
+      "label": "Zvýšená hladina cukru v krvi a porušená glukózová tolerance; u pacientů s cukrovkou se může zhoršit metabolický stav a skrytá cukrovka se může projevit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hearing impaired",
       "frequency": "uncommon",
-      "label": "Porucha sluchu, většinou vratná; zejména při poruše funkce ledvin, nízké hladině bílkovin v krvi nebo po příliš rychlém nitrožilním podání.",
+      "label": "Poruchy sluchu, většinou vratné; zejména při poruše funkce ledvin, nízké hladině bílkovin v krvi nebo po příliš rychlé nitrožilní injekci.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hearing impaired",
+      "ctcae": "Deafness",
       "frequency": "uncommon",
       "label": "Hluchota, někdy nevratná.",
       "action": null,
@@ -181,64 +148,36 @@
       "ctcae": "Pruritus",
       "frequency": "uncommon",
       "label": "Svědění.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Urticaria",
       "frequency": "uncommon",
       "label": "Kopřivka.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Rash maculo-papular",
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Vyrážka nebo zarudnutí kůže a sliznic.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
-    },
-    {
-      "ctcae": "Dermatosis bullous",
-      "frequency": "uncommon",
-      "label": "Puchýřnaté kožní projevy, včetně bulózního exantému a pemfigoidu.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
+      "label": "Kožní a slizniční reakce se zarudnutím, puchýři nebo olupováním, včetně bulózního exantému, pemfigoidu a exfoliativní dermatitidy.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Erythema multiforme",
       "frequency": "uncommon",
       "label": "Erythema multiforme.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
-    },
-    {
-      "ctcae": "Exfoliative dermatitis",
-      "frequency": "uncommon",
-      "label": "Exfoliativní dermatitida (závažné olupování kůže).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Purpura",
       "frequency": "uncommon",
       "label": "Purpura.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Photosensitivity",
@@ -250,7 +189,7 @@
     {
       "ctcae": "Eosinophilia",
       "frequency": "rare",
-      "label": "Zvýšený počet eozinofilů (určitého druhu bílých krvinek).",
+      "label": "Zvýšený počet určitých bílých krvinek (eozinofilie).",
       "action": null,
       "action_condition": null
     },
@@ -264,23 +203,14 @@
     {
       "ctcae": "Anaphylaxis",
       "frequency": "rare",
-      "label": "Závažná alergická reakce až anafylaktický šok.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
+      "label": "Závažná alergická reakce (anafylaktický šok).",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Paresthesia",
       "frequency": "rare",
       "label": "Mravenčení nebo necitlivost končetin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vasculitis",
-      "frequency": "rare",
-      "label": "Zánět krevních cév (vaskulitida).",
       "action": null,
       "action_condition": null
     },
@@ -322,21 +252,21 @@
     {
       "ctcae": "Hemolytic anemia",
       "frequency": "very_rare",
-      "label": "Chudokrevnost způsobená nadměrným rozpadem červených krvinek (hemolytická anémie).",
+      "label": "Chudokrevnost způsobená nadměrným rozpadem červených krvinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Aplastic anemia",
       "frequency": "very_rare",
-      "label": "Chudokrevnost způsobená poruchou tvorby krve v kostní dřeni (aplastická anémie).",
+      "label": "Chudokrevnost způsobená poruchou tvorby krve v kostní dřeni.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Závažný pokles počtu bílých krvinek s vyšším rizikem infekce (agranulocytóza). Varovnými příznaky mohou být horečka se zimnicí, změny sliznic a bolest v krku.",
+      "label": "Agranulocytóza, závažný pokles počtu určitých bílých krvinek; varovnými příznaky mohou být horečka se zimnicí, změny sliznic a bolest v krku.",
       "action": null,
       "action_condition": null
     },
@@ -364,141 +294,110 @@
     {
       "ctcae": "Autoimmune disorder",
       "frequency": "not_known",
-      "label": "Zhoršení nebo vznik systémového lupus erythematodes.",
+      "label": "Zhoršení nebo aktivace systémového lupus erythematodes.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Stevens-Johnson syndrome",
+      "ctcae": "Hypocalcemia",
       "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom, závažná reakce kůže a sliznic s puchýři nebo odlučováním kůže.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
+      "label": "Nedostatek vápníku v krvi; vzácně může vést ke křečím (tetanii).",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Toxic epidermal necrolysis",
+      "ctcae": "Hypomagnesemia",
       "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza, závažná reakce s puchýři nebo odlučováním kůže.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
+      "label": "Nedostatek hořčíku v krvi; vzácně může vést ke křečím (tetanii) nebo poruše srdečního rytmu.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Pustular drug eruption",
+      "ctcae": "Alkalosis",
       "frequency": "not_known",
-      "label": "Akutní generalizovaná exantematózní pustulóza (AGEP), akutní horečnatá léková kožní reakce.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
+      "label": "Metabolická alkalóza (zvýšené pH krve).",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Metabolism and nutrition disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS).",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
-    },
-    {
-      "ctcae": "Lichenoid dermatitis",
-      "frequency": "not_known",
-      "label": "Lichenoidní kožní reakce.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Při prvních příznacích reakce z přecitlivělosti"
-      }
-    },
-    {
-      "ctcae": "Rhabdomyolysis",
-      "frequency": "not_known",
-      "label": "Závažné poškození svalů (rhabdomyolýza), často spojené se závažným nedostatkem draslíku.",
+      "label": "Pseudo-Bartterův syndrom při zneužívání nebo dlouhodobém užívání furosemidu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "not_known",
-      "label": "Závratě.",
+      "label": "Závratě, mdloby, ztráta vědomí a bolest hlavy; nadměrné vylučování moči může vyvolat potíže krevního oběhu až kolaps, zejména u starších lidí a dětí.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Syncope",
+      "ctcae": "Thrombosis",
       "frequency": "not_known",
-      "label": "Mdloby nebo ztráta vědomí.",
+      "label": "Krevní sraženina, zejména u starších pacientů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Headache",
+      "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Bolest hlavy.",
+      "label": "Závažná kožní a slizniční reakce s puchýři nebo odlučováním kůže (Stevensův-Johnsonův syndrom).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Venous thromboembolism",
+      "ctcae": "Toxic epidermal necrolysis",
       "frequency": "not_known",
-      "label": "Trombóza, zejména u starších pacientů.",
+      "label": "Závažná kožní a slizniční reakce s puchýři nebo odlučováním kůže (toxická epidermální nekrolýza).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Pustular drug eruption",
       "frequency": "not_known",
-      "label": "Zvýšená hladina sodíku v moči.",
+      "label": "Akutní generalizovaná exantematózní pustulóza (AGEP).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Zvýšená hladina chloridů v moči.",
+      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Lichenoid dermatitis",
       "frequency": "not_known",
-      "label": "Zvýšená hladina močoviny v moči.",
+      "label": "Lichenoidní kožní reakce.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Urinary tract obstruction",
+      "ctcae": "Rhabdomyolysis",
       "frequency": "not_known",
-      "label": "Příznaky neprůchodnosti močových cest, které mohou vést až k zadržování moči a následným komplikacím.",
+      "label": "Závažné svalové potíže (rhabdomyolýza), často při závažném nedostatku draslíku.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urinary retention",
       "frequency": "not_known",
-      "label": "Zadržování moči s následnými komplikacemi.",
+      "label": "Příznaky neprůchodnosti močových cest, například při zvětšení prostaty, hydronefróze nebo zúžení močovodu, až po zadržování moči a následné komplikace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Renal calculi",
       "frequency": "not_known",
-      "label": "Ledvinové kameny u předčasně narozených dětí.",
+      "label": "Ledvinové kameny nebo zvápenatění ledvin u předčasně narozených dětí.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zvápenatění ledvin u předčasně narozených dětí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
+      "ctcae": "Acute kidney injury",
       "frequency": "not_known",
       "label": "Selhání ledvin.",
       "action": null,
@@ -507,294 +406,378 @@
     {
       "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
       "frequency": "not_known",
-      "label": "U předčasně narozených dětí léčených furosemidem během prvních týdnů života je zvýšené riziko přetrvávání otevřeného ductus arteriosus.",
+      "label": "Zvýšené riziko otevřeného ductus arteriosus u předčasně narozených dětí léčených furosemidem v prvních týdnech života.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Glukokortikoidy",
-      "effect": "Současné užívání s furosemidem může zvýšit ztráty draslíku a vést k nedostatku draslíku v krvi.",
+      "class_id": "substance:651",
+      "drug": "FUROSEMID",
+      "effect": "Současné užívání s glukokortikoidy, karbenoxolonem, projímadly nebo velkým množstvím lékořice může zvýšit ztráty draslíku a způsobit jeho nedostatek.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Nedostatek draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Karbenoxolon",
-      "effect": "Karbenoxolon užívaný současně s furosemidem může zvýšit ztráty draslíku a vést k jeho nedostatku v krvi.",
+      "class_id": "group:hypokalemia_risk",
+      "drug_class": "Léky snižující hladinu draslíku",
+      "effect": "Současné užívání s furosemidem může zvýšit ztráty draslíku a riziko jeho nedostatku.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Nedostatek draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Projímadla",
-      "effect": "Současné užívání projímadel s furosemidem může zvýšit ztráty draslíku a vést k jeho nedostatku v krvi.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Nedostatek draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Lékořice",
-      "effect": "Velké množství lékořice užívané při léčbě furosemidem může zvýšit ztráty draslíku a vést k jeho nedostatku v krvi.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Nedostatek draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": null,
       "drug_class": "Nesteroidní protizánětlivé léky (NSAID)",
-      "effect": "NSAID mohou snižovat účinek furosemidu. U pacientů s nedostatkem tekutin nebo sníženým objemem krve může souběžné užívání vést k akutnímu selhání ledvin.",
+      "effect": "NSAID, například indometacin nebo kyselina acetylsalicylová, mohou snížit účinek furosemidu; při dehydrataci nebo sníženém objemu krve mohou zvýšit riziko akutního selhání ledvin.",
       "effect_type": "decreased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Akutní selhání ledvin u pacientů s nedostatkem tekutin nebo sníženým objemem krve.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léky vylučované ledvinami tubulární sekrecí, například probenecid a methotrexát",
-      "effect": "Tyto léky mohou snižovat účinek furosemidu. Furosemid naopak může snižovat jejich vylučování ledvinami; při současném podávání vysokých dávek furosemidu nebo těchto léků se mohou zvýšit jejich hladiny v krvi a riziko nežádoucích účinků. Lékař může zvážit úpravu dávek.",
+      "class_id": "substance:467",
+      "drug": "PROBENECID",
+      "effect": "Probenecid může snížit účinek furosemidu; furosemid zároveň může snížit vylučování probenecidu, zejména při vysokých dávkách obou léků, a zvýšit jeho hladinu v krvi a riziko nežádoucích účinků.",
       "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug": "Fenytoin",
-      "effect": "Současné podávání fenytoinu může snižovat účinek furosemidu.",
+      "class_id": "substance:2528",
+      "drug": "METHOTREXÁT",
+      "effect": "Methotrexát může snížit účinek furosemidu; furosemid zároveň může snížit vylučování methotrexátu, zejména při vysokých dávkách obou léků, a zvýšit jeho hladinu v krvi a riziko nežádoucích účinků.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:947",
+      "drug": "FENYTOIN",
+      "effect": "Fenytoin může snížit účinek furosemidu.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Sukralfát",
-      "effect": "Sukralfát snižuje vstřebávání a tím i účinek furosemidu. Tyto léky se mají užívat s odstupem nejméně 2 hodin.",
+      "class_id": "substance:2344",
+      "drug": "SUKRALFÁT",
+      "effect": "Sukralfát snižuje vstřebávání a účinek furosemidu; tyto léky se mají podávat s odstupem nejméně 2 hodin.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Srdeční glykosidy",
-      "effect": "Nedostatek draslíku nebo hořčíku vyvolaný furosemidem může zvýšit citlivost srdečního svalu na srdeční glykosidy.",
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léky prodlužující interval QT, včetně některých antiarytmik tříd I a III",
+      "effect": "Furosemidem způsobený nedostatek draslíku nebo hořčíku může zvýšit citlivost srdečního svalu na srdeční glykosidy. Při současném podávání léků prodlužujících interval QT a při poruše elektrolytů se zvyšuje riziko komorových arytmií včetně torsades de pointes.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Léky prodlužující QT interval, například terfenadin a antiarytmika tříd I a III",
-      "effect": "Pokud se tyto léky užívají s furosemidem a současně je přítomna porucha elektrolytů, může se zvýšit riziko komorových arytmií včetně torsades de pointes.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Komorové arytmie včetně torsades de pointes při současné poruše elektrolytů.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Salicyláty",
-      "effect": "Furosemid může zvýšit toxicitu salicylátů užívaných ve vysokých dávkách.",
+      "class_id": "substance:1051",
+      "drug": "KYSELINA ACETYLSALICYLOVÁ",
+      "effect": "Furosemid může zvýšit nežádoucí účinky vysokých dávek salicylátů.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Nefrotoxické léky, včetně aminoglykosidů, cefalosporinů a polymyxinů",
-      "effect": "Furosemid může zvýšit nežádoucí účinky léků poškozujících ledviny. Při současném podávání furosemidu a vysokých dávek některých cefalosporinů může dojít k poruše funkce ledvin.",
+      "class_id": "group:nephrotoxic",
+      "drug_class": "Léky poškozující ledviny",
+      "effect": "Furosemid může zvýšit nežádoucí účinky léků poškozujících ledviny. Při současném podávání furosemidu a vysokých dávek určitých cefalosporinů může dojít k poruše funkce ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Porucha funkce ledvin při současném podávání vysokých dávek některých cefalosporinů.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Aminoglykosidy a další léky poškozující sluch",
-      "effect": "Furosemid může zvýšit toxicitu aminoglykosidů a dalších léků poškozujících sluch. Porucha sluchu může být nevratná, proto je třeba se současnému podávání těchto léků vyhnout.",
+      "class_id": "group:nephrotoxic",
+      "drug_class": "Aminoglykosidy a jiné léky poškozující sluch",
+      "effect": "Furosemid může zvýšit riziko poškození sluchu, které může být nevratné; této kombinaci je třeba se vyhnout.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hearing impaired",
-          "frequency": null,
-          "label": "Porucha sluchu, která může být nevratná.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Cisplatina",
-      "effect": "Při současném podávání s furosemidem je třeba počítat s možností poruchy sluchu a zvýšení škodlivého účinku cisplatiny na ledviny. Pokud je při léčbě cisplatinou nezbytná forsírovaná diuréza furosemidem, mají se použít pouze nízké dávky furosemidu, například 40 mg při normální funkci ledvin, a jen při pozitivní bilanci tekutin.",
+      "class_id": "substance:1090",
+      "drug": "CISPLATINA",
+      "effect": "Při společném podávání může furosemid zvýšit škodlivý účinek cisplatiny na ledviny a riziko poruchy sluchu. Je-li při léčbě cisplatinou nutná hrazená diuréza furosemidem, mají se použít jen nízké dávky (například 40 mg při normální funkci ledvin) a pouze při pozitivní bilanci tekutin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hearing impaired",
-          "frequency": null,
-          "label": "Porucha sluchu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené poškození ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Lithium",
-      "effect": "Furosemid snižuje vylučování lithia, což může zvýšit jeho škodlivé účinky na srdce a nervový systém. Lékař má pečlivě sledovat hladinu lithia v krvi.",
-      "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené škodlivé účinky lithia na srdce.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené škodlivé účinky lithia na nervový systém.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antihypertenziva, diuretika a jiné látky snižující krevní tlak",
-      "effect": "Při současném podávání s furosemidem lze očekávat výrazný pokles krevního tlaku. Při zahájení léčby inhibitorem ACE nebo blokátorem receptorů pro angiotenzin II (ARB), případně při prvním zvýšení jejich dávky, bylo hlášeno výrazné snížení krevního tlaku až k hranici šoku a zhoršení funkce ledvin, výjimečně akutní selhání ledvin. Pokud je to možné, lékař furosemid dočasně vysadí nebo sníží jeho dávku po dobu 3 dnů před zahájením léčby inhibitorem ACE či ARB nebo před zvýšením jejich dávky.",
+      "class_id": "substance:1486",
+      "drug": "LITHIUM",
+      "effect": "Furosemid snižuje vylučování lithia, a tím může zvýšit jeho škodlivé účinky na srdce a nervy; lékař má pečlivě sledovat hladinu lithia v krvi.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Výrazný pokles krevního tlaku, někdy až k hranici šoku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Zhoršení funkce ledvin, výjimečně akutní selhání ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Theofylin",
+      "class_id": null,
+      "drug_class": "Léky snižující krevní tlak, včetně inhibitorů ACE a blokátorů receptorů angiotenzinu II",
+      "effect": "Současné užívání s furosemidem může prudce snížit krevní tlak. Při prvním podání inhibitoru ACE nebo blokátoru receptorů angiotenzinu II, případně při prvním zvýšení jejich dávky, může dojít až k šoku a zhoršení funkce ledvin. Je-li to možné, lékař furosemid dočasně vysadí nebo sníží jeho dávku na 3 dny před zahájením této léčby nebo zvýšením její dávky.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1562",
+      "drug": "THEOFYLIN",
       "effect": "Furosemid může zvýšit účinek theofylinu.",
-      "effect_type": "synergy",
+      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Svalová relaxancia kurarového typu",
-      "effect": "Furosemid může zvýšit účinek svalových relaxancií kurarového typu.",
-      "effect_type": "synergy",
+      "class_id": null,
+      "drug_class": "Svalová relaxancia typu kurare",
+      "effect": "Furosemid může zvýšit jejich účinek.",
+      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Perorální antidiabetika",
-      "effect": "Furosemid může snižovat účinek perorálních antidiabetik.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Sympatomimetika, například adrenalin a noradrenalin",
-      "effect": "Furosemid může snižovat účinek sympatomimetik, například adrenalinu a noradrenalinu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Risperidon",
-      "effect": "Ve studiích u starších pacientů s demencí byla při současném podávání risperidonu a furosemidu úmrtnost 7,3 % (průměrný věk 89 let) oproti 3,1 % při samotném risperidonu a 4,1 % při samotném furosemidu. Příčina nebyla zjištěna; dehydratace je obecně rizikovým faktorem úmrtí a u těchto pacientů je třeba se jí pečlivě vyhýbat. Lékař má před zahájením kombinace posoudit její přínosy a rizika.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Death NOS",
-          "frequency": 13.7,
-          "label": "Úmrtí u starších pacientů s demencí; ve studii byla při kombinaci s furosemidem úmrtnost 7,3 %.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Levothyroxin",
-      "effect": "Vysoké dávky furosemidu mohou bránit vazbě hormonů štítné žlázy na přenašečové bílkoviny, nejprve přechodně zvýšit hladinu volných hormonů a následně snížit jejich celkovou hladinu. Lékař má při této kombinaci sledovat hladiny hormonů štítné žlázy.",
-      "effect_type": "changed_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Aliskiren",
-      "effect": "Aliskiren snižuje plazmatickou koncentraci perorálně podaného furosemidu. Při zahájení souběžné léčby nebo úpravě dávky má lékař sledovat diuretický účinek furosemidu.",
+      "class_id": "atc:A10",
+      "drug_class": "Antidiabetika",
+      "effect": "Furosemid může snížit účinek antidiabetik.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Cyklosporin A",
-      "effect": "Kombinace furosemidu a cyklosporinu A je spojena se zvýšeným rizikem dnavé artritidy: furosemid zvyšuje hladinu kyseliny močové a cyklosporin narušuje její vylučování ledvinami.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Arthritis",
-          "frequency": null,
-          "label": "Dnavá artritida.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "atc:C01CA",
+      "drug_class": "Sympatomimetika",
+      "effect": "Furosemid může snížit účinek sympatomimetik, například adrenalinu nebo noradrenalinu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
     },
     {
-      "drug_class": "Radiokontrastní látky",
-      "effect": "U pacientů s vysokým rizikem poškození ledvin radiokontrastní látkou léčených furosemidem bylo po podání kontrastní látky častěji pozorováno zhoršení funkce ledvin než u vysoce rizikových pacientů, kteří před podáním dostali pouze nitrožilní hydrataci.",
+      "class_id": "substance:2027",
+      "drug": "RISPERIDON",
+      "effect": "U starších pacientů s demencí byla ve studiích úmrtnost při kombinaci furosemidu a risperidonu vyšší než při léčbě samotným risperidonem nebo samotným furosemidem. Mechanismus není znám a příčina úmrtí nebyla objasněna. Lékař má pečlivě zvážit přínosy a rizika této kombinace nebo současného užívání dalších vysoce účinných diuretik; při dehydrataci se léčbě touto kombinací vyhnout.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Zhoršení funkce ledvin po podání radiokontrastní látky u pacientů s vysokým rizikem poškození ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1139",
+      "drug": "LEVOTHYROXIN",
+      "effect": "Vysoké dávky furosemidu mohou nejprve přechodně zvýšit volné hormony štítné žlázy a poté snížit jejich celkové hladiny; lékař má jejich hladiny sledovat.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:2041",
+      "drug": "ALISKIREN",
+      "effect": "Aliskiren snižuje koncentraci furosemidu podávaného ústy; při zahájení nebo úpravě léčby aliskirenem má lékař sledovat diuretický účinek furosemidu.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1159",
+      "drug": "CYKLOSPORIN",
+      "effect": "Současné užívání s furosemidem je spojeno se zvýšeným rizikem dnavé artritidy: furosemid zvyšuje hladinu kyseliny močové a cyklosporin ovlivňuje její vylučování ledvinami.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:V08A",
+      "drug_class": "Jodované rentgenové kontrastní látky",
+      "effect": "U pacientů s vysokým rizikem poškození ledvin po kontrastní látce byl při léčbě furosemidem zaznamenán častější výskyt zhoršení funkce ledvin po jejím podání než u pacientů, kteří před vyšetřením dostali pouze nitrožilní tekutiny.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Vysoké dávky furosemidu a hormony štítné žlázy",
+      "effect": "Současné užívání hormonů štítné žlázy, například levotyroxinu, s vysokými dávkami furosemidu může ovlivnit hladiny hormonů štítné žlázy; lékař má jejich hladiny sledovat.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Furosemid a lékořice",
+      "effect": "Velké množství lékořice může při užívání furosemidu zvýšit ztráty draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Furosemid FMK pomáhá odvádět přebytečnou vodu z těla a používá se při otocích a vysokém krevním tlaku.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0269109",
+      "H": "",
+      "NAZEV": "FUROSEMID FMK",
+      "SILA": "40MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "50",
+      "CESTA": "POR",
+      "DOPLNEK": "40MG TBL NOB 50",
+      "OBAL": "BLI",
+      "DRZ": "FAD",
+      "ZEMDRZ": "PL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "50",
+      "ATC_WHO": "C03CA01",
+      "RC": "50/571/17-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "40",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "50",
+      "ZDROJ_WHO": "NO26",
+      "LL": "651",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "FUROSEMID FMK",
+      "MRP_CISLO": "SK/H/0192/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OE",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0269109",
+        "KOD_LATKY": "651",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "40",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "651",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "FUROSEMIDUM",
+          "NAZEV_EN": "FUROSEMIDE",
+          "NAZEV": "FUROSEMID",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0269109",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0269109",
+        "KOD_LATKY": "4873",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4873",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "HYPROLOSUM SUBSTITUTUM HUMILE",
+          "NAZEV_EN": "HYPROLOSE, LOW-SUBSTITUTED",
+          "NAZEV": "ČÁSTEČNĚ SUBSTITUOVANÁ HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0269109",
+        "KOD_LATKY": "5214",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5214",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "STARCH, PREGELATINISED",
+          "NAZEV": "PŘEDBOBTNALÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0269109",
+        "KOD_LATKY": "1300",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0269109",
+        "KOD_LATKY": "2658",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2658",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "ACIDUM STEARICUM",
+          "NAZEV_EN": "STEARIC ACID",
+          "NAZEV": "KYSELINA STEAROVÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0269109",
+      "PIL": "PI222975.pdf",
+      "DAT_ROZ_PIL": "03.06.2025",
+      "SPC": "SPC222976.pdf",
+      "DAT_ROZ_SPC": "03.06.2025",
+      "OBAL_TEXT": "OBAL222974.pdf",
+      "DAT_ROZ_OBAL": "03.06.2025",
+      "NR": "NR39116017.pdf",
+      "DAT_NPM_NR": "23.01.2019"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C03CA01",
+        "NT": "N",
+        "NAZEV": "FUROSEMID",
+        "NAZEV_EN": "FUROSEMIDE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

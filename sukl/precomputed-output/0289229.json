@@ -1,39 +1,55 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N05",
+    "atc:N05A",
+    "atc:N05AD",
+    "atc:N05AD03",
+    "group:cns_depressant",
+    "group:cyp2d6_inhibitor",
+    "group:qt_prolonging",
+    "substance:11663"
+  ],
   "side_effects": [
+    {
+      "ctcae": "Dry mouth",
+      "frequency": "common",
+      "label": "Sucho v ústech, obvykle přechodné; zvyšuje riziko zubního kazu.",
+      "action": null,
+      "action_condition": null
+    },
     {
       "ctcae": "Somnolence",
       "frequency": "very_common",
-      "label": "Útlum (sedace), zejména na začátku léčby.",
+      "label": "Útlum nebo sedace, zejména na začátku léčby; většinou lehké, související s dávkou a během léčby obvykle ustoupí. Při ospalosti neřiďte ani neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Extrapyramidal disorder",
       "frequency": "common",
-      "label": "Parkinsonismus: třes, ztuhlé držení těla, pomalé pohyby a šouravá chůze s poruchou rovnováhy.",
+      "label": "Parkinsonismus: třes, ztuhlé držení těla, pomalé pohyby a šouravá chůze s poruchou rovnováhy; většinou lehké, související s dávkou a na začátku léčby výraznější.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závrať.",
+      "label": "Závrať; většinou lehká, související s dávkou a na začátku léčby výraznější.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Dry mouth",
-      "frequency": "common",
-      "label": "Sucho v ústech, obvykle přechodné; zvyšuje riziko zubního kazu.",
-      "action": "continue",
-      "action_condition": {
-        "patient_guide": "Pokud pocítíte sucho v ústech"
-      }
     },
     {
       "ctcae": "Headache",
       "frequency": "uncommon",
       "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Akathisia",
+      "frequency": "uncommon",
+      "label": "Akatizie: nutkání k pohybu a potíže sedět v klidu; převládá v počátečním stadiu léčby. Pokud obtěžuje, lékař může upravit dávku a předepsat léky ke zmírnění příznaků.",
       "action": null,
       "action_condition": null
     },
@@ -45,39 +61,30 @@
       "action_condition": null
     },
     {
-      "ctcae": "Akathisia",
-      "frequency": "uncommon",
-      "label": "Akatizie: nutkání k pohybu a potíže sedět v klidu, převážně v počátečním stadiu léčby.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud vás nutkání k pohybu nebo potíže sedět v klidu obtěžují"
-      }
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "uncommon",
       "label": "Zvýšená hladina transamináz.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Cholestasis",
       "frequency": "uncommon",
       "label": "Cholestáza.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Blood bilirubin increased",
       "frequency": "uncommon",
       "label": "Žloutenka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hypotension",
+      "ctcae": "Orthostatic hypotension",
       "frequency": "uncommon",
-      "label": "Ortostatický pokles krevního tlaku, zejména u starších pacientů; při vstávání se mohou objevit závratě.",
+      "label": "Ortostatická hypotenze; u starších pacientů může způsobit pokles krevního tlaku a závrať při vstávání.",
       "action": null,
       "action_condition": null
     },
@@ -96,337 +103,512 @@
       "action_condition": null
     },
     {
-      "ctcae": "Neutrophil count decreased",
+      "ctcae": "Agranulocytosis",
       "frequency": "uncommon",
       "label": "Agranulocytóza.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "ctcae": "Pancytopenia",
       "frequency": "uncommon",
       "label": "Pancytopenie.",
       "action": null,
       "action_condition": null
     },
     {
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "uncommon",
+      "label": "Svalová ztuhlost horních a dolních končetin; hlášena u starších pacientů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Palpitations",
       "frequency": "not_known",
-      "label": "Bušení srdce.",
+      "label": "Bušení srdce; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Poruchy srdečního rytmu, které nejsou blíže určeny.",
+      "label": "Poruchy srdečního rytmu; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myocardial infarction",
       "frequency": "not_known",
-      "label": "Srdeční záchvat (infarkt myokardu).",
+      "label": "Srdeční záchvat; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cardiac arrest",
       "frequency": "not_known",
-      "label": "Srdeční zástava.",
+      "label": "Srdeční zástava; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "not_known",
-      "label": "Prodloužení QT intervalu na EKG.",
+      "label": "Prodloužení QT intervalu; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Ventricular arrhythmia",
       "frequency": "not_known",
-      "label": "Komorová arytmie.",
+      "label": "Komorová arytmie; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Ventricular fibrillation",
       "frequency": "not_known",
-      "label": "Komorová fibrilace.",
+      "label": "Komorová fibrilace; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Ventricular tachycardia",
       "frequency": "not_known",
-      "label": "Komorová tachykardie.",
+      "label": "Komorová tachykardie; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Sudden death NOS",
       "frequency": "not_known",
-      "label": "Náhlé úmrtí.",
+      "label": "Náhlá smrt; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Extrapyramidal disorder",
+      "ctcae": "Movements involuntary",
       "frequency": "not_known",
-      "label": "Pozdní dyskineze, tedy mimovolní pohyby; mohou se projevit křečemi ve tváři, grimasy nebo neobvyklými pohyby jazyka.",
+      "label": "Pozdní dyskineze; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom: závažné puchýře a krvácení rtů, očí, úst, nosu nebo pohlavních orgánů.",
+      "label": "Stevensův–Johnsonův syndrom: těžké puchýře a krvácení rtů, z očí, úst, nosu nebo pohlavních orgánů; četnost nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Neuroleptic malignant syndrome",
       "frequency": "not_known",
-      "label": "Neuroleptický maligní syndrom: vysoká horečka, výrazná svalová ztuhlost a vyčerpanost; mohou se přidat nadměrné pocení a zrychlený srdeční tep.",
+      "label": "Neuroleptický maligní syndrom může zahrnovat vysokou horečku, mimořádnou svalovou ztuhlost a vyčerpanost, zejména s nadměrným pocením a zrychleným tepem; četnost nelze z dostupných údajů určit.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vysoká horečka, mimořádná svalová ztuhlost a vyčerpanost, zejména spolu s nadměrným pocením a zrychleným srdečním tepem"
+        "patient_guide": "Vysoká horečka, mimořádná svalová ztuhlost a vyčerpanost, zejména spolu s nadměrným pocením a zrychleným tepem.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Venous thromboembolism",
+      "frequency": "not_known",
+      "label": "Krevní sraženiny v žilách, zvláště dolních končetin; mohou putovat do plic a způsobit bolest na hrudi a dýchací obtíže. Četnost nelze z dostupných údajů určit.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Otok, bolest nebo zarudnutí dolní končetiny, případně bolest na hrudi a dýchací obtíže.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
       "frequency": "not_known",
-      "label": "Příznaky z vysazení léku u novorozence po užívání přípravku matkou ve třetím trimestru těhotenství; mohou zahrnovat třes, svalovou ztuhlost nebo slabost, spavost, neklid, dýchací potíže a potíže s příjmem potravy.",
+      "label": "U novorozence po užívání přípravku matkou ve třetím trimestru se mohou objevit příznaky z vysazení, včetně třesu, svalové ztuhlosti nebo slabosti, spavosti, neklidu, problémů s dýcháním a potíží s příjmem potravy; délka a závažnost se mohou lišit. Četnost nelze z dostupných údajů určit.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u novorozence po užívání přípravku matkou v posledních třech měsících těhotenství objeví kterýkoli z uvedených příznaků"
-      }
-    },
-    {
-      "ctcae": "Venous thromboembolism",
-      "frequency": "not_known",
-      "label": "Krevní sraženina v žíle, zvláště v dolní končetině; může se projevit otokem, bolestí a zarudnutím končetiny.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok, bolest nebo zarudnutí dolní končetiny"
-      }
-    },
-    {
-      "ctcae": "Venous thromboembolism",
-      "frequency": "not_known",
-      "label": "Plicní embolie způsobená krevní sraženinou, která doputovala do plic; může se projevit bolestí na hrudi a dýchacími obtížemi.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest na hrudi nebo dýchací obtíže"
+        "patient_guide": "U novorozence, jehož matka užívala přípravek v posledních třech měsících těhotenství, se objeví třes, svalová ztuhlost nebo slabost, spavost, neklid, problémy s dýcháním nebo potíže s příjmem potravy.",
+        "min_severity": 1
       }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Alkohol, barbituráty a opioidy",
-      "effect": "Přípravek se nesmí užívat při útlumu centrálního nervového systému, například při intoxikaci alkoholem, barbituráty nebo opioidy. Melperon může zesílit jejich tlumivý a sedativní účinek; během léčby nepožívejte alkohol.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zesílení sedativního účinku a útlumu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Ostatní látky tlumící centrální nervový systém",
-      "effect": "Melperon může zesílit jejich sedativní účinek. Lékaře informujte o užívání těchto látek.",
+      "class_id": "group:cns_depressant",
+      "drug_class": "Látky tlumící centrální nervový systém, včetně barbiturátů a opioidů",
+      "effect": "Melperon může zesílit tlumivý účinek alkoholu, barbiturátů a dalších látek působících tlumivě na centrální nervový systém. Přípravek neužívejte, pokud jste pod vlivem tlumivých léků nebo alkoholu; během léčby alkohol nepožívejte.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zesílení sedativního účinku a útlumu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léky na vysoký krevní tlak",
-      "effect": "Atypická antipsychotika, mezi něž patří melperon, mohou účinek léků na vysoký krevní tlak zesílit nebo oslabit.",
+      "class_id": "atc:C02",
+      "drug_class": "Antihypertenziva",
+      "effect": "Atypická antipsychotika mohou účinky antihypertenziv zesílit nebo oslabit.",
       "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Guanetidin a podobně působící léky na vysoký krevní tlak",
-      "effect": "Melperon může snížit jejich účinek na krevní tlak.",
+      "class_id": "substance:11663",
+      "drug": "Guanethidin",
+      "effect": "Melperon může snížit účinek guanetidinu a podobně působících látek na snížení krevního tlaku.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "lithium",
-      "effect": "Současné užívání melperonu a lithia zvyšuje riziko neurotoxicity.",
+      "class_id": "substance:11663",
+      "drug": "Lithium",
+      "effect": "Současné užívání lithia a atypických antipsychotik zvyšuje riziko neurotoxicity.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Neurotoxicita.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:N06AA",
       "drug_class": "Tricyklická antidepresiva",
-      "effect": "Tricyklická antidepresiva a melperon si vzájemně inhibují metabolismus; mohou se proto měnit hladiny obou léčiv. Tato skupina také patří mezi léky, při jejichž současném užívání se doporučuje opatrnost kvůli riziku prodloužení QT intervalu.",
+      "effect": "Tricyklická antidepresiva a atypická antipsychotika si vzájemně inhibují metabolismus. Při současném užívání s látkami, které mohou prodlužovat QT interval, je zapotřebí opatrnosti.",
       "effect_type": "changed_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení QT intervalu a riziko maligních arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Perorální kontraceptiva s vyšším obsahem hormonů",
-      "effect": "Mohou zpomalit odbourávání neuroleptik, včetně melperonu, a zvýšit jeho koncentraci v krvi.",
+      "effect": "Perorální kontraceptiva s vyšším obsahem hormonů mohou zpomalit odbourávání neuroleptik.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "levodopa",
+      "class_id": "substance:11663",
+      "drug": "Levodopa",
       "effect": "Melperon může snížit účinek levodopy blokádou dopaminových receptorů v mozku.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Léky metabolizované enzymem CYP2D6",
-      "effect": "Melperon může inhibovat CYP2D6, a tím změnit metabolismus léků, které jsou jeho substráty. Při souběžné léčbě dalšími léky je třeba postupovat obezřetně.",
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léčivé přípravky, které mohou prodloužit QT interval",
+      "effect": "Při současném užívání melperonu s léčivými přípravky, které mohou prodloužit QT interval, je zapotřebí opatrnosti. Patří mezi ně jiná antipsychotika, antiarytmika třídy IA a III, moxifloxacin, erythromycin, methadon, meflochin, tricyklická antidepresiva, lithium a cisaprid. Současné užívání jiných antipsychotik se nedoporučuje.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:hypokalemia_risk",
+      "drug_class": "Kličková nebo thiazidová diuretika",
+      "effect": "Léčivé přípravky, které mohou způsobit nerovnováhu elektrolytů, například kličková nebo thiazidová diuretika způsobující hypokalemii, mohou při současném užívání melperonu zvýšit riziko maligních arytmií.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp2d6_inhibitor",
+      "drug_class": "Melperon",
+      "effect": "Melperon může inhibovat CYP2D6 a měnit metabolismus látek, které jsou substráty tohoto enzymu.",
       "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léky prodlužující QT interval: další atypická antipsychotika",
-      "effect": "Současné užívání může zvýšit riziko prodloužení QT intervalu a maligních arytmií. Současná léčba jinými antipsychotiky se nedoporučuje; lékař zváží rizika a bude postupovat obezřetně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení QT intervalu a riziko maligních arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antiarytmika tříd IA a III",
-      "effect": "Současné užívání může zvýšit riziko prodloužení QT intervalu a maligních arytmií; při kombinaci je třeba postupovat obezřetně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení QT intervalu a riziko maligních arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "moxifloxacin",
-      "effect": "Současné užívání může zvýšit riziko prodloužení QT intervalu a maligních arytmií; při kombinaci je třeba postupovat obezřetně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení QT intervalu a riziko maligních arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "erythromycin",
-      "effect": "Současné užívání může zvýšit riziko prodloužení QT intervalu a maligních arytmií; při kombinaci je třeba postupovat obezřetně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení QT intervalu a riziko maligních arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "methadon",
-      "effect": "Současné užívání může zvýšit riziko prodloužení QT intervalu a maligních arytmií; při kombinaci je třeba postupovat obezřetně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení QT intervalu a riziko maligních arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "meflochin",
-      "effect": "Současné užívání může zvýšit riziko prodloužení QT intervalu a maligních arytmií; při kombinaci je třeba postupovat obezřetně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení QT intervalu a riziko maligních arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "cisaprid",
-      "effect": "Současné užívání může zvýšit riziko prodloužení QT intervalu a maligních arytmií; při kombinaci je třeba postupovat obezřetně.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení QT intervalu a riziko maligních arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Kličková a thiazidová diuretika",
-      "effect": "Mohou vyvolat nerovnováhu elektrolytů, například nízkou hladinu draslíku, a tím zvýšit riziko maligních arytmií při současném užívání melperonu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Ventricular arrhythmia",
-          "frequency": null,
-          "label": "Zvýšené riziko maligních arytmií.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Léky, které mohou zvýšit koncentraci melperonu v krvi",
-      "effect": "Současné užívání se nedoporučuje, protože může zvýšit koncentraci melperonu v krvi.",
+      "class_id": null,
+      "drug_class": "Látky, které mohou zvýšit koncentraci melperonu v krvi",
+      "effect": "Současná léčba látkami, které mohou zvýšit koncentraci melperonu v krvi, se nedoporučuje.",
       "effect_type": "increased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Buronil se používá k léčbě schizofrenie, abstinenčních příznaků při alkoholismu, úzkosti a neklidu nebo poruch chování při mentálním postižení.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0289229",
+      "H": "",
+      "NAZEV": "BURONIL",
+      "SILA": "25MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "50",
+      "CESTA": "POR",
+      "DOPLNEK": "25MG TBL FLM 50",
+      "OBAL": "TBC",
+      "DRZ": "EQL",
+      "ZEMDRZ": "S",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "68",
+      "ATC_WHO": "N05AD03",
+      "RC": "68/1100/94-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,3",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "4,1667",
+      "ZDROJ_WHO": "NO26",
+      "LL": "11663",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "60",
+      "EXP_T": "M",
+      "NAZEV_REG": "BURONIL",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "11663",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "25",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "11663",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MELPERONI HYDROCHLORIDUM",
+          "NAZEV_EN": "MELPERONE HYDROCHLORIDE",
+          "NAZEV": "MELPERON-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "3755",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "1871",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "16393",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16393",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ACIDUM STEARICUM 50%",
+          "NAZEV_EN": "STEARIC ACID 50%",
+          "NAZEV": "KYSELINA STEAROVÁ 50%"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "1300",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "4078",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4078",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 25",
+          "NAZEV_EN": "POVIDONE K 25",
+          "NAZEV": "POVIDON K 25",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "1871",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "748",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "2710",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "4256",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0289229",
+        "KOD_LATKY": "3765",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0289229",
+      "PIL": "PI228228.pdf",
+      "DAT_ROZ_PIL": "20.11.2025",
+      "SPC": "SPC228229.pdf",
+      "DAT_ROZ_SPC": "20.11.2025",
+      "OBAL_TEXT": "OBAL228227.pdf",
+      "DAT_ROZ_OBAL": "20.11.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N05AD03",
+        "NT": "N",
+        "NAZEV": "MELPERON",
+        "NAZEV_EN": "MELPERONE"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

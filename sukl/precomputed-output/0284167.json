@@ -1,743 +1,835 @@
 {
+  "classes": [
+    "atc:H",
+    "atc:H02",
+    "atc:H02A",
+    "atc:H02AB",
+    "atc:H02AB07",
+    "substance:1190"
+  ],
   "side_effects": [
     {
       "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "not_known",
-      "label": "Infekce mohou být zastřeny, nově se projevit, zhoršit nebo znovu aktivovat; při léčbě může být zvýšené riziko bakteriálních, virových, plísňových, parazitárních i oportunních infekcí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Infections and infestations - Other, specify",
-      "frequency": "not_known",
-      "label": "Aktivace strongyloidózy (infekce hlísticemi), která se může rozšířit.",
+      "frequency": null,
+      "label": "Při léčbě vyššími než substitučními dávkami se mohou infekce objevit, zhoršit nebo vrátit; jejich příznaky mohou být zastřené. Může se aktivovat také strongyloidóza.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Leukocytosis",
-      "frequency": "not_known",
-      "label": "Středně závažné zvýšení počtu bílých krvinek.",
+      "frequency": null,
+      "label": "Středně těžká leukocytóza.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Lymphopenia",
-      "frequency": "not_known",
-      "label": "Snížený počet lymfocytů.",
+      "frequency": null,
+      "label": "Lymfopenie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Eosinophilia",
+      "frequency": null,
+      "label": "Eozinopenie, tedy pokles počtu eozinofilů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Snížený počet eozinofilů v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zvýšený počet červených krvinek (polycytemie).",
+      "frequency": null,
+      "label": "Polycytemie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Allergic reaction",
-      "frequency": "not_known",
-      "label": "Alergická reakce, například kožní vyrážka nebo svědění.",
+      "frequency": null,
+      "label": "Alergické reakce, například kožní vyrážka nebo svědění.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka, svědění, potíže s dýcháním, nepravidelný tep nebo příliš vysoký či nízký krevní tlak"
+        "patient_guide": "Pokud se přidají potíže s dýcháním nebo nepravidelný tep, případně příliš vysoký či nízký tlak.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Těžká anafylaktická reakce, která může zahrnovat poruchu srdečního rytmu, bronchospasmus, změny krevního tlaku, oběhový kolaps nebo srdeční zástavu.",
+      "frequency": null,
+      "label": "Těžká alergická reakce může zahrnovat potíže s dýcháním, nepravidelný tep, vysoký nebo nízký tlak, oběhový kolaps či srdeční zástavu.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Immune system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Snížená schopnost imunitního systému odpovídat na podněty.",
+      "frequency": null,
+      "label": "Snížená schopnost imunitní odpovědi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Adrenal insufficiency",
-      "frequency": "not_known",
-      "label": "Útlum funkce nadledvin; mohou se objevit bolest hlavy, nevolnost, závrať, nechutenství, slabost, změny emocí, apatie nebo nepřiměřená reakce na stres.",
+      "frequency": null,
+      "label": "Útlum nadledvin; při snížení dávky po dlouhodobé léčbě se mohou objevit bolest svalů a kloubů nebo akutní nedostatečnost nadledvin.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cushingoid",
-      "frequency": "not_known",
-      "label": "Cushingův syndrom, například měsícovitý obličej, zarudnutí obličeje a nárůst hmotnosti v oblasti břicha a horní části těla.",
+      "frequency": null,
+      "label": "Cushingův syndrom, například měsícovitý obličej a obezita v oblasti břicha.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zadržování sodíku a vody, které může způsobit otoky.",
+      "ctcae": "Edema",
+      "frequency": null,
+      "label": "Zadržování sodíku může způsobit otoky.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypokalemia",
-      "frequency": "not_known",
-      "label": "Zvýšené vylučování draslíku, které může vést k jeho nedostatku a nepravidelnému srdečnímu rytmu.",
+      "frequency": null,
+      "label": "Zvýšené vylučování draslíku; může vést k nepravidelnému srdečnímu tepu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Weight gain",
-      "frequency": "not_known",
-      "label": "Nárůst tělesné hmotnosti.",
+      "frequency": null,
+      "label": "Zvýšení tělesné hmotnosti.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Snížená schopnost těla snášet glukózu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperglycemia",
-      "frequency": "not_known",
-      "label": "Zvýšená hladina cukru v krvi.",
+      "ctcae": "Glucose intolerance",
+      "frequency": null,
+      "label": "Snížená glukózová tolerance.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Diabetes mellitus",
-      "frequency": "not_known",
-      "label": "Vznik cukrovky nebo zhoršení již přítomné cukrovky.",
+      "frequency": null,
+      "label": "Cukrovka.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cholesterol high",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Zvýšená hladina cholesterolu v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypertriglyceridemia",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Zvýšená hladina triacylglycerolů v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
-      "frequency": "not_known",
+      "ctcae": "Increased appetite",
+      "frequency": null,
       "label": "Zvýšená chuť k jídlu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Depression",
-      "frequency": "not_known",
-      "label": "Deprese.",
+      "frequency": null,
+      "label": "Deprese, včetně myšlenek na sebevraždu.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Irritability",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Podrážděnost.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Euphoria",
-      "frequency": "not_known",
-      "label": "Euforie nebo pocit opojení a silného štěstí.",
+      "frequency": null,
+      "label": "Euforie nebo pocit silného štěstí a vzrušení.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Mania",
-      "frequency": "not_known",
-      "label": "Mánie nebo nezvykle zvýšená energie.",
+      "frequency": null,
+      "label": "Mánie, velké výkyvy nálad nebo nárůst energie.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Psychosis",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Psychóza nebo ztráta kontaktu s realitou.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Hallucinations",
-      "frequency": "not_known",
-      "label": "Halucinace – vnímání věcí, které ve skutečnosti nejsou přítomné.",
+      "frequency": null,
+      "label": "Halucinace: můžete cítit, vidět nebo slyšet něco, co neexistuje.",
       "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Výrazné výkyvy nálad.",
-      "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Anxiety",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Úzkost.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Insomnia",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Porucha spánku.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Suicidal ideation",
-      "frequency": "not_known",
-      "label": "Myšlenky na sebevraždu nebo sebevražedné sklony.",
+      "frequency": null,
+      "label": "Sklony k sebevraždě nebo myšlenky na sebevraždu.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Pseudotumor mozku, tedy zvýšený tlak v hlavě; mohou se objevit bolest hlavy, zvracení, nedostatek energie a ospalost.",
+      "frequency": null,
+      "label": "Pseudotumor cerebri, tedy zvýšený tlak v hlavě; může se projevit bolestí hlavy, zvracením, nedostatkem energie a ospalostí.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Seizure",
-      "frequency": "not_known",
-      "label": "Projevení skryté epilepsie nebo častější či závažnější záchvaty u lidí s epilepsií; záchvaty se mohou objevit i u lidí, kteří epilepsií dosud netrpěli.",
+      "frequency": null,
+      "label": "Mohou se objevit epileptické záchvaty nebo se mohou záchvaty u pacientů s epilepsií zhoršit. Záchvaty byly popsány také u osob, které dříve epilepsii neměly.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Cataract",
-      "frequency": "not_known",
-      "label": "Šedý zákal, zejména zákal pod zadním pouzdrem čočky.",
+      "frequency": null,
+      "label": "Šedý zákal, zejména při dlouhodobém užívání.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Glaucoma",
-      "frequency": "not_known",
-      "label": "Zelený zákal nebo zvýšený nitrooční tlak.",
+      "frequency": null,
+      "label": "Zelený zákal.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Corneal ulcer",
-      "frequency": "not_known",
-      "label": "Zhoršení potíží při vředu rohovky.",
+      "frequency": null,
+      "label": "Zhoršení potíží při již přítomném vředu rohovky.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Eye infection",
-      "frequency": "not_known",
-      "label": "Zvýšený výskyt virových, plísňových nebo bakteriálních zánětů oka.",
+      "frequency": null,
+      "label": "Častější virové, plísňové a bakteriální záněty oka.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Rozmazané vidění.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Sinus bradycardia",
       "frequency": "not_known",
-      "label": "Zpomalený srdeční tep; byl hlášen po vysokých dávkách.",
+      "label": "Pomalý srdeční tep po vysokých dávkách; nemusí souviset s délkou léčby.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypertension",
-      "frequency": "not_known",
-      "label": "Vysoký krevní tlak.",
+      "frequency": null,
+      "label": "Zvýšený krevní tlak.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Vascular disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zvýšené riziko kornatění tepen.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vascular disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zvýšené riziko trombózy.",
+      "ctcae": "Arterial thromboembolism",
+      "frequency": null,
+      "label": "Zvýšené riziko arteriosklerózy a trombózy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vasculitis",
-      "frequency": "not_known",
-      "label": "Zánět cév, který se může objevit také po vysazení po dlouhodobé léčbě.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vascular disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zvýšená křehkost drobných cév.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Vředy v zažívacím traktu.",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Krvácení do zažívacího traktu, které se může projevit bolestí žaludku, krvácením z konečníku, černou nebo krvavou stolicí či zvracením krve.",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "not_known",
-      "label": "Zánět slinivky břišní.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest žaludku šířící se do zad, kyčle nebo ramene, případně doprovázená zvracením, šokem nebo ztrátou vědomí"
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Pajizévky (strie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin atrophy",
-      "frequency": "not_known",
-      "label": "Ztenčení nebo úbytek kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Telangiectasia",
-      "frequency": "not_known",
-      "label": "Rozšířené drobné cévky pod povrchem kůže nebo sliznic.",
+      "frequency": null,
+      "label": "Zánět cév; může se objevit také jako příznak z vysazení po dlouhodobé léčbě.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Purpura",
-      "frequency": "not_known",
-      "label": "Drobné červené, fialové nebo modré skvrnky způsobené krvácením do kůže (petechie).",
+      "frequency": null,
+      "label": "Zvýšená křehkost kapilár, drobné krvácení do kůže a modřiny.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastric ulcer",
+      "frequency": null,
+      "label": "Vředy a krvácení v zažívacím traktu; po vysokých dávkách mohou být příznaky podráždění pobřišnice při proděravění trávicího traktu zastřené.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Bolest žaludku, krvácení z konečníku, černá nebo krvavá stolice či zvracení krve.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": null,
+      "label": "Zánět slinivky břišní; může se projevit bolestí žaludku šířící se do zad, kyčle nebo ramene, případně zvracením, šokem či ztrátou vědomí.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Bolest žaludku šířící se do zad, kyčle nebo ramene, případně doprovázená zvracením.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Skin atrophy",
+      "frequency": null,
+      "label": "Ztenčení a úbytek kůže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Telangiectasia",
+      "frequency": null,
+      "label": "Rozšířené drobné cévky pod povrchem kůže nebo sliznic.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Bruising",
-      "frequency": "not_known",
-      "label": "Modřiny.",
+      "frequency": null,
+      "label": "Drobné krvácení do kůže a modřiny.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypertrichosis",
-      "frequency": "not_known",
+      "frequency": null,
       "label": "Zvýšený růst ochlupení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Steroidní akné.",
+      "ctcae": "Acne",
+      "frequency": null,
+      "label": "Akné vyvolané kortikoidy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zánětlivé změny kůže v obličeji, zejména kolem úst, podobné růžovce.",
+      "ctcae": "Dermatitis",
+      "frequency": null,
+      "label": "Zánětlivé kožní změny v obličeji, zejména kolem úst, nosu a očí.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
+      "ctcae": "Skin hyperpigmentation",
+      "frequency": null,
       "label": "Změny pigmentace kůže.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Generalized muscle weakness",
-      "frequency": "not_known",
-      "label": "Svalová slabost.",
+      "frequency": null,
+      "label": "Svalová slabost a úbytek svalů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "not_known",
-      "label": "Úbytek svalů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "not_known",
-      "label": "Myopatie (onemocnění svalů).",
+      "ctcae": "Myositis",
+      "frequency": null,
+      "label": "Myopatie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Osteoporosis",
-      "frequency": "not_known",
-      "label": "Osteoporóza a další úbytek kostní hmoty, který zvyšuje riziko zlomenin; může se objevit i při krátkodobé léčbě.",
+      "frequency": null,
+      "label": "Osteoporóza; riziko souvisí s dávkou a může se objevit i po krátkodobém podávání.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Osteonecrosis",
-      "frequency": "not_known",
-      "label": "Odumírání kostní tkáně bez infekce.",
+      "frequency": null,
+      "label": "Aseptická nekróza kostí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tendonitis",
+      "frequency": null,
+      "label": "Nepříjemné potíže se šlachami a zánět šlach.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tendon rupture",
+      "frequency": null,
+      "label": "Prasknutí šlachy; riziko se zvyšuje při současném užívání některých antibiotik, fluorochinolonů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "not_known",
-      "label": "Nepříjemné pocity ve šlachách.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "not_known",
-      "label": "Zánět šlach.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "not_known",
-      "label": "Prasknutí šlachy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "not_known",
-      "label": "Tvorba tukové tkáně v míšním kanálu (epidurální lipomatóza).",
+      "frequency": null,
+      "label": "Epidurální lipomatóza, tedy tvorba tukové tkáně v míše.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Growth suppression",
-      "frequency": "not_known",
-      "label": "Zpomalení růstu u dětí a dospívajících.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte podezření, že dítě nebo dospívající roste méně než obvykle"
-      }
-    },
-    {
-      "ctcae": "Myalgia",
-      "frequency": "not_known",
-      "label": "Bolest svalů po příliš rychlém snížení dávky po dlouhodobé léčbě.",
+      "frequency": null,
+      "label": "U dětí a dospívajících může být růst pomalejší než obvykle.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Arthralgia",
-      "frequency": "not_known",
-      "label": "Bolest kloubů po příliš rychlém snížení dávky po dlouhodobé léčbě.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Sklerodermická renální krize; nejvyšší riziko bylo hlášeno u difuzní systémové sklerózy, nejnižší u omezené systémové sklerózy (2 %) a juvenilní systémové sklerózy (1 %).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte sklerodermii a objeví se zvýšený krevní tlak nebo snížené množství moči"
-      }
     },
     {
       "ctcae": "Amenorrhea",
-      "frequency": "not_known",
-      "label": "Vymizení menstruace.",
+      "frequency": null,
+      "label": "Porucha sekrece pohlavních hormonů může způsobit vymizení menstruace.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hirsutism",
-      "frequency": "not_known",
-      "label": "Zvýšený růst ochlupení u žen.",
+      "frequency": null,
+      "label": "Porucha sekrece pohlavních hormonů může způsobit zvýšený růst ochlupení u žen.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Erectile dysfunction",
-      "frequency": "not_known",
-      "label": "Porucha erekce (impotence).",
+      "frequency": null,
+      "label": "Porucha sekrece pohlavních hormonů může způsobit impotenci u mužů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Wound complication",
-      "frequency": "not_known",
-      "label": "Zpomalené hojení ran.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "not_known",
-      "label": "Tyreotoxická periodická paralýza se slabostí, bolestí, křečemi nebo ztuhlostí svalů; může se objevit u pacientů se zvýšenou činností štítné žlázy léčených prednisonem.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte zvýšenou činnost štítné žlázy a objeví se svalová slabost, bolest, křeče nebo ztuhlost"
-      }
-    },
-    {
-      "ctcae": "Fetal growth retardation",
-      "frequency": "not_known",
-      "label": "Při dlouhodobé léčbě během těhotenství nelze vyloučit zpomalení růstu plodu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Endocrine disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Při podávání ke konci těhotenství může u novorozence dojít k útlumu nebo zmenšení kůry nadledvin; může být nutná hormonální substituce s postupným vysazováním.",
+      "ctcae": "Wound healing delayed",
+      "frequency": null,
+      "label": "Rány se hojí pomaleji než obvykle.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Inhibitory CYP3A",
-      "effect": "Inhibitory CYP3A, například ketokonazol, itrakonazol, ritonavir nebo kobicistat, mohou zesílit systémové účinky prednisonu a zvýšit riziko jeho nežádoucích účinků. Kombinaci je třeba se vyhnout, pokud přínos léčby nepřeváží riziko; při jejím použití bude lékař účinky pečlivě sledovat.",
+      "class_id": "group:cyp3a4_inhibitor",
+      "drug_class": "Inhibitory CYP3A4",
+      "effect": "Inhibitory CYP3A4, včetně kobicistatu a přípravků obsahujících ketokonazol nebo itrakonazol, mohou zvýšit riziko celkových nežádoucích účinků prednisonu. Kombinaci je třeba se vyhnout, pokud přínos léčby nepřeváží riziko; při jejím použití má lékař sledovat účinky.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Estrogeny",
-      "effect": "Estrogeny, například v perorální antikoncepci, mohou prodloužit vylučování glukokortikoidů z těla a zesílit účinek prednisonu.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Induktory metabolismu prednisonu",
-      "effect": "Rifampicin, fenytoin, barbituráty, karbamazepin a primidon mohou urychlit odbourávání prednisonu a snížit jeho účinek. Také efedrin může urychlit jeho metabolismus a případně oslabit léčebný účinek.",
+      "class_id": "group:cyp3a4_inducer",
+      "drug_class": "Induktory CYP3A4",
+      "effect": "Rifampicin, fenytoin, barbituráty, karbamazepin a primidon mohou urychlit metabolismus prednisonu a oslabit jeho léčebný účinek.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:A02A",
       "drug_class": "Antacida obsahující hydroxid hořečnatý nebo hlinitý",
-      "effect": "Mohou snížit vstřebávání prednisonu. Přípravky užívejte s odstupem nejméně dvou hodin.",
+      "effect": "Mohou snížit vstřebávání prednisonu. Prednison a antacidum užívejte s odstupem alespoň dvou hodin.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:C01A",
       "drug_class": "Srdeční glykosidy",
-      "effect": "Účinek srdečních glykosidů může být zesílen při nedostatku draslíku, který může prednison způsobit.",
+      "effect": "Nedostatek draslíku při léčbě prednisonem může zesílit účinek srdečních glykosidů.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Saluretika a projímadla způsobující vylučování draslíku",
-      "effect": "Prednison může dále zvýšit vylučování draslíku při současném užívání těchto léků.",
+      "class_id": "atc:C03",
+      "drug_class": "Léky na odvodnění (saluretika) a projímadla způsobující ztráty draslíku",
+      "effect": "Prednison může zvýšit vylučování draslíku při současném užívání těchto léků.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Antidiabetika a inzulin",
-      "effect": "Prednison může snížit účinek tablet k léčbě cukrovky i inzulinu, a tím zhoršit snižování hladiny cukru v krvi. Lékař může upravit léčbu diabetu a bude sledovat metabolický stav.",
+      "class_id": "atc:A10",
+      "drug_class": "Léky na cukrovku včetně inzulinu",
+      "effect": "Prednison může oslabit účinek léků na cukrovku a inzulinu snižující hladinu krevního cukru; může být nutné upravit léčbu lékařem.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Perorální antikoagulancia odvozená od kumarinu",
-      "effect": "Prednison může účinek těchto léků na srážení krve oslabit i zesílit. Lékař rozhodne, zda bude potřeba upravit dávku antikoagulancia.",
-      "effect_type": null,
+      "class_id": "atc:B01AA",
+      "drug_class": "Perorální antikoagulancia, deriváty kumarinu",
+      "effect": "Prednison může jejich účinek na srážení krve oslabit nebo zesílit. Při současném podávání může lékař upravit jejich dávku.",
+      "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky a salicyláty",
-      "effect": "Při současném užívání prednisonu se zvyšuje riziko vředů a krvácení do zažívacího traktu; patří sem také indometacin.",
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé a protirevmatické léky",
+      "effect": "Při současném užívání prednisonu se salicyláty nebo nesteroidními protizánětlivými léky, například indometacinem, zvyšuje riziko žaludečních a střevních vředů a krvácení.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
+          "ctcae": "Gastric ulcer",
           "frequency": null,
-          "label": "Vředy v zažívacím traktu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Krvácení do zažívacího traktu.",
+          "label": "Při současném užívání prednisonu se salicyláty nebo nesteroidními protizánětlivými léky, například indometacinem, hrozí žaludeční a střevní vředy a krvácení.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
+      "class_id": "atc:M03A",
       "drug_class": "Nedepolarizující svalová relaxancia",
-      "effect": "Prednison může prodloužit svalové uvolnění vyvolané nedepolarizujícími svalovými relaxancii.",
+      "effect": "Prednison může prodloužit svalovou relaxaci vyvolanou nedepolarizujícími svalovými relaxancii.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:A03B",
       "drug_class": "Atropin a jiná anticholinergika",
-      "effect": "Při současném užívání s prednisonem může dojít k dalšímu zvýšení nitroočního tlaku.",
+      "effect": "Při současném užívání s prednisonem může dále stoupnout nitrooční tlak.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Prazikvantel",
-      "effect": "Kortikosteroidy mohou snížit koncentraci prazikvantelu v krvi.",
+      "class_id": "atc:P02B",
+      "drug_class": "Prazikvantel",
+      "effect": "Prednison může snížit koncentraci prazikvantelu v krvi.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Chlorochin, hydroxychlorochin a meflochin",
-      "effect": "Při současném podávání s prednisonem se zvyšuje riziko onemocnění svalů (myopatie) a srdečního svalu (kardiomyopatie).",
+      "class_id": "atc:P01BA",
+      "drug_class": "Chlorochin, hydroxychlorochin nebo meflochin",
+      "effect": "Při současném užívání s prednisonem se zvyšuje riziko onemocnění svalů a srdečního svalu.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+          "ctcae": "Myopathy",
           "frequency": null,
-          "label": "Myopatie (onemocnění svalů).",
+          "label": "Při současném užívání prednisonu s chlorochinem, hydroxychlorochinem nebo meflochinem se zvyšuje riziko myopatie.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Cardiac disorders - Other, specify",
           "frequency": null,
-          "label": "Kardiomyopatie (onemocnění srdečního svalu).",
+          "label": "Při současném užívání prednisonu s chlorochinem, hydroxychlorochinem nebo meflochinem se zvyšuje riziko kardiomyopatie.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Somatropin",
+      "class_id": "atc:H01AC",
+      "drug_class": "Somatropin",
       "effect": "Prednison může oslabit účinek somatropinu, zejména při vysokých dávkách prednisonu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "Protirelin",
-      "effect": "Prednison může snížit odpověď na protirelin, včetně menšího vzestupu hladiny TSH.",
+      "class_id": "atc:V04CJ02",
+      "drug_class": "Protirelin",
+      "effect": "Prednison může snížit odpověď na protirelin, tedy menší zvýšení hladiny TSH.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Imunosupresiva",
-      "effect": "Současné užívání prednisonu a dalších imunosupresiv může zvýšit náchylnost k infekcím a zhoršit nebo projevit skryté infekce.",
+      "class_id": "atc:G03",
+      "drug_class": "Estrogeny, včetně perorální antikoncepce",
+      "effect": "Estrogeny mohou prodloužit dobu vylučování prednisonu a zesílit jeho účinek.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C09A",
+      "drug_class": "ACE inhibitory",
+      "effect": "Při současném užívání prednisonu a ACE inhibitorů se zvyšuje riziko změn krevního obrazu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01MA",
+      "drug_class": "Fluorochinolony",
+      "effect": "Při současném užívání prednisonu a fluorochinolonů se zvyšuje riziko potíží, zánětu a prasknutí šlachy.",
       "effect_type": "increased_toxicity",
       "side_effects": [
         {
-          "ctcae": "Infections and infestations - Other, specify",
+          "ctcae": "Tendonitis",
           "frequency": null,
-          "label": "Zvýšené riziko infekcí nebo zhoršení či projevení skryté infekce.",
+          "label": "Při současném užívání prednisonu a fluorochinolonů se zvyšuje riziko nepříjemných potíží se šlachami a zánětu šlach.",
+          "action": null,
+          "action_condition": null
+        },
+        {
+          "ctcae": "Tendon rupture",
+          "frequency": null,
+          "label": "Při současném užívání prednisonu a fluorochinolonů se zvyšuje riziko prasknutí šlachy.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Cyklosporin",
-      "effect": "Prednison může zvýšit hladinu cyklosporinu v krvi a tím zvýšit riziko epileptických záchvatů.",
+      "class_id": "atc:L04A",
+      "drug_class": "Imunosupresiva",
+      "effect": "Prednison s imunosupresivy může zvýšit náchylnost k infekcím a zhoršit nebo projevit skryté infekce.",
       "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Infections and infestations - Other, specify",
+          "frequency": null,
+          "label": "Při současném užívání prednisonu s imunosupresivy se mohou infekce zhoršit nebo se mohou projevit skryté infekce.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "substance:1190",
+      "drug": "Prednison",
+      "effect": "Při současném užívání s cyklosporinem může prednison zvýšit jeho hladinu v krvi a tím zvýšit riziko epileptických záchvatů.",
+      "effect_type": "increased_exposure",
       "side_effects": [
         {
           "ctcae": "Seizure",
           "frequency": null,
-          "label": "Zvýšené riziko epileptických záchvatů.",
+          "label": "Při současném užívání prednisonu s cyklosporinem se zvyšuje riziko epileptických záchvatů.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug_class": "ACE inhibitory",
-      "effect": "Při současném užívání s prednisonem se zvyšuje riziko změn krevního obrazu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Fluorochinolony",
-      "effect": "Současné podávání s prednisonem zvyšuje riziko potíží se šlachami, jejich zánětu a prasknutí šlachy.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-          "frequency": null,
-          "label": "Nepříjemné pocity ve šlachách.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-          "frequency": null,
-          "label": "Zánět šlach.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-          "frequency": null,
-          "label": "Prasknutí šlachy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Živé vakcíny",
-      "effect": "Přibližně 8 týdnů před očkováním živou vakcínou a až 2 týdny po něm je nutná zvláštní opatrnost; prednison může zvýšit riziko infekce a může být potřeba léčba proti původci infekce. Při potřebě očkování živou vakcínou se přípravek podává pouze v omezených indikacích a s odpovídajícím sledováním a léčbou.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Infections and infestations - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko infekce.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Inaktivované vakcíny",
-      "effect": "Vyšší dávky prednisonu mohou oslabit imunitní odpověď a snížit účinnost očkování inaktivovanými vakcínami.",
-      "effect_type": "antagonism",
+      "class_id": "substance:1190",
+      "drug": "Prednison",
+      "effect": "Prednison může urychlit metabolismus efedrinu, a tím oslabit jeho léčebný účinek.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Prednison se používá k léčbě onemocnění, která vyžadují celkovou léčbu glukokortikoidy.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0284167",
+      "H": "",
+      "NAZEV": "PREDNISONE OLIKLA",
+      "SILA": "5MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "20",
+      "CESTA": "POR",
+      "DOPLNEK": "5MG TBL NOB 20",
+      "OBAL": "BLI",
+      "DRZ": "OLK",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "",
+      "UVADENIDO": "",
+      "IS_": "56",
+      "ATC_WHO": "H02AB07",
+      "RC": "56/246/21-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "10",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "10",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1190",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "PREDNISONE OLIKLA",
+      "MRP_CISLO": "DE/H/7021/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OE",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0284167",
+        "KOD_LATKY": "1190",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "5",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1190",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "PREDNISONUM",
+          "NAZEV_EN": "PREDNISONE",
+          "NAZEV": "PREDNISON",
+          "DOP": "S9"
+        }
+      },
+      {
+        "KOD_SUKL": "0284167",
+        "KOD_LATKY": "3755",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0284167",
+        "KOD_LATKY": "4989",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4989",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "PREGELATINISED MAIZE STARCH",
+          "NAZEV": "PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0284167",
+        "KOD_LATKY": "4174",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4174",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII STEARYLIS FUMARAS",
+          "NAZEV_EN": "SODIUM STEARYL FUMARATE",
+          "NAZEV": "NATRIUM-STEARYL-FUMARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0284167",
+      "PIL": "PI233625.pdf",
+      "DAT_ROZ_PIL": "19.05.2026",
+      "SPC": "SPC233626.pdf",
+      "DAT_ROZ_SPC": "19.05.2026",
+      "OBAL_TEXT": "OBAL216926.pdf",
+      "DAT_ROZ_OBAL": "10.12.2024",
+      "NR": "NR16058221.pdf",
+      "DAT_NPM_NR": "23.05.2024"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "H02AB07",
+        "NT": "N",
+        "NAZEV": "PREDNISON",
+        "NAZEV_EN": "PREDNISONE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

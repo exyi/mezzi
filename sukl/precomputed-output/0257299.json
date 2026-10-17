@@ -1,9 +1,17 @@
 {
+  "classes": [
+    "atc:H",
+    "atc:H02",
+    "atc:H02A",
+    "atc:H02AB",
+    "atc:H02AB07",
+    "substance:1190"
+  ],
   "side_effects": [
     {
       "ctcae": "Leukocytosis",
       "frequency": "not_known",
-      "label": "Mírné zvýšení počtu bílých krvinek (leukocytóza).",
+      "label": "Zvýšený počet bílých krvinek (leukocytóza).",
       "action": null,
       "action_condition": null
     },
@@ -15,7 +23,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "ctcae": "Eosinophilia",
       "frequency": "not_known",
       "label": "Snížený počet eozinofilů (eozinopenie).",
       "action": null,
@@ -29,60 +37,52 @@
       "action_condition": null
     },
     {
-      "ctcae": "Adrenal insufficiency",
+      "ctcae": "Cushingoid",
       "frequency": "not_known",
-      "label": "Útlum činnosti nadledvin při dlouhodobé léčbě; při příliš rychlém snížení dávky může dojít k akutní nedostatečnosti nadledvin. Může se projevit slabostí, únavou, ztrátou chuti k jídlu a úbytkem hmotnosti.",
+      "label": "Příznaky podobné Cushingově nemoci, například měsícovitý obličej a obezita v oblasti trupu, zejména při vysokých dávkách a dlouhodobé léčbě.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cushingoid",
+      "ctcae": "Adrenal insufficiency",
       "frequency": "not_known",
-      "label": "Příznaky podobné Cushingově nemoci, například měsícovitý obličej a ukládání tuku v oblasti trupu.",
+      "label": "Útlum nadledvin; při dlouhodobé léčbě se může projevit slabostí, únavou, nechutenstvím a úbytkem hmotnosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Glaucoma",
       "frequency": "not_known",
-      "label": "Zelený zákal (glaukom).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozmazané vidění nebo jiná porucha zraku"
-      }
+      "label": "Zelený zákal.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Cataract",
       "frequency": "not_known",
-      "label": "Šedý zákal (katarakta).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozmazané vidění nebo jiná porucha zraku"
-      }
+      "label": "Šedý zákal.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "not_known",
-      "label": "Rozmazané vidění.",
+      "label": "Rozmazané vidění nebo jiná porucha zraku; dlouhodobá léčba může snížit zrakovou ostrost.",
       "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Corneal ulcer",
-      "frequency": "not_known",
-      "label": "Zhoršení již existujících vředů na rohovce.",
-      "action": null,
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Gastric ulcer",
       "frequency": "not_known",
-      "label": "Peptický, včetně žaludečního, vřed.",
+      "label": "Žaludeční nebo peptický vřed.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Gastrointestinal hemorrhage",
       "frequency": "not_known",
       "label": "Krvácení do trávicího traktu.",
       "action": null,
@@ -105,37 +105,38 @@
     {
       "ctcae": "Allergic reaction",
       "frequency": "not_known",
-      "label": "Přecitlivělostní reakce, například vyrážka.",
+      "label": "Reakce z přecitlivělosti, například vyrážka.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anaphylaxis",
       "frequency": "not_known",
-      "label": "Závažná anafylaktická reakce.",
+      "label": "Závažná anafylaktická reakce, která může zahrnovat poruchu srdečního rytmu, zúžení průdušek, pokles nebo zvýšení krevního tlaku, oběhové selhání či infarkt.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Infections and infestations - Other, specify",
       "frequency": "not_known",
-      "label": "Infekce mohou být maskované, nově se projevit, zhoršit nebo znovu aktivovat; mohou být bakteriální, virové, plísňové, parazitární nebo oportunní.",
+      "label": "Maskování, vznik, zhoršení nebo návrat bakteriálních, virových, plísňových, parazitárních či oportunních infekcí; příznaky mohou být hůře rozpoznatelné.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví akutně vzniklé příznaky infekčního onemocnění, nebo pokud jste během léčby přišli do kontaktu s osobou s planými neštovicemi či spalničkami, a to i bez příznaků"
+        "patient_guide": "Při akutně vzniklých příznacích infekce nebo po kontaktu s osobou s planými neštovicemi či spalničkami.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Generalized edema",
+      "ctcae": "Edema",
       "frequency": "not_known",
-      "label": "Zadržování sodíku a tekutin s tvorbou otoků.",
+      "label": "Zadržování sodíku a tekutin s otoky.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypokalemia",
       "frequency": "not_known",
-      "label": "Zvýšené vylučování draslíku a jeho nedostatek v krvi.",
+      "label": "Zvýšené vylučování draslíku a jeho pokles v krvi; může vyvolat poruchy srdečního rytmu.",
       "action": null,
       "action_condition": null
     },
@@ -156,7 +157,7 @@
     {
       "ctcae": "Diabetes mellitus",
       "frequency": "not_known",
-      "label": "Cukrovka (diabetes mellitus).",
+      "label": "Cukrovka.",
       "action": null,
       "action_condition": null
     },
@@ -170,63 +171,52 @@
     {
       "ctcae": "Hypertriglyceridemia",
       "frequency": "not_known",
-      "label": "Zvýšená hladina triglyceridů v krvi.",
+      "label": "Zvýšená hladina tuků (triacylglycerolů) v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
+      "ctcae": "Anorexia",
       "frequency": "not_known",
       "label": "Zvýšená chuť k jídlu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "ctcae": "Myopathy",
       "frequency": "not_known",
-      "label": "Úbytek svalové hmoty (svalová atrofie).",
+      "label": "Svalové onemocnění, svalová atrofie nebo svalová únava.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Fatigue",
+      "ctcae": "Generalized muscle weakness",
       "frequency": "not_known",
-      "label": "Svalová únava.",
+      "label": "Svalová slabost; u pacientů s hypertyreózou a nízkou hladinou draslíku může jít o známku tyreotoxické periodické paralýzy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Zejména při hypertyreóze nebo pokud slabost doprovází bolest, křeče či ztuhlost svalů.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Tendonitis",
+      "frequency": "not_known",
+      "label": "Poruchy šlach, včetně zánětu šlach; riziko poškození a natržení šlachy se zvyšuje při současném užívání fluorochinolonů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "ctcae": "Tendon rupture",
       "frequency": "not_known",
-      "label": "Svalové onemocnění (myopatie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "not_known",
-      "label": "Zánět šlach.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-      "frequency": "not_known",
-      "label": "Natržení šlachy.",
+      "label": "Natržení nebo přetržení šlachy; riziko se zvyšuje při současném užívání fluorochinolonů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Osteoporosis",
       "frequency": "not_known",
-      "label": "Osteoporóza a úbytek vápníku v kostech.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Osteonecrosis",
-      "frequency": "not_known",
-      "label": "Aseptické odumření kostní tkáně.",
+      "label": "Úbytek vápníku v kostech a osteoporóza, zejména podle dávky a délky léčby.",
       "action": null,
       "action_condition": null
     },
@@ -238,16 +228,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Papilledema",
       "frequency": "not_known",
-      "label": "Zvýšení nitrolebního tlaku (pseudotumor cerebri), zejména u dětí.",
+      "label": "Zvýšený nitrolební tlak, zvláště u dětí.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Seizure",
       "frequency": "not_known",
-      "label": "Záchvaty křečí; epilepsie se může nově objevit nebo zhoršit.",
+      "label": "Vznik epilepsie nebo zvýšení počtu záchvatů u pacientů s epilepsií.",
       "action": null,
       "action_condition": null
     },
@@ -280,9 +270,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Psychiatric disorders - Other, specify",
+      "ctcae": "Cognitive disturbance",
       "frequency": "not_known",
-      "label": "Citová nestálost (afektivní labilita).",
+      "label": "Citová nestálost.",
       "action": null,
       "action_condition": null
     },
@@ -294,7 +284,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Psychiatric disorders - Other, specify",
+      "ctcae": "Agitation",
       "frequency": "not_known",
       "label": "Zvýšená aktivita.",
       "action": null,
@@ -324,14 +314,21 @@
     {
       "ctcae": "Suicidal ideation",
       "frequency": "not_known",
-      "label": "Sebevražedné myšlenky.",
+      "label": "Sebevražedné myšlenky nebo riziko sebevraždy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Irregular menstruation",
+      "ctcae": "Bradycardia",
       "frequency": "not_known",
-      "label": "Nepravidelná nebo vynechaná menstruace.",
+      "label": "Pomalá srdeční frekvence po vysokých dávkách.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Amenorrhea",
+      "frequency": "not_known",
+      "label": "Vynechání menstruace.",
       "action": null,
       "action_condition": null
     },
@@ -350,88 +347,77 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Acne",
       "frequency": "not_known",
       "label": "Steroidní akné.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Perioral dermatitis",
       "frequency": "not_known",
-      "label": "Zánět kůže v okolí úst (periorální dermatitida).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Fialové strie.",
+      "label": "Zánět kůže v okolí úst.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Skin atrophy",
       "frequency": "not_known",
-      "label": "Ztenčení a úbytek kůže (atrofie kůže).",
+      "label": "Ztenčení kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Telangiectasia",
       "frequency": "not_known",
-      "label": "Drobné krvácivé skvrny na kůži (petechie).",
+      "label": "Fialové strie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Petechiae",
+      "frequency": "not_known",
+      "label": "Drobné tečkovité krvácení do kůže (petechie).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Bruising",
       "frequency": "not_known",
-      "label": "Modřiny (ekchymózy).",
+      "label": "Modřiny nebo podlitiny.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypertension",
       "frequency": "not_known",
-      "label": "Vysoký krevní tlak.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vascular disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zvýšené riziko aterosklerózy a trombózy.",
+      "label": "Vysoký krevní tlak; zvýšené riziko kornatění tepen a trombózy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vasculitis",
       "frequency": "not_known",
-      "label": "Zánět cév; může se objevit také po ukončení dlouhodobé léčby.",
+      "label": "Zánět cév; může se objevit i po vysazení dlouhodobé léčby.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vascular disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Křehkost drobných cév (kapilár).",
+      "label": "Zvýšená křehkost drobných cév (kapilár).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Sklerodermická renální krize u pacientů se systémovou sklerózou; riziko bylo pozorováno při denní dávce 15 mg prednisolonu a více a může se projevit vysokým krevním tlakem a sníženým výdejem moči.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zpomalení srdeční frekvence při vysokých dávkách.",
-      "action": null,
-      "action_condition": null
+      "label": "Sklerodermická renální krize u pacientů se systémovou sklerózou; riziko je zvýšené při dávce alespoň 15 mg denně. Může se projevit vysokým tlakem a sníženým výdejem moči.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte systémovou sklerózu a objeví se zvýšený krevní tlak nebo snížené množství moči.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Myalgia",
@@ -457,7 +443,7 @@
     {
       "ctcae": "Anorexia",
       "frequency": "not_known",
-      "label": "Ztráta chuti k jídlu při příliš rychlém snížení dávky po dlouhodobé léčbě.",
+      "label": "Nechutenství při příliš rychlém snížení dávky po dlouhodobé léčbě.",
       "action": null,
       "action_condition": null
     },
@@ -497,189 +483,345 @@
       "action_condition": null
     },
     {
-      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "ctcae": "Adrenal insufficiency",
       "frequency": "not_known",
-      "label": "Tyreotoxická periodická paralýza u pacientů se zvýšenou činností štítné žlázy a nízkou hladinou draslíku; může se projevit svalovou slabostí, bolestí, křečemi nebo ztuhlostí.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte zvýšenou činnost štítné žlázy a při užívání prednisonu pocítíte svalovou slabost, bolest, křeče nebo ztuhlost"
-      }
+      "label": "Akutní nedostatečnost nadledvin při příliš rychlém snížení dávky po dlouhodobé léčbě; může být smrtelná.",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSAID), včetně indometacinu a salicylátů",
-      "effect": "Při souběžném užívání s prednisonem se zvyšuje riziko žaludečních a dalších gastrointestinálních vředů a krvácení.",
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky",
+      "effect": "Současné užívání prednisonu a nesteroidních protizánětlivých léků, například indometacinu nebo salicylátů, zvyšuje riziko žaludečních a střevních vředů a krvácení.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Zvýšené riziko žaludečních a dalších gastrointestinálních vředů.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": null,
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do trávicího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Perorální antidiabetika a inzulin",
-      "effect": "Prednison může snížit účinek těchto léků na snížení hladiny cukru v krvi; lékař může upravit léčbu diabetu.",
+      "class_id": "atc:A10",
+      "drug_class": "Léky k léčbě cukrovky",
+      "effect": "Prednison může snížit účinek perorálních léků na cukrovku a inzulinu; lékař může upravit léčbu cukrovky.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Induktory CYP3A4, například rifampicin, fenytoin, karbamazepin, barbituráty a primidon",
-      "effect": "Mohou urychlit metabolismus a snížit účinek prednisonu a dalších kortikoidů.",
+      "class_id": "group:cyp3a4_inducer",
+      "drug_class": "Induktory CYP3A4, například rifampicin, rifabutin, fenytoin, karbamazepin, barbituráty a primidon",
+      "effect": "Induktory CYP3A4 mohou urychlit odbourávání prednisonu a snížit účinek kortikosteroidů.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory CYP3A4, včetně ketokonazolu, itrakonazolu a přípravků obsahujících kobicistat",
-      "effect": "Mohou zvýšit riziko systémových nežádoucích účinků prednisonu. Kombinaci je třeba se vyhnout, pokud její přínos nepřevažuje zvýšené riziko; v takovém případě bude lékař sledovat systémové účinky kortikosteroidů.",
+      "class_id": "group:cyp3a4_inhibitor",
+      "drug_class": "Inhibitory CYP3A4, například ketokonazol, itrakonazol a přípravky obsahující kobicistat",
+      "effect": "Inhibitory CYP3A4 mohou zvýšit riziko systémových nežádoucích účinků kortikosteroidů. Kombinaci je třeba se vyhnout, pokud její přínos nepřevažuje riziko; při jejím použití lékař sleduje systémové reakce na kortikosteroidy.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "efedrin",
-      "effect": "Efedrin může urychlit metabolismus glukokortikoidů, a tím snížit účinnost prednisonu.",
+      "class_id": null,
+      "drug_class": "Efedrin",
+      "effect": "Efedrin může urychlit odbourávání glukokortikoidů, a tím snížit jejich účinek.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Deriváty kumarinu užívané jako perorální antikoagulancia, včetně warfarinu",
-      "effect": "Při současném užívání může být antikoagulační účinek snížený nebo zvýšený; lékař může upravit dávku antikoagulancia.",
+      "class_id": "atc:B01AA",
+      "drug_class": "Deriváty kumarinu užívané jako perorální antikoagulancia",
+      "effect": "Účinek perorálních antikoagulancií může být při užívání prednisonu snížený nebo zvýšený; lékař může upravit dávku antikoagulancia.",
       "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Estrogeny, například v hormonální antikoncepci",
-      "effect": "Estrogeny mohou prodloužit poločas glukokortikoidů a zvýšit jejich klinický účinek.",
+      "class_id": "atc:G03C",
+      "drug_class": "Estrogeny",
+      "effect": "Estrogeny, například v hormonální antikoncepci, mohou prodloužit poločas glukokortikoidů a zvýšit jejich klinický účinek.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Atropin a další anticholinergika",
-      "effect": "Při souběžném užívání se může zvýšit nitrooční tlak.",
+      "effect": "Současné užívání může zvýšit nitrooční tlak.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:C01A",
       "drug_class": "Srdeční glykosidy",
-      "effect": "Účinek srdečních glykosidů se může zvýšit v důsledku poklesu hladiny draslíku vyvolaného prednisonem.",
+      "effect": "Účinek srdečních glykosidů může být zvýšen v důsledku poklesu hladiny draslíku vyvolaného prednisonem.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Saluretika a laxativa",
-      "effect": "Současné užívání může zvýšit ztráty draslíku vyvolané prednisonem.",
+      "class_id": "atc:C03",
+      "drug_class": "Diuretika",
+      "effect": "Současné užívání diuretik může zvýšit vylučování draslíku.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "prazikvantel",
-      "effect": "Prednison může snížit koncentraci prazikvantelu v krvi.",
+      "class_id": "atc:A06",
+      "drug_class": "Projímadla",
+      "effect": "Současné užívání projímadel může zvýšit vylučování draslíku.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:P02BA",
+      "drug_class": "Prazikvantel",
+      "effect": "Glukokortikoidy mohou snížit koncentraci prazikvantelu v krvi.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:C09A",
       "drug_class": "Inhibitory ACE",
-      "effect": "Současné užívání s prednisonem může zvýšit riziko změn hematologických parametrů.",
+      "effect": "Současné užívání může zvýšit riziko změn krevních parametrů.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:P01B",
       "drug_class": "Chlorochin, hydroxychlorochin a meflochin",
-      "effect": "Při současném podávání s prednisonem se zvyšuje riziko svalového onemocnění a onemocnění srdečního svalu.",
+      "effect": "Současné užívání zvyšuje riziko svalového onemocnění a onemocnění srdečního svalu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko svalového onemocnění (myopatie).",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko onemocnění srdečního svalu (kardiomyopatie).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Imunosupresivní léky, včetně cyklosporinu",
-      "effect": "Kombinace s prednisonem zvyšuje náchylnost k infekcím a může zhoršit nebo zviditelnit latentní infekce. Cyklosporin může mít zvýšenou hladinu v krvi a zvýšit riziko mozkových záchvatů.",
+      "class_id": "atc:L04A",
+      "drug_class": "Imunosupresivní léčiva",
+      "effect": "Současné užívání může zvýšit citlivost k infekcím nebo zhoršit či projevit skryté infekce. Může se zvýšit hladina cyklosporinu v krvi a riziko mozkových záchvatů.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Infections and infestations - Other, specify",
-          "frequency": null,
-          "label": "Zvýšená náchylnost k infekcím nebo zhoršení či projevení latentních infekcí.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Seizure",
-          "frequency": null,
-          "label": "Při souběžném podávání cyklosporinu může být zvýšené riziko záchvatů křečí.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:M03A",
       "drug_class": "Nedepolarizující myorelaxancia",
-      "effect": "Prednison může zkrátit dobu svalové relaxace; následně může být nutná delší léčba myorelaxanciemi, která může dobu relaxace prodloužit.",
+      "effect": "Prednison může zkrátit dobu svalové relaxace; může být nutné prodloužit léčbu myorelaxancii, což může následně prodloužit svalovou relaxaci.",
       "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug": "somatropin",
+      "class_id": "atc:H01AC",
+      "drug_class": "Somatropin",
       "effect": "Při dlouhodobé léčbě prednisonem může být účinek somatropinu snížen.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug": "protirelin",
-      "effect": "Glukokortikoidy mohou snížit zvýšení hladiny TSH vyvolané protirelinem.",
+      "class_id": "atc:V04CJ",
+      "drug_class": "Protirelin",
+      "effect": "Glukokortikoidy mohou snížit zvýšení TSH vyvolané protirelinem.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "atc:J01MA",
       "drug_class": "Fluorochinolony",
-      "effect": "Při současném podávání s prednisonem se zvyšuje riziko onemocnění, zánětu a natržení šlach.",
+      "effect": "Současné užívání prednisonu a fluorochinolonů zvyšuje riziko poškození a natržení šlach.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko zánětu šlach.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko poškození nebo natržení šlachy.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:A02A",
       "drug_class": "Antacida, například hydroxid hořečnatý a hydroxid hlinitý",
-      "effect": "Antacida mohou snížit vstřebávání glukokortikoidů, a tím snížit jejich účinek. Přípravky se mají užívat s odstupem 2 hodin.",
+      "effect": "Antacida mohou snížit vstřebávání glukokortikoidů a jejich účinnost. Léky se mají užívat s odstupem 2 hodin.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Prednison se používá k podpůrné léčbě nedostatečnosti nadledvin a k léčbě zánětlivých, autoimunitních a dalších závažných onemocnění.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0257299",
+      "H": "",
+      "NAZEV": "PREDNISON AV MEDICAL",
+      "SILA": "5MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "20",
+      "CESTA": "POR",
+      "DOPLNEK": "5MG TBL NOB 20",
+      "OBAL": "BLI",
+      "DRZ": "AVC",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "",
+      "UVADENIDO": "",
+      "IS_": "56",
+      "ATC_WHO": "H02AB07",
+      "RC": "56/359/24-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "10",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "10",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1190",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "PREDNISON AV MEDICAL",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OE",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0257299",
+        "KOD_LATKY": "1190",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "5",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1190",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "PREDNISONUM",
+          "NAZEV_EN": "PREDNISONE",
+          "NAZEV": "PREDNISON",
+          "DOP": "S9"
+        }
+      },
+      {
+        "KOD_SUKL": "0257299",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0257299",
+        "KOD_LATKY": "1871",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0257299",
+        "KOD_LATKY": "1300",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0257299",
+        "KOD_LATKY": "2378",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0257299",
+        "KOD_LATKY": "14679",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0257299",
+      "PIL": "PI230166.pdf",
+      "DAT_ROZ_PIL": "29.01.2026",
+      "SPC": "SPC230167.pdf",
+      "DAT_ROZ_SPC": "29.01.2026",
+      "OBAL_TEXT": "OBAL215931.pdf",
+      "DAT_ROZ_OBAL": "14.11.2024",
+      "NR": "NR18771424.pdf",
+      "DAT_NPM_NR": "14.11.2024"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "H02AB07",
+        "NT": "N",
+        "NAZEV": "PREDNISON",
+        "NAZEV_EN": "PREDNISONE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

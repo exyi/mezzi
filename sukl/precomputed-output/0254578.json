@@ -1,9 +1,85 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J01",
+    "atc:J01E",
+    "atc:J01EE",
+    "atc:J01EE01",
+    "substance:1395",
+    "substance:1490"
+  ],
   "side_effects": [
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "rare",
+      "label": "Stevensův-Johnsonův syndrom a toxická epidermální nekrolýza (TEN); zarudlé terčovité skvrny, puchýře nebo olupování kůže a vředy na sliznicích, někdy s horečkou a příznaky podobnými chřipce.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Pustular drug eruption",
+      "frequency": "very_rare",
+      "label": "Akutní generalizovaná exantematózní pustulóza (AGEP): rozsáhlá červená šupinatá vyrážka s pupínky a puchýřky, doprovázená horečkou; obvykle se objeví na začátku léčby.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": null,
+      "frequency": "not_known",
+      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS): rozsáhlá vyrážka, vysoká horečka a zvětšené uzliny.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "very_rare",
+      "label": "Závažná akutní reakce z přecitlivělosti včetně anafylaktického šoku.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Enterocolitis",
+      "frequency": "very_rare",
+      "label": "Pseudomembranózní enterokolitida: těžký, neustávající průjem, někdy s krví nebo hlenem a křečovitými bolestmi břicha, během léčby nebo po ní.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": null,
+      "frequency": "not_known",
+      "label": "Oběhový šok; více příznaků, například horečka, velmi nízký tlak nebo zrychlený tep.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Více těchto příznaků se objeví současně.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Hyperkalemia",
+      "frequency": "very_common",
+      "label": "Zvýšená hladina draslíku v krvi; může způsobit bušení srdce.",
+      "action": null,
+      "action_condition": null
+    },
     {
       "ctcae": "Candidiasis",
       "frequency": "common",
-      "label": "Přemnožení kvasinek, například moučnivka v ústech nebo kandidóza pochvy.",
+      "label": "Přerůstání kvasinek (kandidóza), která může postihnout ústa nebo pochvu.",
       "action": null,
       "action_condition": null
     },
@@ -13,7 +89,8 @@
       "label": "Bolest hlavy.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte bolest hlavy."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
@@ -22,7 +99,8 @@
       "label": "Pocit na zvracení.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud je vám nevolno."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
@@ -45,11 +123,12 @@
       "label": "Průjem.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte trvalý průjem."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Gum infection",
+      "ctcae": "Gingival pain",
       "frequency": "common",
       "label": "Zánět dásní.",
       "action": null,
@@ -58,7 +137,7 @@
     {
       "ctcae": "Dysgeusia",
       "frequency": "common",
-      "label": "Změna nebo abnormální vnímání chuti.",
+      "label": "Abnormální chuť.",
       "action": null,
       "action_condition": null
     },
@@ -66,8 +145,11 @@
       "ctcae": "Pruritus",
       "frequency": "common",
       "label": "Svědění.",
-      "action": null,
-      "action_condition": null
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Vomiting",
@@ -75,271 +157,128 @@
       "label": "Zvracení.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud zvracíte."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Alergické kožní vyrážky, včetně kopřivkové, zarudlé, skvrnité nebo skvrnitě pupínkové vyrážky.",
+      "label": "Alergické kožní reakce: vyrážka (kopřivková, zarudlá, skvrnitá, skvrnitě pupínkovitá nebo podobná spalničkám), zarudlé okrsky kůže, fialové skvrny, přecitlivělost kůže na světlo a vyrážka po oslunění.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": null,
+      "ctcae": "Erythema multiforme",
       "frequency": "uncommon",
-      "label": "Erythema nodosum – bolestivé zarudlé uzlíky na kůži.",
+      "label": "Erythema nodosum: okrskové zarudnutí kůže.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Purpura",
       "frequency": "uncommon",
-      "label": "Purpura – fialové skvrny na kůži.",
+      "label": "Purpura: okrskové zfialovění kůže.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka."
+        "patient_guide": null,
+        "min_severity": 1
       }
-    },
-    {
-      "ctcae": "Photosensitivity",
-      "frequency": "uncommon",
-      "label": "Přecitlivělost kůže na sluneční nebo UV záření.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka."
-      }
-    },
-    {
-      "ctcae": "Photosensitivity",
-      "frequency": "uncommon",
-      "label": "Kožní vyrážka vyvolaná působením slunečního nebo UV záření.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka."
-      }
-    },
-    {
-      "ctcae": "Malaise",
-      "frequency": "uncommon",
-      "label": "Slabost.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Fatigue",
       "frequency": "uncommon",
-      "label": "Únava.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud jste unavený(á)."
-      }
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "rare",
-      "label": "Celková alergická reakce.",
+      "label": "Slabost a únava.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blurred vision",
+      "ctcae": "Vision decreased",
       "frequency": "rare",
       "label": "Přechodná krátkozrakost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Exfoliative dermatitis",
-      "frequency": "rare",
-      "label": "Exfoliativní dermatitida – rozsáhlé olupování kůže.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví rozsáhlé olupování kůže."
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "rare",
-      "label": "Stevensův–Johnsonův syndrom – terčovité nebo kruhové skvrny, často s puchýři, olupováním kůže nebo vředy na sliznicích; mohou se přidat horečka a příznaky podobné chřipce.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví terčovité nebo kruhové skvrny, puchýře, olupování kůže nebo vředy v ústech, nose, na genitálu či v okolí očí, případně horečka nebo příznaky podobné chřipce."
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "rare",
-      "label": "Toxická epidermální nekrolýza – závažné puchýře a olupování kůže, případně postižení sliznic; mohou se přidat horečka a příznaky podobné chřipce.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví puchýře, olupování kůže nebo vředy v ústech, nose, na genitálu či v okolí očí, případně horečka nebo příznaky podobné chřipce."
-      }
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "rare",
-      "label": "Erythema multiforme – kožní vyrážka s drobnými terčovitými skvrnami, které se mohou změnit v puchýře.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví terčovité skvrny, puchýře nebo vředy v ústech, nose, na genitálu či v okolí očí."
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Fixní lékový exantém – vyrážka, která se při opětovném užití léku vrací na stejné místo.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví kožní vyrážka."
-      }
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_rare",
-      "label": "Snížený počet krevních destiček.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "White blood cell decreased",
       "frequency": "very_rare",
-      "label": "Snížený počet bílých krvinek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Neutrophil count decreased",
-      "frequency": "very_rare",
-      "label": "Snížený počet neutrofilů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eosinophilia",
-      "frequency": "very_rare",
-      "label": "Zvýšený počet eozinofilů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Agranulocytóza – výrazný nedostatek určitého druhu bílých krvinek.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aplastic anemia",
-      "frequency": "very_rare",
-      "label": "Aplastická anémie – nedostatečná tvorba krvinek v kostní dřeni.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hemolytic anemia",
-      "frequency": "very_rare",
-      "label": "Akutní hemolytická anémie – chudokrevnost způsobená rozpadem červených krvinek.",
-      "action": null,
-      "action_condition": null
+      "label": "Výrazné snížení počtu bílých krvinek.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Příznaky chřipky, zánět krku nebo horečka.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Anemia",
       "frequency": "very_rare",
-      "label": "Akutní megaloblastická anémie.",
+      "label": "Chudokrevnost, včetně nedostatečné tvorby červených krvinek.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "ctcae": "Thrombocytopenia",
       "frequency": "very_rare",
-      "label": "Snížená srážlivost krve v důsledku nedostatku protrombinu.",
+      "label": "Snížení počtu krevních destiček a poruchy krevní srážlivosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Methemoglobinemia",
       "frequency": "very_rare",
-      "label": "Methemoglobinemie – porucha krevního barviva, která omezuje přenos kyslíku.",
+      "label": "Poruchy krevního barviva, včetně methemoglobinemie; u pacientů s nedostatkem G-6-P-dehydrogenázy může dojít k hemolýze.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hemolysis",
       "frequency": "very_rare",
-      "label": "Rozpad červených krvinek u pacientů s nedostatkem enzymu G-6-P-dehydrogenázy.",
+      "label": "Hemolýza u pacientů s nedostatkem G-6-P-dehydrogenázy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Anaphylaxis",
+      "ctcae": "Allergic reaction",
       "frequency": "very_rare",
-      "label": "Závažná akutní alergická reakce včetně anafylaktického šoku.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se u vás objeví závažná akutní alergická reakce nebo známky šoku."
-      }
-    },
-    {
-      "ctcae": "Serum sickness",
-      "frequency": "very_rare",
-      "label": "Sérová nemoc.",
+      "label": "Sérová nemoc a celkové alergické reakce.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vasculitis",
       "frequency": "very_rare",
-      "label": "Zánět tepen (periarteriitis nodosa).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Immune system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Lupusu podobný syndrom.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hyperkalemia",
-      "frequency": "very_common",
-      "label": "Zvýšená hladina draslíku v krvi, která může vyvolat bušení srdce.",
+      "label": "Zánět tepen a zánět kůže a cév.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypoglycemia",
       "frequency": "very_rare",
-      "label": "Nízká hladina cukru v krvi; může se objevit zejména v prvních dnech léčby, i u lidí bez cukrovky.",
+      "label": "Snížení hladiny cukru v krvi, zejména během prvních dnů léčby; může se objevit i bez cukrovky.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Acidosis",
+      "ctcae": "Metabolism and nutrition disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Metabolická acidóza – hromadění kyselých látek v krvi.",
+      "label": "Poruchy rovnováhy vnitřního prostředí.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hyponatremia",
+      "ctcae": "Apathy",
       "frequency": "very_rare",
-      "label": "Snížená hladina sodíku v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Lethargy",
-      "frequency": "very_rare",
-      "label": "Apatie – ztráta zájmu.",
+      "label": "Apatie.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte apatii nebo ztrátu zájmu."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
@@ -371,16 +310,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Psychosis",
-      "frequency": "not_known",
-      "label": "Akutní psychóza.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aseptic meningitis",
+      "ctcae": "Encephalitis",
       "frequency": "very_rare",
-      "label": "Aseptický zánět mozkových blan.",
+      "label": "Zánět mozku.",
       "action": null,
       "action_condition": null
     },
@@ -394,21 +326,14 @@
     {
       "ctcae": "Peripheral sensory neuropathy",
       "frequency": "very_rare",
-      "label": "Zánět periferních nervů.",
+      "label": "Zánět nervů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Ataxia",
       "frequency": "very_rare",
-      "label": "Porucha koordinace pohybů (ataxie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nervous system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Dysdiadochokineze – porucha schopnosti rychle střídat pohyby.",
+      "label": "Poruchy koordinace pohybů.",
       "action": null,
       "action_condition": null
     },
@@ -425,7 +350,8 @@
       "label": "Závrať.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte závrať."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
@@ -438,14 +364,14 @@
     {
       "ctcae": "Tinnitus",
       "frequency": "very_rare",
-      "label": "Ušní šelest (tinnitus).",
+      "label": "Ušní šelest.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vertigo",
       "frequency": "very_rare",
-      "label": "Závrať s pocitem točení okolí.",
+      "label": "Závrať s točením hlavy.",
       "action": null,
       "action_condition": null
     },
@@ -457,56 +383,21 @@
       "action_condition": null
     },
     {
-      "ctcae": "Vascular disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Oběhový šok, někdy provázený horečkou a nereagující na běžnou léčbu alergické reakce.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se po užití léku současně objeví horečka, velmi nízký krevní tlak nebo zrychlený tep."
-      }
-    },
-    {
       "ctcae": "Pneumonitis",
       "frequency": "very_rare",
-      "label": "Alergické plicní reakce, včetně plicních infiltrátů, intersticiálního nebo eozinofilního zápalu plic, kašle a dušnosti; u pacientů s AIDS je riziko těchto komplikací vyšší.",
+      "label": "Alergické plicní reakce, například zánět plic, plicní infiltráty, kašel, dušnost nebo dechová nedostatečnost; pacienti s AIDS jsou rizikovou skupinou. Kašel a dušnost mohou předcházet závažné respirační toxicitě nebo akutnímu syndromu dechové tísně.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se váš kašel nebo dušnost neočekávaně zhorší."
-      }
-    },
-    {
-      "ctcae": "Respiratory failure",
-      "frequency": "very_rare",
-      "label": "Dechová nedostatečnost jako součást alergické plicní reakce.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se váš kašel nebo dušnost neočekávaně zhorší."
-      }
-    },
-    {
-      "ctcae": "Adult respiratory distress syndrome",
-      "frequency": "very_rare",
-      "label": "Syndrom akutní respirační tísně (ARDS), který může předcházet kašel, horečka a dušnost spolu s plicními infiltráty a zhoršením funkce plic.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se váš kašel nebo dušnost neočekávaně zhorší."
+        "patient_guide": "Kašel nebo dušnost se neočekávaně zhorší.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Anorexia",
       "frequency": "very_rare",
-      "label": "Ztráta chuti k jídlu.",
+      "label": "Nechutenství.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Enterocolitis",
-      "frequency": "very_rare",
-      "label": "Pseudomembranózní enterokolitida – závažný zánět střevní sliznice; může se projevit opakovaným průjmem, někdy s krví, a horečkou.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte těžký a neustávající průjem, někdy s krví nebo hlenem, případně křečovité bolesti břicha."
-      }
     },
     {
       "ctcae": "Pancreatitis",
@@ -516,7 +407,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Glossopharyngeal nerve disorder",
       "frequency": "very_rare",
       "label": "Zánět jazyka.",
       "action": null,
@@ -525,7 +416,7 @@
     {
       "ctcae": "Mucositis oral",
       "frequency": "very_rare",
-      "label": "Zánět sliznice dutiny ústní.",
+      "label": "Zánět tkáně v ústech.",
       "action": null,
       "action_condition": null
     },
@@ -537,90 +428,71 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Hepatic failure",
       "frequency": "very_rare",
-      "label": "Žloutenka způsobená městnáním žluči.",
+      "label": "Okrskové nebo celkové poškození či odumření jaterní tkáně; může být smrtelné.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatic necrosis",
+      "ctcae": "Edema",
       "frequency": "very_rare",
-      "label": "Ohraničené nebo rozsáhlé odumírání jaterní tkáně; může být smrtelné.",
+      "label": "Otok.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Bruising",
       "frequency": "very_rare",
-      "label": "Angioneurotický otok.",
+      "label": "Drobné krvácivé tečky na kůži.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Purpura",
       "frequency": "very_rare",
-      "label": "Drobné červené tečky na kůži (petechie).",
+      "label": "Henochova-Schönleinova purpura: nachová kožní vyrážka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Vasculitis",
+      "ctcae": "Erythema multiforme",
       "frequency": "very_rare",
-      "label": "Henochova–Schönleinova purpura – zánět cév s nachovou vyrážkou.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pustular drug eruption",
-      "frequency": "very_rare",
-      "label": "Akutní generalizovaná exantematózní pustulóza (AGEP) – rozsáhlá červená, šupinatá vyrážka s pupínky a puchýřky, obvykle na začátku léčby, doprovázená horečkou.",
-      "action": "hospitalize_NOW",
+      "label": "Erythema multiforme: kožní vyrážka tvořící malé terče, které se mohou měnit v puchýře.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá červená šupinatá vyrážka s pupínky nebo puchýřky a horečkou."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS) – rozsáhlá vyrážka, vysoká horečka a zvětšené uzliny.",
-      "action": "hospitalize_NOW",
+      "ctcae": "Rash maculo-papular",
+      "frequency": "very_rare",
+      "label": "Fixní lékový exantém: vyrážka, která se při opětovném podání objeví na stejném místě.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá vyrážka, vysoká horečka a zvětšené uzliny."
+        "patient_guide": null,
+        "min_severity": 1
       }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Sweetův syndrom – vyvýšené, tmavě červené až nafialovělé boláky na končetinách, někdy také na obličeji a krku, s horečkou.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "very_rare",
-      "label": "Bolest kloubů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myalgia",
-      "frequency": "very_rare",
-      "label": "Bolest svalů.",
+      "label": "Bolesti kloubů a svalů.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rhabdomyolysis",
       "frequency": "very_rare",
-      "label": "Rozpad nebo poškození svalových buněk (rhabdomyolýza).",
+      "label": "Rozpad nebo poškození svalových buněk.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Renal and urinary disorders - Other, specify",
+      "ctcae": "Renal calculi",
       "frequency": "very_rare",
-      "label": "Krystalurie – tvorba krystalků v moči, zejména u podvyživených pacientů.",
+      "label": "Močové kameny.",
       "action": null,
       "action_condition": null
     },
@@ -639,383 +511,497 @@
       "action_condition": null
     },
     {
-      "ctcae": "Nephrotic syndrome",
+      "ctcae": "Urine output decreased",
       "frequency": "very_rare",
-      "label": "Toxický nefrotický syndrom s výrazně sníženým nebo zastaveným vylučováním moči.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal calculi",
-      "frequency": "very_rare",
-      "label": "Močové kameny.",
+      "label": "Poškození ledvin se snížením nebo vymizením tvorby moči.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urinary frequency",
       "frequency": "very_rare",
-      "label": "Zvýšená tvorba moči.",
+      "label": "Časté močení a zvýšená tvorba moči.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Acidosis",
       "frequency": "very_rare",
-      "label": "Renální tubulární acidóza – porucha rovnováhy kyselin a zásad způsobená ledvinami.",
+      "label": "Metabolická acidóza.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Malaise",
-      "frequency": "uncommon",
-      "label": "Slabost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "uncommon",
-      "label": "Únava.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud jste unavený(á)."
-      }
     },
     {
       "ctcae": "Fever",
       "frequency": "very_rare",
       "label": "Horečka.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte horečku."
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "very_rare",
-      "label": "Zvýšené hladiny jaterních aminotransferáz.",
+      "label": "Zvýšení jaterních enzymů (ALT a AST) v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blood bilirubin increased",
       "frequency": "very_rare",
-      "label": "Zvýšená hladina bilirubinu v krvi.",
+      "label": "Zvýšení hladiny bilirubinu v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Creatinine increased",
       "frequency": "very_rare",
-      "label": "Zvýšená hladina kreatininu v krvi.",
+      "label": "Zvýšení hladiny kreatininu v krvi.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Investigations - Other, specify",
       "frequency": "very_rare",
-      "label": "Zvýšená hladina močoviny v krvi.",
+      "label": "Zvýšení hladiny močoviny v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": null,
+      "frequency": "not_known",
+      "label": "Akutní psychická porucha; může přechodně ovlivnit schopnost řídit, obsluhovat stroje nebo pracovat ve výškách.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Acute febrile neutrophilic dermatosis",
+      "frequency": "not_known",
+      "label": "Sweetův syndrom: vyvýšené boláky švestkové barvy na končetinách, někdy i na obličeji a krku, s horečkou.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Secondary hemophagocytic lymphohistiocytosis",
       "frequency": "very_rare",
-      "label": "Hemofagocytární lymfohistiocytóza (HLH) – život ohrožující nadměrná aktivace imunitního systému; mohou se současně objevit horečka, zvětšené uzliny, slabost, závratě, dušnost, modřiny nebo vyrážka.",
+      "label": "Hemofagocytární lymfohistiocytóza (HLH): nadměrná imunitní reakce; současně nebo s malým odstupem se mohou objevit horečka, zvětšené uzliny, slabost, závrať, dušnost, modřiny nebo vyrážka.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se současně nebo krátce po sobě objeví více příznaků, jako horečka, zvětšené uzliny, slabost, závratě, dušnost, modřiny nebo vyrážka."
-      }
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "not_known",
-      "label": "Horečka, zánět v krku nebo příznaky podobné chřipce mohou signalizovat změnu krevního obrazu.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte příznaky podobné chřipce, zánět v krku nebo horečku."
+        "patient_guide": "Více uvedených příznaků se objeví současně nebo s malým odstupem.",
+        "min_severity": 2
       }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Léky zvyšující hladinu draslíku, zejména inhibitory ACE, blokátory receptorů angiotenzinu a kalium šetřící diuretika (včetně spironolaktonu)",
-      "effect": "Současné užívání s kotrimoxazolem může způsobit klinicky významné zvýšení draslíku v krvi. Závažná hyperkalemie se může projevit svalovými křečemi, nepravidelným srdečním rytmem, průjmem, nevolností, závratěmi nebo bolestí hlavy; lékař může kontrolovat hladinu draslíku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Závažné zvýšení draslíku v krvi (hyperkalemie).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Lokální anestetika – deriváty kyseliny paraaminobenzoové, například benzokain, prokain, butakain a tetrakain",
-      "effect": "Tyto lokální anestetické přípravky mohou snižovat účinek kotrimoxazolu; současnému použití je vhodné se vyhnout.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Paraldehyd",
-      "effect": "Současné podávání paraldehydu může snižovat účinek kotrimoxazolu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Probenecid a sulfinpyrazon",
-      "effect": "Tyto přípravky mohou zvyšovat účinek kotrimoxazolu; konkrétní mechanismus ani související nežádoucí reakce nejsou uvedeny.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Indometacin, fenylbutazon a salicyláty",
-      "effect": "Tyto přípravky mohou zvyšovat účinek kotrimoxazolu; konkrétní mechanismus ani související nežádoucí reakce nejsou uvedeny.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "Kyselina aminosalicylová",
-      "effect": "Současné podávání zvyšuje toxicitu kotrimoxazolu; konkrétní nežádoucí reakce nejsou uvedeny.",
+      "class_id": "substance:1395",
+      "drug": "SULFAMETHOXAZOL",
+      "effect": "Kotrimoxazol může zvýšit účinek warfarinu a dalších kumarinových perorálních antikoagulancií, včetně hypoprotrombinemického účinku; může být nutné sledování a úprava léčby lékařem.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Barbituráty a primidon",
-      "effect": "Současné podávání zvyšuje toxicitu kotrimoxazolu; konkrétní nežádoucí reakce nejsou uvedeny.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
-      "drug": "Methenamin",
-      "effect": "Methenamin, včetně methenaminmandelátu, podporuje okyselení moči a při současném užívání zvyšuje riziko krystalurie.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Renal and urinary disorders - Other, specify",
-          "frequency": null,
-          "label": "Krystalurie – tvorba krystalků v moči.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Pyrimethamin",
-      "effect": "Při současném podávání pyrimethaminu v dávce vyšší než 25 mg týdně může dojít ke změnám krevního obrazu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Změny krevního obrazu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Methotrexát",
-      "effect": "Současné podávání methotrexátu nebo jiných antagonistů kyseliny listové může zvýšit výskyt nedostatku folátu; kotrimoxazol může také zesílit působení methotrexátu. Lékař může sledovat krevní obraz a další známky toxicity.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko nedostatku kyseliny listové a následných změn krevního obrazu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Karbimazol, pyrazolony a thiouracil (včetně propylthiouracilu)",
-      "effect": "Tyto přípravky mohou s kotrimoxazolem zvýšit toxicitu pro krvetvorbu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Toxicita postihující krvetvorbu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Kyselina folinová",
-      "effect": "Kyselina folinová může narušit antimikrobiální účinnost sulfamethoxazolu/trimethoprimu; tento účinek byl pozorován při prevenci i léčbě pneumonie způsobené Pneumocystis jirovecii.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Zidovudin",
-      "effect": "V některých případech může současná léčba zidovudinem zvýšit riziko nežádoucích účinků kotrimoxazolu na krvetvorbu. Pokud je kombinace nezbytná, lékař zváží sledování krevního obrazu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko nežádoucích účinků na krvetvorbu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Azathioprin",
-      "effect": "Při současném podávání byly hlášeny závažné změny krevního obrazu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Závažné změny krevního obrazu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Prokainamid",
-      "effect": "Protože se prokainamid i kotrimoxazol aktivně vylučují ledvinami, může dojít ke kompetitivnímu vylučování a ke zvýšení hladiny jednoho nebo obou přípravků v krvi.",
+      "class_id": "substance:1395",
+      "drug": "SULFAMETHOXAZOL",
+      "effect": "Kotrimoxazol může zvýšit účinek a hladinu fenytoinu a methotrexátu; při methotrexátu může současné užívání léků působících jako antagonisté kyseliny listové zvýšit její nedostatek.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Amantadin",
-      "effect": "Protože se amantadin i kotrimoxazol aktivně vylučují ledvinami, může dojít ke kompetitivnímu vylučování a ke zvýšení hladiny jednoho nebo obou přípravků v krvi.",
+      "class_id": "substance:1395",
+      "drug": "SULFAMETHOXAZOL",
+      "effect": "Kotrimoxazol může zvýšit hladinu digoxinu u starších pacientů.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Cyklosporin",
-      "effect": "Současné užívání s kotrimoxazolem může způsobit přechodné zhoršení funkce ledvin.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zhoršení funkce ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": "substance:1395",
+      "drug": "SULFAMETHOXAZOL",
+      "effect": "Kotrimoxazol může zvýšit hladinu lamivudinu v krvi tím, že trimethoprim zpomaluje jeho vylučování ledvinami; lamivudin neovlivňuje hladiny kotrimoxazolu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
     },
     {
-      "drug": "Merkaptopurin",
-      "effect": "Kotrimoxazol může ovlivnit vstřebávání merkaptopurinu, a tím snížit jeho účinek proti leukemii.",
+      "class_id": "substance:1395",
+      "drug": "SULFAMETHOXAZOL",
+      "effect": "Kotrimoxazol může zvýšit koncentraci rifampicinu v séru a jeho celkovou expozici (AUC) tím, že sníží jeho clearance.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1395",
+      "drug": "SULFAMETHOXAZOL",
+      "effect": "Kotrimoxazol slabě inhibuje CYP2C8, zpomaluje metabolismus repaglinidu a zvyšuje jeho koncentraci; může dojít k hypoglykemii a lékař má pacienty pečlivě sledovat.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1395",
+      "drug": "SULFAMETHOXAZOL",
+      "effect": "Při společném užívání s prokainamidem nebo amantadinem může dojít k soutěži o aktivní vylučování ledvinami a ke zvýšení hladiny jednoho nebo obou léčiv v krvi.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1395",
+      "drug": "SULFAMETHOXAZOL",
+      "effect": "Při souběžném užívání cyklosporinu se může přechodně a vratně zhoršit funkce ledvin.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1395",
+      "drug": "SULFAMETHOXAZOL",
+      "effect": "Kotrimoxazol může ovlivnit vstřebávání merkaptopurinu, a tím snížit jeho protileukemický účinek.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Perorální antikoagulancia, zejména kumarinová",
-      "effect": "Kotrimoxazol může zvýšit účinek perorálních antikoagulancií a jejich hypoprotrombinemický účinek; lékař může podle potřeby sledovat srážlivost krve.",
+      "class_id": null,
+      "drug_class": "Léky snižující hladinu kyseliny listové, včetně methotrexátu",
+      "effect": "Při současném podávání se může zvýšit výskyt nedostatku kyseliny listové.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": null,
+      "drug_class": "Kyselina folinová",
+      "effect": "Současné podávání může snížit antimikrobiální účinek sulfamethoxazolu/trimethoprimu; bylo to pozorováno při prevenci i léčbě pneumonie způsobené Pneumocystis jirovecii.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Barbituráty podávané krátkodobě nitrožilně",
+      "effect": "Kotrimoxazol může zesílit účinek krátkodobě působících barbiturátů podávaných nitrožilně, například thiopentalu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
       "drug_class": "Perorální antidiabetika ze skupiny derivátů sulfonylmočoviny",
-      "effect": "Kotrimoxazol může zesílit účinek těchto léků a zvýšit riziko nízké hladiny cukru v krvi.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Nízká hladina cukru v krvi (hypoglykemie).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Fenytoin",
-      "effect": "Kotrimoxazol může zesílit působení fenytoinu; konkrétní nežádoucí reakce nejsou uvedeny.",
+      "effect": "Kotrimoxazol může zesílit jejich účinek a zvýšit riziko hypoglykemie.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Krátkodobě působící nitrožilní barbituráty, například thiopental",
-      "effect": "Kotrimoxazol může zesílit účinek těchto barbiturátů.",
+      "class_id": null,
+      "drug_class": "Perorální antikoagulancia",
+      "effect": "Kotrimoxazol může zesílit jejich účinek; souvisí to se zvýšením hypoprotrombinemického účinku kumarinů.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Digoxin",
-      "effect": "U starších pacientů může kotrimoxazol zvýšit hladinu digoxinu v krvi.",
-      "effect_type": "increased_exposure",
+      "class_id": null,
+      "drug_class": "Lokální anestetika odvozená od kyseliny paraaminobenzoové",
+      "effect": "Je vhodné se vyhnout souběžnému použití, protože mohou snížit účinek kotrimoxazolu.",
+      "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "atc:C03DA01",
+      "drug": "Spironolakton",
+      "effect": "Současné užívání může vést k závažné, klinicky významné hyperkalemii.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C09AA",
+      "drug": "Inhibitory ACE",
+      "effect": "Při současném užívání je třeba opatrnosti: společně s kotrimoxazolem mohou způsobit klinicky významnou hyperkalemii.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C09C",
+      "drug": "Blokátory receptorů angiotenzinu",
+      "effect": "Při současném užívání je třeba opatrnosti: společně s kotrimoxazolem mohou způsobit klinicky významnou hyperkalemii.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Léky zvyšující hladinu draslíku, včetně draslík šetřících diuretik",
+      "effect": "Současné užívání s kotrimoxazolem může vést ke klinicky významné hyperkalemii; mezi příklady patří kalium šetřící diuretika, jako je spironolakton.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
       "drug_class": "Diuretika, zejména thiazidová",
-      "effect": "U velmi starých pacientů zvyšuje současné užívání kotrimoxazolu a diuretik riziko trombocytopenie; starší pacienti užívající diuretika, zvláště thiazidy, jsou také náchylnější k trombocytopenické purpuře.",
+      "effect": "U velmi starých pacientů zvyšuje současné užívání s kotrimoxazolem riziko trombocytopenie; starší pacienti léčení diuretiky, zvláště thiazidy, jsou náchylnější k trombocytopenické purpuře.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Thrombocytopenia",
-          "frequency": null,
-          "label": "Snížený počet krevních destiček, případně trombocytopenická purpura.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Rifampicin",
-      "effect": "Současné užívání může snížit vylučování rifampicinu a zvýšit jeho hladinu v séru i celkovou expozici (AUC).",
-      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Lamivudin",
-      "effect": "Trimethoprim inhibuje vylučování lamivudinu ledvinami a zvyšuje jeho hladinu v krvi; lamivudin neovlivňuje farmakokinetiku trimethoprimu ani sulfamethoxazolu.",
-      "effect_type": "increased_exposure",
+      "class_id": null,
+      "drug_class": "Aminosalicylová kyselina, barbituráty a primidon",
+      "effect": "Při současném podávání se může zvýšit toxicita kotrimoxazolu.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Repaglinid",
-      "effect": "Kotrimoxazol slabě inhibuje CYP2C8, zpomaluje metabolismus repaglinidu a zvyšuje jeho koncentraci v séru, což může vést k hypoglykemii. Pacienty užívající tuto kombinaci má lékař pečlivě sledovat.",
-      "effect_type": "increased_exposure",
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Nízká hladina cukru v krvi (hypoglykemie).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": null,
+      "drug_class": "Kar bamazol, pyrazolony a thiouracil",
+      "effect": "Mohou zvýšit toxicitu kotrimoxazolu pro krvetvorbu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
     },
     {
-      "drug_class": "Sulfonylmočoviny, sulfonamidová diuretika a další strukturálně příbuzné strumigenní látky",
-      "effect": "Mezi sulfonamidovými deriváty, některými diuretiky (například acetazolamidem a thiazidy) a perorálními antidiabetiky existuje možnost zkřížené přecitlivělosti. U pacientů léčených sulfonamidy se vzácně může objevit zvýšená tvorba moči nebo hypoglykemie.",
+      "class_id": null,
+      "drug_class": "Methenamin a léčiva podporující okyselení moči",
+      "effect": "Současné podávání zvyšuje riziko krystalurie.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Allergic reaction",
-          "frequency": null,
-          "label": "Zkřížená alergická reakce z přecitlivělosti.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Nízká hladina cukru v krvi.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Urinary frequency",
-          "frequency": null,
-          "label": "Zvýšená tvorba moči.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Pyrimethaminová antiparazitika v dávce vyšší než 25 mg týdně",
+      "effect": "Při současném podávání může dojít ke změnám krevního obrazu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Probenecid, sulfinpyrazon, indometacin, fenylbutazon a salicyláty",
+      "effect": "Tyto léky zvyšují účinek kotrimoxazolu.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Lék obsahující sulfamethoxazol a trimethoprim k léčbě některých bakteriálních infekcí.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0254578",
+      "H": "",
+      "NAZEV": "COTRIMOXAZOL AL FORTE",
+      "SILA": "800MG/160MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "20",
+      "CESTA": "POR",
+      "DOPLNEK": "800MG/160MG TBL NOB 20",
+      "OBAL": "BLI",
+      "DRZ": "STD",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "42",
+      "ATC_WHO": "J01EE01",
+      "RC": "42/286/93-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "UD",
+      "DDDP_WHO": "10",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1395,1490",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "48",
+      "EXP_T": "M",
+      "NAZEV_REG": "COTRIMOXAZOL AL FORTE",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0254578",
+        "KOD_LATKY": "1395",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "800",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1395",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "SULFAMETHOXAZOLUM",
+          "NAZEV_EN": "SULFAMETHOXAZOLE",
+          "NAZEV": "SULFAMETHOXAZOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0254578",
+        "KOD_LATKY": "1490",
+        "SQ": "2",
+        "S": "L",
+        "AMNT": "160",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1490",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "TRIMETHOPRIMUM",
+          "NAZEV_EN": "TRIMETHOPRIM",
+          "NAZEV": "TRIMETHOPRIM"
+        }
+      },
+      {
+        "KOD_SUKL": "0254578",
+        "KOD_LATKY": "3059",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3059",
+          "ZDROJ": "MEM",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU"
+        }
+      },
+      {
+        "KOD_SUKL": "0254578",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0254578",
+        "KOD_LATKY": "1168",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0254578",
+        "KOD_LATKY": "1326",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1326",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "DOCUSATUM NATRICUM",
+          "NAZEV_EN": "DOCUSATE SODIUM",
+          "NAZEV": "SODNÁ SŮL DOKUSÁTU"
+        }
+      },
+      {
+        "KOD_SUKL": "0254578",
+        "KOD_LATKY": "4987",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4987",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CROSPOVIDONUM",
+          "NAZEV_EN": "CROSPOVIDONE",
+          "NAZEV": "KROSPOVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0254578",
+        "KOD_LATKY": "1300",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0254578",
+        "KOD_LATKY": "2378",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0254578",
+      "PIL": "PI225884.pdf",
+      "DAT_ROZ_PIL": "04.09.2025",
+      "SPC": "SPC225885.pdf",
+      "DAT_ROZ_SPC": "04.09.2025",
+      "OBAL_TEXT": "OBAL225883.pdf",
+      "DAT_ROZ_OBAL": "04.09.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J01EE01",
+        "NT": "N",
+        "NAZEV": "SULFAMETHOXAZOL A TRIMETHOPRIM",
+        "NAZEV_EN": "SULFAMETHOXAZOLE AND TRIMETHOPRIM"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

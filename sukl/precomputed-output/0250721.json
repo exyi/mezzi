@@ -1,16 +1,27 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A12",
+    "atc:A12A",
+    "atc:A12AX",
+    "substance:15455",
+    "substance:234"
+  ],
   "side_effects": [
     {
       "ctcae": "Allergic reaction",
       "frequency": "not_known",
-      "label": "Alergická reakce, například otok obličeje, jazyka nebo rtů (angioedém) či hrdla s náhle ztíženým dýcháním. Při výskytu přestaňte přípravek užívat a ihned kontaktujte lékaře.",
+      "label": "Alergická reakce; může se projevit otokem obličeje, jazyka nebo rtů (angioedémem) či hrdla s náhle ztíženým dýcháním.",
       "action": "discontinue_treatment",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": "Při otoku hrdla s náhle ztíženým dýcháním",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Hypercalcemia",
       "frequency": "uncommon",
-      "label": "Vysoká hladina vápníku v krvi (hyperkalcemie).",
+      "label": "Vysoká hladina vápníku v krvi.",
       "action": null,
       "action_condition": null
     },
@@ -50,9 +61,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Bloating",
+      "ctcae": "Abdominal distension",
       "frequency": "rare",
-      "label": "Nadýmání (roztažení stěny břišní).",
+      "label": "Nadýmání.",
       "action": null,
       "action_condition": null
     },
@@ -71,7 +82,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "rare",
       "label": "Kožní vyrážka.",
       "action": null,
@@ -101,228 +112,570 @@
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "rare",
-      "label": "Vysoká hladina vápníku v moči (hyperkalciurie).",
+      "label": "Vysoká hladina vápníku v moči.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Metabolism and nutrition disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Milk-alkali syndrom (obvykle pozorovaný při předávkování), spojený s vysokou hladinou vápníku v krvi, alkalózou a poruchou funkce ledvin.",
+      "label": "Milk-alkali syndrom při nadměrném příjmu vápníku; většinou byl pozorován pouze při předávkování.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Digitalisové srdeční glykosidy",
-      "effect": "Vysoká hladina vápníku při léčbě vápníkem a vitaminem D může zvýšit toxicitu srdečních glykosidů a způsobit změny srdečního rytmu. Při současném užívání je nutný důkladný lékařský dohled; lékař bude kontrolovat EKG a hladinu vápníku v krvi.",
+      "class_id": "atc:C01A",
+      "drug_class": "Srdeční glykosidy",
+      "effect": "Při současném užívání může vysoká hladina vápníku zvýšit toxicitu srdečních glykosidů a vyvolat změny srdečního tepu. Je nutný lékařský dohled včetně EKG a sledování vápníku v krvi.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Změny srdečního rytmu (srdeční arytmie).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C03A",
       "drug_class": "Thiazidová diuretika",
-      "effect": "Thiazidy snižují vylučování vápníku močí, a proto mohou při současném užívání zvýšit jeho hladinu v krvi. Lékař bude pravidelně kontrolovat hladinu vápníku v krvi.",
+      "effect": "Thiazidy snižují vylučování vápníku močí, a mohou tak zvýšit jeho hladinu v krvi. Při současném užívání je třeba pravidelně sledovat hladinu vápníku; lékař může dávku snížit nebo léčbu ukončit.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypercalcemia",
-          "frequency": null,
-          "label": "Zvýšená hladina vápníku v krvi (hyperkalcemie).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:J01A",
       "drug_class": "Tetracyklinová antibiotika",
-      "effect": "Uhličitan vápenatý může snížit vstřebávání perorálně užívaných tetracyklinových antibiotik, a tím i jejich účinek. Užívejte je alespoň 2 hodiny před nebo 6 hodin po vápníku.",
-      "effect_type": "antagonism",
+      "effect": "Uhličitan vápenatý může snížit vstřebávání perorálních tetracyklinů a jejich účinek. Užívejte je nejméně 2 hodiny před nebo 6 hodin po vápníku; při cystické fibróze může být před užitím vápníku nutný delší odstup.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:J01M",
       "drug_class": "Chinolonová antibiotika",
-      "effect": "Uhličitan vápenatý může snížit vstřebávání chinolonových antibiotik, jako jsou ciprofloxacin a levofloxacin, a tím i jejich účinek. Užívejte je alespoň 2 hodiny před nebo 6 hodin po vápníku; u pacientů s cystickou fibrózou může být při užívání chinolonu před vápníkem potřeba delší odstup.",
-      "effect_type": "antagonism",
+      "effect": "Uhličitan vápenatý může snížit vstřebávání perorálních chinolonů a jejich účinek. Užívejte je nejméně 2 hodiny před nebo 6 hodin po vápníku; při cystické fibróze může být před užitím vápníku nutný delší odstup.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:M05B",
       "drug_class": "Bisfosfonáty",
-      "effect": "Vápník může ovlivnit vstřebávání bisfosfonátů. Bisfosfonáty se nemají užívat alespoň 1 hodinu před ani 6 hodin po vápníku.",
+      "effect": "Přípravky s vápníkem mohou ovlivnit vstřebávání bisfosfonátů. Bisfosfonát užijte nejméně 6 hodin po a 1 hodinu před přípravkem s vápníkem.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Fluorid sodný",
-      "effect": "Při současném užívání může být sníženo vstřebávání fluoridu sodného z trávicího traktu. Užívejte fluorid sodný alespoň 3 hodiny před přípravkem Caltrate D3.",
+      "class_id": "atc:A01AA01",
+      "drug_class": "Fluorid sodný",
+      "effect": "Současné užívání může snížit vstřebávání fluoridu sodného. Užijte jej alespoň 3 hodiny před přípravkem Caltrate D3.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:B03A",
       "drug_class": "Přípravky obsahující železo",
-      "effect": "Vápník může snížit vstřebávání železa. Přípravky se železem užívejte alespoň 3 hodiny před přípravkem Caltrate D3.",
+      "effect": "Vápník může snížit vstřebávání železa. Přípravky se železem užívejte alespoň 2 hodiny před nebo po přípravku Caltrate D3; při současném užívání fluoridu sodného platí odstup alespoň 3 hodiny před Caltrate D3.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:A12CB",
       "drug_class": "Přípravky obsahující zinek",
       "effect": "Vápník může snížit vstřebávání zinku. Přípravky se zinkem užívejte alespoň 2 hodiny před nebo po přípravku Caltrate D3.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Stroncium-ranelát",
+      "class_id": "atc:M05BX03",
+      "drug_class": "Stroncium-ranelát",
       "effect": "Vápník může snížit vstřebávání stroncium-ranelátu. Užívejte jej alespoň 2 hodiny před nebo po přípravku Caltrate D3.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Rifampicin",
-      "effect": "Rifampicin může prostřednictvím metabolické aktivace snížit účinek vitaminu D obsaženého v přípravku Caltrate D3.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Fenytoin",
-      "effect": "Fenytoin může prostřednictvím metabolické aktivace snížit účinek vitaminu D obsaženého v přípravku Caltrate D3.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Barbituráty",
-      "effect": "Barbituráty mohou prostřednictvím metabolické aktivace snížit účinek vitaminu D obsaženého v přípravku Caltrate D3.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Systémově podávané kortikosteroidy",
-      "effect": "Systémové kortikosteroidy snižují vstřebávání vápníku a mohou také snižovat účinek vitaminu D. Při současném užívání může být nutné zvýšit dávku přípravku Caltrate D3; lékař může dávku upravit a bude kontrolovat hladiny vápníku v krvi a moči.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Levothyroxin",
-      "effect": "Vápník může snížit vstřebávání levothyroxinu a oslabit jeho účinek. Mezi užitím levothyroxinu a přípravku Caltrate D3 dodržujte odstup alespoň 4 hodiny.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Cefpodoxim",
-      "effect": "Při současném užívání s přípravkem Caltrate D3 se může snížit vstřebávání cefpodoximu, a tím i jeho účinek. Mezi užitím těchto přípravků dodržujte odstup alespoň 3 hodiny.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Cefuroxim",
-      "effect": "Při současném užívání s přípravkem Caltrate D3 se může snížit vstřebávání cefuroximu, a tím i jeho účinek. Mezi užitím těchto přípravků dodržujte odstup alespoň 3 hodiny.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Ketokonazol",
-      "effect": "Při současném užívání s přípravkem Caltrate D3 se může snížit vstřebávání ketokonazolu, a tím i jeho účinek. Mezi užitím těchto přípravků dodržujte odstup alespoň 3 hodiny.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Přípravky obsahující estramustin",
-      "effect": "Při současném užívání s přípravkem Caltrate D3 se může snížit jejich vstřebávání, a tím i účinek. Mezi užitím těchto přípravků dodržujte odstup alespoň 3 hodiny.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "Verapamil",
-      "effect": "Vápník může snížit účinek verapamilu. Mezi užitím verapamilu a přípravku Caltrate D3 dodržujte odstup alespoň 3 hodiny.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Ostatní blokátory kalciových kanálů",
-      "effect": "Vápník může pravděpodobně snížit jejich účinek. Mezi užitím těchto přípravků a přípravku Caltrate D3 dodržujte odstup alespoň 3 hodiny.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Kyselina ursodeoxycholová a kyselina chenodeoxycholová",
-      "effect": "Vápenné soli v trávicím traktu mohou tyto léčivé kyseliny srážet ve formě vápenatého mýdla a snižovat jejich vstřebávání. Mezi jejich užitím a přípravkem Caltrate D3 dodržujte odstup alespoň 3 hodiny.",
+      "class_id": "atc:H03AA",
+      "drug_class": "Hormony štítné žlázy",
+      "effect": "Vápník může snížit vstřebávání a účinek levothyroxinu. Mezi jeho užitím a přípravkem Caltrate D3 dodržujte odstup alespoň 4 hodin.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
+      "class_id": "atc:H02A",
+      "drug_class": "Systémové kortikosteroidy",
+      "effect": "Systémové kortikosteroidy snižují vstřebávání vápníku a mohou snížit účinek vitaminu D. Při souběžném užívání může lékař upravit dávku Caltrate D3; případné další doplňky vápníku a vitaminu D vyžadují lékařský dohled a časté kontroly hladin vápníku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J04AB02",
+      "drug_class": "Rifampicin",
+      "effect": "Současné užívání může metabolickou aktivací snížit účinek vitaminu D.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N03AB02",
+      "drug_class": "Fenytoin",
+      "effect": "Současné užívání může snížit účinek vitaminu D.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N03AA",
+      "drug_class": "Barbituráty",
+      "effect": "Současné užívání může metabolickou aktivací snížit účinek vitaminu D.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A08AB01",
+      "drug_class": "Orlistat",
+      "effect": "Orlistat může snížit vstřebávání vitaminu D. Caltrate D3 se doporučuje užít alespoň 1 hodinu před nebo 4–6 hodin po něm.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C10AC",
+      "drug_class": "Iontoměničové pryskyřice",
+      "effect": "Iontoměničové pryskyřice mohou snížit vstřebávání vitaminu D. Caltrate D3 se doporučuje užít alespoň 1 hodinu před nebo 4–6 hodin po nich.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A06AA01",
+      "drug_class": "Parafínový olej",
+      "effect": "Parafínový olej může snížit vstřebávání vitaminu D. Caltrate D3 se doporučuje užít alespoň 1 hodinu před nebo 4–6 hodin po něm.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:C08DA",
+      "drug_class": "Blokátory kalciových kanálů",
+      "effect": "Vápník může snížit účinek verapamilu a pravděpodobně i dalších blokátorů kalciových kanálů. Mezi jejich užitím a Caltrate D3 dodržujte odstup alespoň 3 hodin.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01D",
+      "drug_class": "Cefalosporinová antibiotika",
+      "effect": "Při současném užívání s Caltrate D3 může být sníženo vstřebávání a účinek cefpodoximu a cefuroximu. Dodržujte mezi jejich užitím a Caltrate D3 odstup alespoň 3 hodin.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J02AB02",
+      "drug_class": "Ketokonazol",
+      "effect": "Při současném užívání s Caltrate D3 může být sníženo vstřebávání a účinek ketokonazolu. Dodržujte odstup alespoň 3 hodin.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:L01XX11",
+      "drug_class": "Estramustin",
+      "effect": "Při současném užívání s Caltrate D3 může být sníženo vstřebávání a účinek přípravků obsahujících estramustin. Dodržujte odstup alespoň 3 hodin.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:G03C",
+      "drug_class": "Estrogeny",
+      "effect": "Současné užívání estrogenů, například estradiolu, se solemi vápníku může zvýšit vstřebávání vápníku.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A11CA",
+      "drug_class": "Přípravky vitaminu A",
+      "effect": "Současné užívání přípravků vitaminu A se solemi vápníku může zvýšit vstřebávání vápníku.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A02A",
       "drug_class": "Antacida",
-      "effect": "Antacida mohou snížit biologickou dostupnost uhličitanu vápenatého; alkalizace moči může prodloužit jeho vylučování ledvinami. Antacida obsahující vápník mohou zvýšit vstřebávání vápníku a přípravky s hliníkem mohou zvýšit vstřebávání hliníku. Před užitím antacid obsahujících vápník se poraďte s lékařem nebo lékárníkem; při užívání antacid zohledněte také schopnost uhličitanu vápenatého vázat kyseliny.",
+      "effect": "Antacida mohou snížit biologickou dostupnost uhličitanu vápenatého a alkalizace moči může prodloužit jeho vylučování ledvinami. Antacida s vápníkem mohou zvýšit vstřebávání vápníku; antacida s hliníkem mohou zvýšit vstřebávání hliníku. Před užitím antacid s vápníkem se poraďte s lékařem.",
       "effect_type": "changed_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Přípravky obsahující fosfáty",
-      "effect": "Vápenaté soli mohou tvorbou špatně rozpustných solí snížit vstřebávání fosfátů.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "Aktinomycin",
-      "effect": "Aktinomycin může snížit přeměnu metabolitů vitaminu D, a tím i účinek vitaminu D v přípravku Caltrate D3.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Imidazoly",
-      "effect": "Imidazoly mohou snížit přeměnu metabolitů vitaminu D, a tím i účinek vitaminu D v přípravku Caltrate D3.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Přípravky obsahující estrogeny, například estradiol",
-      "effect": "Současné užívání estrogenů s vápenatými solemi může zvýšit vstřebávání vápníku.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Přípravky obsahující vitamin A",
-      "effect": "Současné užívání přípravků s vitaminem A s vápenatými solemi může zvýšit vstřebávání vápníku.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Iontoměničové pryskyřice, laxativa obsahující parafínový olej a orlistat",
-      "effect": "Tyto přípravky mohou snížit vstřebávání vitaminu D z trávicího traktu. Caltrate D3 se doporučuje užívat alespoň 1 hodinu před nebo 4–6 hodin po jejich užití.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Přípravky obsahující vápník nebo vitamin D",
-      "effect": "Další dávky vápníku nebo vitaminu D mohou při současném užívání významně zvýšit hladinu vápníku v krvi a způsobit škodlivé nežádoucí účinky. Současné užívání má probíhat pouze pod přísným lékařským dohledem; lékař bude často kontrolovat hladinu vápníku v krvi a jeho vylučování močí.",
+      "class_id": "atc:A12A",
+      "drug_class": "Další přípravky obsahující vápník",
+      "effect": "Další dávky vápníku mohou významně zvýšit hladinu vápníku v krvi a způsobit škodlivé nežádoucí účinky. Užívání s Caltrate D3 vyžaduje přísný lékařský dohled.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypercalcemia",
-          "frequency": null,
-          "label": "Významné zvýšení hladiny vápníku v krvi (hyperkalcemie).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Přípravky obsahující hliník",
-      "effect": "Kyselina citronová v přípravku Caltrate D3 může v přítomnosti citrátů zvýšit vstřebávání hliníku. Caltrate D3 se nesmí používat u pacientů s těžkou poruchou funkce ledvin, zvláště pokud užívají také přípravky s hliníkem.",
-      "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug_class": "Potraviny s vysokým obsahem kyseliny šťavelové nebo fytové",
-      "effect": "Kyselina šťavelová, například ve špenátu a rebarboře, a kyselina fytová, například v celozrnných potravinách, mohou snížit vstřebávání vápníku. Přípravky obsahující vápník neužívejte 2 hodiny před ani po konzumaci takového jídla.",
-      "effect_type": "decreased_exposure",
+      "class_id": "atc:A11CC",
+      "drug_class": "Další přípravky obsahující vitamin D",
+      "effect": "Další dávky vitaminu D mohou spolu s vápníkem významně zvýšit hladinu vápníku v krvi a způsobit škodlivé nežádoucí účinky. Užívání s Caltrate D3 vyžaduje přísný lékařský dohled.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A12AX",
+      "drug_class": "Uhličitany a jiné zásadité látky ve vysokých dávkách vápníku",
+      "effect": "Vysoké dávky vápníku užívané současně se zásaditými látkami, například uhličitany, mohou vést k milk-alkali syndromu s vysokou hladinou vápníku v krvi, alkalózou, selháním ledvin a zvápenatěním měkkých tkání. Zvažuje se i příjem z potravy a dalších přípravků.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Caltrate D3 doplňuje vápník a vitamin D3 při jejich nedostatku a jako podpora při léčbě osteoporózy.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0250721",
+      "H": "",
+      "NAZEV": "CALTRATE D3",
+      "SILA": "500MG/1000IU",
+      "FORMA": "TBL MND",
+      "BALENI": "90",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG/1000IU TBL MND 90",
+      "OBAL": "STR",
+      "DRZ": "HAD",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "39",
+      "ATC_WHO": "A12AX",
+      "RC": "39/537/16-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0",
+      "DDDUN_WHO": "",
+      "DDDP_WHO": "0",
+      "ZDROJ_WHO": "NO26",
+      "LL": "234,15455",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "CALTRATE D3",
+      "MRP_CISLO": "SK/H/0368/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "L",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "234",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "1250",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "234",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CALCII CARBONAS",
+          "NAZEV_EN": "CALCIUM CARBONATE",
+          "NAZEV": "UHLIČITAN VÁPENATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "231",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "231",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CALCIUM",
+          "NAZEV_EN": "CALCIUM",
+          "NAZEV": "VÁPNÍK"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "15455",
+        "SQ": "4",
+        "S": "L",
+        "AMNT": "10",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "15455",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "COLECALCIFEROLI PULVIS",
+          "NAZEV_EN": "CHOLECALCIFEROL CONCENTRATE (POWDER FORM)",
+          "NAZEV": "PRÁŠKOVÝ CHOLEKALCIFEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "0",
+        "SQ": "5",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "402",
+        "SQ": "6",
+        "S": "O",
+        "AMNT": "1000",
+        "UN": "IU",
+        "substance": {
+          "KOD_LATKY": "402",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "COLECALCIFEROLUM",
+          "NAZEV_EN": "COLECALCIFEROL",
+          "NAZEV": "CHOLEKALCIFEROL"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "11988",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "11988",
+          "ZDROJ": "C17",
+          "NAZEV_INN": "ISOMALTUM",
+          "NAZEV_EN": "ISOMALT",
+          "NAZEV": "ISOMALT"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "1525",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1525",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "XYLITOLUM",
+          "NAZEV_EN": "XYLITOL",
+          "NAZEV": "XYLITOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "1352",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1352",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SORBITOLUM",
+          "NAZEV_EN": "SORBITOL",
+          "NAZEV": "SORBITOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "9837",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9837",
+          "ZDROJ": "C21M",
+          "NAZEV_INN": "ACIDUM CITRICUM",
+          "NAZEV_EN": "CITRIC ACID",
+          "NAZEV": "KYSELINA CITRONOVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "1320",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1320",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM",
+          "NAZEV_EN": "CARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "2378",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "19657",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "19657",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AROMA AURANTII CPB",
+          "NAZEV_EN": "FLAVOUR ORANGE CPB",
+          "NAZEV": "POMERANČOVÉ AROMA CPB"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "19658",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "19658",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AROMA AURANTII CVT",
+          "NAZEV_EN": "FLAVOUR ORANGE CVT",
+          "NAZEV": "POMERANČOVÉ AROMA CVT"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "13317",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "13317",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "SILICA COLLOIDALIS HYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL HYDRATED",
+          "NAZEV": "HYDRÁT KOLOIDNÍHO OXIDU KŘEMIČITÉHO"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "7372",
+        "SQ": "16",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "7372",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ASPARTAMUM",
+          "NAZEV_EN": "ASPARTAME",
+          "NAZEV": "ASPARTAM"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "3804",
+        "SQ": "17",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3804",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "ACESULFAMUM KALICUM",
+          "NAZEV_EN": "ACESULFAME POTASSIUM",
+          "NAZEV": "DRASELNÁ SŮL ACESULFAMU"
+        }
+      },
+      {
+        "KOD_SUKL": "0250721",
+        "KOD_LATKY": "10281",
+        "SQ": "18",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10281",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "NATRII DIHYDROGENOCITRAS",
+          "NAZEV_EN": "SODIUM DIHYDROGEN CITRATE",
+          "NAZEV": "NATRIUM-DIHYDROGEN-CITRÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0250721",
+      "PIL": "PI207738.pdf",
+      "DAT_ROZ_PIL": "22.02.2024",
+      "SPC": "SPC207739.pdf",
+      "DAT_ROZ_SPC": "22.02.2024",
+      "OBAL_TEXT": "OBAL207791.pdf",
+      "DAT_ROZ_OBAL": "22.02.2024",
+      "NR": "NR5459316.pdf",
+      "DAT_NPM_NR": "25.04.2018"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A12AX",
+        "NT": "N",
+        "NAZEV": "VÁPNÍK, KOMBINACE S VITAMINEM D A/NEBO JINÝMI LÉČIVY",
+        "NAZEV_EN": "CALCIUM, COMBINATIONS WITH VITAMIN D AND/OR OTHER DRUGS"
+      },
+      "formy": {
+        "FORMA": "TBL MND",
+        "NAZEV": "Žvýkací tableta",
+        "NAZEV_EN": "Chewable tablet",
+        "NAZEV_LAT": "Tabuletta manducabilis",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10228000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "STR",
+        "NAZEV": "Strip",
+        "NAZEV_EN": "Strip",
+        "KOD_EDQM": "30065000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

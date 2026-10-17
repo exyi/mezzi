@@ -1,9 +1,17 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N07",
+    "atc:N07C",
+    "atc:N07CA",
+    "atc:N07CA01",
+    "substance:3444"
+  ],
   "side_effects": [
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Nevolnost (nauzea).",
+      "label": "Nevolnost.",
       "action": null,
       "action_condition": null
     },
@@ -24,89 +32,291 @@
     {
       "ctcae": "Vomiting",
       "frequency": "not_known",
-      "label": "Mírné zažívací obtíže, například zvracení.",
+      "label": "Mírné žaludeční obtíže, například zvracení; obvykle ustoupí při užívání s jídlem nebo po snížení dávky.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Gastrointestinal pain",
       "frequency": "not_known",
-      "label": "Mírné zažívací obtíže, například bolest trávicího ústrojí.",
+      "label": "Mírné zažívací obtíže, například bolest v trávicím traktu; obvykle ustoupí při užívání s jídlem nebo po snížení dávky.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal distension",
       "frequency": "not_known",
-      "label": "Mírné zažívací obtíže, například napětí či roztažení břicha.",
+      "label": "Mírné zažívací obtíže, například napětí či roztažení břicha; obvykle ustoupí při užívání s jídlem nebo po snížení dávky.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flatulence",
       "frequency": "not_known",
-      "label": "Mírné zažívací obtíže, například nadýmání.",
+      "label": "Mírné zažívací obtíže, například nadýmání; obvykle ustoupí při užívání s jídlem nebo po snížení dávky.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Anaphylaxis",
+      "ctcae": "Allergic reaction",
       "frequency": "not_known",
-      "label": "Alergická reakce včetně anafylaxe; mohou se objevit kožní vyrážka nebo svědění, otok obličeje, rtů, jazyka či hrdla, pokles krevního tlaku, ztráta vědomí nebo obtížné dýchání.",
-      "action": "hospitalize_NOW",
+      "label": "Alergická reakce: červená nebo hrudkovitá vyrážka, svědivá či zanícená kůže, otok obličeje, rtů, jazyka nebo hrdla, pokles tlaku, ztráta vědomí nebo obtížné dýchání. Přestaňte Betaserc užívat.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka nebo svědění, otok obličeje, rtů, jazyka či hrdla, pokles krevního tlaku, ztráta vědomí nebo obtížné dýchání"
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Angioneurotický edém (otok při přecitlivělosti).",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok obličeje, rtů, jazyka či hrdla nebo jiné příznaky alergické reakce"
-      }
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "not_known",
-      "label": "Kopřivka.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kopřivka nebo jiné příznaky alergické reakce"
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Kožní vyrážka při přecitlivělosti.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka nebo jiné příznaky alergické reakce"
-      }
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "not_known",
-      "label": "Svědění kůže při přecitlivělosti.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví svědění nebo jiné příznaky alergické reakce"
+        "patient_guide": null,
+        "min_severity": 1
       }
     }
   ],
   "combinations": [
     {
+      "class_id": "atc:R06A",
       "drug_class": "Antihistaminika",
-      "effect": "Antihistaminika mohou teoreticky snižovat účinek Betasercu a Betaserc může také snižovat účinek antihistaminik.",
+      "effect": "Antihistaminika mohou teoreticky snižovat účinek Betasercu a Betaserc může snižovat účinek antihistaminik.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory monoaminooxidázy (IMAO), včetně selektivních inhibitorů MAO-B",
-      "effect": "IMAO mohou inhibovat metabolismus betahistinu a zvýšit jeho expozici. Při současném užívání, včetně selektivních inhibitorů MAO-B, se doporučuje opatrnost.",
+      "class_id": null,
+      "drug_class": "Inhibitory monoaminooxidázy (MAO), včetně selektivních inhibitorů MAO-B",
+      "effect": "Léky inhibující MAO mohou zpomalit metabolismus betahistinu a zvýšit jeho expozici. Tento účinek vychází z údajů in vitro; při současném užívání se doporučuje opatrnost.",
       "effect_type": "increased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Betaserc se používá k léčbě Ménièrovy nemoci a závratí způsobených poruchou rovnovážného ústrojí.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0268832",
+      "H": "",
+      "NAZEV": "BETASERC",
+      "SILA": "24MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "24MG TBL NOB 100",
+      "OBAL": "BLI",
+      "DRZ": "VTH",
+      "ZEMDRZ": "IRL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "83",
+      "ATC_WHO": "N07CA01",
+      "RC": "83/368/03-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "24",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "100",
+      "ZDROJ_WHO": "NO26",
+      "LL": "3444",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "BETASERC",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0268832",
+        "KOD_LATKY": "3444",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "24",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3444",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "BETAHISTINI DIHYDROCHLORIDUM",
+          "NAZEV_EN": "BETAHISTINE DIHYDROCHLORIDE",
+          "NAZEV": "BETAHISTIN-DIHYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0268832",
+        "KOD_LATKY": "20432",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "20432",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM 101",
+          "NAZEV_EN": "CELLULOSE MICROCRYSTALLINE 101",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA 101"
+        }
+      },
+      {
+        "KOD_SUKL": "0268832",
+        "KOD_LATKY": "20703",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "20703",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM 102",
+          "NAZEV_EN": "CELLULOSE MICROCRYSTALLINE 102",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA 102"
+        }
+      },
+      {
+        "KOD_SUKL": "0268832",
+        "KOD_LATKY": "875",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "875",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MANNITOLUM",
+          "NAZEV_EN": "MANNITOL",
+          "NAZEV": "MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0268832",
+        "KOD_LATKY": "366",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "366",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "ACIDUM CITRICUM MONOHYDRICUM",
+          "NAZEV_EN": "CITRIC ACID MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT KYSELINY CITRONOVÉ"
+        }
+      },
+      {
+        "KOD_SUKL": "0268832",
+        "KOD_LATKY": "1300",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0268832",
+        "KOD_LATKY": "1871",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0268832",
+        "KOD_LATKY": "436",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "436",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "CYSTEINI HYDROCHLORIDUM MONOHYDRICUM",
+          "NAZEV_EN": "CYSTEINE HYDROCHLORIDE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT CYSTEIN-HYDROCHLORIDU"
+        }
+      },
+      {
+        "KOD_SUKL": "0268832",
+        "KOD_LATKY": "2587",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2587",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "PROPYLIS GALLAS",
+          "NAZEV_EN": "PROPYL GALLATE",
+          "NAZEV": "PROPYL-GALLÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0268832",
+      "PIL": "PI232562.pdf",
+      "DAT_ROZ_PIL": "14.04.2026",
+      "SPC": "SPC232563.pdf",
+      "DAT_ROZ_SPC": "14.04.2026",
+      "OBAL_TEXT": "OBAL225743.pdf",
+      "DAT_ROZ_OBAL": "02.09.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N07CA01",
+        "NT": "N",
+        "NAZEV": "BETAHISTIN",
+        "NAZEV_EN": "BETAHISTINE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

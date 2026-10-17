@@ -1,85 +1,79 @@
 {
+  "classes": [
+    "atc:L",
+    "atc:L01",
+    "atc:L01X",
+    "atc:L01XX",
+    "atc:L01XX05",
+    "substance:1991"
+  ],
   "side_effects": [
     {
-      "ctcae": "White blood cell decreased",
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "very_common",
-      "label": "Snížení počtu bílých krvinek.",
+      "label": "Útlum kostní dřeně, včetně poklesu bílých a červených krvinek a krevních destiček; může se projevit silnou infekcí, únavou, bledostí, nevysvětlitelnými modřinami nebo krvácením.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou infekci, výraznou únavu nebo bledost, nevysvětlitelné podlitiny nebo krvácení"
+        "patient_guide": null,
+        "min_severity": 2
       }
-    },
-    {
-      "ctcae": "Anemia",
-      "frequency": "very_common",
-      "label": "Chudokrevnost (snížení počtu červených krvinek).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte silnou infekci, výraznou únavu nebo bledost, nevysvětlitelné podlitiny nebo krvácení"
-      }
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "very_common",
-      "label": "Snížení počtu krevních destiček.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte silnou infekci, výraznou únavu nebo bledost, nevysvětlitelné podlitiny nebo krvácení"
-      }
-    },
-    {
-      "ctcae": "CD4 lymphocytes decreased",
-      "frequency": "very_common",
-      "label": "Snížení počtu CD4 lymfocytů.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Hemolytic anemia",
       "frequency": "not_known",
       "label": "Hemolytická anemie, při které se červené krvinky ničí rychleji, než se tvoří.",
-      "action": null,
-      "action_condition": null
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud vám lékař potvrdil hemolytickou anemii.",
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Anorexia",
       "frequency": "very_common",
-      "label": "Nechutenství (anorexie).",
+      "label": "Anorexie, nechutenství nebo ztráta chuti k jídlu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Mucositis oral",
       "frequency": "very_common",
-      "label": "Zánět ústní sliznice (stomatitida).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Mucositis oral",
-      "frequency": "very_common",
-      "label": "Zánět sliznic (mukozitida), zejména v dříve ozařované oblasti.",
+      "label": "Zánět ústní sliznice.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pancreatitis",
       "frequency": "very_common",
-      "label": "Zánět slinivky břišní; u pacientů s HIV byl hlášen při současné léčbě antiretrovirotiky.",
+      "label": "Zánět slinivky břišní; fatální i nefatální případy byly pozorovány u HIV-infikovaných pacientů léčených hydroxykarbamidem s antiretrovirotiky, zejména s didanosinem a stavudinem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "very_common",
-      "label": "Pocit na zvracení.",
+      "label": "Pocit na zvracení; při kombinaci s ozařováním mohou být zažívací nežádoucí účinky výraznější.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "very_common",
-      "label": "Zvracení.",
+      "label": "Zvracení; při kombinaci s ozařováním mohou být zažívací nežádoucí účinky výraznější.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "frequency": "very_common",
+      "label": "Žaludeční potíže; při kombinaci s ozařováním mohou být zažívací nežádoucí účinky výraznější.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dyspepsia",
+      "frequency": "very_common",
+      "label": "Porucha trávení.",
       "action": null,
       "action_condition": null
     },
@@ -98,130 +92,169 @@
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "very_common",
-      "label": "Žaludeční potíže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspepsia",
-      "frequency": "very_common",
-      "label": "Porucha trávení (dyspepsie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "very_common",
-      "label": "Skvrnitá vyrážka s drobnými puchýřky (makulopapulózní vyrážka).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Rash maculo-papular",
-      "frequency": "very_common",
-      "label": "Papulózní vyrážka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Flushing",
-      "frequency": "very_common",
-      "label": "Zčervenání obličeje a končetin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin ulceration",
-      "frequency": "very_common",
-      "label": "Vředy na kůži.",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
       "ctcae": "Vasculitis",
       "frequency": "very_common",
-      "label": "Zánět kožních cév (kožní vaskulitida).",
+      "label": "Zánět kožních cév; kožní cévní vředy byly nejčastěji hlášeny u pacientů s myeloproliferativním onemocněním, kteří byli v minulosti nebo současně léčeni interferonem.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vředy na kůži"
+        "patient_guide": "Pokud se objeví vředy na kůži; při kožních cévních vředech se léčba přerušuje.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Dermatomyositis",
       "frequency": "very_common",
       "label": "Kožní změny podobné dermatomyozitidě.",
       "action": null,
       "action_condition": null
     },
     {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "very_common",
+      "label": "Makulopapulózní vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Papulovesicular rash",
+      "frequency": "very_common",
+      "label": "Skvrnitá vyrážka s drobnými puchýřky.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erythema",
+      "frequency": "very_common",
+      "label": "Zčervenání kůže obličeje, rukou a nohou; zahrnuje erytém obličeje a periferní erytém.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Skin hyperpigmentation",
       "frequency": "very_common",
-      "label": "Zvýšené ukládání tmavého barviva v kůži.",
+      "label": "Zvýšené ukládání tmavého kožního barviva.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Skin atrophy",
       "frequency": "very_common",
-      "label": "Ztenčení (atrofie) kůže.",
+      "label": "Ztenčení kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Nail changes",
-      "frequency": "very_common",
-      "label": "Změny a oslabení nehtů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nail discoloration",
-      "frequency": "not_known",
-      "label": "Zbarvení nehtů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Exfoliative dermatitis",
+      "ctcae": "Skin exfoliation",
       "frequency": "very_common",
       "label": "Olupování kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Alopecia",
-      "frequency": "very_common",
-      "label": "Vypadávání vlasů, které se může objevit po několika letech každodenní léčby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "very_common",
-      "label": "Fialové papulky nebo uzlíky v kůži.",
+      "label": "Fialové uzlíky nebo papulky v kůži.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Odumírání tkáně v důsledku zánětu kožních cév s opakovaným výskytem vředů (gangréna).",
+      "ctcae": "Nail changes",
+      "frequency": "very_common",
+      "label": "Oslabení nebo jiné choroby nehtů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify",
+      "ctcae": "Alopecia",
+      "frequency": "very_common",
+      "label": "Vypadávání vlasů; po mnoha letech každodenní léčby nebo při dlouhodobé denní udržovací léčbě. Vzácně bylo hlášeno také při léčbě hydroxykarbamidem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Skin ulceration",
+      "frequency": "very_common",
+      "label": "Vředy na kůži; u pacientů s myeloproliferativním onemocněním mohou jít o cévní kožní vředy, při kterých se léčba hydroxykarbamidem přerušuje.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví vředy na kůži.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "very_common",
+      "label": "Horečka; při kombinaci s ozařováním mohou být nežádoucí účinky výraznější.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Chills",
+      "frequency": "very_common",
+      "label": "Zimnice.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Malaise",
+      "frequency": "very_common",
+      "label": "Malátnost.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Fatigue",
+      "frequency": "very_common",
+      "label": "Tělesná slabost nebo únava.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hyperuricemia",
+      "frequency": "very_common",
+      "label": "Zvýšení kyseliny močové v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Creatinine increased",
+      "frequency": "very_common",
+      "label": "Zvýšení kreatininu v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood urea nitrogen increased",
+      "frequency": "very_common",
+      "label": "Zvýšení močoviny v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dysuria",
+      "frequency": "very_common",
+      "label": "Obtíže nebo bolest při močení.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Azoospermia",
+      "frequency": "very_common",
+      "label": "Nepřítomnost spermií v ejakulátu; u mužů může být někdy vratná.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Oligospermia",
+      "frequency": "very_common",
+      "label": "Snížené množství spermií v ejakulátu; u mužů může být někdy vratné.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Skin cancer",
       "frequency": "common",
-      "label": "Nádorové onemocnění kůže; při dlouhodobé léčbě byl popsán také vznik sekundární leukemie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Leukemia secondary to oncology chemotherapy",
-      "frequency": null,
-      "label": "Sekundární leukemie popsaná při dlouhodobé léčbě; není známo, zda souvisí s hydroxykarbamidem, nebo se základním onemocněním.",
+      "label": "Nádorové onemocnění kůže; popsáno při dlouhodobé léčbě hydroxykarbamidem.",
       "action": null,
       "action_condition": null
     },
@@ -254,16 +287,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Peripheral neuropathy",
       "frequency": "common",
-      "label": "Postižení periferních nervů (periferní neuropatie).",
+      "label": "Postižení periferních nervů; u HIV-infikovaných pacientů léčených hydroxykarbamidem s antiretrovirotiky byly popsány i závažné případy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Somnolence",
       "frequency": "common",
-      "label": "Ospalost.",
+      "label": "Ospalost; může ovlivnit pozornost při řízení a obsluze strojů.",
       "action": null,
       "action_condition": null
     },
@@ -278,87 +311,20 @@
       "ctcae": "Pulmonary edema",
       "frequency": "common",
       "label": "Otok plic.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dýchací potíže, například dušnost, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi"
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Pneumonia",
       "frequency": "common",
-      "label": "Zápal plic.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dýchací potíže, například dušnost, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi"
-      }
+      "label": "Zánět plic.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Pulmonary fibrosis",
+      "ctcae": "Hepatotoxicity",
       "frequency": "common",
-      "label": "Plicní fibróza.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dýchací potíže, například dušnost, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi"
-      }
-    },
-    {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "common",
-      "label": "Plicní infiltrace.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dýchací potíže, například dušnost, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi"
-      }
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "common",
-      "label": "Dušnost, někdy zejména při námaze.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dýchací potíže, například dušnost, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi"
-      }
-    },
-    {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Intersticiální plicní procesy.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dýchací potíže, například dušnost, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi"
-      }
-    },
-    {
-      "ctcae": "Pneumonitis",
-      "frequency": "not_known",
-      "label": "Zánět plicní tkáně (pneumonitida).",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dýchací potíže, například dušnost, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi"
-      }
-    },
-    {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Zánět plicních sklípků (alveolitida), včetně alergické alveolitidy.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dýchací potíže, například dušnost, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi"
-      }
-    },
-    {
-      "ctcae": "Cough",
-      "frequency": "not_known",
-      "label": "Kašel.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte dýchací potíže nebo přetrvávající suchý kašel"
-      }
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "common",
-      "label": "Poškození jater (hepatotoxicita). U pacientů s HIV bylo hlášeno při současné léčbě antiretrovirotiky.",
+      "label": "Poškození jater; u HIV-infikovaných pacientů léčených hydroxykarbamidem s antiretrovirotiky byly popsány fatální i nefatální případy.",
       "action": null,
       "action_condition": null
     },
@@ -370,9 +336,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Cholestasis",
       "frequency": "common",
-      "label": "Městnání žluči (cholestáza).",
+      "label": "Městnání žluči.",
       "action": null,
       "action_condition": null
     },
@@ -384,86 +350,28 @@
       "action_condition": null
     },
     {
-      "ctcae": "Creatinine increased",
-      "frequency": "very_common",
-      "label": "Zvýšení kreatininu v krvi.",
+      "ctcae": "Gangrene",
+      "frequency": "rare",
+      "label": "Místní odumírání tkáně při zánětu kožních cév s opakovaným výskytem vředů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "very_common",
-      "label": "Zvýšení močoviny v krvi.",
+      "ctcae": "Tumor lysis syndrome",
+      "frequency": "rare",
+      "label": "Syndrom nádorového rozpadu.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hyperuricemia",
-      "frequency": "very_common",
-      "label": "Zvýšení kyseliny močové v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dysuria",
-      "frequency": "very_common",
-      "label": "Obtíže při močení (dysurie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Azoospermia",
-      "frequency": "very_common",
-      "label": "Nepřítomnost spermií v ejakulátu (azoospermie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Oligospermia",
-      "frequency": "very_common",
-      "label": "Snížené množství spermií v ejakulátu (oligospermie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
-      "frequency": "very_common",
-      "label": "Horečka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fatigue",
-      "frequency": "very_common",
-      "label": "Tělesná slabost (astenie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Chills",
-      "frequency": "very_common",
-      "label": "Zimnice.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Malaise",
-      "frequency": "very_common",
-      "label": "Malátnost.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Fever",
+      "ctcae": "Nail discoloration",
       "frequency": "not_known",
-      "label": "Poléková horečka, obvykle vyšší než 39 °C; může se objevit přibližně 6 týdnů po zahájení léčby, někdy až po 3 měsících, a může být provázena potížemi trávicího traktu, plic, svalů a kloubů, jater a žlučových cest, kůže nebo srdce a cév. V některých případech byla nutná hospitalizace.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky polékové horečky"
-      }
+      "label": "Zbarvení nehtů.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
+      "ctcae": "Hypersensitivity",
       "frequency": "not_known",
       "label": "Přecitlivělost.",
       "action": null,
@@ -477,172 +385,476 @@
       "action_condition": null
     },
     {
-      "ctcae": "Tumor lysis syndrome",
-      "frequency": "rare",
-      "label": "Syndrom nádorového rozpadu.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Dermatitis psoriasiform",
       "frequency": "not_known",
-      "label": "Zánět kůže s červenými šupinatými plochami; může se objevit současně s bolestí kloubů.",
+      "label": "Zánět kůže s červenými šupinatými plochami; může se vyskytovat společně s bolestí kloubů.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Arthralgia",
-      "frequency": "not_known",
-      "label": "Bolest kloubů, která se může objevit současně se zánětem kůže s červenými šupinatými plochami.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Skin lupus erythematosus",
       "frequency": "not_known",
       "label": "Kožní lupus erythematodes.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Autoimmune disorder",
+      "ctcae": "Systemic lupus erythematosus",
       "frequency": "not_known",
       "label": "Systémový lupus erythematodes.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Radiation recall reaction (dermatologic)",
-      "frequency": null,
-      "label": "U pacientů, kteří již dříve podstoupili radioterapii, může dojít ke zhoršení postradiačního zarudnutí kůže.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Pulmonary fibrosis",
+      "frequency": "common",
+      "label": "Plicní fibróza; u pacientů léčených pro myeloproliferativní neoplazii byly popsány také plicní infiltrace a dušnost. Při kombinaci s ozařováním se mohou nežádoucí účinky zesílit.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte dušnost, zejména při námaze, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi.",
+        "min_severity": 2
+      }
     },
     {
-      "ctcae": "Hypoglycemia",
-      "frequency": null,
-      "label": "Nízká hladina cukru v krvi může nastat, pokud jsou dávky inzulinu založeny na falešně zvýšených údajích z některých senzorů kontinuálního monitorování glukózy.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Pulmonary infiltration",
+      "frequency": "common",
+      "label": "Plicní infiltrace; u pacientů léčených pro myeloproliferativní neoplazii byly popsány také plicní fibróza a dušnost.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte dušnost, zejména při námaze, přetrvávající suchý kašel, únavu nebo nepříjemné pocity na hrudi.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": "common",
+      "label": "Dušnost; u pacientů léčených pro myeloproliferativní neoplazii byla hlášena společně s plicní fibrózou nebo plicní infiltrací. Dušnost při alergickém zánětu plic má četnost neznámou.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Zvláště pokud se přidá přetrvávající suchý kašel, únava nebo nepříjemné pocity na hrudi.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Interstitial lung disease",
+      "frequency": "not_known",
+      "label": "Intersticiální plicní procesy, včetně pneumonitidy, alveolitidy a alergické alveolitidy; některé případy mohou mít fatální následky.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte horečku, kašel, dušnost nebo jiné dýchací potíže; při plicních příhodách se užívání přípravku ihned přerušuje.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Pneumonitis",
+      "frequency": "not_known",
+      "label": "Pneumonitida (zánět plicní tkáně); alergická pneumonitida může být provázena horečkou. Při kombinaci s ozařováním mohou být nežádoucí účinky zesílené.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte horečku, kašel, dušnost nebo jiné dýchací potíže.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Alveolitis",
+      "frequency": "not_known",
+      "label": "Alveolitida, včetně alergické alveolitidy; u pacientů léčených pro myeloproliferativní neoplazii byly popsány plicní procesy s možnými fatálními následky.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud máte horečku, kašel, dušnost nebo jiné dýchací potíže.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Cough",
+      "frequency": "not_known",
+      "label": "Kašel; u pacientů léčených pro myeloproliferativní neoplazii byl hlášen v souvislosti s plicními procesy.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud je kašel přetrvávající a suchý, nebo se přidá horečka, dušnost či jiné dýchací potíže.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Drug fever",
+      "frequency": "not_known",
+      "label": "Vysoká horečka nad 39 °C, někdy s potížemi v zažívacím traktu, plicích, svalech, kloubech či kostech, játrech a žlučových cestách, kůži nebo srdci a cévách. Obvykle se objevila do 6 týdnů od zahájení léčby, byly hlášeny i případy do 3 měsíců; po opětovném podání se může vrátit do 24 hodin. Příznaky většinou ustoupily za 1–2 dny po vysazení, někdy přetrvávaly několik dní.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při vysoké horečce nad 39 °C, zvláště pokud ji doprovázejí uvedené potíže.",
+        "min_severity": 1
+      }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Jiné léky potlačující kostní dřeň",
-      "effect": "Současné užívání s LITALIREM může zvýšit riziko útlumu kostní dřeně a dalších nežádoucích účinků. Lékař může upravit dávkování.",
+      "class_id": "group:myelosuppressive",
+      "drug_class": "Léky potlačující kostní dřeň",
+      "effect": "Současné podávání s hydroxykarbamidem může zvýšit riziko útlumu kostní dřeně a dalších nežádoucích účinků; může být nutná úprava dávky lékařem.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Útlum kostní dřeně.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Radiační terapie",
-      "effect": "Při souběžné léčbě LITALIREM a ozařováním se mohou zesílit změny krevního obrazu a zažívací potíže; může se zvýšit také podráždění žaludku a mukozitida. Při kombinované léčbě může lékař podle potřeby upravit postup.",
+      "class_id": null,
+      "drug_class": "Radiační léčba",
+      "effect": "Současné podávání s hydroxykarbamidem může zvýšit riziko útlumu kostní dřeně a dalších nežádoucích účinků; mohou se zesílit zejména změny krevního obrazu a zažívací potíže. Při silné mukozitidě v ozařované oblasti může lékař hydroxykarbamid přerušit a při velmi silné reakci odložit ozařování.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "White blood cell decreased",
-          "frequency": null,
-          "label": "Snížení počtu bílých krvinek.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Anemia",
-          "frequency": null,
-          "label": "Chudokrevnost.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Thrombocytopenia",
-          "frequency": null,
-          "label": "Snížení počtu krevních destiček.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Stomach pain",
-          "frequency": null,
-          "label": "Podráždění žaludku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Mucositis oral",
-          "frequency": null,
-          "label": "Zánět sliznic (mukozitida).",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léky snižující hladinu kyseliny močové (urikosurická léčba), například alopurinol",
-      "effect": "LITALIR může zvýšit hladinu kyseliny močové v krvi, a tím oslabit účinek léků používaných ke snížení její hladiny. Lékař může upravit dávkování této léčby.",
+      "class_id": "substance:1991",
+      "drug": "Didanosin",
+      "effect": "U HIV-infikovaných pacientů byla při kombinaci hydroxykarbamidu s didanosinem, se stavudinem nebo bez něj, pozorována pankreatitida, poškození jater a periferní neuropatie; některé případy byly fatální. Kombinaci hydroxykarbamidu, didanosinu a stavudinu je třeba se vyvarovat.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1991",
+      "drug": "Stavudin",
+      "effect": "U HIV-infikovaných pacientů byla při kombinaci hydroxykarbamidu se stavudinem, s didanosinem nebo bez něj, pozorována pankreatitida, poškození jater a periferní neuropatie; některé případy byly fatální. Kombinaci hydroxykarbamidu, didanosinu a stavudinu je třeba se vyvarovat.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:myelosuppressive",
+      "drug_class": "Živé virové vakcíny",
+      "effect": "Současné užívání živé virové vakcíny s hydroxykarbamidem se nedoporučuje: může dojít k množení viru ve vakcíně, zesílení jejích nežádoucích účinků, závažné infekci a snížené protilátkové odpovědi. Očkování živou vakcínou je třeba se vyhnout nebo vyhledat odbornou radu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1991",
+      "drug": "Allopurinol",
+      "effect": "Hydroxykarbamid zvyšuje kyselinu močovou v krvi a může oslabit účinek allopurinolu na její snížení; lékař může upravit jeho dávku.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Antiretrovirotika, zejména didanosin a stavudin",
-      "effect": "U pacientů s HIV byla při současném podávání hydroxykarbamidu a antiretrovirotik hlášena pankreatitida, poškození jater a periferní neuropatie. Kombinaci hydroxykarbamidu, didanosinu a stavudinu je třeba se vyvarovat vzhledem k hlášenému fatálnímu poškození jater; některé případy hepatotoxicity a pankreatitidy byly fatální. Při kombinaci hydroxykarbamidu, didanosinu, stavudinu a indinaviru byl ve studii pozorován také průměrný pokles CD4 buněk.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Pancreatitis",
-          "frequency": null,
-          "label": "Zánět slinivky břišní, který může být fatální.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hepatobiliary disorders - Other, specify",
-          "frequency": null,
-          "label": "Poškození jater, někdy fatální.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Postižení periferních nervů (periferní neuropatie), v některých případech závažná.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "CD4 lymphocytes decreased",
-          "frequency": null,
-          "label": "Při kombinaci s didanosinem, stavudinem a indinavirem byl ve studii zaznamenán průměrný pokles CD4 buněk přibližně o 100/mm³.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": null,
+      "drug_class": "Léky snižující kyselinu močovou při dně",
+      "effect": "Hydroxykarbamid zvyšuje kyselinu močovou v krvi a může oslabit účinek těchto léků; lékař může upravit jejich dávku.",
+      "effect_type": "antagonism",
+      "side_effects": []
     },
     {
-      "drug_class": "Vakcíny obsahující živý virus",
-      "effect": "LITALIR může potlačit běžnou obranyschopnost. Současné podání živé vakcíny může vést k množení viru ve vakcíně, zesílení nežádoucích účinků viru a závažné až fatální infekci; odpověď protilátek na vakcínu může být snížena. Současnému podání je třeba se vyhnout nebo vyhledat odbornou radu lékaře.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Infections and infestations - Other, specify",
-          "frequency": null,
-          "label": "Závažná infekce vyvolaná živou vakcínou.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "cytarabin",
-      "effect": "Hydroxykarbamid in vitro výrazně zvyšuje cytotoxickou aktivitu cytarabinu. Není stanoveno, zda tato interakce vede v klinické praxi k synergické toxicitě ani zda je nutná úprava dávky cytarabinu.",
+      "class_id": "substance:1991",
+      "drug": "Cytarabin",
+      "effect": "Hydroxykarbamid in vitro výrazně zvyšuje cytotoxickou aktivitu cytarabinu. Není stanoveno, zda to v klinické praxi vede k synergické toxicitě nebo vyžaduje úpravu dávky.",
       "effect_type": "synergy",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "LITALIR se používá k léčbě chronické myeloidní leukemie a spolu s ozařováním k léčbě rakoviny děložního hrdla.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0266572",
+      "H": "",
+      "NAZEV": "LITALIR",
+      "SILA": "500MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG CPS DUR 100",
+      "OBAL": "TBC",
+      "DRZ": "CHA",
+      "ZEMDRZ": "D",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "44",
+      "ATC_WHO": "L01XX05",
+      "RC": "44/652/93-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "1,4",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "35,7143",
+      "ZDROJ_WHO": "NO26",
+      "LL": "1991",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "LITALIR",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "A",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "1991",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1991",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYDROXYCARBAMIDUM",
+          "NAZEV_EN": "HYDROXYCARBAMIDE",
+          "NAZEV": "HYDROXYKARBAMID"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "2461",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2461",
+          "ZDROJ": "C20M",
+          "NAZEV_INN": "NATRII HYDROGENOPHOSPHAS",
+          "NAZEV_EN": "DISODIUM PHOSPHATE",
+          "NAZEV": "HYDROGENFOSFOREČNAN SODNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "9837",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9837",
+          "ZDROJ": "C21M",
+          "NAZEV_INN": "ACIDUM CITRICUM",
+          "NAZEV_EN": "CITRIC ACID",
+          "NAZEV": "KYSELINA CITRONOVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "2378",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "SQ": "6",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "4256",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "1711",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1711",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "INDIGOCARMINUM",
+          "NAZEV_EN": "INDIGO CARMINE",
+          "NAZEV": "INDIGOKARMÍN"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "2710",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "2855",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "SQ": "11",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "9887",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9887",
+          "ZDROJ": "F10M",
+          "NAZEV_INN": "ERYTHROSINUM NATRICUM MONOHYDRICUM",
+          "NAZEV_EN": "ERYTHROSINE SODIUM MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT SODNÉ SOLI ERYTHROSINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "2710",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "2855",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "SQ": "15",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0266572",
+        "KOD_LATKY": "4804",
+        "SQ": "16",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "4804",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ATRAMENTUM NIGRUM",
+          "NAZEV_EN": "BLACK INK",
+          "NAZEV": "ČERNÝ INKOUST"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0266572",
+      "PIL": "PI232104.pdf",
+      "DAT_ROZ_PIL": "26.03.2026",
+      "SPC": "SPC232105.pdf",
+      "DAT_ROZ_SPC": "26.03.2026",
+      "OBAL_TEXT": "OBAL188649.pdf",
+      "DAT_ROZ_OBAL": "12.07.2022"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "L01XX05",
+        "NT": "N",
+        "NAZEV": "HYDROXYKARBAMID",
+        "NAZEV_EN": "HYDROXYCARBAMIDE"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "TBC",
+        "NAZEV": "Obal na tablety",
+        "NAZEV_EN": "Tablet container",
+        "KOD_EDQM": "30066000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

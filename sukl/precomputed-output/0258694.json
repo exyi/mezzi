@@ -1,39 +1,62 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A10",
+    "atc:A10B",
+    "atc:A10BA",
+    "atc:A10BA02",
+    "substance:2418"
+  ],
   "side_effects": [
     {
       "ctcae": "Diarrhea",
       "frequency": "very_common",
-      "label": "Průjem, nejčastěji na začátku léčby; obvykle asi do 2 týdnů odezní.",
+      "label": "Průjem; nejčastěji na začátku léčby, obvykle do 2 týdnů odezní.",
       "action": "continue",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Nausea",
       "frequency": "very_common",
-      "label": "Nevolnost, nejčastěji na začátku léčby; obvykle asi do 2 týdnů odezní.",
+      "label": "Nevolnost; nejčastěji na začátku léčby, obvykle do 2 týdnů odezní.",
       "action": "continue",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Vomiting",
       "frequency": "very_common",
-      "label": "Zvracení, nejčastěji na začátku léčby; obvykle asi do 2 týdnů odezní.",
+      "label": "Zvracení; nejčastěji na začátku léčby, obvykle do 2 týdnů odezní.",
       "action": "continue",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "very_common",
-      "label": "Bolesti břicha, nejčastěji na začátku léčby; obvykle asi do 2 týdnů odezní.",
+      "label": "Bolesti břicha; nejčastěji na začátku léčby, obvykle do 2 týdnů odezní.",
       "action": "continue",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Anorexia",
       "frequency": "very_common",
-      "label": "Ztráta chuti k jídlu, nejčastěji na začátku léčby; obvykle asi do 2 týdnů odezní.",
+      "label": "Ztráta chuti k jídlu; nejčastěji na začátku léčby, obvykle do 2 týdnů odezní.",
       "action": "continue",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Dysgeusia",
@@ -45,17 +68,18 @@
     {
       "ctcae": "Metabolism and nutrition disorders - Other, specify",
       "frequency": "common",
-      "label": "Snížená nebo nízká hladina vitaminu B12 v krvi; může se projevit výraznou únavou, bolestivým a zarudlým jazykem, mravenčením nebo bledou či žlutou kůží.",
+      "label": "Snížená nebo nízká hladina vitaminu B12 v krvi; může se projevit výraznou únavou, bolestivým a zarudlým jazykem, brněním nebo bledou či žlutou kůží.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Acidosis",
       "frequency": "very_rare",
-      "label": "Laktátová acidóza – závažný stav, který se může projevit zvracením, bolestmi břicha, svalovými křečemi, velkou únavou, potížemi s dýcháním, sníženou tělesnou teplotou a srdečním tepem; může vést až ke kómatu.",
-      "action": "hospitalize_NOW",
+      "label": "Laktátová acidóza, velmi vzácný závažný stav; může se projevit zvracením, bolestí břicha, svalovými křečemi, výraznou únavou, potížemi s dýcháním, nízkou tělesnou teplotou a pomalým tepem. Vyžaduje nemocniční léčbu.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud pocítíte některý z uvedených projevů laktátové acidózy"
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
@@ -68,194 +92,422 @@
     {
       "ctcae": "Hepatitis",
       "frequency": "very_rare",
-      "label": "Zánět jater, který může způsobit zežloutnutí očí nebo kůže.",
+      "label": "Zánět jater, který může způsobit zežloutnutí očí nebo kůže; ústup byl hlášen po vysazení metforminu. Žloutenka se může vyskytnout až u 1 z 10 000 pacientů.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud vám zežloutnou oči nebo kůže"
+        "patient_guide": "Pokud vám zežloutnou oči nebo kůže.",
+        "min_severity": 2
       }
-    },
-    {
-      "ctcae": null,
-      "frequency": "very_rare",
-      "label": "Zarudnutí kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "very_rare",
-      "label": "Svědění kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "very_rare",
-      "label": "Kopřivka.",
-      "action": null,
-      "action_condition": null
     },
     {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Kožní vyrážka.",
+      "label": "Kožní vyrážka včetně zarudnutí, svědění nebo kopřivky.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Dehydration",
+      "frequency": null,
+      "label": "Dehydratace; riziko při zvracení, průjmu, horečce, pobytu ve vysoké teplotě nebo při menším příjmu tekutin než obvykle. Při těchto příznacích léčbu na krátkou dobu přerušte a další postup konzultujte s lékařem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při zvracení, průjmu, horečce, pobytu ve vysoké teplotě nebo pokud pijete méně než obvykle.",
+        "min_severity": 1
+      }
     }
   ],
   "combinations": [
     {
-      "drug": "alkohol",
-      "effect": "Alkohol zvyšuje riziko laktátové acidózy, zejména při hladovění, podvýživě nebo poruše funkce jater. Přípravek se nesmí užívat při akutní intoxikaci alkoholem nebo alkoholismu; pravidelné požívání většího množství alkoholu se rovněž nedoporučuje.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy.",
-          "action": "hospitalize_NOW",
-          "action_condition": {
-            "patient_guide": "Pokud pocítíte některý z uvedených projevů laktátové acidózy"
-          }
-        }
-      ]
-    },
-    {
-      "drug": "jodované kontrastní látky",
-      "effect": "Nitrožilní podání jodované kontrastní látky může způsobit poškození ledvin po podání kontrastní látky, hromadění metforminu a zvýšit riziko laktátové acidózy. Lékař musí metformin vysadit před vyšetřením nebo v době jeho provedení a znovu jej nasadit nejdříve po 48 hodinách, až po kontrole a potvrzení stabilní funkce ledvin.",
+      "class_id": null,
+      "drug_class": "Alkohol",
+      "effect": "Požití příliš velkého množství alkoholu při léčbě metforminem zvyšuje riziko laktátové acidózy, zejména při hladovění, podvýživě nebo poruše funkce jater. Přípravek se nedoporučuje při intoxikaci alkoholem; při pravidelném požívání většího množství alkoholu se neužívá.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Poškození ledvin po podání kontrastní látky.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy.",
-          "action": "hospitalize_NOW",
-          "action_condition": {
-            "patient_guide": "Pokud pocítíte některý z uvedených projevů laktátové acidózy"
-          }
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Nesteroidní protizánětlivé léky, včetně selektivních inhibitorů COX-2",
-      "effect": "Tyto léky mohou zhoršit funkci ledvin, a tím zvýšit riziko laktátové acidózy při užívání metforminu. Při zahájení léčby nebo během souběžného užívání má lékař pečlivě sledovat funkci ledvin.",
+      "class_id": "atc:V08A",
+      "drug_class": "Jodované kontrastní látky podané do cévy",
+      "effect": "Metformin se vysazuje před vyšetřením nebo v době jeho provedení a znovu se nasazuje nejdříve po 48 hodinách, až po kontrole a potvrzení stabilní funkce ledvin; rizikem je poškození ledvin a laktátová acidóza.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy.",
-          "action": "hospitalize_NOW",
-          "action_condition": {
-            "patient_guide": "Pokud pocítíte některý z uvedených projevů laktátové acidózy"
-          }
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Inhibitory ACE",
-      "effect": "Tyto léky mohou zhoršit funkci ledvin, a tím zvýšit riziko laktátové acidózy při užívání metforminu. Při zahájení léčby nebo během souběžného užívání má lékař pečlivě sledovat funkci ledvin.",
+      "class_id": null,
+      "drug_class": "Nesteroidní protizánětlivé léky včetně selektivních inhibitorů COX-2",
+      "effect": "Mohou náhle zhoršit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení nebo souběžném užívání s metforminem je třeba opatrnost a pečlivé sledování funkce ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy.",
-          "action": "hospitalize_NOW",
-          "action_condition": {
-            "patient_guide": "Pokud pocítíte některý z uvedených projevů laktátové acidózy"
-          }
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
+      "drug_class": "ACE inhibitory",
+      "effect": "Mohou zhoršit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení nebo souběžném užívání s metforminem je třeba opatrnost a pečlivé sledování funkce ledvin.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
       "drug_class": "Antagonisté receptoru pro angiotenzin II",
-      "effect": "Tyto léky mohou zhoršit funkci ledvin, a tím zvýšit riziko laktátové acidózy při užívání metforminu. Při zahájení léčby nebo během souběžného užívání má lékař pečlivě sledovat funkci ledvin.",
+      "effect": "Mohou zhoršit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení nebo souběžném užívání s metforminem je třeba opatrnost a pečlivé sledování funkce ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy.",
-          "action": "hospitalize_NOW",
-          "action_condition": {
-            "patient_guide": "Pokud pocítíte některý z uvedených projevů laktátové acidózy"
-          }
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Diuretika, zvláště kličková",
-      "effect": "Tyto léky mohou zhoršit funkci ledvin, a tím zvýšit riziko laktátové acidózy při užívání metforminu. Při zahájení léčby nebo během souběžného užívání má lékař pečlivě sledovat funkci ledvin.",
+      "effect": "Mohou zhoršit funkci ledvin a zvýšit riziko laktátové acidózy. Při zahájení nebo souběžném užívání s metforminem je třeba opatrnost a pečlivé sledování funkce ledvin.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": null,
-          "label": "Zvýšené riziko laktátové acidózy.",
-          "action": "hospitalize_NOW",
-          "action_condition": {
-            "patient_guide": "Pokud pocítíte některý z uvedených projevů laktátové acidózy"
-          }
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Glukokortikoidy",
-      "effect": "Glukokortikoidy mají vlastní hyperglykemický účinek. Může být nutné častěji sledovat glykémii a lékař může upravit dávku metforminu během léčby glukokortikoidem i po jeho vysazení.",
+      "class_id": null,
+      "drug_class": "Léky s hyperglykemickým účinkem, například glukokortikoidy a sympatomimetika",
+      "effect": "Mohou zvýšit hladinu glukózy v krvi. Při zahájení léčby může být nutné častější sledování glykémie a lékař může podle potřeby upravit dávku metforminu během léčby těmito léky i po jejich vysazení.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Sympatomimetika",
-      "effect": "Sympatomimetika mají vlastní hyperglykemický účinek. Může být nutné častěji sledovat glykémii a lékař může upravit dávku metforminu během léčby sympatomimetikem i po jeho vysazení.",
-      "effect_type": "antagonism",
+      "class_id": null,
+      "drug_class": "Inhibitory OCT1, například verapamil",
+      "effect": "Mohou snížit účinnost metforminu.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "verapamil",
-      "effect": "Verapamil může jako inhibitor OCT1 snížit účinnost metforminu.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "rifampicin",
-      "effect": "Rifampicin může jako induktor OCT1 zvýšit vstřebávání metforminu v trávicím traktu a jeho účinnost.",
-      "effect_type": "synergy",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Inhibitory OCT2 (například cimetidin, dolutegravir, ranolazin, trimethoprim, vandetanib a isavukonazol)",
-      "effect": "Tyto léky mohou snížit vylučování metforminu ledvinami a zvýšit jeho koncentraci v krvi. Opatrnost je zvlášť důležitá při poruše funkce ledvin; lékař může zvážit úpravu dávky metforminu.",
+      "class_id": null,
+      "drug_class": "Induktory OCT1, například rifampicin",
+      "effect": "Mohou zvýšit vstřebávání metforminu ve střevě a jeho účinnost.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory OCT1 a OCT2 (crizotinib a olaparib)",
-      "effect": "Tyto léky mohou měnit účinnost a vylučování metforminu ledvinami. Může se zvýšit jeho koncentrace v krvi, zejména při poruše funkce ledvin; lékař může zvážit úpravu dávky metforminu.",
+      "class_id": null,
+      "drug_class": "Inhibitory OCT2, například cimetidin, dolutegravir, ranolazin, trimethoprim, vandetanib a isavukonazol",
+      "effect": "Mohou snížit vylučování metforminu ledvinami a zvýšit jeho hladinu v krvi; opatrnost je zvlášť důležitá při poruše funkce ledvin. Lékař může zvážit úpravu dávky metforminu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Jiná antidiabetika, zejména inzulín, deriváty sulfonylurey nebo meglitinidy",
-      "effect": "Při kombinaci metforminu s jinými léky na diabetes se může objevit hypoglykémie; samotný metformin ji obvykle nezpůsobuje. Pacient má být upozorněn na riziko hypoglykémie, zejména při řízení a obsluze strojů.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Hypoglykémie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "class_id": null,
+      "drug_class": "Inhibitory OCT1 a OCT2, například krizotinib a olaparib",
+      "effect": "Mohou měnit účinnost metforminu i jeho vylučování ledvinami a zvýšit jeho hladinu v krvi; opatrnost je zvlášť důležitá při poruše funkce ledvin. Lékař může zvážit úpravu dávky metforminu.",
+      "effect_type": "changed_exposure",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se k léčbě diabetu 2. typu u dospělých, pokud dieta a pohyb dostatečně nesnižují hladinu cukru v krvi.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0258694",
+      "H": "",
+      "NAZEV": "MULADO PROLONG",
+      "SILA": "500MG",
+      "FORMA": "TBL PRO",
+      "BALENI": "60",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG TBL PRO 60",
+      "OBAL": "BLI",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "18",
+      "ATC_WHO": "A10BA02",
+      "RC": "18/176/19-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "15",
+      "ZDROJ_WHO": "NO26",
+      "LL": "2418",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "MULADO PROLONG",
+      "MRP_CISLO": "HU/H/0637/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "2418",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2418",
+          "ZDROJ": "C19",
+          "NAZEV_INN": "METFORMINI HYDROCHLORIDUM",
+          "NAZEV_EN": "METFORMIN HYDROCHLORIDE",
+          "NAZEV": "METFORMIN-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "2417",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "390",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2417",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "METFORMINUM",
+          "NAZEV_EN": "METFORMIN",
+          "NAZEV": "METFORMIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "2658",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2658",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "ACIDUM STEARICUM",
+          "NAZEV_EN": "STEARIC ACID",
+          "NAZEV": "KYSELINA STEAROVÁ"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "3113",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3113",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "LACCA",
+          "NAZEV_EN": "SHELLAC",
+          "NAZEV": "ŠELAK"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "18178",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18178",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "POVIDONUM K 30",
+          "NAZEV_EN": "POVIDONE K 30",
+          "NAZEV": "POVIDON K 30",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "1300",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "748",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "4336",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4336",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROLOSUM",
+          "NAZEV_EN": "HYPROLOSE",
+          "NAZEV": "HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "2710",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "1216",
+        "SQ": "13",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1216",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "PROPYLENGLYCOLUM",
+          "NAZEV_EN": "PROPYLENE GLYCOL",
+          "NAZEV": "PROPYLENGLYKOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "3765",
+        "SQ": "14",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      },
+      {
+        "KOD_SUKL": "0258694",
+        "KOD_LATKY": "1871",
+        "SQ": "15",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0258694",
+      "PIL": "PI226522.pdf",
+      "DAT_ROZ_PIL": "25.09.2025",
+      "SPC": "SPC226523.pdf",
+      "DAT_ROZ_SPC": "25.09.2025",
+      "OBAL_TEXT": "OBAL192691.pdf",
+      "DAT_ROZ_OBAL": "01.11.2022",
+      "NR": "NR10063819.pdf",
+      "DAT_NPM_NR": "25.08.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A10BA02",
+        "NT": "N",
+        "NAZEV": "METFORMIN",
+        "NAZEV_EN": "METFORMIN"
+      },
+      "formy": {
+        "FORMA": "TBL PRO",
+        "NAZEV": "Tableta s prodlouženým uvolňováním",
+        "NAZEV_EN": "Prolonged-release tablet",
+        "NAZEV_LAT": "Tabuletta cum liberatione prolongata",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10226000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

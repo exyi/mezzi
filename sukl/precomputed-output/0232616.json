@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J01",
+    "atc:J01C",
+    "atc:J01CF",
+    "atc:J01CF05",
+    "substance:11338"
+  ],
   "side_effects": [
     {
       "ctcae": "Neutrophil count decreased",
@@ -16,17 +24,30 @@
     },
     {
       "ctcae": "Eosinophilia",
-      "frequency": "very_rare",
+      "frequency": "rare",
       "label": "Zvýšený počet eozinofilů v krvi.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Immune system disorders - Other, specify",
+      "ctcae": "Anaphylaxis",
       "frequency": "very_rare",
-      "label": "Angioedém (otok tkání).",
+      "label": "Anafylaktický šok je uveden v PIL; SPC jej u perorálního podání vylučuje. Při reakci z přecitlivělosti léčbu přerušte.",
       "action": "discontinue_treatment",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "very_rare",
+      "label": "Angioedém, tedy otok obličeje.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Gastrointestinal disorders - Other, specify",
@@ -40,40 +61,44 @@
       "frequency": "very_rare",
       "label": "Pseudomembranózní kolitida.",
       "action": "discontinue_treatment",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Esophageal pain",
       "frequency": "not_known",
-      "label": "Bolest jícnu a související potíže, například zánět či pálení jícnu, podráždění v krku, bolest v ústech nebo v krku a bolest při polykání.",
+      "label": "Bolest jícnu a související potíže, například bolest či pálení v krku nebo ústech, bolest v ústech a potíže s polykáním; zapijte tobolku plnou sklenicí vody a po užití si hned nelehejte.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte bolest jícnu, potíže s polykáním, pálení žáhy nebo bolest v krku, ústech či na hrudi."
+        "patient_guide": "Pokud máte také potíže s polykáním, pálení žáhy, bolest v krku nebo bolest na hrudi.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "very_rare",
-      "label": "Hepatitida, která může přetrvávat déle než dva měsíce po léčbě; vzácně byly hlášeny případy úmrtí, většinou u pacientů se závažným základním onemocněním.",
+      "label": "Hepatitida, zejména cholestatického typu; může přetrvávat déle než dva měsíce po léčbě. Úmrtí byla pozorována velmi vzácně, převážně u pacientů se závažným základním onemocněním.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Cholestatická žloutenka, která může přetrvávat déle než dva měsíce po léčbě.",
+      "label": "Cholestatická žloutenka; může přetrvávat déle než dva měsíce po léčbě.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Investigations - Other, specify",
       "frequency": "very_rare",
-      "label": "Změny výsledků jaterních testů; po ukončení léčby jsou vratné.",
+      "label": "Změny hodnot jaterních testů; po ukončení léčby jsou vratné.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
       "label": "Vyrážka.",
       "action": null,
@@ -97,47 +122,53 @@
       "ctcae": "Erythema multiforme",
       "frequency": "very_rare",
       "label": "Multiformní erytém.",
-      "action": "hospitalize_NOW",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka, svědění, otok obličeje nebo potíže s dýcháním."
+        "patient_guide": "Pokud se objeví vyrážka, svědění, otok obličeje nebo potíže s dýcháním.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Stevens-Johnson syndrome",
       "frequency": "very_rare",
-      "label": "Stevensův–Johnsonův syndrom.",
-      "action": "hospitalize_NOW",
+      "label": "Stevensův-Johnsonův syndrom.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka, svědění, otok obličeje nebo potíže s dýcháním."
+        "patient_guide": "Pokud se objeví vyrážka, svědění, otok obličeje nebo potíže s dýcháním.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Toxic epidermal necrolysis",
       "frequency": "very_rare",
       "label": "Toxická epidermální nekrolýza.",
-      "action": "hospitalize_NOW",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka, svědění, otok obličeje nebo potíže s dýcháním."
+        "patient_guide": "Pokud se objeví vyrážka, svědění, otok obličeje nebo potíže s dýcháním.",
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Pustular drug eruption",
       "frequency": "not_known",
-      "label": "Akutní generalizovaná exantematózní pustulóza: červená, šupinatá vyrážka s hrbolky pod kůží a puchýři.",
-      "action": null,
-      "action_condition": null
+      "label": "Akutní generalizovaná exantematózní pustulóza: červená, šupinatá vyrážka s hrbolky pod kůží a puchýři; může ji na začátku léčby předznamenat horečka s rozsáhlým zarudnutím. Při potvrzení diagnózy se léčba přerušuje a další podání je kontraindikováno.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Pokud se na začátku léčby objeví horečka s rozsáhlým zarudnutím nebo červená, šupinatá vyrážka s hrbolky a puchýři.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "very_rare",
-      "label": "Bolesti kloubů, někdy vznikající až více než 48 hodin po zahájení léčby.",
+      "label": "Bolesti kloubů, někdy vzniklé více než 48 hodin po zahájení léčby.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
       "frequency": "very_rare",
-      "label": "Bolesti svalů, někdy vznikající až více než 48 hodin po zahájení léčby.",
+      "label": "Bolesti svalů, někdy vzniklé více než 48 hodin po zahájení léčby.",
       "action": null,
       "action_condition": null
     },
@@ -151,75 +182,286 @@
     {
       "ctcae": "Fever",
       "frequency": "very_rare",
-      "label": "Horečka, někdy vznikající až více než 48 hodin po zahájení léčby.",
+      "label": "Horečka, někdy vzniklá více než 48 hodin po zahájení léčby.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Acidosis",
+      "frequency": "very_rare",
+      "label": "Metabolická acidóza se zvýšenou aniontovou mezerou při současném užívání s paracetamolem, obvykle při rizikových faktorech, jako jsou závažné poškození ledvin, sepse nebo podvýživa; riziko může být vyšší při maximálních denních dávkách paracetamolu.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hypokalemia",
       "frequency": "not_known",
-      "label": "Nízká hladina draslíku v krvi, která může způsobit svalovou slabost, svalové záškuby nebo změny srdečního rytmu; riziko může být vyšší při vysokých dávkách.",
+      "label": "Nízká hladina draslíku v krvi, zejména při vyšších dávkách; může způsobit svalovou slabost, svalové záškuby nebo změny srdečního rytmu.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví svalová slabost, svalové záškuby nebo změny srdečního rytmu."
+        "patient_guide": "Pokud máte svalovou slabost, svalové záškuby nebo změny srdečního rytmu.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": null,
-      "label": "Alergická reakce, případně opožděná; může souviset s methylparabenem nebo propylparabenem v tobolce.",
+      "label": "Alergické reakce, případně opožděné, mohou způsobit methylparaben a propylparaben obsažené v přípravku.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Bakteriostatická léčiva",
-      "effect": "Bakteriostatická léčiva mohou oslabit baktericidní účinek flukloxacilinu. Lékař zváží vhodnost této kombinace.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "probenecid",
-      "effect": "Probenecid snižuje vylučování flukloxacilinu ledvinami, a tím zpomaluje jeho vylučování z těla.",
-      "effect_type": "increased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug": "paracetamol",
-      "effect": "Současné užívání flukloxacilinu s paracetamolem je spojeno se zvýšeným rizikem metabolické acidózy se zvýšenou aniontovou mezerou (HAGMA), zejména při závažném poškození ledvin, sepsi nebo podvýživě a při maximálních denních dávkách paracetamolu. Lékař bude pečlivě sledovat acidobazickou rovnováhu, případně vyšetří 5-oxoproliny v moči. HAGMA může přetrvávat i po vysazení paracetamolu, pokud se dál užívá flukloxacilin.",
+      "class_id": "substance:632",
+      "drug": "Paracetamol",
+      "effect": "Současné užívání s flukloxacilinem je spojeno s metabolickou acidózou se zvýšenou aniontovou mezerou, zejména při závažném poškození ledvin, sepsi nebo podvýživě a při maximálních denních dávkách paracetamolu. Lékař může pečlivě sledovat acidobazickou rovnováhu a vyšetřit 5-oxoproliny v moči; potíže mohou přetrvávat i po vysazení paracetamolu, pokud léčba flukloxacilinem pokračuje.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acidosis",
-          "frequency": "very_rare",
-          "label": "Metabolická acidóza se zvýšenou aniontovou mezerou (HAGMA), zejména při závažném poškození ledvin, sepsi nebo podvýživě a při maximálních denních dávkách paracetamolu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "vorikonazol",
-      "effect": "Flukloxacilin může jako induktor CYP450 významně snížit koncentraci vorikonazolu v krvi a jeho účinnost. Pokud se této kombinaci nelze vyhnout, lékař bude sledovat účinnost vorikonazolu, například terapeutickým monitorováním léčiv, a může upravit jeho dávku.",
+      "class_id": "substance:632",
+      "drug": "Vorikonazol",
+      "effect": "Flukloxacilin může výrazně snížit koncentraci vorikonazolu v krvi a tím jeho účinnost. Pokud se současnému užívání nelze vyhnout, lékař může sledovat hladinu a účinek vorikonazolu a případně upravit jeho dávku.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Diuretika vyvolávající hypokalémii",
-      "effect": "Při kombinaci s flukloxacilinem, zejména ve vyšších dávkách, je třeba věnovat pozornost riziku nízké hladiny draslíku v krvi. Lékař může pravidelně kontrolovat hladinu draslíku.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypokalemia",
-          "frequency": null,
-          "label": "Nízká hladina draslíku v krvi, která může způsobit svalovou slabost, svalové záškuby nebo změny srdečního rytmu.",
-          "action": "contact_doctor",
-          "action_condition": {
-            "patient_guide": "Pokud se objeví svalová slabost, svalové záškuby nebo změny srdečního rytmu."
-          }
-        }
-      ]
+      "class_id": null,
+      "drug": "Probenecid",
+      "effect": "Probenecid zpomaluje vylučování flukloxacilinu ledvinami.",
+      "effect_type": "increased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J01A",
+      "drug_class": "Bakteriostatická antibiotika, například tetracykliny",
+      "effect": "Bakteriostatická antibiotika mohou oslabit baktericidní účinek flukloxacilinu.",
+      "effect_type": "antagonism",
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Flukloxacilin je antibiotikum k léčbě některých bakteriálních infekcí.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0232616",
+      "H": "",
+      "NAZEV": "FLUCLOXACILINA AZEVEDOS",
+      "SILA": "500MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "24",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG CPS DUR 24",
+      "OBAL": "BLI",
+      "DRZ": "",
+      "ZEMDRZ": "",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "F",
+      "V_PLATDO": "",
+      "NEOMEZ": "",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "J01CF05",
+      "RC": "",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "",
+      "DDDAMNT_WHO": "2",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "6",
+      "ZDROJ_WHO": "NO26",
+      "LL": "11338",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "",
+      "EXP": "24",
+      "EXP_T": "M",
+      "NAZEV_REG": "FLUCLOXACILINA AZEVEDOS 500 MG",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "",
+      "OCHRANNY_PRVEK": "",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0232616",
+        "KOD_LATKY": "11338",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "544",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "11338",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "FLUCLOXACILLINUM NATRICUM MONOHYDRICUM",
+          "NAZEV_EN": "FLUCLOXACILLIN SODIUM MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT SODNÉ SOLI FLUKLOXACILINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0232616",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0232616",
+        "KOD_LATKY": "632",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "632",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "FLUCLOXACILLINUM",
+          "NAZEV_EN": "FLUCLOXACILLIN",
+          "NAZEV": "FLUKLOXACILIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0232616",
+        "KOD_LATKY": "2378",
+        "SQ": "4",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0232616",
+        "KOD_LATKY": "2710",
+        "SQ": "5",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0232616",
+        "KOD_LATKY": "1711",
+        "SQ": "6",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "1711",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "INDIGOCARMINUM",
+          "NAZEV_EN": "INDIGO CARMINE",
+          "NAZEV": "INDIGOKARMÍN"
+        }
+      },
+      {
+        "KOD_SUKL": "0232616",
+        "KOD_LATKY": "934",
+        "SQ": "7",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "934",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "METHYLPARABENUM",
+          "NAZEV_EN": "METHYL PARAHYDROXYBENZOATE",
+          "NAZEV": "METHYLPARABEN"
+        }
+      },
+      {
+        "KOD_SUKL": "0232616",
+        "KOD_LATKY": "2586",
+        "SQ": "8",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "2586",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "PROPYLPARABENUM",
+          "NAZEV_EN": "PROPYL PARAHYDROXYBENZOATE",
+          "NAZEV": "PROPYLPARABEN"
+        }
+      },
+      {
+        "KOD_SUKL": "0232616",
+        "KOD_LATKY": "2855",
+        "SQ": "9",
+        "S": "X",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0232616",
+      "PIL": "PI219421.pdf",
+      "DAT_ROZ_PIL": "24.02.2025",
+      "SPC": "SPC219422.pdf",
+      "DAT_ROZ_SPC": "24.02.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J01CF05",
+        "NT": "N",
+        "NAZEV": "FLUKLOXACILIN",
+        "NAZEV_EN": "FLUCLOXACILLIN"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "F",
+        "NAZEV": "specifický léčebný program povolený MZČR na základě doporučení SÚKL"
+      }
+    }
+  }
 }

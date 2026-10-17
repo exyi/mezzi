@@ -1,392 +1,516 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A07",
+    "atc:A07E",
+    "atc:A07EC",
+    "atc:A07EC02",
+    "substance:9268"
+  ],
   "side_effects": [
     {
       "ctcae": "Diarrhea",
       "frequency": "common",
-      "label": "Průjem",
+      "label": "Průjem; častý nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Nevolnost",
+      "label": "Nevolnost; častý nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "common",
-      "label": "Bolest břicha",
+      "label": "Bolest břicha; častý nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "common",
-      "label": "Bolest hlavy",
+      "label": "Bolest hlavy; častý nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "common",
-      "label": "Zvracení",
+      "label": "Zvracení; častý nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
       "frequency": "common",
-      "label": "Kožní vyrážka, včetně kopřivky nebo ekzému",
+      "label": "Kožní vyrážka, včetně kopřivky nebo ekzému; častý nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Dizziness",
       "frequency": "rare",
-      "label": "Závrať",
+      "label": "Závrať; vzácný nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myocarditis",
       "frequency": "rare",
-      "label": "Zánět srdečního svalu (myokarditida)",
+      "label": "Zánět srdečního svalu; vzácný nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pericarditis",
       "frequency": "rare",
-      "label": "Zánět osrdečníku (perikarditida)",
+      "label": "Zánět osrdečníku; vzácný nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Serum amylase increased",
       "frequency": "rare",
-      "label": "Zvýšená hladina amylázy v krvi",
+      "label": "Zvýšení hladiny amylázy; vzácný nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Pancreatitis",
       "frequency": "rare",
-      "label": "Akutní zánět slinivky břišní",
+      "label": "Akutní zánět slinivky břišní; vzácný nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Flatulence",
       "frequency": "rare",
-      "label": "Plynatost",
+      "label": "Plynatost; vzácný nežádoucí účinek.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Photosensitivity",
       "frequency": "rare",
-      "label": "Zvýšená citlivost kůže na sluneční a ultrafialové záření; závažnější reakce byly hlášeny u lidí s již existujícím kožním onemocněním, například atopickou dermatitidou nebo ekzémem",
+      "label": "Zvýšená citlivost kůže na sluneční a ultrafialové záření; závažnější reakce byly hlášeny u lidí s atopickou dermatitidou nebo atopickým ekzémem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Eosinophilia",
       "frequency": "very_rare",
-      "label": "Eosinofilie jako součást alergické reakce",
+      "label": "Eosinofilie jako součást alergické reakce; velmi vzácná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anemia",
       "frequency": "very_rare",
-      "label": "Anémie (chudokrevnost)",
+      "label": "Anémie; velmi vzácná.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví krvácení, modřiny, bolest v krku nebo horečka, případně bolest na hrudi spojená s dušností"
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Aplastic anemia",
       "frequency": "very_rare",
-      "label": "Aplastická anémie (chudokrevnost způsobená útlumem kostní dřeně)",
+      "label": "Aplastická anémie; velmi vzácná.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví krvácení, modřiny, bolest v krku nebo horečka, případně bolest na hrudi spojená s dušností"
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "very_rare",
-      "label": "Snížení počtu bílých krvinek (leukopenie), včetně granulocytopenie",
+      "label": "Pokles počtu bílých krvinek, včetně granulocytopenie a neutropenie; velmi vzácný.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví bolest v krku nebo horečka"
-      }
-    },
-    {
-      "ctcae": "Neutrophil count decreased",
-      "frequency": "very_rare",
-      "label": "Snížení počtu neutrofilů (neutropenie)",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest v krku nebo horečka"
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "very_rare",
-      "label": "Snížení počtu krevních destiček (trombocytopenie)",
+      "label": "Trombocytopenie; velmi vzácná.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví krvácení nebo modřiny"
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Blood and lymphatic system disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Agranulocytóza",
+      "label": "Agranulocytóza a pancytopenie; velmi vzácné poruchy krve.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví bolest v krku nebo horečka"
-      }
-    },
-    {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Pancytopenie (snížení počtu různých typů krvinek)",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví krvácení, modřiny, bolest v krku nebo horečka, případně bolest na hrudi spojená s dušností"
+        "patient_guide": "Při krvácení, vzniku modřin, bolesti v krku nebo zvýšené teplotě.",
+        "min_severity": 2
       }
     },
     {
       "ctcae": "Allergic reaction",
       "frequency": "very_rare",
-      "label": "Reakce přecitlivělosti, včetně alergické vyrážky",
+      "label": "Reakce přecitlivělosti včetně alergické vyrážky, DRESS syndromu a horečky; velmi vzácné. U závažné kožní vyrážky, olupování kůže, puchýřů nebo vředů na sliznicích léčbu přerušte.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Při načervenalých, nevystupujících skvrnách na trupu připomínajících terče nebo kruhy, puchýřích, olupování kůže, vředech v ústech, hrdle, nose, na pohlavních orgánech nebo očích, rozsáhlé vyrážce, horečce a zvětšených uzlinách; vyrážce mohou předcházet horečka a příznaky podobné chřipce.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Fever",
+      "frequency": "very_rare",
+      "label": "Horečka; velmi vzácná, může být součástí reakce přecitlivělosti.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Immune system disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "DRESS syndrom (poléková reakce s eozinofilií a systémovými příznaky), který se může projevit rozsáhlou vyrážkou, horečkou a zvětšenými lymfatickými uzlinami; vyrážce mohou předcházet příznaky podobné chřipce",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá vyrážka, horečka a zvětšené lymfatické uzliny nebo jim předcházejí příznaky podobné chřipce"
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom: přestaňte mesalazin užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví načervenalé, nevystupující skvrny na trupu podobné terčům nebo kruhům, puchýře, olupování kůže nebo vřídky v ústech, hrdle, nose, na pohlavních orgánech či očích"
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza: přestaňte mesalazin užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá vyrážka, puchýře, olupování kůže nebo vřídky v ústech, hrdle, nose, na pohlavních orgánech či očích"
-      }
     },
     {
       "ctcae": "Colitis",
       "frequency": "very_rare",
-      "label": "Pankolitida (zánět celého tlustého střeva)",
+      "label": "Pankolitida (zánět celého tlustého střeva); velmi vzácná.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Nervous system disorders - Other, specify",
+      "ctcae": "Peripheral sensory neuropathy",
       "frequency": "very_rare",
-      "label": "Periferní neuropatie (postižení nervů mimo mozek a míchu)",
+      "label": "Periferní neuropatie; velmi vzácná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Alergické plicní reakce, které mohou zahrnovat dušnost, kašel, alergický zánět plicních sklípků, plicní eosinofilii, intersticiální plicní onemocnění, plicní infiltraci nebo pneumonitidu",
+      "label": "Alergické plicní reakce, například dušnost, kašel, alergický zánět plicních sklípků, plicní eosinofilie, intersticiální onemocnění plic, plicní infiltráty nebo pneumonitida; velmi vzácné.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pulmonary fibrosis",
+      "ctcae": "Blood bilirubin increased",
       "frequency": "very_rare",
-      "label": "Plicní fibróza",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Zvýšení jaterních enzymů nebo ukazatelů cholestázy, například alkalické fosfatázy, gama-glutamyltransferázy či bilirubinu",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "very_rare",
-      "label": "Zánět jater, včetně cholestatické hepatitidy",
+      "label": "Zvýšení bilirubinu; velmi vzácné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatobiliary disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Cirhóza jater",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatic failure",
-      "frequency": "very_rare",
-      "label": "Selhání jater",
+      "label": "Zvýšení jaterních a cholestatických enzymů, hepatitida, cholestatická hepatitida, cirhóza nebo selhání jater; velmi vzácné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alopecia",
       "frequency": "very_rare",
-      "label": "Přechodná ztráta vlasů",
+      "label": "Přechodná ztráta vlasů; velmi vzácná.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Myalgia",
       "frequency": "very_rare",
-      "label": "Bolesti svalů",
+      "label": "Bolesti svalů; velmi vzácné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Arthralgia",
       "frequency": "very_rare",
-      "label": "Bolesti kloubů",
+      "label": "Bolesti kloubů; velmi vzácné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Autoimmune disorder",
       "frequency": "very_rare",
-      "label": "Onemocnění podobné systémovému lupus erythematodes, někdy s motýlovitým zarudnutím kůže v obličeji",
+      "label": "Onemocnění podobné systémovému lupus erythematodes; velmi vzácné.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Zhoršení funkce ledvin",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tubulointerstitial nephritis",
-      "frequency": "very_rare",
-      "label": "Akutní nebo chronický zánět ledvin a jejich tubulů (intersticiální nefritida)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Nephrotic syndrome",
-      "frequency": "very_rare",
-      "label": "Nefrotický syndrom",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Selhání ledvin",
-      "action": null,
-      "action_condition": null
+      "label": "Zhoršení funkce ledvin, včetně intersticiální nefritidy a nefrotického syndromu; velmi vzácné. Pokud se funkce ledvin zhorší, léčba se má ihned ukončit.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": null
+      }
     },
     {
       "ctcae": "Oligospermia",
       "frequency": "very_rare",
-      "label": "Dočasně snížená tvorba spermií (oligospermie)",
+      "label": "Dočasně snížená tvorba spermií; velmi vzácná.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Fever",
-      "frequency": "very_rare",
-      "label": "Horečka",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví spolu s krvácením, modřinami, bolestí v krku nebo bolestí na hrudi spojenou s dušností"
-      }
-    },
-    {
       "ctcae": "Renal calculi",
       "frequency": "not_known",
-      "label": "Ledvinové kameny, někdy spojené s bolestí ledvin",
+      "label": "Ledvinové kameny a související bolest ledvin; frekvenci nelze z dostupných údajů určit. Příznakem může být bolest v boku a krev v moči.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Urine discoloration",
       "frequency": "not_known",
-      "label": "Červenohnědé zabarvení moči po kontaktu mesalazinu s chlornanem sodným, například s některými bělicími prostředky; jde o neškodnou chemickou reakci",
+      "label": "Červenohnědé zabarvení moči po kontaktu s chlornanem sodným, například v toaletě; jde o neškodnou chemickou reakci. Frekvenci nelze z dostupných údajů určit.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nervous system disorders - Other, specify",
       "frequency": "not_known",
-      "label": "Idiopatická intrakraniální hypertenze (zvýšený tlak uvnitř lebky); při těchto příznacích přestaňte mesalazin užívat a okamžitě vyhledejte lékařskou pomoc",
-      "action": "hospitalize_NOW",
+      "label": "Idiopatická nitrolební hypertenze; frekvenci nelze z dostupných údajů určit. Může se projevit silnou nebo opakující se bolestí hlavy, poruchami vidění nebo zvoněním či hučením v uších.",
+      "action": "emergency",
       "action_condition": {
-        "patient_guide": "Pokud máte silnou nebo opakující se bolest hlavy, poruchy vidění nebo zvonění či hučení v uších"
+        "patient_guide": "Při silné nebo opakující se bolesti hlavy, poruchách vidění nebo zvonění či hučení v uších.",
+        "min_severity": 1
       }
+    },
+    {
+      "ctcae": "Renal colic",
+      "frequency": "not_known",
+      "label": "Bolest ledvin související s ledvinovými kameny; frekvenci nelze z dostupných údajů určit.",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSAID)",
-      "effect": "Současné užívání mesalazinu s NSAID může zvýšit riziko nežádoucích účinků na ledviny. Lékař může častěji kontrolovat funkci ledvin.",
+      "class_id": "group:nephrotoxic",
+      "drug_class": "Jiné známé látky poškozující ledviny",
+      "effect": "Současné užívání mesalazinu s jinými známými látkami poškozujícími ledviny, například s nesteroidními protizánětlivými léky nebo azathioprinem, může zvýšit riziko nežádoucích účinků na ledviny. Lékař může častěji sledovat funkci ledvin.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "Azathioprin",
-      "effect": "Současné užívání mesalazinu s azathioprinem může zvýšit riziko nežádoucích účinků na ledviny. Může také zvýšit riziko útlumu krvetvorby; lékař bude pravidelně sledovat počet bílých krvinek.",
+      "class_id": "substance:9268",
+      "drug": "AZATHIOPRINUM",
+      "effect": "Současné užívání mesalazinu s azathioprinem může zvýšit riziko útlumu kostní dřeně a nežádoucích účinků na ledviny. Lékař má pravidelně sledovat bílé krvinky a podle výsledků upravit dávkování azathioprinu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko útlumu krvetvorby (myelosuprese)",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Thiopuriny: 6-merkaptopurin nebo thioguanin",
-      "effect": "Současné užívání mesalazinu s 6-merkaptopurinem nebo thioguaninem může zvýšit riziko útlumu krvetvorby. Lékař bude pravidelně sledovat počet bílých krvinek a podle výsledků může upravit dávkování thiopurinu.",
+      "class_id": "substance:9268",
+      "drug": "MERCAPTOPURINUM",
+      "effect": "Současné užívání mesalazinu s 6-merkaptopurinem může zvýšit riziko útlumu kostní dřeně. Lékař má pravidelně sledovat bílé krvinky a podle výsledků upravit dávkování thiopurinu.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Blood and lymphatic system disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko útlumu krvetvorby (myelosuprese)",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Warfarin",
-      "effect": "Mesalazin by mohl oslabit protisrážlivý účinek warfarinu, avšak důkazy pro tuto interakci jsou slabé.",
+      "class_id": "substance:9268",
+      "drug": "THIOGUANINUM",
+      "effect": "Současné užívání mesalazinu s thioguaninem může zvýšit riziko útlumu kostní dřeně. Lékař má pravidelně sledovat bílé krvinky a podle výsledků upravit dávkování thiopurinu.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:9268",
+      "drug": "WARFARINUM",
+      "effect": "Mesalazin může oslabit antikoagulační účinek warfarinu, ale důkaz pro tuto interakci je slabý.",
       "effect_type": "antagonism",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Pentasa Prolong obsahuje mesalazin a používá se k léčbě Crohnovy choroby a ulcerózní kolitidy.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0247412",
+      "H": "",
+      "NAZEV": "PENTASA PROLONG",
+      "SILA": "500MG",
+      "FORMA": "TBL PRO",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG TBL PRO 100",
+      "OBAL": "BLI",
+      "DRZ": "FRL",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "29",
+      "ATC_WHO": "A07EC02",
+      "RC": "29/014/95-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "1,5",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "33,3333",
+      "ZDROJ_WHO": "NO26",
+      "LL": "9268",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "PENTASA PROLONG",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "N",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0247412",
+        "KOD_LATKY": "9268",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9268",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "MESALAZINUM",
+          "NAZEV_EN": "MESALAZINE",
+          "NAZEV": "MESALAZIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0247412",
+        "KOD_LATKY": "1168",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0247412",
+        "KOD_LATKY": "4065",
+        "SQ": "3",
+        "S": "X",
+        "AMNT_OD": "PL",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4065",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ETHYLCELLULOSUM",
+          "NAZEV_EN": "ETHYLCELLULOSE",
+          "NAZEV": "ETHYLCELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0247412",
+        "KOD_LATKY": "2378",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0247412",
+        "KOD_LATKY": "1871",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0247412",
+        "KOD_LATKY": "3755",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0247412",
+      "PIL": "PI218700.pdf",
+      "DAT_ROZ_PIL": "04.02.2025",
+      "SPC": "SPC236184.pdf",
+      "DAT_ROZ_SPC": "04.02.2025",
+      "OBAL_TEXT": "OBAL152908.pdf",
+      "DAT_ROZ_OBAL": "30.01.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A07EC02",
+        "NT": "N",
+        "NAZEV": "MESALAZIN",
+        "NAZEV_EN": "MESALAZINE"
+      },
+      "formy": {
+        "FORMA": "TBL PRO",
+        "NAZEV": "Tableta s prodlouženým uvolňováním",
+        "NAZEV_EN": "Prolonged-release tablet",
+        "NAZEV_LAT": "Tabuletta cum liberatione prolongata",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10226000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

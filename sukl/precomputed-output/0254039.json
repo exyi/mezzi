@@ -1,0 +1,472 @@
+{
+  "classes": [
+    "atc:N",
+    "atc:N02",
+    "atc:N02B",
+    "atc:N02BB",
+    "atc:N02BB02",
+    "group:cyp3a4_inducer",
+    "substance:990"
+  ],
+  "side_effects": [
+    {
+      "ctcae": "Aplastic anemia",
+      "frequency": "rare",
+      "label": "Aplastická anémie.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Agranulocytóza, tedy výrazný pokles určitého typu bílých krvinek; může se objevit kdykoli během léčby i krátce po jejím ukončení a může vést k závažné infekci.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při horečce, zimnici, bolesti v krku nebo bolestivých vředech na sliznicích, zejména v ústech, nose, krku, v oblasti pohlavních orgánů nebo konečníku.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Pancytopenie, tedy pokles počtu všech typů krvinek.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Při celkové slabosti, infekci, přetrvávající horečce, modřinách, krvácení nebo bledosti.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "White blood cell decreased",
+      "frequency": "rare",
+      "label": "Snížení počtu bílých krvinek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Thrombocytopenia",
+      "frequency": "rare",
+      "label": "Snížení počtu krevních destiček; může se projevit zvýšeným sklonem ke krvácení nebo drobnými červenohnědými skvrnkami na kůži či sliznicích.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "rare",
+      "label": "Alergické reakce mohou zahrnovat svědění, pálení, zarudnutí, kopřivku, otoky, dušnost a méně často zažívací potíže; mohou přejít do závažné reakce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "rare",
+      "label": "Závažná alergická reakce včetně anafylaktického šoku; může zahrnovat rozsáhlou kopřivku, otok obličeje, jazyka či hrdla, těžkou dušnost, poruchu srdečního rytmu a pokles tlaku až šok. Obvykle vzniká během první hodiny po užití, ale může nastat okamžitě nebo až po několika hodinách.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Kounisův syndrom, srdeční onemocnění alergického původu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypotension",
+      "frequency": "not_known",
+      "label": "Přechodný, ojediněle kritický pokles krevního tlaku bez dalších známek alergické reakce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "not_known",
+      "label": "Poškození jater včetně akutního zánětu jater; může se objevit několik dnů až několik měsíců po zahájení léčby.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Při nevolnosti nebo zvracení, horečce, únavě, ztrátě chuti k jídlu, tmavé moči, světlé stolici, zežloutnutí kůže či očí, svědění, vyrážce nebo bolesti v nadbřišku.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": null,
+      "frequency": "not_known",
+      "label": "Zežloutnutí kůže nebo očního bělma.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Pokud se objeví spolu s dalšími známkami možného poškození jater, například tmavou močí, světlou stolicí, únavou nebo bolestí v nadbřišku.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": null,
+      "frequency": "not_known",
+      "label": "Zvýšení hodnot jaterních enzymů v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "rare",
+      "label": "Vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": null,
+      "frequency": "not_known",
+      "label": "Fixní lékový exantém.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "not_known",
+      "label": "Stevensův–Johnsonův syndrom; může se projevit červenými, nevystouplými skvrnami, puchýři, olupováním kůže a vřídky na sliznicích, někdy s horečkou nebo příznaky podobnými chřipce.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Při červených skvrnách s puchýři, olupování kůže nebo vřídcích v ústech, krku, nose, na pohlavních orgánech či v očích.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "not_known",
+      "label": "Toxická epidermální nekrolýza; může se projevit červenými, nevystouplými skvrnami, puchýři, olupováním kůže a vřídky na sliznicích, někdy s horečkou nebo příznaky podobnými chřipce.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Při červených skvrnách s puchýři, olupování kůže nebo vřídcích v ústech, krku, nose, na pohlavních orgánech či v očích.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": null,
+      "frequency": "not_known",
+      "label": "Poléková reakce s eozinofilií a systémovými příznaky (DRESS); může se projevit rozsáhlou vyrážkou, zvýšenou teplotou a zvětšenými lymfatickými uzlinami.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": "Při rozsáhlé vyrážce spolu se zvýšenou tělesnou teplotou a zvětšenými lymfatickými uzlinami.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Acute kidney injury",
+      "frequency": "very_rare",
+      "label": "Zhoršení funkce ledvin až akutní selhání ledvin; někdy se může projevit sníženou nebo zastavenou tvorbou moči či bílkovinou v moči.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tubulointerstitial nephritis",
+      "frequency": "not_known",
+      "label": "Zánět ledvin (intersticiální nefritida).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Urine discoloration",
+      "frequency": null,
+      "label": "Červené zabarvení moči po velmi vysokých dávkách; způsobuje ho neškodný metabolit a po přerušení léčby vymizí.",
+      "action": null,
+      "action_condition": null
+    }
+  ],
+  "combinations": [
+    {
+      "class_id": "substance:3813",
+      "drug": "BUPROPION-HYDROCHLORID",
+      "effect": "Metamizol může indukcí metabolizujících enzymů včetně CYP2B6 a CYP3A4 snížit plazmatickou koncentraci bupropionu a tím jeho klinickou účinnost. Lékař má podle potřeby sledovat klinickou odpověď a/nebo hladinu léku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:15485",
+      "drug": "EFAVIRENZ",
+      "effect": "Metamizol může indukcí metabolizujících enzymů včetně CYP2B6 a CYP3A4 snížit plazmatickou koncentraci efavirenzu a tím jeho klinickou účinnost. Lékař má podle potřeby sledovat klinickou odpověď a/nebo hladinu léku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1786",
+      "drug": "METHADON-HYDROCHLORID",
+      "effect": "Metamizol může indukcí metabolizujících enzymů včetně CYP2B6 a CYP3A4 snížit plazmatickou koncentraci methadonu a tím jeho klinickou účinnost. Lékař má podle potřeby sledovat klinickou odpověď a/nebo hladinu léku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1939",
+      "drug": "NATRIUM-VALPROÁT",
+      "effect": "Metamizol může indukcí metabolizujících enzymů včetně CYP2B6 a CYP3A4 snížit plazmatickou koncentraci valproátu a tím jeho klinickou účinnost. Lékař má podle potřeby sledovat klinickou odpověď a/nebo hladinu léku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:4294",
+      "drug": "CYKLOSPORIN",
+      "effect": "Metamizol může indukcí metabolizujících enzymů včetně CYP2B6 a CYP3A4 snížit plazmatickou koncentraci cyklosporinu a tím jeho klinickou účinnost. Lékař má podle potřeby sledovat klinickou odpověď a/nebo hladinu léku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:16808",
+      "drug": "MONOHYDRÁT TAKROLIMU",
+      "effect": "Metamizol může indukcí metabolizujících enzymů včetně CYP2B6 a CYP3A4 snížit plazmatickou koncentraci takrolimu a tím jeho klinickou účinnost. Lékař má podle potřeby sledovat klinickou odpověď a/nebo hladinu léku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:13950",
+      "drug": "SERTRALIN-HYDROCHLORID",
+      "effect": "Metamizol může indukcí metabolizujících enzymů včetně CYP2B6 a CYP3A4 snížit plazmatickou koncentraci sertralinu a tím jeho klinickou účinnost. Lékař má podle potřeby sledovat klinickou odpověď a/nebo hladinu léku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:1746",
+      "drug": "METHOTREXÁT",
+      "effect": "Přidání metamizolu k methotrexátu může zesílit jeho toxický účinek na krvetvorbu, zejména u starších pacientů; této kombinaci je třeba se vyhnout.",
+      "effect_type": "increased_toxicity",
+      "side_effects": [
+        {
+          "ctcae": "Blood and lymphatic system disorders - Other, specify",
+          "frequency": null,
+          "label": "Zesílení škodlivého účinku methotrexátu na krvetvorbu, zejména u starších pacientů.",
+          "action": null,
+          "action_condition": null
+        }
+      ]
+    },
+    {
+      "class_id": "substance:12",
+      "drug": "KYSELINA ACETYLSALICYLOVÁ",
+      "effect": "Metamizol může při současném užívání snížit účinek kyseliny acetylsalicylové na shlukování krevních destiček. Opatrnost je potřebná zejména u pacientů, kteří užívají nízkou dávku aspirinu k prevenci srdečních příhod.",
+      "effect_type": "antagonism",
+      "side_effects": []
+    }
+  ],
+  "usage": "Novalgin zmírňuje silnou náhlou nebo přetrvávající bolest a horečku, která nereaguje na jinou léčbu.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0254039",
+      "H": "",
+      "NAZEV": "NOVALGIN",
+      "SILA": "500MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "50",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG TBL FLM 50",
+      "OBAL": "BLI",
+      "DRZ": "OHC",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "07",
+      "ATC_WHO": "N02BB02",
+      "RC": "07/447/00-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "3",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "8,3333",
+      "ZDROJ_WHO": "NO26",
+      "LL": "990",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "NOVALGIN",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0254039",
+        "KOD_LATKY": "990",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "990",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "METAMIZOLUM NATRICUM MONOHYDRICUM",
+          "NAZEV_EN": "METAMIZOLE SODIUM MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT SODNÉ SOLI METAMIZOLU"
+        }
+      },
+      {
+        "KOD_SUKL": "0254039",
+        "KOD_LATKY": "2404",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2404",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 4000",
+          "NAZEV_EN": "MACROGOL 4000",
+          "NAZEV": "MAKROGOL 4000"
+        }
+      },
+      {
+        "KOD_SUKL": "0254039",
+        "KOD_LATKY": "2378",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0254039",
+        "SQ": "4",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0254039",
+        "KOD_LATKY": "5504",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5504",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910",
+          "NAZEV_EN": "HYPROMELLOSE 2910",
+          "NAZEV": "HYPROMELOSA 2910"
+        }
+      },
+      {
+        "KOD_SUKL": "0254039",
+        "KOD_LATKY": "1271",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1271",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "SACCHARINUM NATRICUM DIHYDRICUM",
+          "NAZEV_EN": "SACCHARIN SODIUM DIHYDRATE",
+          "NAZEV": "DIHYDRÁT SODNÉ SOLI SACHARINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0254039",
+        "KOD_LATKY": "4688",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4688",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 8000",
+          "NAZEV_EN": "MACROGOL 8000",
+          "NAZEV": "MAKROGOL 8000"
+        }
+      },
+      {
+        "KOD_SUKL": "0254039",
+        "KOD_LATKY": "1871",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0254039",
+        "KOD_LATKY": "2710",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0254039",
+      "PIL": "PI218201.pdf",
+      "DAT_ROZ_PIL": "23.01.2025",
+      "SPC": "SPC218202.pdf",
+      "DAT_ROZ_SPC": "23.01.2025",
+      "OBAL_TEXT": "OBAL204669.pdf",
+      "DAT_ROZ_OBAL": "09.11.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N02BB02",
+        "NT": "N",
+        "NAZEV": "SODNÁ SŮL METAMIZOLU",
+        "NAZEV_EN": "METAMIZOLE SODIUM"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
+}

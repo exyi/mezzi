@@ -1,4 +1,13 @@
 {
+  "classes": [
+    "atc:N",
+    "atc:N06",
+    "atc:N06D",
+    "atc:N06DA",
+    "atc:N06DA02",
+    "group:qt_prolonging",
+    "substance:17598"
+  ],
   "side_effects": [
     {
       "ctcae": "Diarrhea",
@@ -38,7 +47,7 @@
     {
       "ctcae": "Insomnia",
       "frequency": "common",
-      "label": "Nespavost a poruchy spánku",
+      "label": "Nespavost",
       "action": null,
       "action_condition": null
     },
@@ -59,7 +68,7 @@
     {
       "ctcae": "Hallucinations",
       "frequency": "common",
-      "label": "Halucinace, tedy vidění nebo slyšení věcí, které nejsou skutečné",
+      "label": "Halucinace, například vidění nebo slyšení věcí, které nejsou skutečné",
       "action": null,
       "action_condition": null
     },
@@ -101,7 +110,7 @@
     {
       "ctcae": "Dyspepsia",
       "frequency": "common",
-      "label": "Nepříjemný pocit v žaludku, porucha trávení",
+      "label": "Nepříjemný pocit v žaludku",
       "action": null,
       "action_condition": null
     },
@@ -113,7 +122,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": null,
       "frequency": "common",
       "label": "Vyrážka",
       "action": null,
@@ -129,7 +138,7 @@
     {
       "ctcae": "Urinary incontinence",
       "frequency": "common",
-      "label": "Samovolný únik moči",
+      "label": "Inkontinence moči",
       "action": null,
       "action_condition": null
     },
@@ -143,65 +152,56 @@
     {
       "ctcae": "Fall",
       "frequency": "common",
-      "label": "Pády",
+      "label": "Úrazy včetně pádů; pacienti mohou být náchylnější k pádům a náhodným poraněním",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Injury, poisoning and procedural complications - Other, specify",
-      "frequency": "common",
-      "label": "Náhodná poranění; pacienti mohou být náchylnější k úrazům",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Sinus bradycardia",
+      "ctcae": "Bradycardia",
       "frequency": "uncommon",
       "label": "Pomalý srdeční tep",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Seizure",
-      "frequency": "uncommon",
-      "label": "Záchvaty nebo křeče",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
       "ctcae": "Gastric ulcer",
       "frequency": "uncommon",
-      "label": "Žaludeční vřed; může se projevit bolestí žaludku nebo poruchou trávení mezi pupkem a hrudní kostí",
+      "label": "Žaludeční nebo dvanácterníkový vřed; může se projevit bolestí žaludku a poruchou trávení mezi pupkem a hrudní kostí. Může postihnout až 1 ze 100 osob.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": "Bolest žaludku nebo porucha trávení mezi pupkem a hrudní kostí",
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": "Duodenal ulcer",
+      "ctcae": "Gastrointestinal hemorrhage",
       "frequency": "uncommon",
-      "label": "Dvanácterníkový vřed; může se projevit bolestí žaludku nebo poruchou trávení mezi pupkem a hrudní kostí",
+      "label": "Krvácení do žaludku nebo střev, které může způsobit černou stolici nebo viditelné krvácení z konečníku. Může postihnout až 1 ze 100 osob.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": "Černá stolice nebo viditelné krvácení z konečníku",
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": "Upper gastrointestinal hemorrhage",
+      "ctcae": "Seizure",
       "frequency": "uncommon",
-      "label": "Krvácení do žaludku nebo střev, které se může projevit černou stolicí nebo viditelným krvácením z konečníku",
+      "label": "Záchvaty nebo křeče; mohou postihnout až 1 ze 100 osob",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Zvýšená tvorba slin",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "uncommon",
-      "label": "Mírné zvýšení koncentrace kreatinkinázy ve svalech v krvi",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Hepatitis",
+      "frequency": "rare",
+      "label": "Poškození jater včetně zánětu jater. Může se projevit nevolností nebo zvracením, ztrátou chuti k jídlu, celkovým pocitem špatného zdravotního stavu, horečkou, svěděním, zežloutnutím kůže a očí nebo tmavou močí. Může postihnout až 1 z 1 000 osob.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Nevolnost nebo zvracení, ztráta chuti k jídlu, celkový pocit špatného zdravotního stavu, horečka, svědění, zežloutnutí kůže a očí nebo tmavá moč",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Extrapyramidal disorder",
@@ -213,195 +213,388 @@
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "rare",
-      "label": "Porucha srdečního rytmu",
+      "label": "Poruchy srdečního rytmu",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Sinoatriální blokáda",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Atrioventrikulární blokáda",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "rare",
-      "label": "Poškození jater včetně hepatitidy (zánětu jater)",
-      "action": "contact_doctor",
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
+      "ctcae": "Neuroleptic malignant syndrome",
       "frequency": "very_rare",
-      "label": "Neuroleptický maligní syndrom: horečka spolu se svalovou ztuhlostí, pocením nebo poruchou vědomí",
-      "action": "contact_doctor",
-      "action_condition": null
+      "label": "Neuroleptický maligní syndrom: horečka současně se svalovou ztuhlostí, pocením nebo poruchou vědomí; může postihnout až 1 z 10 000 osob",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Horečka současně se svalovou ztuhlostí, pocením nebo poruchou vědomí",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Rhabdomyolysis",
       "frequency": "very_rare",
-      "label": "Rozpad svalů, který se může projevit slabostí, citlivostí nebo bolestí svalů, zejména při současné nevolnosti, vysoké teplotě nebo tmavé moči; případy byly hlášeny v časové souvislosti se zahájením léčby nebo zvýšením dávky",
+      "label": "Rozpad svalstva, který může vést k onemocnění ledvin a ohrožovat na životě; slabost, citlivost nebo bolest svalů, zejména pokud se současně necítíte dobře, máte vysokou teplotu nebo tmavou moč. Hlášeno nezávisle na neuroleptickém maligním syndromu a v úzké časové souvislosti se zahájením léčby nebo zvýšením dávky; může postihnout až 1 z 10 000 osob.",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": "Slabost, citlivost nebo bolest svalů, zejména pokud se současně necítíte dobře, máte vysokou teplotu nebo tmavou moč",
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "not_known",
-      "label": "Prodloužení QT intervalu, které lze pozorovat na EKG",
+      "label": "Prodloužení QT intervalu na EKG; četnost nelze z dostupných údajů odhadnout",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Libido increased",
+      "frequency": "not_known",
+      "label": "Zvýšené libido nebo hypersexualita; četnost nelze z dostupných údajů odhadnout",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Musculoskeletal deformity",
+      "frequency": "not_known",
+      "label": "Pisa syndrom: mimovolní stahy svalů s abnormálním ohnutím těla a hlavy na jednu stranu; četnost nelze z dostupných údajů odhadnout",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Ventricular tachycardia",
       "frequency": "not_known",
-      "label": "Polymorfní komorová tachykardie včetně torsade de pointes; může se projevit zrychleným nepravidelným tepem a mdlobami",
+      "label": "Zrychlený nebo nepravidelný srdeční tep a mdloby, které mohou být příznakem torsade de pointes; četnost nelze z dostupných údajů odhadnout",
       "action": "contact_doctor",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": "Zrychlený nebo nepravidelný srdeční tep nebo mdloby",
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": "Libido increased",
-      "frequency": "not_known",
-      "label": "Zvýšené libido včetně hypersexuality",
+      "ctcae": "Sialorrhea",
+      "frequency": "uncommon",
+      "label": "Zvýšená tvorba slin",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Extrapyramidal disorder",
-      "frequency": "not_known",
-      "label": "Pisa syndrom: mimovolní stahy svalů s abnormálním ohnutím těla a hlavy na jednu stranu",
+      "ctcae": "Creatine kinase increased",
+      "frequency": "uncommon",
+      "label": "Mírné zvýšení koncentrace svalové kreatinkinázy v krvi",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Léčivé přípravky prodlužující QTc interval: antiarytmika třídy IA nebo III, některá antidepresiva, antipsychotika a antibiotika uvedená ve SPC",
-      "effect": "Donepezil byl spojován s prodloužením QTc intervalu a torsade de pointes. Při současném užívání s těmito léky se doporučuje opatrnost; může být potřeba klinické sledování včetně EKG.",
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léky prodlužující QT interval",
+      "effect": "Donepezil může při kombinaci s léky prodlužujícími QT interval zvyšovat riziko prodloužení QT a torsade de pointes; může být nutné klinické sledování EKG. Příklady jsou některá antiarytmika, antidepresiva, antipsychotika a antibiotika.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Prodloužení QT intervalu",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Ventricular tachycardia",
-          "frequency": null,
-          "label": "Torsade de pointes",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Inhibitory CYP3A4, například ketokonazol, itrakonazol a erythromycin",
-      "effect": "Tyto léky mohou zpomalit metabolismus donepezilu a zvýšit jeho koncentraci. Ketokonazol zvýšil průměrné koncentrace donepezilu přibližně o 30 %. Význam tohoto vlivu není znám, proto se kombinace používá opatrně.",
+      "class_id": "group:cyp3a4_inhibitor",
+      "drug_class": "Inhibitory CYP3A4",
+      "effect": "Ketokonazol, itrakonazol a erythromycin mohou zpomalit odbourávání donepezilu a zvýšit jeho koncentraci; u ketokonazolu se u zdravých dobrovolníků zvýšila průměrná koncentrace přibližně o 30 %. Význam vlivu není znám, proto se kombinace používá opatrně.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory CYP2D6, například fluoxetin a chinidin",
-      "effect": "Tyto léky mohou zpomalit metabolismus donepezilu a zvýšit jeho koncentraci. Význam tohoto vlivu není znám, proto se kombinace používá opatrně.",
+      "class_id": "group:cyp2d6_inhibitor",
+      "drug_class": "Inhibitory CYP2D6",
+      "effect": "Chinidin a fluoxetin mohou zpomalit odbourávání donepezilu a zvýšit jeho koncentraci. Význam vlivu není znám, proto se kombinace používá opatrně.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Induktory enzymů, například rifampicin, fenytoin a karbamazepin",
-      "effect": "Tyto léky mohou snížit hladinu donepezilu. Význam tohoto vlivu není znám, proto se kombinace používá opatrně.",
+      "class_id": "group:cyp3a4_inducer",
+      "drug_class": "Léky indukující enzymy",
+      "effect": "Rifampicin, fenytoin, karbamazepin a alkohol mohou snížit hladinu donepezilu; význam vlivu není znám, proto se kombinace používá opatrně.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "alkohol",
-      "effect": "Alkohol může snižovat hladinu a účinek donepezilu; přípravek Donepezil Accord se proto nemá užívat s alkoholem.",
-      "effect_type": "decreased_exposure",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Nesteroidní protizánětlivé léky (NSAID)",
-      "effect": "U pacientů, kteří současně užívají NSAID, stejně jako u pacientů s dřívějším vředovým onemocněním, se mají sledovat příznaky žaludečních nebo dvanácterníkových vředů. Klinické studie s donepezilem však neprokázaly zvýšení výskytu vředů ani krvácení do zažívacího traktu.",
+      "class_id": null,
+      "drug_class": "Léky s anticholinergním účinkem",
+      "effect": "Donepezil může interagovat s léky s anticholinergním účinkem; přesná velikost ani klinický význam této interakce nejsou známy.",
       "effect_type": null,
-      "side_effects": [
-        {
-          "ctcae": "Gastric ulcer",
-          "frequency": null,
-          "label": "Žaludeční vřed",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Duodenal ulcer",
-          "frequency": null,
-          "label": "Dvanácterníkový vřed",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Upper gastrointestinal hemorrhage",
-          "frequency": null,
-          "label": "Krvácení do zažívacího traktu",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:N06DA",
       "drug_class": "Jiné inhibitory acetylcholinesterázy",
-      "effect": "Současné podávání jiných inhibitorů acetylcholinesterázy s donepezilem se má vyhnout.",
+      "effect": "Současnému užívání donepezilu s jinými inhibitory acetylcholinesterázy je třeba se vyhnout.",
       "effect_type": null,
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Cholinergní agonisté",
-      "effect": "Současné podávání cholinergních agonistů s donepezilem se má vyhnout.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Cholinergní antagonisté",
-      "effect": "Současné podávání cholinergních antagonistů s donepezilem se má vyhnout.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug_class": "Léky s anticholinergní aktivitou",
-      "effect": "Donepezil může interagovat s léky s anticholinergní aktivitou; konkrétní klinický účinek této interakce není uveden.",
-      "effect_type": null,
-      "side_effects": []
-    },
-    {
-      "drug": "sukcinylcholin",
-      "effect": "Donepezil může během anestezie prohloubit svalovou relaxaci sukcinylcholinového typu.",
+      "effect": "Současnému užívání donepezilu s cholinergními agonisty je třeba se vyhnout; může také dojít k zesílení jejich účinku.",
       "effect_type": "synergy",
       "side_effects": []
     },
     {
-      "drug_class": "Další látky blokující nervosvalový přenos",
-      "effect": "Donepezil může mít s těmito látkami synergický účinek.",
+      "class_id": "atc:M03AB01",
+      "drug_class": "Suxamethonium",
+      "effect": "Donepezil může při anestezii prohloubit svalovou relaxaci vyvolanou sukcinylcholinovým typem léčiv. Při současném použití sukcinylcholinu je možné synergické působení.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug_class": "Léky blokující nervosvalový přenos",
+      "effect": "Při současné léčbě donepezilem může dojít k synergickému působení; přípravek může ovlivnit potřebné množství anestetik.",
       "effect_type": "synergy",
       "side_effects": []
     },
     {
+      "class_id": "group:qt_prolonging",
       "drug_class": "Beta-blokátory ovlivňující srdeční vedení",
-      "effect": "Při současném užívání s donepezilem může vzniknout synergický účinek na srdeční vedení.",
+      "effect": "Při současné léčbě donepezilem může dojít k synergickému působení na srdeční vedení.",
       "effect_type": "synergy",
       "side_effects": []
     },
     {
-      "drug_class": "Celková anestetika",
-      "effect": "Donepezil může ovlivnit množství anestetik potřebné při celkové anestezii. Před operací je třeba informovat lékaře a anesteziologa, že pacient užívá donepezil.",
-      "effect_type": null,
+      "class_id": "atc:M01A",
+      "drug_class": "Nesteroidní protizánětlivé léky (NSAID)",
+      "effect": "Při užívání NSAID spolu s donepezilem je třeba sledovat příznaky žaludečních nebo dvanácterníkových vředů, zejména pokud jste v minulosti měl(a) vředové onemocnění.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se k léčbě příznaků mírné až středně závažné Alzheimerovy demence u dospělých.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0241633",
+      "H": "",
+      "NAZEV": "DONEPEZIL ACCORD",
+      "SILA": "10MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "56",
+      "CESTA": "POR",
+      "DOPLNEK": "10MG TBL FLM 56",
+      "OBAL": "BLI",
+      "DRZ": "AHP",
+      "ZEMDRZ": "PL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "06",
+      "ATC_WHO": "N06DA02",
+      "RC": "06/080/10-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "7,5",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "74,6667",
+      "ZDROJ_WHO": "NO26",
+      "LL": "17598",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "0",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "DONEPEZIL ACCORD",
+      "MRP_CISLO": "SE/H/0756/002",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0241633",
+        "KOD_LATKY": "17598",
+        "SQ": "1",
+        "S": "L",
+        "UN": "QS",
+        "substance": {
+          "KOD_LATKY": "17598",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "DONEPEZILI HYDROCHLORIDUM MONOHYDRICUM",
+          "NAZEV_EN": "DONEPEZIL HYDROCHLORIDE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT DONEPEZIL-HYDROCHLORIDU"
+        }
+      },
+      {
+        "KOD_SUKL": "0241633",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0241633",
+        "KOD_LATKY": "14838",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "10",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14838",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "DONEPEZILI HYDROCHLORIDUM",
+          "NAZEV_EN": "DONEPEZIL HYDROCHLORIDE",
+          "NAZEV": "DONEPEZIL-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0241633",
+        "KOD_LATKY": "2624",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0241633",
+        "KOD_LATKY": "2970",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0241633",
+        "KOD_LATKY": "3755",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0241633",
+        "KOD_LATKY": "4873",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4873",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "HYPROLOSUM SUBSTITUTUM HUMILE",
+          "NAZEV_EN": "HYPROLOSE, LOW-SUBSTITUTED",
+          "NAZEV": "ČÁSTEČNĚ SUBSTITUOVANÁ HYPROLOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0241633",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0241633",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0241633",
+        "KOD_LATKY": "18543",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "18543",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FLAVUM OPADRY 03B32654",
+          "NAZEV_EN": "OPADRY 03B32654 (YELLOW)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPADRY 03B32654 ŽLUTÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0241633",
+      "PIL": "PI215542.pdf",
+      "DAT_ROZ_PIL": "05.11.2024",
+      "SPC": "SPC205516.pdf",
+      "DAT_ROZ_SPC": "05.12.2023",
+      "OBAL_TEXT": "OBAL205514.pdf",
+      "DAT_ROZ_OBAL": "05.12.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "N06DA02",
+        "NT": "N",
+        "NAZEV": "DONEPEZIL",
+        "NAZEV_EN": "DONEPEZIL"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:M",
+    "atc:M01",
+    "atc:M01A",
+    "atc:M01AB",
+    "atc:M01AB05",
+    "substance:14630"
+  ],
   "side_effects": [
     {
       "ctcae": "Nausea",
@@ -59,19 +67,22 @@
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závrať.",
+      "label": "Závrať. Pokud se objeví, neřiďte a neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rash maculo-papular",
       "frequency": "common",
-      "label": "Vyrážka.",
+      "label": "Vyrážka; při vyrážce ihned přestaňte přípravek užívat a informujte lékaře.",
       "action": "discontinue_treatment",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "common",
       "label": "Zvýšené hodnoty jaterních enzymů (aminotransferáz).",
       "action": null,
@@ -85,77 +96,63 @@
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Gastrointestinal hemorrhage",
       "frequency": "rare",
-      "label": "Krvácení do žaludku nebo střev.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví neobvyklé zažívací potíže, jako je bolest nebo pálení žáhy, krvácení, krev ve stolici nebo černá stolice"
-      }
+      "label": "Krvácení do žaludku nebo střev; u starších osob může být závažnější.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Gastric ulcer",
       "frequency": "rare",
-      "label": "Žaludeční vřed, s krvácením nebo bez něj.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví neobvyklé zažívací potíže, jako je bolest nebo pálení žáhy, krvácení, krev ve stolici nebo černá stolice"
-      }
+      "label": "Žaludeční nebo dvanáctníkový vřed, s krvácením či bez něj.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Duodenal ulcer",
+      "ctcae": "Gastric perforation",
       "frequency": "rare",
-      "label": "Dvanáctníkový vřed, s krvácením nebo bez něj.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví neobvyklé zažívací potíže, jako je bolest nebo pálení žáhy, krvácení, krev ve stolici nebo černá stolice"
-      }
-    },
-    {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Proděravění (perforace) trávicího traktu.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví neobvyklé zažívací potíže, jako je bolest nebo pálení žáhy, krvácení, krev ve stolici nebo černá stolice"
-      }
+      "label": "Proděravění trávicího traktu.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Hematemesis",
       "frequency": "rare",
       "label": "Zvracení krve.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zvracení krve nebo jiné neobvyklé zažívací potíže"
-      }
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Hematochezia",
       "frequency": "rare",
-      "label": "Krev ve stolici, včetně krvavého průjmu.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví krev ve stolici nebo krvavý průjem"
-      }
+      "label": "Krev ve stolici nebo krvavý průjem.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Melena",
       "frequency": "rare",
       "label": "Černá, dehtovitá stolice obsahující natrávenou krev.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví černá stolice nebo jiné neobvyklé zažívací potíže"
-      }
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Hepatitis",
+      "frequency": "rare",
+      "label": "Zánět jater.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood bilirubin increased",
       "frequency": "rare",
       "label": "Žloutenka.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Hepatic disorders - Other, specify",
       "frequency": "rare",
       "label": "Poškození jater.",
       "action": null,
@@ -164,7 +161,7 @@
     {
       "ctcae": "Somnolence",
       "frequency": "rare",
-      "label": "Ospalost nebo snížená bdělost.",
+      "label": "Ospalost nebo snížená bdělost; pokud se objeví, neřiďte a neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
@@ -178,61 +175,40 @@
     {
       "ctcae": "Allergic reaction",
       "frequency": "rare",
-      "label": "Reakce z přecitlivělosti, která může zahrnovat potíže s dýcháním, náhlý otok kolem očí, nízký krevní tlak nebo šok.",
+      "label": "Reakce z přecitlivělosti, která může zahrnovat obtíže s dechem, náhlý otok kolem očí, nízký krevní tlak nebo šok.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
+      "ctcae": "Asthma",
       "frequency": "rare",
-      "label": "Astma, někdy s dušností.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dyspnea",
-      "frequency": "rare",
-      "label": "Dušnost.",
+      "label": "Astma, včetně dušnosti.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Anemia",
       "frequency": "very_rare",
-      "label": "Anemie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hemolytic anemia",
-      "frequency": "very_rare",
-      "label": "Hemolytická anemie.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Aplastic anemia",
-      "frequency": "very_rare",
-      "label": "Aplastická anemie.",
+      "label": "Anémie.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Thrombocytopenia",
       "frequency": "very_rare",
-      "label": "Snížení počtu krevních destiček.",
+      "label": "Snížený počet krevních destiček.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "White blood cell decreased",
       "frequency": "very_rare",
-      "label": "Snížení počtu bílých krvinek.",
+      "label": "Snížený počet bílých krvinek.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "ctcae": "Agranulocytosis",
       "frequency": "very_rare",
       "label": "Agranulocytóza.",
       "action": null,
@@ -241,7 +217,7 @@
     {
       "ctcae": "Edema face",
       "frequency": "very_rare",
-      "label": "Otok obličeje (angioneurotický edém).",
+      "label": "Otok obličeje.",
       "action": null,
       "action_condition": null
     },
@@ -262,14 +238,14 @@
     {
       "ctcae": "Insomnia",
       "frequency": "very_rare",
-      "label": "Nespavost a jiné poruchy spánku.",
+      "label": "Nespavost.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": null,
+      "ctcae": "Nightmares",
       "frequency": "very_rare",
-      "label": "Noční můry nebo noční děsy.",
+      "label": "Noční můry.",
       "action": null,
       "action_condition": null
     },
@@ -290,7 +266,7 @@
     {
       "ctcae": "Paresthesia",
       "frequency": "very_rare",
-      "label": "Poruchy čití, například mravenčení nebo brnění.",
+      "label": "Poruchy čití, například brnění.",
       "action": null,
       "action_condition": null
     },
@@ -325,7 +301,7 @@
     {
       "ctcae": "Aseptic meningitis",
       "frequency": "very_rare",
-      "label": "Nehnisavý (aseptický) zánět mozkových blan.",
+      "label": "Nehnisavý zánět mozkových blan.",
       "action": null,
       "action_condition": null
     },
@@ -344,30 +320,30 @@
       "action_condition": null
     },
     {
-      "ctcae": "Eye disorders - Other, specify",
+      "ctcae": "Vision decreased",
       "frequency": "very_rare",
-      "label": "Poruchy zraku.",
+      "label": "Poruchy zraku; pokud se objeví, neřiďte a neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "very_rare",
-      "label": "Rozmazané vidění.",
+      "label": "Rozmazané vidění; pokud se objeví, neřiďte a neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Eye disorders - Other, specify",
+      "ctcae": "Diplopia",
       "frequency": "very_rare",
-      "label": "Dvojité vidění.",
+      "label": "Dvojité vidění; pokud se objeví, neřiďte a neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Tinnitus",
       "frequency": "very_rare",
-      "label": "Zvonění nebo šelest v uších.",
+      "label": "Zvonění v uších.",
       "action": null,
       "action_condition": null
     },
@@ -388,9 +364,12 @@
     {
       "ctcae": "Chest pain - cardiac",
       "frequency": "very_rare",
-      "label": "Bolest na hrudi.",
+      "label": "Bolest na hrudi; může být příznakem závažné alergické reakce zvané Kounisův syndrom. Ihned přestaňte přípravek užívat a informujte lékaře.",
       "action": "discontinue_treatment",
-      "action_condition": null
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     },
     {
       "ctcae": "Heart failure",
@@ -423,14 +402,14 @@
     {
       "ctcae": "Pneumonia",
       "frequency": "very_rare",
-      "label": "Zánět plic.",
+      "label": "Zápal plic.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Colitis",
       "frequency": "very_rare",
-      "label": "Zánět tlustého střeva, včetně hemoragické kolitidy nebo návratu či zhoršení ulcerózní kolitidy či Crohnovy choroby.",
+      "label": "Zánět tlustého střeva, včetně krvácivého zánětu nebo návratu či zhoršení ulcerózní kolitidy či Crohnovy choroby.",
       "action": null,
       "action_condition": null
     },
@@ -442,14 +421,14 @@
       "action_condition": null
     },
     {
-      "ctcae": "Mucositis oral",
+      "ctcae": "Stomatitis",
       "frequency": "very_rare",
-      "label": "Zánět v ústech, někdy s tvorbou vředů.",
+      "label": "Zánět sliznice v ústech, někdy s vředy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "ctcae": "Glossitis",
       "frequency": "very_rare",
       "label": "Zánět jazyka.",
       "action": null,
@@ -458,7 +437,14 @@
     {
       "ctcae": "Esophagitis",
       "frequency": "very_rare",
-      "label": "Postižení nebo zánět jícnu.",
+      "label": "Poškození jícnu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Small intestinal stenosis",
+      "frequency": "very_rare",
+      "label": "Zúžení střeva.",
       "action": null,
       "action_condition": null
     },
@@ -466,20 +452,6 @@
       "ctcae": "Pancreatitis",
       "frequency": "very_rare",
       "label": "Zánět slinivky břišní.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Small intestinal stenosis",
-      "frequency": "very_rare",
-      "label": "Zúžení střev (diafragmatické střevní striktury).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "rare",
-      "label": "Zánět jater.",
       "action": null,
       "action_condition": null
     },
@@ -493,84 +465,7 @@
     {
       "ctcae": "Hepatic necrosis",
       "frequency": "very_rare",
-      "label": "Odúmrť jaterní tkáně.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dermatosis bullous",
-      "frequency": "very_rare",
-      "label": "Puchýřnaté kožní projevy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eczematous dermatitis",
-      "frequency": "very_rare",
-      "label": "Ekzém.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "very_rare",
-      "label": "Zarudnutí kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "very_rare",
-      "label": "Multiformní erytém.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "very_rare",
-      "label": "Stevensův-Johnsonův syndrom, závažná vyrážka s puchýři postihující kůži, ústa, oči nebo pohlavní orgány.",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "very_rare",
-      "label": "Toxická epidermální nekrolýza, rozsáhlá vyrážka s puchýři, zarudnutím a olupováním kůže.",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Exfoliative dermatitis",
-      "frequency": "very_rare",
-      "label": "Exfoliativní zánět kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Alopecia",
-      "frequency": "very_rare",
-      "label": "Vypadávání vlasů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Photosensitivity",
-      "frequency": "very_rare",
-      "label": "Citlivost kůže na sluneční světlo.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Purpura",
-      "frequency": "very_rare",
-      "label": "Purpura, červenofialové skvrny na kůži.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "very_rare",
-      "label": "Svědění kůže.",
+      "label": "Odumření jaterní tkáně.",
       "action": null,
       "action_condition": null
     },
@@ -605,63 +500,70 @@
     {
       "ctcae": "Tubulointerstitial nephritis",
       "frequency": "very_rare",
-      "label": "Intersticiální zánět ledvin.",
+      "label": "Zánět ledvin (intersticiální nefritida).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Renal and urinary disorders - Other, specify",
       "frequency": "very_rare",
-      "label": "Odúmrť tkáně ledvin (papilární nekróza).",
+      "label": "Odumření tkáně ledvin.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Kounisův syndrom: bolest na hrudi spojená se závažnou alergickou reakcí.",
-      "action": "discontinue_treatment",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Colitis",
-      "frequency": "not_known",
-      "label": "Ischemická kolitida.",
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "very_rare",
+      "label": "Stevensův–Johnsonův syndrom, závažná vyrážka s puchýři postihující kůži, ústa, oči nebo pohlavní orgány.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Fixní lékový exantém; při opakovaném užití se obvykle objevuje na stejném místě, může svědit, tvořit puchýře a zanechat tmavší zbarvení kůže.",
-      "action": "discontinue_treatment",
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "very_rare",
+      "label": "Toxická epidermální nekrolýza, rozsáhlá vyrážka s puchýři, zarudnutím a olupováním kůže.",
+      "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Dermatosis bullous",
-      "frequency": "not_known",
-      "label": "Generalizovaný bulózní fixní lékový exantém, závažná alergická kožní reakce s rozsáhlými zarudlými nebo tmavými skvrnami, otokem, puchýři a svěděním.",
-      "action": "discontinue_treatment",
+      "ctcae": "Alopecia",
+      "frequency": "very_rare",
+      "label": "Vypadávání vlasů.",
+      "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Chest pain - cardiac",
-      "frequency": "not_known",
-      "label": "Bolest na hrudi při možné závažné alergické reakci (Kounisův syndrom).",
-      "action": "discontinue_treatment",
+      "ctcae": "Photosensitivity",
+      "frequency": "very_rare",
+      "label": "Citlivost na sluneční světlo.",
+      "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gastrointestinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Mírné křeče a bolestivost břicha, které začnou krátce po zahájení léčby a následně se objeví krvácení z konečníku nebo krvavý průjem, obvykle do 24 hodin od začátku bolesti.",
-      "action": "discontinue_treatment",
+      "ctcae": "Purpura",
+      "frequency": "very_rare",
+      "label": "Červené tečky na kůži (purpura).",
+      "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Peripheral edema",
+      "ctcae": "Pruritus",
+      "frequency": "very_rare",
+      "label": "Svědění kůže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Arterial thromboembolism",
       "frequency": null,
-      "label": "Otoky a zadržování tekutin; byly hlášeny také zadržování solí a zvýšená hladina draslíku v krvi.",
+      "label": "Arteriální trombotické příhody, například infarkt nebo cévní mozková příhoda; riziko se může zvýšit zejména při dlouhodobém užívání vysokých dávek (150 mg denně).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Edema",
+      "frequency": null,
+      "label": "Otoky a zadržování solí a tekutin.",
       "action": null,
       "action_condition": null
     },
@@ -680,253 +582,456 @@
       "action_condition": null
     },
     {
-      "ctcae": "Arterial thromboembolism",
-      "frequency": null,
-      "label": "Zvýšené riziko tepenných krevních sraženin, zejména při dávce 150 mg denně a dlouhodobé léčbě; mohou způsobit infarkt nebo cévní mozkovou příhodu.",
+      "ctcae": "Ischemic colitis",
+      "frequency": "not_known",
+      "label": "Ischemický zánět tlustého střeva.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pregnancy loss",
-      "frequency": null,
-      "label": "Na začátku těhotenství může být zvýšené riziko potratu.",
+      "ctcae": "Cardiac disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Kounisův syndrom, závažná alergická reakce, která může vést k infarktu; může se projevit bolestí na hrudi spolu s alergickou reakcí na diklofenak.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
-      "frequency": null,
-      "label": "Při užívání v těhotenství může být zvýšené riziko srdečních vad a gastroschízy u plodu.",
+      "ctcae": "Gastrointestinal disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Mírné křeče a bolest břicha, které začínají krátce po zahájení léčby a po nichž se obvykle do 24 hodin objeví krvácení z konečníku nebo krvavý průjem; ihned přestaňte přípravek užívat a informujte lékaře.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Fixní lékový exantém: kruhové nebo oválné zarudlé a oteklé skvrny s puchýři a svěděním, které se při opakovaném užití obvykle objeví na stejném místě; může přetrvávat ztmavnutí kůže.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
-      "frequency": null,
-      "label": "Od 20. týdne těhotenství může užívání diklofenaku, zejména po dobu delší než několik dní, způsobit snížení množství plodové vody (oligohydramnion).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pulmonary hypertension",
-      "frequency": null,
-      "label": "V posledním trimestru může u plodu dojít k předčasnému zúžení nebo uzávěru tepenné dučeje a plicní hypertenzi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Renal and urinary disorders - Other, specify",
-      "frequency": null,
-      "label": "Při užívání od 20. týdne těhotenství může diklofenak způsobit poruchu funkce ledvin plodu; v posledním trimestru může přejít v selhání ledvin s nedostatkem plodové vody.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pregnancy, puerperium and perinatal conditions - Other, specify",
-      "frequency": null,
-      "label": "Na konci těhotenství může být prodloužena doba krvácivosti matky i plodu a může se opozdit nebo prodloužit porod.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Ovarian function insufficiency",
-      "frequency": null,
-      "label": "Diklofenak může ovlivnit ovulaci a přechodně zhoršit ženskou plodnost; tento účinek odezní po ukončení léčby.",
-      "action": null,
-      "action_condition": null
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Generalizovaný bulózní fixní lékový exantém: rozsáhlá závažná alergická kožní reakce se zarudlými nebo tmavými skvrnami, otokem, puchýři a svěděním; ihned přestaňte přípravek užívat a informujte lékaře.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Jiná nesteroidní antirevmatika (NSAID), včetně selektivních inhibitorů COX-2",
-      "effect": "Flector se nemá užívat současně s jinými systémově působícími NSAID: není prokázán přínos synergického účinku a mohou se sčítat nežádoucí účinky, zejména zažívací. Lékař má zvážit rizika kombinace.",
+      "class_id": "group:myelosuppressive",
+      "drug_class": "Další nesteroidní protizánětlivé léky včetně selektivních inhibitorů COX-2",
+      "effect": "Flector se nemá užívat společně s jinými systémově působícími nesteroidními protizánětlivými léky, včetně selektivních inhibitorů COX-2: přínos zesíleného účinku není doložen a mohou se sčítat nežádoucí účinky.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "Systémově působící kortikosteroidy",
-      "effect": "Současné užívání s Flectorem může zvýšit četnost nežádoucích účinků v trávicím traktu, včetně vředů a krvácení.",
+      "class_id": "substance:1962",
+      "drug": "sodná sůl diklofenaku",
+      "effect": "Současné užívání jiné lékové formy diklofenaku může zvýšit nežádoucí účinky; v příbalové informaci se současně uvádí, že účinek Flectoru se může při současném užívání přípravků s kyselinou acetylsalicylovou snížit, zatímco SPC uvádí snížení hladiny a účinnosti diklofenaku, ale spíše více nežádoucích účinků. Současné užívání je nevhodné.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko zažívacích nežádoucích účinků, včetně vředů a krvácení do žaludku a střev.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Kyselina acetylsalicylová",
-      "effect": "Kyselina acetylsalicylová snižuje plazmatické hladiny diklofenaku a jeho léčebný účinek, ale nežádoucích účinků může být více; současné užívání je nevhodné.",
-      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Antikoagulancia",
-      "effect": "Při současném užívání s Flectorem může být zvýšené riziko krvácení. Byly hlášeny případy krvácení; lékař má pacienty pečlivě sledovat.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení, včetně krvácení do trávicího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Antiagregační léky",
-      "effect": "Současné užívání s Flectorem může zvýšit riziko krvácení do trávicího traktu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do trávicího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Selektivní inhibitory zpětného vychytávání serotoninu (SSRI)",
-      "effect": "Současné užívání systémově působícího NSAID, včetně Flectoru, a SSRI může zvýšit riziko krvácení do trávicího traktu.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Gastrointestinal disorders - Other, specify",
-          "frequency": null,
-          "label": "Zvýšené riziko krvácení do trávicího traktu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "Methotrexát",
-      "effect": "Příbalová informace uvádí, že se Flector s methotrexátem nesmí užívat současně. Diklofenak může omezit vylučování methotrexátu ledvinami a zvýšit jeho hladinu a toxicitu; zvláštní opatrnost se uvádí také při podání NSAID do 24 hodin před methotrexátem nebo po něm.",
+      "class_id": "substance:1962",
+      "drug": "methotrexát",
+      "effect": "Diklofenak může snížit vylučování methotrexátu ledvinami a zvýšit jeho hladinu a toxicitu. Opatrnost je nutná, pokud se diklofenak podává během 24 hodin před podáním methotrexátu nebo po něm; příbalová informace současné užívání označuje jako zakázané.",
       "effect_type": "contraindicated",
       "side_effects": []
     },
     {
-      "drug": "Lithium",
-      "effect": "Diklofenak může zvýšit koncentraci lithia v krvi; doporučuje se sledovat jeho sérové hladiny.",
+      "class_id": "substance:1962",
+      "drug": "digoxin",
+      "effect": "Diklofenak může zvýšit hladinu digoxinu v krvi; lékař může sledovat jeho hladinu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug": "Digoxin",
-      "effect": "Diklofenak může zvýšit koncentraci digoxinu v krvi; doporučuje se sledovat jeho sérové hladiny.",
+      "class_id": "substance:1962",
+      "drug": "lithium",
+      "effect": "Diklofenak může zvýšit hladinu lithia v krvi; lékař může sledovat jeho hladinu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Diuretika a antihypertenziva, včetně betablokátorů a ACE inhibitorů",
-      "effect": "Flector může snížit jejich účinek na krevní tlak. Lékař má zejména u starších pacientů pravidelně kontrolovat krevní tlak, zajistit přiměřený příjem tekutin a zvážit sledování funkce ledvin po zahájení léčby i v jejím průběhu; při kombinaci s diuretiky nebo ACE inhibitory je zvýšené riziko poškození ledvin.",
+      "class_id": "atc:C03",
+      "drug_class": "Diuretika a léky na vysoký krevní tlak",
+      "effect": "Diklofenak může snížit účinek diuretik a antihypertenziv, včetně betablokátorů a ACE inhibitorů. Při současném užívání, zejména u starších osob, může lékař kontrolovat krevní tlak a funkci ledvin; s kalium šetřícími diuretiky může také stoupnout hladina draslíku.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Kalium šetřící diuretika",
-      "effect": "Při současném užívání s Flectorem se mohou zvýšit hladiny draslíku v krvi, které je třeba často kontrolovat.",
+      "class_id": "atc:M01A",
+      "drug_class": "Systémově působící nesteroidní protizánětlivé léky",
+      "effect": "Současné podávání s diklofenakem může zvýšit výskyt nežádoucích účinků v trávicím ústrojí; kombinace se nedoporučuje.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hyperkalemia",
-          "frequency": null,
-          "label": "Možné zvýšení hladiny draslíku v krvi.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:H02",
+      "drug_class": "Kortikosteroidy",
+      "effect": "Současné užívání s diklofenakem může zvýšit riziko žaludečních a střevních vředů a krvácení.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:B01A",
+      "drug_class": "Antikoagulancia a antiagregancia",
+      "effect": "Současné užívání s diklofenakem může zvýšit riziko krvácení; u antikoagulancií jsou hlášena krvácení a doporučuje se pečlivé lékařské sledování. U antiagregancií se zvyšuje riziko krvácení do trávicího ústrojí.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N06AB",
+      "drug_class": "Selektivní inhibitory zpětného vychytávání serotoninu (SSRI)",
+      "effect": "Současné užívání s diklofenakem může zvýšit riziko krvácení do trávicího ústrojí.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A10",
       "drug_class": "Antidiabetika",
-      "effect": "Klinické studie neukázaly ovlivnění klinického účinku, byly však hlášeny jednotlivé případy nízké i vysoké hladiny cukru v krvi, které vyžadovaly změnu dávkování antidiabetik. Lékař má během současné léčby kontrolovat glykémii a případně upravit dávku antidiabetika.",
+      "effect": "Při současném užívání s diklofenakem byly vzácně popsány nízká i vysoká hladina cukru v krvi, které si vyžádaly změnu dávky antidiabetik; lékař může během léčby sledovat glykémii.",
       "effect_type": "changed_exposure",
       "side_effects": [
         {
           "ctcae": "Hypoglycemia",
           "frequency": null,
-          "label": "Byly hlášeny jednotlivé případy nízké hladiny cukru v krvi.",
+          "label": "Při současném užívání s antidiabetiky byly popsány případy nízké hladiny cukru v krvi.",
           "action": null,
           "action_condition": null
         },
         {
           "ctcae": "Hyperglycemia",
           "frequency": null,
-          "label": "Byly hlášeny jednotlivé případy vysoké hladiny cukru v krvi.",
+          "label": "Při současném užívání s antidiabetiky byly popsány případy vysoké hladiny cukru v krvi.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Cyklosporin",
-      "effect": "Diklofenak může zvýšit nefrotoxicitu cyklosporinu; lékař má podávat nižší dávky diklofenaku než pacientům, kteří cyklosporin neužívají.",
+      "class_id": "substance:14630",
+      "drug": "cyklosporin",
+      "effect": "Diklofenak může zvýšit škodlivý účinek cyklosporinu na ledviny; lékař může zvolit nižší dávku diklofenaku.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Acute kidney injury",
-          "frequency": null,
-          "label": "Zvýšené riziko poškození ledvin.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Chinolonová antibiotika",
-      "effect": "Při současném užívání chinolonů a NSAID, jako je Flector, byla v jednotlivých hlášeních zaznamenána možnost vzniku křečí.",
-      "effect_type": "increased_toxicity",
+      "effect": "Při současném užívání chinolonů a nesteroidních protizánětlivých léků byly ojediněle hlášeny křeče, jejich příčinná souvislost však není jistá.",
+      "effect_type": null,
       "side_effects": [
         {
           "ctcae": "Seizure",
           "frequency": null,
-          "label": "Možné riziko křečí při současném užívání.",
+          "label": "Při současném užívání chinolonového antibiotika s diklofenakem byly ojediněle hlášeny křeče; souvislost není jistá.",
           "action": null,
           "action_condition": null
         }
       ]
     },
     {
-      "drug": "Fenytoin",
-      "effect": "Při současném užívání s diklofenakem se očekává zvýšení expozice fenytoinu; doporučuje se sledovat jeho plazmatické koncentrace.",
+      "class_id": "substance:14630",
+      "drug": "fenytoin",
+      "effect": "Při současném užívání s diklofenakem se může zvýšit expozice fenytoinu; doporučuje se sledovat jeho hladinu v krvi.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Kolestipol a cholestyramin",
-      "effect": "Tyto přípravky mohou zpomalit nebo snížit vstřebávání diklofenaku. Diklofenak se doporučuje užívat nejméně 1 hodinu před nimi nebo 4 až 6 hodin po nich.",
+      "class_id": "substance:14630",
+      "drug": "kolestipol",
+      "effect": "Kolestipol může zpomalit nebo snížit vstřebávání diklofenaku. Doporučuje se užít diklofenak nejméně 1 hodinu před kolestipolem nebo 4 až 6 hodin po něm.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Silné inhibitory CYP2C9, například vorikonazol a sulfinpyrazon",
-      "effect": "Inhibicí metabolismu diklofenaku mohou významně zvýšit jeho maximální plazmatickou koncentraci a celkovou expozici; doporučuje se opatrnost.",
+      "class_id": "substance:14630",
+      "drug": "kolestyramin",
+      "effect": "Kolestyramin může zpomalit nebo snížit vstřebávání diklofenaku. Doporučuje se užít diklofenak nejméně 1 hodinu před kolestyraminem nebo 4 až 6 hodin po něm.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "group:cyp2c9_inhibitor",
+      "drug_class": "Silné inhibitory CYP2C9, například sulfinpyrazon a vorikonazol",
+      "effect": "Silné inhibitory CYP2C9 mohou zpomalit metabolismus diklofenaku a významně zvýšit jeho maximální koncentraci a celkovou expozici; doporučuje se opatrnost.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky obsahující probenecid nebo sulfinpyrazon",
-      "effect": "Tyto přípravky mohou zpomalit vylučování diklofenaku.",
+      "class_id": "substance:14630",
+      "drug": "probenecid",
+      "effect": "Probenecid může zpomalit vylučování diklofenaku.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "substance:14630",
+      "drug": "sulfinpyrazon",
+      "effect": "Sulfinpyrazon může zpomalit vylučování diklofenaku; jako silný inhibitor CYP2C9 může také zvýšit jeho maximální koncentraci a celkovou expozici.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Léčivé přípravky obsahující sorbitol nebo fruktózu a sorbitol či fruktóza v potravě",
-      "effect": "Při kombinaci se může sčítat příjem sorbitolu nebo fruktózy. Sorbitol v perorálních léčivých přípravcích může také ovlivnit biologickou dostupnost jiných současně užívaných perorálních léků.",
+      "class_id": "substance:14630",
+      "drug": "sorbitol",
+      "effect": "Sorbitol v přípravku může ovlivnit biologickou dostupnost jiných současně užívaných perorálních léčiv; jeho účinek se může sčítat s dalšími přípravky obsahujícími sorbitol nebo fruktózu a s příjmem těchto látek v potravě.",
       "effect_type": "changed_exposure",
       "side_effects": []
-    },
-    {
-      "drug": "Alkohol",
-      "effect": "Během léčby přípravkem Flector se nemají požívat alkoholické nápoje.",
-      "effect_type": null,
-      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Flector tlumí bolest a zánět při onemocnění kloubů a svalů, bolestech zad, po úrazech či operacích a při bolestivé menstruaci.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0263137",
+      "H": "",
+      "NAZEV": "FLECTOR",
+      "SILA": "50MG",
+      "FORMA": "POR GRA SOL SCC",
+      "BALENI": "20",
+      "CESTA": "POR",
+      "DOPLNEK": "50MG POR GRA SOL SCC 20",
+      "OBAL": "SCC",
+      "DRZ": "IBB",
+      "ZEMDRZ": "SK",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "29",
+      "ATC_WHO": "M01AB05",
+      "RC": "29/514/99-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,1",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "10",
+      "ZDROJ_WHO": "NO26",
+      "LL": "14630",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "48",
+      "EXP_T": "M",
+      "NAZEV_REG": "FLECTOR",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "14630",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "65",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14630",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "DICLOFENACUM EPOLAMINUM",
+          "NAZEV_EN": "DICLOFENAC EPOLAMINE",
+          "NAZEV": "DIKLOFENAK-EPOLAMIN"
+        }
+      },
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "1962",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "50",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1962",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "DICLOFENACUM NATRICUM",
+          "NAZEV_EN": "DICLOFENAC SODIUM",
+          "NAZEV": "SODNÁ SŮL DIKLOFENAKU"
+        }
+      },
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "1352",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1352",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SORBITOLUM",
+          "NAZEV_EN": "SORBITOL",
+          "NAZEV": "SORBITOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "7372",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "7372",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ASPARTAMUM",
+          "NAZEV_EN": "ASPARTAME",
+          "NAZEV": "ASPARTAM"
+        }
+      },
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "3804",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3804",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "ACESULFAMUM KALICUM",
+          "NAZEV_EN": "ACESULFAME POTASSIUM",
+          "NAZEV": "DRASELNÁ SŮL ACESULFAMU"
+        }
+      },
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "1168",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1168",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "POVIDONUM",
+          "NAZEV_EN": "POVIDONE",
+          "NAZEV": "POVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "1300",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "4111",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4111",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AROMA PERSICAE",
+          "NAZEV_EN": "PEACH FLAVOUR",
+          "NAZEV": "BROSKVOVÉ AROMA"
+        }
+      },
+      {
+        "KOD_SUKL": "0263137",
+        "KOD_LATKY": "4493",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4493",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AROMA MENTHAE PIPERITAE PULVERATUM",
+          "NAZEV_EN": "POWDERED PEPPERMINT FLAVOUR",
+          "NAZEV": "AROMA MÁTY PEPRNÉ V PRÁŠKU"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0263137",
+      "PIL": "PI226030.pdf",
+      "DAT_ROZ_PIL": "09.09.2025",
+      "SPC": "SPC226031.pdf",
+      "DAT_ROZ_SPC": "09.09.2025",
+      "OBAL_TEXT": "OBAL178046.pdf",
+      "DAT_ROZ_OBAL": "12.10.2021"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "M01AB05",
+        "NT": "N",
+        "NAZEV": "DIKLOFENAK",
+        "NAZEV_EN": "DICLOFENAC"
+      },
+      "formy": {
+        "FORMA": "POR GRA SOL SCC",
+        "NAZEV": "Granule pro perorální roztok v sáčku",
+        "NAZEV_EN": "Granules for oral solution in sachet",
+        "NAZEV_LAT": "Granula pro solutione perorali in sacullo",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "50029170"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "SCC",
+        "NAZEV": "Sáček",
+        "NAZEV_EN": "Sachet",
+        "KOD_EDQM": "30054000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

@@ -1,9 +1,64 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A04",
+    "atc:A04A",
+    "atc:A04AA",
+    "atc:A04AA01",
+    "substance:10417"
+  ],
   "side_effects": [
+    {
+      "ctcae": "Anaphylaxis",
+      "frequency": "rare",
+      "label": "Závažná alergická reakce včetně anafylaxe; může se projevit kopřivkou, otokem nebo dušností.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "rare",
+      "label": "Angioedém – otok, nejčastěji obličeje, úst nebo hrdla, který může ztížit dýchání.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "very_rare",
+      "label": "Rozsáhlá vyrážka s puchýři a olupováním kůže na většině těla; toxická epidermální nekrolýza.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "not_known",
+      "label": "Ischemie srdečního svalu; může se projevit náhlou bolestí nebo svíráním na hrudi.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 1
+      }
+    },
     {
       "ctcae": "Headache",
       "frequency": "very_common",
       "label": "Bolest hlavy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Flushing",
+      "frequency": "common",
+      "label": "Pocit tepla nebo zrudnutí.",
       "action": null,
       "action_condition": null
     },
@@ -15,13 +70,6 @@
       "action_condition": null
     },
     {
-      "ctcae": "Flushing",
-      "frequency": "common",
-      "label": "Pocit horka nebo zrudnutí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
       "ctcae": "Seizure",
       "frequency": "uncommon",
       "label": "Záchvaty (křeče).",
@@ -29,21 +77,21 @@
       "action_condition": null
     },
     {
-      "ctcae": "Extrapyramidal disorder",
+      "ctcae": "Movements involuntary",
       "frequency": "uncommon",
-      "label": "Poruchy hybnosti, včetně mimovolních pohybů, dystonických reakcí, okulogyrických krizí a dyskinezí; obvykle bez trvalých následků.",
+      "label": "Vůlí neovladatelné pohyby nebo křeče.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Cardiac disorders - Other, specify",
       "frequency": "uncommon",
-      "label": "Poruchy srdečního rytmu.",
+      "label": "Nepravidelná srdeční činnost (arytmie).",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
+      "ctcae": "Sinus bradycardia",
       "frequency": "uncommon",
       "label": "Zpomalená srdeční činnost.",
       "action": null,
@@ -59,7 +107,7 @@
     {
       "ctcae": "Hypotension",
       "frequency": "uncommon",
-      "label": "Nízký krevní tlak.",
+      "label": "Nízký krevní tlak, někdy s pocitem na omdlení nebo závratí.",
       "action": null,
       "action_condition": null
     },
@@ -71,132 +119,310 @@
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "uncommon",
-      "label": "Bez příznaků zvýšené hodnoty jaterních enzymů; často pozorováno při chemoterapii s cisplatinou.",
+      "label": "Bezpříznakové zvýšení jaterních enzymů; často pozorované při chemoterapii s cisplatinou.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Electrocardiogram QT corrected interval prolonged",
+      "ctcae": "Aspartate aminotransferase increased",
+      "frequency": "uncommon",
+      "label": "Bezpříznakové zvýšení jaterních enzymů; často pozorované při chemoterapii s cisplatinou.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Ventricular arrhythmia",
       "frequency": "rare",
-      "label": "Prodloužení intervalu QTc, včetně arytmie typu torsade de pointes.",
+      "label": "Porucha srdečního rytmu, někdy s náhlou ztrátou vědomí.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Dizziness",
+      "frequency": "rare",
+      "label": "Závratě; po rychlém nitrožilním podání.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Blurred vision",
       "frequency": "rare",
-      "label": "Přechodné poruchy zraku, například rozmazané vidění; hlášeny zejména po nitrožilním podání.",
+      "label": "Přechodné poruchy zraku, například rozmazané vidění; zejména po nitrožilním podání.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Allergic reaction",
+      "ctcae": "Electrocardiogram QT corrected interval prolonged",
       "frequency": "rare",
-      "label": "Časná reakce přecitlivělosti, někdy závažná, včetně anafylaxe; může zahrnovat kopřivku nebo otok obličeje, úst či hrdla.",
-      "action": "hospitalize_NOW",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "very_rare",
-      "label": "Toxická epidermální nekrolýza – rozsáhlá vyrážka s puchýři a olupováním kůže. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
-      "action": "hospitalize_NOW",
-      "action_condition": null
-    },
-    {
-      "ctcae": "Vision decreased",
-      "frequency": "very_rare",
-      "label": "Přechodná slepota, hlášená zejména během nitrožilního podání; ve většině hlášených případů odezněla během 20 minut.",
+      "label": "Prodloužení QTc intervalu, včetně arytmie typu Torsade de Pointes.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Ischemie myokardu; může se projevit náhlou bolestí nebo svíráním na hrudi. Přestaňte přípravek užívat a okamžitě vyhledejte lékařskou pomoc.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se náhle objeví bolest nebo svírání na hrudi"
-      }
-    },
-    {
-      "ctcae": "Congenital, familial and genetic disorders - Other, specify",
-      "frequency": null,
-      "label": "Užívání v prvním trimestru těhotenství může mírně zvýšit riziko rozštěpu rtu a/nebo patra u dítěte; epidemiologická studie uvádí 3 dodatečné případy na 10 000 léčených žen.",
+      "ctcae": "Blindness",
+      "frequency": "very_rare",
+      "label": "Přechodná slepota, zejména během nitrožilního podání; obvykle odezní do 20 minut.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug": "apomorfin",
-      "effect": "Současné užívání ondansetronu s apomorfinem je kontraindikováno. Byly hlášeny případy těžkého poklesu krevního tlaku a ztráty vědomí.",
+      "class_id": "atc:G04BE07",
+      "drug": "Apomorfin",
+      "effect": "Současné užívání ondansetronu a apomorfinu je zakázáno; byly hlášeny těžký pokles krevního tlaku a ztráta vědomí.",
       "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Těžký pokles krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Syncope",
-          "frequency": null,
-          "label": "Ztráta vědomí.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Léčiva prodlužující QT interval, včetně některých protinádorových léků (antracykliny a trastuzumab), antibiotik (erythromycin a ketokonazol), antiarytmik (amiodaron) a betablokátorů (atenolol a timolol)",
-      "effect": "Současné užívání s ondansetronem může QT interval prodloužit ještě více a zvýšit riziko arytmií.",
+      "class_id": "group:qt_prolonging",
+      "drug_class": "Léčivé přípravky prodlužující QT interval",
+      "effect": "Současné užívání může dále prodloužit QT interval a zvýšit riziko arytmií. Riziko je uvedeno zejména u kardiotoxických léčiv (např. antracyklinů a trastuzumabu), antibiotik (např. erythromycinu nebo ketokonazolu), antiarytmik (např. amiodaronu) a betablokátorů (např. atenololu nebo timololu).",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Electrocardiogram QT corrected interval prolonged",
-          "frequency": null,
-          "label": "Další prodloužení QT intervalu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Arytmie.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Serotonergní léčiva, včetně SSRI a SNRI",
-      "effect": "Při současném užívání ondansetronu s jinými serotonergními léčivy, včetně SSRI a SNRI, byly hlášeny případy serotoninového syndromu. Může zahrnovat poruchu vědomí, autonomní nestabilitu a neuromuskulární abnormality; pokud je kombinace klinicky nezbytná, lékař bude pacienta odpovídajícím způsobem sledovat.",
+      "class_id": "group:serotonergic",
+      "drug_class": "Serotonergní léčivé přípravky",
+      "effect": "Při současném užívání ondansetronu a jiných serotonergních léčiv, včetně SSRI a SNRI, byl hlášen serotoninový syndrom. Pokud je kombinace klinicky nezbytná, lékař má pacienta odpovídajícím způsobem sledovat.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Nervous system disorders - Other, specify",
-          "frequency": null,
-          "label": "Serotoninový syndrom, který může zahrnovat poruchu vědomí, autonomní nestabilitu a neuromuskulární abnormality.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Silné induktory CYP3A4, jako fenytoin, karbamazepin a rifampicin",
-      "effect": "Tyto léky zvyšují clearance ondansetronu po užití ústy a snižují jeho koncentraci v krvi.",
+      "class_id": "atc:N03AF01",
+      "drug": "Karbamazepin",
+      "effect": "Při užívání s karbamazepinem se může po podání ondansetronu ústy zvýšit jeho odbourávání a snížit koncentrace v krvi.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "tramadol",
-      "effect": "Údaje z malé studie naznačují, že ondansetron může snižovat analgetický účinek tramadolu.",
+      "class_id": "atc:N03AB02",
+      "drug": "Fenytoin",
+      "effect": "Při užívání s fenytoinem se může po podání ondansetronu ústy zvýšit jeho odbourávání a snížit koncentrace v krvi.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:J04AB02",
+      "drug": "Rifampicin",
+      "effect": "Při užívání s rifampicinem se může po podání ondansetronu ústy zvýšit jeho odbourávání a snížit koncentrace v krvi.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N02AX02",
+      "drug": "Tramadol",
+      "effect": "Omezené údaje naznačují, že ondansetron může snížit účinek tramadolu proti bolesti.",
       "effect_type": "antagonism",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se k léčbě nevolnosti a zvracení při chemoterapii nebo radioterapii a k prevenci nevolnosti a zvracení po operaci.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0272967",
+      "H": "",
+      "NAZEV": "ZOFRAN ZYDIS",
+      "SILA": "4MG",
+      "FORMA": "POR TBL DIS",
+      "BALENI": "10",
+      "CESTA": "POR",
+      "DOPLNEK": "4MG POR TBL DIS 10",
+      "OBAL": "BLI",
+      "DRZ": "SNJ",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "20",
+      "ATC_WHO": "A04AA01",
+      "RC": "20/475/99-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "16",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "2,5",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10417",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "ZOFRAN ZYDIS",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0272967",
+        "KOD_LATKY": "10417",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "4",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10417",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ONDANSETRONUM",
+          "NAZEV_EN": "ONDANSETRON",
+          "NAZEV": "ONDANSETRON"
+        }
+      },
+      {
+        "KOD_SUKL": "0272967",
+        "KOD_LATKY": "2855",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0272967",
+        "KOD_LATKY": "875",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "875",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MANNITOLUM",
+          "NAZEV_EN": "MANNITOL",
+          "NAZEV": "MANNITOL",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0272967",
+        "KOD_LATKY": "7372",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "7372",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "ASPARTAMUM",
+          "NAZEV_EN": "ASPARTAME",
+          "NAZEV": "ASPARTAM"
+        }
+      },
+      {
+        "KOD_SUKL": "0272967",
+        "KOD_LATKY": "4115",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4115",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "METHYLPARABENUM NATRICUM",
+          "NAZEV_EN": "SODIUM METHYL PARAHYDROXYBENZOATE",
+          "NAZEV": "SODNÁ SŮL METHYLPARABENU"
+        }
+      },
+      {
+        "KOD_SUKL": "0272967",
+        "KOD_LATKY": "4116",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4116",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "PROPYLPARABENUM NATRICUM",
+          "NAZEV_EN": "SODIUM PROPYL PARAHYDROXYBENZOATE",
+          "NAZEV": "SODNÁ SŮL PROPYLPARABENU"
+        }
+      },
+      {
+        "KOD_SUKL": "0272967",
+        "KOD_LATKY": "9848",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9848",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "AROMA FRAGARIAE",
+          "NAZEV_EN": "STRAWBERRY FLAVOUR",
+          "NAZEV": "JAHODOVÉ AROMA"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0272967",
+      "PIL": "PI227797.pdf",
+      "DAT_ROZ_PIL": "04.11.2025",
+      "SPC": "SPC215236.pdf",
+      "DAT_ROZ_SPC": "22.10.2024",
+      "OBAL_TEXT": "OBAL215234.pdf",
+      "DAT_ROZ_OBAL": "22.10.2024"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A04AA01",
+        "NT": "N",
+        "NAZEV": "ONDANSETRON",
+        "NAZEV_EN": "ONDANSETRON"
+      },
+      "formy": {
+        "FORMA": "POR TBL DIS",
+        "NAZEV": "Tableta dispergovatelná v ústech",
+        "NAZEV_EN": "Orodispersible tablet",
+        "NAZEV_LAT": "Tabuletta pro orodispersione",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10223000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

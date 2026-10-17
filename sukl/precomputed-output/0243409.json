@@ -1,9 +1,21 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A06",
+    "atc:A06A",
+    "atc:A06AD",
+    "atc:A06AD15",
+    "substance:1174",
+    "substance:1322",
+    "substance:1345",
+    "substance:2178",
+    "substance:2404"
+  ],
   "side_effects": [
     {
       "ctcae": "Diarrhea",
-      "frequency": null,
-      "label": "Časté řídké stolice až průjem jsou očekávaným účinkem přípravku a znamenají, že působí; mohou přetrvávat do odeznění jeho účinku.",
+      "frequency": "very_common",
+      "label": "Průjem je očekávaným účinkem přípravku; časté řídké vyprazdňování po užití je normální součástí jeho působení.",
       "action": null,
       "action_condition": null
     },
@@ -24,7 +36,7 @@
     {
       "ctcae": "Abdominal distension",
       "frequency": "very_common",
-      "label": "Rozepětí břicha.",
+      "label": "Nadýmání nebo rozepětí břicha.",
       "action": null,
       "action_condition": null
     },
@@ -38,67 +50,245 @@
     {
       "ctcae": "Allergic reaction",
       "frequency": "not_known",
-      "label": "Přecitlivělost s kožní vyrážkou, kopřivkou, svěděním nebo zarudnutím kůže.",
-      "action": "hospitalize_NOW",
+      "label": "Alergické reakce, například vyrážka, kopřivka, svědění nebo zarudnutí kůže.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví kožní vyrážka, kopřivka, svědění nebo zarudnutí kůže."
-      }
-    },
-    {
-      "ctcae": "Edema face",
-      "frequency": null,
-      "label": "Angioedém – náhlý otok obličeje nebo hrdla.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví náhlý otok obličeje nebo hrdla."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Anaphylaxis",
-      "frequency": null,
-      "label": "Závažná alergická reakce (anafylaxe), která může způsobit obtížné dýchání nebo závrať; ve SPC je uveden také anafylaktický šok.",
-      "action": "hospitalize_NOW",
+      "frequency": "not_known",
+      "label": "Závažná alergická reakce s otokem tváře nebo hrdla, obtížným dýcháním nebo závratí.",
+      "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví obtížné dýchání nebo závrať."
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
       "ctcae": "Colitis",
-      "frequency": null,
-      "label": "Ischemická kolitida, včetně závažných případů, byla hlášena po použití přípravků obsahujících makrogol k přípravě střev.",
-      "action": "hospitalize_NOW",
+      "frequency": "not_known",
+      "label": "Ischemická kolitida hlášená po uvedení přípravků s makrogolem na trh při přípravě střev, včetně závažných případů; riziko může být vyšší při známých rizikových faktorech nebo současném užívání stimulačních projímadel, například bisakodylu či natrium-pikosulfátu.",
+      "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se během přípravy objeví náhlá bolest břicha nebo krvácení z konečníku."
+        "patient_guide": "Při náhlé bolesti břicha, krvácení z konečníku nebo jiných příznacích ischemické kolitidy.",
+        "min_severity": 2
       }
-    },
-    {
-      "ctcae": "Metabolism and nutrition disorders - Other, specify",
-      "frequency": null,
-      "label": "Výjimečně byly u rizikových pacientů hlášeny poruchy rovnováhy vody a elektrolytů.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pneumonia",
-      "frequency": null,
-      "label": "Riziko aspirační pneumonie, zejména u pacientů se sklonem k aspiraci, upoutaných na lůžko nebo s neurologickými či motorickými poruchami.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pulmonary edema",
-      "frequency": null,
-      "label": "Riziko akutního plicního edému při přetížení vodou u pacientů se srdeční nebo ledvinovou nedostatečností.",
-      "action": null,
-      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Léčivé přípravky užívané ústy, zejména přípravky s úzkým terapeutickým indexem nebo krátkým poločasem (digoxin, antiepileptika, kumariny včetně warfarinu a imunosupresiva)",
-      "effect": "Průjem vyvolaný přípravkem Fortrans může během jeho užívání dočasně významně snížit vstřebávání současně užívaných léků, zejména uvedených přípravků, a tím snížit jejich účinek.",
+      "class_id": null,
+      "drug": "Digoxin",
+      "effect": "Průjem vyvolaný přípravkem Fortrans může dočasně významně snížit vstřebávání digoxinu, a tím jeho účinek; stejná možnost se týká perorálních léků s úzkým terapeutickým rozmezím nebo krátkým poločasem. Zvlášť jsou uvedena také antiepileptika, kumariny a imunosupresiva.",
+      "effect_type": "decreased_exposure",
+      "side_effects": []
+    },
+    {
+      "class_id": null,
+      "drug": "Warfarin",
+      "effect": "Průjem vyvolaný přípravkem Fortrans může dočasně významně snížit vstřebávání warfarinu, a tím jeho účinek; SPC obecně uvádí kumariny a PIL warfarin. Stejná možnost se týká perorálních léků s úzkým terapeutickým rozmezím nebo krátkým poločasem.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Fortrans se u dospělých používá k vyčištění střev před vyšetřením nebo operací.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0243409",
+      "H": "",
+      "NAZEV": "FORTRANS",
+      "SILA": "",
+      "FORMA": "POR PLV SOL",
+      "BALENI": "4",
+      "CESTA": "POR",
+      "DOPLNEK": "POR PLV SOL 4",
+      "OBAL": "SCC",
+      "DRZ": "MPF",
+      "ZEMDRZ": "F",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "61",
+      "ATC_WHO": "A06AD15",
+      "RC": "61/1281/93-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "10",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "25,6",
+      "ZDROJ_WHO": "NO26",
+      "LL": "2404,1322,1174,2178,1345",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "FORTRANS",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0243409",
+        "KOD_LATKY": "2404",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "64",
+        "UN": "G",
+        "substance": {
+          "KOD_LATKY": "2404",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 4000",
+          "NAZEV_EN": "MACROGOL 4000",
+          "NAZEV": "MAKROGOL 4000"
+        }
+      },
+      {
+        "KOD_SUKL": "0243409",
+        "KOD_LATKY": "1322",
+        "SQ": "2",
+        "S": "L",
+        "AMNT": "1,46",
+        "UN": "G",
+        "substance": {
+          "KOD_LATKY": "1322",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII CHLORIDUM",
+          "NAZEV_EN": "SODIUM CHLORIDE",
+          "NAZEV": "CHLORID SODNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0243409",
+        "KOD_LATKY": "1174",
+        "SQ": "3",
+        "S": "L",
+        "AMNT": "750",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1174",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "KALII CHLORIDUM",
+          "NAZEV_EN": "POTASSIUM CHLORIDE",
+          "NAZEV": "CHLORID DRASELNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0243409",
+        "KOD_LATKY": "2178",
+        "SQ": "4",
+        "S": "L",
+        "AMNT": "1,68",
+        "UN": "G",
+        "substance": {
+          "KOD_LATKY": "2178",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "NATRII HYDROGENOCARBONAS",
+          "NAZEV_EN": "SODIUM HYDROGEN CARBONATE",
+          "NAZEV": "HYDROGENUHLIČITAN SODNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0243409",
+        "KOD_LATKY": "1345",
+        "SQ": "5",
+        "S": "L",
+        "AMNT": "5,7",
+        "UN": "G",
+        "substance": {
+          "KOD_LATKY": "1345",
+          "ZDROJ": "C21M",
+          "NAZEV_INN": "NATRII SULFAS",
+          "NAZEV_EN": "SODIUM SULFATE",
+          "NAZEV": "SÍRAN SODNÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0243409",
+        "KOD_LATKY": "9823",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9823",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SACCHARINUM NATRICUM",
+          "NAZEV_EN": "SACCHARIN SODIUM",
+          "NAZEV": "SODNÁ SŮL SACHARINU"
+        }
+      },
+      {
+        "KOD_SUKL": "0243409",
+        "SQ": "7",
+        "S": "T",
+        "AMNT": "4",
+        "UN": "DF",
+        "substance": {}
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0243409",
+      "PIL": "PI226033.pdf",
+      "DAT_ROZ_PIL": "09.09.2025",
+      "SPC": "SPC226034.pdf",
+      "DAT_ROZ_SPC": "09.09.2025",
+      "OBAL_TEXT": "OBAL226032.pdf",
+      "DAT_ROZ_OBAL": "09.09.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A06AD15",
+        "NT": "N",
+        "NAZEV": "MAKROGOL",
+        "NAZEV_EN": "MACROGOL"
+      },
+      "formy": {
+        "FORMA": "POR PLV SOL",
+        "NAZEV": "Prášek pro perorální roztok",
+        "NAZEV_EN": "Powder for oral solution",
+        "NAZEV_LAT": "Pulvis pro solutione perorali",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10110000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "SCC",
+        "NAZEV": "Sáček",
+        "NAZEV_EN": "Sachet",
+        "KOD_EDQM": "30054000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

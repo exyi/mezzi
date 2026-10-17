@@ -1,12 +1,21 @@
 {
+  "classes": [
+    "atc:J",
+    "atc:J01",
+    "atc:J01D",
+    "atc:J01DC",
+    "atc:J01DC02",
+    "substance:10027"
+  ],
   "side_effects": [
     {
       "ctcae": "Candidiasis",
       "frequency": "common",
-      "label": "Přerůstání kvasinek Candida a plísňové infekce, například moučnivka; pravděpodobnější při delší léčbě.",
+      "label": "Přerůstání kvasinek Candida; plísňové infekce jsou pravděpodobnější při delší léčbě.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se u vás objeví příznaky plísňové infekce, například moučnivka"
+        "patient_guide": null,
+        "min_severity": 2
       }
     },
     {
@@ -19,7 +28,7 @@
     {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Závratě.",
+      "label": "Závratě; pokud se necítíte dobře, neřiďte ani neobsluhujte stroje.",
       "action": null,
       "action_condition": null
     },
@@ -45,9 +54,16 @@
       "action_condition": null
     },
     {
-      "ctcae": "Dyspepsia",
+      "ctcae": "Eosinophilia",
       "frequency": "common",
-      "label": "Poruchy trávení.",
+      "label": "Zvýšený počet eozinofilů v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "common",
+      "label": "Zvýšené hladiny jaterních enzymů; obvykle přechodné a vratné.",
       "action": null,
       "action_condition": null
     },
@@ -59,23 +75,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
       "label": "Kožní vyrážka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Eosinophilia",
-      "frequency": "common",
-      "label": "Zvýšený počet eozinofilů v krvi.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "common",
-      "label": "Přechodné zvýšení hladin jaterních enzymů.",
       "action": null,
       "action_condition": null
     },
@@ -89,21 +91,14 @@
     {
       "ctcae": "White blood cell decreased",
       "frequency": "uncommon",
-      "label": "Snížený počet bílých krvinek (leukopenie), někdy závažná.",
+      "label": "Snížený počet bílých krvinek, někdy závažný.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Investigations - Other, specify",
       "frequency": "uncommon",
-      "label": "Pozitivní Coombsův test; může ovlivnit zkoušku slučitelnosti krve.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hemolytic anemia",
-      "frequency": "not_known",
-      "label": "Hemolytická anémie způsobená příliš rychlým rozpadem červených krvinek.",
+      "label": "Pozitivní Coombsův test; může ovlivnit křížovou zkoušku krve.",
       "action": null,
       "action_condition": null
     },
@@ -115,38 +110,21 @@
       "action_condition": null
     },
     {
-      "ctcae": "Colitis",
+      "ctcae": "Hemolytic anemia",
       "frequency": "not_known",
-      "label": "Závažný průjem v důsledku pseudomembranózní kolitidy, obvykle s příměsí krve a hlenu, bolestí břicha a horečkou.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud máte závažný průjem, zejména s příměsí krve nebo hlenu, bolestí břicha či horečkou"
-      }
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "not_known",
-      "label": "Závažná alergická reakce, například svědivá vystouplá vyrážka nebo otok obličeje či úst, který může způsobit potíže s dýcháním; léčbu je nutné ihned ukončit a neprodleně kontaktovat lékaře nebo zdravotní sestru.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky závažné alergické reakce, například svědivá vystouplá vyrážka, otok obličeje nebo úst či potíže s dýcháním"
-      }
-    },
-    {
-      "ctcae": "Anaphylaxis",
-      "frequency": "not_known",
-      "label": "Anafylaxe; při závažné reakci léčbu ihned ukončete a neprodleně kontaktujte lékaře nebo zdravotní sestru.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví příznaky anafylaxe"
-      }
-    },
-    {
-      "ctcae": "Serum sickness",
-      "frequency": "not_known",
-      "label": "Sérová nemoc.",
+      "label": "Rozpad červených krvinek vedoucí k chudokrevnosti.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Chest pain - cardiac",
+      "frequency": "not_known",
+      "label": "Kounisův syndrom: bolest na hrudi při alergické reakci, která může být známkou alergií vyvolaného infarktu.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Bolest na hrudi při alergické reakci.",
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Fever",
@@ -156,127 +134,418 @@
       "action_condition": null
     },
     {
-      "ctcae": "Fever",
+      "ctcae": "Serum sickness",
       "frequency": "not_known",
-      "label": "Jarischova-Herxheimerova reakce při léčbě Lymeské boreliózy: zvýšená teplota, zimnice, bolest hlavy, bolest svalů a vyrážka; příznaky obvykle trvají několik hodin až jeden den.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se během léčby Lymeské boreliózy objeví horečka, zimnice, bolest hlavy, bolest svalů nebo kožní vyrážka"
-      }
+      "label": "Sérová nemoc.",
+      "action": null,
+      "action_condition": null
     },
     {
-      "ctcae": "Chest pain - cardiac",
+      "ctcae": "Anaphylaxis",
       "frequency": "not_known",
-      "label": "Kounisův syndrom: bolest na hrudi při alergické reakci, která může souviset s alergií vyvolaným srdečním infarktem; neprodleně kontaktujte lékaře nebo zdravotní sestru.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se při alergické reakci objeví bolest na hrudi"
-      }
-    },
-    {
-      "ctcae": "Urticaria",
-      "frequency": "not_known",
-      "label": "Kopřivka.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví kopřivka jako příznak alergické reakce"
-      }
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "not_known",
-      "label": "Svědění.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví svědění jako příznak alergické reakce"
-      }
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "not_known",
-      "label": "Erythema multiforme: kožní vyrážka, která může tvořit puchýře a vypadat jako malé terčíky.",
+      "label": "Anafylaxe, závažná alergická reakce.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví vyrážka s puchýři ve tvaru terčíků"
+        "patient_guide": "Vystouplá svědivá vyrážka, otok někdy obličeje nebo úst a obtíže s dýcháním.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Stevens-Johnson syndrome",
+      "ctcae": null,
       "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom: rozsáhlá vyrážka s puchýři a olupováním kůže; léčbu ihned ukončete a neprodleně kontaktujte lékaře nebo zdravotní sestru.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá vyrážka s puchýři nebo olupováním kůže"
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza: rozsáhlá vyrážka s puchýři a olupováním kůže; léčbu ihned ukončete a neprodleně kontaktujte lékaře nebo zdravotní sestru.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá vyrážka s puchýři nebo olupováním kůže"
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS), která se může projevit rozsáhlou vyrážkou, vysokou teplotou a zvětšenými lymfatickými uzlinami; léčbu ihned ukončete a neprodleně kontaktujte lékaře nebo zdravotní sestru.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví rozsáhlá vyrážka, vysoká teplota a zvětšené lymfatické uzliny"
-      }
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Angioneurotický edém (otok).",
+      "label": "Jarischova-Herxheimerova reakce při léčbě Lymeské boreliózy: horečka, zimnice, bolest hlavy, svalů a kožní vyrážka; obvykle trvá několik hodin až jeden den. Příbalová informace doporučuje neprodleně kontaktovat lékaře, zatímco souhrn údajů uvádí, že reakce obvykle sama odezní.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se objeví otok jako příznak alergické reakce"
+        "patient_guide": "Při léčbě Lymeské boreliózy se může objevit horečka, zimnice, bolest hlavy, svalů a kožní vyrážka.",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Blood bilirubin increased",
       "frequency": "not_known",
-      "label": "Žloutenka, převážně cholestatická (zežloutnutí očního bělma nebo kůže).",
+      "label": "Žloutenka, převážně cholestatická; může se projevit zežloutnutím kůže nebo očního bělma.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Hepatitis",
       "frequency": "not_known",
-      "label": "Zánět jater (hepatitida).",
+      "label": "Zánět jater.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Urticaria",
+      "frequency": "not_known",
+      "label": "Kopřivka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "not_known",
+      "label": "Svědění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erythema multiforme",
+      "frequency": "not_known",
+      "label": "Erythema multiforme; vyrážka může tvořit puchýře a připomínat malé terčíky.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Vyrážka může tvořit puchýře a připomínat malé terčíky s tmavým středem a světlejším okolím.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
+      "frequency": "not_known",
+      "label": "Stevensův-Johnsonův syndrom; rozsáhlá vyrážka s puchýři a olupující se kůží.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Rozsáhlá vyrážka s puchýři a olupující se kůží.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Toxic epidermal necrolysis",
+      "frequency": "not_known",
+      "label": "Toxická epidermální nekrolýza; rozsáhlá vyrážka s puchýři a olupující se kůží.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Rozsáhlá vyrážka s puchýři a olupující se kůží.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "not_known",
+      "label": "Angioneurotický edém, tedy otok při alergické reakci.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Otok někdy obličeje nebo úst; může způsobit obtíže s dýcháním.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "not_known",
+      "label": "Alergická reakce přecitlivělosti.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Vystouplá svědivá vyrážka, otok někdy obličeje nebo úst a obtíže s dýcháním.",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": null,
+      "frequency": "not_known",
+      "label": "Léková reakce s eozinofilií a systémovými příznaky (DRESS); rozsáhlá vyrážka, vysoká horečka a zvětšené lymfatické uzliny.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Rozsáhlá vyrážka, vysoká horečka a zvětšené lymfatické uzliny.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Colitis",
+      "frequency": "not_known",
+      "label": "Pseudomembranózní kolitida, zánět tlustého střeva se závažným průjmem, obvykle s krví a hlenem, bolestí břicha a horečkou. Souhrn údajů uvádí, že závažnost může být mírná až život ohrožující.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "Závažný průjem, obvykle s krví a hlenem, bolestí břicha a horečkou.",
+        "min_severity": 2
+      }
     }
   ],
   "combinations": [
     {
-      "drug_class": "Léky snižující žaludeční kyselost, včetně antacid",
-      "effect": "Mohou snížit biologickou dostupnost cefuroxim-axetilu a potlačit zvýšení jeho vstřebávání po jídle, a tím ovlivnit účinek Zinnatu.",
+      "class_id": null,
+      "drug_class": "Léky snižující množství kyseliny v žaludku, včetně antacid",
+      "effect": "Mohou snížit biologickou dostupnost cefuroxim-axetilu a omezit zvýšení jeho vstřebávání po jídle; přípravek Zinnat se užívá po jídle.",
       "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug": "probenecid",
-      "effect": "Současné užívání s probenecidem se nedoporučuje, protože významně zvyšuje maximální koncentraci, celkovou expozici a eliminační poločas cefuroximu.",
+      "class_id": null,
+      "drug_class": "Probenecid",
+      "effect": "Současné podávání se nedoporučuje; probenecid významně zvyšuje maximální koncentraci, celkovou expozici a eliminační poločas cefuroximu.",
       "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
+      "class_id": null,
       "drug_class": "Perorální antikoagulancia",
-      "effect": "Současné užívání se Zinnatem může zvýšit INR; lékař může podle potřeby sledovat INR a upravit léčbu.",
+      "effect": "Při současném užívání s cefuroximem se může zvýšit INR.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "INR increased",
-          "frequency": null,
-          "label": "Zvýšení INR.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Zinnat je antibiotikum k léčbě některých bakteriálních infekcí u dospělých a dětí.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0269018",
+      "H": "",
+      "NAZEV": "ZINNAT",
+      "SILA": "500MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "14",
+      "CESTA": "POR",
+      "DOPLNEK": "500MG TBL FLM 14",
+      "OBAL": "BLI",
+      "DRZ": "SNJ",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "15",
+      "ATC_WHO": "J01DC02",
+      "RC": "15/061/88-C/C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0,5",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "14",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10027",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "ZINNAT",
+      "MRP_CISLO": "IE/H/0716/005",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "10027",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "601,44",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10027",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CEFUROXIMUM AXETILUM",
+          "NAZEV_EN": "CEFUROXIME AXETIL",
+          "NAZEV": "CEFUROXIM-AXETIL"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "4709",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "500",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4709",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CEFUROXIMUM",
+          "NAZEV_EN": "CEFUROXIME",
+          "NAZEV": "CEFUROXIM"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "5624",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "1335",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "4296",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4296",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "OLEUM VEGETABILE HYDROGENATUM",
+          "NAZEV_EN": "HYDROGENATED VEGETABLE OIL",
+          "NAZEV": "HYDROGENOVANÝ ROSTLINNÝ OLEJ"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "1300",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "SQ": "9",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "748",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "1216",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1216",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "PROPYLENGLYCOLUM",
+          "NAZEV_EN": "PROPYLENE GLYCOL",
+          "NAZEV": "PROPYLENGLYKOL"
+        }
+      },
+      {
+        "KOD_SUKL": "0269018",
+        "KOD_LATKY": "17056",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "17056",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "ALBUM OPASPRAY M-1-7120J",
+          "NAZEV_EN": "OPASPRAY M-1-7120J (WHITE)",
+          "NAZEV": "POTAHOVÁ SOUSTAVA OPASPRAY M-1-7120J BÍLÁ"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0269018",
+      "PIL": "PI236204.pdf",
+      "DAT_ROZ_PIL": "06.03.2025",
+      "SPC": "SPC236205.pdf",
+      "DAT_ROZ_SPC": "06.03.2025",
+      "OBAL_TEXT": "OBAL236203.pdf",
+      "DAT_ROZ_OBAL": "06.03.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "J01DC02",
+        "NT": "N",
+        "NAZEV": "CEFUROXIM",
+        "NAZEV_EN": "CEFUROXIME"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

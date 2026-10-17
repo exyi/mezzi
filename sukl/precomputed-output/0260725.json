@@ -1,30 +1,31 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A03",
+    "atc:A03F",
+    "atc:A03FA",
+    "atc:A03FA08",
+    "substance:2504"
+  ],
   "side_effects": [
     {
       "ctcae": "Somnolence",
       "frequency": "uncommon",
-      "label": "Mírný útlum nebo ospalost.",
+      "label": "Lehký útlum nebo ospalost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Extrapyramidal disorder",
       "frequency": "not_known",
-      "label": "Extrapyramidové reakce, například křeče svalů obličeje, krku a jazyka; podle SPC po přerušení léčby vymizí.",
+      "label": "Nechtěné pohyby nebo spasmy svalů obličeje, krku a jazyka; po přerušení léčby mohou vymizet.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Extrapyramidal disorder",
-      "frequency": null,
-      "label": "U starších pacientů se při dlouhodobé léčbě může rozvinout tardivní dyskineze (rychlé, opakované pohyby hlavy, krku, trupu nebo končetin).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash",
       "frequency": "not_known",
-      "label": "Kožní reakce, například vyrážka.",
+      "label": "Vyrážka.",
       "action": null,
       "action_condition": null
     },
@@ -36,9 +37,9 @@
       "action_condition": null
     },
     {
-      "ctcae": "Immune system disorders - Other, specify",
+      "ctcae": "Angioedema",
       "frequency": "not_known",
-      "label": "Angioedém (otok rtů, jazyka nebo hrdla).",
+      "label": "Otok rtů, jazyka nebo hrdla.",
       "action": null,
       "action_condition": null
     },
@@ -52,93 +53,270 @@
     {
       "ctcae": "Lactation disorder",
       "frequency": "not_known",
-      "label": "Sekrece mléka (galaktorea).",
+      "label": "Sekrece mléka.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Fenothiaziny a další antidopaminergní léčivé přípravky působící na centrální nervový systém",
-      "effect": "Cinitaprid zesiluje jejich účinek na centrální nervový systém; může se tak zvýšit jejich neurologický účinek.",
-      "effect_type": "increased_toxicity",
-      "side_effects": []
-    },
-    {
+      "class_id": null,
       "drug": "digoxin",
-      "effect": "Cinitaprid může snížit vstřebávání digoxinu, a tím oslabit jeho účinek při léčbě srdečního selhávání.",
-      "effect_type": "antagonism",
+      "effect": "Cinitaprid může snížit vstřebávání a tím i účinek digoxinu, který se užívá při srdečním selhání.",
+      "effect_type": "decreased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Atropinová anticholinergika",
-      "effect": "Mohou oslabit účinek cinitapridu na trávicí trakt.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug_class": "Opioidní analgetika",
-      "effect": "Mohou oslabit účinek cinitapridu na trávicí trakt.",
-      "effect_type": "antagonism",
-      "side_effects": []
-    },
-    {
-      "drug": "alkohol",
-      "effect": "Alkohol zesiluje tlumivé účinky cinitapridu; přípravek se s alkoholem nesmí užívat současně.",
-      "effect_type": "contraindicated",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zesílení tlumivého účinku, například ospalosti.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Trankvilizéry, hypnotika a narkotika",
-      "effect": "Při současném užívání s cinitapridem se zesilují jeho tlumivé účinky.",
+      "class_id": null,
+      "drug_class": "Fenothiaziny a další antidopaminergní léky působící na centrální nervový systém",
+      "effect": "Cinitaprid může zesílit jejich účinek na centrální nervový systém. Příbalová informace uvádí také některé léky na poruchy nervového systému, nespavost a středně silnou až silnou bolest; rozsah této skupiny blíže neupřesňuje.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Somnolence",
-          "frequency": null,
-          "label": "Zesílení tlumivého účinku, například ospalosti.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug": "ketokonazol",
-      "effect": "Při současném podávání může ketokonazol, významný inhibitor CYP3A4, změnit farmakokinetiku cinitapridu. Ve studii s opakovanými dávkami se průměrná plocha pod křivkou cinitapridu zvýšila přibližně dvojnásobně.",
-      "effect_type": "increased_exposure",
       "side_effects": []
     },
     {
-      "drug_class": "Azolová antimykotika (itrakonazol, mikonazol a flukonazol)",
-      "effect": "Tyto významné inhibitory CYP3A4 mohou při současném perorálním nebo parenterálním podávání změnit farmakokinetiku cinitapridu.",
-      "effect_type": "changed_exposure",
+      "class_id": null,
+      "drug_class": "Atropinová anticholinergika",
+      "effect": "Mohou snížit účinek cinitapridu na trávicí trakt.",
+      "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Inhibitory HIV proteázy, zejména indinavir a ritonavir",
-      "effect": "Tyto významné inhibitory CYP3A4 mohou při současném perorálním nebo parenterálním podávání změnit farmakokinetiku cinitapridu.",
-      "effect_type": "changed_exposure",
+      "class_id": null,
+      "drug_class": "Opioidní analgetika",
+      "effect": "Mohou snížit účinek cinitapridu na trávicí trakt.",
+      "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Makrolidová antibiotika (erythromycin, klarithromycin a troleandomycin)",
-      "effect": "Tyto významné inhibitory CYP3A4 mohou při současném perorálním nebo parenterálním podávání změnit farmakokinetiku cinitapridu.",
-      "effect_type": "changed_exposure",
+      "class_id": "group:cns_depressant",
+      "drug_class": "Alkohol, trankvilizéry, hypnotika a narkotika",
+      "effect": "Při současném užívání s cinitapridem se zesilují jeho sedativní účinky; u alkoholu příbalová informace uvádí, že se s přípravkem nesmí užívat.",
+      "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "nefazodon",
-      "effect": "Tento významný inhibitor CYP3A4 může při současném perorálním nebo parenterálním podávání změnit farmakokinetiku cinitapridu.",
+      "class_id": "group:cyp3a4_inhibitor",
+      "drug_class": "Léčiva významně inhibující CYP3A4",
+      "effect": "Při současném perorálním nebo parenterálním užívání mohou změnit farmakokinetiku cinitapridu, který se metabolizuje převážně přes CYP3A4 a v menší míře přes CYP2C8. U ketokonazolu se průměrná plocha pod křivkou cinitapridu zvýšila přibližně dvojnásobně (rozmezí 0,9–4,3). Příklady: azolová antimykotika, zejména ketokonazol, itrakonazol, mikonazol a flukonazol; inhibitory HIV proteázy, zejména indinavir a ritonavir; makrolidová antibiotika, například erythromycin, klarithromycin a troleandomycin; a nefazodon. Příbalová informace uvádí zvýšení účinku cinitapridu u některých léků jako možnost, ale blíže ji nevymezuje.",
       "effect_type": "changed_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Používá se u dospělých k léčbě mírné až středně závažné dyspepsie a jako doplňková léčba refluxu, pokud samotné inhibitory protonové pumpy nestačí.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0260725",
+      "H": "",
+      "NAZEV": "GAPULSID",
+      "SILA": "1MG",
+      "FORMA": "TBL NOB",
+      "BALENI": "50",
+      "CESTA": "POR",
+      "DOPLNEK": "1MG TBL NOB 50",
+      "OBAL": "BLI",
+      "DRZ": "NVE",
+      "ZEMDRZ": "M",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "",
+      "UVADENIDO": "",
+      "IS_": "49",
+      "ATC_WHO": "A03FA08",
+      "RC": "49/138/22-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "CMS",
+      "DDDAMNT_WHO": "0",
+      "DDDUN_WHO": "",
+      "DDDP_WHO": "0",
+      "ZDROJ_WHO": "NO26",
+      "LL": "2504",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "GAPULSID",
+      "MRP_CISLO": "ES/H/0850/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "OE",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0260725",
+        "KOD_LATKY": "2504",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "1,37",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2504",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "CINITAPRIDI HYDROGENOTARTRAS",
+          "NAZEV_EN": "CINITAPRIDE HYDROGEN TARTRATE",
+          "NAZEV": "CINITAPRID-HYDROGEN-TARTARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0260725",
+        "KOD_LATKY": "0",
+        "SQ": "2",
+        "S": "Z",
+        "substance": {
+          "KOD_LATKY": "0",
+          "NAZEV_INN": "CORRESPONDING TO:",
+          "NAZEV": "ODPOVÍDÁ:"
+        }
+      },
+      {
+        "KOD_SUKL": "0260725",
+        "KOD_LATKY": "8526",
+        "SQ": "3",
+        "S": "O",
+        "AMNT": "1",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "8526",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CINITAPRIDUM",
+          "NAZEV_EN": "CINITAPRIDE",
+          "NAZEV": "CINITAPRID"
+        }
+      },
+      {
+        "KOD_SUKL": "0260725",
+        "KOD_LATKY": "20703",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "20703",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM 102",
+          "NAZEV_EN": "CELLULOSE MICROCRYSTALLINE 102",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA 102"
+        }
+      },
+      {
+        "KOD_SUKL": "0260725",
+        "KOD_LATKY": "3508",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3508",
+          "ZDROJ": "C22M",
+          "NAZEV_INN": "LACTOSUM",
+          "NAZEV_EN": "LACTOSE",
+          "NAZEV": "LAKTOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0260725",
+        "KOD_LATKY": "14679",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14679",
+          "ZDROJ": "C20",
+          "NAZEV_INN": "CARBOXYMETHYLAMYLUM NATRICUM A",
+          "NAZEV_EN": "SODIUM STARCH GLYCOLATE (TYPE A)",
+          "NAZEV": "SODNÁ SŮL KARBOXYMETHYLŠKROBU (TYP A)"
+        }
+      },
+      {
+        "KOD_SUKL": "0260725",
+        "KOD_LATKY": "1300",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0260725",
+        "KOD_LATKY": "2378",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0260725",
+      "PIL": "PI232922.pdf",
+      "DAT_ROZ_PIL": "23.04.2026",
+      "SPC": "SPC232923.pdf",
+      "DAT_ROZ_SPC": "23.04.2026",
+      "OBAL_TEXT": "OBAL232921.pdf",
+      "DAT_ROZ_OBAL": "23.04.2026",
+      "NR": "NR7710622.pdf",
+      "DAT_NPM_NR": "08.06.2023"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A03FA08",
+        "NT": "N",
+        "NAZEV": "CINITAPRID",
+        "NAZEV_EN": "CINITAPRIDE"
+      },
+      "formy": {
+        "FORMA": "TBL NOB",
+        "NAZEV": "Tableta",
+        "NAZEV_EN": "Tablet",
+        "NAZEV_LAT": "Tabuletta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10219000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

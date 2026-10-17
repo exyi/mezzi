@@ -1,380 +1,570 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C10",
+    "atc:C10A",
+    "atc:C10AB",
+    "atc:C10AB05",
+    "substance:4352"
+  ],
   "side_effects": [
     {
       "ctcae": "Diarrhea",
       "frequency": "common",
-      "label": "Průjem",
+      "label": "Průjem.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Abdominal pain",
       "frequency": "common",
-      "label": "Bolest břicha jako zažívací potíž",
-      "action": null,
-      "action_condition": null
+      "label": "Bolest břicha; při silné bolesti může jít o zánět slinivky břišní.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
     },
     {
       "ctcae": "Flatulence",
       "frequency": "common",
-      "label": "Plynatost",
+      "label": "Plynatost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Nausea",
       "frequency": "common",
-      "label": "Nevolnost",
+      "label": "Nevolnost.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Vomiting",
       "frequency": "common",
-      "label": "Zvracení",
+      "label": "Zvracení.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Alanine aminotransferase increased",
       "frequency": "common",
-      "label": "Zvýšené hodnoty jaterních enzymů (transamináz) v krvi, potvrzené laboratorními testy",
+      "label": "Zvýšené hodnoty jaterních enzymů v krvi, potvrzené laboratorními testy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Investigations - Other, specify",
+      "ctcae": "Homocysteine increased",
       "frequency": "common",
-      "label": "Zvýšená hladina homocysteinu v krvi",
+      "label": "Zvýšená hladina homocysteinu v krvi; souvislost se srdečně-cévními riziky nebyla potvrzena.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Headache",
       "frequency": "uncommon",
-      "label": "Bolest hlavy",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Cholelithiasis",
       "frequency": "uncommon",
-      "label": "Žlučové kameny",
+      "label": "Žlučníkové kameny.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Libido decreased",
       "frequency": "uncommon",
-      "label": "Snížená sexuální energie",
+      "label": "Snížená sexuální energie.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "ctcae": "Rash maculo-papular",
       "frequency": "uncommon",
-      "label": "Kožní přecitlivělost, například vyrážka, svědění nebo kopřivka",
+      "label": "Vyrážka, svědění nebo červené skvrny na kůži.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Creatinine increased",
       "frequency": "uncommon",
-      "label": "Zvýšená hladina kreatininu v krvi, potvrzená laboratorními testy",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Myalgia",
-      "frequency": "uncommon",
-      "label": "Bolest svalů; nevysvětlitelná bolest svalů může být příznakem závažného svalového postižení",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte nevysvětlitelnou bolest svalů"
-      }
-    },
-    {
-      "ctcae": "Myositis",
-      "frequency": "uncommon",
-      "label": "Zánět svalů; nevysvětlitelné svalové obtíže mohou být příznakem závažného svalového postižení",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte nevysvětlitelné křeče, bolest, citlivost nebo slabost svalů"
-      }
-    },
-    {
-      "ctcae": "Muscle cramp",
-      "frequency": "uncommon",
-      "label": "Svalové křeče; nevysvětlitelné křeče mohou být příznakem závažného svalového postižení",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte nevysvětlitelné svalové křeče"
-      }
-    },
-    {
-      "ctcae": "Generalized muscle weakness",
-      "frequency": "uncommon",
-      "label": "Svalová slabost; nevysvětlitelná slabost může být příznakem závažného svalového postižení",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud máte nevysvětlitelnou slabost svalů"
-      }
-    },
-    {
-      "ctcae": "Pancreatitis",
-      "frequency": "uncommon",
-      "label": "Zánět slinivky břišní, který se může projevit bolestí břicha",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest břicha"
-      }
-    },
-    {
-      "ctcae": "Venous thromboembolism",
-      "frequency": "uncommon",
-      "label": "Hluboká žilní trombóza v noze, která se může projevit bolestí, zarudnutím nebo otokem nohy",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest, zarudnutí nebo otok nohy"
-      }
-    },
-    {
-      "ctcae": "Venous thromboembolism",
-      "frequency": "uncommon",
-      "label": "Plicní embolie, která se může projevit bolestí na prsou a pocitem dušnosti",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví bolest na prsou a pocit dušnosti"
-      }
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "rare",
-      "label": "Zánět jater, který se může projevit žloutenkou nebo zvýšením jaterních enzymů",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví zežloutnutí kůže nebo očního bělma, případně zvýšení jaterních enzymů potvrzené laboratorními testy"
-      }
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "rare",
-      "label": "Alergická reakce, například otok obličeje, rtů, jazyka nebo hrdla, který může způsobit dýchací obtíže",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví alergická reakce, zejména otok obličeje, rtů, jazyka nebo hrdla či dýchací obtíže"
-      }
-    },
-    {
-      "ctcae": "Alopecia",
-      "frequency": "rare",
-      "label": "Padání vlasů",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Investigations - Other, specify",
-      "frequency": "rare",
-      "label": "Zvýšená koncentrace močoviny v krvi, potvrzená laboratorními testy",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Photosensitivity",
-      "frequency": "rare",
-      "label": "Zvýšená citlivost kůže na sluneční světlo, solární lampy a solária",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Anemia",
-      "frequency": "rare",
-      "label": "Snížená hladina hemoglobinu v krvi, potvrzená laboratorními testy",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "rare",
-      "label": "Snížený počet bílých krvinek, potvrzený laboratorními testy",
+      "label": "Zvýšená hladina kreatininu v krvi, potvrzená laboratorními testy.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Rhabdomyolysis",
       "frequency": "not_known",
-      "label": "Rozpad svalů (rhabdomyolýza), který může poškodit ledviny",
+      "label": "Rozpad svalů; svalové obtíže mohou zahrnovat křeče, bolest, citlivost nebo slabost svalů. Riziko je vyšší u pacientů s určitými rizikovými faktory a při současném užívání statinu nebo jiného fibrátu.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud máte nevysvětlitelné křeče, bolest, citlivost nebo slabost svalů"
+        "patient_guide": null,
+        "min_severity": 1
       }
     },
     {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
+      "ctcae": "Pulmonary embolism",
+      "frequency": "uncommon",
+      "label": "Plicní embolie; ve studii FIELD u pacientů s diabetem 2. typu se vyskytla u 1,1 % pacientů léčených fenofibrátem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Bolest na prsou a pocit dušnosti.",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Deep vein thrombosis",
+      "frequency": "uncommon",
+      "label": "Hluboká žilní trombóza; ve studii FIELD u pacientů s diabetem 2. typu se vyskytla u 1,4 % pacientů léčených fenofibrátem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Bolest, zarudnutí nebo otok nohou.",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Pancreatitis",
+      "frequency": "uncommon",
+      "label": "Pankreatitida; ve studii FIELD u pacientů s diabetem 2. typu se vyskytla u 0,8 % pacientů léčených fenofibrátem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Bolest břicha.",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "rare",
+      "label": "Alergická reakce; příznaky mohou zahrnovat otok obličeje, rtů, jazyka nebo hrdla a dýchací obtíže.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Otok obličeje, rtů, jazyka nebo hrdla, který může způsobit dýchací obtíže.",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "rare",
+      "label": "Hepatitida; může se projevit žloutenkou nebo zvýšenými jaterními enzymy.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Zežloutnutí kůže nebo bělma očí, případně zvýšené jaterní enzymy potvrzené laboratorními testy.",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Alopecia",
+      "frequency": "rare",
+      "label": "Padání vlasů.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Photosensitivity",
+      "frequency": "rare",
+      "label": "Zvýšená citlivost kůže na sluneční světlo, solární lampy a solária.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Anemia",
+      "frequency": "rare",
+      "label": "Snížená hladina hemoglobinu v krvi, potvrzená laboratorními testy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "White blood cell decreased",
+      "frequency": "rare",
+      "label": "Snížený počet bílých krvinek, potvrzený laboratorními testy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Blood urea nitrogen increased",
+      "frequency": "rare",
+      "label": "Zvýšená koncentrace močoviny v krvi, potvrzená laboratorními testy.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Stevens-Johnson syndrome",
       "frequency": "not_known",
-      "label": "Komplikace žlučových kamenů",
+      "label": "Závažná kožní reakce se zarudnutím, olupováním a otokem kůže, podobná těžké popálenině; zahrnuje například Stevensův-Johnsonův syndrom a toxickou epidermální nekrolýzu.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Zarudnutí, olupování a otok kůže.",
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Interstitial lung disease",
+      "frequency": "not_known",
+      "label": "Dlouhodobé plicní obtíže; SPC je označuje jako intersticiální plicní onemocnění.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Fatigue",
       "frequency": "not_known",
-      "label": "Pocit vyčerpání",
+      "label": "Pocit vyčerpání.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Dlouhodobé plicní obtíže (intersticiální plicní onemocnění)",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Závažná kožní vyrážka se zarudnutím, olupováním a otokem kůže, podobná těžké popálenině",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví závažná vyrážka se zarudnutím, olupováním a otokem kůže"
-      }
-    },
-    {
-      "ctcae": "Erythema multiforme",
-      "frequency": "not_known",
-      "label": "Erythema multiforme, závažná kožní reakce",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví závažná kožní vyrážka se zarudnutím, olupováním a otokem kůže"
-      }
-    },
-    {
-      "ctcae": "Stevens-Johnson syndrome",
-      "frequency": "not_known",
-      "label": "Stevensův-Johnsonův syndrom, závažná kožní reakce",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví závažná kožní vyrážka se zarudnutím, olupováním a otokem kůže"
-      }
-    },
-    {
-      "ctcae": "Toxic epidermal necrolysis",
-      "frequency": "not_known",
-      "label": "Toxická epidermální nekrolýza, závažná kožní reakce",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví závažná kožní vyrážka se zarudnutím, olupováním a otokem kůže"
-      }
     },
     {
       "ctcae": "Cholecystitis",
       "frequency": "not_known",
-      "label": "Zánět žlučníku jako komplikace žlučových kamenů",
+      "label": "Komplikace žlučníkových kamenů, například zánět žlučníku, zánět žlučových cest nebo žlučníková kolika.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Biliary tract infection",
-      "frequency": "not_known",
-      "label": "Zánět žlučových cest (cholangitida) jako komplikace žlučových kamenů",
+      "ctcae": "Musculoskeletal and connective tissue disorder - Other, specify",
+      "frequency": "uncommon",
+      "label": "Svalové obtíže, například bolest svalů, zánět svalů, křeče nebo slabost; riziko závažné svalové toxicity stoupá při současném užívání statinů nebo jiných fibrátů.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": "Nevysvětlitelné křeče nebo bolest, citlivost či slabost svalů.",
+        "min_severity": 1
+      }
+    },
+    {
+      "ctcae": "Libido decreased",
+      "frequency": "uncommon",
+      "label": "Sexuální dysfunkce.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Gallbladder pain",
-      "frequency": "not_known",
-      "label": "Žlučníková kolika jako komplikace žlučových kamenů",
+      "ctcae": "Creatinine increased",
+      "frequency": "uncommon",
+      "label": "Zvýšená koncentrace kreatininu v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hemoglobin decreased",
+      "frequency": "rare",
+      "label": "Snížený hemoglobin.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "White blood cell decreased",
+      "frequency": "rare",
+      "label": "Snížený počet bílých krvinek.",
       "action": null,
       "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Perorální antikoagulancia",
-      "effect": "Fenofibrát zesiluje účinek perorálních antikoagulancií a může zvýšit riziko krvácení. Při zahájení fenofibrátu lékař sníží dávku antikoagulancia přibližně o třetinu a podle hodnot INR ji případně postupně upraví a bude INR sledovat.",
+      "class_id": null,
+      "drug": "Warfarin",
+      "effect": "Fenofibrát může zesílit účinek warfarinu a zvýšit riziko krvácení. Při zahájení fenofibrátu má lékař zvážit snížení dávky warfarinu o třetinu a dále ji upravovat podle monitorovaného INR.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug": "cyklosporin",
-      "effect": "Při současném užívání s fenofibrátem byly zaznamenány závažné, vratné poruchy funkce ledvin. Lékař bude funkci ledvin pečlivě sledovat a při závažné změně laboratorních výsledků léčbu fenofibrátem ukončí.",
+      "class_id": "atc:C10AA",
+      "drug_class": "Inhibitory HMG-CoA reduktázy (statiny)",
+      "effect": "Současné užívání fenofibrátu se statinem zvyšuje riziko závažné svalové toxicity. Kombinace má být vyhrazena pacientům se závažnou smíšenou dyslipidemií a vysokým kardiovaskulárním rizikem bez anamnézy svalového onemocnění; pacienti mají být pečlivě sledováni.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
-      "drug_class": "inhibitory HMG-CoA reduktázy (statiny)",
-      "effect": "Současné užívání se statinem zvyšuje riziko závažného svalového poškození. Kombinace má být vyhrazena pacientům se závažnou smíšenou dyslipidemií a vysokým kardiovaskulárním rizikem, kteří nemají v anamnéze svalové onemocnění; lékař bude sledovat příznaky svalové toxicity. U fenofibrátu se simvastatinem mělo 10 % pacientů zvýšení kreatininu o více než 30 μmol/l oproti výchozí hodnotě (oproti 4,4 % při samotném statinu); klinicky významné zvýšení nad 200 μmol/l mělo 0,3 % pacientů s kombinovanou léčbou. Lékař bude kontrolovat kreatinin v prvních 3 měsících a poté pravidelně; při překročení 50 % horní hranice normy léčbu přeruší.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Bolest svalů při současném užívání fenofibrátu se statinem",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Myositis",
-          "frequency": null,
-          "label": "Zánět svalů při současném užívání fenofibrátu se statinem",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Rhabdomyolysis",
-          "frequency": null,
-          "label": "Rozpad svalů (rhabdomyolýza) při současném užívání fenofibrátu se statinem",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Creatinine increased",
-          "frequency": 10.0,
-          "label": "Při kombinaci se simvastatinem mělo 10 % pacientů zvýšení kreatininu o více než 30 μmol/l; 0,3 % mělo klinicky významné zvýšení nad 200 μmol/l",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
+      "class_id": "atc:C10AB",
       "drug_class": "Jiné fibráty",
-      "effect": "Současné užívání jiného fibrátu s fenofibrátem zvyšuje riziko závažného svalového poškození. Kombinace má být vyhrazena pacientům se závažnou smíšenou dyslipidemií a vysokým kardiovaskulárním rizikem, kteří nemají v anamnéze svalové onemocnění; lékař bude sledovat příznaky svalové toxicity.",
+      "effect": "Současné užívání fenofibrátu s jiným fibrátem zvyšuje riziko závažné svalové toxicity. Kombinace má být vyhrazena pacientům se závažnou smíšenou dyslipidemií a vysokým kardiovaskulárním rizikem bez anamnézy svalového onemocnění; pacienti mají být pečlivě sledováni.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Myalgia",
-          "frequency": null,
-          "label": "Bolest svalů při současném užívání fenofibrátu s jiným fibrátem",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Myositis",
-          "frequency": null,
-          "label": "Zánět svalů při současném užívání fenofibrátu s jiným fibrátem",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Rhabdomyolysis",
-          "frequency": null,
-          "label": "Rozpad svalů (rhabdomyolýza) při současném užívání fenofibrátu s jiným fibrátem",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Glitazony (rosiglitazon a pioglitazon)",
-      "effect": "Při současném užívání fenofibrátu a glitazonu byly zaznamenány případy paradoxního, vratného snížení HDL cholesterolu. Lékař bude koncentraci HDL cholesterolu sledovat; pokud bude příliš nízká, ukončí léčbu jedním z přípravků.",
+      "class_id": "atc:L04AD01",
+      "drug": "Cyklosporin",
+      "effect": "Při současném podávání fenofibrátu a cyklosporinu byly zaznamenány závažné, vratné poruchy funkce ledvin. Lékař má pečlivě sledovat funkci ledvin a při závažné změně laboratorních hodnot fenofibrát ukončit.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:A10BG",
+      "drug_class": "Glitazony",
+      "effect": "Při současném podávání fenofibrátu a glitazonu může paradoxně a vratně klesnout HDL cholesterol. Lékař má sledovat jeho hladinu; při příliš nízké hodnotě má ukončit jeden z přípravků.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Léčivé látky s úzkým terapeutickým indexem metabolizované CYP2C19, CYP2A6 a zejména CYP2C9",
-      "effect": "Fenofibrát je při terapeutických koncentracích slabým inhibitorem CYP2C19 a CYP2A6 a slabým až středně silným inhibitorem CYP2C9. U pacientů užívajících současně tyto léčivé látky má lékař pečlivě sledovat jejich účinek a v případě potřeby upravit jejich dávkování.",
+      "class_id": null,
+      "drug_class": "Léčivé látky s úzkým terapeutickým rozmezím metabolizované CYP2C19, CYP2A6 nebo zejména CYP2C9",
+      "effect": "Fenofibrát je při léčebných koncentracích slabým inhibitorem CYP2C19 a CYP2A6 a slabým až středně silným inhibitorem CYP2C9. U pacientů užívajících léčiva s úzkým terapeutickým rozmezím metabolizovaná těmito enzymy má lékař pečlivě sledovat jejich účinek a podle potřeby upravit dávku.",
       "effect_type": "increased_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Suprelip snižuje hladinu tuků v krvi, například triglyceridů, jako doplněk diety a další léčby.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0249069",
+      "H": "",
+      "NAZEV": "SUPRELIP",
+      "SILA": "200MG",
+      "FORMA": "CPS DUR",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "200MG CPS DUR 100",
+      "OBAL": "BLI",
+      "DRZ": "BAU",
+      "ZEMDRZ": "IRL",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "31",
+      "ATC_WHO": "C10AB05",
+      "RC": "31/341/01-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "0,2",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "100",
+      "ZDROJ_WHO": "NO26",
+      "LL": "4352",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "SUPRELIP",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "4352",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "200",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4352",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "FENOFIBRATUM",
+          "NAZEV_EN": "FENOFIBRATE",
+          "NAZEV": "FENOFIBRÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "14512",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14512",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "SACCHARI SPHAERAE",
+          "NAZEV_EN": "SUGAR SPHERES",
+          "NAZEV": "ZRNĚNÝ CUKR"
+        }
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "748",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "748",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "HYPROMELLOSUM",
+          "NAZEV_EN": "HYPROMELLOSE",
+          "NAZEV": "HYPROMELOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "1335",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1335",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "NATRII LAURILSULFAS",
+          "NAZEV_EN": "SODIUM LAURILSULFATE",
+          "NAZEV": "NATRIUM-LAURYL-SULFÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "16276",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "16276",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "SIMETICONI EMULSIO 30%",
+          "NAZEV_EN": "SIMETICONE EMULSION 30 PER CENT",
+          "NAZEV": "SIMETIKONOVÁ EMULZE 30%"
+        }
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "1871",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "SQ": "7",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "2710",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "4256",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "4256",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "FERRI OXIDUM FLAVUM",
+          "NAZEV_EN": "IRON OXIDE YELLOW",
+          "NAZEV": "ŽLUTÝ OXID ŽELEZITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "2855",
+        "SQ": "10",
+        "S": "A",
+        "AMNT": "100",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "SQ": "11",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0249069",
+        "KOD_LATKY": "2855",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "PC",
+        "substance": {
+          "KOD_LATKY": "2855",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "GELATINA",
+          "NAZEV_EN": "GELATIN",
+          "NAZEV": "ŽELATINA",
+          "DOP": "S5"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0249069",
+      "PIL": "PI227887.pdf",
+      "DAT_ROZ_PIL": "06.11.2025",
+      "SPC": "SPC224554.pdf",
+      "DAT_ROZ_SPC": "17.07.2025",
+      "OBAL_TEXT": "OBAL156944.pdf",
+      "DAT_ROZ_OBAL": "12.05.2020"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C10AB05",
+        "NT": "N",
+        "NAZEV": "FENOFIBRÁT",
+        "NAZEV_EN": "FENOFIBRATE"
+      },
+      "formy": {
+        "FORMA": "CPS DUR",
+        "NAZEV": "Tvrdá tobolka",
+        "NAZEV_EN": "Capsule, hard",
+        "NAZEV_LAT": "Capsula dura",
+        "JE_KONOPI": "A",
+        "KOD_EDQM": "10210000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

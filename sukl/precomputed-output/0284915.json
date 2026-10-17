@@ -1,67 +1,17 @@
 {
+  "classes": [
+    "atc:A",
+    "atc:A03",
+    "atc:A03F",
+    "atc:A03FA",
+    "atc:A03FA07",
+    "substance:4029"
+  ],
   "side_effects": [
-    {
-      "ctcae": "White blood cell decreased",
-      "frequency": "uncommon",
-      "label": "Snížený počet bílých krvinek (leukopenie).",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Thrombocytopenia",
-      "frequency": "not_known",
-      "label": "Snížený počet krevních destiček (trombocytopenie), který se může projevit tvorbou modřin nebo krvácením.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "not_known",
-      "label": "Alergická (anafylaktoidní) reakce, která se může projevit otokem rukou, nohou, kotníků, obličeje, rtů nebo hrdla, potížemi při polykání či dýchání, vyrážkou nebo svěděním. Přestaňte přípravek užívat.",
-      "action": "hospitalize_NOW",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví otok rukou, nohou, kotníků, obličeje, rtů nebo hrdla, případně vyrážka či svědění; otok může způsobit potíže při polykání nebo dýchání."
-      }
-    },
-    {
-      "ctcae": "Headache",
-      "frequency": "uncommon",
-      "label": "Bolest hlavy.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Psychiatric disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Poruchy spánku.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dizziness",
-      "frequency": "uncommon",
-      "label": "Závrať.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Tremor",
-      "frequency": "not_known",
-      "label": "Třes.",
-      "action": null,
-      "action_condition": null
-    },
     {
       "ctcae": "Diarrhea",
       "frequency": "uncommon",
       "label": "Průjem.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Constipation",
-      "frequency": "uncommon",
-      "label": "Zácpa.",
       "action": null,
       "action_condition": null
     },
@@ -73,6 +23,13 @@
       "action_condition": null
     },
     {
+      "ctcae": "Constipation",
+      "frequency": "uncommon",
+      "label": "Zácpa.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Gastrointestinal disorders - Other, specify",
       "frequency": "uncommon",
       "label": "Zvýšená tvorba slin.",
@@ -80,44 +37,23 @@
       "action_condition": null
     },
     {
-      "ctcae": "Nausea",
-      "frequency": "not_known",
-      "label": "Pocit na zvracení.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hepatobiliary disorders - Other, specify",
-      "frequency": "not_known",
-      "label": "Žloutenka.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Creatinine increased",
+      "ctcae": "Headache",
       "frequency": "uncommon",
-      "label": "Zvýšené hladiny močovinového dusíku (BUN) a kreatininu v krvi.",
+      "label": "Bolest hlavy.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Vyrážka.",
+      "ctcae": "Insomnia",
+      "frequency": "uncommon",
+      "label": "Poruchy spánku.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
-      "frequency": "rare",
-      "label": "Zarudnutí kůže.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Pruritus",
-      "frequency": "rare",
-      "label": "Svědění.",
+      "ctcae": "Dizziness",
+      "frequency": "uncommon",
+      "label": "Závrať. Pokud se objeví, neřiďte.",
       "action": null,
       "action_condition": null
     },
@@ -129,7 +65,7 @@
       "action_condition": null
     },
     {
-      "ctcae": "Pain",
+      "ctcae": "Non-cardiac chest pain",
       "frequency": "uncommon",
       "label": "Bolest na hrudi.",
       "action": null,
@@ -150,6 +86,27 @@
       "action_condition": null
     },
     {
+      "ctcae": "Creatinine increased",
+      "frequency": "uncommon",
+      "label": "Zvýšená hladina kreatininu v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Investigations - Other, specify",
+      "frequency": "uncommon",
+      "label": "Zvýšená hladina močovinového dusíku (BUN) v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "White blood cell decreased",
+      "frequency": "uncommon",
+      "label": "Snížený počet bílých krvinek.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Blood prolactin abnormal",
       "frequency": "uncommon",
       "label": "Zvýšená hladina prolaktinu v krvi.",
@@ -157,41 +114,64 @@
       "action_condition": null
     },
     {
-      "ctcae": "Lactation disorder",
-      "frequency": null,
-      "label": "Tvorba a vylučování mléka z prsní žlázy mimo období kojení (galaktorea). Přerušte léčbu a poraďte se se svým lékařem.",
-      "action": "discontinue_treatment",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví tvorba a vylučování mléka z prsní žlázy mimo období kojení."
-      }
+      "ctcae": "Blood and lymphatic system disorders - Other, specify",
+      "frequency": "not_known",
+      "label": "Snížený počet krevních destiček.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Tremor",
+      "frequency": "not_known",
+      "label": "Třes.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Nausea",
+      "frequency": "not_known",
+      "label": "Pocit na zvracení.",
+      "action": null,
+      "action_condition": null
     },
     {
       "ctcae": "Gynecomastia",
       "frequency": "not_known",
-      "label": "Zvětšení prsních žláz u mužů. Přerušte léčbu a poraďte se se svým lékařem.",
+      "label": "Zvětšení prsních žláz. Pokud se objeví, přerušte léčbu a poraďte se s lékařem.",
       "action": "discontinue_treatment",
       "action_condition": {
-        "patient_guide": "Pokud se objeví zvětšení prsních žláz u mužů."
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Lactation disorder",
+      "frequency": null,
+      "label": "Tvorba a vylučování mléka mimo období kojení (galaktorea). Pokud se objeví, přerušte léčbu a poraďte se s lékařem.",
+      "action": "discontinue_treatment",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
       }
     },
     {
       "ctcae": "Blood bilirubin increased",
       "frequency": "not_known",
-      "label": "Zvýšená hladina bilirubinu v krvi.",
+      "label": "Žloutenka.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Aspartate aminotransferase increased",
       "frequency": "not_known",
-      "label": "Zvýšená hladina AST (SGOT).",
+      "label": "Zvýšené hladiny AST (SGOT).",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Alanine aminotransferase increased",
       "frequency": "not_known",
-      "label": "Zvýšená hladina ALT (SGPT).",
+      "label": "Zvýšené hladiny ALT (SGPT).",
       "action": null,
       "action_condition": null
     },
@@ -208,20 +188,315 @@
       "label": "Zvýšená hladina alkalické fosfatázy.",
       "action": null,
       "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "rare",
+      "label": "Vyrážka.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Skin and subcutaneous tissue disorders - Other, specify",
+      "frequency": "rare",
+      "label": "Zarudnutí kůže.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Pruritus",
+      "frequency": "rare",
+      "label": "Svědění.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "not_known",
+      "label": "Alergická reakce: otok rukou, nohou, kotníků, obličeje, rtů nebo hrdla, který může způsobit potíže při polykání nebo dýchání; může se objevit také vyrážka nebo svědění.",
+      "action": "emergency",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 3
+      }
+    },
+    {
+      "ctcae": "Allergic reaction",
+      "frequency": "not_known",
+      "label": "Anafylaktoidní reakce.",
+      "action": null,
+      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Anticholinergní léčiva",
-      "effect": "Anticholinergní léčiva mohou snižovat účinek přípravku Kinito (itopridu).",
+      "class_id": null,
+      "drug_class": "Anticholinergní látky",
+      "effect": "Anticholinergní látky mohou snížit účinek itopridu.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Perorální léčiva s úzkým terapeutickým rozmezím, s prodlouženým uvolňováním nebo s enterosolventním obalem",
-      "effect": "Protože Kinito urychluje pohyby trávicího ústrojí, může ovlivnit vstřebávání současně užívaných perorálních léčiv, zejména těchto přípravků. Zda se to týká vašich léků, proberte s lékařem nebo lékárníkem.",
+      "class_id": null,
+      "drug_class": "Perorální léky s úzkým terapeutickým rozmezím, s prodlouženým uvolňováním nebo s enterosolventním obalem",
+      "effect": "Itoprid svým účinkem na pohyby trávicího ústrojí může ovlivnit vstřebávání současně užívaných perorálních léků, zejména těchto přípravků. Poraďte se s lékařem nebo lékárníkem, zda se to týká vašich léků.",
       "effect_type": "changed_exposure",
       "side_effects": []
     }
-  ]
+  ],
+  "usage": "Kinito zrychluje pohyby trávicího ústrojí a používá se u dospělých k léčbě příznaků funkční poruchy trávení.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0284915",
+      "H": "",
+      "NAZEV": "KINITO",
+      "SILA": "50MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "50MG TBL FLM 100",
+      "OBAL": "BLI",
+      "DRZ": "ZNP",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "49",
+      "ATC_WHO": "A03FA07",
+      "RC": "49/819/10-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "RMS",
+      "DDDAMNT_WHO": "0,15",
+      "DDDUN_WHO": "G",
+      "DDDP_WHO": "33,3333",
+      "ZDROJ_WHO": "NO26",
+      "LL": "4029",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "KINITO",
+      "MRP_CISLO": "CZ/H/0289/001",
+      "PRAVNI_ZAKLAD_REGISTRACE": "O",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "4029",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "50",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4029",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "ITOPRIDI HYDROCHLORIDUM",
+          "NAZEV_EN": "ITOPRIDE HYDROCHLORIDE",
+          "NAZEV": "ITOPRID-HYDROCHLORID"
+        }
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "2624",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2624",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "LACTOSUM MONOHYDRICUM",
+          "NAZEV_EN": "LACTOSE MONOHYDRATE",
+          "NAZEV": "MONOHYDRÁT LAKTOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "4989",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4989",
+          "ZDROJ": "CZ",
+          "NAZEV_INN": "MAYDIS AMYLUM PREGELIFICATUM",
+          "NAZEV_EN": "PREGELATINISED MAIZE STARCH",
+          "NAZEV": "PŘEDBOBTNALÝ KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "5624",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "5624",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CARMELLOSUM NATRICUM CONEXUM",
+          "NAZEV_EN": "CROSCARMELLOSE SODIUM",
+          "NAZEV": "SODNÁ SŮL KROSKARMELOSY"
+        }
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "1300",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "2378",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "SQ": "7",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "14324",
+        "SQ": "8",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14324",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910/5",
+          "NAZEV_EN": "HYPROMELLOSE 2910/5",
+          "NAZEV": "HYPROMELOSA 2910/5"
+        }
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "3765",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3765",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 6000",
+          "NAZEV_EN": "MACROGOL 6000",
+          "NAZEV": "MAKROGOL 6000"
+        }
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "2710",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0284915",
+        "KOD_LATKY": "1871",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1871",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "TALCUM",
+          "NAZEV_EN": "TALC",
+          "NAZEV": "MASTEK"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0284915",
+      "PIL": "PI221997.pdf",
+      "DAT_ROZ_PIL": "06.05.2025",
+      "SPC": "SPC221998.pdf",
+      "DAT_ROZ_SPC": "06.05.2025",
+      "OBAL_TEXT": "OBAL221996.pdf",
+      "DAT_ROZ_OBAL": "06.05.2025"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "A03FA07",
+        "NT": "N",
+        "NAZEV": "ITOPRID",
+        "NAZEV_EN": "ITOPRIDE"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }

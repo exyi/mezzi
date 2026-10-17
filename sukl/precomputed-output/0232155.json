@@ -1,4 +1,12 @@
 {
+  "classes": [
+    "atc:C",
+    "atc:C07",
+    "atc:C07A",
+    "atc:C07AB",
+    "atc:C07AB07",
+    "substance:10087"
+  ],
   "side_effects": [
     {
       "ctcae": "Sinus bradycardia",
@@ -15,12 +23,34 @@
       "action_condition": null
     },
     {
+      "ctcae": "Atrioventricular block first degree",
+      "frequency": "uncommon",
+      "label": "Poruchy AV převodu.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hypertriglyceridemia",
+      "frequency": "rare",
+      "label": "Zvýšení hladiny triglyceridů v krvi.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Alanine aminotransferase increased",
+      "frequency": "rare",
+      "label": "Zvýšení jaterních enzymů ALT a AST.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Dizziness",
       "frequency": "common",
-      "label": "Točení hlavy; pokud máte závratě, kontaktujte co nejdříve svého lékaře.",
+      "label": "Závratě; při závratích kontaktujte co nejdříve lékaře.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud máte závratě."
+        "patient_guide": null,
+        "min_severity": 2
       }
     },
     {
@@ -31,32 +61,47 @@
       "action_condition": null
     },
     {
-      "ctcae": "Fatigue",
-      "frequency": "common",
-      "label": "Únava.",
+      "ctcae": "Syncope",
+      "frequency": "rare",
+      "label": "Mdloby.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Malaise",
-      "frequency": "common",
-      "label": "Pocit slabosti; pokud se cítíte slabý(á), kontaktujte co nejdříve svého lékaře.",
+      "ctcae": "Dry eye",
+      "frequency": "rare",
+      "label": "Snížená tvorba slz; zvažte to při nošení kontaktních čoček.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Conjunctivitis",
+      "frequency": "very_rare",
+      "label": "Podráždění nebo zarudnutí očí (zánět spojivek).",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Hearing impaired",
+      "frequency": "rare",
+      "label": "Potíže se sluchem.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Bronchospasm",
+      "frequency": "uncommon",
+      "label": "Dušnost u pacientů s astmatem nebo chronickým onemocněním dýchacích cest.",
       "action": "contact_doctor",
       "action_condition": {
-        "patient_guide": "Pokud se cítíte slabý(á)."
+        "patient_guide": "zejména při nových potížích s dýcháním, kašli nebo sípání při námaze",
+        "min_severity": 2
       }
     },
     {
-      "ctcae": null,
-      "frequency": "common",
-      "label": "Pocit chladu nebo necitlivosti v rukou a chodidlech.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hypotension",
-      "frequency": "common",
-      "label": "Nízký krevní tlak.",
+      "ctcae": "Allergic rhinitis",
+      "frequency": "rare",
+      "label": "Ucpaný nos z alergických příčin.",
       "action": null,
       "action_condition": null
     },
@@ -89,6 +134,61 @@
       "action_condition": null
     },
     {
+      "ctcae": "Pruritus",
+      "frequency": "rare",
+      "label": "Svědění jako alergická reakce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Flushing",
+      "frequency": "rare",
+      "label": "Zčervenání jako alergická reakce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Rash maculo-papular",
+      "frequency": "rare",
+      "label": "Vyrážka jako alergická reakce; zdroj neurčuje její typ.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Edema face",
+      "frequency": "rare",
+      "label": "Otok obličeje, krku, jazyka, úst nebo hrdla při závažnější alergické reakci.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "otok obličeje, krku, jazyka, úst nebo hrdla nebo potíže s dýcháním",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Dyspnea",
+      "frequency": "rare",
+      "label": "Potíže s dýcháním při závažnější alergické reakci; kontaktujte co nejdříve lékaře.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": "při alergické reakci, zejména s otokem obličeje, krku, jazyka, úst nebo hrdla",
+        "min_severity": 2
+      }
+    },
+    {
+      "ctcae": "Hepatitis",
+      "frequency": "rare",
+      "label": "Zánět jater, který může způsobit zežloutnutí kůže nebo očního bělma.",
+      "action": null,
+      "action_condition": null
+    },
+    {
+      "ctcae": "Erectile dysfunction",
+      "frequency": "rare",
+      "label": "Porucha erekce.",
+      "action": null,
+      "action_condition": null
+    },
+    {
       "ctcae": "Insomnia",
       "frequency": "uncommon",
       "label": "Poruchy spánku.",
@@ -103,34 +203,28 @@
       "action_condition": null
     },
     {
-      "ctcae": "Dizziness",
-      "frequency": "uncommon",
-      "label": "Točení hlavy při vstávání.",
+      "ctcae": "Hallucinations",
+      "frequency": "rare",
+      "label": "Halucinace.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Respiratory, thoracic and mediastinal disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Dechové potíže u pacientů s astmatem nebo s chronickým onemocněním dýchacích cest.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví nové potíže s dýcháním, kašel nebo sípání při cvičení."
-      }
-    },
-    {
-      "ctcae": "Cardiac disorders - Other, specify",
-      "frequency": "uncommon",
-      "label": "Poruchy AV převodu; zpomalení nebo nepravidelná srdeční akce.",
+      "ctcae": "Fatigue",
+      "frequency": "common",
+      "label": "Únava.",
       "action": null,
       "action_condition": null
     },
     {
       "ctcae": "Generalized muscle weakness",
       "frequency": "uncommon",
-      "label": "Svalová slabost.",
-      "action": null,
-      "action_condition": null
+      "label": "Svalová slabost; při slabosti kontaktujte co nejdříve lékaře.",
+      "action": "contact_doctor",
+      "action_condition": {
+        "patient_guide": null,
+        "min_severity": 2
+      }
     },
     {
       "ctcae": "Muscle cramp",
@@ -140,95 +234,30 @@
       "action_condition": null
     },
     {
-      "ctcae": "Hypertriglyceridemia",
-      "frequency": "rare",
-      "label": "Zvýšení hladiny triglyceridů.",
+      "ctcae": "Hypotension",
+      "frequency": "common",
+      "label": "Nízký krevní tlak.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Alanine aminotransferase increased",
-      "frequency": "rare",
-      "label": "Zvýšení hladiny jaterních enzymů ALT.",
+      "ctcae": "Orthostatic hypotension",
+      "frequency": "uncommon",
+      "label": "Pokles krevního tlaku při vstávání.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Aspartate aminotransferase increased",
-      "frequency": "rare",
-      "label": "Zvýšení hladiny jaterních enzymů AST.",
+      "ctcae": "Peripheral sensory neuropathy",
+      "frequency": "common",
+      "label": "Pocit chladu nebo necitlivosti v rukou a chodidlech.",
       "action": null,
       "action_condition": null
     },
     {
-      "ctcae": "Syncope",
-      "frequency": "rare",
-      "label": "Mdloby.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Dry eye",
-      "frequency": "rare",
-      "label": "Snížená tvorba slz; je třeba to vzít v úvahu, pokud používáte kontaktní čočky.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hearing impaired",
-      "frequency": "rare",
-      "label": "Potíže se sluchem.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Allergic rhinitis",
-      "frequency": "rare",
-      "label": "Alergická rýma, například ucpaný nos z alergických příčin.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Allergic reaction",
-      "frequency": "rare",
-      "label": "Reakce z přecitlivělosti, například svědění, zčervenání, vyrážka nebo angioedém. Pokud se objeví závažná alergická reakce, například otok obličeje, krku, jazyka, úst nebo hrdla či potíže s dýcháním, okamžitě navštivte lékaře.",
-      "action": "contact_doctor",
-      "action_condition": {
-        "patient_guide": "Pokud se objeví závažná alergická reakce, například otok obličeje, krku, jazyka, úst nebo hrdla nebo potíže s dýcháním."
-      }
-    },
-    {
-      "ctcae": "Hepatitis",
-      "frequency": "rare",
-      "label": "Zánět jater, který může způsobit zežloutnutí kůže nebo bělma očí.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Erectile dysfunction",
-      "frequency": "rare",
-      "label": "Porucha erekce.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": null,
-      "frequency": "rare",
-      "label": "Noční můry.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Hallucinations",
-      "frequency": "rare",
-      "label": "Halucinace.",
-      "action": null,
-      "action_condition": null
-    },
-    {
-      "ctcae": "Conjunctivitis",
+      "ctcae": "Dermatitis psoriasiform",
       "frequency": "very_rare",
-      "label": "Podráždění nebo zarudnutí očí (zánět spojivek).",
+      "label": "Vyrážka s olupováním kůže (lupénka) nebo vyrážka podobná lupénce.",
       "action": null,
       "action_condition": null
     },
@@ -238,278 +267,392 @@
       "label": "Vypadávání vlasů.",
       "action": null,
       "action_condition": null
-    },
-    {
-      "ctcae": "Dermatitis psoriasiform",
-      "frequency": "very_rare",
-      "label": "Betablokátory mohou vyvolat nebo zhoršit lupénku nebo způsobit vyrážku podobnou lupénce.",
-      "action": null,
-      "action_condition": null
     }
   ],
   "combinations": [
     {
-      "drug_class": "Blokátory kalciového kanálu typu verapamilu a diltiazemu",
-      "effect": "Současné užívání se obecně nedoporučuje: může nepříznivě ovlivnit srdeční stahy a AV převod. V menší míře se to týká diltiazemu. Intravenózní verapamil u pacientů léčených betablokátorem může prohloubit hypotenzi a způsobit AV blok.",
+      "class_id": "atc:C08D",
+      "drug_class": "Blokátory kalciových kanálů typu verapamilu nebo diltiazemu",
+      "effect": "Současné užívání s bisoprololem může zhoršit stažlivost srdce a vedení vzruchu. Intravenózní verapamil při léčbě betablokátorem může způsobit výrazný pokles tlaku a AV blok. Kombinace se obecně nedoporučuje.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Prohloubení nízkého krevního tlaku při intravenózním podání verapamilu.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "AV blok při intravenózním podání verapamilu; současně může dojít k nepříznivému ovlivnění AV převodu a srdečních stahů.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C01B",
       "drug_class": "Antiarytmika třídy I",
-      "effect": "Současné užívání se obecně nedoporučuje, protože může zesílit účinek na AV převod a negativně inotropní účinek.",
+      "effect": "Například chinidin, disopyramid, lidokain, fenytoin, flekainid nebo propafenon mohou s bisoprololem zesílit zpomalení AV převodu a negativní účinek na sílu srdečních stahů. Kombinace se obecně nedoporučuje.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Zesílení účinku na AV převod a negativně inotropního účinku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C02A",
       "drug_class": "Centrálně působící antihypertenziva",
-      "effect": "Současné užívání se obecně nedoporučuje. Může zhoršit srdeční selhání snížením centrálního tonu sympatiku, srdeční frekvence a srdečního výdeje a rozšířením cév. Náhlé vysazení, zvláště před ukončením léčby betablokátorem, může zvýšit riziko návratového zvýšení krevního tlaku.",
+      "effect": "Klonidin, methyldopa, moxonidin nebo rilmenidin s bisoprololem mohou zhoršit srdeční selhání snížením srdeční frekvence a srdečního výdeje. Náhlé vysazení, zvláště před ukončením betablokátoru, může zvýšit riziko prudkého vzestupu tlaku. Kombinace se obecně nedoporučuje.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Heart failure",
-          "frequency": null,
-          "label": "Zhoršení srdečního selhání.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Sinus bradycardia",
-          "frequency": null,
-          "label": "Snížení srdeční frekvence.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Rozšíření cév a snížení krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypertension",
-          "frequency": null,
-          "label": "Náhlé vysazení může zvýšit riziko návratového zvýšení krevního tlaku, zvláště pokud k němu dojde před ukončením léčby betablokátorem.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Blokátory kalciového kanálu dihydropyridinového typu",
-      "effect": "Současné užívání může zvýšit riziko hypotenze; nelze vyloučit ani zvýšené riziko dalšího zhoršení funkce srdečních komor. Lékař může provádět častější vyšetření.",
+      "class_id": "atc:C08C",
+      "drug_class": "Dihydropyridinové blokátory kalciových kanálů",
+      "effect": "Felodipin nebo amlodipin užívané s bisoprololem mohou zvýšit riziko nízkého krevního tlaku; nelze vyloučit ani vyšší riziko zhoršení funkce srdečních komor. Lékař může častěji kontrolovat stav.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko nízkého krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Left ventricular dysfunction",
-          "frequency": null,
-          "label": "Nelze vyloučit zvýšené riziko dalšího zhoršení funkce srdečních komor.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C01BD",
       "drug_class": "Antiarytmika třídy III",
-      "effect": "Současné užívání může zesílit účinek na AV převod; doporučuje se opatrnost a lékař může provádět častější vyšetření.",
-      "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Zesílení účinku na AV převod.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
-    },
-    {
-      "drug_class": "Lokálně používané betablokátory",
-      "effect": "Lokálně používané betablokátory, například oční kapky k léčbě glaukomu, mohou mít při současném užívání aditivní systémové účinky; doporučuje se opatrnost.",
+      "effect": "Například amiodaron může při současném užívání s bisoprololem zesílit účinek na AV převod. Lékař může častěji kontrolovat stav.",
       "effect_type": "increased_toxicity",
       "side_effects": []
     },
     {
+      "class_id": "atc:C07A",
+      "drug_class": "Betablokátory používané místně, například oční kapky na glaukom",
+      "effect": "Při současném užívání s bisoprololem se mohou jejich celkové účinky sčítat. Lékař může častěji kontrolovat stav.",
+      "effect_type": "increased_toxicity",
+      "side_effects": []
+    },
+    {
+      "class_id": "atc:N07A",
       "drug_class": "Parasympatomimetika",
-      "effect": "Současné užívání může prodloužit AV vedení a zvýšit riziko bradykardie; doporučuje se opatrnost.",
+      "effect": "Při užívání s bisoprololem mohou prodloužit AV převod a zvýšit riziko zpomalení srdeční frekvence. Lékař může častěji kontrolovat stav.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Prodloužení AV vedení.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Sinus bradycardia",
-          "frequency": null,
-          "label": "Zvýšené riziko zpomalení srdeční frekvence.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:A10",
       "drug_class": "Inzulin a perorální antidiabetika",
-      "effect": "Bisoprolol může zesílit účinek těchto léků na snížení hladiny cukru v krvi. Blokáda beta-adrenoreceptorů může zároveň maskovat příznaky nízké hladiny cukru; doporučuje se opatrnost.",
+      "effect": "Bisoprolol může zesílit účinek těchto léků na snížení hladiny cukru v krvi a maskovat příznaky hypoglykémie. Lékař může častěji kontrolovat stav.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypoglycemia",
-          "frequency": null,
-          "label": "Zesílení účinku na snížení hladiny cukru v krvi; příznaky hypoglykémie mohou být maskovány.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:N01",
       "drug_class": "Anestetika",
-      "effect": "Současné užívání může oslabit reflexní zrychlení srdeční frekvence a zvýšit riziko hypotenze; při celkové anestézii musí být anesteziolog informován o léčbě betablokátorem. Doporučuje se opatrnost.",
+      "effect": "Při kombinaci s bisoprololem může být oslabeno zrychlení srdeční frekvence jako reflexní reakce a zvýšit se riziko nízkého krevního tlaku. Před celkovou anestézií informujte anesteziologa o léčbě bisoprololem.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko nízkého krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C01A",
       "drug_class": "Srdeční glykosidy (digitalis)",
-      "effect": "Současné užívání může snížit srdeční frekvenci a prodloužit AV převod; doporučuje se opatrnost.",
+      "effect": "Současné užívání s bisoprololem může zpomalit srdeční frekvenci a prodloužit AV převod. Lékař může častěji kontrolovat stav.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Sinus bradycardia",
-          "frequency": null,
-          "label": "Snížení srdeční frekvence.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Cardiac disorders - Other, specify",
-          "frequency": null,
-          "label": "Prodloužení AV převodu.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:M01A",
       "drug_class": "Nesteroidní protizánětlivé léky (NSAID)",
-      "effect": "NSAID mohou snižovat účinek bisoprololu na snížení krevního tlaku.",
+      "effect": "NSAID, například ibuprofen nebo diklofenak, mohou snížit účinek bisoprololu na krevní tlak.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
+      "class_id": "atc:C01C",
       "drug_class": "Beta-sympatomimetika",
-      "effect": "Současné užívání s bisoprololem může snižovat účinek obou látek; doporučuje se opatrnost.",
+      "effect": "Isoprenalin nebo dobutamin mohou při kombinaci s bisoprololem vzájemně oslabit účinek obou léků.",
       "effect_type": "antagonism",
       "side_effects": []
     },
     {
-      "drug_class": "Sympatomimetika působící na alfa- i beta-adrenoreceptory",
-      "effect": "Současné užívání může odmaskovat vazokonstrikční účinky zprostředkované alfa-adrenoreceptory, což vede ke zvýšení krevního tlaku a zhoršení intermitentních klaudikací. Tato interakce se považuje za pravděpodobnější u neselektivních betablokátorů; doporučuje se opatrnost.",
+      "class_id": null,
+      "drug_class": "Sympatomimetika působící na alfa i beta receptory",
+      "effect": "Noradrenalin nebo adrenalin s bisoprololem mohou odhalit jejich účinek na stažení cév, zvýšit krevní tlak a zhoršit přerušované kulhání. Interakce je pravděpodobnější u neselektivních betablokátorů.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypertension",
-          "frequency": null,
-          "label": "Zvýšení krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Peripheral ischemia",
-          "frequency": null,
-          "label": "Zhoršení intermitentních klaudikací.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
+      "class_id": "atc:C02",
       "drug_class": "Antihypertenziva a další léky snižující krevní tlak",
-      "effect": "Současné užívání s antihypertenzivy a také s dalšími léky snižujícími krevní tlak, například tricyklickými antidepresivy, barbituráty nebo fenothiaziny, může zvýšit riziko hypotenze; doporučuje se opatrnost.",
+      "effect": "Současné užívání s bisoprololem může zvýšit riziko nízkého krevního tlaku; patří sem také tricyklická antidepresiva, barbituráty a fenothiaziny. Lékař může častěji kontrolovat stav.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zvýšené riziko nízkého krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug": "Meflochin",
-      "effect": "Při současném užívání se zvyšuje riziko bradykardie; doporučuje se opatrnost.",
+      "class_id": "atc:P01BC02",
+      "drug_class": "Meflochin",
+      "effect": "Při současném užívání s bisoprololem se může zvýšit riziko zpomalení srdeční frekvence.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Sinus bradycardia",
-          "frequency": null,
-          "label": "Zvýšené riziko zpomalení srdeční frekvence.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     },
     {
-      "drug_class": "Inhibitory monoaminooxidázy (kromě inhibitorů MAO-B)",
-      "effect": "Současné užívání může zesílit hypotenzní účinek betablokátorů a zároveň přinést riziko hypertenzní krize.",
+      "class_id": "atc:N06AF",
+      "drug_class": "Inhibitory monoaminooxidázy jiné než inhibitory MAO-B",
+      "effect": "Při současném užívání s bisoprololem se může zesílit pokles krevního tlaku; existuje také riziko hypertenzní krize.",
       "effect_type": "increased_toxicity",
-      "side_effects": [
-        {
-          "ctcae": "Hypotension",
-          "frequency": null,
-          "label": "Zesílení účinku na snížení krevního tlaku.",
-          "action": null,
-          "action_condition": null
-        },
-        {
-          "ctcae": "Hypertension",
-          "frequency": null,
-          "label": "Riziko hypertenzní krize.",
-          "action": null,
-          "action_condition": null
-        }
-      ]
+      "side_effects": []
     }
-  ]
+  ],
+  "usage": "Bisoprolol se užívá spolu s dalšími léky k léčbě stabilního chronického srdečního selhání.",
+  "schema_version": 3,
+  "metadata": {
+    "snapshot": "20260925",
+    "product": {
+      "KOD_SUKL": "0232155",
+      "H": "",
+      "NAZEV": "CONCOR COR",
+      "SILA": "2,5MG",
+      "FORMA": "TBL FLM",
+      "BALENI": "100",
+      "CESTA": "POR",
+      "DOPLNEK": "2,5MG TBL FLM 100",
+      "OBAL": "BLI",
+      "DRZ": "MRN",
+      "ZEMDRZ": "CZ",
+      "AKT_DRZ": "",
+      "AKT_ZEM": "",
+      "REG": "R",
+      "V_PLATDO": "",
+      "NEOMEZ": "X",
+      "UVADENIDO": "",
+      "IS_": "77",
+      "ATC_WHO": "C07AB07",
+      "RC": "77/026/01-C",
+      "SDOV": "",
+      "SDOV_DOD": "",
+      "SDOV_ZEM": "",
+      "REG_PROC": "NAR",
+      "DDDAMNT_WHO": "10",
+      "DDDUN_WHO": "MG",
+      "DDDP_WHO": "25",
+      "ZDROJ_WHO": "NO26",
+      "LL": "10087",
+      "VYDEJ": "R",
+      "ZAV": "",
+      "DOPING": "",
+      "NARVLA": "",
+      "DODAVKY": "1",
+      "EAN": "",
+      "BRAILLOVO_PISMO": "S",
+      "EXP": "36",
+      "EXP_T": "M",
+      "NAZEV_REG": "CONCOR COR",
+      "MRP_CISLO": "",
+      "PRAVNI_ZAKLAD_REGISTRACE": "S",
+      "OCHRANNY_PRVEK": "A",
+      "OMEZENI_PRESKRIPCE_SMP": "",
+      "TYP_LP": "CH"
+    },
+    "composition": [
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "10087",
+        "SQ": "1",
+        "S": "L",
+        "AMNT": "2,5",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10087",
+          "ZDROJ": "C15",
+          "NAZEV_INN": "BISOPROLOLI FUMARAS",
+          "NAZEV_EN": "BISOPROLOL FUMARATE",
+          "NAZEV": "BISOPROLOL-FUMARÁT",
+          "DOP": "P1"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "9860",
+        "SQ": "2",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "9860",
+          "ZDROJ": "C20M",
+          "NAZEV_INN": "CALCII HYDROGENOPHOSPHAS",
+          "NAZEV_EN": "CALCIUM HYDROGEN PHOSPHATE",
+          "NAZEV": "HYDROGENFOSFOREČNAN VÁPENATÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "2970",
+        "SQ": "3",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2970",
+          "ZDROJ": "C24",
+          "NAZEV_INN": "MAYDIS AMYLUM",
+          "NAZEV_EN": "MAIZE STARCH",
+          "NAZEV": "KUKUŘIČNÝ ŠKROB"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "3755",
+        "SQ": "4",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "3755",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "CELLULOSUM MICROCRISTALLINUM",
+          "NAZEV_EN": "CELLULOSE, MICROCRYSTALLINE",
+          "NAZEV": "MIKROKRYSTALICKÁ CELULOSA"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "4987",
+        "SQ": "5",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "4987",
+          "ZDROJ": "INN",
+          "NAZEV_INN": "CROSPOVIDONUM",
+          "NAZEV_EN": "CROSPOVIDONE",
+          "NAZEV": "KROSPOVIDON",
+          "DOP": "S5"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "1300",
+        "SQ": "6",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "1300",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "SILICA COLLOIDALIS ANHYDRICA",
+          "NAZEV_EN": "SILICA, COLLOIDAL ANHYDROUS",
+          "NAZEV": "KOLOIDNÍ BEZVODÝ OXID KŘEMIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "2378",
+        "SQ": "7",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2378",
+          "ZDROJ": "C21",
+          "NAZEV_INN": "MAGNESII STEARAS",
+          "NAZEV_EN": "MAGNESIUM STEARATE",
+          "NAZEV": "MAGNESIUM-STEARÁT"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "SQ": "8",
+        "S": "X",
+        "substance": {}
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "14319",
+        "SQ": "9",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "14319",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "DIMETICONUM 100",
+          "NAZEV_EN": "DIMETICONE 100",
+          "NAZEV": "DIMETIKON 100"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "2400",
+        "SQ": "10",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2400",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "MACROGOLUM 400",
+          "NAZEV_EN": "MACROGOL 400",
+          "NAZEV": "MAKROGOL 400"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "2710",
+        "SQ": "11",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "2710",
+          "ZDROJ": "C22",
+          "NAZEV_INN": "TITANII DIOXIDUM",
+          "NAZEV_EN": "TITANIUM DIOXIDE",
+          "NAZEV": "OXID TITANIČITÝ"
+        }
+      },
+      {
+        "KOD_SUKL": "0232155",
+        "KOD_LATKY": "10259",
+        "SQ": "12",
+        "S": "X",
+        "AMNT": "PL",
+        "UN": "MG",
+        "substance": {
+          "KOD_LATKY": "10259",
+          "ZDROJ": "INNM",
+          "NAZEV_INN": "HYPROMELLOSUM 2910/15",
+          "NAZEV_EN": "HYPROMELLOSE 2910/15",
+          "NAZEV": "HYPROMELOSA 2910/15"
+        }
+      }
+    ],
+    "documents": {
+      "KOD_SUKL": "0232155",
+      "PIL": "PI235184.pdf",
+      "DAT_ROZ_PIL": "09.07.2026",
+      "SPC": "SPC235185.pdf",
+      "DAT_ROZ_SPC": "09.07.2026",
+      "OBAL_TEXT": "OBAL235183.pdf",
+      "DAT_ROZ_OBAL": "09.07.2026"
+    },
+    "decoded": {
+      "atc": {
+        "ATC": "C07AB07",
+        "NT": "N",
+        "NAZEV": "BISOPROLOL",
+        "NAZEV_EN": "BISOPROLOL"
+      },
+      "formy": {
+        "FORMA": "TBL FLM",
+        "NAZEV": "Potahovaná tableta",
+        "NAZEV_EN": "Film-coated tablet",
+        "NAZEV_LAT": "Tabuletta filmo obducta",
+        "JE_KONOPI": "",
+        "KOD_EDQM": "10221000"
+      },
+      "cesty": {
+        "CESTA": "POR",
+        "NAZEV": "Perorální podání",
+        "NAZEV_EN": "Oral use",
+        "NAZEV_LAT": "Usus peroralis",
+        "KOD_EDQM": "20053000"
+      },
+      "obaly": {
+        "OBAL": "BLI",
+        "NAZEV": "Blistr",
+        "NAZEV_EN": "Blister",
+        "KOD_EDQM": "30007000"
+      },
+      "vydej": {
+        "VYDEJ": "R",
+        "NAZEV": "na lékařský předpis"
+      },
+      "stavyreg": {
+        "REG": "R",
+        "NAZEV": "registrovaný léčivý přípravek"
+      }
+    }
+  }
 }
