@@ -87,11 +87,11 @@
 
       const data = await response.json();
       console.log(data)
-      if (!Array.isArray(data.questions)) {
+      if (!Array.isArray(data.results)) {
         throw new Error('The server returned an invalid record list.');
       }
 
-      for (const question of data.questions) {
+      for (const question of data.results) {
         if (
           question.id === undefined ||
           typeof question.term !== 'string' ||
@@ -279,6 +279,7 @@
       </div>
 
     {:else if error}
+    
       <div class="message">
         <div class="message-icon">!</div>
         <h2>Unable to load records</h2>

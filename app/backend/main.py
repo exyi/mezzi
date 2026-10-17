@@ -105,6 +105,7 @@ def load_questions():
             data = json.loads(
                 file_path.read_text(encoding="utf-8")
             )
+            print(file_path, data)
 
             if isinstance(data, list):
                 questions.extend(data)
@@ -131,7 +132,7 @@ def load_questions():
                     f"{file_path.name}: {exc}"
                 ),
             ) from exc
-
+    print(questions)
     return questions
 
 
@@ -205,7 +206,7 @@ def get_filtered_questions():
         and isinstance(question.get("grades"), list)
     ]
 
-    for question in filtered_questions:
+    for question in questions:
         # Copy grades to avoid modifying source data.
         grades = list(question["grades"])
 
@@ -220,13 +221,13 @@ def get_filtered_questions():
                 0,
                 {
                     "level": 0,
-                    "description": "No symptoms.",
+                    "description": "Nemám problém.",
                 },
             )
 
         question["grades"] = grades
 
-    return filtered_questions
+    return questions
 
 
 # --------------------------------------------------
