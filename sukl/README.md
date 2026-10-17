@@ -7,7 +7,9 @@ tools and native, strict JSON-schema output.
 
 ## Run
 
-Requires Python 3.14+, uv and Poppler (pdftotext; pdftoppm for optional vision).
+Requires Python 3.12+, uv and Poppler (pdftotext; pdftoppm for optional vision).
+Dependencies are managed by the repository-root `pyproject.toml`; the commands
+below can still be run from this directory.
 
 ```bash
 uv sync
@@ -55,6 +57,22 @@ uv run sukl extract 0000009 --model gpt-6-luna-dz-eu --api chat \
 ```
 
 ## Output
+
+### Codex subscription
+
+With `codex login` authenticated using ChatGPT, run the relevant test set with:
+
+```bash
+uv run sukl extract --ids-file relevant_ids.txt --api codex --model gpt-6-luna \
+  --parallelism 2 --output-dir outputs-codex-luna --resume --trace
+```
+
+This uses the Codex CLI login instead of API_KEY. Each drug receives its full
+primary document text and the extraction schema. Codex can query CSV metadata
+through `sukl find`; the Pydantic AI tools are not exposed. API request, tool and
+token limits do not apply to this backend. Vision and model-settings are unsupported.
+Traces contain Codex events and validation warnings. Rerun the same command to
+resume saved results.
 
 outputs/0000009.json contains only these two lists. This is a shape example,
 not an extraction from a specific drug:
@@ -233,3 +251,26 @@ one-pass soft validation, bounded batch concurrency, trace isolation, failure
 recovery, patient action conditions, page coverage, caching and optional images.
 No external requests.
 DSPy can be added later once there are labeled examples for prompt evaluation.
+
+Classification and CSV metadata
+-------------------------------
+The LLM returns the interaction `class_id` directly, plus the target drug's
+functional `classes`. It classifies by meaning using the supplied ATC vocabulary
+and the fixed functional vocabulary in `schema.py` (CYP/P-gp effects, QT risk,
+serotonergic activity, etc.). Named compounds use `substance:KOD_LATKY` verified
+through the CSV lookup tool. Unsupported targets use `class_id: null`.
+There is no name-matching resolver or intermediate resolved-drug schema.
+
+Python adds CSV ATC ancestors and active substance IDs to `classes`, and attaches
+`metadata` with original product/composition/document rows and decoded dictionaries.
+The complete result uses `schema_version: 3` and preserves the model's `usage`.
+`schema` describes the output; `--resume` validates it without rewriting files.
+Previous normalized files are retained unchanged.
+
+Match a combination when its non-null `class_id` occurs in another drug's
+`classes`. For example `atc:C09` matches every product with that ATC ancestor;
+`substance:12` matches products containing that active substance;
+`group:qt_prolonging` matches products classified into that functional group.
+This rule is also documented beside the schema and implemented by
+`matching_combinations`. Matches are candidates: `effect` retains route, dose,
+exclusions and required multidrug conditions. A null ID does not establish safety.

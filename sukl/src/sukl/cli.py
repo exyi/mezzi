@@ -63,7 +63,7 @@ def parser() -> argparse.ArgumentParser:
                                      help="Per-drug output directory (default: outputs)")
             sub.add_argument("--model", default=os.environ.get("MODEL", DEFAULT_MODEL))
             sub.add_argument("--base-url", default=os.environ.get("OPENAI_BASE_URL", DEFAULT_BASE_URL))
-            sub.add_argument("--api", choices=("responses", "chat"), default="responses",
+            sub.add_argument("--api", choices=("responses", "chat", "codex"), default="responses",
                              help="API endpoint (default: responses); GPT-6 Luna tools on chat require reasoning effort none")
             sub.add_argument("--vision", action="store_true", help="Expose a bounded page-image tool")
             sub.add_argument("--model-settings", default="{}", help='JSON provider settings, e.g. {"openai_reasoning_effort":"low"}')
@@ -111,14 +111,20 @@ async def extract_many(corpus: Corpus, codes: list[str], settings: Settings, arg
                     if not args.resume:
                         raise ValueError(f"Output exists: {output}. Use --force to replace it.")
                     try:
-                        DrugExtraction.model_validate_json(output.read_text(encoding="utf-8"))
+                        existing = DrugOutput.model_validate_json(output.read_text(encoding="utf-8"))
+                        if existing.metadata.get('product', {}).get('KOD_SUKL') != code or existing.metadata.get('snapshot') != corpus.catalog.snapshot:
+                            raise ValueError("Existing output belongs to another product or snapshot")
                     except ValueError as exc:
                         raise ValueError(f"Existing output uses a different schema: {output}. Use --force to replace it.") from exc
                     counts["reused"] += 1
                     print(f"[{code}] Reusing {output}", flush=True)
                     continue
                 print(f"[{code}] Preparing: {corpus.catalog.products[code]['NAZEV']}", file=sys.stderr, flush=True)
-                prompt, deps = prepare(corpus, code, settings, args.allow_partial)
+                preparation = settings
+                if settings.api == "codex":
+                    from dataclasses import replace
+                    preparation = replace(settings, context_chars=sys.maxsize)
+                prompt, deps = prepare(corpus, code, preparation, args.allow_partial)
                 if deps.missing:
                     print(f"[{code}] Warning: missing primary documents: {deps.missing}", file=sys.stderr)
                 trace = output.with_suffix(".trace.json") if args.trace else None
